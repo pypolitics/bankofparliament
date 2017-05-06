@@ -18,6 +18,7 @@ from utils import get_all_mps, get_request
 
 # locale.setlocale( locale.LC_ALL, '' )
 theyworkyou_apikey = 'DLXaKDAYSmeLEBBWfUAmZK3j'
+companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 xml_data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'regmem2017-04-10.xml')
 
 request_wait_time = 3600.0
@@ -100,7 +101,7 @@ class MemberOfParliament():
 		headings['Visits outside the UK'] = VisitsOutsideUK() # 4
 		headings['Gifts and benefits from sources outside the UK'] = GiftsOutsideUK() # 5
 		headings['Land and property portfolio'] = Property() # 6
-		headings["Shareholdings: over 15% of issued share capital"] = Shareholdings() #7 (i)
+		headings["Shareholdings: over 15% of issued share capital"] = Shareholdings(companies_house_user, names=[self.first_name, self.last_name]) #7 (i)
 		headings["Other shareholdings, valued at more than"] = OtherShareholdings() #7 (ii)
 		headings['Miscellaneous'] = Miscellaneous() # 8
 		headings['Family members employed and paid from parliamentary expenses'] = Family() # 9
@@ -267,7 +268,6 @@ if __name__ == "__main__":
 
 	# return a list (of dicts) of mps
 	mps = get_all_mps(theyworkyou_apikey)
-
 	searched = []
 
 	# TODO: fix this crude arg porser

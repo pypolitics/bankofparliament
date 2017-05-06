@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json, os, operator, locale
+import json, os, operator, locale, pprint
 from optparse import OptionParser
+from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments
+
 locale.setlocale( locale.LC_ALL, '' )
 
 json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'json', 'members_dump.json')
 images_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
+companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
 def main(mps, options):
 	"""
@@ -32,6 +35,8 @@ def feeback(mps, options):
 		surname = member['surname']
 		member_id = member['member_id']
 
+		names = [forname, surname, name]
+
 		print '*'*150
 		print name, '(' + member['party'] + ')', member['constituency']
 		print 'Income :', income, ' |  Wealth :', wealth, ' |  Gifts :', gifts, ' |  Donations :', donations, ' |  Annual :', annual
@@ -39,27 +44,90 @@ def feeback(mps, options):
 		print '*'*150
 		print ''
 
-		for category in member['categories']:
+		print_register_of_intrests(member)
 
-			category_amount = category['category_amount']
+		data = get_companies_house_person(user=companies_house_user, names=names, addresses=[])
+		data = filter_by_first_last_name(data, forname, surname, name)
+		data = filter_by_appointment_counts(data)
+		data = get_appointments(user=companies_house_user, data=data, status=['active'])
 
-			# if its currency, format it
+		print_companies_house_info(data)
+
+		# now we have an idea of the active appointments of people with the exact same
+		# name as the member of parliament
+
+		# we should check with the shareholding data in the member dictionary
+		# it's a start at least
+
+def print_register_of_intrests(member):
+	"""
+	Function to print out the register of intrests
+	"""
+	for category in member['categories']:
+
+		category_amount = category['category_amount']
+
+		# if its currency, format it
+		if category['isCurrency']:
+			print '\t', category['category_description'], '', locale.currency(category_amount, grouping=True)
+		else:
+			print '\t', category['category_description']
+
+
+		for item in category['items']:
+
+			item_amount = item['amount']
+
 			if category['isCurrency']:
-				print '\t', category['category_description'], '', locale.currency(category_amount, grouping=True)
+				print '\t\t', item['pretty'], locale.currency(item_amount, grouping=True)
 			else:
-				print '\t', category['category_description']
+				print '\t\t', item['pretty']
 
+def print_companies_house_info(data):
+	"""
+	Function to print out companies house matches
+	"""
 
-			for item in category['items']:
+	print '-'*100
+	print 'Companies House Lookup'
+	print '-'*100
+	print ''
+	for matched_person in data:
+		print matched_person['title']
+		print matched_person['appointments']
+		for status in matched_person['appointments'].keys():
 
-				item_amount = item['amount']
+			active_appointments = matched_person['appointments'][status]
 
-				if category['isCurrency']:
-					print '\t\t', item['pretty'], locale.currency(item_amount, grouping=True)
+			for app in active_appointments:
+
+				role = app['officer_role']
+				company_links = app['links']
+				company_name = app['appointed_to']['company_name']
+				company_number = app['appointed_to']['company_number']
+				company_status = app['appointed_to']['company_status']
+				
+				if app.has_key('resigned_on'):
+					resigned_on = app['resigned_on']
 				else:
-					print '\t\t', item['pretty']
+					resigned_on = None
+				if app.has_key('occupation'):
+					occupation = app['occupation']
+				else:
+					occupation = None
 
-		print ''
+				address_string = ''
+				address = app['address']
+				keys = ['address_line_1', 'address_line_2', 'locality', 'postal_code']
+
+				for k in keys:
+					if address.has_key(k):
+						address_string += '%s, ' % address[k]
+
+
+				print '\t%s, %s, %s' % (company_name, company_status, role)
+				print '\t\t%s' % address_string
+
 
 def sort_by_options(mps, options):
 	"""
@@ -109,6 +177,7 @@ if __name__ == "__main__":
 
 	# return a list (of dicts) of mps
 	mps = read_json_file()
+	# print mps
 
 	searched = []
 
