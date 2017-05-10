@@ -1,20 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json, os, operator, locale, pprint
+import json
+import os
+import operator
+import locale
+import pprint
 from optparse import OptionParser
 from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments
 import shutil
 
-locale.setlocale( locale.LC_ALL, '' )
+locale.setlocale(locale.LC_ALL, '')
 
-json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'json', 'members_dump.json')
+json_dump_location = os.path.join(os.path.dirname(
+    os.path.abspath(__file__)), '..', 'json', 'members_dump.json')
 images_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
-tops_html  = os.path.join(os.path.dirname(__file__), 'html_templates/tops.html')
-html_file  = os.path.join(os.path.dirname(__file__), 'generated.html')
-tails_html  = os.path.join(os.path.dirname(__file__), 'html_templates/tails.html')
+tops_html = os.path.join(os.path.dirname(__file__), 'html_templates/tops.html')
+html_file = os.path.join(os.path.dirname(__file__), 'generated.html')
+tails_html = os.path.join(os.path.dirname(
+    __file__), 'html_templates/tails.html')
+
 
 def main(mps, options):
     """
@@ -24,6 +31,7 @@ def main(mps, options):
 
     print_to_html_file(mps)
 
+
 def print_to_html_file(mps):
     start_html_file()
     for mp in mps:
@@ -32,10 +40,11 @@ def print_to_html_file(mps):
 
 
 def start_html_file():
-    shutil.copy2(tops_html,html_file)
+    shutil.copy2(tops_html, html_file)
+
 
 def print_mp_into_file(member):
-    html=u"<tr>"
+    html = u"<tr>\n"
     name = member['name']
     income = locale.currency(member['mp_income'], grouping=True)
     wealth = locale.currency(member['mp_wealth'], grouping=True)
@@ -43,38 +52,43 @@ def print_mp_into_file(member):
     donations = locale.currency(member['mp_donations'], grouping=True)
     annual = locale.currency(member['mp_annual'], grouping=True)
 
-    html+=u'<td ROWSPAN="2" id="mp_name">%s<br/>%s<br/>%s</td>' %(str(name),member['party'], member['constituency'])
-    html+=u'<td>%s</td>' %(income.replace("£","&#163;"))
-    html+=u'<td>%s</td>' %(wealth.replace("£","&#163;"))
-    html+=u'<td>%s</td>' %(gifts.replace("£","&#163;"))
-    html+=u'<td>%s</td>' %(donations.replace("£","&#163;"))
-    html+=u'<td>%s</td>' %(annual.replace("£","&#163;"))
-    html+=u"</tr>"
-    html+=u"<tr>"
-    html+=u'<td COLSPAN="5">'
+    html += u'<td id="mp_name">%s<br/>%s<br/>%s</td>\n' % (
+        str(name), member['party'], member['constituency'])
+    html += u'<td>%s</td>\n' % (income.replace("£", "&#163;"))
+    html += u'<td>%s</td>\n' % (wealth.replace("£", "&#163;"))
+    html += u'<td>%s</td>\n' % (gifts.replace("£", "&#163;"))
+    html += u'<td>%s</td>\n' % (donations.replace("£", "&#163;"))
+    html += u'<td>%s</td>\n' % (annual.replace("£", "&#163;"))
+    html += u"</tr>\n"
+    html += u"<tr>\n"
+    html += u'<td></td>\n'
+    html += u'<td COLSPAN="5">\n'
     for category in member['categories']:
         category_amount = category['category_amount']
         # if its currency, format it
         if category['isCurrency']:
-            html +=u'<div id="cat_id">%s %s</div>' % (category['category_description'], locale.currency(category_amount, grouping=True).replace("£","&#163;"))
+            html += u'<div id="cat_id">%s %s</div>\n' % (category['category_description'], locale.currency(
+                category_amount, grouping=True).replace("£", "&#163;"))
         else:
-            html +=u'<div id="cat_id">%s</div>'% category['category_description']
+            html += u'<div id="cat_id">%s</div>\n' % category[
+                'category_description']
         for item in category['items']:
             item_amount = item['amount']
             if category['isCurrency']:
-                html +=u'<div id="cat_desc">%s %s</div>' %(item['pretty'], locale.currency(item_amount, grouping=True).replace("£","&#163;"))
+                html += u'<div id="cat_desc">%s %s</div>\n' % (item['pretty'], locale.currency(
+                    item_amount, grouping=True).replace("£", "&#163;"))
             else:
-                html +=u'<div id="cat_desc">%s</div>' % item['pretty']
-    html+=u'</td>'
-    html+=u"</tr>"
+                html += u'<div id="cat_desc">%s</div>\n' % item['pretty']
+    html += u'</td>\n'
+    html += u"</tr>\n"
     with open(html_file, "a") as myfile:
-        myfile.write(html.encode("utf8")) 
+        myfile.write(html.encode("utf8"))
 
 
 def end_html_file():
     with open(html_file, "a") as fo:
-        with open(tails_html,'r') as fi: fo.write(fi.read())
-
+        with open(tails_html, 'r') as fi:
+            fo.write(fi.read())
 
 
 def feeback(mps):
@@ -94,17 +108,15 @@ def feeback(mps):
 
         names = [forname, surname, name]
 
-        print '*'*150
+        print '*' * 150
         print name, '(' + member['party'] + ')', member['constituency']
         print 'Income :', income, ' |  Wealth :', wealth, ' |  Gifts :', gifts, ' |  Donations :', donations, ' |  Annual :', annual
         print os.path.abspath(os.path.join(images_directory, '%s_%s_%s.png' % (forname, surname, member_id)))
-        print '*'*150
+        print '*' * 150
         print ''
-
 
         # refresh_html_file(member)
         # print_register_of_intrests(member)
-        
 
         # data = get_companies_house_person(user=companies_house_user, names=names, addresses=[])
         # data = filter_by_first_last_name(data, forname, surname, name)
@@ -118,6 +130,7 @@ def feeback(mps):
 
         # we should check with the shareholding data in the member dictionary
         # it's a start at least
+
 
 def print_register_of_intrests(member):
     """
@@ -133,7 +146,6 @@ def print_register_of_intrests(member):
         else:
             print '\t', category['category_description']
 
-
         for item in category['items']:
 
             item_amount = item['amount']
@@ -143,14 +155,15 @@ def print_register_of_intrests(member):
             else:
                 print '\t\t', item['pretty']
 
+
 def print_companies_house_info(data):
     """
     Function to print out companies house matches
     """
 
-    print '-'*100
+    print '-' * 100
     print 'Companies House Lookup'
-    print '-'*100
+    print '-' * 100
     print ''
     for matched_person in data:
         print matched_person['title']
@@ -166,7 +179,7 @@ def print_companies_house_info(data):
                 company_name = app['appointed_to']['company_name']
                 company_number = app['appointed_to']['company_number']
                 company_status = app['appointed_to']['company_status']
-                
+
                 if app.has_key('resigned_on'):
                     resigned_on = app['resigned_on']
                 else:
@@ -178,12 +191,12 @@ def print_companies_house_info(data):
 
                 address_string = ''
                 address = app['address']
-                keys = ['address_line_1', 'address_line_2', 'locality', 'postal_code']
+                keys = ['address_line_1', 'address_line_2',
+                        'locality', 'postal_code']
 
                 for k in keys:
                     if address.has_key(k):
                         address_string += '%s, ' % address[k]
-
 
                 print '\t%s, %s, %s' % (company_name, company_status, role)
                 print '\t\t%s' % address_string
@@ -197,23 +210,26 @@ def sort_by_options(mps, options):
     # sort by options specified on commandline
     if options.sortby == 'wealth':
         mps = sorted(mps, key=operator.itemgetter('mp_wealth'), reverse=True)
-    
+
     elif options.sortby == 'income':
         mps = sorted(mps, key=operator.itemgetter('mp_income'), reverse=True)
-    
+
     elif options.sortby == 'gifts':
         mps = sorted(mps, key=operator.itemgetter('mp_gifts'), reverse=True)
-    
+
     elif options.sortby == 'donations':
-        mps = sorted(mps, key=operator.itemgetter('mp_donations'), reverse=True)       
+        mps = sorted(mps, key=operator.itemgetter(
+            'mp_donations'), reverse=True)
 
     elif options.sortby == 'annual':
-        mps = sorted(mps, key=operator.itemgetter('mp_annual'), reverse=True)  
+        mps = sorted(mps, key=operator.itemgetter('mp_annual'), reverse=True)
 
     else:
-        mps = sorted(mps, key=operator.itemgetter('%s' % options.sortby), reverse=True)
+        mps = sorted(mps, key=operator.itemgetter(
+            '%s' % options.sortby), reverse=True)
 
     return mps
+
 
 def read_json_file():
     """
@@ -230,7 +246,8 @@ if __name__ == "__main__":
 
     # parser.add_option("--summary", help="Summary print", action="store_true", default=True)
     # parser.add_option("--detailed", help="Detailed print", action="store_true", default=False)
-    parser.add_option("--sortby", help="Sort By", action="store", default='income')
+    parser.add_option("--sortby", help="Sort By",
+                      action="store", default='income')
 
     # parse the comand line
     (options, args) = parser.parse_args()
