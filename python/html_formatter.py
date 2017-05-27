@@ -63,10 +63,10 @@ def print_mp_panel_into_file(member):
 
     html += '\t\t\t<div class="col %s %s %s">\n' % (name.lower(), party.lower(), constituency.lower())
     html += '\t\t\t\t<div id=%s class="myHeader">\n'
-    html += '\t\t\t\t\t<br></br>\n'
+    # html += '\t\t\t\t\t<br></br>\n'
     html += '\t\t\t\t\t<br><img src="images/photo.png"></img></br>\n'
-    html += '\t\t\t\t\t<br>%s</br>\n' % (name)
-    html += '\t\t\t\t\t<br><font size="2">%s</font></br>\n' % (constituency)
+    html += '\t\t\t\t\t<br>%s\n' % (name)
+    html += '\t\t\t\t\t<br><font size="2">%s</font>\n' % (constituency)
     html += '\t\t\t\t</div>\n'
     html += '\t\t\t\t<div class="body">\n'
     html += '\t\t\t\t\t<ul>\n'
