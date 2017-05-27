@@ -1,26 +1,32 @@
 
-  </div>
+    </div>
+  </table>
 </div>
 
 <script>
 function myFunction() {
   var input, filter, table, tr, td, i;
+
+  columns = document.getElementsByClassName("col");
+  row = document.getElementsByClassName("row")
+
   input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 1; i < tr.length; i+=2) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-        tr[i+1].style.display = "";
+  filter = input.value.toLowerCase();
+
+  var x = document.getElementsByClassName("col");
+  var i;
+
+  for (i = 0; i < x.length; i++) {
+
+    classes = x[i].className
+
+    if (classes.indexOf(filter) > -1) {
+        x[i].style.display = "";
       } else {
-        tr[i].style.display = "none";
-        tr[i+1].style.display = "none";
+        x[i].style.display = "none";
       }
-    }       
-  }
+}
+
 }
 </script>
 
