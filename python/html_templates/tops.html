@@ -1,4 +1,10 @@
 <head>
+
+  <title>Parliament Money</title>
+
+
+
+
 <style>
 body {
     font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -26,27 +32,63 @@ a {
     text-decoration: none;
 }
 
-.labour {
+#myInput {
+  margin: 3%;
+}
+
+.col {
+
+  border: 1px solid #999;
+  border-radius: 5px;
+  /*box-shadow: 0px 0px 2px #999;*/
+  margin: 0.1%;
+  width: 280px;
+  /*width: 10%;*/
+  padding: 15px;
+  float: left;
+}
+
+.col .myHeader {
+  background: #999;
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: center;
+
+}
+
+.col .body {
+
+  font-size: 13px;
+  /*font-weight: bold;*/
+  padding: 10px 20px
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.labour .myHeader {
 
   background: #DC241f;
 }
 
-.conservative {
+.conservative .myHeader {
 
   background: #0087dc;
 }
 
-.scottish {
+.scottish .myHeader {
 
   background: #ffff00;
 }
 
-.liberal {
+.liberal .myHeader {
 
   background: #FDBB30;
 }
 
-.green {
+.green .myHeader {
 
   background: #77B829;
 }
@@ -62,7 +104,7 @@ a {
   margin-bottom: 12px;
 }
 
-#myTable {
+/*#myTable {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
@@ -81,7 +123,7 @@ a {
 
 #myTable tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
-}
+}*/
 
 #cat_id {
 font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -99,21 +141,10 @@ background-color: #E9F2F9;
 </style>
 </head>
 <body>
-
-
-  <h1>Follow the Money...</h1>
- 
+<!--  
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, parties, constituencies.." title="Type in a name">
 
 </div>
- <table id="myTable">
-  <tr class="header">
-    <th style="width:15%;"></th>
-    <th style="width:15%;"></th>
-    <th style="width:15%;">Income</th>
-    <th style="width:15%;">Wealth</th>
-    <th style="width:15%;">Gifts</th>
-    <th style="width:15%;">Donations</th>
-    <th style="width:15%;">Annual</th>
-
-</tr>
+ -->
+<div class="container">
+  <div class="row">

@@ -35,13 +35,61 @@ def main(mps, options):
 def print_to_html_file(mps):
     start_html_file()
     for mp in mps:
-        print_mp_into_file(mp)
+        # print_mp_into_file(mp)
+        print_mp_panel_into_file(mp)
     end_html_file()
 
 
 def start_html_file():
     shutil.copy2(tops_html, html_file)
 
+def print_mp_panel_into_file(member):
+    # html = u"<tr>\n"
+    html = u"\n"
+    name = member['name']
+
+    income = locale.currency(member['mp_income'], grouping=True).split('.')[0]
+    wealth = locale.currency(member['mp_wealth'], grouping=True).split('.')[0]
+    gifts = locale.currency(member['mp_gifts'], grouping=True).split('.')[0]
+    donations = locale.currency(member['mp_donations'], grouping=True).split('.')[0]
+    annual = locale.currency(member['mp_annual'], grouping=True).split('.')[0]
+
+    member_id = member['member_id']
+    party = member['party']
+    constituency = member['constituency']
+
+    html += '\t\t<div class="col %s">\n' % party.lower()
+    html += '\t\t\t<div id=%s class="myHeader">\n'
+    html += '\t\t\t\t<img src="html_templates/photo.png"></img>\n'
+    html += '\t\t\t\t<br>%s</br>\n' % (name)
+    html += '\t\t\t</div>\n'
+    html += '\t\t\t<div class="body">\n'
+    html += '\t\t\t\t<ul>\n'
+    html += '\t\t\t\t\t<li>Income : %s</li>\n' % income.replace("£", "&#163;")
+    html += '\t\t\t\t\t<li>Wealth : %s</li>\n' % wealth.replace("£", "&#163;")
+    html += '\t\t\t\t\t<li>Gifts : %s</li>\n' % gifts.replace("£", "&#163;")
+    html += '\t\t\t\t\t<li>Donations : %s</li>\n' % donations.replace("£", "&#163;")
+    html += '\t\t\t\t\t<li><b>Annual : %s</b></li>\n' % annual.replace("£", "&#163;")
+    html += '\t\t\t\t</ul>\n'
+    html += '\t\t\t</div>\n'
+    html += '\t\t</div>'
+
+
+
+    # html += u'<td class=%s> <img src="html_templates/photo.png" alt="" border=3 height=100 width=100></img></td>' % (member['party'].lower())
+    # html += u'<td class=%s id="mp_name">%s<br/>%s<br/>%s</td>\n' % (member['party'].lower(), str(name), member['party'], member['constituency'])
+    # html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),income.replace("£", "&#163;"))
+    # html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),wealth.replace("£", "&#163;"))
+    # html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),gifts.replace("£", "&#163;"))
+    # html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),donations.replace("£", "&#163;"))
+    # html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),annual.replace("£", "&#163;"))
+
+    # html += u"</tr>\n"
+
+    # html += u'</td>\n'
+    # html += u"</tr>\n"
+    with open(html_file, "a") as myfile:
+        myfile.write(html.encode("utf8"))
 
 def print_mp_into_file(member):
     html = u"<tr>\n"
@@ -62,27 +110,6 @@ def print_mp_into_file(member):
 
     html += u"</tr>\n"
 
-
-
-    # html += u"<tr>\n"
-    # html += u'<td></td>\n'
-    # html += u'<td COLSPAN="5">\n'
-    # for category in member['categories']:
-    #     category_amount = category['category_amount']
-    #     # if its currency, format it
-    #     if category['isCurrency']:
-    #         html += u'<div id="cat_id">%s %s</div>\n' % (category['category_description'], locale.currency(
-    #             category_amount, grouping=True).replace("£", "&#163;"))
-    #     else:
-    #         html += u'<div id="cat_id">%s</div>\n' % category[
-    #             'category_description']
-    #     for item in category['items']:
-    #         item_amount = item['amount']
-    #         if category['isCurrency']:
-    #             html += u'<div id="cat_desc">- %s %s</div>\n' % (item['pretty'], locale.currency(
-    #                 item_amount, grouping=True).replace("£", "&#163;"))
-    #         else:
-    #             html += u'<div id="cat_desc">- %s</div>\n' % item['pretty']
     html += u'</td>\n'
     html += u"</tr>\n"
     with open(html_file, "a") as myfile:
