@@ -52,33 +52,37 @@ def print_mp_into_file(member):
     donations = locale.currency(member['mp_donations'], grouping=True)
     annual = locale.currency(member['mp_annual'], grouping=True)
 
-    html += u'<td id="mp_name">%s<br/>%s<br/>%s</td>\n' % (
-        str(name), member['party'], member['constituency'])
-    html += u'<td>%s</td>\n' % (income.replace("£", "&#163;"))
-    html += u'<td>%s</td>\n' % (wealth.replace("£", "&#163;"))
-    html += u'<td>%s</td>\n' % (gifts.replace("£", "&#163;"))
-    html += u'<td>%s</td>\n' % (donations.replace("£", "&#163;"))
-    html += u'<td>%s</td>\n' % (annual.replace("£", "&#163;"))
+    html += u'<td class=%s> <img src="html_templates/photo.png" alt="" border=3 height=100 width=100></img></td>' % (member['party'].lower())
+    html += u'<td class=%s id="mp_name">%s<br/>%s<br/>%s</td>\n' % (member['party'].lower(), str(name), member['party'], member['constituency'])
+    html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),income.replace("£", "&#163;"))
+    html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),wealth.replace("£", "&#163;"))
+    html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),gifts.replace("£", "&#163;"))
+    html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),donations.replace("£", "&#163;"))
+    html += u'<td class=%s>%s</td>\n' % (member['party'].lower(),annual.replace("£", "&#163;"))
+
     html += u"</tr>\n"
-    html += u"<tr>\n"
-    html += u'<td></td>\n'
-    html += u'<td COLSPAN="5">\n'
-    for category in member['categories']:
-        category_amount = category['category_amount']
-        # if its currency, format it
-        if category['isCurrency']:
-            html += u'<div id="cat_id">%s %s</div>\n' % (category['category_description'], locale.currency(
-                category_amount, grouping=True).replace("£", "&#163;"))
-        else:
-            html += u'<div id="cat_id">%s</div>\n' % category[
-                'category_description']
-        for item in category['items']:
-            item_amount = item['amount']
-            if category['isCurrency']:
-                html += u'<div id="cat_desc">%s %s</div>\n' % (item['pretty'], locale.currency(
-                    item_amount, grouping=True).replace("£", "&#163;"))
-            else:
-                html += u'<div id="cat_desc">%s</div>\n' % item['pretty']
+
+
+
+    # html += u"<tr>\n"
+    # html += u'<td></td>\n'
+    # html += u'<td COLSPAN="5">\n'
+    # for category in member['categories']:
+    #     category_amount = category['category_amount']
+    #     # if its currency, format it
+    #     if category['isCurrency']:
+    #         html += u'<div id="cat_id">%s %s</div>\n' % (category['category_description'], locale.currency(
+    #             category_amount, grouping=True).replace("£", "&#163;"))
+    #     else:
+    #         html += u'<div id="cat_id">%s</div>\n' % category[
+    #             'category_description']
+    #     for item in category['items']:
+    #         item_amount = item['amount']
+    #         if category['isCurrency']:
+    #             html += u'<div id="cat_desc">- %s %s</div>\n' % (item['pretty'], locale.currency(
+    #                 item_amount, grouping=True).replace("£", "&#163;"))
+    #         else:
+    #             html += u'<div id="cat_desc">- %s</div>\n' % item['pretty']
     html += u'</td>\n'
     html += u"</tr>\n"
     with open(html_file, "a") as myfile:
