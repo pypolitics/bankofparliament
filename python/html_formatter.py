@@ -60,7 +60,7 @@ def print_mp_panel_into_file(member):
 
     html += '\t\t<div class="col %s">\n' % party.lower()
     html += '\t\t\t<div id=%s class="myHeader">\n'
-    html += '\t\t\t\t<img src="html_templates/photo.png"></img>\n'
+    html += '\t\t\t\t<img src="images/photo.png"></img>\n'
     html += '\t\t\t\t<br>%s</br>\n' % (name)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="body">\n'
