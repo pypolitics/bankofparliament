@@ -42,15 +42,114 @@ def print_to_html_file(mps):
 def start_html_file():
     shutil.copy2(tops_html, html_file)
 
+def format_integer(number):
+
+    loc = locale.currency(number, grouping=True).split('.')[0]
+    return loc.replace("£", "&#163;")
+
 def print_mp_panel_into_file(member):
+
+    cat_types = [each['category_type'] for each in member['categories']]
+    # print cat_types
+
+    [u'employment', u'indirect_donations', u'direct_donations', u'gifts', u'visits_outside_uk', u'gifts_outside_uk', u'property', u'shareholdings', u'shareholdings', u'miscellaneous', u'family', u'family_lobbyists', u'salary']
+    import pprint
+    # pprint.pprint(member)
+
+    # incomes
+    private_income = 0
+    rental_income = 0
+    salary = 0
+
+    # freebies
+    gifts = 0
+    donations = 0
+    visits = 0
+
+    # expenses
+    expenses = 0
+
+    # wealth
+    property_wealth = 0
+    shareholding_wealth = 0
+
+    # find category info
+    for category in member['categories']:
+
+        # private_income
+        if category['category_type'] == 'employment':
+            private_income = category['category_income']
+
+        # indirect_donations
+        if category['category_type'] == 'indirect_donations':
+            for item in category['items']:
+                donations += int(item['amount'])
+
+        # direct_donations
+        if category['category_type'] == 'direct_donations':
+            for item in category['items']:
+                donations += int(item['amount'])
+
+        # gifts
+        if category['category_type'] == 'gifts':
+            for item in category['items']:
+                gifts += int(item['amount'])
+
+        # visits
+        if category['category_type'] == 'visits':
+            for item in category['items']:
+                visits += int(item['amount'])
+
+        # property income and wealth
+        if category['category_type'] == 'property':
+
+            for item in category['items']:
+                if item['isWealth']:
+                    property_wealth += int(item['amount'])
+                else:
+                    rental_income += int(item['amount'])
+
+        # shareholdings
+        if category['category_type'] == 'shareholdings':
+
+            for item in category['items']:
+                if item['isWealth']:
+                    # this number in inaccurate, we know the value of the holding is at least
+                    # 15% - we need to look at company accounts on companies house to determine
+                    # the value of the is percentage
+                    shareholding_wealth += int(item['amount'])
+
+        # public salary
+        if category['category_type'] == 'salary':
+            salary =  category['category_income']
+
+
+    total_income = format_integer(private_income + rental_income + salary)
+    total_wealth = format_integer(shareholding_wealth + property_wealth)
+    total_freebies = format_integer(gifts + donations + visits)
+
+
+    private_income = format_integer(private_income)
+    rental_income = format_integer(rental_income)
+    salary = format_integer(salary)
+
+    gifts = format_integer(gifts)
+    donations = format_integer(donations)
+    visits = format_integer(visits)
+
+    expenses = format_integer(expenses)
+
+    shareholding_wealth = format_integer(shareholding_wealth)
+    property_wealth = format_integer(property_wealth)
+
 
     html = u"\n"
 
     name = member['name']
     income = locale.currency(member['mp_income'], grouping=True).split('.')[0]
     wealth = locale.currency(member['mp_wealth'], grouping=True).split('.')[0]
-    gifts = locale.currency(member['mp_gifts'], grouping=True).split('.')[0]
-    donations = locale.currency(member['mp_donations'], grouping=True).split('.')[0]
+    # gifts = locale.currency(member['mp_gifts'], grouping=True).split('.')[0]
+    # donations = locale.currency(member['mp_donations'], grouping=True).split('.')[0]
     annual = locale.currency(member['mp_annual'], grouping=True).split('.')[0]
 
     member_id = member['member_id']
@@ -75,23 +174,71 @@ def print_mp_panel_into_file(member):
 
     html += '\t\t\t\t\t<tr>\n'
     html += '\t\t\t\t\t\t<td>Public Salary</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">75,000</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (salary)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
     html += '\t\t\t\t\t\t<td>Private Income</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">25,000</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (private_income)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Rental Income</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">0</td>\n'
+    html += '\t\t\t\t\t\t<td>Rental Income (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (rental_income)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Total Income</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % income.replace("£", "&#163;")
+    html += '\t\t\t\t\t\t<td><b>Total Income (Min)</b></td>\n'
+    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_income)
     html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<td><br/></td>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td>Gifts</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (gifts)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td>Donations</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (donations)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td>Overseas Visits</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (visits)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td><b>Total Freebies</b></td>\n'
+    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_freebies)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<td><br/></td>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td><b>Total Expenses</b></td>\n'
+    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (expenses)
+    html += '\t\t\t\t\t</tr>\n'
+
+
+    html += '\t\t\t\t\t<td><br/></td>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td>Shareholdings (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (shareholding_wealth)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td>Property (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (property_wealth)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr>\n'
+    html += '\t\t\t\t\t\t<td><b>Total Wealth (Min)</b></td>\n'
+    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_wealth)
+    html += '\t\t\t\t\t</tr>\n'
+
 
     html += '\t\t\t\t</table>\n'
 
@@ -264,7 +411,7 @@ if __name__ == "__main__":
     # parser.add_option("--summary", help="Summary print", action="store_true", default=True)
     # parser.add_option("--detailed", help="Detailed print", action="store_true", default=False)
     parser.add_option("--sortby", help="Sort By",
-                      action="store", default='annual')
+                      action="store", default='income')
 
     # parse the comand line
     (options, args) = parser.parse_args()
