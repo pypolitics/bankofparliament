@@ -75,26 +75,54 @@ body {
   background: #77B829;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
+.sortSelect {
+  font-size: 12px;
   border: 1px solid #999;
   margin: 10px 10px 10px 0;
+  border-radius: 5px;
+  float: right;
+  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  line-height: 22px;
+  color: #333;
+
+}
+
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 20px;
+  border: 1px solid #999;
+  margin: 10px 10px 10px 0px;
   border-radius: 5px;
 }
 
 </style>
 </head>
 <body>
- 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, parties, constituencies.." title="Type in a name">
 
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, parties, constituencies.."title="Type in a name">
+<select id="sortbox" class="sortSelect" onchange="mySortFunction()">
+    <option value="PS">Public Salary</option>
+    <option value="PI">Private Income</option>
+    <option value="RI">Rental Income</option>
+    <option value="TI">Total Income</option>
+    <option disabled>-----------------</option>
+    <option value="GI">Gifts</option>
+    <option value="DO">Donations</option>
+    <option value="OV">Overseas Visits</option>
+    <option value="TF">Total Feeebies</option>
+<!--     <option disabled>-----------------</option>
+    <option value="TE">Total Expenses</option> -->
+    <option disabled>-----------------</option>
+    <option value="SH">Shareholdings</option>
+    <option value="PR">Property</option>
+    <option value="TW">Total Wealth</option>
+
+</select> 
+<br></br>
+<br>
 </div>
-
-<!-- <> -->
 
 <div class="container">
     <div class="row">
@@ -138,11 +166,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;8,023</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -199,11 +222,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -265,11 +283,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;210,001</td>
 					</tr>
@@ -323,11 +336,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -389,11 +397,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -451,11 +454,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -509,11 +507,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -575,11 +568,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -633,11 +621,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -699,11 +682,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -757,11 +735,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -823,11 +796,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -881,11 +849,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -947,11 +910,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1009,11 +967,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1067,11 +1020,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -1133,11 +1081,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1191,11 +1134,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -1257,11 +1195,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1315,11 +1248,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -1381,11 +1309,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1443,11 +1366,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1501,11 +1419,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -1567,11 +1480,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1629,11 +1537,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1687,11 +1590,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -1753,11 +1651,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,001</td>
 					</tr>
@@ -1811,11 +1704,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -1877,11 +1765,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -1935,11 +1818,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -2001,11 +1879,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;2</td>
 					</tr>
@@ -2063,11 +1936,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2121,11 +1989,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -2187,11 +2050,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2246,11 +2104,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;15,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -2311,11 +2164,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2369,11 +2217,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -2435,11 +2278,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2497,11 +2335,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2555,11 +2388,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -2621,11 +2449,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2680,11 +2503,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;356</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -2745,11 +2563,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2803,11 +2616,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -2869,11 +2677,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,001</td>
 					</tr>
@@ -2931,11 +2734,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -2989,11 +2787,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3055,11 +2848,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -3113,11 +2901,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3179,11 +2962,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -3237,11 +3015,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3303,11 +3076,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -3361,11 +3129,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3427,11 +3190,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;4</td>
 					</tr>
@@ -3485,11 +3243,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3551,11 +3304,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -3609,11 +3357,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3675,11 +3418,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -3733,11 +3471,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3799,11 +3532,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -3857,11 +3585,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -3923,11 +3646,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -3985,11 +3703,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4043,11 +3756,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -4109,11 +3817,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4168,11 +3871,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;650</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -4233,11 +3931,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4291,11 +3984,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -4357,11 +4045,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4415,11 +4098,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -4481,11 +4159,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4543,11 +4216,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4601,11 +4269,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -4667,11 +4330,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,000</td>
 					</tr>
@@ -4726,11 +4384,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;1,400</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -4791,11 +4444,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -4853,11 +4501,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,000</td>
 					</tr>
@@ -4911,11 +4554,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -4977,11 +4615,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5035,11 +4668,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -5101,11 +4729,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5160,11 +4783,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;2,500</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -5225,11 +4843,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5287,11 +4900,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5345,11 +4953,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -5411,11 +5014,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,001</td>
 					</tr>
@@ -5469,11 +5067,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -5535,11 +5128,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5597,11 +5185,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -5655,11 +5238,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -5721,11 +5299,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5780,11 +5353,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;15,099</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -5845,11 +5413,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -5904,11 +5467,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;2,500</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -5969,11 +5527,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6031,11 +5584,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6089,11 +5637,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -6155,11 +5698,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6217,11 +5755,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6275,11 +5808,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -6341,11 +5869,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6403,11 +5926,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6461,11 +5979,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -6527,11 +6040,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6585,11 +6093,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -6651,11 +6154,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6710,11 +6208,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;35,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -6775,11 +6268,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6833,11 +6321,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -6899,11 +6382,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -6958,11 +6436,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;360</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -7023,11 +6496,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -7085,11 +6553,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -7143,11 +6606,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -7209,11 +6667,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -7268,11 +6721,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;53,977</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -7333,11 +6781,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -7391,11 +6834,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -7457,11 +6895,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -7516,11 +6949,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;3,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -7581,11 +7009,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -7640,11 +7063,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;7,500</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -7705,11 +7123,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -7763,11 +7176,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -7829,11 +7237,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -7888,11 +7291,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;4,916</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -7953,11 +7351,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8011,11 +7404,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8077,11 +7465,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8135,11 +7518,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8201,11 +7579,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8259,11 +7632,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8325,11 +7693,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8383,11 +7746,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8449,11 +7807,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8507,11 +7860,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8573,11 +7921,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;2</td>
 					</tr>
@@ -8631,11 +7974,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8697,11 +8035,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8756,11 +8089,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;500</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -8821,11 +8149,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -8879,11 +8202,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -8945,11 +8263,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9003,11 +8316,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9069,11 +8377,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9127,11 +8430,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9193,11 +8491,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9251,11 +8544,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9317,11 +8605,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9375,11 +8658,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9441,11 +8719,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9503,11 +8776,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9561,11 +8829,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9627,11 +8890,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9685,11 +8943,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9751,11 +9004,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9810,11 +9058,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;2,120</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -9875,11 +9118,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -9933,11 +9171,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -9999,11 +9232,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -10057,11 +9285,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -10123,11 +9346,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -10182,11 +9400,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;520,956</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -10247,11 +9460,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -10306,11 +9514,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;790</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -10371,11 +9574,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -10433,11 +9631,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -10491,11 +9684,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -10557,11 +9745,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -10615,11 +9798,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -10681,11 +9859,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -10739,11 +9912,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -10805,11 +9973,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -10863,11 +10026,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -10929,11 +10087,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -10987,11 +10140,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -11053,11 +10201,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -11115,11 +10258,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -11173,11 +10311,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -11239,11 +10372,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -11298,11 +10426,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;10,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -11363,11 +10486,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;140,000</td>
 					</tr>
@@ -11425,11 +10543,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -11483,11 +10596,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -11549,11 +10657,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -11607,11 +10710,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -11673,11 +10771,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -11735,11 +10828,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -11793,11 +10881,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -11859,11 +10942,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -11917,11 +10995,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -11983,11 +11056,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12041,11 +11109,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -12107,11 +11170,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,001</td>
 					</tr>
@@ -12169,11 +11227,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;4</td>
 					</tr>
@@ -12227,11 +11280,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -12293,11 +11341,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12355,11 +11398,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;840,000</td>
 					</tr>
@@ -12413,11 +11451,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -12479,11 +11512,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12537,11 +11565,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -12603,11 +11626,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12661,11 +11679,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -12727,11 +11740,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12789,11 +11797,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12847,11 +11850,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -12913,11 +11911,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -12971,11 +11964,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -13037,11 +12025,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13095,11 +12078,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -13161,11 +12139,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13223,11 +12196,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13281,11 +12249,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -13347,11 +12310,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13405,11 +12363,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -13471,11 +12424,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13530,11 +12478,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;92,241</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -13595,11 +12538,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13653,11 +12591,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -13719,11 +12652,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -13777,11 +12705,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -13843,11 +12766,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13905,11 +12823,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -13963,11 +12876,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14029,11 +12937,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14087,11 +12990,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14153,11 +13051,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14211,11 +13104,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14277,11 +13165,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14339,11 +13222,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14397,11 +13275,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14463,11 +13336,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14522,11 +13390,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;5,218</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -14587,11 +13450,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14645,11 +13503,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14711,11 +13564,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14769,11 +13617,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14835,11 +13678,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -14893,11 +13731,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -14959,11 +13792,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15021,11 +13849,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15079,11 +13902,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -15145,11 +13963,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15207,11 +14020,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15265,11 +14073,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -15331,11 +14134,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;3</td>
 					</tr>
@@ -15393,11 +14191,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15451,11 +14244,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -15517,11 +14305,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15575,11 +14358,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -15641,11 +14419,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15700,11 +14473,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;104,870</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -15765,11 +14533,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15823,11 +14586,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -15889,11 +14647,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -15948,11 +14701,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;8,100</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -16013,11 +14761,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16075,11 +14818,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16133,11 +14871,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -16199,11 +14932,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16257,11 +14985,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -16323,11 +15046,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16381,11 +15099,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -16447,11 +15160,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,002</td>
 					</tr>
@@ -16509,11 +15217,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16567,11 +15270,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -16633,11 +15331,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16691,11 +15384,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -16757,11 +15445,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -16819,11 +15502,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -16877,11 +15555,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -16943,11 +15616,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17001,11 +15669,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -17067,11 +15730,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17129,11 +15787,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17187,11 +15840,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -17253,11 +15901,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17315,11 +15958,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17373,11 +16011,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -17439,11 +16072,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17498,11 +16126,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;5,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -17563,11 +16186,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17621,11 +16239,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -17687,11 +16300,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -17746,11 +16354,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;1,862</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -17811,11 +16414,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -17870,11 +16468,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;6,075</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -17935,11 +16528,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -17993,11 +16581,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18059,11 +16642,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -18117,11 +16695,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18183,11 +16756,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -18241,11 +16809,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18307,11 +16870,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -18366,11 +16924,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;7,400</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -18431,11 +16984,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -18489,11 +17037,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18555,11 +17098,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -18613,11 +17151,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18679,11 +17212,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -18737,11 +17265,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18803,11 +17326,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -18861,11 +17379,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -18927,11 +17440,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -18989,11 +17497,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19047,11 +17550,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -19113,11 +17611,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19171,11 +17664,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -19237,11 +17725,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19295,11 +17778,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -19361,11 +17839,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19419,11 +17892,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -19485,11 +17953,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19547,11 +18010,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19605,11 +18063,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -19671,11 +18124,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -19730,11 +18178,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;15,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -19795,11 +18238,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19857,11 +18295,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -19915,11 +18348,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -19981,11 +18409,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20043,11 +18466,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20101,11 +18519,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20167,11 +18580,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20225,11 +18633,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20291,11 +18694,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20349,11 +18747,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20415,11 +18808,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;2</td>
 					</tr>
@@ -20473,11 +18861,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20539,11 +18922,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20597,11 +18975,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20663,11 +19036,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20721,11 +19089,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20787,11 +19150,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20845,11 +19203,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -20911,11 +19264,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -20969,11 +19317,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -21035,11 +19378,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21093,11 +19431,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -21159,11 +19492,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21221,11 +19549,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21279,11 +19602,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -21345,11 +19663,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21407,11 +19720,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21465,11 +19773,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -21531,11 +19834,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21590,11 +19888,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;9,185</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -21655,11 +19948,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21713,11 +20001,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -21779,11 +20062,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21837,11 +20115,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -21903,11 +20176,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -21961,11 +20229,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22027,11 +20290,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22085,11 +20343,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22151,11 +20404,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22209,11 +20457,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22275,11 +20518,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22333,11 +20571,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22399,11 +20632,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22457,11 +20685,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22523,11 +20746,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22581,11 +20799,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22647,11 +20860,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,000</td>
 					</tr>
@@ -22705,11 +20913,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22771,11 +20974,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22829,11 +21027,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -22895,11 +21088,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -22953,11 +21141,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -23019,11 +21202,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23081,11 +21259,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -23139,11 +21312,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -23205,11 +21373,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23263,11 +21426,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -23329,11 +21487,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23387,11 +21540,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -23453,11 +21601,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23515,11 +21658,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23573,11 +21711,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -23639,11 +21772,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23697,11 +21825,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -23763,11 +21886,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23822,11 +21940,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;25,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -23887,11 +22000,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -23946,11 +22054,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;7,330</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -24011,11 +22114,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24069,11 +22167,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24135,11 +22228,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24193,11 +22281,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24259,11 +22342,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24321,11 +22399,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24379,11 +22452,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24445,11 +22513,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24503,11 +22566,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24569,11 +22627,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24627,11 +22680,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24693,11 +22741,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24751,11 +22794,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24817,11 +22855,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -24875,11 +22908,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -24941,11 +22969,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25003,11 +23026,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25061,11 +23079,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -25127,11 +23140,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25189,11 +23197,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25247,11 +23250,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -25313,11 +23311,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;2</td>
 					</tr>
@@ -25371,11 +23364,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -25437,11 +23425,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25496,11 +23479,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;446</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -25561,11 +23539,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25620,11 +23593,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;16,800</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -25685,11 +23653,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25743,11 +23706,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -25809,11 +23767,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25867,11 +23820,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -25933,11 +23881,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -25991,11 +23934,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26057,11 +23995,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26119,11 +24052,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26177,11 +24105,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26243,11 +24166,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26301,11 +24219,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26367,11 +24280,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26425,11 +24333,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26491,11 +24394,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26553,11 +24451,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26611,11 +24504,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26677,11 +24565,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26735,11 +24618,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26801,11 +24679,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26863,11 +24736,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -26921,11 +24789,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -26987,11 +24850,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27045,11 +24903,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27111,11 +24964,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27169,11 +25017,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27235,11 +25078,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27293,11 +25131,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27359,11 +25192,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27418,11 +25246,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;2,686</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -27483,11 +25306,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;2</td>
 					</tr>
@@ -27541,11 +25359,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27607,11 +25420,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27665,11 +25473,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27731,11 +25534,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27789,11 +25587,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27855,11 +25648,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -27913,11 +25701,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -27979,11 +25762,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28037,11 +25815,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -28103,11 +25876,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28161,11 +25929,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -28227,11 +25990,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28289,11 +26047,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28347,11 +26100,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -28413,11 +26161,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28471,11 +26214,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -28537,11 +26275,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28595,11 +26328,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -28661,11 +26389,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28723,11 +26446,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28781,11 +26499,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -28847,11 +26560,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -28906,11 +26614,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;1,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -28971,11 +26674,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29029,11 +26727,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29095,11 +26788,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29153,11 +26841,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29219,11 +26902,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29277,11 +26955,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29343,11 +27016,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29401,11 +27069,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29467,11 +27130,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29525,11 +27183,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29591,11 +27244,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -29649,11 +27297,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29715,11 +27358,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29774,11 +27412,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;30,820</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -29839,11 +27472,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -29897,11 +27525,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -29963,11 +27586,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30021,11 +27639,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -30087,11 +27700,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30146,11 +27754,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;16,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -30211,11 +27814,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30273,11 +27871,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30331,11 +27924,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -30397,11 +27985,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30455,11 +28038,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -30521,11 +28099,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30579,11 +28152,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -30645,11 +28213,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30704,11 +28267,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;3,040</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -30769,11 +28327,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -30827,11 +28380,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -30893,11 +28441,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -30951,11 +28494,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -31017,11 +28555,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -31075,11 +28608,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -31141,11 +28669,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31203,11 +28726,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31261,11 +28779,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -31327,11 +28840,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31385,11 +28893,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -31451,11 +28954,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31509,11 +29007,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -31575,11 +29068,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31633,11 +29121,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -31699,11 +29182,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31758,11 +29236,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;500</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -31823,11 +29296,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31885,11 +29353,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -31943,11 +29406,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32009,11 +29467,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32071,11 +29524,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32129,11 +29577,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32195,11 +29638,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32257,11 +29695,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32315,11 +29748,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32381,11 +29809,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32439,11 +29862,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32505,11 +29923,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -32567,11 +29980,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32625,11 +30033,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32691,11 +30094,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -32749,11 +30147,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32815,11 +30208,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -32873,11 +30261,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -32939,11 +30322,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33001,11 +30379,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33059,11 +30432,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33125,11 +30493,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33183,11 +30546,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33249,11 +30607,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33311,11 +30664,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33369,11 +30717,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33435,11 +30778,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33493,11 +30831,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33559,11 +30892,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33621,11 +30949,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33679,11 +31002,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33745,11 +31063,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33803,11 +31116,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33869,11 +31177,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -33927,11 +31230,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -33993,11 +31291,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -34051,11 +31344,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34117,11 +31405,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -34179,11 +31462,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;3</td>
 					</tr>
@@ -34237,11 +31515,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34303,11 +31576,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -34361,11 +31629,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34427,11 +31690,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,007</td>
 					</tr>
@@ -34489,11 +31747,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -34547,11 +31800,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34613,11 +31861,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -34671,11 +31914,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34737,11 +31975,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -34795,11 +32028,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34861,11 +32089,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -34919,11 +32142,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -34985,11 +32203,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35047,11 +32260,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35105,11 +32313,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -35171,11 +32374,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35229,11 +32427,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -35295,11 +32488,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35354,11 +32542,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;1,634</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -35419,11 +32602,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35478,11 +32656,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;300</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -35543,11 +32716,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -35601,11 +32769,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -35667,11 +32830,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35729,11 +32887,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35787,11 +32940,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -35853,11 +33001,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -35911,11 +33054,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -35977,11 +33115,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36039,11 +33172,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36097,11 +33225,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36163,11 +33286,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36221,11 +33339,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36287,11 +33400,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36345,11 +33453,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36411,11 +33514,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -36469,11 +33567,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36535,11 +33628,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36593,11 +33681,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36659,11 +33742,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36717,11 +33795,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36783,11 +33856,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -36845,11 +33913,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -36903,11 +33966,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -36969,11 +34027,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37027,11 +34080,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -37093,11 +34141,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37155,11 +34198,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37213,11 +34251,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -37279,11 +34312,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37337,11 +34365,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -37403,11 +34426,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;70,000</td>
 					</tr>
@@ -37461,11 +34479,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -37527,11 +34540,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -37585,11 +34593,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -37651,11 +34654,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37709,11 +34707,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -37775,11 +34768,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37834,11 +34822,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;5,218</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -37899,11 +34882,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -37957,11 +34935,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -38023,11 +34996,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;2</td>
 					</tr>
@@ -38082,11 +35050,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;10,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -38147,11 +35110,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38205,11 +35163,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -38271,11 +35224,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38329,11 +35277,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -38395,11 +35338,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -38457,11 +35395,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38515,11 +35448,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -38581,11 +35509,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38639,11 +35562,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -38705,11 +35623,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38763,11 +35676,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -38829,11 +35737,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38891,11 +35794,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -38949,11 +35847,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39015,11 +35908,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39073,11 +35961,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39139,11 +36022,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;1</td>
 					</tr>
@@ -39201,11 +36079,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39259,11 +36132,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39325,11 +36193,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39383,11 +36246,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39449,11 +36307,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39507,11 +36360,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39573,11 +36421,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39635,11 +36478,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39693,11 +36531,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39759,11 +36592,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39817,11 +36645,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -39883,11 +36706,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -39945,11 +36763,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -40003,11 +36816,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -40069,11 +36877,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -40128,11 +36931,6 @@ body {
 					<tr>
 						<td><b>Total Freebies</b></td>
 						<td align="right"><b>&#163;25,000</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
 					<tr>
@@ -40193,11 +36991,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -40251,11 +37044,6 @@ body {
 					</tr>
 					<tr>
 						<td><b>Total Freebies</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
-						<td><b>Total Expenses</b></td>
 						<td align="right"><b>&#163;0</b></td>
 					</tr>
 					<td><br/></td>
@@ -40317,11 +37105,6 @@ body {
 					</tr>
 					<td><br/></td>
 					<tr>
-						<td><b>Total Expenses</b></td>
-						<td align="right"><b>&#163;0</b></td>
-					</tr>
-					<td><br/></td>
-					<tr>
 						<td>Shareholdings (Min)</td>
 						<td align="right">&#163;0</td>
 					</tr>
@@ -40361,9 +37144,23 @@ function myFunction() {
       } else {
         x[i].style.display = "none";
       }
-}
+    }
+  }
+
+function mySortFunction() {
+
+  var e = document.getElementById("sortbox");
+  var text = e.options[e.selectedIndex].text;
+  var value = e.options[e.selectedIndex].value;
+  console.log(value);
+  console.log(text);
+
 
 }
+
+
+
+
 </script>
 
 </body>
