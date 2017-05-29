@@ -24,9 +24,23 @@ function myFunction() {
       } else {
         x[i].style.display = "none";
       }
-}
+    }
+  }
+
+function mySortFunction() {
+
+  var e = document.getElementById("sortbox");
+  var text = e.options[e.selectedIndex].text;
+  var value = e.options[e.selectedIndex].value;
+  console.log(value);
+  console.log(text);
+
 
 }
+
+
+
+
 </script>
 
 </body>

@@ -75,24 +75,58 @@ body {
   background: #77B829;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
+.sortSelect {
+  font-size: 12px;
   border: 1px solid #999;
   margin: 10px 10px 10px 0;
+  border-radius: 5px;
+  float: right;
+  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  line-height: 22px;
+  color: #333;
+
+}
+
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 20px;
+  border: 1px solid #999;
+  margin: 10px 10px 10px 0px;
   border-radius: 5px;
 }
 
 </style>
 </head>
 <body>
- 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, parties, constituencies.." title="Type in a name">
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, parties, constituencies.."title="Type in a name">
+
+<!-- <br></br> -->
+<select id="sortbox" class="sortSelect" onchange="mySortFunction()">
+    <option value="PS">Public Salary</option>
+    <option value="PI">Private Income</option>
+    <option value="RI">Rental Income</option>
+    <option value="TI">Total Income</option>
+    <option disabled>-----------------</option>
+    <option value="GI">Gifts</option>
+    <option value="DO">Donations</option>
+    <option value="OV">Overseas Visits</option>
+    <option value="TF">Total Feeebies</option>
+    <option disabled>-----------------</option>
+    <option value="TE">Total Expenses</option>
+    <option disabled>-----------------</option>
+    <option value="SH">Shareholdings</option>
+    <option value="PR">Property</option>
+    <option value="TW">Total Wealth</option>
+
+</select> 
+<br></br>
+<br>
 
 </div>
+
 
 <!-- <> -->
 
