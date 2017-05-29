@@ -3,6 +3,7 @@
 </div>
 
 <script>
+
 function myFunction() {
   var input, filter, table, tr, td, i;
 
@@ -27,22 +28,138 @@ function myFunction() {
     }
   }
 
+// function sorter(a, b) {
+//   return a.getAttribute('id') - b.getAttribute('id');
+// };
+
 function mySortFunction() {
 
   var e = document.getElementById("sortbox");
   var text = e.options[e.selectedIndex].text;
-  var value = e.options[e.selectedIndex].value;
-  console.log(value);
-  console.log(text);
-
-  
+  var valuex = e.options[e.selectedIndex].value;
+  console.log(valuex);
+  // console.log(text);
 
 
+  var list = document.getElementById('therow');
+  // console.log(list)
+  var items = list.childNodes;
+
+  var itemsArr = [];
+  for (var i in items) {
+  if (items[i].nodeType == 1) { // get rid of the whitespace text nodes
+    itemsArr.push(items[i]);
+    }
+  }
+
+  if (valuex === "salary")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.salary) == parseInt(b.dataset.salary) 
+        ? 0
+        : (parseInt(a.dataset.salary) > parseInt(b.dataset.salary) ? 1 : -1);
+      });
+
+  if (valuex === "private")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.privateinc) == parseInt(b.dataset.privateinc) 
+        ? 0
+        : (parseInt(a.dataset.privateinc) > parseInt(b.dataset.privateinc) ? 1 : -1);
+      });
+
+  if (valuex === "rental")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.rental) == parseInt(b.dataset.rental) 
+        ? 0
+        : (parseInt(a.dataset.rental) > parseInt(b.dataset.rental) ? 1 : -1);
+      });
+
+  if (valuex === "income")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.income) == parseInt(b.dataset.income) 
+        ? 0
+        : (parseInt(a.dataset.income) > parseInt(b.dataset.income) ? 1 : -1);
+      });
+
+  if (valuex === "gifts")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.gifts) == parseInt(b.dataset.gifts) 
+        ? 0
+        : (parseInt(a.dataset.gifts) > parseInt(b.dataset.gifts) ? 1 : -1);
+      });
+
+  if (valuex === "donations")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.donations) == parseInt(b.dataset.donations) 
+        ? 0
+        : (parseInt(a.dataset.donations) > parseInt(b.dataset.donations) ? 1 : -1);
+      });
+
+  if (valuex === "visits")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.visits) == parseInt(b.dataset.visits) 
+        ? 0
+        : (parseInt(a.dataset.visits) > parseInt(b.dataset.visits) ? 1 : -1);
+      });
+
+  if (valuex === "freebies")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.freebies) == parseInt(b.dataset.freebies) 
+        ? 0
+        : (parseInt(a.dataset.freebies) > parseInt(b.dataset.freebies) ? 1 : -1);
+      });
+
+  if (valuex === "shareholdings")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.shareholdings) == parseInt(b.dataset.shareholdings) 
+        ? 0
+        : (parseInt(a.dataset.shareholdings) > parseInt(b.dataset.shareholdings) ? 1 : -1);
+      });
+
+  if (valuex === "property")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.property) == parseInt(b.dataset.property) 
+        ? 0
+        : (parseInt(a.dataset.property) > parseInt(b.dataset.property) ? 1 : -1);
+      });
+
+  if (valuex === "wealth")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.wealth) == parseInt(b.dataset.wealth) 
+        ? 0
+        : (parseInt(a.dataset.wealth) > parseInt(b.dataset.wealth) ? 1 : -1);
+      });
+
+  // reverse it and display
+  itemsArr.reverse();
+
+  for (i = 0; i < itemsArr.length; ++i) {
+    list.appendChild(itemsArr[i]);
+    console.log(itemsArr[i])
+  }
 }
 
-
-
-
 </script>
-
 </body>
+</html>

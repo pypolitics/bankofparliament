@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <head>
   <title>Parliament Money</title>
 <style>
@@ -8,7 +11,7 @@ body {
     background-color: #E9F2F9;
 }
 
-.col {
+.panel {
 
   border: 1px solid #999;
   border-radius: 5px;
@@ -18,17 +21,18 @@ body {
   float: left;
 }
 
-.col .myHeader {
+.panel .panelHeader {
+
+  height: 280px;
   background: #999;
   border-radius: 5px 5px 0 0;
   font-size: 16px;
   padding: 10px 10px 10px 10px;
   text-align: center;
-/*  float: center;*/
 
 }
 
-.col .body {
+.panel .panelBody{
 
   font-size: 13px;
   padding: 10px 0px;
@@ -39,39 +43,33 @@ body {
     box-sizing: border-box;
 }
 
-.myHeader {
-
-  height: 280px;
-
-}
-
-.body .myTable2{
+.panel .panelBody .myTable2{
 
   font-size: 12px;
 
 }
 
-.labour .myHeader {
+.labour .panelHeader {
 
   background: #DC241f;
 }
 
-.conservative .myHeader {
+.conservative .panelHeader {
 
   background: #0087dc;
 }
 
-.scottish .myHeader {
+.scottish .panelHeader {
 
   background: #ffff00;
 }
 
-.liberal .myHeader {
+.liberal .panelHeader{
 
   background: #FDBB30;
 }
 
-.greenparty .myHeader {
+.greenparty .panelHeader {
 
   background: #77B829;
 }
@@ -104,24 +102,24 @@ body {
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, parties, constituencies.."title="Enter a name, party or constituency">
 <select id="sortbox" class="sortSelect" onchange="mySortFunction()">
-    <option value="PS">Public Salary</option>
-    <option value="PI">Private Income</option>
-    <option value="RI">Rental Income</option>
-    <option value="TI">Total Income</option>
+    <option value="salary">Public Salary</option>
+    <option value="private">Private Income</option>
+    <option value="rental">Rental Income</option>
+    <option value="income">Total Income</option>
     <option disabled>-----------------</option>
-    <option value="GI">Gifts</option>
-    <option value="DO">Donations</option>
-    <option value="OV">Overseas Visits</option>
-    <option value="TF">Total Feeebies</option>
+    <option value="gifts">Gifts</option>
+    <option value="donations">Donations</option>
+    <option value="visits">Overseas Visits</option>
+    <option value="freebies">Total Feeebies</option>
     <option disabled>-----------------</option>
-    <option value="SH">Shareholdings</option>
-    <option value="PR">Property</option>
-    <option value="TW">Total Wealth</option>
+    <option value="shareholdings">Shareholdings</option>
+    <option value="property">Property</option>
+    <option value="wealth">Total Wealth</option>
+</select>
 
-</select> 
 <br></br>
 <br>
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row" id="therow">
