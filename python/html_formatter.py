@@ -69,6 +69,8 @@ def print_mp_panel_into_file(member):
     # expenses
     expenses = 0
 
+    family = False
+
     # wealth
     property_wealth = 0
     shareholding_wealth = 0
@@ -123,6 +125,15 @@ def print_mp_panel_into_file(member):
         if category['category_type'] == 'salary':
             salary =  category['category_income']
 
+        # family
+        if category['category_type'] == 'family':
+            if len(category['items']) > 0:
+                family = True
+
+        # family lobbyists
+        if category['category_type'] == 'family_lobbyists':
+            if len(category['items']) > 0:
+                family = True
 
     total_income = format_integer(private_income + rental_income + salary)
     total_wealth = format_integer(shareholding_wealth + property_wealth)
@@ -164,9 +175,20 @@ def print_mp_panel_into_file(member):
     html += '\t\t<div class="col %s %s %s">\n' % (name.lower(), party.lower(), constituency.lower())
     html += '\t\t\t<div id=%s class="myHeader">\n' % member_id
 
-    html += '\t\t\t\t<br><img src="images/photo.png"></img></br>\n'
-    html += '\t\t\t\t<br>%s\n' % (name)
-    html += '\t\t\t\t<br><font size="2">%s</font>\n' % (constituency)
+    # html += '\t\t\t\t<br>\n'
+
+    if family:
+        html += '\t\t\t\t<img class="family" src="../images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
+    else:
+        html += '\t\t\t\t<img class="nofamily" src="../images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
+    html += '\t\t\t\t<p></p>\n'
+    
+    html += '\t\t\t\t<img class="photo" src="../images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+
+
+    # html += '\t\t\t\t<p></p><br/>\n'
+    html += '\t\t\t\t<p>%s</p>\n' % (name)
+    html += '\t\t\t\t<p><font size="2">%s</font></p>\n' % (constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="body">\n'
 
