@@ -216,13 +216,13 @@ def print_mp_panel_into_file(member):
 
     html += '\t\t\t\t\t<td><br/></td>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Expenses</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (expenses)
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<tr>\n'
+    # html += '\t\t\t\t\t\t<td><b>Total Expenses</b></td>\n'
+    # html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (expenses)
+    # html += '\t\t\t\t\t</tr>\n'
 
 
-    html += '\t\t\t\t\t<td><br/></td>\n'
+    # html += '\t\t\t\t\t<td><br/></td>\n'
 
     html += '\t\t\t\t\t<tr>\n'
     html += '\t\t\t\t\t\t<td>Shareholdings (Min)</td>\n'
