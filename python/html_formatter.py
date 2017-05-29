@@ -178,12 +178,12 @@ def print_mp_panel_into_file(member):
     # html += '\t\t\t\t<br>\n'
 
     if family:
-        html += '\t\t\t\t<img class="family" src="../images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
+        html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
     else:
-        html += '\t\t\t\t<img class="nofamily" src="../images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
+        html += '\t\t\t\t<img class="nofamily" src="images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
     html += '\t\t\t\t<p></p>\n'
     
-    html += '\t\t\t\t<img class="photo" src="../images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+    html += '\t\t\t\t<img class="photo" src="images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
 
     # html += '\t\t\t\t<p></p><br/>\n'
