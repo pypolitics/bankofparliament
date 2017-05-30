@@ -210,10 +210,10 @@ def print_mp_panel_into_file(member):
     html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-donations=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(donations), int(visits), int(total_freebies), int(shareholding_wealth), int(property_wealth), int(total_wealth))
     html += '\t\t\t<div class="panelHeader">\n'
 
-    # if family:
-    #     html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
-    # else:
-    #     html += '\t\t\t\t<img class="nofamily" src="images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
+    if family:
+        html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
+    else:
+        html += '\t\t\t\t<img class="nofamily" src="images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
     html += '\t\t\t\t<p></p>\n'
     
     html += '\t\t\t\t<img class="photo" src="images/photo.png" height="128" width="128" align="right=middle"></img>\n'
