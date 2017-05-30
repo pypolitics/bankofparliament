@@ -38,6 +38,10 @@ def print_to_html_file(mps):
         print_mp_panel_into_file(mp)
     end_html_file()
 
+    for i in parties:
+        print i
+
+parties = []
 
 def start_html_file():
     shutil.copy2(tops_html, html_file)
@@ -172,46 +176,71 @@ def print_mp_panel_into_file(member):
     party = member['party']
     constituency = member['constituency']
 
+    # if party not in parties:
+    #     parties.append(party)
+
+    party_dict = {
+
+                'conservative' : 'conservative',
+                'liberal democrat' : 'liberal',
+                'labour' : 'labour',
+                'speaker' : 'speaker',
+                'scottish national party' : 'scottish',
+                'independent' : 'independent',
+                'social democratic and labour party' : 'sdlp', # irish
+                'labour/co-operative' : 'labour-co-op',
+                'dup' : 'dup', # irish
+                'ukip' : 'ukip',
+                'uup' : 'uup', # irish
+                'green' : 'greenparty',
+                'plaid cymru' : 'plaid',
+                u'sinn féin' : 'sinn' # irish
+
+    }
+
+    # party = party_dict[party]
+
     # because the party, constituency and name are all class names of the
     # col class, we rename Green to greenparty, so that we dont match 
-    if party == 'Green':
-        party = 'greenparty'
+    # if party == 'Green':
+    #     party = 'greenparty'
 
 
     # BUILD THE HTML
-    html += '\t\t<div class="col panel %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-donations=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(donations), int(visits), int(total_freebies), int(shareholding_wealth), int(property_wealth), int(total_wealth))
+    html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-donations=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(donations), int(visits), int(total_freebies), int(shareholding_wealth), int(property_wealth), int(total_wealth))
     html += '\t\t\t<div class="panelHeader">\n'
 
-    if family:
-        html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
-    else:
-        html += '\t\t\t\t<img class="nofamily" src="images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
+    # if family:
+    #     html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
+    # else:
+    #     html += '\t\t\t\t<img class="nofamily" src="images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
     html += '\t\t\t\t<p></p>\n'
     
     html += '\t\t\t\t<img class="photo" src="images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
 
     # html += '\t\t\t\t<p></p><br/>\n'
-    html += '\t\t\t\t<p>%s</p>\n' % (name)
-    html += '\t\t\t\t<p><font size="2">%s</font></p>\n' % (constituency)
+    html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
+    html += '\t\t\t\t<p class="party">%s</p>\n' % (party)
+    html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
 
     html += '\t\t\t\t<table class="myTable2" style="width: 92%;">\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Public Salary</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (salary_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Public Salary</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (salary_f)
+    html += '\t\t\t\t\t</tr class="toggle">\n'
+
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Private Income</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (private_income_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Private Income</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (private_income_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Rental Income (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (rental_income_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Rental Income (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (rental_income_f)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
@@ -219,21 +248,21 @@ def print_mp_panel_into_file(member):
     html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_income_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<td><br/></td>\n'
+    html += '\t\t\t\t\t<td class="toggle"><br/></td>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Gifts</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (gifts_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Gifts</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (gifts_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Donations</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (donations_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Donations</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (donations_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Overseas Visits</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (visits_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Overseas Visits</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (visits_f)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
@@ -241,7 +270,7 @@ def print_mp_panel_into_file(member):
     html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_freebies_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<td><br/></td>\n'
+    # html += '\t\t\t\t\t<td><br/></td>\n'
 
     # html += '\t\t\t\t\t<tr>\n'
     # html += '\t\t\t\t\t\t<td><b>Total Expenses</b></td>\n'
@@ -249,16 +278,16 @@ def print_mp_panel_into_file(member):
     # html += '\t\t\t\t\t</tr>\n'
 
 
-    # html += '\t\t\t\t\t<td><br/></td>\n'
+    html += '\t\t\t\t\t<td class="toggle"><br/></td>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Shareholdings (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (shareholding_wealth_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Shareholdings (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (shareholding_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td>Property (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % (property_wealth_f)
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Property (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (property_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
