@@ -22,7 +22,6 @@ At the time of writing, the British General Election is just over a week away.
 
 ## Todo
 
-* Add a family interests icon.
 * Add photo's of MP's.
 * Fix the visits category, seems broken currently.
 * Parse for values other than 15% when parsing the shareholding data.

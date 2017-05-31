@@ -78,6 +78,7 @@ def print_mp_panel_into_file(member):
     # wealth
     property_wealth = 0
     shareholding_wealth = 0
+    shareholding_wealth_percent = 0
 
     # find category info
     for category in member['categories']:
@@ -119,11 +120,18 @@ def print_mp_panel_into_file(member):
         if category['category_type'] == 'shareholdings':
 
             for item in category['items']:
-                if item['isWealth']:
+
+                if item['amount'] > 1:
                     # this number in inaccurate, we know the value of the holding is at least
                     # 15% - we need to look at company accounts on companies house to determine
                     # the value of the is percentage
                     shareholding_wealth += int(item['amount'])
+
+                else:
+                    # this number in inaccurate, we know the value of the holding is at least
+                    # 15% - we need to look at company accounts on companies house to determine
+                    # the value of the is percentage
+                    shareholding_wealth_percent += int(item['amount'])
 
         # public salary
         if category['category_type'] == 'salary':
@@ -198,16 +206,8 @@ def print_mp_panel_into_file(member):
 
     }
 
-    # party = party_dict[party]
-
-    # because the party, constituency and name are all class names of the
-    # col class, we rename Green to greenparty, so that we dont match 
-    # if party == 'Green':
-    #     party = 'greenparty'
-
-
     # BUILD THE HTML
-    html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-donations=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(donations), int(visits), int(total_freebies), int(shareholding_wealth), int(property_wealth), int(total_wealth))
+    html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-donations=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(donations), int(visits), int(total_freebies), int(shareholding_wealth), int(shareholding_wealth_percent), int(property_wealth), int(total_wealth))
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
@@ -270,18 +270,15 @@ def print_mp_panel_into_file(member):
     html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_freebies_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    # html += '\t\t\t\t\t<td><br/></td>\n'
-
-    # html += '\t\t\t\t\t<tr>\n'
-    # html += '\t\t\t\t\t\t<td><b>Total Expenses</b></td>\n'
-    # html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (expenses)
-    # html += '\t\t\t\t\t</tr>\n'
-
-
     html += '\t\t\t\t\t<td class="toggle"><br/></td>\n'
 
     html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Shareholdings (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Shareholdings 15% +</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (shareholding_wealth_percent)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle">\n'
+    html += '\t\t\t\t\t\t<td class="toggle">Shareholdings &#163;70,000 + (Min)</td>\n'
     html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (shareholding_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
