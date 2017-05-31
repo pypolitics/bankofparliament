@@ -217,7 +217,7 @@ def print_mp_panel_into_file(member):
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
-        html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Intrests" height="32" width="32" align="right"></img></br>\n'
+        html += '\t\t\t\t<img class="family" src="images/family.png" title="Family Interests" height="32" width="32" align="right"></img></br>\n'
     else:
         html += '\t\t\t\t<img class="nofamily" src="images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
     html += '\t\t\t\t<p></p>\n'
