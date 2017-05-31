@@ -7,12 +7,6 @@
 function clickFunction() {
   var input, filter, table, tr, td, i;
 
-  // columns = document.getElementsByClassName("col");
-  // row = document.getElementsByClassName("row")
-
-  // input = document.getElementById("myInput");
-  // filter = input.value.toLowerCase();
-
   var x = document.getElementsByClassName("toggle");
   var i;
 
@@ -122,23 +116,41 @@ function mySortFunction() {
         ? 0
         : (parseInt(a.dataset.gifts) > parseInt(b.dataset.gifts) ? 1 : -1);
       });
-
-  if (valuex === "donations")
+  
+  if (valuex === "gifts_outside_uk")
 
      // sort function
     itemsArr.sort(function(a, b) {
-      return parseInt(a.dataset.donations) == parseInt(b.dataset.donations) 
+      return parseInt(a.dataset.gifts_outside_uk) == parseInt(b.dataset.gifts_outside_uk) 
         ? 0
-        : (parseInt(a.dataset.donations) > parseInt(b.dataset.donations) ? 1 : -1);
+        : (parseInt(a.dataset.gifts_outside_uk) > parseInt(b.dataset.gifts_outside_uk) ? 1 : -1);
       });
 
-  if (valuex === "visits")
+  if (valuex === "direct_donations")
 
      // sort function
     itemsArr.sort(function(a, b) {
-      return parseInt(a.dataset.visits) == parseInt(b.dataset.visits) 
+      return parseInt(a.dataset.direct_donations) == parseInt(b.dataset.direct_donations) 
         ? 0
-        : (parseInt(a.dataset.visits) > parseInt(b.dataset.visits) ? 1 : -1);
+        : (parseInt(a.dataset.direct_donations) > parseInt(b.dataset.direct_donations) ? 1 : -1);
+      });
+
+  if (valuex === "indirect_donations")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.indirect_donations) == parseInt(b.dataset.indirect_donations) 
+        ? 0
+        : (parseInt(a.dataset.indirect_donations) > parseInt(b.dataset.indirect_donations) ? 1 : -1);
+      });
+
+  if (valuex === "visits_outside_uk")
+
+     // sort function
+    itemsArr.sort(function(a, b) {
+      return parseInt(a.dataset.visits_outside_uk) == parseInt(b.dataset.visits_outside_uk) 
+        ? 0
+        : (parseInt(a.dataset.visits_outside_uk) > parseInt(b.dataset.visits_outside_uk) ? 1 : -1);
       });
 
   if (valuex === "freebies")

@@ -23,7 +23,6 @@ At the time of writing, the British General Election is just over a week away.
 ## Todo
 
 * Add photo's of MP's.
-* Fix the visits category, seems broken currently.
 * Parse for values other than 15% when parsing the shareholding data.
 * Perform companies house lookup on shareholding data, ascertain value / assets and set the amount value according to the percentage.
 * Find properties registered to mp (if possible), query zoopla for current market value (if possible), assign more accurate value to property wealth. Rental income may also be possible.

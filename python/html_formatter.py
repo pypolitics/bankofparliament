@@ -67,8 +67,10 @@ def print_mp_panel_into_file(member):
 
     # freebies
     gifts = 0
-    donations = 0
-    visits = 0
+    gifts_outside_uk = 0
+    visits_outside_uk = 0
+    direct_donations = 0
+    indirect_donations = 0
 
     # expenses
     expenses = 0
@@ -90,22 +92,27 @@ def print_mp_panel_into_file(member):
         # indirect_donations
         if category['category_type'] == 'indirect_donations':
             for item in category['items']:
-                donations += int(item['amount'])
+                indirect_donations += int(item['amount'])
 
         # direct_donations
         if category['category_type'] == 'direct_donations':
             for item in category['items']:
-                donations += int(item['amount'])
+                direct_donations += int(item['amount'])
 
         # gifts
         if category['category_type'] == 'gifts':
             for item in category['items']:
                 gifts += int(item['amount'])
 
-        # visits
-        if category['category_type'] == 'visits':
+        # gifts_outside_uk
+        if category['category_type'] == 'gifts_outside_uk':
             for item in category['items']:
-                visits += int(item['amount'])
+                gifts_outside_uk += int(item['amount'])
+
+        # visits
+        if category['category_type'] == 'visits_outside_uk':
+            for item in category['items']:
+                visits_outside_uk += int(item['amount'])
 
         # property income and wealth
         if category['category_type'] == 'property':
@@ -122,15 +129,13 @@ def print_mp_panel_into_file(member):
             for item in category['items']:
 
                 if item['amount'] > 1:
-                    # this number in inaccurate, we know the value of the holding is at least
-                    # 15% - we need to look at company accounts on companies house to determine
-                    # the value of the is percentage
+                    # this is a minimum of 70k, total amount will be in multiples of 70k.
+                    # until we find a better way of finding accurate value
                     shareholding_wealth += int(item['amount'])
 
                 else:
-                    # this number in inaccurate, we know the value of the holding is at least
-                    # 15% - we need to look at company accounts on companies house to determine
-                    # the value of the is percentage
+                    # simply represents a shareholding of 15% or more. we need to query companies house
+                    # to find actual minimum value. for now we just count the number of percentage shareholdings
                     shareholding_wealth_percent += int(item['amount'])
 
         # public salary
@@ -149,7 +154,7 @@ def print_mp_panel_into_file(member):
 
     total_income = private_income + rental_income + salary
     total_wealth = shareholding_wealth + property_wealth
-    total_freebies = gifts + donations + visits
+    total_freebies = gifts + direct_donations + indirect_donations + gifts_outside_uk + visits_outside_uk
 
 
     total_income_f = format_integer(total_income)
@@ -162,10 +167,11 @@ def print_mp_panel_into_file(member):
     salary_f = format_integer(salary)
 
     gifts_f = format_integer(gifts)
-    donations_f = format_integer(donations)
-    visits_f = format_integer(visits)
+    gifts_outside_uk_f = format_integer(gifts_outside_uk)
+    visits_outside_uk_f = format_integer(visits_outside_uk)
 
-    expenses_f = format_integer(expenses)
+    direct_donations_f = format_integer(direct_donations)
+    indirect_donations_f = format_integer(indirect_donations)
 
     shareholding_wealth_f = format_integer(shareholding_wealth)
     property_wealth_f = format_integer(property_wealth)
@@ -207,7 +213,7 @@ def print_mp_panel_into_file(member):
     }
 
     # BUILD THE HTML
-    html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-donations=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(donations), int(visits), int(total_freebies), int(shareholding_wealth), int(shareholding_wealth_percent), int(property_wealth), int(total_wealth))
+    html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholding_wealth), int(shareholding_wealth_percent), int(property_wealth), int(total_wealth))
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
@@ -228,19 +234,19 @@ def print_mp_panel_into_file(member):
 
     html += '\t\t\t\t<table class="myTable2" style="width: 92%;">\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Public Salary</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (salary_f)
-    html += '\t\t\t\t\t</tr class="toggle">\n'
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Public Salary</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (salary_f)
+    html += '\t\t\t\t\t</tr class="toggle" style="display: none">\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Private Income</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (private_income_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Private Income</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (private_income_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Rental Income (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (rental_income_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Rental Income (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (rental_income_f)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
@@ -248,21 +254,31 @@ def print_mp_panel_into_file(member):
     html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_income_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<td class="toggle"><br/></td>\n'
+    html += '\t\t\t\t\t<td class="toggle" style="display: none"><br/></td>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Gifts</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (gifts_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Gifts</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (gifts_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Donations</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (donations_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Gifts Outside UK</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (gifts_outside_uk_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Overseas Visits</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (visits_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Direct Donations</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (direct_donations_f)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Indirect Donations</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (indirect_donations_f)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Overseas Visits</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (visits_outside_uk_f)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
@@ -270,21 +286,21 @@ def print_mp_panel_into_file(member):
     html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_freebies_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<td class="toggle"><br/></td>\n'
+    html += '\t\t\t\t\t<td class="toggle" style="display: none"><br/></td>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Shareholdings 15% +</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (shareholding_wealth_percent)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings 15% +</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_percent)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Shareholdings &#163;70,000 + (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (shareholding_wealth_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings &#163;70,000 + (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle">\n'
-    html += '\t\t\t\t\t\t<td class="toggle">Property (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right">%s</td>\n' % (property_wealth_f)
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Property (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (property_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr>\n'
