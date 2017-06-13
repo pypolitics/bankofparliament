@@ -40,7 +40,7 @@ class Shareholdings(Category):
 
 		self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount))
 
-		companies_query = get_companies_house_person(user=self.companies_house_user, names=self.names, address=[])
+		# companies_query = get_companies_house_person(user=self.companies_house_user, names=self.names, address=[])
 
 class OtherShareholdings(Category):
 	def __init__(self):

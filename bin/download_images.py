@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json, os
+import json, os, sys
+
+sys.path.append('../lib/python')
 
 from utils import get_mp_image
 
-images_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'images'))
-json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'json', 'members_dump.json')
+images_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib', 'images'))
+
+json_dump_location = os.path.join(os.path.dirname(
+    os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
 
 def read_json_file():
 	"""

@@ -17,6 +17,9 @@ locale.setlocale(locale.LC_ALL, '')
 
 json_dump_location = os.path.join(os.path.dirname(
     os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
+
+lib_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib')
+
 images_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
@@ -81,8 +84,20 @@ def print_mp_panel_into_file(member):
 
     # wealth
     property_wealth = 0
-    shareholding_wealth = 0
-    shareholding_wealth_percent = 0
+    shareholdings = 0
+    shareholdings_percent = 0
+
+    shareholdings_percent_items = []
+    shareholdings_items = []
+    salary_items = []
+    private_items = []
+    rental_items = []
+    gifts_items = []
+    gifts_outside_uk_items = []
+    direct_donations_items = []
+    indirect_donations_items = []
+    visits_outside_uk_items = []
+    property_items = []
 
     # find category info
     for category in member['categories']:
@@ -90,42 +105,52 @@ def print_mp_panel_into_file(member):
         # private_income
         if category['category_type'] == 'employment':
             private_income = category['category_income']
+            private_items = category['items']
 
         # indirect_donations
         if category['category_type'] == 'indirect_donations':
             for item in category['items']:
                 indirect_donations += int(item['amount'])
+            indirect_donations_items = category['items']
 
         # direct_donations
         if category['category_type'] == 'direct_donations':
             for item in category['items']:
                 direct_donations += int(item['amount'])
+            direct_donations_items = category['items']
 
         # gifts
         if category['category_type'] == 'gifts':
             for item in category['items']:
                 gifts += int(item['amount'])
+            gifts_items = category['items']
 
         # gifts_outside_uk
         if category['category_type'] == 'gifts_outside_uk':
             for item in category['items']:
                 gifts_outside_uk += int(item['amount'])
+            gifts_outside_uk_items = category['items']
 
         # visits
         if category['category_type'] == 'visits_outside_uk':
             for item in category['items']:
                 visits_outside_uk += int(item['amount'])
+            visits_outside_uk_items = category['items']
 
         # property income and wealth
         if category['category_type'] == 'property':
 
+            rental_items = []
+            property_items = []
+
             for item in category['items']:
                 if item['isWealth']:
                     property_wealth += int(item['amount'])
+                    property_items.append(item)
                 else:
                     rental_income += int(item['amount'])
+                    rental_items.append(item)
 
-        # shareholdings
         if category['category_type'] == 'shareholdings':
 
             for item in category['items']:
@@ -133,16 +158,21 @@ def print_mp_panel_into_file(member):
                 if item['amount'] > 1:
                     # this is a minimum of 70k, total amount will be in multiples of 70k.
                     # until we find a better way of finding accurate value
-                    shareholding_wealth += int(item['amount'])
+                    shareholdings += int(item['amount'])
+                    shareholdings_items.append(item)
 
                 else:
                     # simply represents a shareholding of 15% or more. we need to query companies house
                     # to find actual minimum value. for now we just count the number of percentage shareholdings
-                    shareholding_wealth_percent += int(item['amount'])
+                    shareholdings_percent += int(item['amount'])
+                    item['amount'] = '15%'
+                    shareholdings_percent_items.append(item)
 
         # public salary
         if category['category_type'] == 'salary':
             salary =  category['category_income']
+
+            salary_items = category['items']
 
         # family
         if category['category_type'] == 'family':
@@ -155,7 +185,7 @@ def print_mp_panel_into_file(member):
                 family = True
 
     total_income = private_income + rental_income + salary
-    total_wealth = shareholding_wealth + property_wealth
+    total_wealth = shareholdings + property_wealth
     total_freebies = gifts + direct_donations + indirect_donations + gifts_outside_uk + visits_outside_uk
 
 
@@ -175,7 +205,7 @@ def print_mp_panel_into_file(member):
     direct_donations_f = format_integer(direct_donations)
     indirect_donations_f = format_integer(indirect_donations)
 
-    shareholding_wealth_f = format_integer(shareholding_wealth)
+    shareholding_wealth_f = format_integer(shareholdings)
     property_wealth_f = format_integer(property_wealth)
 
 
@@ -215,7 +245,7 @@ def print_mp_panel_into_file(member):
     }
 
     # BUILD THE HTML
-    html += '\t\t<div class="col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholding_wealth), int(shareholding_wealth_percent), int(property_wealth), int(total_wealth))
+    html += '\t\t<div class="photo col panel %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id))
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
@@ -224,9 +254,13 @@ def print_mp_panel_into_file(member):
         html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
     html += '\t\t\t\t<p></p>\n'
     
-    # html += '\t\t\t\t<img class="photo" src="lib/images/photo.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n'
-    html += '\t\t\t\t<img class="photo" src="lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+    if os.path.exists(os.path.join(lib_path, 'images', '%s.jpg' % str(member_id))):
+        # html += '\t\t\t\t<img class="picture" src="lib/images/%s.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n' % (str(member_id))
+        html += '\t\t\t\t<img class="picture" src="lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
 
+    else:
+        # html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n'
+        html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
     # html += '\t\t\t\t<p></p><br/>\n'
     html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
@@ -293,7 +327,7 @@ def print_mp_panel_into_file(member):
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
     html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings 15% +</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_percent)
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholdings_percent)
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
@@ -318,107 +352,270 @@ def print_mp_panel_into_file(member):
     html += '\t\t</div>\n'
 
 
-    # BUILD THE HTML
-    html += '\t\t<div style="display: none" class="col2 bigWidget panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholding_wealth), int(shareholding_wealth_percent), int(property_wealth), int(total_wealth))
-    html += '\t\t\t<div class="panelHeader">\n'
 
-    if family:
-        html += '\t\t\t\t<img class="family" src="lib/images/family.png" title="Family Interests" height="32" width="32" align="right"></img></br>\n'
-    else:
-        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
-    html += '\t\t\t\t<p></p>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"><br/></td>\n'
+
+    ############################################################################################################
+    # # EXPANDED
+
+    # # BUILD THE HTML
+    # html += '\t\t<div style="display: none" class="photo col2 bigWidget panel2 %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id))
+    # html += '\t\t\t<div class="panelHeader photo data-member=%s">\n' % (str(member_id))
+
+    # # if family:
+    # #     html += '\t\t\t\t<img class="family" src="lib/images/family.png" title="Family Interests" height="32" width="32" align="right"></img></br>\n'
+    # # else:
+    # #     html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
+    # # html += '\t\t\t\t<p></p>\n'
     
-    html += '\t\t\t\t<img class="photo" src="lib/images/family.png" height="128" width="128" align="right=middle"></img>\n'
+    # # html += '\t\t\t\t<img src="lib/images/family.png" height="128" width="128" align="right=middle"></img>\n'
 
 
-    # html += '\t\t\t\t<p></p><br/>\n'
-    html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
-    html += '\t\t\t\t<p class="party">%s</p>\n' % (party)
-    html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
-    html += '\t\t\t</div>\n'
-    html += '\t\t\t<div class="panelBody">\n'
+    # # html += '\t\t\t\t<p></p><br/>\n'
+    # html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
+    # html += '\t\t\t\t<p class="party">%s</p>\n' % (party)
+    # html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
+    # html += '\t\t\t</div>\n'
+    # html += '\t\t\t<div class="panelBody">\n'
 
-    html += '\t\t\t\t<table class="myTable2" style="width: 92%;">\n'
+    # html += '\t\t\t\t<table class="myTable3 " style="width: 92%;">\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Public Salary</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (salary_f)
-    html += '\t\t\t\t\t</tr class="toggle" style="display: none">\n'
+    # ############################################################################################################
+    # # PUBLIC SALARY
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Private Income</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (private_income_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Rental Income (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (rental_income_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Public Salary</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (salary_f)
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Income (Min)</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_income_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # for item in salary_items:
 
-    html += '\t\t\t\t\t<td class="toggle" style="display: none"><br/></td>\n'
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Gifts</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (gifts_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # ############################################################################################################
+    # # PRIVATE INCOME
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Gifts Outside UK</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (gifts_outside_uk_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Direct Donations</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (direct_donations_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Private Income</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (private_income_f)
+    # html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Indirect Donations</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (indirect_donations_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # for item in private_items:
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Overseas Visits</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (visits_outside_uk_f)
-    html += '\t\t\t\t\t</tr>\n'
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Freebies</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_freebies_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # ############################################################################################################
+    # # RENTAL INCOME
 
-    html += '\t\t\t\t\t<td class="toggle" style="display: none"><br/></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Rental Income</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (rental_income_f)
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings 15% +</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_percent)
-    html += '\t\t\t\t\t</tr>\n'
+    # for item in rental_items:
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings &#163;70,000 + (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Property (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (property_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # ############################################################################################################
+    # # TOTAL INCOME
 
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Wealth (Min)</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2total toggle2 income bigger"><b>Total Income (Min)</br></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2total toggle2 income" align="right"><b>%s</b></td>\n' % (total_income_f)
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # GIFTS
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Gifts</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (gifts_f)
+    # html += '\t\t\t\t\t</tr>\n'
+
+    # for item in gifts_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # GIFTS OUTSIDE UK
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Gifts Outside UK</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (gifts_outside_uk_f)    
+    # html += '\t\t\t\t\t</tr>\n'
+
+    # for item in gifts_outside_uk_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # DIRECT DONATIONS
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Direct Donations</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (direct_donations_f)    
+    # html += '\t\t\t\t\t</tr>\n'
+
+    # for item in direct_donations_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # DIRECT DONATIONS
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Indirect Donations</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (indirect_donations_f)    
+    # html += '\t\t\t\t\t</tr>\n'
+
+    # for item in indirect_donations_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # VISITS OUTSIDE UK
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Overseas Visits</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (visits_outside_uk_f)    
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # for item in visits_outside_uk_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # TOTAL FREEBIES
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2total income bigger"><b>Total Freebies</br></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2total income" align="right"><b>%s</b></td>\n' % (total_freebies_f)
+    # html += '\t\t\t\t\t</tr>\n'
+
+    # ############################################################################################################
+    # # SHAREHOLDINGS PERCENT
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Shareholdings 15% +</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (shareholdings_percent)
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # for item in shareholdings_percent_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % str(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # SHAREHOLDINGS
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Shareholdings &#163;70,000 + (Min)</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (shareholding_wealth_f)
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # for item in shareholdings_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # PROPERTY
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Property (Min)</b></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (property_wealth_f)
+    # html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # for item in property_items:
+
+    #     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
+    #     html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+    #     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    # ############################################################################################################
+    # # TOTAL WEALTH
+
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    # html += '\t\t\t\t\t<tr class="toggle2">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2total income bigger"><b>Total Wealth (Min)</br></td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle2total income" align="right"><b>%s</b></td>\n' % (total_wealth_f)
+    # html += '\t\t\t\t\t</tr>\n'
 
 
-    html += '\t\t\t\t</table>\n'
-
-    html += '\t\t\t</div>\n'
-    html += '\t\t</div>'
+    # # END TABLE
+    # html += '\t\t\t\t</table>\n'
+    # html += '\t\t\t</div>\n'
+    # html += '\t\t</div>'
 
 
 

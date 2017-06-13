@@ -257,6 +257,7 @@ def get_mp_image(name, first_name, last_name, memid, output_path):
         response = requests.get(url, stream=True)
 
         filepath = '%s/%s_%s_%s.png' % (output_path, first_name, last_name, memid)
+        filepath = '%s/%s.png' % (output_path, memid)
 
         with open(filepath, 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)

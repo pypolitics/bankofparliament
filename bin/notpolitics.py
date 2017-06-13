@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # system libs
-import locale, ast, os, operator, json
+import locale, ast, os, operator, json, sys
 from bs4 import BeautifulSoup
 from optparse import OptionParser
+
+sys.path.append('../lib/python')
 
 # local libs
 from categories.employment import Employment
@@ -85,7 +87,11 @@ class MemberOfParliament():
 
 		# annoyingly, the data from theyworkforyou for the registered intrests
 		# is in html, use BeautifulSoup to parse into regular text
-		intrests = self.full_info['register_member_interests_html']
+		if self.full_info.has_key('register_member_interests_html'):
+			intrests = self.full_info['register_member_interests_html']
+		else:
+			return
+
 		soup = BeautifulSoup(intrests, 'html.parser')
 		text = soup.text
 
@@ -254,7 +260,7 @@ def main(mps, options):
 
 	if options.json:
 		# write out to file
-		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'json', 'members_dump.json')
+		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
 
 		with open(json_dump_location, 'w') as jsonfile:
 			json.dump(mps, jsonfile)
