@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>followthemoney</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="../lib/css/style.css">
+
+  </head>
+
+  <body>
+    <!-- open the body header -->
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
+            <a class="navbar-brand" href="../index.html">follow the money</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="../index.html">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="../lib/html/about.html">About</a></li>
+              <li><a target="_blank" href="https://github.com/pypolitics/notpolitics">Github</a></li>
+            </ul>        
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search for names, parties, constituencies..">
+              </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="#">Link</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="alertMe" data-name="salary" href="#">Public Income</a></li>
+                  <li><a class="alertMe" data-name="private" href="#">Private Income</a></li>
+                  <li><a class="alertMe" data-name="rental" href="#">Rental Income</a></li>
+                  <li><a class="alertMe" data-name="income" href="#">Total Income</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a class="alertMe" data-name="gifts" href="#">Gifts</a></li>
+                  <li><a class="alertMe" data-name="gifts_outside_uk" href="#">Gifts Outside UK</a></li>
+                  <li><a class="alertMe" data-name="direct_donations" href="#">Direct Donations</a></li>
+                  <li><a class="alertMe" data-name="indirect_donations" href="#">Indirect Donations</a></li>
+                  <li><a class="alertMe" data-name="visits_outside_uk" href="#">Overseas Visits</a></li>
+                  <li><a class="alertMe" data-name="freebies" href="#">Total Freebies</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a class="alertMe" data-name="shareholdings_percent" href="#">Shareholdings 15% +</a></li>
+                  <li><a class="alertMe" data-name="shareholdings" href="#">Shareholdings &#163;70,000 +</a></li>
+                  <li><a class="alertMe" data-name="property" href="#">Property</a></li>
+                  <li><a class="alertMe" data-name="wealth" href="#">Total Wealth</a></li>
+                </ul>
+              </li>
+            </ul><!-- /.sort dropdown -->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+
+      </nav>
+
+    <!-- add the toggle view button -->
+    <button type="button" onclick="clickFunction()" class="btn btn-default pull-right">Toggle View</button>
+
+    <!-- close the body header -->
+    </header>
+
+    <!-- add the container for the row of mps -->
+    <div class="container">
+      <div class="row" id="therow">
+		<div class="photo col2 bigWidget panel2 owen paterson conservative conservative north shropshire 41911" data-salary=74962 data-privateinc=4399 data-rental=30000 data-income=109361 data-gifts=2609 data-gifts_outside_uk=0 data-direct_donations=0 data-indirect_donations=0 data-visits_outside_uk=1070 data-freebies=3679 data-shareholdings=0 data-shareholdings_percent=0 data-property=300000 data-wealth=300000 data-member=41911>
+			<div class="panelHeader photo data-member=41911">
+				<img class="picture" src="../lib/images/41911.jpg" height="128" width="128" align="right=middle"></img>
+				Owen Paterson, Conservative, North Shropshire
+			</div>
+			<div class="panelBody">
+				<table class="myTable3 " style="width: 92%;">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Public Salary</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;74,962</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Basic Salary</td>
+						<td class="toggle2 income" align="right">&#163;74,962</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Private Income</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;4,399</b></td>
+					</tr>
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Payment of £4,399.06 expected from the Northern Ireland Meat Exporters Association Ltd (NIMEA), Lissue House, 31 Ballinderry Road, Lisburn B</td>
+						<td class="toggle2 income" align="right">&#163;4,399</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Rental Income</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;30,000</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - A share in buildings and agricultural land at Bunbury and Spurstow, Cheshire: (i) and (ii). (Updated 23 December 2014)</td>
+						<td class="toggle2 income" align="right">&#163;10,000</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - A share in buildings attached to my house near Ellesmere, Shropshire: (i) and (ii). (Updated 23 December 2014)</td>
+						<td class="toggle2 income" align="right">&#163;10,000</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - A share of a house in London: (i) and until 16 October 2016 (ii).</td>
+						<td class="toggle2 income" align="right">&#163;10,000</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2total toggle2 income bigger"><b>Total Income (Min)</br></td>
+						<td class="toggle2total toggle2 income" align="right"><b>&#163;109,361</b></td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Gifts</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;2,609</b></td>
+					</tr>
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Name of donor: UK 2020 LtdAddress of donor: America House, Rumford Court, Rumford Place, Liverpool L3 9DDAmount of donation or nature of val</td>
+						<td class="toggle2 income" align="right">&#163;1,713</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Name of donor: Lynn’s Country Foods LtdAddress of donor: Unit 6 Down Business Park, 46 Belfast Road, Downpatrick, County Down BT30 9UPAmount</td>
+						<td class="toggle2 income" align="right">&#163;126</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp -  Dinner for my wife and me at the Randox Polo International event at Gleneagles, total value £240.</td>
+						<td class="toggle2 income" align="right">&#163;240</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp -  Dinner at the Randox Polo event at Bushmills, NI, total value £240 and estimated equivalent accommodation cost for two nights, value £200; </td>
+						<td class="toggle2 income" align="right">&#163;240</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp -  reimbursement for travel expenses (£52.67), two nights accommodation (£157), meals and sundries (£176.65) for UK 2020 events at Conservativ</td>
+						<td class="toggle2 income" align="right">&#163;52</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Name of donor: BBC Northern IrelandAddress of donor: BBC Blackstaff House, Bruce St, Belfast BT2 7GXAmount of donation or nature of value if</td>
+						<td class="toggle2 income" align="right">&#163;238</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Gifts Outside UK</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Direct Donations</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Indirect Donations</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Overseas Visits</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;1,070</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Invited to speak on the agrochemical industry.</td>
+						<td class="toggle2 income" align="right">&#163;560</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Speaking at Tönissteiner Kreis Annual Conference.</td>
+						<td class="toggle2 income" align="right">&#163;510</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2total income bigger"><b>Total Freebies</br></td>
+						<td class="toggle2total income" align="right"><b>&#163;3,679</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Shareholdings 15% +</b></td>
+						<td class="toggle2 income" align="right"><b>0</b></td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Shareholdings &#163;70,000 + (Min)</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Property (Min)</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;300,000</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - A share in buildings and agricultural land at Bunbury and Spurstow, Cheshire: (i) and (ii). (Updated 23 December 2014)</td>
+						<td class="toggle2 income" align="right">&#163;100,000</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - A share in buildings attached to my house near Ellesmere, Shropshire: (i) and (ii). (Updated 23 December 2014)</td>
+						<td class="toggle2 income" align="right">&#163;100,000</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - A share of a house in London: (i) and until 16 October 2016 (ii).</td>
+						<td class="toggle2 income" align="right">&#163;100,000</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2">
+						<td class="toggle2total income bigger"><b>Total Wealth (Min)</br></td>
+						<td class="toggle2total income" align="right"><b>&#163;300,000</b></td>
+					</tr>
+				</table>
+			</div>
+		</div>      <!-- close the row -->
+      </div>
+    <!-- close the container -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- local javascript functions -->
+    <script src="../lib/js/functions.js"></script>
+
+  </body>
+</html>

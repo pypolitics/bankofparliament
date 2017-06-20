@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>followthemoney</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="../lib/css/style.css">
+
+  </head>
+
+  <body>
+    <!-- open the body header -->
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
+            <a class="navbar-brand" href="../index.html">follow the money</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="../index.html">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="../lib/html/about.html">About</a></li>
+              <li><a target="_blank" href="https://github.com/pypolitics/notpolitics">Github</a></li>
+            </ul>        
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search for names, parties, constituencies..">
+              </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="#">Link</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="alertMe" data-name="salary" href="#">Public Income</a></li>
+                  <li><a class="alertMe" data-name="private" href="#">Private Income</a></li>
+                  <li><a class="alertMe" data-name="rental" href="#">Rental Income</a></li>
+                  <li><a class="alertMe" data-name="income" href="#">Total Income</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a class="alertMe" data-name="gifts" href="#">Gifts</a></li>
+                  <li><a class="alertMe" data-name="gifts_outside_uk" href="#">Gifts Outside UK</a></li>
+                  <li><a class="alertMe" data-name="direct_donations" href="#">Direct Donations</a></li>
+                  <li><a class="alertMe" data-name="indirect_donations" href="#">Indirect Donations</a></li>
+                  <li><a class="alertMe" data-name="visits_outside_uk" href="#">Overseas Visits</a></li>
+                  <li><a class="alertMe" data-name="freebies" href="#">Total Freebies</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a class="alertMe" data-name="shareholdings_percent" href="#">Shareholdings 15% +</a></li>
+                  <li><a class="alertMe" data-name="shareholdings" href="#">Shareholdings &#163;70,000 +</a></li>
+                  <li><a class="alertMe" data-name="property" href="#">Property</a></li>
+                  <li><a class="alertMe" data-name="wealth" href="#">Total Wealth</a></li>
+                </ul>
+              </li>
+            </ul><!-- /.sort dropdown -->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+
+      </nav>
+
+    <!-- add the toggle view button -->
+    <button type="button" onclick="clickFunction()" class="btn btn-default pull-right">Toggle View</button>
+
+    <!-- close the body header -->
+    </header>
+
+    <!-- add the container for the row of mps -->
+    <div class="container">
+      <div class="row" id="therow">
+		<div class="photo col2 bigWidget panel2 geoffrey clifton-brown conservative conservative the cotswolds 41638" data-salary=74962 data-privateinc=17574 data-rental=20000 data-income=112536 data-gifts=650 data-gifts_outside_uk=0 data-direct_donations=0 data-indirect_donations=0 data-visits_outside_uk=0 data-freebies=650 data-shareholdings=70000 data-shareholdings_percent=0 data-property=200000 data-wealth=270000 data-member=41638>
+			<div class="panelHeader photo data-member=41638">
+				<img class="picture" src="../lib/images/41638.jpg" height="128" width="128" align="right=middle"></img>
+				Geoffrey Clifton-Brown, Conservative, The Cotswolds
+			</div>
+			<div class="panelBody">
+				<table class="myTable3 " style="width: 92%;">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Public Salary</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;74,962</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Basic Salary</td>
+						<td class="toggle2 income" align="right">&#163;74,962</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Private Income</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;17,574</b></td>
+					</tr>
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 28 August 2015, drawings for August 2015: £2,541.80. Hours: 67.5 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;2,541</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 31 March 2016, drawings for March 2016: £847.33. Hours: 10 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;847</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 29 April 2016, drawings for April 2016: £814.35. Hours: 8 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;814</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 31 May 2016, drawings for May 2016: £3,147.55. Hours: 20 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;3,147</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 30 June 2016, drawings for June 2016: £2,069.93. Hours: 14 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;2,069</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 29 July 2016, drawings for July: £189.86. Hours: 25 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;189</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 31 August 2016, drawings for August 2016: £3,810.15. Hours: 35 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;3,810</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 30 September 2016, drawings for September 2016:£3,960.48. Hours: 30 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;3,960</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - 31 October. 2016, drawings for October 2016: £197.43. Hours: 13 hrs.</td>
+						<td class="toggle2 income" align="right">&#163;197</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Rental Income</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;20,000</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Agricultural holdings in Norfolk: (i) and (ii).</td>
+						<td class="toggle2 income" align="right">&#163;10,000</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Various let properties in London: (i) and (ii).</td>
+						<td class="toggle2 income" align="right">&#163;10,000</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2total toggle2 income bigger"><b>Total Income (Min)</br></td>
+						<td class="toggle2total toggle2 income" align="right"><b>&#163;112,536</b></td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Gifts</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;650</b></td>
+					</tr>
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Name of donor: British Association for Shooting and Conservation (BASC)Address of donor: Marford Mill, Rossett, Wrexham LL12 0HLAmount of do</td>
+						<td class="toggle2 income" align="right">&#163;650</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Gifts Outside UK</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Direct Donations</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Indirect Donations</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Overseas Visits</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;0</b></td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2total income bigger"><b>Total Freebies</br></td>
+						<td class="toggle2total income" align="right"><b>&#163;650</b></td>
+					</tr>
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Shareholdings 15% +</b></td>
+						<td class="toggle2 income" align="right"><b>0</b></td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Shareholdings &#163;70,000 + (Min)</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;70,000</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Interest in Salisbury Road Development LLP, which owns a property in Christchurch, Dorset. (Registered 18 October 2011)</td>
+						<td class="toggle2 income" align="right">&#163;70,000</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2 income">
+						<td class="toggle2 income bigger"><b>Property (Min)</b></td>
+						<td class="toggle2 income" align="right"><b>&#163;200,000</b></td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Agricultural holdings in Norfolk: (i) and (ii).</td>
+						<td class="toggle2 income" align="right">&#163;100,000</td>
+					</tr class="toggle2 income">
+					<tr class="toggle2 income">
+						<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - Various let properties in London: (i) and (ii).</td>
+						<td class="toggle2 income" align="right">&#163;100,000</td>
+					</tr class="toggle2 income">
+					<td class="toggle2 income"></br></td>
+					<td class="toggle2 income"></br></td>
+					<tr class="toggle2">
+						<td class="toggle2total income bigger"><b>Total Wealth (Min)</br></td>
+						<td class="toggle2total income" align="right"><b>&#163;270,000</b></td>
+					</tr>
+				</table>
+			</div>
+		</div>      <!-- close the row -->
+      </div>
+    <!-- close the container -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- local javascript functions -->
+    <script src="../lib/js/functions.js"></script>
+
+  </body>
+</html>
