@@ -275,19 +275,15 @@ def print_mp_panel_into_file(member, mp_html_file):
     else:
         html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
     html += '\t\t\t\t<p></p>\n'
-    
+
+    # add the clickable thumbnail
+    html += '<a href="pages/%s.html">' % member_id
     if os.path.exists(os.path.join(lib_path, 'images', '%s.jpg' % str(member_id))):
-
-        html += '<a href="pages/%s.html">' % member_id
-        # html += '\t\t\t\t<img class="picture" src="lib/images/%s.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n' % (str(member_id))
         html += '\t\t\t\t<img class="picture" src="lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
-        html += '</a>'
-
     else:
-        # html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n'
         html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+    html += '</a>'
 
-    # html += '\t\t\t\t<p></p><br/>\n'
     html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
     html += '\t\t\t\t<p class="party">%s</p>\n' % (party)
     html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
@@ -397,39 +393,20 @@ def print_mp_panel_into_file(member, mp_html_file):
     # BUILD THE HTML
     html += '\t\t<div class="photo col2 bigWidget panel2 %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id))
     html += '\t\t\t<div class="panelHeader photo data-member=%s">\n' % (str(member_id))
-
-    # if family:
-    #     html += '\t\t\t\t<img class="family" src="../lib/images/family.png" title="%s" height="32" width="32" align="right"></img></br>\n' % family_pretty
-    # else:
-    #     html += '\t\t\t\t<img class="nofamily" src="../lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
-    # html += '\t\t\t\t<p></p>\n'
     
+    # add the thumbnail
     if os.path.exists(os.path.join(lib_path, 'images', '%s.jpg' % str(member_id))):
-        # html += '\t\t\t\t<img class="picture" src="lib/images/%s.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n' % (str(member_id))
         html += '\t\t\t\t<img class="picture" src="../lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
-
     else:
-        # html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" onclick="expandWidget()" align="right=middle"></img>\n'
         html += '\t\t\t\t<img src="../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
-
     html += '\t\t\t\t%s, %s, %s\n' % (name, party, constituency)
-
-
-    # html += '\t\t\t\t<p></p><br/>\n'
-    # html += '\t\t\t\t<p class="name">%s\n' % (name)
-    # html += '\t\t\t\t<p class="party">%s\n' % (party)
-    # html += '\t\t\t\t<p class="constituency">%s\n' % (constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
-
     html += '\t\t\t\t<table class="myTable3 " style="width: 92%;">\n'
 
     ############################################################################################################
     # PUBLIC SALARY
-
-    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
 
     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
     html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Public Salary</b></td>\n'
