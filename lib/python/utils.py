@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # system libs
-import requests, time, ast, locale, pprint, re, shutil
+import requests, time, ast, locale, pprint, re, shutil, os
 from datetime import datetime
 import xml.etree.cElementTree as ElementTree
 
@@ -245,7 +245,12 @@ def get_mp_image(name, first_name, last_name, memid, output_path):
     # find the mp id from data.parliament
     url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/name*%s/' % (name)
     request = get_request(url=url, user=None, headers={'content-type' : 'application/json'})
-    filepath = '%s/%s_%s_%s.png' % (output_path, first_name, last_name, memid)
+    filepath = '%s/%s.jpg' % (output_path, memid)
+    # print filepath
+
+    if os.path.isfile(filepath):
+        print 'Image Exists'
+        return
 
     try:
         js = request.json()
@@ -255,9 +260,6 @@ def get_mp_image(name, first_name, last_name, memid, output_path):
         url = 'http://data.parliament.uk/membersdataplatform/services/images/MemberPhoto/%s/Web Photobooks' % member_id
 
         response = requests.get(url, stream=True)
-
-        filepath = '%s/%s_%s_%s.png' % (output_path, first_name, last_name, memid)
-        filepath = '%s/%s.png' % (output_path, memid)
 
         with open(filepath, 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)
