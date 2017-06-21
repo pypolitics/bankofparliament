@@ -428,8 +428,8 @@ def print_mp_panel_into_file(member, mp_html_file):
     ############################################################################################################
     # PUBLIC SALARY
 
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
 
     html += '\t\t\t\t\t<tr class="toggle2 income">\n'
     html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Public Salary</b></td>\n'
