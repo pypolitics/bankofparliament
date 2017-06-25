@@ -103,8 +103,9 @@ def get_request(url, user=None, headers={}, request_wait_time=300.00):
 
     # too many requests
     if request.status_code == 429:
-        print ''
-        print "Ok, I'll wait for %s seconds" % str(request_wait_time)
+        print '*'*100
+        print "Too Many Requests, wait for %s seconds" % str(request_wait_time)
+        print '*'*100
         time.sleep(request_wait_time)
         return get_request(url, user, headers)
     else:
@@ -434,7 +435,7 @@ def fuzzy_filter(data, first_name, middle_name, last_name, addresses=[]):
     """
 
     # set the fuzzy ratio threshold value
-    ratio_threshold = 70
+    ratio_threshold = 50
 
     top_ratio = []
     for i in data:
