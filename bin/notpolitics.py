@@ -350,7 +350,7 @@ def main(mps, options):
 	end_time = time.time()
 	elapsed = end_time - start_time
 
-	print '\n'
+	print ''
 	if int(elapsed) < 60:
 		print 'Total Time : %s seconds' % (int(elapsed))
 	else:
