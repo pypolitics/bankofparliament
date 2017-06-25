@@ -115,6 +115,11 @@ def print_mp_panel_into_file(member, mp_html_file):
     indirect_donations_items = []
     visits_outside_uk_items = []
     property_items = []
+    companies_items = []
+
+    for user in member['companies_house']:
+        for item in user['items']:
+            companies_items.append(item)
 
     # find category info
     for category in member['categories']:
@@ -267,7 +272,7 @@ def print_mp_panel_into_file(member, mp_html_file):
     # BUILD THE HTML
     html = u"\n"
 
-    html += '\t\t<div class="photo col panel %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id))
+    html += '\t\t<div class="photo col panel %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-companies_house=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(len(companies_items)), int(property_wealth), int(total_wealth), str(member_id))
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
@@ -354,6 +359,11 @@ def print_mp_panel_into_file(member, mp_html_file):
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
     html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings &#163;70,000 + (Min)</td>\n'
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_f)
+    html += '\t\t\t\t\t</tr>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Companies House</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(companies_items))
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
@@ -603,6 +613,25 @@ def print_mp_panel_into_file(member, mp_html_file):
         html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
         html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
         html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    ############################################################################################################
+    # COMPANIES HOUSE
+
+    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Companies House</b></td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (len(companies_items))
+    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    for item in companies_items:
+
+        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
+        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
 
     ############################################################################################################
     # PROPERTY

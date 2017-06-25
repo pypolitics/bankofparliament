@@ -84,26 +84,25 @@ class XmlDictConfig(dict):
             else:
                 self.update({element.tag: element.text})
 
-# Functions
-def get_request(url, user=None, headers={}, request_wait_time=3600.00):
-	"""
-    Function to return a http get request
-    """
+def get_request(url, user=None, headers={}, request_wait_time=300.00):
+    if user:
+        request = requests.get(url, auth=(user, ''), headers=headers)
+    else:
+        request = requests.get(url, headers=headers)
 
-	if user:
-		request = requests.get(url, auth=(user, ''), headers=headers)
-	else:
-		request = requests.get(url, headers=headers)
+    # print request.status_code, url
+    
+    if request.status_code == 200:
+        return request
 
-	if request.status_code == 201:
-		print '*'*100
-		print request.status_code
-		print ''
-		print "Ok, I'll wait for 5 mins"
-		time.sleep(request_wait_time)
-		return get_request(url, user, headers)
-	else:
-		return request
+    # too many requests
+    if request.status_code == 429:
+        print ''
+        print "Ok, I'll wait for %s seconds" % str(request_wait_time)
+        time.sleep(request_wait_time)
+        return get_request(url, user, headers)
+    else:
+        return request
 
 def get_all_mps(theyworkyou_apikey):
 	"""
@@ -136,6 +135,40 @@ def get_companies_house_person(user, names=[], addresses=[]):
     j = request.json()
 
     return j
+
+# def get_house_of_commons_members():
+
+#     # http://data.parliament.uk/membersdataplatform/memberquery.aspx#outputs
+#     search_criteria = 'House=Commons|IsEligible=true'
+#     outputs = 'BasicDetails'
+#     url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/%s/%s' % (search_criteria, outputs)
+#     print url
+#     headers = {'Accept': 'application/json'}
+#     req = requests.get(url, headers=headers)
+
+#     # replace null with None
+#     content = req.content.replace("null", "None")
+#     a = ast.literal_eval(content)
+
+#     pprint.pprint(a)
+
+def get_house_of_commons_member(constituency):
+
+    # http://data.parliament.uk/membersdataplatform/memberquery.aspx#outputs
+    search_criteria = 'House=Commons|IsEligible=true|constituency=%s' % (constituency)
+    outputs = 'BasicDetails|Addresses|PreferredNames'
+    url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/%s/%s' % (search_criteria, outputs)
+
+    headers = {'Accept': 'application/json'}
+    # request = requests.get(url, headers=headers)
+    request = get_request(url=url, user=None, headers=headers)
+
+    # replace null with None
+    content = request.content.replace("null", "None")
+    a = ast.literal_eval(content)
+
+    members = a['Members']['Member']
+    return members
 
 def get_appointments(user, data, status=['active']):
     """
