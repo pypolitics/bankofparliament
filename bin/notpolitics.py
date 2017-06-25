@@ -33,7 +33,7 @@ class MemberOfParliament():
 
 		start_time = time.time()
 
-		self.index = index
+		self.index = str(index+1).zfill(3)
 
 		# list holding category classes
 		self.categories = []
@@ -62,7 +62,7 @@ class MemberOfParliament():
 		end_time = time.time()
 		elapsed = end_time - start_time
 
-		print '%s - %s %s (%s) %s [%s/%s] - %s seconds' % (self.index, self.first_name, self.last_name, self.party, self.constituency, len(self.mps), len(self.companies_users), elapsed)
+		print '%s - %s %s (%s) %s [%s/%s] - %s seconds' % (self.index, self.first_name, self.last_name, self.party, self.constituency, len(self.mps), len(self.companies_users), int(elapsed))
 
 	def setMember(self, member):
 		"""Set the member variables from the given member dictionary"""
@@ -340,11 +340,21 @@ class MemberOfParliament():
 		return data
 
 def main(mps, options):
+	start_time = time.time()
 
 	# fully parsed list of mps
 	mp_list = []
 	for member in mps:
 		mp_list.append(MemberOfParliament(member, mps.index(member)).data)
+
+	end_time = time.time()
+	elapsed = end_time - start_time
+
+	print '\n'
+	if int(elapsed) < 60:
+		print 'Total Time : %s seconds' % (int(elapsed))
+	else:
+		print 'Total Time : %s minutes' % (int(elapsed/60))
 
 	if options.json:
 		# write out to file
