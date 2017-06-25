@@ -75,11 +75,6 @@ def format_integer(number):
 def print_mp_panel_into_file(member, mp_html_file):
 
     cat_types = [each['category_type'] for each in member['categories']]
-    # print cat_types
-
-    [u'employment', u'indirect_donations', u'direct_donations', u'gifts', u'visits_outside_uk', u'gifts_outside_uk', u'property', u'shareholdings', u'shareholdings', u'miscellaneous', u'family', u'family_lobbyists', u'salary']
-    import pprint
-    # pprint.pprint(member)
 
     # incomes
     private_income = 0
@@ -117,7 +112,10 @@ def print_mp_panel_into_file(member, mp_html_file):
     property_items = []
     companies_items = []
 
+    self_link = ''
     for user in member['companies_house']:
+        self_link = user['url']
+
         for item in user['items']:
             companies_items.append(item)
 
@@ -362,7 +360,7 @@ def print_mp_panel_into_file(member, mp_html_file):
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Companies House</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Companies House Appointments</td>\n'
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(companies_items))
     html += '\t\t\t\t\t</tr>\n'
 
@@ -620,16 +618,18 @@ def print_mp_panel_into_file(member, mp_html_file):
     html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
     html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Companies House</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (len(companies_items))
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+    # html += '\t\t\t\t\t<a href="%s">\n' % self_link
+    html += '\t\t\t\t\t\t<tr class="toggle2 income">\n'
+    html += '\t\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Companies House Appointments</b></td>\n'
+    if self_link != '':
+        html += '\t\t\t\t\t\t\t<td class="toggle2 income" align="right"><a target="_blank" href="%s" style="display:block;"><b>Link</b></td>\n' % (self_link)
+    html += '\t\t\t\t\t\t</tr class="toggle2 income">\n'
 
     for item in companies_items:
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><a target="_blank" href="%s" style="display:block;"><b>Link</b></td>\n' % item['url']
         html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
 

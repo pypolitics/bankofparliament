@@ -27,52 +27,6 @@ class Item():
 		# pluck out nouns, maybe we make a word cloud out of it
 		# or
 		# use it them to query companies house, land registry
-		self.get_nouns()
-
-	def get_nouns(self):
-		"""
-		Use nlp to find nouns
-		"""
-		blob = TextBlob(self.raw_string)
-
-		for word, tag in blob.tags:
-			if tag in ['NNP', 'NN']:
-				self.nouns.append(word.lemmatize())
-
-	def pprint(self):
-		"""
-		Petty prints using custom pprint class, formatting unicode characters
-		"""
-		PrettyPrintUnicode().pprint(self.data)
-
-	@property
-	def data(self):
-		"""
-		Returns the class variables as a key/pair dict
-		"""
-		return vars(self)
-
-class CompaniesItem():
-	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
-		"""
-		Basic Item Class
-		"""
-		self.item_id = item_id
-		self.category_id = category_id
-		self.raw_string = raw_string
-		self.pretty = pretty
-		self.registered = registered
-		self.amount = amount
-		self.nouns = []
-
-		self.isIncome = False
-		self.isWealth = False
-		self.isGift = False
-		self.isDonation = False
-
-		# pluck out nouns, maybe we make a word cloud out of it
-		# or
-		# use it them to query companies house, land registry
 		# self.get_nouns()
 
 	def get_nouns(self):
@@ -98,15 +52,15 @@ class CompaniesItem():
 		"""
 		return vars(self)
 
-# class CompaniesItem(Item):
-# 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
-# 		"""
-# 		CompaniesItem
-# 		"""
+class CompaniesItem(Item):
+	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
+		"""
+		CompaniesItem
+		"""
 
-# 		Item.__init__(self, item_id, category_id, raw_string, pretty, registered, amount)
+		Item.__init__(self, item_id, category_id, raw_string, pretty, registered, amount)
 
-# 		self.isIncome = False
+		self.isIncome = False
 
 class SalaryItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):

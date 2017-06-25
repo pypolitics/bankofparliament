@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 
 # system libs
-import requests, time, ast, locale, pprint, re, shutil, os
+import requests, time, ast, locale, pprint, re, shutil, os, sys
+reload(sys) 
+sys.setdefaultencoding('utf8')
+
 from datetime import datetime
 import xml.etree.cElementTree as ElementTree
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
+companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
 # Classes
 class PrettyPrintUnicode(pprint.PrettyPrinter):
@@ -85,12 +92,11 @@ class XmlDictConfig(dict):
                 self.update({element.tag: element.text})
 
 def get_request(url, user=None, headers={}, request_wait_time=300.00):
+    # print url
     if user:
         request = requests.get(url, auth=(user, ''), headers=headers)
     else:
         request = requests.get(url, headers=headers)
-
-    # print request.status_code, url
     
     if request.status_code == 200:
         return request
@@ -136,31 +142,13 @@ def get_companies_house_person(user, names=[], addresses=[]):
 
     return j
 
-# def get_house_of_commons_members():
-
-#     # http://data.parliament.uk/membersdataplatform/memberquery.aspx#outputs
-#     search_criteria = 'House=Commons|IsEligible=true'
-#     outputs = 'BasicDetails'
-#     url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/%s/%s' % (search_criteria, outputs)
-#     print url
-#     headers = {'Accept': 'application/json'}
-#     req = requests.get(url, headers=headers)
-
-#     # replace null with None
-#     content = req.content.replace("null", "None")
-#     a = ast.literal_eval(content)
-
-#     pprint.pprint(a)
-
 def get_house_of_commons_member(constituency):
 
-    # http://data.parliament.uk/membersdataplatform/memberquery.aspx#outputs
     search_criteria = 'House=Commons|IsEligible=true|constituency=%s' % (constituency)
     outputs = 'BasicDetails|Addresses|PreferredNames'
     url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/%s/%s' % (search_criteria, outputs)
 
     headers = {'Accept': 'application/json'}
-    # request = requests.get(url, headers=headers)
     request = get_request(url=url, user=None, headers=headers)
 
     # replace null with None
@@ -169,52 +157,6 @@ def get_house_of_commons_member(constituency):
 
     members = a['Members']['Member']
     return members
-
-def get_appointments(user, data, status=['active']):
-    """
-    Function to return appointmentsm, referenced in the officer dictionary
-
-    Valid status:
-        active
-        liquidated
-        dissolved
-
-    """
-    for user in data:
-
-        appointment_dict = {}
-        user['appointments'] = {}
-
-        # get the officer id, and query that for appointments
-        link = user['links']['self']
-        officer_id = link.split('/')[2]
-
-        url = 'https://api.companieshouse.gov.uk/officers/%s/appointments' % officer_id
-        request = get_request(url=url, user=user, headers={})
-
-        try:
-
-            appointments = request.json()
-
-            # sort the appointments into status keys, then we can look at active, dissolved, liquidated
-            # companies of the member
-            for app in appointments['items']:
-                company_status = app['appointed_to']['company_status']
-                print company_status, status
-                if company_status in status:
-
-                    if not appointment_dict.has_key(company_status):
-                        appointment_dict[company_status] = []
-                    
-                    appointment_dict[company_status].append(app)
-
-            # add the appointment_dict into the original user dict 
-            user['appointments'] = appointment_dict
-
-        except:
-            pass
-
-    return data
 
 def filter_by_first_last_name(data, first_name, last_name, name):
     """
@@ -232,21 +174,13 @@ def filter_by_first_last_name(data, first_name, last_name, name):
 
     matched_people = []
 
-    # see if both first_name and last_name are in the title
     for i in data['items']:
-        if first_name.lower() in i['title'].lower():
-            if last_name.lower() in i['title'].lower():
-                matched_people.append(i)
 
-    # see if both names appear sequentially in the title
-    for match in matched_people:
-        if not name.lower() in match['title'].lower():
-            matched_people.remove(match)
+      if first_name in i['title'].lower():
 
-    # see if title startswith name
-    for match in matched_people:
-        if not match['title'].lower().startswith(name.lower()):
-            matched_people.remove(match)
+          if last_name in i['title'].lower():
+
+              matched_people.append(i)
 
     return matched_people
 
@@ -352,3 +286,203 @@ def get_regex_pair_search(pair, raw_string):
     Return a regex search class
     """
     return re.search(r'%s(.*?)%s' % (pair[0], pair[1]), raw_string)
+
+def get_other_officers(user):
+    """
+    Query the other officers connected to the company
+    """
+    for appointment in user['appointments']['items']:
+        if appointment['company'].has_key('links'):
+
+            links = appointment['company']['links']
+            if links.has_key('officers'):
+
+                other_officers_link = links['officers']
+
+                url = 'https://api.companieshouse.gov.uk%s' % other_officers_link
+                other_officers = get_request(url=url, user=companies_house_user, headers={})
+
+                try:
+                    other_officers = other_officers.json()
+                    appointment['other_officers'] = other_officers
+                
+                except:
+                    pass
+
+def get_filling_history(user):
+    """
+    Query the filing history of the company
+    """
+    for appointment in user['appointments']['items']:
+        if appointment['company'].has_key('links'):
+
+            links = appointment['company']['links']
+
+            if links.has_key('filing_history'):
+
+                filing_history_link = links['filing_history']
+
+                url = 'https://api.companieshouse.gov.uk%s' % filing_history_link
+                filing_history = get_request(url=url, user=companies_house_user, headers={})
+
+                try:
+                    filing_history = filing_history.json()
+                    appointment['filing_history'] = filing_history
+                
+                except:
+                    pass
+
+def get_companies(user):
+    """
+    Query the company of the appointment
+    """
+    for appointment in user['appointments']['items']:
+        appointment['company'] = {}
+        appointment['company']['items'] = []
+
+        company_number = appointment['appointed_to']['company_number']
+        url = 'https://api.companieshouse.gov.uk/company/%s' % company_number
+
+        companies = get_request(url=url, user=companies_house_user, headers={})
+        
+        try:
+            companies = companies.json()
+            appointment['company'] = companies
+        
+        except:
+            pass
+
+def get_appointments(user):
+    """
+    Query the appointments of the user
+    """
+
+    self_link = user['links']['self']
+    url = 'https://api.companieshouse.gov.uk%s' % self_link
+
+    appointments = get_request(url=url, user=companies_house_user, headers={})
+
+    try:
+        appointments = appointments.json()
+        user['appointments'] = appointments
+
+    except:
+        user['appointments'] = {}
+        user['appointments']['items'] = []
+
+def contains_mp(vals):
+    """
+    Check if a list of values contain our keywords
+    """
+
+    search_for = ['parliament', 'politician', 'commons', 'member', 'SW1A' '0AA']
+
+    for search in search_for:
+        for v in vals:
+            if search.lower() in v.lower():
+                return True
+    return False
+
+def value_recurse(data, vals=[]):
+    """
+    Return a list of values from given data, dict, nested dict etc etc
+    """
+
+    # make data a list
+    if isinstance(data, dict):
+        data = [data]
+    elif isinstance(data, list):
+        data = data
+    else:
+        data = [data]
+
+    # list of dicts
+    for d in data:
+
+        # ok, data is a list, but what of its contents
+        if isinstance(d, dict):
+            for k, v in d.iteritems():
+
+                if isinstance(v, dict):
+                    value_recurse([v], vals)
+                elif isinstance(v, list):
+                    value_recurse(v, vals)
+                else:
+                    vals.append(str(v))
+
+        elif isinstance(d, list):
+            value_recurse(d, vals)
+        
+        else:
+            vals.append(str(d))
+
+    return vals
+
+
+def decoded(data):
+    """
+    Decode data items
+    """
+    for i in data['items']:
+        i['title'].encode('utf-8')
+
+    return data
+
+def fuzzy_filter(data, first_name, middle_name, last_name, addresses=[]):
+    """
+    Perform fuzzy logic on name matching
+    """
+
+    # set the fuzzy ratio threshold value
+    ratio_threshold = 70
+
+    top_ratio = []
+    for i in data:
+
+        title = i['title'].lower()
+        name = '%s %s' % (first_name, last_name)
+        if middle_name != '':
+            name = '%s %s %s' % (first_name, middle_name, last_name)
+
+        ratio = fuzz.token_sort_ratio(name, title)
+
+        if int(ratio) >= ratio_threshold:
+            i['fuzzy_ratio'] = ratio
+            top_ratio.append(i)
+    
+    return top_ratio
+
+def get_companies_house_users(member):
+    """Get data from companies house"""
+
+    # id
+    member_id = member['@Member_Id']
+
+    # names
+    first_name = member['BasicDetails']['GivenForename'].lower()
+    last_name = member['BasicDetails']['GivenSurname'].lower()
+
+    middle_name = ''
+    if member['BasicDetails']['GivenMiddleNames']:
+        middle_name = member['BasicDetails']['GivenMiddleNames'].lower()
+ 
+    #############################################################################################################################
+    # basic search
+    if middle_name != '':
+        url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s+%s&items_per_page=100' % (first_name, middle_name, last_name)
+    else:
+        url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s&items_per_page=100' % (first_name, last_name)
+
+    url = url.replace(' ', '+')
+
+    r = get_request(url=url, user=companies_house_user, headers={})
+    data = r.json()
+    data = decoded(data)
+
+    # filter the data
+    data = filter_by_first_last_name(data, first_name, middle_name, last_name)
+    data = filter_by_appointment_counts(data)
+    data = fuzzy_filter(data, first_name, middle_name, last_name)
+
+    # these are the matched companieshouse users - queried by name only, filtered a little bit
+    return data
