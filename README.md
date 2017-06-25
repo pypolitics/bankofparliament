@@ -7,6 +7,8 @@ A project to inspect and display the register of interests of members of parliam
 Source of data:
 
 https://www.theyworkforyou.com.
+http://data.parliament.uk.
+https://api.companieshouse.gov.uk.
 
 It is then parsed for data relating to financial interests and presented in a webpage:
 
