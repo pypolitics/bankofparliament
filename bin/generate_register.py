@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 import os, locale
-
 locale.setlocale(locale.LC_ALL, '')
-
 
 def format_integer(number):
 
@@ -11,28 +10,19 @@ def format_integer(number):
     return loc.replace("£", "&#163;")
 
 def write_register(html_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items):
-    # -------------------------------------------------------------------------------------------------------------------------
-    # -------------------------------------------------------------------------------------------------------------------------
 
-    # mp_html_file = os.path.join(os.path.dirname(__file__), '../pages/%s.html' % member_id)
     html = u"\n"
-
-    ###########################################################################################################
-    # EXPANDED
-
-    # BUILD THE HTML
     html += '\t\t<div class="photo col2 bigWidget panel2 %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id))
     html += '\t\t\t<div class="panelHeader photo data-member=%s">\n' % (str(member_id))
-    # html += '\t\t\t<img class="xxx data-member=%s" src="../lib/data/wordclouds/%s.png" height="200" width="1040\n' % (str(member_id), str(member_id)) 
+    
     # add the thumbnail
     s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'images', '%s.jpg' % str(member_id))
     if os.path.exists(s):
         html += '\t\t\t\t<img class="picture" src="../../lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
-        # html += '\t\t\t\t<img class="picture" src="../lib/data/wordclouds/%s.png" height="200" width="800" align="right=middle"></img>\n' % (str(member_id))
-
     else:
         html += '\t\t\t\t<img src="../../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
+    # add the mp text
     html += '\t\t\t\t%s, %s, %s\n' % (name, party, constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'

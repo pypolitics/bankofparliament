@@ -1,6 +1,10 @@
-import os
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-def write_thumbnail(html_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family):
+import os, locale
+locale.setlocale(locale.LC_ALL, '')
+
+def write_thumbnail(html_file, family_pretty, member_id, name, party, party_string, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f,salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family):
     ##############################################################################################################################
     # BUILD THE HTML - THUMBNAIL
     ##############################################################################################################################
@@ -11,7 +15,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, constituen
     # we also have to add data attributes for sorting functions
 
     html = u"\n"
-    html += '\t\t<div class="photo col panel %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-active_appointment=%s data-previous_appointments=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(len(active_appointments)), int(len(previous_appointments)), int(property_wealth), int(total_wealth), str(member_id))
+    html += '\t\t<div class="photo col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-active_appointment=%s data-previous_appointments=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(len(active_appointments)), int(len(previous_appointments)), int(property_wealth), int(total_wealth), str(member_id))
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
@@ -31,8 +35,10 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, constituen
         html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
  
     html += '</a>'
+
+    # add the mp text
     html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
-    html += '\t\t\t\t<p class="party">%s</p>\n' % (party)
+    html += '\t\t\t\t<p class="party">%s</p>\n' % (party.title())
     html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
