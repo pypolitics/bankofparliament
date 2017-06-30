@@ -267,31 +267,39 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     member_id = member['member_id']
     constituency = member['constituency']
 
+    party = member['party'].lower()
+    if party.lower().startswith('sinn'):
+        party = 'Sinn Fein'.lower()
+    
     party_dict = {
 
-                'conservative' : 'conservative',
-                'liberal democrat' : 'liberal',
+                'conservative' : 'conservative tory',
+                'liberal democrat' : 'liberal lib',
                 'labour' : 'labour',
                 'speaker' : 'speaker',
-                'scottish national party' : 'scottish',
+                'scottish national party' : 'scottish snp',
                 'independent' : 'independent',
                 'social democratic and labour party' : 'sdlp', # irish
-                'labour/co-operative' : 'labour-co-op',
+                'labour/co-operative' : 'labour co-op',
                 'dup' : 'dup irish', # irish
                 'ukip' : 'ukip',
                 'uup' : 'uup irish', # irish
-                'green' : 'greenparty',
-                'plaid cymru' : 'plaid wales welsh',
-                u'sinn féin' : 'sinn irish' # irish
-
+                'green' : 'greenparty green',
+                'plaid cymru' : 'plaid wales welsh cymru',
+                'sinn fein' : 'sinn fein irish' # irish
     }
 
     nouns = ' '.join(keywords)
 
-    write_thumbnail(html_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family)
+    # write the thumbail into the main front page
+    write_thumbnail(html_file, family_pretty, member_id, name, party, party_dict[party], constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family)
+
+    # write the register page
     write_register(register_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items)
-    # write_companieshouse(companies_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items)
+
+    # write the companies house page
     write_companieshouse(companies_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments)
+
 def feeback(mps):
     """"""
 
@@ -343,7 +351,6 @@ def sort_by_options(mps, options):
             '%s' % options.sortby), reverse=True)
 
     return mps
-
 
 def read_json_file():
     """
