@@ -282,6 +282,18 @@ def regex_for_amount(raw_string):
     else:
         return 0
 
+def regex_for_percent(raw_string):
+    """
+    Return integer amount
+    """
+    amount_regex = re.compile(r"\d+%")
+
+    if amount_regex.search(raw_string):
+
+        return int(amount_regex.search(raw_string).group().split('%')[0])
+    else:
+        return 15
+
 def get_regex_pair_search(pair, raw_string):
     """
     Return a regex search class

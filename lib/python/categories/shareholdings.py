@@ -2,7 +2,7 @@
 
 from categories import Category
 from items import ShareholdingsItem, OtherShareholdingsItem
-from utils import regex_for_registered, regex_for_amount, get_companies_house_person
+from utils import regex_for_registered, regex_for_amount, get_companies_house_person, regex_for_percent
 
 class Shareholdings(Category):
 	def __init__(self, companies_house_user, names=[]):
@@ -37,10 +37,9 @@ class Shareholdings(Category):
 		pretty = raw_string.split(' (Registered')[0]
 		registered = regex_for_registered(raw_string)
 		amount = 1
+		amount = regex_for_percent(raw_string)
 
 		self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount))
-
-		# companies_query = get_companies_house_person(user=self.companies_house_user, names=self.names, address=[])
 
 class OtherShareholdings(Category):
 	def __init__(self):
