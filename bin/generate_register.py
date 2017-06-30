@@ -3,7 +3,7 @@
 
 import os, locale
 locale.setlocale(locale.LC_ALL, '')
-§
+
 def format_integer(number):
 
     loc = locale.currency(number, grouping=True).split('.')[0]
