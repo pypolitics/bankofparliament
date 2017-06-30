@@ -3,7 +3,7 @@
 
 import os, locale
 locale.setlocale(locale.LC_ALL, '')
-
+§
 def format_integer(number):
 
     loc = locale.currency(number, grouping=True).split('.')[0]
@@ -23,7 +23,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
         html += '\t\t\t\t<img src="../../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
     # add the mp text
-    html += '\t\t\t\t%s, %s, %s\n' % (name, party, constituency)
+    html += '\t\t\t\t%s, %s, %s\n' % (name, party.title(), constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
     html += '\t\t\t\t<table class="myTable3 " style="width: 92%;">\n'

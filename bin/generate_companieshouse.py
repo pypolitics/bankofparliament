@@ -25,7 +25,7 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         html += '\t\t\t\t<img src="../../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
     # add the mp text
-    html += '\t\t\t\t%s, %s, %s\n' % (name, party, constituency)
+    html += '\t\t\t\t%s, %s, %s\n' % (name, party.title(), constituency)
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
     html += '\t\t\t\t<table class="myTable3 " style="width: 92%;">\n'
