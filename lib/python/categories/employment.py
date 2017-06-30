@@ -35,7 +35,10 @@ class Employment(Category):
 
 			amount = regex_for_amount(raw_string) 
 
-			if 'monthly salary' in raw_string.lower():
+			if 'p.a' in raw_string.lower():
+				amount = amount
+
+			elif 'monthly salary' in raw_string.lower():
 				amount = amount * 12
 
 			elif 'a month' in raw_string.lower():
