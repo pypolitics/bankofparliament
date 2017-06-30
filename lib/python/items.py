@@ -6,6 +6,8 @@ from textblob import TextBlob
 # local libs
 from utils import PrettyPrintUnicode
 
+base_url = 'https://beta.companieshouse.gov.uk'
+
 class Item():
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
 		"""
@@ -27,9 +29,9 @@ class Item():
 		# pluck out nouns, maybe we make a word cloud out of it
 		# or
 		# use it them to query companies house, land registry
-		# self.get_nouns()
+		# self._get_nouns()
 
-	def get_nouns(self):
+	def _get_nouns(self):
 		"""
 		Use nlp to find nouns
 		"""
@@ -52,15 +54,69 @@ class Item():
 		"""
 		return vars(self)
 
-class CompaniesItem(Item):
-	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
+class AppointmentsItem():
+	def __init__(self, appointment):
 		"""
-		CompaniesItem
+		Basic Item Class
 		"""
 
-		Item.__init__(self, item_id, category_id, raw_string, pretty, registered, amount)
+		self.appointment = appointment
+		self.company_status = 'N/A'
+		self.company_name = 'N/A'
+		self.company_number = 'N/A'
+		self.officer_role = 'N/A'
+		self.resigned_on = 'N/A'
+		self.url = base_url + appointment['links']['company']
 
-		self.isIncome = False
+		if appointment['appointed_to'].has_key('company_status'):
+			self.company_status = appointment['appointed_to']['company_status'].title()
+
+		if appointment['appointed_to'].has_key('company_name'):
+			self.company_name = appointment['appointed_to']['company_name'].title()
+
+		if appointment.has_key('officer_role'):
+			self.officer_role = appointment['officer_role'].title()
+
+		if appointment.has_key('resigned_on'):
+			self.resigned_on = appointment['resigned_on'].title()
+
+		if appointment.has_key('appointed_to'):
+			self.company_number = appointment['appointed_to']['company_number']
+
+		self.keywords = self.company_name.split(' ')
+		self.company = CompaniesItem(appointment).data
+
+	def pprint(self):
+		"""
+		Petty prints using custom pprint class, formatting unicode characters
+		"""
+		PrettyPrintUnicode().pprint(self.data)
+
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		return vars(self)
+
+class CompaniesItem():
+	def __init__(self, appointment):
+		"""
+		Basic Item Class
+		"""
+
+	def pprint(self):
+		"""
+		Petty prints using custom pprint class, formatting unicode characters
+		"""
+		PrettyPrintUnicode().pprint(self.data)
+
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		return vars(self)
 
 class SalaryItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):

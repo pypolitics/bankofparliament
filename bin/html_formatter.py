@@ -4,14 +4,19 @@
 import json
 import os, sys
 import operator
-import locale
+import locale, subprocess
 import pprint
 from optparse import OptionParser
+from textblob import TextBlob
 
 sys.path.append('../lib/python')
 
-from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments
+from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments, value_recurse
 import shutil
+
+from generate_thumbnail import write_thumbnail
+from generate_register import write_register
+from generate_companieshouse import write_companieshouse
 
 locale.setlocale(locale.LC_ALL, '')
 
@@ -30,37 +35,39 @@ html_file = os.path.join(os.path.dirname(__file__), '../index.html')
 tails_html = os.path.join(os.path.dirname(__file__), '../lib/html/tails.html')
 mp_tails_html = os.path.join(os.path.dirname(__file__), '../lib/html/mp_tails.html')
 
+wordcloud_path = os.path.join(os.path.dirname(__file__), '../lib/data/wordclouds/')
 
-def main(mps, options):
+def main(mps):
     """
     Main
     """
-    mps = sort_by_options(mps, options)
 
     print_to_html_file(mps)
-
 
 def print_to_html_file(mps):
     start_html_file()
     for mp in mps:
-        mp_html_file = os.path.join(os.path.dirname(__file__), '../pages/%s.html' % mp['member_id'])
+        register_file = os.path.join(os.path.dirname(__file__), '../pages/register/%s.html' % mp['member_id'])
+        companies_file = os.path.join(os.path.dirname(__file__), '../pages/companieshouse/%s.html' % mp['member_id'])
         
-        start_html_file(tops_html=mp_top_html, html_file=mp_html_file)
+        start_html_file(mp['member_id'], tops_html=mp_top_html, html_file=register_file)
+        start_html_file(mp['member_id'], tops_html=mp_top_html, html_file=companies_file)
 
-        print_mp_panel_into_file(mp, mp_html_file)
+        print_mp_panel_into_file(mp, register_file, companies_file)
 
-        end_html_file(tails_html=mp_tails_html, html_file=mp_html_file)
+        end_html_file(tails_html=mp_tails_html, html_file=register_file)
+        end_html_file(tails_html=mp_tails_html, html_file=companies_file)
 
     end_html_file()
 
-    for i in parties:
-        print i
+def start_html_file(member_id='', tops_html=tops_html, html_file=html_file):
 
-parties = []
-
-def start_html_file(tops_html=tops_html, html_file=html_file):
     shutil.copy2(tops_html, html_file)
-
+    
+    if not member_id == '':
+        command = "sed -i '' 's/MEMBER_ID/%s/g' %s" % (member_id, html_file)
+        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        out, err = process.communicate()
 
 def end_html_file(tails_html=tails_html, html_file=html_file):
     with open(html_file, "a") as fo:
@@ -72,7 +79,7 @@ def format_integer(number):
     loc = locale.currency(number, grouping=True).split('.')[0]
     return loc.replace("£", "&#163;")
 
-def print_mp_panel_into_file(member, mp_html_file):
+def print_mp_panel_into_file(member, register_file, companies_file):
 
     cat_types = [each['category_type'] for each in member['categories']]
 
@@ -110,14 +117,32 @@ def print_mp_panel_into_file(member, mp_html_file):
     indirect_donations_items = []
     visits_outside_uk_items = []
     property_items = []
-    companies_items = []
+
+    active_appointments = []
+    previous_appointments = []
 
     self_link = ''
+    self_links = []
+
+    keywords = []
+    exclude = ['ltd', ' ', 'plc', 'limited', 'llp', 'the',  '-', 'and', 'united', 'kingdom', 'uk', 'false', 'true', 'none', 'n/a']
+
     for user in member['companies_house']:
-        self_link = user['url']
+        self_links.append(user['url'])
 
         for item in user['items']:
-            companies_items.append(item)
+
+            # company_name = item['company_name'].split(' ')
+
+            # for n in company_name:
+            #     if not n.lower() in exclude:
+            #         keywords.append(n.lower())
+
+            if item['resigned_on'] == 'N/A' and item['company_status'].lower() == 'active' :
+                active_appointments.append(item)
+
+            else:
+                previous_appointments.append(item)
 
     # find category info
     for category in member['categories']:
@@ -175,7 +200,7 @@ def print_mp_panel_into_file(member, mp_html_file):
 
             for item in category['items']:
 
-                if item['amount'] > 1:
+                if item['amount'] == 70000:
                     # this is a minimum of 70k, total amount will be in multiples of 70k.
                     # until we find a better way of finding accurate value
                     shareholdings += int(item['amount'])
@@ -185,7 +210,7 @@ def print_mp_panel_into_file(member, mp_html_file):
                     # simply represents a shareholding of 15% or more. we need to query companies house
                     # to find actual minimum value. for now we just count the number of percentage shareholdings
                     shareholdings_percent += int(item['amount'])
-                    item['amount'] = '15%'
+                    # item['amount'] = '15%'
                     shareholdings_percent_items.append(item)
 
         # public salary
@@ -245,9 +270,6 @@ def print_mp_panel_into_file(member, mp_html_file):
     party = member['party']
     constituency = member['constituency']
 
-    # if party not in parties:
-    #     parties.append(party)
-
     party_dict = {
 
                 'conservative' : 'conservative',
@@ -258,430 +280,21 @@ def print_mp_panel_into_file(member, mp_html_file):
                 'independent' : 'independent',
                 'social democratic and labour party' : 'sdlp', # irish
                 'labour/co-operative' : 'labour-co-op',
-                'dup' : 'dup', # irish
+                'dup' : 'dup irish', # irish
                 'ukip' : 'ukip',
-                'uup' : 'uup', # irish
+                'uup' : 'uup irish', # irish
                 'green' : 'greenparty',
-                'plaid cymru' : 'plaid',
-                u'sinn féin' : 'sinn' # irish
+                'plaid cymru' : 'plaid wales welsh',
+                u'sinn féin' : 'sinn irish' # irish
 
     }
 
-    # BUILD THE HTML
-    html = u"\n"
-
-    html += '\t\t<div class="photo col panel %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-companieshouse=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(len(companies_items)), int(property_wealth), int(total_wealth), str(member_id))
-    html += '\t\t\t<div class="panelHeader">\n'
-
-    if family:
-        html += '\t\t\t\t<img class="family" src="lib/images/family.png" title="%s" height="32" width="32" align="right"></img></br>\n' % family_pretty
-    else:
-        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
-    html += '\t\t\t\t<p></p>\n'
-
-    # add the clickable thumbnail
-    html += '<a href="pages/%s.html">' % member_id
-    if os.path.exists(os.path.join(lib_path, 'images', '%s.jpg' % str(member_id))):
-        html += '\t\t\t\t<img class="picture" src="lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
-    else:
-        html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
-    html += '</a>'
-
-    html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
-    html += '\t\t\t\t<p class="party">%s</p>\n' % (party)
-    html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
-    html += '\t\t\t</div>\n'
-    html += '\t\t\t<div class="panelBody">\n'
-
-    html += '\t\t\t\t<table class="myTable2" style="width: 92%;">\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Public Salary</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (salary_f)
-    html += '\t\t\t\t\t</tr class="toggle" style="display: none">\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Private Income</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (private_income_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Rental Income (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (rental_income_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Income (Min)</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_income_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<td class="toggle" style="display: none"><br/></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Gifts</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (gifts_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Gifts Outside UK</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (gifts_outside_uk_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Direct Donations</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (direct_donations_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Indirect Donations</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (indirect_donations_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Overseas Visits</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (visits_outside_uk_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Freebies</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_freebies_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<td class="toggle" style="display: none"><br/></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings 15% +</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholdings_percent)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings &#163;70,000 + (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Companies House Appointments</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(companies_items))
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Property (Min)</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (property_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr>\n'
-    html += '\t\t\t\t\t\t<td><b>Total Wealth (Min)</b></td>\n'
-    html += '\t\t\t\t\t\t<td align="right"><b>%s</b></td>\n' % (total_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-
-    html += '\t\t\t\t</table>\n'
-
-    html += '\t\t\t</div>\n'
-    html += '\t\t</div>\n'
-
-    # write_mp_page(member)
-
-    # write it out
-    with open(html_file, "a") as myfile:
-        myfile.write(html.encode("utf8"))
-
-    # -------------------------------------------------------------------------------------------------------------------------
-    # -------------------------------------------------------------------------------------------------------------------------
-
-    # mp_html_file = os.path.join(os.path.dirname(__file__), '../pages/%s.html' % member_id)
-    html = u"\n"
-
-
-    # html += '\t\t\t\t\t<td class="toggle2 income"><br/></td>\n'
-
-    ###########################################################################################################
-    # EXPANDED
-
-    # BUILD THE HTML
-    html += '\t\t<div class="photo col2 bigWidget panel2 %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id))
-    html += '\t\t\t<div class="panelHeader photo data-member=%s">\n' % (str(member_id))
-    
-    # add the thumbnail
-    if os.path.exists(os.path.join(lib_path, 'images', '%s.jpg' % str(member_id))):
-        html += '\t\t\t\t<img class="picture" src="../lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
-    else:
-        html += '\t\t\t\t<img src="../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
-
-    html += '\t\t\t\t%s, %s, %s\n' % (name, party, constituency)
-    html += '\t\t\t</div>\n'
-    html += '\t\t\t<div class="panelBody">\n'
-    html += '\t\t\t\t<table class="myTable3 " style="width: 92%;">\n'
-
-    ############################################################################################################
-    # PUBLIC SALARY
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Public Salary</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (salary_f)
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in salary_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # PRIVATE INCOME
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Private Income</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (private_income_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    for item in private_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # RENTAL INCOME
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Rental Income</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (rental_income_f)
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in rental_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # TOTAL INCOME
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2total toggle2 income bigger"><b>Total Income (Min)</br></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2total toggle2 income" align="right"><b>%s</b></td>\n' % (total_income_f)
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # GIFTS
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Gifts</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (gifts_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    for item in gifts_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # GIFTS OUTSIDE UK
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Gifts Outside UK</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (gifts_outside_uk_f)    
-    html += '\t\t\t\t\t</tr>\n'
-
-    for item in gifts_outside_uk_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # DIRECT DONATIONS
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Direct Donations</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (direct_donations_f)    
-    html += '\t\t\t\t\t</tr>\n'
-
-    for item in direct_donations_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # DIRECT DONATIONS
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Indirect Donations</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (indirect_donations_f)    
-    html += '\t\t\t\t\t</tr>\n'
-
-    for item in indirect_donations_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # VISITS OUTSIDE UK
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Overseas Visits</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (visits_outside_uk_f)    
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in visits_outside_uk_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # TOTAL FREEBIES
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2total income bigger"><b>Total Freebies</br></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2total income" align="right"><b>%s</b></td>\n' % (total_freebies_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-    ############################################################################################################
-    # SHAREHOLDINGS PERCENT
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Shareholdings 15% +</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (shareholdings_percent)
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in shareholdings_percent_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % str(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # SHAREHOLDINGS
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Shareholdings &#163;70,000 + (Min)</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (shareholding_wealth_f)
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in shareholdings_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # COMPANIES HOUSE
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    # html += '\t\t\t\t\t<a href="%s">\n' % self_link
-    html += '\t\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Companies House Appointments</b></td>\n'
-    if self_link != '':
-        html += '\t\t\t\t\t\t\t<td class="toggle2 income" align="right"><a target="_blank" href="%s" style="display:block;"><b>Link</b></td>\n' % (self_link)
-    html += '\t\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in companies_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><a target="_blank" href="%s" style="display:block;"><b>Link</b></td>\n' % item['url']
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-
-    ############################################################################################################
-    # PROPERTY
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Property (Min)</b></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><b>%s</b></td>\n' % (property_wealth_f)
-    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    for item in property_items:
-
-        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:140]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
-        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
-
-    ############################################################################################################
-    # TOTAL WEALTH
-
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle2">\n'
-    html += '\t\t\t\t\t\t<td class="toggle2total income bigger"><b>Total Wealth (Min)</br></td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle2total income" align="right"><b>%s</b></td>\n' % (total_wealth_f)
-    html += '\t\t\t\t\t</tr>\n'
-
-
-    # END TABLE
-    html += '\t\t\t\t</table>\n'
-    html += '\t\t\t</div>\n'
-    html += '\t\t</div>'
-
-    # html = '<html>\n'
-    # html += '<p>%s</p>\n' % member_id
-
-    # if os.path.exists(os.path.join(lib_path, 'images', '%s.jpg' % str(member_id))):
-    #     html += '\t\t\t\t<img class="picture" src="../lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
-    # else:
-    #     html += '\t\t\t\t<img src="../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
-
-    # html += '</html>'
-
-    # write it out
-    with open(mp_html_file, "a") as myfile2:
-        myfile2.write(html.encode("utf8"))
-
+    nouns = ' '.join(keywords)
+
+    write_thumbnail(html_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family)
+    write_register(register_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items)
+    # write_companieshouse(companies_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items)
+    write_companieshouse(companies_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments)
 def feeback(mps):
     """"""
 
@@ -706,91 +319,74 @@ def feeback(mps):
         print '*' * 150
         print ''
 
-        # refresh_html_file(member)
-        # print_register_of_intrests(member)
+# def print_register_of_intrests(member):
+#     """
+#     Function to print out the register of intrests
+#     """
+#     for category in member['categories']:
 
-        # data = get_companies_house_person(user=companies_house_user, names=names, addresses=[])
-        # data = filter_by_first_last_name(data, forname, surname, name)
-        # data = filter_by_appointment_counts(data)
-        # data = get_appointments(user=companies_house_user, data=data, status=['active'])
+#         category_amount = category['category_amount']
 
-        # print_companies_house_info(data)
+#         # if its currency, format it
+#         if category['isCurrency']:
+#             print '\t', category['category_description'], '', locale.currency(category_amount, grouping=True)
+#         else:
+#             print '\t', category['category_description']
 
-        # now we have an idea of the active appointments of people with the exact same
-        # name as the member of parliament
+#         for item in category['items']:
 
-        # we should check with the shareholding data in the member dictionary
-        # it's a start at least
+#             item_amount = item['amount']
 
-
-def print_register_of_intrests(member):
-    """
-    Function to print out the register of intrests
-    """
-    for category in member['categories']:
-
-        category_amount = category['category_amount']
-
-        # if its currency, format it
-        if category['isCurrency']:
-            print '\t', category['category_description'], '', locale.currency(category_amount, grouping=True)
-        else:
-            print '\t', category['category_description']
-
-        for item in category['items']:
-
-            item_amount = item['amount']
-
-            if category['isCurrency']:
-                print '\t\t', item['pretty'], locale.currency(item_amount, grouping=True)
-            else:
-                print '\t\t', item['pretty']
+#             if category['isCurrency']:
+#                 print '\t\t', item['pretty'], locale.currency(item_amount, grouping=True)
+#             else:
+#                 print '\t\t', item['pretty']
 
 
-def print_companies_house_info(data):
-    """
-    Function to print out companies house matches
-    """
+# def print_companies_house_info(data):
+#     """
+#     Function to print out companies house matches
+#     """
 
-    print '-' * 100
-    print 'Companies House Lookup'
-    print '-' * 100
-    print ''
-    for matched_person in data:
-        print matched_person['title']
-        print matched_person['appointments']
-        for status in matched_person['appointments'].keys():
+#     print '-' * 100
+#     print 'Companies House Lookup'
+#     print '-' * 100
+#     print ''
+#     for matched_person in data:
+#         print matched_person['title']
+#         print matched_person['appointments']
+#         for status in matched_person['appointments'].keys():
 
-            active_appointments = matched_person['appointments'][status]
+#             active_appointments = matched_person['appointments'][status]
 
-            for app in active_appointments:
+#             for app in active_appointments:
 
-                role = app['officer_role']
-                company_links = app['links']
-                company_name = app['appointed_to']['company_name']
-                company_number = app['appointed_to']['company_number']
-                company_status = app['appointed_to']['company_status']
+#                 role = app['officer_role']
+#                 company_links = app['links']
+#                 company_name = app['appointed_to']['company_name']
+#                 company_number = app['appointed_to']['company_number']
+#                 company_status = app['appointed_to']['company_status']
 
-                if app.has_key('resigned_on'):
-                    resigned_on = app['resigned_on']
-                else:
-                    resigned_on = None
-                if app.has_key('occupation'):
-                    occupation = app['occupation']
-                else:
-                    occupation = None
+#                 if app.has_key('resigned_on'):
+#                     resigned_on = app['resigned_on']
+#                 else:
+#                     resigned_on = None
+#                 if app.has_key('occupation'):
+#                     occupation = app['occupation']
+#                 else:
+#                     occupation = None
 
-                address_string = ''
-                address = app['address']
-                keys = ['address_line_1', 'address_line_2',
-                        'locality', 'postal_code']
+#                 address_string = ''
+#                 address = app['address']
+#                 keys = ['address_line_1', 'address_line_2',
+#                         'locality', 'postal_code']
 
-                for k in keys:
-                    if address.has_key(k):
-                        address_string += '%s, ' % address[k]
+#                 for k in keys:
+#                     if address.has_key(k):
+#                         address_string += '%s, ' % address[k]
 
-                print '\t%s, %s, %s' % (company_name, company_status, role)
-                print '\t\t%s' % address_string
+#                 print '\t%s, %s, %s' % (company_name, company_status, role)
+#                 print '\t\t%s' % address_string
 
 
 def sort_by_options(mps, options):
@@ -862,4 +458,5 @@ if __name__ == "__main__":
 
         mps = searched
 
-    main(mps, options)
+    mps = sort_by_options(mps, options)
+    main(mps)

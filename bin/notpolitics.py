@@ -2,6 +2,7 @@
 # system libs
 import locale, ast, os, operator, json, sys, pprint
 from bs4 import BeautifulSoup
+from wordcloud import WordCloud
 from optparse import OptionParser
 import time
 
@@ -18,7 +19,9 @@ from categories.visits import VisitsOutsideUK
 from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
 from categories.companies_house import CompaniesHouseUser
-from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp
+from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp, value_recurse_keys
+
+import html_formatter
 
 # locale.setlocale( locale.LC_ALL, '' )
 theyworkyou_apikey = 'DLXaKDAYSmeLEBBWfUAmZK3j'
@@ -129,14 +132,14 @@ class MemberOfParliament():
 			# we have the user dict and the appointment dict to check in.
 
 			# get a list of key values from the entire user dict (inc appointments)
-			vals = value_recurse(user, vals=[])
+			vals = value_recurse(data=user)
 
 			# check the values, decide if they are an mp
 			if contains_mp(vals):
 				user['mp_found'] = True
 
 				# we dont need these dicts yet
-				# get_companies(user)
+				get_companies(user)
 				# get_other_officers(user)
 				# get_filling_history(user)
 
@@ -147,6 +150,31 @@ class MemberOfParliament():
 			else:
 				# delete the user if we havent found an mp
 				del(user)
+
+	def write_word_cloud(self, words):
+		"""
+		Write out word cloud
+		"""
+		image_path = '../lib/data/wordclouds/%s.png' % self.member_id
+
+		# words to generate a clod from
+		string = ''
+		for w in words:
+			spl = w.split(' ')
+			for i in spl:
+				if i != '':
+					i = i.replace('-', ' ').replace('/', ' ')
+					string += '%s ' % i.lower()
+
+		stopwords = ['member', 'trading', 'companies', 'uk', 'and', 'none', 'from', 'of', 'for', 'in', 'on', 'true', 'false', 'england', 'scotland', 'wales', 'northern', 'ireland', 'officers', 'active', 'company', 'street', 'director', 'london', 'limited', 'corporate', 'secretary', 'dissolved', 'officer', 'united', 'kingdom', 'british', 'appointments', 'appointment', 'mr', 'mrs', 'ms', 'miss', 'the', 'ltd', 'limited', 'plc', 'llp']
+
+		wordcloud = WordCloud(background_color="#0087dc", mode="RGBA", width=1000, height=300, max_words=200, stopwords=stopwords, colormap="Set1").generate(string)
+		import matplotlib.pyplot as plt
+		plt.imshow(wordcloud, interpolation='bilinear')
+		plt.axis("off")
+
+		print 'Writing : %s' % self.name
+		plt.savefig(image_path, transparent=True, bbox_inches='tight', pad_inches=0, dpi=300)
 
 	def getMPExpenses(self):
 		"""Method to parse expenses"""
@@ -319,14 +347,18 @@ class MemberOfParliament():
 			cat_data['items'] = temp
 			data['categories'].append(cat_data)
 
+		# companies house stuff
 		data['companies_house'] = []
-
+		
+		# vals = self.name.split(' ')
 		for mp in self.mps:
 			mp_data = mp.data
 			temp = []
 
 			for appointment in mp.items:
 				temp.append(appointment.data)
+				# for k in appointment.keywords:
+				# 	vals.append(k)
 
 			mp_data['items'] = temp
 			data['companies_house'].append(mp_data)
@@ -337,6 +369,8 @@ class MemberOfParliament():
 		data['mp_donations'] = self.total_donations
 		data['mp_annual'] = self.total_annual
 
+		# self.write_word_cloud(vals)
+
 		return data
 
 def main(mps, options):
@@ -346,6 +380,8 @@ def main(mps, options):
 	mp_list = []
 	for member in mps:
 		mp_list.append(MemberOfParliament(member, mps.index(member)).data)
+
+	html_formatter.main(mp_list)
 
 	end_time = time.time()
 	elapsed = end_time - start_time
@@ -362,6 +398,8 @@ def main(mps, options):
 
 		with open(json_dump_location, 'w') as jsonfile:
 			json.dump(mp_list, jsonfile)
+
+	# pprint.pprint(mp_list)
 
 if __name__ == "__main__":
 	parser = OptionParser()

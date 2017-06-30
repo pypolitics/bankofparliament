@@ -278,6 +278,7 @@ def regex_for_amount(raw_string):
     amount_regex = re.compile(r"£\d+")
 
     if amount_regex.search(raw_string.replace(',','').encode('utf-8')):
+
         return int(amount_regex.search(raw_string.replace(',', '').encode('utf-8')).group().split('£')[-1])
     else:
         return 0
@@ -317,10 +318,35 @@ def get_other_officers(user):
 
                 try:
                     other_officers = other_officers.json()
-                    appointment['other_officers'] = other_officers
+                    appointment['company']['other_officers'] = other_officers
+
+                    # these are officers of an mps company
+                    for other in appointment['company']['other_officers']['items']:
+                        link = other['links']['officer']['appointments']
+
+                        apps = get_other_appointments(link)
+                        other['other_appointments'] = apps
                 
                 except:
                     pass
+
+def get_other_appointments(link):
+    """
+    Query the appointments of the user
+    """
+
+    url = 'https://api.companieshouse.gov.uk%s' % link
+
+    appointments = get_request(url=url, user=companies_house_user, headers={})
+
+    try:
+        a = appointments.json()
+
+    except:
+        a = {}
+        a['items'] = []
+
+    return a['items']
 
 def get_filling_history(user):
     """
@@ -340,7 +366,7 @@ def get_filling_history(user):
 
                 try:
                     filing_history = filing_history.json()
-                    appointment['filing_history'] = filing_history
+                    appointment['company']['filing_history'] = filing_history
                 
                 except:
                     pass
@@ -431,6 +457,37 @@ def value_recurse(data, vals=[]):
 
     return vals
 
+def value_recurse_keys(data, vals=[], keys=[]):
+    """
+    Return a list of values from given data, dict, nested dict etc etc
+    """
+    # make data a list
+    if isinstance(data, dict):
+        data = [data]
+    elif isinstance(data, list):
+        data = data
+    else:
+        data = [data]
+
+    # list of dicts
+    for d in data:
+        # ok, data is a list, but what of its contents
+        if isinstance(d, dict):
+            for k, v in d.iteritems():
+                if isinstance(v, dict):
+                    value_recurse_keys([v], vals, keys)
+                elif isinstance(v, list):
+                    value_recurse_keys(v, vals, keys)
+                else:
+                    vals.append(str(v))
+
+        elif isinstance(d, list):
+            value_recurse_keys(d, vals, keys)
+
+        else:
+            vals.append(str(d))
+
+    return vals
 
 def decoded(data):
     """
@@ -447,7 +504,7 @@ def fuzzy_filter(data, first_name, middle_name, last_name, addresses=[]):
     """
 
     # set the fuzzy ratio threshold value
-    ratio_threshold = 50
+    ratio_threshold = 80
 
     top_ratio = []
     for i in data:
@@ -498,4 +555,5 @@ def get_companies_house_users(member):
     data = fuzzy_filter(data, first_name, middle_name, last_name)
 
     # these are the matched companieshouse users - queried by name only, filtered a little bit
+    # print len(data)
     return data
