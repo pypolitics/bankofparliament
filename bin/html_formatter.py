@@ -262,12 +262,9 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     name = member['name']
     income = locale.currency(member['mp_income'], grouping=True).split('.')[0]
     wealth = locale.currency(member['mp_wealth'], grouping=True).split('.')[0]
-    # gifts = locale.currency(member['mp_gifts'], grouping=True).split('.')[0]
-    # donations = locale.currency(member['mp_donations'], grouping=True).split('.')[0]
     annual = locale.currency(member['mp_annual'], grouping=True).split('.')[0]
 
     member_id = member['member_id']
-    party = member['party']
     constituency = member['constituency']
 
     party_dict = {
@@ -318,76 +315,6 @@ def feeback(mps):
         print os.path.abspath(os.path.join(images_directory, '%s_%s_%s.png' % (forname, surname, member_id)))
         print '*' * 150
         print ''
-
-# def print_register_of_intrests(member):
-#     """
-#     Function to print out the register of intrests
-#     """
-#     for category in member['categories']:
-
-#         category_amount = category['category_amount']
-
-#         # if its currency, format it
-#         if category['isCurrency']:
-#             print '\t', category['category_description'], '', locale.currency(category_amount, grouping=True)
-#         else:
-#             print '\t', category['category_description']
-
-#         for item in category['items']:
-
-#             item_amount = item['amount']
-
-#             if category['isCurrency']:
-#                 print '\t\t', item['pretty'], locale.currency(item_amount, grouping=True)
-#             else:
-#                 print '\t\t', item['pretty']
-
-
-# def print_companies_house_info(data):
-#     """
-#     Function to print out companies house matches
-#     """
-
-#     print '-' * 100
-#     print 'Companies House Lookup'
-#     print '-' * 100
-#     print ''
-#     for matched_person in data:
-#         print matched_person['title']
-#         print matched_person['appointments']
-#         for status in matched_person['appointments'].keys():
-
-#             active_appointments = matched_person['appointments'][status]
-
-#             for app in active_appointments:
-
-#                 role = app['officer_role']
-#                 company_links = app['links']
-#                 company_name = app['appointed_to']['company_name']
-#                 company_number = app['appointed_to']['company_number']
-#                 company_status = app['appointed_to']['company_status']
-
-#                 if app.has_key('resigned_on'):
-#                     resigned_on = app['resigned_on']
-#                 else:
-#                     resigned_on = None
-#                 if app.has_key('occupation'):
-#                     occupation = app['occupation']
-#                 else:
-#                     occupation = None
-
-#                 address_string = ''
-#                 address = app['address']
-#                 keys = ['address_line_1', 'address_line_2',
-#                         'locality', 'postal_code']
-
-#                 for k in keys:
-#                     if address.has_key(k):
-#                         address_string += '%s, ' % address[k]
-
-#                 print '\t%s, %s, %s' % (company_name, company_status, role)
-#                 print '\t\t%s' % address_string
-
 
 def sort_by_options(mps, options):
     """
