@@ -375,7 +375,7 @@ def contains_mp(vals):
     Check if a list of values contain our keywords
     """
 
-    search_for = ['parliament', 'politician', 'commons', 'member', 'SW1A' '0AA']
+    search_for = ['parliament', 'politician', 'commons', 'member', 'SW1A' '0AA', 'house', 'civil', 'minister']
 
     for search in search_for:
         for v in vals:
