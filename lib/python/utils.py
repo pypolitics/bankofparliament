@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # system libs
-import requests, time, ast, locale, pprint, re, shutil, os, sys
+import requests, time, ast, locale, pprint, re, shutil, os, sys, json
 reload(sys) 
 sys.setdefaultencoding('utf8')
 
@@ -9,6 +9,7 @@ from datetime import datetime
 import xml.etree.cElementTree as ElementTree
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+from datetime import datetime
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
@@ -158,46 +159,6 @@ def get_house_of_commons_member(constituency):
 
     members = a['Members']['Member']
     return members
-
-def filter_by_first_last_name(data, first_name, last_name, name):
-    """
-    Function to filter companies house records, attempting to match
-    only the record with the exact same name as the member of parliament
-    doesnt necessairly mean the filtered record IS the mp, just that they
-    share a name.
-
-    If we have more info about the mp, like date of borth or address, we would
-    have a better chance of matching them.
-
-    Additional names and addresses are available from data.parliament, but not until
-    a government is formed.
-    """
-
-    matched_people = []
-
-    for i in data['items']:
-
-      if first_name in i['title'].lower():
-
-          if last_name in i['title'].lower():
-
-              matched_people.append(i)
-
-    return matched_people
-
-def filter_by_appointment_counts(data, count=0):
-    """
-    Function to filter companies house records, removing those that do not have appointments
-    """
-
-    matched_people = []
-
-    for i in data:
-
-        if i['appointment_count'] > count:
-            matched_people.append(i)
-
-    return matched_people
 
 def get_mp_image(name, first_name, last_name, memid, output_path):
     """
@@ -504,7 +465,7 @@ def fuzzy_filter(data, first_name, middle_name, last_name, addresses=[]):
     """
 
     # set the fuzzy ratio threshold value
-    ratio_threshold = 80
+    ratio_threshold = 75
 
     top_ratio = []
     for i in data:
@@ -522,8 +483,119 @@ def fuzzy_filter(data, first_name, middle_name, last_name, addresses=[]):
     
     return top_ratio
 
+def filter_by_dob(data, dob):
+    """
+    If the user has a 'date_of_birth' key, that matches the member dob, add to list to return.
+
+    If no users were matched to dob, return the users that didnt have the 'date_of_birth' key. The ones that
+    did have the key, we know they cant be the mp, unless the data is wrong. which i cant assume.
+
+    """
+
+    matched_people = []
+    unmatched_people = []
+
+    for i in data:
+        i['dob_match'] = False
+
+        if i.has_key('date_of_birth'):
+
+            month = i['date_of_birth']['month']
+            year = i['date_of_birth']['year']
+
+            if month == dob.month:
+                if year == dob.year:
+                    # print 'DOB MATCH'
+                    i['dob_match'] = True
+                    matched_people.append(i)
+        
+        # we cant be sure they arent the mp, so add them                      
+        else:
+            unmatched_people.append(i)
+
+    if len(matched_people) < 1:
+        # if we havent found any, return the users that have no dob key
+        return unmatched_people
+    else:
+        return matched_people
+
+def filter_by_first_last_name(data, first_name, last_name, middle_name, display_as_name):
+    """
+    Function to filter companies house records, attempting to match
+    only the record with the exact same name as the member of parliament
+    doesnt necessairly mean the filtered record IS the mp, just that they
+    share a name.
+
+    If we have more info about the mp, like date of borth or address, we would
+    have a better chance of matching them.
+
+    Additional names and addresses are available from data.parliament, but not until
+    a government is formed.
+    """
+
+    display_names = [i.lower() for i in display_as_name.split(' ')]
+    names = [first_name, last_name]
+
+    matched_people = []
+
+    for user in data:
+        title = user['title'].lower()
+        title_splits = title.split(' ')
+
+        if first_name in title_splits:
+            if last_name in title_splits:
+                matched_people.append(user)
+                # if middle_name != '':
+                #     if middle_name in title_splits:
+                #         matched_people.append(user)
+                #     elif middle_name.split(' ')[0] in title_splits:
+                #         matched_people.append(user)
+                # else:
+                #     matched_people.append(user)
+
+        elif display_as_name == title:
+            matched_people.append(user)
+
+    return matched_people
+
+def filter_by_appointment_counts(data, count=0):
+    """
+    Function to filter companies house records, removing those that do not have appointments
+    """
+
+    matched_people = []
+
+    for i in data:
+
+        if i['appointment_count'] > count:
+            matched_people.append(i)
+
+    return matched_people
+
+def remove_duplicates(data):
+    set_of_jsons = {json.dumps(d, sort_keys=True) for d in data}
+    data = [json.loads(t) for t in set_of_jsons]
+
+    b = []
+    for i in data:
+        self = i['links']['self']
+        f = False
+        for x in b:
+            b_self = x['links']['self']
+            if b_self == self:
+                f = True
+        if not f:
+            b.append(i)
+
+    return b
+
 def get_companies_house_users(member):
     """Get data from companies house"""
+
+    dob = None
+    if member.has_key('DateOfBirth'):
+        if type(member['DateOfBirth']) == str:
+            dob = datetime.strptime(member['DateOfBirth'], '%Y-%m-%dT%H:%M:%S')
 
     # id
     member_id = member['@Member_Id']
@@ -531,6 +603,7 @@ def get_companies_house_users(member):
     # names
     first_name = member['BasicDetails']['GivenForename'].lower()
     last_name = member['BasicDetails']['GivenSurname'].lower()
+    display_as_name = member['DisplayAs'].lower()
 
     middle_name = ''
     if member['BasicDetails']['GivenMiddleNames']:
@@ -538,22 +611,53 @@ def get_companies_house_users(member):
  
     #############################################################################################################################
     # basic search
-    if middle_name != '':
-        url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s+%s&items_per_page=100' % (first_name, middle_name, last_name)
-    else:
-        url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s&items_per_page=100' % (first_name, last_name)
+    limit_results = '100'
+    url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s&items_per_page=%s' % (first_name, last_name, limit_results)
 
     url = url.replace(' ', '+')
-
     r = get_request(url=url, user=companies_house_user, headers={})
-    data = r.json()
-    data = decoded(data)
+
+    data_first_last = r.json()
+    data_first_last = decoded(data_first_last)
+    data_first_last = data_first_last['items']
+
+    if middle_name != '':
+        url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s+%s&items_per_page=%s' % (first_name, middle_name, last_name, limit_results)
+
+        url = url.replace(' ', '+')
+        r = get_request(url=url, user=companies_house_user, headers={})
+
+        data_middle = r.json()
+        data_middle = decoded(data_middle)
+        data_middle = data_middle['items']
+
+        data_first_last += data_middle
+
+    if display_as_name != '%s %s' % (first_name, last_name):
+
+        url = 'https://api.companieshouse.gov.uk/search/officers?q=%s&items_per_page=%s' % (display_as_name, limit_results)
+
+        url = url.replace(' ', '+')
+        r = get_request(url=url, user=companies_house_user, headers={})
+
+        data_display = r.json()
+        data_display = decoded(data_display)
+        data_display = data_display['items']
+
+        data_first_last += data_display
+
+
+    data = data_first_last
 
     # filter the data
-    data = filter_by_first_last_name(data, first_name, middle_name, last_name)
-    data = filter_by_appointment_counts(data)
-    data = fuzzy_filter(data, first_name, middle_name, last_name)
+    if dob != None:
+        data = filter_by_dob(data, dob)
 
-    # these are the matched companieshouse users - queried by name only, filtered a little bit
-    # print len(data)
+    data = filter_by_first_last_name(data, first_name, last_name, middle_name, display_as_name)
+    data = filter_by_appointment_counts(data)
+    # data = fuzzy_filter(data, first_name, middle_name, last_name)
+
+    # now remove any duplicates
+    data = remove_duplicates(data)
+
     return data
