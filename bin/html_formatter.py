@@ -28,14 +28,15 @@ lib_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib')
 images_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
-tops_html = os.path.join(os.path.dirname(__file__), '../lib/html/tops.html')
-mp_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/mp_top.html')
+top_html = os.path.join(os.path.dirname(__file__), '../lib/html/top.html')
+register_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/register_top.html')
+appointments_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/appointments_top.html')
+
+tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/tail.html')
+register_tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/register_tail.html')
+appointments_tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/appointments_tail.html')
 
 html_file = os.path.join(os.path.dirname(__file__), '../index.html')
-tails_html = os.path.join(os.path.dirname(__file__), '../lib/html/tails.html')
-mp_tails_html = os.path.join(os.path.dirname(__file__), '../lib/html/mp_tails.html')
-
-wordcloud_path = os.path.join(os.path.dirname(__file__), '../lib/data/wordclouds/')
 
 def main(mps):
     """
@@ -47,20 +48,23 @@ def main(mps):
 def print_to_html_file(mps):
     start_html_file()
     for mp in mps:
+
+        # output paths
         register_file = os.path.join(os.path.dirname(__file__), '../pages/register/%s.html' % mp['member_id'])
         companies_file = os.path.join(os.path.dirname(__file__), '../pages/companieshouse/%s.html' % mp['member_id'])
         
-        start_html_file(mp['member_id'], tops_html=mp_top_html, html_file=register_file)
-        start_html_file(mp['member_id'], tops_html=mp_top_html, html_file=companies_file)
+        # start a page for register and appointments
+        start_html_file(mp['member_id'], tops_html=register_top_html, html_file=register_file)
+        start_html_file(mp['member_id'], tops_html=appointments_top_html, html_file=companies_file)
 
         print_mp_panel_into_file(mp, register_file, companies_file)
 
-        end_html_file(tails_html=mp_tails_html, html_file=register_file)
-        end_html_file(tails_html=mp_tails_html, html_file=companies_file)
+        end_html_file(tails_html=register_tail_html, html_file=register_file)
+        end_html_file(tails_html=appointments_tail_html, html_file=companies_file)
 
     end_html_file()
 
-def start_html_file(member_id='', tops_html=tops_html, html_file=html_file):
+def start_html_file(member_id='', tops_html=top_html, html_file=html_file):
 
     shutil.copy2(tops_html, html_file)
     
@@ -69,7 +73,7 @@ def start_html_file(member_id='', tops_html=tops_html, html_file=html_file):
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
         out, err = process.communicate()
 
-def end_html_file(tails_html=tails_html, html_file=html_file):
+def end_html_file(tails_html=tail_html, html_file=html_file):
     with open(html_file, "a") as fo:
         with open(tails_html, 'r') as fi:
             fo.write(fi.read())
