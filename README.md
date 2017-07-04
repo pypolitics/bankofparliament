@@ -24,6 +24,7 @@ At the time of writing, the British General Election is just over a week away.
 
 ## Todo
 
+* Query companies as well as officer names, some have companies in their own name. Maggie Throup for example.
 * Split register of interests from companies house data, too much for one page
 * Add wordcloud view / page.
 * Add persons with significant control query.
