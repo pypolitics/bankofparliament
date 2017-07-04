@@ -63,6 +63,7 @@ class Salary(Category):
 
 		if self.offices:
 			for office in self.offices:
+
 				dept = office['dept']
 				position = office['position']
 				pretty = ''
@@ -80,8 +81,13 @@ class Salary(Category):
 				for pos in salaries.keys():
 					if pos in position:
 						if not 'shadow' in position.lower():
-							amount = salaries[pos]
-							pretty = position			
+
+							if position == 'The Prime Minister':
+								amount = salaries['The Prime Minister']
+								pretty = position
+							else:
+								amount = salaries[pos]
+								pretty = position
 
 				next_id = len(self.entries) + 1
 				item_id = '%04d' % next_id
