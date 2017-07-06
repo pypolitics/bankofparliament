@@ -9,7 +9,7 @@ def format_integer(number):
     loc = locale.currency(number, grouping=True).split('.')[0]
     return loc.replace("£", "&#163;")
 
-def write_register(html_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items, miscellaneous_f, miscellaneous_items):
+def write_register(html_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items):
 
     html = u"\n"
     html += '\t\t<div class="photo col2 bigWidget panel2 %s %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-member=%s data-miscellaneous=%s>\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), str(member_id), miscellaneous_f)
@@ -256,6 +256,37 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t\t<td class="toggle2total income" align="right"><b>%s</b></td>\n' % (total_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
+    ############################################################################################################
+    # Family
+
+    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Family</b></td>\n'
+    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    for item in family_items:
+
+        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:150]
+        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    ############################################################################################################
+    # FAMILY LOBBYISTS
+
+    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+    html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+
+    html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+    html += '\t\t\t\t\t\t<td class="toggle2 income bigger"><b>Family Lobbyists</b></td>\n'
+    html += '\t\t\t\t\t</tr class="toggle2 income">\n'
+
+    for item in family_lobbyists_items:
+
+        html += '\t\t\t\t\t<tr class="toggle2 income">\n'
+        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:150]
+        html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     ############################################################################################################
     # MISCELLANEOUS
