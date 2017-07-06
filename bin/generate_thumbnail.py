@@ -110,11 +110,6 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Companies House Appointments</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(active_appointments))
-    html += '\t\t\t\t\t</tr>\n'
-
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
     html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Property (Min)</td>\n'
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (property_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
@@ -141,6 +136,10 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (str(len(family_lobbyists_items)))
     html += '\t\t\t\t\t</tr>\n'
 
+    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Active Appointments</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(active_appointments))
+    html += '\t\t\t\t\t</tr>\n'
     html += '\t\t\t\t</table>\n'
 
     html += '\t\t\t</div>\n'
