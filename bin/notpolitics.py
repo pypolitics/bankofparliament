@@ -19,7 +19,7 @@ from categories.visits import VisitsOutsideUK
 from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
 from categories.companies_house import CompaniesHouseUser
-from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp, value_recurse_keys
+from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp, value_recurse_keys, get_controlling_persons
 
 import html_formatter
 
@@ -33,6 +33,7 @@ request_wait_time = 3600.0
 class MemberOfParliament():
 	def __init__(self, member, index=None):
 		"""Class holding the individual member of parliament"""
+		print 'Processing : %s' % member['name'].decode('latin-1').encode("utf-8")
 
 		start_time = time.time()
 
@@ -140,6 +141,7 @@ class MemberOfParliament():
 
 				# we dont need these dicts yet
 				get_companies(user)
+				get_controlling_persons(user)
 				# get_other_officers(user)
 				# get_filling_history(user)
 

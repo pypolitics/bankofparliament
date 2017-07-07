@@ -3,6 +3,7 @@
 
 import os, locale, pprint
 locale.setlocale(locale.LC_ALL, '')
+from utils import regex_for_ownership
 
 companies_house_base_url = 'https://beta.companieshouse.gov.uk'
 
@@ -38,20 +39,30 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     for item in active_appointments:
-        try:
+
+        if item['appointment']['company'].has_key('links'):
             self = item['appointment']['company']['links']['self']
-        except:
+        else:
             self = '/'
 
-        try:
+        if item['appointment'].has_key('significant_ownership'):
+            significant = item['appointment']['significant_ownership']
+        else:
+            significant = ''
+
+        if item['appointment']['company'].has_key('company_name'):
             name = item['appointment']['company']['company_name']
-        except:
+        else:
             name = 'N/A'
 
         link = '%s%s' % (companies_house_base_url, self)
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % name[:125].title()
+        if significant != '':
+            ownership_range = regex_for_ownership(significant)
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), ownership_range[0], ownership_range[1])
+        else:
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> </td>\n' % (name[:125].title())
 
         html += '\t\t\t\t\t\t<td>\n'
         html += '\t\t\t\t\t\t\t<a target="_blank" href="%s">\n' % (link)
@@ -74,22 +85,31 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     for item in previous_appointments:
+        significant = ''
 
-        try:
+        if item['appointment']['company'].has_key('links'):
             self = item['appointment']['company']['links']['self']
-        except:
+        else:
             self = '/'
 
-        try:
+        if item['appointment'].has_key('significant_ownership'):
+            significant = item['appointment']['significant_ownership']
+        else:
+            significant = ''
+
+        if item['appointment']['company'].has_key('company_name'):
             name = item['appointment']['company']['company_name']
-        except:
+        else:
             name = 'N/A'
 
         link = '%s%s' % (companies_house_base_url, self)
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % name[:125].title()
-
+        if significant != '':
+            ownership_range = regex_for_ownership(significant)
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), ownership_range[0], ownership_range[1])
+        else:
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> </td>\n' % (name[:125].title())
         html += '\t\t\t\t\t\t<td>\n'
         html += '\t\t\t\t\t\t\t<a target="_blank" href="%s">\n' % (link)
         html += '\t\t\t\t\t\t\t\t<div style="height:100%;width:100%">'

@@ -256,11 +256,102 @@ def regex_for_percent(raw_string):
     else:
         return 15
 
+def regex_for_ownership(raw_string):
+    """
+    Return integer amount
+    """
+    amount_regex = re.compile(r"\d+-to-\d+")
+
+    if amount_regex.search(raw_string):
+        return amount_regex.search(raw_string).group().split('-to-')
+    else:
+        return None
+
 def get_regex_pair_search(pair, raw_string):
     """
     Return a regex search class
     """
     return re.search(r'%s(.*?)%s' % (pair[0], pair[1]), raw_string)
+
+def get_controlling_persons(user):
+    """
+    Query the other officers connected to the company
+    """
+    for appointment in user['appointments']['items']:
+
+        appointment['company']['controlling_persons'] = []
+
+        if appointment['company'].has_key('company_number'):
+            company_number = appointment['company']['company_number']
+            company_name = appointment['company']['company_name']
+
+            url = 'https://api.companieshouse.gov.uk/company/%s/persons-with-significant-control' % company_number
+            controlling_persons = get_request(url=url, user=companies_house_user, headers={})
+
+            try:
+                controlling_persons = controlling_persons.json()
+
+                if controlling_persons.has_key('items'):
+
+                    appointment['company']['controlling_persons'] = controlling_persons['items']
+                    read_controlling_persons(appointment, user)
+
+            except:
+                pass
+
+
+def read_controlling_persons(appointment, user):
+
+    # were looking for ownership, we need to see if the appointee is also the
+    # person with ownership rights
+
+    # otherwise they are just on the board or havent a controlling shareholding of the company
+
+    dob = user['date_of_birth']
+    appointment['significant_ownership'] = ''
+    appointment['ceased_significant_ownership'] = ''
+
+    for person in appointment['company']['controlling_persons']:
+
+        name =  person['name']
+        kind = person['kind']
+        control = person['natures_of_control']
+
+        ownership = None
+
+        for i in control:
+
+            # for now all we care for is ownership, not voting rights etc
+            if 'ownership' in i:
+                ownership = i
+
+                if kind == 'individual-person-with-significant-control':
+                    # the entity of the controlling shareholder is a person, lets check to see
+                    # if that person is the mp
+
+                    self = person['links']['self']
+                    url = 'https://api.companieshouse.gov.uk%s' % self
+
+                    # get the controller object
+                    controller = get_request(url=url, user=companies_house_user, headers={})
+                    try:
+                        controller = controller.json()
+
+                        if controller['date_of_birth'] == dob:
+
+                            if ownership:
+
+                                if not controller.has_key('ceased_on'):
+                                    appointment['significant_ownership'] = ownership
+                                else:
+                                    appointment['ceased_significant_ownership'] = ownership
+                    except:
+                        pass
+
+                elif kind == 'corporate-entity-person-with-significant-control':
+                    # so, we should find these companies and check to see if our user has controlling shares in
+                    # that company
+                    pass
 
 def get_other_officers(user):
     """
