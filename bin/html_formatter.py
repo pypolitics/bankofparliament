@@ -11,7 +11,7 @@ from textblob import TextBlob
 
 sys.path.append('../lib/python')
 
-from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments, value_recurse
+from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments, value_recurse, write_wordcloud
 import shutil
 
 from generate_thumbnail import write_thumbnail
@@ -140,11 +140,11 @@ def print_mp_panel_into_file(member, register_file, companies_file):
 
         for item in user['items']:
 
-            # company_name = item['company_name'].split(' ')
+            company_name = item['company_name'].split(' ')
 
-            # for n in company_name:
-            #     if not n.lower() in exclude:
-            #         keywords.append(n.lower())
+            for n in company_name:
+                if not n.lower() in exclude:
+                    keywords.append(n.lower())
 
             if item['resigned_on'] == 'N/A' and item['company_status'].lower() == 'active' :
                 active_appointments.append(item)
@@ -235,6 +235,7 @@ def print_mp_panel_into_file(member, register_file, companies_file):
                     # print f['pretty']
                     family_pretty += '%s\n' % f['pretty']
                     family_items.append(f)
+                    keywords.append(f['pretty'])
 
         # family lobbyists
         if category['category_type'] == 'family_lobbyists':
@@ -244,6 +245,7 @@ def print_mp_panel_into_file(member, register_file, companies_file):
                     # print f['pretty']
                     family_pretty += '%s\n' % f['pretty']
                     family_lobbyists_items.append(f)
+                    keywords.append(f['pretty'])
 
         # misc
         if category['category_type'] == 'miscellaneous':
@@ -291,11 +293,11 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     
     party_dict = {
 
-                'conservative' : 'conservative tory',
-                'liberal democrat' : 'liberal lib',
+                'conservative' : 'conservative tory tories',
+                'liberal democrat' : 'liberal democrat lib',
                 'labour' : 'labour',
                 'speaker' : 'speaker',
-                'scottish national party' : 'scottish snp',
+                'scottish national party' : 'scottish national snp',
                 'independent' : 'independent',
                 'social democratic and labour party' : 'sdlp', # irish
                 'labour/co-operative' : 'labour co-op',
@@ -307,6 +309,10 @@ def print_mp_panel_into_file(member, register_file, companies_file):
                 'sinn fein' : 'sinn fein irish' # irish
     }
 
+    keywords.append(name)
+    keywords.append(constituency)
+    keywords.append(party_dict[party])
+
     nouns = ' '.join(keywords)
 
     # write the thumbail into the main front page
@@ -317,6 +323,9 @@ def print_mp_panel_into_file(member, register_file, companies_file):
 
     # write the companies house page
     write_companieshouse(companies_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments)
+
+    # write a word cloud image out
+    # write_wordcloud(member_id, name, keywords)
 
 def feeback(mps):
     """"""

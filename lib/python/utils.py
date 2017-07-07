@@ -10,6 +10,7 @@ import xml.etree.cElementTree as ElementTree
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from datetime import datetime
+from wordcloud import WordCloud
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
@@ -752,3 +753,29 @@ def get_companies_house_users(member):
     data = remove_duplicates(data)
 
     return data
+
+def write_wordcloud(member_id, name, words):
+    """
+    Write out word cloud
+    """
+    image_path = '../lib/data/wordclouds/%s.png' % member_id
+
+    # words to generate a clod from
+    string = ''
+    for w in words:
+        spl = w.split(' ')
+        for i in spl:
+            if i != '':
+                i = i.replace('-', ' ').replace('/', ' ')
+                string += '%s ' % i.lower()
+
+    stopwords = ['an', 'it', 'to', 'as', 'incorporated', 'co', 'is', 'my', 'member', 'trading', 'companies', 'uk', 'and', 'none', 'from', 'of', 'for', 'in', 'on', 'true', 'false', 'england', 'scotland', 'wales', 'northern', 'ireland', 'officers', 'active', 'company', 'street', 'director', 'london', 'limited', 'corporate', 'secretary', 'dissolved', 'officer', 'united', 'kingdom', 'british', 'appointments', 'appointment', 'mr', 'mrs', 'ms', 'miss', 'the', 'ltd', 'limited', 'plc', 'llp']
+
+    wordcloud = WordCloud(background_color=None, mode="RGBA", width=1000, height=160, max_words=50, stopwords=stopwords, colormap="binary_r").generate(string)
+    import matplotlib.pyplot as plt
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+
+    print 'Writing : %s' % name
+    plt.savefig(image_path, transparent=True, bbox_inches='tight', pad_inches=0, dpi=200)
+    plt.close()
