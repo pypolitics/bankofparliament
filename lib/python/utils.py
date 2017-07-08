@@ -467,15 +467,51 @@ def contains_mp(vals):
     Check if a list of values contain our keywords
     """
 
-    search_for = ['parliament', 'politician', 'commons', 'member', 'SW1A' '0AA', 'house', 'civil', 'minister']
+    search_for = ['parliament', 'politician', 'commons', 'SW1A' '0AA', 'civil', 'minister']
 
     for search in search_for:
         for v in vals:
             if search.lower() in v.lower():
+                print 'MP FOUND : %s' % v
                 return True
     return False
 
-def value_recurse(data, vals=[]):
+def value_recurse(data):
+
+    vals = []
+
+    if data.has_key('address_snippet'):
+        vals.append(data['address_snippet'])
+
+    if data.has_key('title'):
+        vals.append(data['title'])
+
+    for app in data['appointments']['items']:
+
+        if app.has_key('officer_role'):
+            vals.append(app['officer_role'])
+
+        if app.has_key('occupation'):
+            vals.append(app['occupation'])
+
+        if app.has_key('address'):
+
+            for k, v in app['address'].iteritems():
+                vals.append(v)
+
+    clean = []
+    for v in vals:
+        if ' ' in v:
+            spl = v.split(' ')
+            for i in spl:
+                clean.append(i.lower())
+
+        else:
+            clean.append(v.lower())
+
+    return clean
+
+def value_recurse_old(data=[], vals=[]):
     """
     Return a list of values from given data, dict, nested dict etc etc
     """
@@ -496,7 +532,7 @@ def value_recurse(data, vals=[]):
             for k, v in d.iteritems():
 
                 if isinstance(v, dict):
-                    value_recurse([v], vals)
+                    value_recurse(v, vals)
                 elif isinstance(v, list):
                     value_recurse(v, vals)
                 else:
@@ -589,6 +625,7 @@ def filter_by_dob(data, dob):
 
     for i in data:
         i['dob_match'] = False
+        i['dob_str'] = '%s %s ' % (dob.strftime("%B"), dob.year)
 
         if i.has_key('date_of_birth'):
 
@@ -740,6 +777,8 @@ def get_companies_house_users(member):
 
 
     data = data_first_last
+    for d in data:
+        d['dob_match'] = False
 
     # filter the data
     if dob != None:

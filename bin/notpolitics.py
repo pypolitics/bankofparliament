@@ -33,7 +33,7 @@ request_wait_time = 3600.0
 class MemberOfParliament():
 	def __init__(self, member, index=None):
 		"""Class holding the individual member of parliament"""
-		print 'Processing : %s' % member['name'].decode('latin-1').encode("utf-8")
+		print '\nProcessing : %s' % member['name'].decode('latin-1').encode("utf-8")
 
 		start_time = time.time()
 
@@ -136,7 +136,7 @@ class MemberOfParliament():
 			vals = value_recurse(data=user)
 
 			# check the values, decide if they are an mp
-			if contains_mp(vals):
+			if contains_mp(vals) or user['dob_match'] == True:
 				user['mp_found'] = True
 
 				# we dont need these dicts yet
