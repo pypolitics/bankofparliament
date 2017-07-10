@@ -274,6 +274,25 @@ def get_regex_pair_search(pair, raw_string):
     """
     return re.search(r'%s(.*?)%s' % (pair[0], pair[1]), raw_string)
 
+def getlink(data, link):
+
+    if data.has_key('links'):
+        if data['links'].has_key(link):
+
+            link_url = data['links'][link]
+            url = 'https://api.companieshouse.gov.uk%s' % link_url
+            link_request = get_request(url=url, user=companies_house_user, headers={})
+
+            try:
+                l = link_request.json()
+                if not l.has_key('items'):
+                    l['items'] = []
+                return l
+            except:
+                return {'items' : []}
+    return {'items' : []}
+
+
 def get_controlling_persons(user):
     """
     Query the other officers connected to the company
@@ -451,7 +470,7 @@ def get_appointments(user):
 
     self_link = user['links']['self']
     url = 'https://api.companieshouse.gov.uk%s' % self_link
-
+    # print url
     appointments = get_request(url=url, user=companies_house_user, headers={})
 
     try:
@@ -467,12 +486,12 @@ def contains_mp(vals):
     Check if a list of values contain our keywords
     """
 
-    search_for = ['parliament', 'politician', 'commons', 'SW1A' '0AA', 'civil', 'minister']
+    search_for = ['parliament', 'politician', 'commons', 'SW1A' '0AA', 'civil', 'minister', 'westminister']
 
     for search in search_for:
         for v in vals:
             if search.lower() in v.lower():
-                print 'MP FOUND : %s' % v
+                # print 'MP FOUND : %s' % vals
                 return True
     return False
 
@@ -623,67 +642,63 @@ def filter_by_dob(data, dob):
     matched_people = []
     unmatched_people = []
 
-    for i in data:
-        i['dob_match'] = False
-        i['dob_str'] = '%s %s ' % (dob.strftime("%B"), dob.year)
+    i = data
 
-        if i.has_key('date_of_birth'):
+    if i.has_key('date_of_birth'):
 
-            month = i['date_of_birth']['month']
-            year = i['date_of_birth']['year']
+        month = i['date_of_birth']['month']
+        year = i['date_of_birth']['year']
 
-            if month == dob.month:
-                if year == dob.year:
-                    # print 'DOB MATCH'
-                    i['dob_match'] = True
-                    matched_people.append(i)
-        
-        # we cant be sure they arent the mp, so add them                      
-        else:
-            unmatched_people.append(i)
+        if month == dob.month:
+            if year == dob.year:
+                matched_people.append(i)
+
+    # we cant be sure they arent the mp, so add them
+    else:
+        unmatched_people.append(i)
 
     if len(matched_people) < 1:
         # if we havent found any, return the users that have no dob key
-        return unmatched_people
+        # return unmatched_people
+        return []
     else:
         return matched_people
 
-def filter_by_first_last_name(data, first_name, last_name, middle_name, display_as_name):
+def filter_by_name_string(data, display_as_name):
     """
-    Function to filter companies house records, attempting to match
-    only the record with the exact same name as the member of parliament
-    doesnt necessairly mean the filtered record IS the mp, just that they
-    share a name.
-
-    If we have more info about the mp, like date of borth or address, we would
-    have a better chance of matching them.
-
-    Additional names and addresses are available from data.parliament, but not until
-    a government is formed.
     """
-
-    display_names = [i.lower() for i in display_as_name.split(' ')]
-    names = [first_name, last_name]
+    # print display_as_name
+    exclude_titles = ['mr', 'mrs', 'ms', 'miss', 'dr', 'sir', '']
+    display_names = []
+    for i in display_as_name.split(' '):
+        if i not in exclude_titles:
+            display_names.append(i)
 
     matched_people = []
 
-    for user in data:
-        title = user['title'].lower()
-        title_splits = title.split(' ')
+    user = data
+    # for user in data:
+    if not user.has_key('title'):
+        if user.has_key('name'):
+            user['title'] = user['name']
 
-        if first_name in title_splits:
-            if last_name in title_splits:
-                matched_people.append(user)
-                # if middle_name != '':
-                #     if middle_name in title_splits:
-                #         matched_people.append(user)
-                #     elif middle_name.split(' ')[0] in title_splits:
-                #         matched_people.append(user)
-                # else:
-                #     matched_people.append(user)
+    # get the title, split it
+    title = user['title'].lower()
+    title_splits = []
+    for t in title.split(' '):
+        title_splits.append(t.replace(',',''))
 
-        elif display_as_name == title:
-            matched_people.append(user)
+    # check if display names are in the title
+    disp_match = True
+    for disp in display_names:
+        if disp.lower() in title_splits:
+            pass
+        else:
+            disp_match = False
+
+    if disp_match:
+        # if the full display name is in the title, thats good enough
+        matched_people.append(user)
 
     return matched_people
 
@@ -718,9 +733,81 @@ def remove_duplicates(data):
 
     return b
 
+def get_companies_house_companies(member):
+    """Get data from companies house"""
+
+    # this is the dob from the data.parliament query
+    dob = None
+    if member.has_key('DateOfBirth'):
+        if type(member['DateOfBirth']) == str:
+            dob = datetime.strptime(member['DateOfBirth'], '%Y-%m-%dT%H:%M:%S')
+
+    # id
+    member_id = member['@Member_Id']
+
+    # names
+    first_name = member['BasicDetails']['GivenForename'].lower()
+    last_name = member['BasicDetails']['GivenSurname'].lower()
+    display_as_name = member['DisplayAs'].lower()
+
+    middle_name = ''
+    if member['BasicDetails']['GivenMiddleNames']:
+        middle_name = member['BasicDetails']['GivenMiddleNames'].lower()
+
+    #############################################################################################################################
+    # BASIC SEARCH
+    limit_results = '10'
+    url = 'https://api.companieshouse.gov.uk/search/companies?q=%s+%s&items_per_page=%s' % (first_name, last_name, limit_results)
+
+    url = url.replace(' ', '+')
+    r = get_request(url=url, user=companies_house_user, headers={})
+
+    data_first_last = r.json()
+    data_first_last = decoded(data_first_last)
+    data_first_last = data_first_last['items']
+
+    if middle_name != '':
+        url = 'https://api.companieshouse.gov.uk/search/companies?q=%s+%s+%s&items_per_page=%s' % (first_name, middle_name, last_name, limit_results)
+
+        url = url.replace(' ', '+')
+        r = get_request(url=url, user=companies_house_user, headers={})
+
+        data_middle = r.json()
+        data_middle = decoded(data_middle)
+        data_middle = data_middle['items']
+
+        data_first_last += data_middle
+
+    if display_as_name != '%s %s' % (first_name, last_name):
+
+        url = 'https://api.companieshouse.gov.uk/search/companies?q=%s&items_per_page=%s' % (display_as_name, limit_results)
+
+        url = url.replace(' ', '+')
+        r = get_request(url=url, user=companies_house_user, headers={})
+
+        data_display = r.json()
+        data_display = decoded(data_display)
+        data_display = data_display['items']
+
+        data_first_last += data_display
+
+    data = data_first_last
+
+    for record in data:
+
+        company = getlink(record, 'self')
+        record['company'] = company
+
+        record['company']['officers'] = getlink(record['company'], 'officers')['items']
+        record['company']['persons_with_significant_control'] = getlink(record['company'], 'persons_with_significant_control')['items']
+
+    return data
+
+
 def get_companies_house_users(member):
     """Get data from companies house"""
 
+    # this is the dob from the data.parliament query
     dob = None
     if member.has_key('DateOfBirth'):
         if type(member['DateOfBirth']) == str:
@@ -739,8 +826,8 @@ def get_companies_house_users(member):
         middle_name = member['BasicDetails']['GivenMiddleNames'].lower()
  
     #############################################################################################################################
-    # basic search
-    limit_results = '100'
+    # BASIC SEARCH
+    limit_results = '10'
     url = 'https://api.companieshouse.gov.uk/search/officers?q=%s+%s&items_per_page=%s' % (first_name, last_name, limit_results)
 
     url = url.replace(' ', '+')
@@ -775,23 +862,142 @@ def get_companies_house_users(member):
 
         data_first_last += data_display
 
-
     data = data_first_last
-    for d in data:
-        d['dob_match'] = False
 
-    # filter the data
-    if dob != None:
-        data = filter_by_dob(data, dob)
+    #############################################################################################################################
+    # NOW MATCH THE RECORDS TO THE MP
 
-    data = filter_by_first_last_name(data, first_name, last_name, middle_name, display_as_name)
-    data = filter_by_appointment_counts(data)
-    # data = fuzzy_filter(data, first_name, middle_name, last_name)
+    matched = []
+    for record in data:
 
-    # now remove any duplicates
-    data = remove_duplicates(data)
+        # get the appointments for the user
+        appointments = getlink(record, 'self')['items']
 
-    return data
+        # setup the matches dictionary
+        record['appointments'] = appointments
+        record['match_results'] = {}
+        record['match_results']['dob'] = None
+        record['match_results']['names'] = {}
+        record['match_results']['names']['display_name'] = False
+        record['match_results']['names']['first_middle_last_name'] = False
+        record['match_results']['names']['first_last_name'] = False
+        record['match_results']['address'] = False
+        record['match_results']['keyword'] = False
+
+        # look for display name first
+        if filter_by_name_string(record, display_as_name) != []:
+            record['match_results']['names']['display_name'] = True
+
+        # look for first last name
+        if filter_by_name_string(record, '%s %s' % (first_name, last_name)) != []:
+            record['match_results']['names']['first_last_name'] = True
+
+        # look for first middle last name
+        if filter_by_name_string(record, '%s %s %s' % (first_name, middle_name, last_name)) != []:
+            record['match_results']['names']['first_middle_last_name'] = True
+
+        # look for dob
+        if dob != None:
+            # if there is no dob in the companies house record, then None,
+            # if there is dob but doesnt match, then False
+            # if there is dob and matches, then True
+            if filter_by_dob(record, dob) != []:
+                record['match_results']['dob'] = True
+            else:
+                record['match_results']['dob'] = False
+
+        # look for keyword
+        for app in appointments:
+
+            to_search = []
+            if app.has_key('occupation'):
+                to_search.append(app['occupation'])
+
+            if app.has_key('address'):
+                for each in app['address'].values():
+                    to_search.append(each)
+
+            if contains_mp(to_search):
+                record['match_results']['keyword'] = True
+
+        # now count up the match types
+        count = 0
+
+        # names
+        if True in record['match_results']['names'].values():
+            count += 1
+
+        # dob
+        if record['match_results']['dob'] == True:
+            count += 1
+        elif record['match_results']['dob'] == False:
+            count -= 1
+
+        # keyword
+        if record['match_results']['keyword'] == True:
+            count += 1
+
+        count_threshold = 2
+        record['match_results']['count'] = count
+
+        if count >= count_threshold:
+            matched.append(record)
+
+    # clean up the records and filter out records with no appointments
+    matched = remove_duplicates(matched)
+    matched = filter_by_appointment_counts(matched)
+
+    #############################################################################################################################
+    # NOW GET PERSONS, OFFICERS, FILING HISTORY
+
+    # now we have matched records that im confident of being the MP
+    for record in matched:
+
+        # iterate the appointments, find the officers, persons with significat control and filing history
+        for app in record['appointments']:
+
+            app['company'] = getlink(app, 'company')
+            app['company']['persons_with_significant_control'] = check_controlling_persons(record['date_of_birth'], getlink(app['company'], 'persons_with_significant_control')['items'])
+
+            app['company']['officers'] = getlink(app['company'], 'officers')['items']
+            # app['company']['filing_history'] = getlink(app['company'], 'filing_history')['items']
+
+    return matched
+
+def check_controlling_persons(dob, persons):
+
+    controllers = []
+
+    for person in persons:
+
+        name =  person['name']
+        kind = person['kind']
+        control = person['natures_of_control']
+
+        ownership = None
+
+        for i in control:
+
+            # for now all we care for is ownership, not voting rights etc
+            if 'ownership' in i:
+                ownership = i
+
+                if kind == 'individual-person-with-significant-control':
+                    # the entity of the controlling shareholder is a person, lets check to see
+                    # if that person is the mp
+
+                    controller = getlink(person, 'self')
+
+                    if controller.has_key('date_of_birth'):
+                        if controller['date_of_birth'] == dob:
+                            controllers.append(person)
+
+                elif kind == 'corporate-entity-person-with-significant-control':
+                    # so, we should find these companies and check to see if our user has controlling shares in
+                    # that company
+                    pass
+
+    return controllers
 
 def write_wordcloud(member_id, name, words):
     """

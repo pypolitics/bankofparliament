@@ -11,7 +11,7 @@ from textblob import TextBlob
 
 sys.path.append('../lib/python')
 
-from utils import get_companies_house_person, get_request, filter_by_first_last_name, filter_by_appointment_counts, get_appointments, value_recurse, write_wordcloud
+from utils import get_companies_house_person, get_request, filter_by_appointment_counts, get_appointments, value_recurse, write_wordcloud
 import shutil
 
 from generate_thumbnail import write_thumbnail
@@ -134,6 +134,8 @@ def print_mp_panel_into_file(member, register_file, companies_file):
 
     keywords = []
     exclude = ['ltd', ' ', 'plc', 'limited', 'llp', 'the',  '-', 'and', 'united', 'kingdom', 'uk', 'false', 'true', 'none', 'n/a']
+
+    dob_str = member['dob']
 
     for user in member['companies_house']:
         self_links.append(user['url'])
@@ -319,10 +321,10 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     write_thumbnail(html_file, family_pretty, member_id, name, party, party_dict[party], constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items)
 
     # write the register page
-    write_register(register_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items)
+    write_register(register_file, family_pretty, member_id, name, party, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, party_dict, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, salary_items, private_items, rental_items, gifts_items, gifts_outside_uk_items, direct_donations_items, indirect_donations_items, visits_outside_uk_items, shareholdings_items, shareholdings_percent_items, property_items, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, dob_str)
 
     # write the companies house page
-    write_companieshouse(companies_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments)
+    write_companieshouse(companies_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments, dob_str, member)
 
     # write a word cloud image out
     # write_wordcloud(member_id, name, keywords)

@@ -17,6 +17,7 @@ class CompaniesHouseUser(Category):
 
 		# base_url = 'https://beta.companieshouse.gov.uk'
 		self.url = base_url + user['links']['self']
+		self.dob = user['dob_str']
 
 		# lists of raw entries and parsed entries (dictionaries)
 		self.raw_entries = []
@@ -36,7 +37,7 @@ class CompaniesHouseUser(Category):
 		Method performing the logic of parsing raw data into dictionary
 		"""
 
-		for appointment in user['appointments']['items']:
+		for appointment in user['appointments']:
 
 			item = AppointmentsItem(appointment)
 			self.items.append(item)

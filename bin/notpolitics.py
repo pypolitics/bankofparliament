@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from wordcloud import WordCloud
 from optparse import OptionParser
 import time
+from datetime import datetime
 
 sys.path.append('../lib/python')
 
@@ -19,7 +20,7 @@ from categories.visits import VisitsOutsideUK
 from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
 from categories.companies_house import CompaniesHouseUser
-from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp, value_recurse_keys, get_controlling_persons
+from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp, value_recurse_keys, get_controlling_persons, get_companies_house_companies, getlink, filter_by_dob
 
 import html_formatter
 
@@ -108,6 +109,17 @@ class MemberOfParliament():
 		"""Method to query data.parliament.uk for member"""
 
 		self.extended = get_house_of_commons_member(self.constituency)
+		self.dob = 'Unknown Date of Birth'
+		self.dob_obj = None
+
+		if self.extended.has_key('DateOfBirth'):
+			if type(self.extended['DateOfBirth']) == str:
+				dob = datetime.strptime(self.extended['DateOfBirth'], '%Y-%m-%dT%H:%M:%S')
+				# self.dob = ' '.join(dob.strftime("%B"), dob.year)
+				self.dob = '%s %s' % (dob.strftime('%B'), dob.year)
+				self.dob_obj = dob
+
+		self.display_as_name = self.extended['DisplayAs']
 
 	def getMPCompanies(self):
 		"""Method to query companies house for appointments"""
@@ -119,39 +131,25 @@ class MemberOfParliament():
 		# it takes longer but we need the data as we mostly rely on the specified occupation
 		# of the appointee. the user record doesnt really help identify if this is the correct record
 
-		self.companies_users = get_companies_house_users(self.extended)
+
+		# these are filtered by appointment count (more than zero) and checked to see if the display name
+		# key of the data.parliament record, is in the name of the companies house user.
+		# so, no means definitive, but a decent start.
+
+		# TODO
+		# also query companies for names, example priti patel
 		self.mps = []
-
-		# iterate over the matched companies house users, find the appointments
-		# then decide if the record is a member of parliament
+		# self.companies_users = []
+		# # iterate over the matched companies house users, find the appointments
+		# # then decide if the record is a member of parliament
+		self.companies_users = get_companies_house_users(self.extended)
 		for user in self.companies_users:
+			user['dob_str'] = self.dob
+			user_class = CompaniesHouseUser(user)
+			self.mps.append(user_class)
 
-			# add appointments to user dict
-			get_appointments(user)
+		# self.companies_companies = get_companies_house_companies(self.extended)
 
-			# now check for values which would make me think this person is a member of parliament
-			# we have the user dict and the appointment dict to check in.
-
-			# get a list of key values from the entire user dict (inc appointments)
-			vals = value_recurse(data=user)
-
-			# check the values, decide if they are an mp
-			if contains_mp(vals) or user['dob_match'] == True:
-				user['mp_found'] = True
-
-				# we dont need these dicts yet
-				get_companies(user)
-				get_controlling_persons(user)
-				# get_other_officers(user)
-				# get_filling_history(user)
-
-				# get a class and add to list
-				user_class = CompaniesHouseUser(user)
-				self.mps.append(user_class)
-
-			else:
-				# delete the user if we havent found an mp
-				del(user)
 
 	def write_word_cloud(self, words):
 		"""
@@ -332,6 +330,7 @@ class MemberOfParliament():
 		data['name'] = self.name
 		data['party'] = self.party
 		data['constituency'] = self.constituency
+		data['dob'] = self.dob
 		data['forname'] = self.first_name
 		data['surname'] = self.last_name
 		data['member_id'] = self.member_id

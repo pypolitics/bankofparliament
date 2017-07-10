@@ -12,7 +12,7 @@ def format_integer(number):
     loc = locale.currency(number, grouping=True).split('.')[0]
     return loc.replace("£", "&#163;")
 
-def write_companieshouse(html_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments):
+def write_companieshouse(html_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments, dob_str, member):
 
     html = u"\n"
     html += '\t\t<div class="photo col2 bigWidget panel2 %s %s %s %s %s">\n' % (name.lower(), party.lower(), party_dict[party.lower()], constituency.lower(), str(member_id))
@@ -26,7 +26,11 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         html += '\t\t\t\t<img src="../../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
     # add the mp text
-    html += '\t\t\t\t%s, %s, %s\n' % (name, party.title(), constituency)
+    html += '\t\t\t\t\t<a class="name_r">%s,</a>\n' % (name)
+    html += '\t\t\t\t\t<a class="party_r">%s,</a>\n' % (party.title())
+    html += '\t\t\t\t\t<a class="constituency_r">%s,</a>\n' % (constituency)
+    html += '\t\t\t\t\t<a class="constituency_r">%s</a>\n' % (dob_str)
+
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
     html += '\t\t\t\t<table class="myTable3 " style="width: 92%;">\n'
