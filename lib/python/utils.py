@@ -960,7 +960,7 @@ def get_companies_house_users(member):
             app['company']['persons_with_significant_control'] = check_controlling_persons(record['date_of_birth'], getlink(app['company'], 'persons_with_significant_control')['items'])
 
             app['company']['officers'] = getlink(app['company'], 'officers')['items']
-            # app['company']['filing_history'] = getlink(app['company'], 'filing_history')['items']
+            app['company']['filing_history'] = getlink(app['company'], 'filing_history')['items']
 
     return matched
 
