@@ -139,17 +139,17 @@ class MemberOfParliament():
 		# TODO
 		# also query companies for names, example priti patel
 		self.mps = []
-		# self.companies_users = []
 		# # iterate over the matched companies house users, find the appointments
 		# # then decide if the record is a member of parliament
 		self.companies_users = get_companies_house_users(self.extended)
-		for user in self.companies_users:
+		self.companies_companies = get_companies_house_companies(self.extended)
+
+		records = self.companies_users + self.companies_companies
+
+		for user in records:
 			user['dob_str'] = self.dob
 			user_class = CompaniesHouseUser(user)
 			self.mps.append(user_class)
-
-		# self.companies_companies = get_companies_house_companies(self.extended)
-
 
 	def write_word_cloud(self, words):
 		"""

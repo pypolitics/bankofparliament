@@ -11,12 +11,7 @@ class CompaniesHouseUser(Category):
 		"""
 		Companies House User
 		"""
-		# self.user = user
 		self.title = user['title']
-		self.address = user['address_snippet']
-
-		# base_url = 'https://beta.companieshouse.gov.uk'
-		self.url = base_url + user['links']['self']
 		self.dob = user['dob_str']
 
 		# lists of raw entries and parsed entries (dictionaries)
