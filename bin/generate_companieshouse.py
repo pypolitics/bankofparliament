@@ -43,16 +43,16 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     for item in active_appointments:
+        ownership_range = []
+        for per in item['appointment']['company']['persons_with_significant_control']:
+            for sig in per['natures_of_control']:
+                if 'ownership' in sig:
+                    ownership_range = regex_for_ownership(sig)
 
         if item['appointment']['company'].has_key('links'):
             self = item['appointment']['company']['links']['self']
         else:
             self = '/'
-
-        if item['appointment'].has_key('significant_ownership'):
-            significant = item['appointment']['significant_ownership']
-        else:
-            significant = ''
 
         if item['appointment']['company'].has_key('company_name'):
             name = item['appointment']['company']['company_name']
@@ -62,8 +62,7 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         link = '%s%s' % (companies_house_base_url, self)
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        if significant != '':
-            ownership_range = regex_for_ownership(significant)
+        if ownership_range != []:
             html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), ownership_range[0], ownership_range[1])
         else:
             html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> </td>\n' % (name[:125].title())
@@ -89,17 +88,16 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
     html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     for item in previous_appointments:
-        significant = ''
+        ownership_range = []
+        for per in item['appointment']['company']['persons_with_significant_control']:
+            for sig in per['natures_of_control']:
+                if 'ownership' in sig:
+                    ownership_range = regex_for_ownership(sig)
 
         if item['appointment']['company'].has_key('links'):
             self = item['appointment']['company']['links']['self']
         else:
             self = '/'
-
-        if item['appointment'].has_key('significant_ownership'):
-            significant = item['appointment']['significant_ownership']
-        else:
-            significant = ''
 
         if item['appointment']['company'].has_key('company_name'):
             name = item['appointment']['company']['company_name']
@@ -109,11 +107,12 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         link = '%s%s' % (companies_house_base_url, self)
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-        if significant != '':
-            ownership_range = regex_for_ownership(significant)
+
+        if ownership_range != []:
             html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), ownership_range[0], ownership_range[1])
         else:
             html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> </td>\n' % (name[:125].title())
+
         html += '\t\t\t\t\t\t<td>\n'
         html += '\t\t\t\t\t\t\t<a target="_blank" href="%s">\n' % (link)
         html += '\t\t\t\t\t\t\t\t<div style="height:100%;width:100%">'
