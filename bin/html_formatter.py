@@ -130,15 +130,12 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     previous_appointments = []
 
     self_link = ''
-    self_links = []
-
     keywords = []
     exclude = ['ltd', ' ', 'plc', 'limited', 'llp', 'the',  '-', 'and', 'united', 'kingdom', 'uk', 'false', 'true', 'none', 'n/a']
 
     dob_str = member['dob']
 
     for user in member['companies_house']:
-        self_links.append(user['url'])
 
         for item in user['items']:
 
