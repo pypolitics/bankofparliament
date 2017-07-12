@@ -67,7 +67,7 @@ class MemberOfParliament():
 		end_time = time.time()
 		elapsed = end_time - start_time
 
-		print '%s - %s %s (%s) %s [%s/%s] - %s seconds' % (self.index, self.first_name, self.last_name, self.party, self.constituency, len(self.mps), len(self.companies_users), int(elapsed))
+		print '%s - %s %s (%s) %s [%s/%s] - %s seconds' % (self.index, self.first_name, self.last_name, self.party, self.constituency, len(self.companies_users), len(self.companies_companies), int(elapsed))
 
 	def setMember(self, member):
 		"""Set the member variables from the given member dictionary"""
@@ -143,10 +143,28 @@ class MemberOfParliament():
 		# # then decide if the record is a member of parliament
 		self.companies_users = get_companies_house_users(self.extended)
 		self.companies_companies = get_companies_house_companies(self.extended)
+		data = []
 
-		records = self.companies_users + self.companies_companies
+		company_nums = []
+		for i in self.companies_users:
+			added = False
+			for app in i['appointments']:
+				num = app['company']['company_number']
+				company_nums.append(num)
+				if not added:
+					data.append(i)
+					added = True
 
-		for user in records:
+		for i in self.companies_companies:
+			added = False
+			for app in i['appointments']:
+				num = app['company']['company_number']
+				if num not in company_nums:
+					if not added:
+						data.append(i)
+						added = True
+
+		for user in data:
 			user['dob_str'] = self.dob
 			user_class = CompaniesHouseUser(user)
 			self.mps.append(user_class)
