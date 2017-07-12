@@ -59,13 +59,18 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         else:
             name = 'N/A'
 
+        if item['appointment'].has_key('officer_role'):
+            role = item['appointment']['officer_role']
+        else:
+            role = ''
+
         link = '%s%s' % (companies_house_base_url, self)
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         if ownership_range != []:
-            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), ownership_range[0], ownership_range[1])
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s,</b> %s - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), role.title(), ownership_range[0], ownership_range[1])
         else:
-            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> </td>\n' % (name[:125].title())
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s,</b> %s </td>\n' % (name[:125].title(), role.title())
 
         html += '\t\t\t\t\t\t<td>\n'
         html += '\t\t\t\t\t\t\t<a target="_blank" href="%s">\n' % (link)
@@ -104,14 +109,19 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         else:
             name = 'N/A'
 
+        if item['appointment'].has_key('officer_role'):
+            role = item['appointment']['officer_role']
+        else:
+            role = ''
+
         link = '%s%s' % (companies_house_base_url, self)
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
 
         if ownership_range != []:
-            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), ownership_range[0], ownership_range[1])
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s,</b> %s - Ownership %s%% - %s%%</td>\n' % (name[:125].title(), role.title(), ownership_range[0], ownership_range[1])
         else:
-            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s</b> </td>\n' % (name[:125].title())
+            html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s,</b> %s </td>\n' % (name[:125].title(), role.title())
 
         html += '\t\t\t\t\t\t<td>\n'
         html += '\t\t\t\t\t\t\t<a target="_blank" href="%s">\n' % (link)
