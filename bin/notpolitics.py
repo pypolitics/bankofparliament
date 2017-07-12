@@ -149,7 +149,7 @@ class MemberOfParliament():
 		for i in self.companies_users:
 			added = False
 			for app in i['appointments']:
-				num = app['company']['company_number']
+				num = app['appointed_to']['company_number']
 				company_nums.append(num)
 				if not added:
 					data.append(i)
@@ -158,7 +158,7 @@ class MemberOfParliament():
 		for i in self.companies_companies:
 			added = False
 			for app in i['appointments']:
-				num = app['company']['company_number']
+				num = app['appointed_to']['company_number']
 				if num not in company_nums:
 					if not added:
 						data.append(i)
