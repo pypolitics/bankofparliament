@@ -1,23 +1,43 @@
+#!/usr/bin/env python
+
 from pprint import pprint
 from fuzzywuzzy import fuzz
-from utils import get_request, getlink, filter_by_name_string, contains_keywords
+import time
+from utils import get_request, getlink, filter_by_name_string, contains_keywords, regex_for_ownership, read_sic_codes
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
 class CompaniesHouseUserSearch():
-	def __init__(self, query, query_type='officers', limit='50', headers={}):
+	def __init__(self, queries, query_type='officers', limit='20', headers={}):
 		"""Query companies house"""
 
-		url = 'https://api.companieshouse.gov.uk/search/%s?q=%s&items_per_page=%s' % (query_type, query.lower(), limit)
-		self.url = url.replace(' ', '+')
+		# remove duplicate names to query
+		queries = [x.lower() for x in queries]
+		queries = list(set(queries))
 
-		request = get_request(url=self.url, user=companies_house_user, headers=headers)
-		self.data = request.json()
+		self.data = []
+		record_count = 0
+		for query in queries:
+			url = 'https://api.companieshouse.gov.uk/search/%s?q=%s&items_per_page=%s' % (query_type, query.lower(), limit)
+			self.url = url.replace(' ', '+')
 
-		if self.data.has_key('items'):
-			self.data = self.data['items']
-		else:
-			self.data = {}
+			request = get_request(url=self.url, user=companies_house_user, headers=headers)
+			data = request.json()
+
+			if data.has_key('items'):
+				data = data['items']
+			else:
+				data = []
+
+			record_count += len(data)
+
+			# remove duplicate records found
+			for d in data:
+				self_links = [i['links']['self'] for i in self.data]
+				if d['links']['self'] in self_links:
+					pass
+				else:
+					self.data.append(d)
 
 	def _get_appointments(self, record):
 		"""Get the appointments of the found officer"""
@@ -97,8 +117,11 @@ class CompaniesHouseUserSearch():
 				self.matched.append(record)
 
 class CompaniesHouseOfficer():
-	def __init__(self, record):
+	def __init__(self, record, defer=False):
 		"""Verified Companies House Officer Class"""
+
+		self.appointments = []
+		self.items = []
 
 		if record.has_key('address'):
 			self.address = record['address']
@@ -125,16 +148,28 @@ class CompaniesHouseOfficer():
 		else:
 			self.title = None
 
-		self._get_appointments(record)
+		self.matches = record['matches']
+
+		if not defer:
+			self._get_appointments(record)
 
 	def _get_appointments(self, record):
 		"""Get appointment classes from dicts"""
 
-		# we actually already have the appointments. needed them to identify the searched person.
-		self.appointments = [CompaniesHouseAppointment(i, officer=self) for i in record['appointments']]
+		# we actually already have the appointments. needed them to identify the searched person,
+		# here we just get the appointment classes
+		appointments = [CompaniesHouseAppointment(i, officer=self) for i in record['appointments']]
+		self.items = [i for i in appointments]
 
 	def __str__(self):
-		return 'Officer : %s, Address : %s, Date of Birth : %s/%s' % (self.title, self.address_snippet, self.date_of_birth['month'], self.date_of_birth['year'])
+		return 'Officer : %s, Address : %s, Date of Birth : %s/%s, Match : %s/%s' % (self.title, self.address_snippet, self.date_of_birth['month'], self.date_of_birth['year'], self.matches['match_count'], str(len(self.matches.keys()) - 3))
+
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		return vars(self)
 
 class CompaniesHouseAppointment():
 	def __init__(self, data, officer):
@@ -177,10 +212,41 @@ class CompaniesHouseAppointment():
 	def _get_company(self, data):
 		"""Get company class from dict"""
 
-		self.company = CompaniesHouseCompany(getlink(data, 'company'), self._officer)
+		company_cls = CompaniesHouseCompany(getlink(data, 'company'), self._officer)
+
+		self.company_name = company_cls.company_name
+		self.company_status = company_cls.company_status
+
+		self.company = company_cls.data
 
 	def __str__(self):
 		return 'Appointment: Name : %s, Officer Role : %s, Resigned : %s, Occupation : %s' % (self.name, self.officer_role, self.resigned_on, self.occupation)
+
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		try:
+			del self._officer
+		except:
+			pass
+		return vars(self)
+
+	@property
+	def keywords(self):
+
+		k = []
+		if self.officer_role:
+			k.append(self.officer_role)
+		if self.occupation:
+			k.append(self.occupation)
+
+		for v in self.company['sic'].values():
+			k.append(v)
+
+		k.append(self.company_name)
+		return k
 
 class CompaniesHouseCompany():
 	def __init__(self, data, officer):
@@ -222,8 +288,13 @@ class CompaniesHouseCompany():
 
 		if data.has_key('sic_codes'):
 			self.sic_codes = data['sic_codes']
+			self.sic = {}
+
+			for sic in data['sic_codes']:
+				self.sic[sic] = read_sic_codes(sic)
 		else:
-			self.sic_codes = None
+			self.sic_codes = []
+			self.sic= {}
 
 		if data.has_key('links'):
 			self.links = data['links']
@@ -246,7 +317,7 @@ class CompaniesHouseCompany():
 			self.has_insolvency_history = None
 
 		self._get_officers(data)
-		self._get_filing_history(data)
+		# self._get_filing_history(data)
 		self._get_persons(data)
 
 	def _get_officers(self, data):
@@ -261,14 +332,16 @@ class CompaniesHouseCompany():
 			officer['appointments'] = []
 			officer['title'] = officer['name']
 			officer['address_snippet'] = ' '.join(officer['address'].values())
-			self.officers.append(CompaniesHouseOfficer(officer))
+			officer['matches'] = {}
+
+			self.officers.append(CompaniesHouseOfficer(officer).data)
 
 	def _get_filing_history(self, data):
 		"""Get filing history of company from dict"""
 
 		filing_dicts = getlink(data, 'filing_history')['items']
 		for filing in filing_dicts:
-			self.filing.append(CompaniesHouseFiling(filing))
+			self.filing.append(CompaniesHouseFiling(filing).data)
 
 	def _get_persons(self, data):
 		"""Get persons with significant control from dict"""
@@ -281,7 +354,7 @@ class CompaniesHouseCompany():
 			if self.match_significant_to_self(person):
 				x.isOfficer = True
 
-			self.persons.append(x)
+			self.persons.append(x.data)
 
 	def match_significant_to_self(self, person):
 		""""""
@@ -325,7 +398,15 @@ class CompaniesHouseCompany():
 			return False
 
 	def __str__(self):
-		return 'Company : Name : %s, Company Status : %s, Company Number : %s' % (self.company_name, self.company_status, self.company_number)
+		return 'Company : Name : %s, Company Status : %s, Company Number : %s, Company SIC : %s' % (self.company_name, self.company_status, self.company_number, self.sic)
+
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		del self._officer
+		return vars(self)
 
 class CompaniesHouseFiling():
 	def __init__(self, data):
@@ -359,6 +440,13 @@ class CompaniesHouseFiling():
 	def __str__(self):
 		return 'Filing : %s' % (self.description)
 
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		return vars(self)
+
 class CompaniesHousePerson():
 	def __init__(self, data):
 		"""Companies House Significant Person Class"""
@@ -385,35 +473,63 @@ class CompaniesHousePerson():
 
 		self.isOfficer = False
 
+		self.ownership_range = None
+		for control_type in self.natures_of_control:
+			if 'ownership' in control_type:
+				self.ownership_range = regex_for_ownership(control_type)
+				self.ownership = '%s%% - %s%%' % (self.ownership_range[0], self.ownership_range[-1])
+
 	def __str__(self):
 		return 'Significant : %s, Address : %s, Date of Birth : %s/%s' % (self.name, ' '.join(self.address.values()), self.date_of_birth['month'], self.date_of_birth['year'])
 
+	@property
+	def data(self):
+		"""
+		Returns the class variables as a key/pair dict
+		"""
+		return vars(self)
+
 ########################################################################################################################
+if __name__ == "__main__":
+	start_time = time.time()
 
-users = CompaniesHouseUserSearch('Nadhim Zahawi')
-users.identify(keywords=['elliott'], month=6, year=1967, first='nadhim', middle='', last='zahawi', display='Mr Nadhim Zahawi')
+	users = CompaniesHouseUserSearch(['Nadhim Zahawi', 'Mr Nadhim Zahawi'])
+	users.identify(keywords=['parliament'], month=6, year=1967, first='nadhim', middle='', last='zahawi', display='Mr Nadhim Zahawi')
 
-for m in users.matched:
-	user = CompaniesHouseOfficer(m)
+	for m in users.matched:
+		user = CompaniesHouseOfficer(m)
 
-	print user
-	for app in user.appointments:
-		print ''
-		print '\t', app
-		print '\t', app.company
-		print '\tPersons : %s, Filings : %s, Officers : %s' % (len(app.company.persons), len(app.company.filing), len(app.company.officers))
-		print ''
+		pprint(user.data)
 
-		for person in app.company.persons:
-			if person.isOfficer:
-				print '\t\t', person
-			else:
-				print '\t\tOther', person
+		# print user
+		# for app in user.appointments:
+		# 	# print ''
+		# 	# print '\t', app
+		# 	print '\t', app.company
+		# 	# print '\tPersons : %s, Filings : %s, Officers : %s' % (len(app.company.persons), len(app.company.filing), len(app.company.officers))
+		# 	# print ''
 
-		print ''
-		for officer in app.company.officers:
-			print '\t\t', officer
+		# 	for person in app.company.persons:
+		# 		if person.isOfficer:
+		# 			print ''
+		# 			print '\t', app.company.company_name, person.name, person.ownership
+		# 		# else:
+		# 		# 	print '\t\tOther', person
 
-		print ''
-		for filing in app.company.filing:
-			print '\t\t', filing
+		# 	# print ''
+		# 	# for officer in app.company.officers:
+		# 	# 	print '\t\t', officer
+
+		# 	# print ''
+		# 	# for filing in app.company.filing:
+		# 	# 	print '\t\t', filing
+
+	end_time = time.time()
+	elapsed = end_time - start_time
+
+	print ''
+	if int(elapsed) < 60:
+		print 'Total Time : %s seconds' % (int(elapsed))
+	else:
+		print 'Total Time : %s minutes' % (int(elapsed/60))
+	print ''

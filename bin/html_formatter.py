@@ -11,7 +11,6 @@ from textblob import TextBlob
 
 sys.path.append('../lib/python')
 
-from utils import get_companies_house_person, get_request, filter_by_appointment_counts, get_appointments, value_recurse, write_wordcloud
 import shutil
 
 from generate_thumbnail import write_thumbnail
@@ -136,7 +135,6 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     dob_str = member['dob']
 
     for user in member['companies_house']:
-
         for item in user['items']:
 
             company_name = item['company_name'].split(' ')
@@ -145,7 +143,7 @@ def print_mp_panel_into_file(member, register_file, companies_file):
                 if not n.lower() in exclude:
                     keywords.append(n.lower())
 
-            if item['resigned_on'] == 'N/A' and item['company_status'].lower() == 'active' :
+            if item['resigned_on'] == None and item['company_status'].lower() == 'active' :
                 active_appointments.append(item)
 
             else:

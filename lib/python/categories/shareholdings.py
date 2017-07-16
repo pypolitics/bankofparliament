@@ -2,7 +2,7 @@
 
 from categories import Category
 from items import ShareholdingsItem, OtherShareholdingsItem
-from utils import regex_for_registered, regex_for_amount, get_companies_house_person, regex_for_percent
+from utils import regex_for_registered, regex_for_amount, regex_for_percent
 
 class Shareholdings(Category):
 	def __init__(self, companies_house_user, names=[]):

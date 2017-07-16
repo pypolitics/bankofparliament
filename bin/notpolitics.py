@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # system libs
-import locale, ast, os, operator, json, sys, pprint
+import locale, ast, os, operator, json, sys, pprint, re
 from bs4 import BeautifulSoup
 from wordcloud import WordCloud
 from optparse import OptionParser
 import time
 from datetime import datetime
+from datetime import date
 
 sys.path.append('../lib/python')
 
@@ -20,9 +21,11 @@ from categories.visits import VisitsOutsideUK
 from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
 from categories.companies_house import CompaniesHouseUser
-from utils import get_all_mps, get_request, get_house_of_commons_member, get_companies_house_users, get_appointments, get_companies, get_other_officers, get_filling_history, value_recurse, contains_mp, value_recurse_keys, get_controlling_persons, get_companies_house_companies, getlink, filter_by_dob
+from utils import get_all_mps, get_request, get_house_of_commons_member
 
 import html_formatter
+
+from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer
 
 # locale.setlocale( locale.LC_ALL, '' )
 theyworkyou_apikey = 'DLXaKDAYSmeLEBBWfUAmZK3j'
@@ -64,10 +67,12 @@ class MemberOfParliament():
 		# get companies house records
 		self.getMPCompanies()
 
+		# self.queryConflicts()
+
 		end_time = time.time()
 		elapsed = end_time - start_time
 
-		print '%s - %s %s (%s) %s [%s/%s] - %s seconds' % (self.index, self.first_name, self.last_name, self.party, self.constituency, len(self.companies_users), len(self.companies_companies), int(elapsed))
+		print '%s - %s %s (%s) %s - %s seconds' % (self.index, self.first_name, self.last_name, self.party, self.constituency, int(elapsed))
 
 	def setMember(self, member):
 		"""Set the member variables from the given member dictionary"""
@@ -115,7 +120,6 @@ class MemberOfParliament():
 		if self.extended.has_key('DateOfBirth'):
 			if type(self.extended['DateOfBirth']) == str:
 				dob = datetime.strptime(self.extended['DateOfBirth'], '%Y-%m-%dT%H:%M:%S')
-				# self.dob = ' '.join(dob.strftime("%B"), dob.year)
 				self.dob = '%s %s' % (dob.strftime('%B'), dob.year)
 				self.dob_obj = dob
 
@@ -123,51 +127,32 @@ class MemberOfParliament():
 
 	def getMPCompanies(self):
 		"""Method to query companies house for appointments"""
+		
+		# words that might identify a companieshouse officer as being an MP
+		keywords = ['parliament', 'politician', 'politic', 'house of commons']
 
-		# query companies house using first, middle and last names, filtered a bit.
-		# we wait until weve queried the appointments, before checking for keywords such as
-		# parliament, politician, sw16.
-
-		# it takes longer but we need the data as we mostly rely on the specified occupation
-		# of the appointee. the user record doesnt really help identify if this is the correct record
-
-
-		# these are filtered by appointment count (more than zero) and checked to see if the display name
-		# key of the data.parliament record, is in the name of the companies house user.
-		# so, no means definitive, but a decent start.
-
-		# TODO
-		# also query companies for names, example priti patel
 		self.mps = []
-		# # iterate over the matched companies house users, find the appointments
-		# # then decide if the record is a member of parliament
-		self.companies_users = get_companies_house_users(self.extended)
-		self.companies_companies = get_companies_house_companies(self.extended)
-		data = []
 
-		company_nums = []
-		for i in self.companies_users:
-			added = False
-			for app in i['appointments']:
-				num = app['appointed_to']['company_number']
-				company_nums.append(num)
-				if not added:
-					data.append(i)
-					added = True
+		first_name = self.extended['BasicDetails']['GivenForename'].lower()
+		last_name = self.extended['BasicDetails']['GivenSurname'].lower()
+		display_as_name = self.extended['DisplayAs'].lower()
+		names = ['%s %s' % (first_name, last_name), display_as_name]
 
-		for i in self.companies_companies:
-			added = False
-			for app in i['appointments']:
-				num = app['appointed_to']['company_number']
-				if num not in company_nums:
-					if not added:
-						data.append(i)
-						added = True
+		middle_name = ''
+		if self.extended['BasicDetails']['GivenMiddleNames']:
+			middle_name = self.extended['BasicDetails']['GivenMiddleNames'].lower()
+			names.append('%s %s %s' % ( first_name, middle_name, last_name))
 
-		for user in data:
-			user['dob_str'] = self.dob
-			user_class = CompaniesHouseUser(user)
-			self.mps.append(user_class)
+		users = CompaniesHouseUserSearch(names)
+		users.identify(keywords=keywords, month=self.dob_obj.month, year=self.dob_obj.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
+		
+		for i in users.matched:
+			officer = CompaniesHouseOfficer(i, defer=True)
+
+			# dont get the appointments if weve already got the record
+			if not officer.links in [each.links for each in self.mps]:
+				officer._get_appointments(i)
+				self.mps.append(officer)
 
 	def write_word_cloud(self, words):
 		"""
@@ -184,14 +169,14 @@ class MemberOfParliament():
 					i = i.replace('-', ' ').replace('/', ' ')
 					string += '%s ' % i.lower()
 
-		stopwords = ['member', 'trading', 'companies', 'uk', 'and', 'none', 'from', 'of', 'for', 'in', 'on', 'true', 'false', 'england', 'scotland', 'wales', 'northern', 'ireland', 'officers', 'active', 'company', 'street', 'director', 'london', 'limited', 'corporate', 'secretary', 'dissolved', 'officer', 'united', 'kingdom', 'british', 'appointments', 'appointment', 'mr', 'mrs', 'ms', 'miss', 'the', 'ltd', 'limited', 'plc', 'llp']
+		stopwords = ['other', 'member', 'trading', 'companies', 'uk', 'and', 'none', 'from', 'of', 'for', 'in', 'on', 'true', 'false', 'england', 'scotland', 'wales', 'northern', 'ireland', 'officers', 'active', 'company', 'street', 'director', 'london', 'limited', 'corporate', 'secretary', 'dissolved', 'officer', 'united', 'kingdom', 'british', 'appointments', 'appointment', 'mr', 'mrs', 'ms', 'miss', 'the', 'ltd', 'limited', 'plc', 'llp']
 
 		wordcloud = WordCloud(background_color="#0087dc", mode="RGBA", width=1000, height=300, max_words=200, stopwords=stopwords, colormap="Set1").generate(string)
 		import matplotlib.pyplot as plt
 		plt.imshow(wordcloud, interpolation='bilinear')
 		plt.axis("off")
 
-		print 'Writing : %s' % self.name
+		print 'Writing : %s > %s' % (self.name, image_path)
 		plt.savefig(image_path, transparent=True, bbox_inches='tight', pad_inches=0, dpi=300)
 
 	def getMPExpenses(self):
@@ -369,15 +354,19 @@ class MemberOfParliament():
 		# companies house stuff
 		data['companies_house'] = []
 		
-		# vals = self.name.split(' ')
+		vals = self.name.split(' ')
+		vals.append(self.constituency)
+		vals.append(self.party)
+
 		for mp in self.mps:
 			mp_data = mp.data
 			temp = []
 
 			for appointment in mp.items:
 				temp.append(appointment.data)
-				# for k in appointment.keywords:
-				# 	vals.append(k)
+
+				for k in appointment.keywords:
+					vals.append(k)
 
 			mp_data['items'] = temp
 			data['companies_house'].append(mp_data)
@@ -417,8 +406,6 @@ def main(mps, options):
 
 		with open(json_dump_location, 'w') as jsonfile:
 			json.dump(mp_list, jsonfile)
-
-	# pprint.pprint(mp_list)
 
 if __name__ == "__main__":
 	parser = OptionParser()
