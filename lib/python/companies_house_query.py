@@ -7,6 +7,202 @@ from utils import get_request, getlink, filter_by_name_string, contains_keywords
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
+class CompaniesHouseCompanySearch():
+	def __init__(self, queries, query_type='companies', limit='20', headers={}):
+		"""Query companies house"""
+
+		# remove duplicate names to query
+		queries = [x.lower() for x in queries]
+		queries = list(set(queries))
+
+		self.data = []
+		self.matched_officers = []
+		record_count = 0
+		for query in queries:
+			url = 'https://api.companieshouse.gov.uk/search/%s?q=%s&items_per_page=%s' % (query_type, query.lower(), limit)
+			self.url = url.replace(' ', '+')
+
+			request = get_request(url=self.url, user=companies_house_user, headers=headers)
+			data = request.json()
+
+			if data.has_key('items'):
+				data = data['items']
+			else:
+				data = []
+
+			record_count += len(data)
+
+			# remove duplicate records found
+			for d in data:
+				self_links = [i['links']['self'] for i in self.data]
+				if d['links']['self'] in self_links:
+					pass
+				else:
+					self.data.append(d)
+
+	def get_data(self, keywords, month, year, first, middle, last, display):
+		""""""
+		self.matched = []
+
+		# fist match the company name to the user name, then go get officers and persons, check if they
+		# are the person / officer were looking for and ultimately return the same class as a normal officer search
+		self.identify_company(keywords, month, year, first, middle, last, display)
+
+		for company in self.matched_companies:
+			officers = self.get_company_officers(company)
+			# persons = self.get_company_persons(company)
+
+			for officer in officers:
+
+				# fix record
+				name = officer['name']
+				spl = name.split(',')
+				newname = '%s %s' % (spl[-1].lower(), spl[0].lower())
+				officer['name'] = newname
+
+				apps = officer['links']['officer']['appointments']
+				officer['links']['appointments'] = apps
+
+				# try and identify the officer of the company with the keywords, dob and names
+				self.identify_officer(officer, keywords, month, year, first, middle, last, display)
+
+	def identify_officer(self, record, keywords, month, year, first, middle, last, display):
+		"""Try to identify the companies house officer record as the requested mp."""
+
+		count_threshold = 1
+		match_count = 0
+
+		# look for date of birth
+		match_dob = None
+		if record.has_key('date_of_birth'):
+			if record['date_of_birth']['month'] == month and record['date_of_birth']['year'] == year:
+				match_dob = True
+				match_count += 1
+			else:
+				if not display == 'michael gove':
+					match_dob = False
+					match_count -= 1
+
+		# look for keywords in the appointments
+		# this is a lengthy proceedure, but necessary to be able to match keywords.
+		# the user record doesnt contain any keys that would contains values like, politician, parliament
+		match_keywords = None
+		appointments = self._get_appointments(record)['items']
+		for app in appointments:
+			to_search = []
+			if app.has_key('occupation'):
+				to_search += app['occupation'].split(' ')
+
+			if app.has_key('address'):
+				for each in app['address'].values():
+					to_search += each.split(' ')
+
+			if contains_keywords(to_search, keywords):
+				match_keywords = True
+				match_count += 1
+
+		# look for display name first
+		if filter_by_name_string(record, display) != []:
+			match_display = True
+		else:
+			match_display = False
+
+		# look for first last name
+		if filter_by_name_string(record, '%s %s' % (first, last)) != []:
+			match_fl = True
+		else:
+			match_fl = False
+
+		# look for first middle last name
+		if filter_by_name_string(record, '%s %s %s' % (first, middle, last)) != []:
+			match_fml = True
+		else:
+			match_fml = False
+
+		# only count a name match once
+		if True in [match_display, match_fl, match_fml]:
+			match_count += 1
+
+		if match_count >= count_threshold:
+
+			record['appointments'] = appointments
+			record['matches'] = {}
+			record['matches']['match_dob'] = match_dob
+			record['matches']['match_keywords'] = match_keywords
+			record['matches']['match_display'] = match_display
+			record['matches']['match_fl'] = match_fl
+			record['matches']['match_fml'] = match_fml
+			record['matches']['match_count'] = match_count
+
+			self.matched_officers.append(record)
+
+	def identify_company(self, keywords, month, year, first, middle, last, display):
+		""""""
+
+		count_threshold = 1
+		self.matched_companies = []
+
+		names = ['%s %s' % (first, last), display]
+		if middle != '':
+			names.append('%s %s %s' % (first, middle, last))
+
+		for record in self.data:
+
+			match_count = 0
+			# data is a searchresults type, not the actual company.
+			# get the actual company record, but onyl for those search results that match the name
+
+			# look for display name first
+			if filter_by_name_string(record, display) != []:
+				match_display = True
+			else:
+				match_display = False
+
+			# look for first last name
+			if filter_by_name_string(record, '%s %s' % (first, last)) != []:
+				match_fl = True
+			else:
+				match_fl = False
+
+			# look for first middle last name
+			if filter_by_name_string(record, '%s %s %s' % (first, middle, last)) != []:
+				match_fml = True
+			else:
+				match_fml = False
+
+			# only count a name match once
+			if True in [match_display, match_fl, match_fml]:
+				match_count += 1
+
+			if match_count >= count_threshold:
+
+				company = getlink(record, 'self')
+				self.matched_companies.append(company)
+
+	def _get_appointments(self, record):
+		"""Get the appointments of the found officer"""
+
+		return getlink(record, 'appointments')
+
+	def get_company_persons(self, company):
+		""""""
+
+		if company['links'].has_key('persons_with_significant_control'):
+			persons = getlink(company, 'persons_with_significant_control')['items']
+		else:
+			persons = []
+
+		return persons
+
+	def get_company_officers(self, company):
+		""""""
+		if company['links'].has_key('officers'):
+			officers = getlink(company, 'officers')['items']
+		else:
+			officers = []
+
+		return officers
+
 class CompaniesHouseUserSearch():
 	def __init__(self, queries, query_type='officers', limit='20', headers={}):
 		"""Query companies house"""
@@ -16,9 +212,13 @@ class CompaniesHouseUserSearch():
 		queries = list(set(queries))
 
 		self.data = []
+		self.matched = []
+
 		record_count = 0
 		for query in queries:
 			url = 'https://api.companieshouse.gov.uk/search/%s?q=%s&items_per_page=%s' % (query_type, query.lower(), limit)
+			# url = 'https://api.companieshouse.gov.uk/search?q=%s&items_per_page=%s' % (query.lower(), limit)
+
 			self.url = url.replace(' ', '+')
 
 			request = get_request(url=self.url, user=companies_house_user, headers=headers)
@@ -47,7 +247,6 @@ class CompaniesHouseUserSearch():
 		"""Try to identify the companies house officer record as the requested mp."""
 
 		count_threshold = 2
-		self.matched = []
 
 		for record in self.data:
 
@@ -60,6 +259,7 @@ class CompaniesHouseUserSearch():
 					match_dob = True
 					match_count += 1
 				else:
+
 					match_dob = False
 					match_count -= 1
 
@@ -103,6 +303,7 @@ class CompaniesHouseUserSearch():
 			if True in [match_display, match_fl, match_fml]:
 				match_count += 1
 
+			# print match_count
 			if match_count >= count_threshold:
 
 				record['appointments'] = appointments
@@ -256,7 +457,7 @@ class CompaniesHouseCompany():
 		Company class holds the officers, persons of significance and filing history classes
 		"""
 
-		self._officer = officer
+		# self._officer = officer
 		self.officers = []
 		self.persons = []
 		self.filing = []
@@ -318,7 +519,7 @@ class CompaniesHouseCompany():
 
 		self._get_officers(data)
 		# self._get_filing_history(data)
-		self._get_persons(data)
+		self._get_persons(data, officer)
 
 	def _get_officers(self, data):
 		"""Get officers from dict"""
@@ -343,7 +544,7 @@ class CompaniesHouseCompany():
 		for filing in filing_dicts:
 			self.filing.append(CompaniesHouseFiling(filing).data)
 
-	def _get_persons(self, data):
+	def _get_persons(self, data, officer):
 		"""Get persons with significant control from dict"""
 
 		persons_dicts = getlink(data, 'persons_with_significant_control')['items']
@@ -351,12 +552,12 @@ class CompaniesHouseCompany():
 
 			x = CompaniesHousePerson(person)
 
-			if self.match_significant_to_self(person):
+			if self.match_significant_to_self(person, officer):
 				x.isOfficer = True
 
 			self.persons.append(x.data)
 
-	def match_significant_to_self(self, person):
+	def match_significant_to_self(self, person, officer):
 		""""""
 
 		fuzzy_threshold = 80
@@ -385,10 +586,10 @@ class CompaniesHouseCompany():
 
 		# count the matches
 		count = 0
-		if self._officer.date_of_birth == dob:
+		if officer.date_of_birth == dob:
 			count += 1
 
-		if fuzz.partial_ratio(self._officer.title.lower(), name.lower()) >= fuzzy_threshold:
+		if fuzz.partial_ratio(officer.title.lower(), name.lower()) >= fuzzy_threshold:
 			count += 1
 
 		# decide
@@ -405,7 +606,7 @@ class CompaniesHouseCompany():
 		"""
 		Returns the class variables as a key/pair dict
 		"""
-		del self._officer
+		# del self._officer
 		return vars(self)
 
 class CompaniesHouseFiling():

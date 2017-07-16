@@ -72,7 +72,7 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
 
         link = '%s%s' % (companies_house_base_url, self)
 
-        html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+        # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         if ownership_range != []:
             html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s, %s - Ownership %s%% - %s%%</b></td>\n' % (name[:125].title(), role.title(), ownership_range[0], ownership_range[1])
@@ -92,7 +92,7 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         if sic != []:
             for s in sic:
                 html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-                html += '\t\t\t\t\t\t<td class="tabbed">Company SIC Description : %s</td>\n' % (s)
+                html += '\t\t\t\t\t\t<td class="tabbed">%s</td>\n' % (s)
                 html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     ############################################################################################################
@@ -135,7 +135,7 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
 
         link = '%s%s' % (companies_house_base_url, self)
 
-        html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
+        # html += '\t\t\t\t\t<td class="toggle2 income"></br></td>\n'
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         if ownership_range != []:
             html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - <b>%s, %s - Ownership %s%% - %s%%</b></td>\n' % (name[:125].title(), role.title(), ownership_range[0], ownership_range[1])
@@ -155,7 +155,7 @@ def write_companieshouse(html_file, name, party, party_dict, constituency, membe
         if sic != []:
             for s in sic:
                 html += '\t\t\t\t\t<tr class="toggle2 income">\n'
-                html += '\t\t\t\t\t\t<td class="tabbed">Company SIC Description : %s</td>\n' % (s)
+                html += '\t\t\t\t\t\t<td class="tabbed">%s</td>\n' % (s)
                 html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     # write it out

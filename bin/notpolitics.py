@@ -25,7 +25,7 @@ from utils import get_all_mps, get_request, get_house_of_commons_member
 
 import html_formatter
 
-from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer
+from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer, CompaniesHouseCompanySearch
 
 # locale.setlocale( locale.LC_ALL, '' )
 theyworkyou_apikey = 'DLXaKDAYSmeLEBBWfUAmZK3j'
@@ -147,6 +147,17 @@ class MemberOfParliament():
 		users.identify(keywords=keywords, month=self.dob_obj.month, year=self.dob_obj.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
 		
 		for i in users.matched:
+			officer = CompaniesHouseOfficer(i, defer=True)
+
+			# dont get the appointments if weve already got the record
+			if not officer.links in [each.links for each in self.mps]:
+				officer._get_appointments(i)
+				self.mps.append(officer)
+
+		companies = CompaniesHouseCompanySearch(names)
+		companies.get_data(keywords=keywords, month=self.dob_obj.month, year=self.dob_obj.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
+
+		for i in companies.matched_officers:
 			officer = CompaniesHouseOfficer(i, defer=True)
 
 			# dont get the appointments if weve already got the record
