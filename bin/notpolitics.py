@@ -165,6 +165,14 @@ class MemberOfParliament():
 				officer._get_appointments(i)
 				self.mps.append(officer)
 
+		for i in companies.matched_persons:
+			officer = CompaniesHouseOfficer(i, defer=True)
+
+			# dont get the appointments if weve already got the record
+			if not officer.links in [each.links for each in self.mps]:
+				officer._get_appointments(i)
+				self.mps.append(officer)
+
 	def write_word_cloud(self, words):
 		"""
 		Write out word cloud

@@ -17,6 +17,8 @@ class CompaniesHouseCompanySearch():
 
 		self.data = []
 		self.matched_officers = []
+		self.matched_persons = []
+
 		record_count = 0
 		for query in queries:
 			url = 'https://api.companieshouse.gov.uk/search/%s?q=%s&items_per_page=%s' % (query_type, query.lower(), limit)
@@ -50,7 +52,7 @@ class CompaniesHouseCompanySearch():
 
 		for company in self.matched_companies:
 			officers = self.get_company_officers(company)
-			# persons = self.get_company_persons(company)
+			persons = self.get_company_persons(company)
 
 			for officer in officers:
 
@@ -61,10 +63,91 @@ class CompaniesHouseCompanySearch():
 				officer['name'] = newname
 
 				apps = officer['links']['officer']['appointments']
-				officer['links']['appointments'] = apps
+				officer['links']['self'] = apps
 
 				# try and identify the officer of the company with the keywords, dob and names
 				self.identify_officer(officer, keywords, month, year, first, middle, last, display)
+
+			for person in persons:
+
+				# fix record
+				name = person['name']
+				spl = name.split(',')
+				newname = '%s %s' % (spl[-1].lower(), spl[0].lower())
+				person['name'] = newname
+
+				# try and identify the officer of the company with the keywords, dob and names
+				self.identify_person(person, keywords, month, year, first, middle, last, display)
+
+	def identify_person(self, record, keywords, month, year, first, middle, last, display):
+		"""Try to identify the companies house officer record as the requested mp."""
+
+		count_threshold = 1
+		match_count = 0
+
+		# look for date of birth
+		match_dob = None
+		if record.has_key('date_of_birth'):
+			if record['date_of_birth']['month'] == month and record['date_of_birth']['year'] == year:
+				match_dob = True
+				match_count += 1
+			else:
+				if not display == 'michael gove':
+					match_dob = False
+					match_count -= 1
+
+		# look for keywords in the appointments
+		# this is a lengthy proceedure, but necessary to be able to match keywords.
+		# the user record doesnt contain any keys that would contains values like, politician, parliament
+		match_keywords = None
+		appointments = self._get_appointments(record)['items']
+		for app in appointments:
+			to_search = []
+			if app.has_key('occupation'):
+				to_search += app['occupation'].split(' ')
+
+			if app.has_key('address'):
+				for each in app['address'].values():
+					to_search += each.split(' ')
+
+			if contains_keywords(to_search, keywords):
+				match_keywords = True
+				match_count += 1
+
+		# look for display name first
+		if filter_by_name_string(record, display) != []:
+			match_display = True
+		else:
+			match_display = False
+
+		# look for first last name
+		if filter_by_name_string(record, '%s %s' % (first, last)) != []:
+			match_fl = True
+		else:
+			match_fl = False
+
+		# look for first middle last name
+		if filter_by_name_string(record, '%s %s %s' % (first, middle, last)) != []:
+			match_fml = True
+		else:
+			match_fml = False
+
+		# only count a name match once
+		if True in [match_display, match_fl, match_fml]:
+			match_count += 1
+
+		if match_count >= count_threshold:
+
+			record['appointments'] = appointments
+			record['matches'] = {}
+			record['matches']['match_dob'] = match_dob
+			record['matches']['match_keywords'] = match_keywords
+			record['matches']['match_display'] = match_display
+			record['matches']['match_fl'] = match_fl
+			record['matches']['match_fml'] = match_fml
+			record['matches']['match_count'] = match_count
+
+			self.matched_persons.append(record)
 
 	def identify_officer(self, record, keywords, month, year, first, middle, last, display):
 		"""Try to identify the companies house officer record as the requested mp."""
@@ -182,7 +265,7 @@ class CompaniesHouseCompanySearch():
 	def _get_appointments(self, record):
 		"""Get the appointments of the found officer"""
 
-		return getlink(record, 'appointments')
+		return getlink(record, 'self')
 
 	def get_company_persons(self, company):
 		""""""
