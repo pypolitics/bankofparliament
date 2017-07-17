@@ -380,8 +380,22 @@ def read_json_file():
     """
     Read file from json_dump_location
     """
-    with open(json_dump_location) as json_data:
-        return json.load(json_data)
+    json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members')
+    data = []
+    for mp in os.listdir(json_dump_location):
+        f = os.path.join(json_dump_location, mp)
+        with open(f) as json_data:
+            data.append(json.load(json_data))
+
+    return data
+
+    # with open(json_dump_location) as json_data:
+    #     return json.load(json_data)
+
+def run():
+    """"""
+    mps = read_json_file()
+    main(mps)
 
 if __name__ == "__main__":
     """

@@ -398,6 +398,12 @@ class MemberOfParliament():
 
 		# self.write_word_cloud(vals)
 
+		# write out to file
+		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members', '%s.json' % self.member_id)
+
+		with open(json_dump_location, 'w') as jsonfile:
+			json.dump(data, jsonfile, indent=3)
+
 		return data
 
 def main(mps, options):
@@ -408,7 +414,7 @@ def main(mps, options):
 	for member in mps:
 		mp_list.append(MemberOfParliament(member, mps.index(member)).data)
 
-	html_formatter.main(mp_list)
+	html_formatter.run()
 
 	end_time = time.time()
 	elapsed = end_time - start_time
@@ -419,12 +425,12 @@ def main(mps, options):
 	else:
 		print 'Total Time : %s minutes' % (int(elapsed/60))
 
-	if options.json:
-		# write out to file
-		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
+	# if options.json:
+	# 	# write out to file
+	# 	json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
 
-		with open(json_dump_location, 'w') as jsonfile:
-			json.dump(mp_list, jsonfile)
+	# 	with open(json_dump_location, 'w') as jsonfile:
+	# 		json.dump(mp_list, jsonfile)
 
 if __name__ == "__main__":
 	parser = OptionParser()
