@@ -410,12 +410,12 @@ class CompaniesHouseOfficer():
 		if record.has_key('address'):
 			self.address = record['address']
 		else:
-			self.address = None
+			self.address = ''
 
 		if record.has_key('address_snippet'):
 			self.address_snippet = record['address_snippet']
 		else:
-			self.address_snippet = None
+			self.address_snippet = ''
 
 		if record.has_key('date_of_birth'):
 			self.date_of_birth = record['date_of_birth']
@@ -425,12 +425,12 @@ class CompaniesHouseOfficer():
 		if record.has_key('links'):
 			self.links = record['links']
 		else:
-			self.links = None
+			self.links = ''
 
 		if record.has_key('title'):
 			self.title = record['title']
 		else:
-			self.title = None
+			self.title = ''
 
 		self.matches = record['matches']
 
@@ -464,32 +464,32 @@ class CompaniesHouseAppointment():
 		if data.has_key('name'):
 			self.name = data['name']
 		else:
-			self.name = None
+			self.name = ''
 
 		if data.has_key('appointed_on'):
 			self.appointed_on = data['appointed_on']
 		else:
-			self.appointed_on = None
+			self.appointed_on = ''
 
 		if data.has_key('links'):
 			self.links = data['links']
 		else:
-			self.links = None
+			self.links = ''
 
 		if data.has_key('resigned_on'):
 			self.resigned_on = data['resigned_on']
 		else:
-			self.resigned_on = None
+			self.resigned_on = ''
 
 		if data.has_key('officer_role'):
 			self.officer_role = data['officer_role']
 		else:
-			self.officer_role = None
+			self.officer_role = ''
 
 		if data.has_key('occupation'):
 			self.occupation = data['occupation']
 		else:
-			self.occupation = None
+			self.occupation = ''
 
 		self._get_company(data)
 
@@ -553,22 +553,22 @@ class CompaniesHouseCompany():
 		if data.has_key('type'):
 			self.type = data['type']
 		else:
-			self.type = None
+			self.type = ''
 
 		if data.has_key('company_name'):
 			self.company_name = data['company_name']
 		else:
-			self.company_name = None
+			self.company_name = ''
 
 		if data.has_key('company_number'):
 			self.company_number = data['company_number']
 		else:
-			self.company_number = None
+			self.company_number = ''
 
 		if data.has_key('company_status'):
 			self.company_status = data['company_status']
 		else:
-			self.company_status = None
+			self.company_status = ''
 
 		if data.has_key('sic_codes'):
 			self.sic_codes = data['sic_codes']
@@ -583,12 +583,12 @@ class CompaniesHouseCompany():
 		if data.has_key('links'):
 			self.links = data['links']
 		else:
-			self.links = None
+			self.links = ''
 
 		if data.has_key('previous_company_names'):
 			self.previous_company_names = data['previous_company_names']
 		else:
-			self.previous_company_names = None
+			self.previous_company_names = []
 
 		if data.has_key('has_charges'):
 			self.has_charges = data['has_charges']
@@ -699,27 +699,27 @@ class CompaniesHouseFiling():
 		if data.has_key('category'):
 			self.category = data['category']
 		else:
-			self.category = None
+			self.category = ''
 
 		if data.has_key('date'):
 			self.date = data['date']
 		else:
-			self.date = None
+			self.date = ''
 
 		if data.has_key('description'):
 			self.description = data['description']
 		else:
-			self.description = None
+			self.description = ''
 
 		if data.has_key('description_values'):
 			self.description_values = data['description_values']
 		else:
-			self.description_values = None
+			self.description_values = ''
 
 		if data.has_key('links'):
 			self.links = data['links']
 		else:
-			self.links = None
+			self.links = ''
 
 	def __str__(self):
 		return 'Filing : %s' % (self.description)
@@ -738,22 +738,22 @@ class CompaniesHousePerson():
 		if data.has_key('name'):
 			self.name = data['name']
 		else:
-			self.name = None
+			self.name = ''
 
 		if data.has_key('natures_of_control'):
 			self.natures_of_control = data['natures_of_control']
 		else:
-			self.natures_of_control = None
+			self.natures_of_control = []
 
 		if data.has_key('address'):
 			self.address = data['address']
 		else:
-			self.address = None
+			self.address = ''
 
 		if data.has_key('date_of_birth'):
 			self.date_of_birth = data['date_of_birth']
 		else:
-			self.date_of_birth = None
+			self.date_of_birth = ''
 
 		self.isOfficer = False
 
