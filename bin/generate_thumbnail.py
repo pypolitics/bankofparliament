@@ -4,7 +4,7 @@
 import os, locale
 locale.setlocale(locale.LC_ALL, '')
 
-def write_thumbnail(html_file, family_pretty, member_id, name, party, party_string, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f,salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items):
+def write_thumbnail(html_file, family_pretty, member_id, name, party, party_string, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f,salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, twitter):
     ##############################################################################################################################
     # BUILD THE HTML - THUMBNAIL
     ##############################################################################################################################
@@ -19,9 +19,14 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
-        html += '\t\t\t\t<img class="family" src="lib/images/family.png" title="%s" height="32" width="32" align="right"></img></br>\n' % family_pretty
+        html += '\t\t\t\t<img class="family" src="lib/images/family.png" title="%s" height="32" width="32" align="right"></img>\n' % family_pretty
     else:
-        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img></br>\n'
+        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img>\n'
+
+    if twitter != '':
+        html += '\t\t\t\t<a target="_blank" href="https://twitter.com/%s"> <img class="family" src="lib/images/twitter.png" height="28" width="28" align="left"></img></a></br>\n' % twitter
+    else:
+        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="left"></img></br>\n'    
     html += '\t\t\t\t<p></p>\n'
 
     # add the clickable thumbnail
