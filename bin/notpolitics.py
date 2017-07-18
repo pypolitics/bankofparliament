@@ -445,6 +445,7 @@ def main(mps, options):
 if __name__ == "__main__":
 	parser = OptionParser()
 	parser.add_option("--json", help="Dump to Json file", action="store_true", default=False)
+	parser.add_option("--missing", help="Run for missing data files only", action="store_true", default=False)
 
 	# parse the comand line
 	(options, args) = parser.parse_args()
@@ -465,6 +466,20 @@ if __name__ == "__main__":
 					searched.append(i)
 
 		mps = searched
+
+	if options.missing:
+		found = []
+		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members')
+		for mp in os.listdir(json_dump_location):
+			mem_id = mp.split('.json')[0]
+			found.append(mem_id)
+
+		todo = []
+		for m in mps:
+			if m['member_id'] not in found:
+				todo.append(m)
+
+		mps = todo
 
 	main(mps, options)
 
