@@ -45,7 +45,11 @@ def get_request(url, user=None, headers={}, request_wait_time=300.00):
     
     # temporarily unavailable
     elif request.status_code == 503:
-        raise ValueError('503 - temporarily unavailable')
+        print '*'*100
+        print "Temporarily Unavailable, wait for %s seconds" % str(request_wait_time)
+        print '*'*100
+        time.sleep(request_wait_time)
+        return get_request(url, user, headers)
 
     else:
         return request
