@@ -143,7 +143,7 @@ def print_mp_panel_into_file(member, register_file, companies_file):
                 if not n.lower() in exclude:
                     keywords.append(n.lower())
 
-            if item['resigned_on'] == None and item['company_status'].lower() == 'active' :
+            if item['resigned_on'] == '' and item['company_status'].lower() == 'active' :
                 active_appointments.append(item)
 
             else:
