@@ -46,6 +46,9 @@ class MemberOfParliament():
 		# list holding category classes
 		self.categories = []
 
+		# words that might identify a companieshouse officer as being an MP
+		self.keywords = ['parliament', 'politician', 'politic', 'house of commons']
+
 		# set the member
 		self.setMember(member)
 
@@ -55,11 +58,11 @@ class MemberOfParliament():
 		# get full info on mp
 		self.getMPInfo()
 
-		# make sense of the html info, regarding registered intrests
-		self.getMPIntrests()
-
 		# get a handle on member from : http://data.parliament.uk
 		self.getExtendedData()
+
+		# make sense of the html info, regarding registered intrests
+		self.getMPIntrests()
 
 		# todo
 		# self.getMPExpenses()
@@ -115,21 +118,28 @@ class MemberOfParliament():
 
 		self.extended = get_house_of_commons_member(self.constituency)
 		self.dob = 'Unknown Date of Birth'
-		self.dob_obj = None
+		# self.dob_obj = None
+		self.month = None
+		self.year = None
 
 		if self.extended.has_key('DateOfBirth'):
 			if type(self.extended['DateOfBirth']) == str:
 				dob = datetime.strptime(self.extended['DateOfBirth'], '%Y-%m-%dT%H:%M:%S')
 				self.dob = '%s %s' % (dob.strftime('%B'), dob.year)
-				self.dob_obj = dob
+				# self.dob_obj = dob
+				self.month = dob.month
+				self.year = dob.year
 
-		self.display_as_name = self.extended['DisplayAs']
+		self.first = self.extended['BasicDetails']['GivenForename'].lower()
+		self.last = self.extended['BasicDetails']['GivenSurname'].lower()
+		self.display = self.extended['DisplayAs'].lower()
+
+		self.middle = ''
+		if self.extended['BasicDetails']['GivenMiddleNames']:
+			self.middle = self.extended['BasicDetails']['GivenMiddleNames'].lower()
 
 	def getMPCompanies(self):
 		"""Method to query companies house for appointments"""
-		
-		# words that might identify a companieshouse officer as being an MP
-		keywords = ['parliament', 'politician', 'politic', 'house of commons']
 
 		self.mps = []
 
@@ -144,7 +154,7 @@ class MemberOfParliament():
 			names.append('%s %s %s' % ( first_name, middle_name, last_name))
 
 		users = CompaniesHouseUserSearch(names)
-		users.identify(keywords=keywords, month=self.dob_obj.month, year=self.dob_obj.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
+		users.identify(keywords=self.keywords, month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
 		
 		for i in users.matched:
 			officer = CompaniesHouseOfficer(i, defer=True)
@@ -155,7 +165,7 @@ class MemberOfParliament():
 				self.mps.append(officer)
 
 		companies = CompaniesHouseCompanySearch(names)
-		companies.get_data(keywords=keywords, month=self.dob_obj.month, year=self.dob_obj.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
+		companies.get_data(keywords=self.keywords, month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
 
 		for i in companies.matched_officers:
 			officer = CompaniesHouseOfficer(i, defer=True)
