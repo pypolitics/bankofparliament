@@ -47,7 +47,7 @@ class MemberOfParliament():
 		self.categories = []
 
 		# words that might identify a companieshouse officer as being an MP
-		self.keywords = ['parliament', 'politician', 'politic', 'house of commons']
+		self.keywords = ['parliament', 'politician', 'politic', 'house of commons', ' mp ']
 
 		# set the member
 		self.setMember(member)
@@ -111,7 +111,34 @@ class MemberOfParliament():
 		request = get_request(url=url, user=None, headers={})
 
 		# literal eval the json request into actual json
-		self.full_info = ast.literal_eval(request.content)
+		full_info = ast.literal_eval(request.content)
+
+		if full_info.has_key('eu_ref_stance'):
+			self.eu_ref_stance = full_info['eu_ref_stance']
+		else:
+			self.eu_ref_stance = ''
+
+		if full_info.has_key('facebook_page'):
+			self.facebook = full_info['facebook_page']
+		else:
+			self.facebook = ''
+
+		if full_info.has_key('twitter_username'):
+			self.twitter = full_info['twitter_username']
+		else:
+			self.twitter = ''
+
+		if full_info.has_key('wrans_departments'):
+			self.wrans_departments = full_info['wrans_departments']
+		else:
+			self.wrans_departments = ''
+
+		if full_info.has_key('wrans_subjects'):
+			self.wrans_subjects = full_info['wrans_subjects']
+		else:
+			self.wrans_subjects = ''
+
+		self.full_info = full_info
 
 	def getExtendedData(self):
 		"""Method to query data.parliament.uk for member"""
@@ -367,6 +394,9 @@ class MemberOfParliament():
 		data['surname'] = self.last_name
 		data['member_id'] = self.member_id
 		data['person_id'] = self.person_id
+		data['eu_ref_stance'] = self.eu_ref_stance
+		data['twitter'] = self.twitter
+		data['facebook'] = self.facebook
 
 		data['categories'] = []
 
