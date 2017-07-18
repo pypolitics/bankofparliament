@@ -435,16 +435,16 @@ def main(mps, options):
 	else:
 		print 'Total Time : %s minutes' % (int(elapsed/60))
 
-	# if options.json:
-	# 	# write out to file
-	# 	json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
+	if options.json:
+		# write out to file
+		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
 
-	# 	with open(json_dump_location, 'w') as jsonfile:
-	# 		json.dump(mp_list, jsonfile)
+		with open(json_dump_location, 'w') as jsonfile:
+			json.dump(mp_list, jsonfile)
 
 if __name__ == "__main__":
 	parser = OptionParser()
-	parser.add_option("--json", help="Dump to Json file", action="store_true", default=True)
+	parser.add_option("--json", help="Dump to Json file", action="store_true", default=False)
 
 	# parse the comand line
 	(options, args) = parser.parse_args()
