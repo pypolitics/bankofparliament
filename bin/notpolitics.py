@@ -268,8 +268,8 @@ class MemberOfParliament():
 		headings['Visits outside the UK'] = VisitsOutsideUK() # 4
 		headings['Gifts and benefits from sources outside the UK'] = GiftsOutsideUK() # 5
 		headings['Land and property portfolio'] = Property() # 6
-		headings["Shareholdings: over 15% of issued share capital"] = Shareholdings(companies_house_user, names=[self.first_name, self.last_name]) #7 (i)
-		headings["Other shareholdings, valued at more than"] = OtherShareholdings() #7 (ii)
+		headings["Shareholdings: over 15% of issued share capital"] = Shareholdings(extended=self.extended, keywords=self.keywords, month=self.month, year=self.year, first=self.first, middle=self.middle, last=self.last, display=self.display) #7 (i)
+		headings["Other shareholdings, valued at more than"] = OtherShareholdings(extended=self.extended, keywords=self.keywords, month=self.month, year=self.year, first=self.first, middle=self.middle, last=self.last, display=self.display) #7 (ii)
 		headings['Miscellaneous'] = Miscellaneous() # 8
 		headings['Family members employed and paid from parliamentary expenses'] = Family() # 9
 		headings['Family members engaged in lobbying'] = FamilyLobbyists() # 10

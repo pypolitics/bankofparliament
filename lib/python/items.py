@@ -183,7 +183,7 @@ class MiscellaneousItem(Item):
 		Item.__init__(self, item_id, category_id, raw_string, pretty, registered, amount)
 
 class ShareholdingsItem(Item):
-	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
+	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount, company, link):
 		"""
 		ShareholdingsItem
 		"""
@@ -191,9 +191,11 @@ class ShareholdingsItem(Item):
 		Item.__init__(self, item_id, category_id, raw_string, pretty, registered, amount)
 
 		self.isWealth = True
+		self.link = link
+		self.company = company
 
 class OtherShareholdingsItem(Item):
-	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
+	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount, company, link):
 		"""
 		OtherShareholdingsItem
 		"""
@@ -201,6 +203,8 @@ class OtherShareholdingsItem(Item):
 		Item.__init__(self, item_id, category_id, raw_string, pretty, registered, amount)
 
 		self.isWealth = True
+		self.link = link
+		self.company = company
 
 class GiftsItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):

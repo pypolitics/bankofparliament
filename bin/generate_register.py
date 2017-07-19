@@ -209,9 +209,14 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
 
     for item in shareholdings_percent_items:
 
+        link = item['link']
+        link_label = 'Link'
+        if link == '':
+            link_label = 'Missing'
+
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:150]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % (str(item['amount']) + '%')
+        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><a target="_blank" href="%s"><div style="height:100;width:100">%s</div></a></td>\n' % (link, link_label)
         html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     ############################################################################################################
@@ -227,9 +232,14 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
 
     for item in shareholdings_items:
 
+        link = item['link']
+        link_label = 'Link'
+        if link == '':
+            link_label = 'Missing'
+
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:150]
-        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
+        html += '\t\t\t\t\t\t<td class="toggle2 income" align="right"><a target="_blank" href="%s"><div style="height:100;width:100">%s</div></a></td>\n' % (link, link_label)
         html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 
     ############################################################################################################

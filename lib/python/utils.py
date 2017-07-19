@@ -5,7 +5,7 @@ import requests, time, ast, locale, pprint, re, shutil, os, sys, json
 reload(sys) 
 sys.setdefaultencoding('utf8')
 
-from datetime import datetime
+from datetime import datetime, date
 import xml.etree.cElementTree as ElementTree
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
@@ -269,3 +269,28 @@ def read_sic_codes(sic):
         if sic == row[0]:
             return row[-1]
     return ''
+
+def cleanup_raw_string(raw):
+    """Cleanup a raw string from the register of intrests, ready for querying with"""
+
+    raw = raw.lower()
+    raw_list = re.sub('[^0-9a-zA-Z]+', ' ', raw).split(' ')
+
+    exclude = ['shareholder', 'director', 'of', 'services', 'service', 'recruitment', 'international', 'specialist','and', '(', ')', '%', 'registered', '', 'from', 'an', 'a', 'company', 'shareholding', 'shareholdings', 'business']
+
+    months = [date(2000, m, 1).strftime('%b').lower() for m in range(1, 13)]
+    months_short = [date(2000, m, 1).strftime('%B').lower() for m in range(1, 13)]
+    for i in months:
+        exclude.append(i)
+    for i in months_short:
+        exclude.append(i)
+
+    found = []
+    for r in raw_list:
+        if r not in exclude:
+            try:
+                r = int(r)
+            except:
+                found.append(r)
+
+    return ' '.join(found)
