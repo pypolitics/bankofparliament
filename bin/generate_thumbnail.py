@@ -24,7 +24,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
         html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img>\n'
 
     if twitter != '':
-        html += '\t\t\t\t<a target="_blank" href="https://twitter.com/%s"> <img class="family" src="lib/images/twitter.png" height="28" width="28" align="left"></img></a></br>\n' % twitter
+        html += '\t\t\t\t<a target="_blank" href="https://twitter.com/%s"> <img class="family" src="lib/images/twitter.png" height="24" width="24" align="left"></img></a></br>\n' % twitter
     else:
         html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="left"></img></br>\n'    
     html += '\t\t\t\t<p></p>\n'
