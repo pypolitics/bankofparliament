@@ -21,8 +21,8 @@ from categories.visits import VisitsOutsideUK
 from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
 from categories.companies_house import CompaniesHouseUser
-from utils import get_all_mps, get_request, get_house_of_commons_member
-
+from utils import get_all_mps, get_request, get_house_of_commons_member, get_house_of_commons_member2
+from plotting import plot_data_to_file
 import html_formatter
 
 from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer, CompaniesHouseCompanySearch
@@ -35,13 +35,20 @@ xml_data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'regmem201
 request_wait_time = 3600.0
 
 class MemberOfParliament():
-	def __init__(self, member, index=None):
+	def __init__(self, member, index=None, wordcloud=False, scatter_plot=True, company_officers=True, company_filing=False, company_persons=True):
 		"""Class holding the individual member of parliament"""
 		print '\nProcessing : %s' % member['name'].decode('latin-1').encode("utf-8")
 
 		start_time = time.time()
 
 		self.index = str(index+1).zfill(3)
+		self.mps = []
+		self.wordcloud = wordcloud
+		self.scatter_plot = scatter_plot
+
+		self.company_officers = company_officers
+		self.company_filing = company_filing
+		self.company_persons = company_persons
 
 		# list holding category classes
 		self.categories = []
@@ -69,8 +76,6 @@ class MemberOfParliament():
 
 		# get companies house records
 		self.getMPCompanies()
-
-		# self.queryConflicts()
 
 		end_time = time.time()
 		elapsed = end_time - start_time
@@ -144,6 +149,12 @@ class MemberOfParliament():
 		"""Method to query data.parliament.uk for member"""
 
 		self.extended = get_house_of_commons_member(self.constituency)
+		y = get_house_of_commons_member(self.constituency, 'GovernmentPosts|BiographyEntries|Committees')
+
+		self.extended['GovernmentPosts'] = y['GovernmentPosts']
+		self.extended['BiographyEntries'] = y['BiographyEntries']
+		self.extended['Committees'] = y['Committees']
+
 		self.dob = 'Unknown Date of Birth'
 		# self.dob_obj = None
 		self.month = None
@@ -184,7 +195,7 @@ class MemberOfParliament():
 		users.identify(keywords=self.keywords, month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
 		
 		for i in users.matched:
-			officer = CompaniesHouseOfficer(i, defer=True)
+			officer = CompaniesHouseOfficer(i, defer=True, get_officers=self.company_officers, get_filing=self.company_filing, get_persons=self.company_persons)
 
 			# dont get the appointments if weve already got the record
 			if not officer.links in [each.links for each in self.mps]:
@@ -195,7 +206,7 @@ class MemberOfParliament():
 		companies.get_data(keywords=self.keywords, month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
 
 		for i in companies.matched_officers:
-			officer = CompaniesHouseOfficer(i, defer=True)
+			officer = CompaniesHouseOfficer(i, defer=True, get_officers=self.company_officers, get_filing=self.company_filing, get_persons=self.company_persons)
 
 			# dont get the appointments if weve already got the record
 			if not officer.links in [each.links for each in self.mps]:
@@ -203,7 +214,7 @@ class MemberOfParliament():
 				self.mps.append(officer)
 
 		for i in companies.matched_persons:
-			officer = CompaniesHouseOfficer(i, defer=True)
+			officer = CompaniesHouseOfficer(i, defer=True, get_officers=self.company_officers, get_filing=self.company_filing, get_persons=self.company_persons)
 
 			# dont get the appointments if weve already got the record
 			if not officer.links in [each.links for each in self.mps]:
@@ -232,8 +243,89 @@ class MemberOfParliament():
 		plt.imshow(wordcloud, interpolation='bilinear')
 		plt.axis("off")
 
-		print 'Writing : %s > %s' % (self.name, image_path)
+		# print 'Writing : %s > %s' % (self.name, image_path)
 		plt.savefig(image_path, transparent=True, bbox_inches='tight', pad_inches=0, dpi=300)
+
+	def write_scatter_plot(self):
+		"""
+		Write out scatter plot html
+		"""
+
+		plot_path = '../pages/plots//%s.html' % self.member_id
+
+		plot_nodes = []
+		plot_links = []
+		node = {'group' : 0, 'name' : self.name}
+		plot_nodes.append(node)
+
+		for mp in self.mps:
+			for appointment in mp.items:
+				# print appointment.company_name
+				company_node = {'group' : 2, 'name' : appointment['company_name']}
+
+				if company_node not in plot_nodes:
+					plot_nodes.append(company_node)
+
+				# create a relationsip
+				link = {'source' : 0, 'target' : plot_nodes.index(company_node)}
+				plot_links.append(link)
+
+				# print 'linking %s > %s' % (company_node['name'], m.name)
+
+				for officer in appointment['company']['officers']:
+					node = {'group' : 4, 'name' : officer['title']}
+					if node not in plot_nodes:
+						plot_nodes.append(node)
+
+					# create a relationsip
+					link = {'source' : plot_nodes.index(company_node), 'target' : plot_nodes.index(node)}
+					plot_links.append(link)
+
+
+				for officer in appointment['company']['persons']:
+					# print officer
+					node = {'group' : 4, 'name' : officer['name']}
+					if node not in plot_nodes:
+						plot_nodes.append(node)
+
+					# create a relationsip
+					link = {'source' : plot_nodes.index(company_node), 'target' : plot_nodes.index(node)}
+					plot_links.append(link)
+
+		for each in self.categories:
+
+			for i in each.items:
+
+				if i['isDonation'] or i['isGift']:
+
+					if i['address'] == 'private':
+						# create a new person
+						node = {'group' : 1, 'name' : i['donor']}
+					else:
+						# create a new company
+						node = {'group' : 2, 'name' : i['donor']}
+
+					if node not in plot_nodes:
+						plot_nodes.append(node)
+
+					# create a relationsip
+					link = {'source' : 0, 'target' : plot_nodes.index(node)}
+					plot_links.append(link)
+
+					# print 'linking %s > %s' % (node['name'], m.name)
+
+				if 'family' in each.category_type:
+					node = {'group' : 3, 'name' : i['raw_string']}
+					if node not in plot_nodes:
+						plot_nodes.append(node)
+
+					# create a relationsip
+					link = {'source' : 0, 'target' : plot_nodes.index(node)}
+					plot_links.append(link)
+
+		data = {'nodes' : plot_nodes, 'links' : plot_links}
+		# print 'Writing : %s > %s' % (self.name, plot_path)
+		plot_data_to_file(data, plot_path, self.name)
 
 	def getMPExpenses(self):
 		"""Method to parse expenses"""
@@ -330,6 +422,49 @@ class MemberOfParliament():
 		self.categories.append(self.family_lobbyists)
 		self.categories.append(self.salary)
 
+	# def queryConflicts(self):
+	# 	""""""
+
+	# 	print ''
+	# 	# print self.shareholdings
+	# 	for i in self.shareholdings.items:
+	# 		print i.raw_string
+
+	# 		conflict = False
+	# 		if i.company == {}:
+	# 			conflict = True
+	# 		# else:
+	# 		# 	print i.company['company_name']
+
+	# 		print 'Missing Company : %s' % conflict
+
+	# 	# print self.other_shareholdings
+	# 	for i in self.other_shareholdings.items:
+	# 		print i.raw_string
+
+	# 		conflict = False
+	# 		if i.company == {}:
+	# 			conflict = True
+	# 		# else:
+	# 		# 	print i.company['company_name']
+
+	# 		print 'Missing Company : %s' % conflict
+
+	# 	print '\n'
+	# 	for mp in self.mps:
+	# 		print mp
+	# 		for i in mp.items:
+	# 			print ''
+	# 			print '\t', i
+	# 			print '\t', i.company['company_name']
+
+	# 			for per in i.company['persons']:
+	# 				print per['name']
+
+	# 			# if i['resigned_on'] == '' and i['company_status'].lower() == 'active' :
+	# 			# 	pass
+	# 			# 	active = True
+
 	@property
 	def total_wealth(self):
 		"""total wealth of mp"""
@@ -397,6 +532,8 @@ class MemberOfParliament():
 		data['eu_ref_stance'] = self.eu_ref_stance
 		data['twitter'] = self.twitter
 		data['facebook'] = self.facebook
+		data['wrans_subjects'] = self.wrans_subjects
+		data['wrans_departments'] = self.wrans_departments
 
 		data['categories'] = []
 
@@ -416,6 +553,17 @@ class MemberOfParliament():
 		vals = self.name.split(' ')
 		vals.append(self.constituency)
 		vals.append(self.party)
+		vals.append(data['eu_ref_stance'])
+		for i in data['wrans_subjects'].split(' '):
+			vals.append(i)
+		for i in data['wrans_departments'].split(' '):
+			vals.append(i)
+		for i in self.extended['GovernmentPosts'].split(' '):
+			vals.append(i)
+		for i in self.extended['BiographyEntries'].split(' '):
+			vals.append(i)
+		for i in self.extended['Committees'].split(' '):
+			vals.append(i)
 
 		for mp in self.mps:
 			mp_data = mp.data
@@ -436,7 +584,11 @@ class MemberOfParliament():
 		data['mp_donations'] = self.total_donations
 		data['mp_annual'] = self.total_annual
 
-		# self.write_word_cloud(vals)
+		if self.wordcloud:
+			self.write_word_cloud(vals)
+
+		if self.scatter_plot:
+			self.write_scatter_plot()
 
 		# write out to file
 		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members', '%s.json' % self.member_id)
@@ -447,14 +599,23 @@ class MemberOfParliament():
 		return data
 
 def main(mps, options):
+	"""main"""
+
 	start_time = time.time()
 
 	# fully parsed list of mps
 	mp_list = []
+
 	for member in mps:
 		mp_list.append(MemberOfParliament(member, mps.index(member)).data)
 
-	html_formatter.run()
+	if options.json:
+		# write out to file
+		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
+
+		print 'Writing : %s' % (json_dump_location)
+		with open(json_dump_location, 'w') as jsonfile:
+			json.dump(mp_list, jsonfile)
 
 	end_time = time.time()
 	elapsed = end_time - start_time
@@ -464,13 +625,6 @@ def main(mps, options):
 		print 'Total Time : %s seconds' % (int(elapsed))
 	else:
 		print 'Total Time : %s minutes' % (int(elapsed/60))
-
-	if options.json:
-		# write out to file
-		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
-
-		with open(json_dump_location, 'w') as jsonfile:
-			json.dump(mp_list, jsonfile)
 
 if __name__ == "__main__":
 	parser = OptionParser()
@@ -512,4 +666,3 @@ if __name__ == "__main__":
 		mps = todo
 
 	main(mps, options)
-
