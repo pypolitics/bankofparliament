@@ -534,6 +534,9 @@ class MemberOfParliament():
 		data['facebook'] = self.facebook
 		data['wrans_subjects'] = self.wrans_subjects
 		data['wrans_departments'] = self.wrans_departments
+		data['gender'] = self.extended['Gender']
+		data['town_of_birth'] = self.extended['BasicDetails']['TownOfBirth']
+		data['country_of_birth'] = self.extended['BasicDetails']['CountryOfBirth']
 
 		data['categories'] = []
 
@@ -558,12 +561,61 @@ class MemberOfParliament():
 			vals.append(i)
 		for i in data['wrans_departments'].split(' '):
 			vals.append(i)
-		for i in self.extended['GovernmentPosts'].split(' '):
-			vals.append(i)
-		for i in self.extended['BiographyEntries'].split(' '):
-			vals.append(i)
-		for i in self.extended['Committees'].split(' '):
-			vals.append(i)
+
+		# government posts
+		if self.extended['GovernmentPosts'] != None:
+			data['government_posts'] = []
+
+			# list
+			if type(self.extended['GovernmentPosts']['GovernmentPost']) == list:
+				for i in self.extended['GovernmentPosts']['GovernmentPost']:
+					data['government_posts'].append(i['Name'])
+					for gov in i['Name'].split(' '):
+						vals.append(gov)
+						# data['government_posts'].append(gov)
+
+			# dict
+			else:
+				data['government_posts'].append(self.extended['GovernmentPosts']['GovernmentPost']['Name'])
+				for i in self.extended['GovernmentPosts']['GovernmentPost']['Name'].split(' '):
+					vals.append(i)
+					# data['government_posts'].append(i)
+
+		# biog entries
+		if self.extended['BiographyEntries'] != None:
+			data['biography_entries'] = []
+
+			# list
+			if type(self.extended['BiographyEntries']['BiographyEntry']) == list:
+				for i in self.extended['BiographyEntries']['BiographyEntry']:
+					data['biography_entries'].append(i['Entry'])
+					for bio in i['Entry'].split(' '):
+						vals.append(bio)
+						# data['biography_entries'].append(bio)
+			# dict
+			else:
+				data['biography_entries'].append(self.extended['BiographyEntries']['BiographyEntry']['Entry'])
+				for i in self.extended['BiographyEntries']['BiographyEntry']['Entry'].split(' '):
+					vals.append(i)
+					# data['biography_entries'].append(i)
+
+		# commitees
+		if self.extended['Committees'] != None:
+			data['commitees'] = []
+
+			# list
+			if type(self.extended['Committees']['Committee']) == list:
+				for i in self.extended['Committees']['Committee']:
+					data['commitees'].append(i['Name'])
+					for com in i['Name'].split(' '):
+						vals.append(com)
+						# data['commitees'].append(com)
+			# dict
+			else:
+				data['commitees'].append(self.extended['Committees']['Committee']['Name'])
+				for i in self.extended['Committees']['Committee']['Name'].split(' '):
+					vals.append(i)
+					# data['commitees'].append(i)
 
 		for mp in self.mps:
 			mp_data = mp.data
@@ -578,6 +630,7 @@ class MemberOfParliament():
 			mp_data['items'] = temp
 			data['companies_house'].append(mp_data)
 
+		data['keywords'] = vals
 		data['mp_income'] = self.total_income
 		data['mp_wealth'] = self.total_wealth
 		data['mp_gifts'] = self.total_gifts
