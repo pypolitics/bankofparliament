@@ -35,7 +35,7 @@ xml_data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'regmem201
 request_wait_time = 3600.0
 
 class MemberOfParliament():
-	def __init__(self, member, index=None, wordcloud=False, scatter_plot=True, company_officers=True, company_filing=False, company_persons=True):
+	def __init__(self, member, index=None, wordcloud=True, scatter_plot=True, company_officers=True, company_filing=False, company_persons=True):
 		"""Class holding the individual member of parliament"""
 		print '\nProcessing : %s' % member['name'].decode('latin-1').encode("utf-8")
 
@@ -156,7 +156,6 @@ class MemberOfParliament():
 		self.extended['Committees'] = y['Committees']
 
 		self.dob = 'Unknown Date of Birth'
-		# self.dob_obj = None
 		self.month = None
 		self.year = None
 
@@ -164,7 +163,6 @@ class MemberOfParliament():
 			if type(self.extended['DateOfBirth']) == str:
 				dob = datetime.strptime(self.extended['DateOfBirth'], '%Y-%m-%dT%H:%M:%S')
 				self.dob = '%s %s' % (dob.strftime('%B'), dob.year)
-				# self.dob_obj = dob
 				self.month = dob.month
 				self.year = dob.year
 
@@ -253,15 +251,25 @@ class MemberOfParliament():
 
 		plot_path = '../pages/plots//%s.html' % self.member_id
 
+		grp_donor = 1
+		grp_appointment = 2
+		grp_donor_company = 3
+		grp_company_officer = 4
+		grp_company_person = 5
+		grp_family = 6
+
 		plot_nodes = []
 		plot_links = []
-		node = {'group' : 0, 'name' : self.name}
+		node = {'group' : 0, 'name' : self.name, 'size' : 50}
 		plot_nodes.append(node)
 
+		# companies house stuff
 		for mp in self.mps:
 			for appointment in mp.items:
 				# print appointment.company_name
-				company_node = {'group' : 2, 'name' : appointment['company_name']}
+
+				label = appointment['company_name'].title()
+				company_node = {'group' : grp_appointment, 'name' : label, 'size' : 24}
 
 				if company_node not in plot_nodes:
 					plot_nodes.append(company_node)
@@ -273,7 +281,10 @@ class MemberOfParliament():
 				# print 'linking %s > %s' % (company_node['name'], m.name)
 
 				for officer in appointment['company']['officers']:
-					node = {'group' : 4, 'name' : officer['title']}
+
+					label = officer['title'].title()
+					node = {'group' : grp_company_officer, 'name' : label, 'size' : 12}
+
 					if node not in plot_nodes:
 						plot_nodes.append(node)
 
@@ -284,7 +295,10 @@ class MemberOfParliament():
 
 				for officer in appointment['company']['persons']:
 					# print officer
-					node = {'group' : 4, 'name' : officer['name']}
+
+					label = officer['name'].title()
+					node = {'group' : grp_company_person, 'name' : label, 'size' : 12}
+
 					if node not in plot_nodes:
 						plot_nodes.append(node)
 
@@ -292,6 +306,7 @@ class MemberOfParliament():
 					link = {'source' : plot_nodes.index(company_node), 'target' : plot_nodes.index(node)}
 					plot_links.append(link)
 
+		# donors, gifts - personal and private
 		for each in self.categories:
 
 			for i in each.items:
@@ -300,10 +315,17 @@ class MemberOfParliament():
 
 					if i['address'] == 'private':
 						# create a new person
-						node = {'group' : 1, 'name' : i['donor']}
+
+						label = '%s (%s%s)' % (i['donor'].title(), unichr(163), str(i['amount']))
+						node = {'group' : grp_donor, 'name' : label, 'size' : 40}
 					else:
 						# create a new company
-						node = {'group' : 2, 'name' : i['donor']}
+						if i['donor']:
+							donor = i['donor'].title()
+						else:
+							donor = 'None'
+						label = '%s (%s%s)' % (donor, unichr(163), str(i['amount']))
+						node = {'group' : grp_donor_company, 'name' : label, 'size' : 40}
 
 					if node not in plot_nodes:
 						plot_nodes.append(node)
@@ -315,7 +337,7 @@ class MemberOfParliament():
 					# print 'linking %s > %s' % (node['name'], m.name)
 
 				if 'family' in each.category_type:
-					node = {'group' : 3, 'name' : i['raw_string']}
+					node = {'group' : grp_family, 'name' : i['raw_string'], 'size' : 40}
 					if node not in plot_nodes:
 						plot_nodes.append(node)
 
@@ -325,6 +347,7 @@ class MemberOfParliament():
 
 		data = {'nodes' : plot_nodes, 'links' : plot_links}
 		# print 'Writing : %s > %s' % (self.name, plot_path)
+		title = '%s %s, %s, %s' % (self.first_name, self.last_name, self.party, self.constituency)
 		plot_data_to_file(data, plot_path, self.name)
 
 	def getMPExpenses(self):
@@ -557,6 +580,7 @@ class MemberOfParliament():
 		vals.append(self.constituency)
 		vals.append(self.party)
 		vals.append(data['eu_ref_stance'])
+
 		for i in data['wrans_subjects'].split(' '):
 			vals.append(i)
 		for i in data['wrans_departments'].split(' '):
