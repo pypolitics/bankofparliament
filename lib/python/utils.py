@@ -65,10 +65,28 @@ def get_all_mps(theyworkyou_apikey):
 
 	return literal
 
-def get_house_of_commons_member(constituency):
+def get_house_of_commons_member(constituency, outputs=None):
 
     search_criteria = 'House=Commons|IsEligible=true|constituency=%s' % (constituency)
-    outputs = 'BasicDetails|Addresses|PreferredNames'
+    if not outputs:
+        outputs = 'BasicDetails|Addresses|PreferredNames'
+    url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/%s/%s' % (search_criteria, outputs)
+
+    headers = {'Accept': 'application/json'}
+    request = get_request(url=url, user=None, headers=headers)
+
+    # replace null with None
+    content = request.content.replace("null", "None")
+    a = ast.literal_eval(content)
+
+    members = a['Members']['Member']
+    return members
+
+def get_house_of_commons_member2(constituency):
+
+    search_criteria = 'House=Commons|IsEligible=true|constituency=%s' % (constituency)
+    outputs = 'GovernmentPosts|BiographyEntries|Committees'
+
     url = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/%s/%s' % (search_criteria, outputs)
 
     headers = {'Accept': 'application/json'}
@@ -108,7 +126,6 @@ def get_mp_image(name, first_name, last_name, memid, output_path):
 
         # find the member photo
         url = 'http://data.parliament.uk/membersdataplatform/services/images/MemberPhoto/%s/Web Photobooks' % member_id
-
         response = requests.get(url, stream=True)
 
         with open(filepath, 'wb') as out_file:
