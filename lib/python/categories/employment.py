@@ -37,10 +37,12 @@ class Employment(Category):
 
 			if 'p.a' in raw_string.lower():
 				amount = amount
-
+			elif 'per annum' in raw_string.lower():
+				amount = amount
+			elif 'paid monthly' in raw_string.lower():
+				amount = amount
 			elif 'monthly salary' in raw_string.lower():
 				amount = amount * 12
-
 			elif 'a month' in raw_string.lower():
 				amount = amount * 12
 
