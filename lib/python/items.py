@@ -1,7 +1,6 @@
 
 # system libs
 import os
-from textblob import TextBlob
 
 # local libs
 from utils import PrettyPrintUnicode
@@ -35,6 +34,7 @@ class Item():
 		"""
 		Use nlp to find nouns
 		"""
+		from textblob import TextBlob
 		blob = TextBlob(self.raw_string)
 
 		for word, tag in blob.tags:
