@@ -401,8 +401,11 @@ class CompaniesHouseUserSearch():
 				self.matched.append(record)
 
 class CompaniesHouseOfficer():
-	def __init__(self, record, defer=False):
+	def __init__(self, record, defer=False, get_officers=False, get_filing=False, get_persons=False):
 		"""Verified Companies House Officer Class"""
+		self.get_officers = get_officers
+		self.get_filing = get_filing
+		self.get_persons = get_persons
 
 		self.appointments = []
 		self.items = []
@@ -442,7 +445,7 @@ class CompaniesHouseOfficer():
 
 		# we actually already have the appointments. needed them to identify the searched person,
 		# here we just get the appointment classes
-		appointments = [CompaniesHouseAppointment(i, officer=self) for i in record['appointments']]
+		appointments = [CompaniesHouseAppointment(i, officer=self, get_officers=self.get_officers, get_filing=self.get_filing, get_persons=self.get_persons) for i in record['appointments']]
 		self.items = [i for i in appointments]
 
 	def __str__(self):
@@ -456,7 +459,7 @@ class CompaniesHouseOfficer():
 		return vars(self)
 
 class CompaniesHouseAppointment():
-	def __init__(self, data, officer):
+	def __init__(self, data, officer, get_officers, get_filing, get_persons):
 		"""Companies House Appointments Class"""
 
 		self._officer = officer
@@ -491,12 +494,12 @@ class CompaniesHouseAppointment():
 		else:
 			self.occupation = ''
 
-		self._get_company(data)
+		self._get_company(data, get_officers, get_filing, get_persons)
 
-	def _get_company(self, data):
+	def _get_company(self, data, get_officers, get_filing, get_persons):
 		"""Get company class from dict"""
 
-		company_cls = CompaniesHouseCompany(getlink(data, 'company'), self._officer)
+		company_cls = CompaniesHouseCompany(getlink(data, 'company'), self._officer, get_officers, get_filing, get_persons)
 
 		self.company_name = company_cls.company_name
 		self.company_status = company_cls.company_status
@@ -533,7 +536,7 @@ class CompaniesHouseAppointment():
 		return k
 
 class CompaniesHouseCompany():
-	def __init__(self, data, officer):
+	def __init__(self, data, officer, get_officers=False, get_filing=False, get_persons=False):
 		"""
 		Companies House Company Class
 
@@ -600,9 +603,12 @@ class CompaniesHouseCompany():
 		else:
 			self.has_insolvency_history = None
 
-		self._get_officers(data)
-		# self._get_filing_history(data)
-		self._get_persons(data, officer)
+		if get_officers:
+			self._get_officers(data)
+		if get_filing:
+			self._get_filing_history(data)
+		if get_persons:
+			self._get_persons(data, officer)
 
 	def _get_officers(self, data):
 		"""Get officers from dict"""
