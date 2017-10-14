@@ -16,6 +16,7 @@ import shutil
 from generate_thumbnail import write_thumbnail
 from generate_register import write_register
 from generate_companieshouse import write_companieshouse
+from generate_plot import write_scatter_plot
 
 locale.setlocale(locale.LC_ALL, '')
 
@@ -325,8 +326,11 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     # write the companies house page
     write_companieshouse(companies_file, name, party, party_dict, constituency, member_id, active_appointments, previous_appointments, dob_str, member)
 
-    # write a word cloud image out
+    # # write a word cloud image out
     # write_wordcloud(member_id, name, keywords)
+
+    # # write scatter plot
+    # write_scatter_plot(member)
 
 def feeback(mps):
     """"""

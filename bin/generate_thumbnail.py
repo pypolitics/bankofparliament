@@ -19,25 +19,25 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t<div class="panelHeader">\n'
 
     if family:
-        html += '\t\t\t\t<img class="family" src="lib/images/family.png" title="%s" height="32" width="32" align="right"></img>\n' % family_pretty
+        html += '\t\t\t\t<img class="family" src="lib/data/images/family.png" title="%s" height="32" width="32" align="right"></img>\n' % family_pretty
     else:
-        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="right"></img>\n'
+        html += '\t\t\t\t<img class="nofamily" src="lib/data/images/placeholder.png" height="32" width="32" align="right"></img>\n'
 
     if twitter != '':
-        html += '\t\t\t\t<a target="_blank" href="https://twitter.com/%s"> <img class="family" src="lib/images/twitter.png" height="24" width="24" align="left"></img></a></br>\n' % twitter
+        html += '\t\t\t\t<a target="_blank" href="https://twitter.com/%s"> <img class="family" src="lib/data/images/twitter.png" height="24" width="24" align="left"></img></a></br>\n' % twitter
     else:
-        html += '\t\t\t\t<img class="nofamily" src="lib/images/placeholder.png" height="32" width="32" align="left"></img></br>\n'    
+        html += '\t\t\t\t<img class="nofamily" src="lib/data/images/placeholder.png" height="32" width="32" align="left"></img></br>\n'    
     html += '\t\t\t\t<p></p>\n'
 
     # add the clickable thumbnail
     html += '<a href="pages/register/%s.html">' % member_id
 
-    s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'images', '%s.jpg' % str(member_id))
+    s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'data', 'images', '%s.jpg' % str(member_id))
 
     if os.path.exists(s):
-        html += '\t\t\t\t<img class="picture" src="lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
+        html += '\t\t\t\t<img class="picture" src="lib/data/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
     else:
-        html += '\t\t\t\t<img src="lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+        html += '\t\t\t\t<img src="lib/data/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
  
     html += '</a>'
 

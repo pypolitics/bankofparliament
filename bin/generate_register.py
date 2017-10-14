@@ -16,11 +16,11 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t<div class="panelHeader photo data-member=%s">\n' % (str(member_id))
     
     # add the thumbnail
-    s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'images', '%s.jpg' % str(member_id))
+    s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'data', 'images', '%s.jpg' % str(member_id))
     if os.path.exists(s):
-        html += '\t\t\t\t<img class="picture" src="../../lib/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
+        html += '\t\t\t\t<img class="picture" src="../../lib/data/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
     else:
-        html += '\t\t\t\t<img src="../../lib/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+        html += '\t\t\t\t<img src="../../lib/data/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
 
     # add the mp text
     html += '\t\t\t\t\t<a class="name_r">%s,</a>\n' % (name)
