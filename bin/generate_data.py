@@ -22,7 +22,6 @@ from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
 from categories.companies_house import CompaniesHouseUser
 from utils import get_all_mps, get_request, get_house_of_commons_member, get_house_of_commons_member2
-from plotting import plot_data_to_file
 import html_formatter
 
 from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer, CompaniesHouseCompanySearch
@@ -35,7 +34,7 @@ xml_data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'regmem201
 request_wait_time = 3600.0
 
 class MemberOfParliament():
-	def __init__(self, member, index=None, wordcloud=True, scatter_plot=True, company_officers=True, company_filing=False, company_persons=True):
+	def __init__(self, member, index=None, company_officers=True, company_filing=False, company_persons=True):
 		"""Class holding the individual member of parliament"""
 		print '\nProcessing : %s' % member['name'].decode('latin-1').encode("utf-8")
 
@@ -43,8 +42,6 @@ class MemberOfParliament():
 
 		self.index = str(index+1).zfill(3)
 		self.mps = []
-		self.wordcloud = wordcloud
-		self.scatter_plot = scatter_plot
 
 		self.company_officers = company_officers
 		self.company_filing = company_filing
@@ -218,137 +215,6 @@ class MemberOfParliament():
 			if not officer.links in [each.links for each in self.mps]:
 				officer._get_appointments(i)
 				self.mps.append(officer)
-
-	def write_word_cloud(self, words):
-		"""
-		Write out word cloud
-		"""
-		image_path = '../lib/data/wordclouds/%s.png' % self.member_id
-
-		# words to generate a clod from
-		string = ''
-		for w in words:
-			spl = w.split(' ')
-			for i in spl:
-				if i != '':
-					i = i.replace('-', ' ').replace('/', ' ')
-					string += '%s ' % i.lower()
-
-		stopwords = ['other', 'member', 'trading', 'companies', 'uk', 'and', 'none', 'from', 'of', 'for', 'in', 'on', 'true', 'false', 'england', 'scotland', 'wales', 'northern', 'ireland', 'officers', 'active', 'company', 'street', 'director', 'london', 'limited', 'corporate', 'secretary', 'dissolved', 'officer', 'united', 'kingdom', 'british', 'appointments', 'appointment', 'mr', 'mrs', 'ms', 'miss', 'the', 'ltd', 'limited', 'plc', 'llp']
-
-		wordcloud = WordCloud(background_color="#0087dc", mode="RGBA", width=1000, height=300, max_words=200, stopwords=stopwords, colormap="Set1").generate(string)
-		import matplotlib.pyplot as plt
-		plt.imshow(wordcloud, interpolation='bilinear')
-		plt.axis("off")
-
-		# print 'Writing : %s > %s' % (self.name, image_path)
-		plt.savefig(image_path, transparent=True, bbox_inches='tight', pad_inches=0, dpi=300)
-
-	def write_scatter_plot(self):
-		"""
-		Write out scatter plot html
-		"""
-
-		plot_path = '../pages/plots//%s.html' % self.member_id
-
-		grp_donor = 1
-		grp_appointment = 2
-		grp_donor_company = 3
-		grp_company_officer = 4
-		grp_company_person = 5
-		grp_family = 6
-
-		plot_nodes = []
-		plot_links = []
-		node = {'group' : 0, 'name' : self.name, 'size' : 50}
-		plot_nodes.append(node)
-
-		# companies house stuff
-		for mp in self.mps:
-			for appointment in mp.items:
-				# print appointment.company_name
-
-				label = appointment['company_name'].title()
-				company_node = {'group' : grp_appointment, 'name' : label, 'size' : 24}
-
-				if company_node not in plot_nodes:
-					plot_nodes.append(company_node)
-
-				# create a relationsip
-				link = {'source' : 0, 'target' : plot_nodes.index(company_node)}
-				plot_links.append(link)
-
-				# print 'linking %s > %s' % (company_node['name'], m.name)
-
-				for officer in appointment['company']['officers']:
-
-					label = officer['title'].title()
-					node = {'group' : grp_company_officer, 'name' : label, 'size' : 12}
-
-					if node not in plot_nodes:
-						plot_nodes.append(node)
-
-					# create a relationsip
-					link = {'source' : plot_nodes.index(company_node), 'target' : plot_nodes.index(node)}
-					plot_links.append(link)
-
-
-				for officer in appointment['company']['persons']:
-					# print officer
-
-					label = officer['name'].title()
-					node = {'group' : grp_company_person, 'name' : label, 'size' : 12}
-
-					if node not in plot_nodes:
-						plot_nodes.append(node)
-
-					# create a relationsip
-					link = {'source' : plot_nodes.index(company_node), 'target' : plot_nodes.index(node)}
-					plot_links.append(link)
-
-		# donors, gifts - personal and private
-		for each in self.categories:
-
-			for i in each.items:
-
-				if i['isDonation'] or i['isGift']:
-
-					if i['address'] == 'private':
-						# create a new person
-
-						label = '%s (%s%s)' % (i['donor'].title(), unichr(163), str(i['amount']))
-						node = {'group' : grp_donor, 'name' : label, 'size' : 40}
-					else:
-						# create a new company
-						if i['donor']:
-							donor = i['donor'].title()
-						else:
-							donor = 'None'
-						label = '%s (%s%s)' % (donor, unichr(163), str(i['amount']))
-						node = {'group' : grp_donor_company, 'name' : label, 'size' : 40}
-
-					if node not in plot_nodes:
-						plot_nodes.append(node)
-
-					# create a relationsip
-					link = {'source' : 0, 'target' : plot_nodes.index(node)}
-					plot_links.append(link)
-
-					# print 'linking %s > %s' % (node['name'], m.name)
-
-				if 'family' in each.category_type:
-					node = {'group' : grp_family, 'name' : i['raw_string'], 'size' : 40}
-					if node not in plot_nodes:
-						plot_nodes.append(node)
-
-					# create a relationsip
-					link = {'source' : 0, 'target' : plot_nodes.index(node)}
-					plot_links.append(link)
-
-		data = {'nodes' : plot_nodes, 'links' : plot_links}
-		# print 'Writing : %s > %s' % (self.name, plot_path)
-		title = '%s %s, %s, %s' % (self.first_name, self.last_name, self.party, self.constituency)
-		plot_data_to_file(data, plot_path, self.name)
 
 	def getMPExpenses(self):
 		"""Method to parse expenses"""
@@ -660,12 +526,6 @@ class MemberOfParliament():
 		data['mp_gifts'] = self.total_gifts
 		data['mp_donations'] = self.total_donations
 		data['mp_annual'] = self.total_annual
-
-		if self.wordcloud:
-			self.write_word_cloud(vals)
-
-		if self.scatter_plot:
-			self.write_scatter_plot()
 
 		# write out to file
 		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members', '%s.json' % self.member_id)
