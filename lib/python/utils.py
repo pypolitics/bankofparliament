@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # system libs
-import requests, time, ast, locale, pprint, re, shutil, os, sys, json
+import requests, time, ast, locale, pprint, re, shutil, os, sys, json, copy
 reload(sys) 
 sys.setdefaultencoding('utf8')
 
@@ -12,6 +12,8 @@ from fuzzywuzzy import process
 from datetime import datetime
 from wordcloud import WordCloud
 import csv
+import matplotlib.pyplot as plt
+from plotting import plot_data_to_file
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
@@ -311,3 +313,158 @@ def cleanup_raw_string(raw):
                 found.append(r)
 
     return ' '.join(found)
+
+def read_json_file():
+    """
+    Read file from json_dump_location
+    """
+    json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'members')
+    data = []
+    for mp in os.listdir(json_dump_location):
+        f = os.path.join(json_dump_location, mp)
+        with open(f) as json_data:
+            data.append(json.load(json_data))
+
+    return data
+
+def write_word_cloud(words, member_id, filepath, width=1600, height=1000, background_color='#cccccc', max_words=300):
+    """
+    Write out word cloud
+    """
+    # words to generate a clod from
+    string = ''
+    for w in words:
+        spl = w.split(' ')
+        for i in spl:
+            if i != '':
+                i = i.replace('-', ' ').replace('/', ' ')
+                string += '%s ' % i.lower()
+
+    stopwords = ['other', 'member', 'trading', 'companies', 'uk', 'and', 'none', 'from', 'of', 'for', 'in', 'on', 'true', 'false', 'england', 'scotland', 'wales', 'northern', 'ireland', 'officers', 'active', 'company', 'street', 'director', 'london', 'limited', 'corporate', 'secretary', 'dissolved', 'officer', 'united', 'kingdom', 'british', 'appointments', 'appointment', 'mr', 'mrs', 'ms', 'miss', 'the', 'ltd', 'limited', 'plc', 'llp']
+
+    wordcloud = WordCloud(background_color=background_color, mode="RGBA", width=width, height=height, max_words=max_words, stopwords=stopwords, colormap="Set1").generate(string)
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+
+    print 'Writing : %s' % filepath
+    plt.savefig(filepath, transparent=True, bbox_inches='tight', pad_inches=0, dpi=300)
+
+def make_link(link, nodes, source, target):
+    """"""
+    link['source'] = nodes.index(source)
+    link['target'] = nodes.index(target)
+
+    return link
+
+def make_node(node, name):
+    """"""
+    node['name'] = name
+    return node
+
+def write_scatter_plot(mp):
+    """
+    Write out scatter plot html
+    """
+    plot_path = '../pages/plots/%s.html' % mp['member_id']
+
+    colors = {'light_blue' : 'rgb(72, 128, 219)',
+            'light_orange' : 'rgb(247, 165, 93)',
+            'light_green' : 'rgb(138, 216, 110)',
+            'light_grey' : 'rgb(184, 186, 184)',
+            'dark_grey' : 'rgb(150, 150, 150)'
+    }
+
+    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 50, 'name' : 'mp : ', 'size_scaler' : 0},
+                    'reg_donor'         : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
+                    'reg_donor_company' : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
+                    'reg_family'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'family : ', 'size_scaler' : 0},
+                    'ch_company'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 30, 'name' : 'company : ', 'size_scaler' : 0},
+                    'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 20, 'name' : 'officer : ', 'size_scaler' : 0},
+                    'ch_person'         : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 20, 'name' : 'shareholder : ', 'size_scaler' : 0},
+                    }
+
+    data_lines = {  'major' : {'color' : colors['dark_grey'], 'opacity' : 1, 'size' : 8, 'name' : None, 'size_scaler' : 0},
+                    'minor' : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 4, 'name' : None, 'size_scaler' : 0},
+                    }
+
+    # data
+    data = {'nodes' : [], 'links' : []}
+
+    # get main node
+    node_main = make_node(data_nodes['mp'], name='%s' % mp['name'])
+    data['nodes'].append(node_main)
+
+    # donors, gifts - personal and private
+    for each in mp['categories']:
+        for i in each['items']:
+
+            if i['isDonation'] or i['isGift']:
+                if i['donor']:
+                    label = i['donor'].title()
+                else:
+                    label = i['raw_string']
+
+                private_node = make_node(data_nodes['reg_donor'], name=label)
+                d = copy.copy(private_node)
+
+                if d not in data['nodes']:
+                    data['nodes'].append(d)
+                    link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=d)
+                    l = copy.copy(link)
+                    data['links'].append(l)
+
+                else:
+                    data['nodes'][data['nodes'].index(d)]['size'] += 30
+
+            if 'family' in each['category_type']:
+                family_node = make_node(data_nodes['reg_family'], name=i['raw_string'])
+                f = copy.copy(family_node)
+
+                data['nodes'].append(f)
+                link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=f)
+
+                l = copy.copy(link)
+                data['links'].append(l)
+
+
+    # companies house stuff
+    for every in mp['companies_house']:
+
+        for appointment in every['items']:
+
+            label = appointment['company_name'].title()
+            company_node = make_node(data_nodes['ch_company'], name=label)
+            c = copy.copy(company_node)
+            if c not in data['nodes']:
+                data['nodes'].append(c)
+                link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=c)
+                app = copy.copy(link)
+                data['links'].append(app)
+
+            for officer in appointment['company']['officers']:
+
+                label = officer['title'].title()
+                node_officer = make_node(data_nodes['ch_officer'], name=label)
+                o = copy.copy(node_officer)
+                if o not in data['nodes']:
+
+                    data['nodes'].append(o)
+                    link = make_link(data_lines['major'], nodes = data['nodes'], source=company_node, target=o)
+                    off = copy.copy(link)
+                    data['links'].append(off)
+
+            for person in appointment['company']['persons']:
+
+                label = person['name'].title()
+                node_person = make_node(data_nodes['ch_officer'], name=label)
+                p = copy.copy(node_person)
+                if p not in data['nodes']:
+                    data['nodes'].append(p)
+                    link = make_link(data_lines['major'], nodes = data['nodes'], source=company_node, target=p)
+                    per = copy.copy(link)
+                    data['links'].append(per)
+
+
+    title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
+    plot_data_to_file(data, plot_path, mp['name'])
+    print 'Writing : %s' % plot_path
