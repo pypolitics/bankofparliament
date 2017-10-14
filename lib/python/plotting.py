@@ -25,17 +25,41 @@ def plot_data_to_file(data, filename , title, dot_width=0.5):
 		labels=[]
 		group=[]
 		sizes = []
+		opacity = []
+
+		# LINE
+		# 'minor' : {'color' : colors[light_grey], 'opacity' : 0.5, 'size' : 4, 'name' : None, 'size_scaler' : 0},
+		line_color = []
+		line_opacity = []
+		line_size = []
+
+		# NODE
+		# 'reg_donor_company' : {'color' : colors[light_orange], 'opacity' : 1, 'size' : 40, 'name' : None, 'size_scaler' : 0},
+		node_color = []
+		node_opacity = []
+		node_size = []
+		node_name = []
+
+		for lin in data['links']:
+			line_color.append(lin['color'])
+			line_opacity.append(lin['opacity'])
+			line_size.append(lin['size'])
+
 		for node in data['nodes']:
-			labels.append(node['name'])
-			group.append(node['group'])
-			sizes.append(node['size'])
+			node_name.append(node['name'])
+			node_color.append(node['color'])
+			node_opacity.append(node['opacity'])
+			node_size.append(node['size'])
 
 		# create a Kamada-Kawai layout
 		layt = G.layout('kk', dim=3)
+		# layt_2d = G.layout('kk', dim=2)
 
+		# node co-ordinates
 		Xn = [layt[k][0] for k in range(N)]# x-coordinates of nodes
 		Yn = [layt[k][1] for k in range(N)]# y-coordinates
 		Zn = [layt[k][2] for k in range(N)]# z-coordinates
+
 		Xe = []
 		Ye = []
 		Ze = []
@@ -45,26 +69,29 @@ def plot_data_to_file(data, filename , title, dot_width=0.5):
 		    Ye += [layt[e[0]][1],layt[e[1]][1], None]
 		    Ze += [layt[e[0]][2],layt[e[1]][2], None]
 
-		trace1 = Scatter3d(x=Xe,
-		               y=Ye,
-		               z=Ze,
-		               mode='lines',
-		               line=Line(color='rgb(125,125,125)', width=2),
-		               hoverinfo='none'
+		# lines
+		trace1 = Scatter3d(x = Xe,
+		               y = Ye,
+		               z = Ze,
+		               mode = 'lines',
+		               line = Line(color = line_color, width = line_size),
+		               hoverinfo = 'none'
 		               )
-		trace2 = Scatter3d(x=Xn,
-		               y=Yn,
-		               z=Zn,
-		               mode='markers',
-		               name='actors',
-		               marker=Marker(symbol='dot',
-		                             size=sizes,
-		                             color=group,
-		                             colorscale='Viridis',
-		                             line=Line(color='rgb(50,50,50)', width=dot_width)
-		                             ),
-		               text=labels,
-		               hoverinfo='text'
+
+		# nodes
+		trace2 = Scatter3d(x = Xn,
+		               y = Yn,
+		               z = Zn,
+		               mode = 'markers',
+		               name = 'actors',
+		               marker = Marker(symbol = 'dot',
+		                             size = node_size,
+		                             color = node_color,
+		                             opacity = node_opacity,
+		                             colorscale = 'Viridis',
+		                             line = Line(color = 'rgb(50,50,50)', width = dot_width)),
+		               text = node_name,
+		               hoverinfo = 'text'
 		               )
 
 
@@ -77,35 +104,17 @@ def plot_data_to_file(data, filename , title, dot_width=0.5):
 		          )
 
 		layout = Layout(
-		         title=title,
-		         width=1200,
-		         height=1000,
-		         showlegend=False,
-		         scene=Scene(
-		         xaxis=XAxis(axis),
-		         yaxis=YAxis(axis),
-		         zaxis=ZAxis(axis),
-		        ),
-		     margin=Margin(
-		        t=100
-		    ),
-		    hovermode='closest',
-		    # annotations=Annotations([
-		    #        Annotation(
-		    #        showarrow=False,
-		    #         text="Data source: <a href='http://bost.ocks.org/mike/miserables/miserables.json'>[1] miserables.json</a>",
-		    #         xref='paper',
-		    #         yref='paper',
-		    #         x=0,
-		    #         y=0.1,
-		    #         xanchor='left',
-		    #         yanchor='bottom',
-		    #         font=Font(
-		    #         size=14
-		    #         )
-		    #         )
-		    #     ]),    
-		)
+			title=title,
+			width=1200,
+			height=800,
+			showlegend=False,
+			scene=Scene(
+				xaxis=XAxis(axis),
+				yaxis=YAxis(axis),
+				zaxis=ZAxis(axis)),
+			margin=Margin(t=30),
+			hovermode='closest',
+			)
 
 		data = Data([trace1, trace2])
 		fig = Figure(data=data, layout=layout)
