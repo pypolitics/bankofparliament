@@ -604,27 +604,40 @@ class CompaniesHouseCompany():
 			self.has_insolvency_history = None
 
 		if get_officers:
-			self._get_officers(data)
+			self._get_officers(data, officer)
 		if get_filing:
 			self._get_filing_history(data)
 		if get_persons:
 			self._get_persons(data, officer)
 
-	def _get_officers(self, data):
+	def _get_officers(self, data, officer):
 		"""Get officers from dict"""
 
 		officer_dicts = getlink(data, 'officers')['items']
-		for officer in officer_dicts:
+		for off in officer_dicts:
 
-			# fix the dict to work CompaniesHouseOfficer class
+			# fix the dict tho work CompaniesHouseOfficer class
+			# pprint(off)
+
+			# format the title
+			splits = off['name'].split(',')
+			name = '%s %s' % (splits[-1].title(), splits[0].title())
 
 			# setting the appointments to [], ensures we dont recurse all through the companieshouse db
-			officer['appointments'] = []
-			officer['title'] = officer['name']
-			officer['address_snippet'] = ' '.join(officer['address'].values())
-			officer['matches'] = {}
+			off['appointments'] = []
+			off['title'] = name
+			off['address_snippet'] = ' '.join(off['address'].values())
+			off['matches'] = {}
 
-			self.officers.append(CompaniesHouseOfficer(officer).data)
+			x = CompaniesHouseOfficer(off)
+			if self.match_significant_to_self(off, officer, fuzzy_threshold=65, count_threshold=1):
+				x.isOfficer = True
+			else:
+				x.isOfficer = False
+
+			self.officers.append(x.data)
+
+			# self.officers.append(CompaniesHouseOfficer(officer).data)
 
 	def _get_filing_history(self, data):
 		"""Get filing history of company from dict"""
@@ -646,11 +659,11 @@ class CompaniesHouseCompany():
 
 			self.persons.append(x.data)
 
-	def match_significant_to_self(self, person, officer):
+	def match_significant_to_self(self, person, officer, count_threshold=2, fuzzy_threshold=80):
 		""""""
 
-		fuzzy_threshold = 80
-		count_threshold = 2
+		# fuzzy_threshold = 80
+		# count_threshold = 2
 
 		# dob
 		if person.has_key('date_of_birth'):
@@ -682,6 +695,7 @@ class CompaniesHouseCompany():
 			count += 1
 
 		# decide
+
 		if count >= count_threshold:
 			return True
 		else:

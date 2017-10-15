@@ -6,7 +6,10 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, filename , title, dot_width=0.5):
+# html_top = os.path.join(os.path.dirname(__file__), '../lib/html/network_top.html')
+# html_tail = os.path.join(os.path.dirname(__file__), '../lib/html/network_tail.html')
+
+def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 	"""
 	"""
 
@@ -52,36 +55,60 @@ def plot_data_to_file(data, filename , title, dot_width=0.5):
 			node_size.append(node['size'])
 
 		# create a Kamada-Kawai layout
-		layt = G.layout('kk', dim=3)
-		# layt_2d = G.layout('kk', dim=2)
+		# layt = G.layout('kk', dim=3)
+		layt = G.layout('kk', dim=2)
 
 		# node co-ordinates
 		Xn = [layt[k][0] for k in range(N)]# x-coordinates of nodes
 		Yn = [layt[k][1] for k in range(N)]# y-coordinates
-		Zn = [layt[k][2] for k in range(N)]# z-coordinates
+		# Zn = [layt[k][2] for k in range(N)]# z-coordinates
 
 		Xe = []
 		Ye = []
-		Ze = []
+		# Ze = []
 
 		for e in Edges:
 		    Xe += [layt[e[0]][0],layt[e[1]][0], None]# x-coordinates of edge ends
 		    Ye += [layt[e[0]][1],layt[e[1]][1], None]
-		    Ze += [layt[e[0]][2],layt[e[1]][2], None]
+		    # Ze += [layt[e[0]][2],layt[e[1]][2], None]
 
 		# lines
-		trace1 = Scatter3d(x = Xe,
+		# trace1 = Scatter3d(x = Xe,
+		#                y = Ye,
+		#                z = Ze,
+		#                mode = 'lines',
+		#                line = Line(color = line_color, width = line_size),
+		#                hoverinfo = 'none'
+		#                )
+		# print line_opacity
+		# print help(Scatter)
+		trace1_2d = Scatter(x = Xe,
 		               y = Ye,
-		               z = Ze,
 		               mode = 'lines',
-		               line = Line(color = line_color, width = line_size),
-		               hoverinfo = 'none'
+		               visible = True,
+		               line = Line(color = line_color, width = 1),
+		               hoverinfo = 'none',
+		               opacity = 0.2
 		               )
 
 		# nodes
-		trace2 = Scatter3d(x = Xn,
+		# trace2 = Scatter3d(x = Xn,
+		#                y = Yn,
+		#                z = Zn,
+		#                mode = 'markers',
+		#                name = 'actors',
+		#                marker = Marker(symbol = 'dot',
+		#                              size = node_size,
+		#                              color = node_color,
+		#                              opacity = node_opacity,
+		#                              colorscale = 'Viridis',
+		#                              line = Line(color = 'rgb(50,50,50)', width = dot_width)),
+		#                text = node_name,
+		#                hoverinfo = 'text'
+		#                )
+
+		trace2_2d = Scatter(x = Xn,
 		               y = Yn,
-		               z = Zn,
 		               mode = 'markers',
 		               name = 'actors',
 		               marker = Marker(symbol = 'dot',
@@ -89,11 +116,11 @@ def plot_data_to_file(data, filename , title, dot_width=0.5):
 		                             color = node_color,
 		                             opacity = node_opacity,
 		                             colorscale = 'Viridis',
-		                             line = Line(color = 'rgb(50,50,50)', width = dot_width)),
+		                             line = Line(color = 'rgb(50,50,50)', width = dot_width),
+		                             ),
 		               text = node_name,
 		               hoverinfo = 'text'
 		               )
-
 
 		axis = dict(showbackground=False,
 		          showline=False,
@@ -103,19 +130,50 @@ def plot_data_to_file(data, filename , title, dot_width=0.5):
 		          title=''
 		          )
 
+		# layout = Layout(
+		# 	title=title,
+		# 	width=1200,
+		# 	height=800,
+		# 	showlegend=False,
+		# 	showgrid=False,
+		# 	scene=Scene(
+		# 		xaxis=XAxis(axis),
+		# 		yaxis=YAxis(axis),
+		# 		# zaxis=ZAxis(axis)
+		# 		),
+		# 	margin=Margin(t=30),
+		# 	hovermode='closest',
+		# 	)
+
 		layout = Layout(
-			title=title,
-			width=1200,
-			height=800,
+			# title=title,
+			width=1100,
+			height=600,
 			showlegend=False,
-			scene=Scene(
-				xaxis=XAxis(axis),
-				yaxis=YAxis(axis),
-				zaxis=ZAxis(axis)),
-			margin=Margin(t=30),
+			# showgrid=False,
+			xaxis=XAxis(axis),
+			yaxis = YAxis(axis),
+			# scene=Scene( xaxis=XAxis(axis), yaxis=YAxis(axis), bgcolor='#eee'),
+			margin=Margin(t=0),
 			hovermode='closest',
+			plot_bgcolor='rgba(0,0,0,0)',
+			paper_bgcolor='rgba(0,0,0,0)',
+			hidesources=True,
 			)
 
-		data = Data([trace1, trace2])
+		# data = Data([trace1, trace2])
+		# fig = Figure(data=data, layout=layout)
+		data = Data([trace1_2d, trace2_2d])
 		fig = Figure(data=data, layout=layout)
-		offline.plot(fig, filename=filename, auto_open=False)
+		# print fig
+		if div:
+			# add javascript script
+			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'
+			html = offline.plot(fig, include_plotlyjs=False, output_type='div')
+			html = js+html
+
+			# write it out
+			with open(filename, "a") as f:
+				f.write(html.encode("utf8"))
+		else:
+			offline.plot(fig, filename=filename, auto_open=False)

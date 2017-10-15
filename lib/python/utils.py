@@ -353,7 +353,7 @@ def make_link(link, nodes, source, target):
     """"""
     link['source'] = nodes.index(source)
     link['target'] = nodes.index(target)
-
+    # pprint.pprint(link)
     return link
 
 def make_node(node, name):
@@ -361,7 +361,7 @@ def make_node(node, name):
     node['name'] = name
     return node
 
-def write_scatter_plot(mp):
+def write_scatter_plot(mp, network_file):
     """
     Write out scatter plot html
     """
@@ -371,20 +371,24 @@ def write_scatter_plot(mp):
             'light_orange' : 'rgb(247, 165, 93)',
             'light_green' : 'rgb(138, 216, 110)',
             'light_grey' : 'rgb(184, 186, 184)',
-            'dark_grey' : 'rgb(150, 150, 150)'
+            'light_yellow' : 'rgb(255, 245, 112)',
+            'pink' : 'rgb(255, 186, 244)',
+            'dark_grey' : 'rgb(0, 0, 0)'
     }
 
-    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 50, 'name' : 'mp : ', 'size_scaler' : 0},
+    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 80, 'name' : 'mp : ', 'size_scaler' : 0},
                     'reg_donor'         : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
-                    'reg_donor_company' : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
+                    'reg_donor_company' : {'color' : colors['pink'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
                     'reg_family'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'family : ', 'size_scaler' : 0},
                     'ch_company'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 30, 'name' : 'company : ', 'size_scaler' : 0},
-                    'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 20, 'name' : 'officer : ', 'size_scaler' : 0},
-                    'ch_person'         : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 20, 'name' : 'shareholder : ', 'size_scaler' : 0},
+                    'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 0.6, 'size' : 20, 'name' : 'officer : ', 'size_scaler' : 0},
+                    'ch_officer_matched': {'color' : colors['light_blue'], 'opacity' : 0.6, 'size' : 20, 'name' : 'officer : ', 'size_scaler' : 0},
+                    'ch_person'         : {'color' : colors['light_yellow'], 'opacity' : 0.6, 'size' : 20, 'name' : 'shareholder : ', 'size_scaler' : 0},
+                    'ch_person_matched' : {'color' : colors['light_blue'], 'opacity' : 0.6, 'size' : 20, 'name' : 'shareholder : ', 'size_scaler' : 0},
                     }
 
     data_lines = {  'major' : {'color' : colors['dark_grey'], 'opacity' : 1, 'size' : 8, 'name' : None, 'size_scaler' : 0},
-                    'minor' : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 4, 'name' : None, 'size_scaler' : 0},
+                    'minor' : {'color' : colors['light_grey'], 'opacity' : 0.2, 'size' : 2, 'name' : None, 'size_scaler' : 0},
                     }
 
     # data
@@ -404,7 +408,18 @@ def write_scatter_plot(mp):
                 else:
                     label = i['raw_string']
 
-                private_node = make_node(data_nodes['reg_donor'], name=label)
+                label = label + ' ' + u'\u00a3'  + str(i['amount'])
+
+                if i['isDonation']:
+                    label = 'Donation : %s' % label
+                elif i['isGift']:
+                    label = 'Gift : %s' % label
+
+                if i['address'] == 'private':
+                    private_node = make_node(data_nodes['reg_donor'], name=label)
+                else:
+                    private_node = make_node(data_nodes['reg_donor_company'], name=label)
+
                 d = copy.copy(private_node)
 
                 if d not in data['nodes']:
@@ -417,7 +432,10 @@ def write_scatter_plot(mp):
                     data['nodes'][data['nodes'].index(d)]['size'] += 30
 
             if 'family' in each['category_type']:
-                family_node = make_node(data_nodes['reg_family'], name=i['raw_string'])
+
+                label = 'Family : %s' % i['raw_string']
+
+                family_node = make_node(data_nodes['reg_family'], name=label)
                 f = copy.copy(family_node)
 
                 data['nodes'].append(f)
@@ -433,6 +451,8 @@ def write_scatter_plot(mp):
         for appointment in every['items']:
 
             label = appointment['company_name'].title()
+            label = 'Company : %s' % label
+
             company_node = make_node(data_nodes['ch_company'], name=label)
             c = copy.copy(company_node)
             if c not in data['nodes']:
@@ -442,29 +462,42 @@ def write_scatter_plot(mp):
                 data['links'].append(app)
 
             for officer in appointment['company']['officers']:
-
+                # pprint.pprint(officer)
                 label = officer['title'].title()
-                node_officer = make_node(data_nodes['ch_officer'], name=label)
+                label = 'Company Officer : %s' % label
+
+                if officer['isOfficer']:
+                    node_officer = make_node(data_nodes['ch_officer_matched'], name=label)
+                else:
+                    node_officer = make_node(data_nodes['ch_officer'], name=label)
+
                 o = copy.copy(node_officer)
                 if o not in data['nodes']:
 
                     data['nodes'].append(o)
-                    link = make_link(data_lines['major'], nodes = data['nodes'], source=company_node, target=o)
+                    link = make_link(data_lines['minor'], nodes = data['nodes'], source=company_node, target=o)
                     off = copy.copy(link)
                     data['links'].append(off)
 
             for person in appointment['company']['persons']:
+                # pprint.pprint(person)
 
                 label = person['name'].title()
-                node_person = make_node(data_nodes['ch_officer'], name=label)
+                label = 'Company Shareholder : %s' % label
+
+                if person['isOfficer']:
+                    node_person = make_node(data_nodes['ch_person_matched'], name=label)
+                else:
+                    node_person = make_node(data_nodes['ch_person'], name=label)
+
                 p = copy.copy(node_person)
                 if p not in data['nodes']:
                     data['nodes'].append(p)
-                    link = make_link(data_lines['major'], nodes = data['nodes'], source=company_node, target=p)
+                    link = make_link(data_lines['minor'], nodes = data['nodes'], source=company_node, target=p)
                     per = copy.copy(link)
                     data['links'].append(per)
 
-
+    # pprint.pprint(data['links'])
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    plot_data_to_file(data, plot_path, mp['name'])
-    print 'Writing : %s' % plot_path
+    plot_data_to_file(data, network_file, mp['name'], div=True)
+    # print 'Writing : %s' % network_file
