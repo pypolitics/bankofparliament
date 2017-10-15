@@ -31,10 +31,12 @@ companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 top_html = os.path.join(os.path.dirname(__file__), '../lib/html/top.html')
 register_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/register_top.html')
 appointments_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/appointments_top.html')
+network_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/network_top.html')
 
 tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/tail.html')
 register_tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/register_tail.html')
 appointments_tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/appointments_tail.html')
+network_tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/network_tail.html')
 
 html_file = os.path.join(os.path.dirname(__file__), '../index.html')
 
@@ -52,15 +54,18 @@ def print_to_html_file(mps):
         # output paths
         register_file = os.path.join(os.path.dirname(__file__), '../pages/register/%s.html' % mp['member_id'])
         companies_file = os.path.join(os.path.dirname(__file__), '../pages/companieshouse/%s.html' % mp['member_id'])
+        network_file = os.path.join(os.path.dirname(__file__), '../pages/network/%s.html' % mp['member_id'])
         
         # start a page for register and appointments
         start_html_file(mp['member_id'], tops_html=register_top_html, html_file=register_file)
         start_html_file(mp['member_id'], tops_html=appointments_top_html, html_file=companies_file)
+        start_html_file(mp['member_id'], tops_html=network_top_html, html_file=network_file)
 
-        print_mp_panel_into_file(mp, register_file, companies_file)
+        print_mp_panel_into_file(mp, register_file, companies_file, network_file)
 
         end_html_file(tails_html=register_tail_html, html_file=register_file)
         end_html_file(tails_html=appointments_tail_html, html_file=companies_file)
+        end_html_file(tails_html=network_tail_html, html_file=network_file)
 
     end_html_file()
 
@@ -83,7 +88,7 @@ def format_integer(number):
     loc = locale.currency(number, grouping=True).split('.')[0]
     return loc.replace("£", "&#163;")
 
-def print_mp_panel_into_file(member, register_file, companies_file):
+def print_mp_panel_into_file(member, register_file, companies_file, network_file):
 
     cat_types = [each['category_type'] for each in member['categories']]
 
@@ -330,7 +335,7 @@ def print_mp_panel_into_file(member, register_file, companies_file):
     # write_wordcloud(member_id, name, keywords)
 
     # # write scatter plot
-    # write_scatter_plot(member)
+    write_scatter_plot(member, network_file)
 
 def feeback(mps):
     """"""
