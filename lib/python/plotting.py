@@ -64,6 +64,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		    Xe += [layt[e[0]][0],layt[e[1]][0], None]# x-coordinates of edge ends
 		    Ye += [layt[e[0]][1],layt[e[1]][1], None]
 
+		traces = []
 		trace1_2d = Scatter(x = Xe,
 		               y = Ye,
 		               mode = 'lines',
@@ -73,6 +74,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		               opacity = 0.2,
 		               name = 'lines'
 		               )
+		traces.append(trace1_2d)
 
 		trace2_2d = Scatter(x = Xn,
 		               y = Yn,
@@ -90,6 +92,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		               hoverinfo = 'text',
 		               hovertext = node_hovertext,
 		               )
+		traces.append(trace2_2d)
 
 		axis = dict(showbackground=False,
 		          showline=False,
@@ -102,7 +105,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		layout = Layout(
 			# title=title,
 			width=1100,
-			height=700,
+			height=900,
 			showlegend=True,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
@@ -114,7 +117,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 			)
 
 		# plot to file
-		data = Data([trace1_2d, trace2_2d])
+		data = Data(traces)
 		fig = Figure(data=data, layout=layout)
 		if div:
 			# add javascript script
