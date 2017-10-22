@@ -118,7 +118,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		fig = Figure(data=data, layout=layout)
 		if div:
 			# add javascript script
-			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'
+			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>\n'
 			html = offline.plot(fig, include_plotlyjs=False, output_type='div')
 			html = js+html
 
