@@ -351,14 +351,22 @@ def write_word_cloud(words, member_id, filepath, width=1600, height=1000, backgr
 
 def make_link(link, nodes, source, target):
     """"""
+
     link['source'] = nodes.index(source)
     link['target'] = nodes.index(target)
-    # pprint.pprint(link)
     return link
 
-def make_node(node, name):
+node_id = 0
+def make_node(node, name, hovertext, node_type, unique=True):
     """"""
+    if unique:
+        global node_id
+        node_id += 1
+        node['id'] = node_id
+
     node['name'] = name
+    node['hovertext'] = hovertext
+    node['node_type'] = node_type
     return node
 
 def translate(value, leftMin, leftMax, rightMin, rightMax):
@@ -376,137 +384,176 @@ def write_scatter_plot(mp, network_file):
     """
     Write out scatter plot html
     """
+    node_id = 0
     plot_path = '../pages/plots/%s.html' % mp['member_id']
 
     colors = {'light_blue' : 'rgb(72, 128, 219)',
             'light_orange' : 'rgb(247, 165, 93)',
             'light_green' : 'rgb(138, 216, 110)',
             'light_grey' : 'rgb(184, 186, 184)',
+            'light_turq' : 'rrgb(129, 221, 232)',
             'light_yellow' : 'rgb(255, 245, 112)',
-            'pink' : 'rgb(255, 186, 244)',
+            'light_red' : 'rgb(229, 100, 94)',
+            'light_purple' : 'rgb(228, 129, 232)',
+            'light_pink' : 'rgb(255, 186, 244)',
             'dark_grey' : 'rgb(0, 0, 0)'
     }
 
-    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 80, 'name' : 'mp : ', 'size_scaler' : 0},
-                    'reg_donor'         : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
-                    'reg_donor_company' : {'color' : colors['pink'], 'opacity' : 1, 'size' : 40, 'name' : 'donor : ', 'size_scaler' : 0},
-                    'reg_family'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40, 'name' : 'family : ', 'size_scaler' : 0},
-                    'ch_company'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 30, 'name' : 'company : ', 'size_scaler' : 0},
-                    'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 0.6, 'size' : 20, 'name' : 'officer : ', 'size_scaler' : 0},
-                    'ch_officer_matched': {'color' : colors['light_blue'], 'opacity' : 0.6, 'size' : 20, 'name' : 'officer : ', 'size_scaler' : 0},
-                    'ch_person'         : {'color' : colors['light_yellow'], 'opacity' : 0.6, 'size' : 20, 'name' : 'shareholder : ', 'size_scaler' : 0},
-                    'ch_person_matched' : {'color' : colors['light_blue'], 'opacity' : 0.6, 'size' : 20, 'name' : 'shareholder : ', 'size_scaler' : 0},
+    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 120},
+
+                    'income_item'        : {'color' : colors['light_red'], 'opacity' : 0.5, 'size' : 40},
+                    'income_cat'        : {'color' : colors['light_red'], 'opacity' : 1, 'size' : 40},
+                    'income_main'        : {'color' : colors['light_red'], 'opacity' : 1, 'size' : 60},
+
+                    'freebies_item'        : {'color' : colors['light_orange'], 'opacity' : 0.5, 'size' : 40},
+                    'freebies_cat'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40},
+                    'freebies_main'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 60},
+
+                    'wealth_item'        : {'color' : colors['light_pink'], 'opacity' : 0.5, 'size' : 40},
+                    'wealth_cat'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 40},
+                    'wealth_main'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 60},
+
+                    'misc_item'        : {'color' : colors['light_green'], 'opacity' : 0.5, 'size' : 40},
+                    'misc_cat'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 40},
+                    'misc_main'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 60},
+
                     }
 
-    data_lines = {  'major' : {'color' : colors['dark_grey'], 'opacity' : 1, 'size' : 8, 'name' : None, 'size_scaler' : 0},
-                    'minor' : {'color' : colors['light_grey'], 'opacity' : 0.2, 'size' : 2, 'name' : None, 'size_scaler' : 0},
+    data_lines = {  'major' : {'color' : colors['dark_grey'], 'opacity' : 1, 'size' : 8, 'name' : None},
+                    'minor' : {'color' : colors['light_grey'], 'opacity' : 0.2, 'size' : 2, 'name' : None},
                     }
 
     # data
     data = {'nodes' : [], 'links' : []}
 
     # get main node
-    node_main = make_node(data_nodes['mp'], name='%s' % mp['name'])
+    splits = mp['name'].split(' ')
+    first = splits[0]
+    last = ' '.join(splits[1:])
+    label = '<b>%s<br>%s' % (first, last)
+    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
     data['nodes'].append(node_main)
 
-    # donors, gifts - personal and private
+    categories = {  'property_income'       : {'node_type' : 'income'},
+                    'salary'                : {'node_type' : 'income'},
+                    'employment'            : {'node_type' : 'income'},
+
+                    'gifts'                 : {'node_type' : 'freebies'},
+                    'gifts_outside_uk'      : {'node_type' : 'freebies'},
+                    'indirect_donations'    : {'node_type' : 'freebies'},
+                    'direct_donations'      : {'node_type' : 'freebies'},
+                    'visits_outside_uk'     : {'node_type' : 'freebies'},
+
+                    'property_wealth'       : {'node_type' : 'wealth'},
+                    'shareholdings'         : {'node_type' : 'wealth'},
+
+                    'miscellaneous'         : {'node_type' : 'misc'},
+                    'family'                : {'node_type' : 'misc'},
+                    'family_lobbyists'      : {'node_type' : 'misc'},
+    }
+
+
+    n = []
+
     for each in mp['categories']:
+
+        category_type = each['category_type']
+
         for i in each['items']:
 
-            if i['isDonation'] or i['isGift']:
-                if i['donor']:
-                    label = i['donor'].title()
+            if 'property' in each['category_type']:
+                if i['isWealth']:
+                    category = '%s_wealth' % category_type
                 else:
-                    label = i['raw_string']
+                    category = '%s_income' % category_type
+            else:
+                category = category_type
 
-                label = label + ' ' + u'\u00a3'  + str(i['amount'])
+            # MAIN CATERGORY NODE
+            label = '<b>%s' % categories[category]['node_type'].title() + ' Categories'
+            label = '%s' % categories[category]['node_type'].title() + ' Categories'
+            hovertext = label
+            type_node = make_node(data_nodes[categories[category]['node_type'] + '_main'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_main')
+            type_copy = copy.copy(type_node)
 
-                if i['isDonation']:
-                    label = 'Donation : %s' % label
-                elif i['isGift']:
-                    label = 'Gift : %s' % label
+            # find an existing node
+            found = None
+            for x in data['nodes']:
+                for a in x.itervalues():
+                    if label in str(a):
+                        found = x
+                        break
 
-                if i['address'] == 'private':
-                    private_node = make_node(data_nodes['reg_donor'], name=label)
-                else:
-                    private_node = make_node(data_nodes['reg_donor_company'], name=label)
-
-                d = copy.copy(private_node)
-
-                if d not in data['nodes']:
-                    data['nodes'].append(d)
-                    link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=d)
-                    l = copy.copy(link)
-                    data['links'].append(l)
-
-                else:
-                    data['nodes'][data['nodes'].index(d)]['size'] += 30
-
-            if 'family' in each['category_type']:
-
-                label = 'Family : %s' % i['raw_string']
-
-                family_node = make_node(data_nodes['reg_family'], name=label)
-                f = copy.copy(family_node)
-
-                data['nodes'].append(f)
-                link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=f)
-
+            if not found:
+                # print '\nAdding main category : %s' % label
+                type_copy['amount'] = 0
+                data['nodes'].append(type_copy)
+                link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=type_copy)
                 l = copy.copy(link)
                 data['links'].append(l)
 
+                type_copy['items'] = []
+                n.append(type_copy)
+            else:
+                type_copy = found
 
-    # companies house stuff
-    for every in mp['companies_house']:
+            # CATERGORY NODE
+            label = '%s' % category.title()
+            hovertext = '%s' % category.title()
+            category_node = make_node(data_nodes[categories[category]['node_type'] + '_cat'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_cat')
+            cat_copy = copy.copy(category_node)
 
-        for appointment in every['items']:
+            # find an existing node
+            found = None
+            for x in data['nodes']:
+                for a in x.itervalues():
+                    if label in str(a):
+                        # if not 'Basic Salary' in str(a):
 
-            label = appointment['company_name'].title()
-            label = 'Company : %s' % label
+                        found_cat_node_type = data['nodes'][data['nodes'].index(x)]['node_type']
+                        looking_for = categories[category]['node_type'] + '_cat'
+                        if found_cat_node_type == looking_for:
+                            found = x
+                            break
 
-            company_node = make_node(data_nodes['ch_company'], name=label)
-            c = copy.copy(company_node)
-            if c not in data['nodes']:
-                data['nodes'].append(c)
-                link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=c)
-                app = copy.copy(link)
-                data['links'].append(app)
+            if not found:
+                # print '\tAdding category : %s' % label
+                cat_copy['amount'] = 0
+                data['nodes'].append(cat_copy)
+                link = make_link(data_lines['major'], nodes = data['nodes'], source=type_copy, target=cat_copy)
+                l = copy.copy(link)
+                data['links'].append(l)
 
-            for officer in appointment['company']['officers']:
-                # pprint.pprint(officer)
-                label = officer['title'].title()
-                label = 'Company Officer : %s' % label
+                cat_copy['items'] = []
+                n[n.index(type_copy)]['items'].append(cat_copy)
 
-                if officer['isOfficer']:
-                    node_officer = make_node(data_nodes['ch_officer_matched'], name=label)
+            else:
+                cat_copy = found
+
+            # ITEM NODE
+            if each['isCurrency']:
+                item_label = u'\u00a3' + '%s' % "{:,}".format(i['amount'])
+            else:
+                if 'shareholding' in category:
+                    item_label = '%s' % i['amount'] + r'%'
                 else:
-                    node_officer = make_node(data_nodes['ch_officer'], name=label)
+                    item_label = ''
 
-                o = copy.copy(node_officer)
-                if o not in data['nodes']:
+            item_hovertext = '%s' % i['pretty']
+            item_node = make_node(data_nodes[categories[category]['node_type'] + '_item'], name=item_label, hovertext=item_hovertext, node_type=categories[category]['node_type'] + '_item', unique=True)
+            item_copy = copy.copy(item_node)
 
-                    data['nodes'].append(o)
-                    link = make_link(data_lines['minor'], nodes = data['nodes'], source=company_node, target=o)
-                    off = copy.copy(link)
-                    data['links'].append(off)
+            # print 'Adding item: %s' % item_label
+            item_copy['amount'] = i['amount']
+            data['nodes'].append(item_copy)
+            link = make_link(data_lines['major'], nodes = data['nodes'], source=cat_copy, target=item_copy)
+            l = copy.copy(link)
+            data['links'].append(l)
 
-            for person in appointment['company']['persons']:
-                # pprint.pprint(person)
+            t_idx = n.index(type_copy)
+            c_idx = n[t_idx]['items'].index(cat_copy)
+            n[t_idx]['items'][c_idx]['items'].append(item_copy)
 
-                label = person['name'].title()
-                label = 'Company Shareholder : %s' % label
-
-                if person['isOfficer']:
-                    node_person = make_node(data_nodes['ch_person_matched'], name=label)
-                else:
-                    node_person = make_node(data_nodes['ch_person'], name=label)
-
-                p = copy.copy(node_person)
-                if p not in data['nodes']:
-                    data['nodes'].append(p)
-                    link = make_link(data_lines['minor'], nodes = data['nodes'], source=company_node, target=p)
-                    per = copy.copy(link)
-                    data['links'].append(per)
     # find the ranges of the items, so we can adjust size of nodes, relative to all other nodes
     main_range = []
     for main_category in n:
@@ -563,7 +610,6 @@ def write_scatter_plot(mp, network_file):
                             # print '%s > %s' % (v, size_value)
                             item['size'] += size_value
 
-    # pprint.pprint(data['links'])
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
     plot_data_to_file(data, network_file, mp['name'], div=True)
     # print 'Writing : %s' % network_file
