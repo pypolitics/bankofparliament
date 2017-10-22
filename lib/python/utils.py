@@ -417,6 +417,15 @@ def write_scatter_plot(mp, network_file):
                     'misc_cat'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 40},
                     'misc_main'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 60},
 
+
+                    'companies'        : {'color' : colors['light_yellow'], 'opacity' : 1, 'size' : 60},
+                    'ch_company'        : {'color' : colors['light_yellow'], 'opacity' : 0.5, 'size' : 40},
+                    'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
+                    'ch_officer_matched'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
+
+                    'ch_person'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
+                    'ch_person_matched'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
+
                     }
 
     data_lines = {  'major' : {'color' : colors['dark_grey'], 'opacity' : 1, 'size' : 8, 'name' : None},
@@ -539,7 +548,12 @@ def write_scatter_plot(mp, network_file):
                 else:
                     item_label = ''
 
-            item_hovertext = '%s' % i['pretty']
+            raw_splits = camel_case_split(i['raw_string'])
+            if len(raw_splits) > 1:
+                item_hovertext = '<br>'.join(raw_splits)
+            else:
+                item_hovertext = '%s' % i['pretty']
+
             item_node = make_node(data_nodes[categories[category]['node_type'] + '_item'], name=item_label, hovertext=item_hovertext, node_type=categories[category]['node_type'] + '_item', unique=True)
             item_copy = copy.copy(item_node)
 
@@ -613,3 +627,7 @@ def write_scatter_plot(mp, network_file):
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
     plot_data_to_file(data, network_file, mp['name'], div=True)
     # print 'Writing : %s' % network_file
+
+def camel_case_split(identifier):
+    matches = re.finditer('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$|(?<=[0-9])(?=[A-Z]))', identifier)
+    return [m.group(0) for m in matches]
