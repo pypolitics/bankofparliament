@@ -30,7 +30,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t<p></p>\n'
 
     # add the clickable thumbnail
-    html += '<a href="pages/register/%s.html">' % member_id
+    html += '<a href="pages/network/%s.html">' % member_id
 
     s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'data', 'images', '%s.jpg' % str(member_id))
 
