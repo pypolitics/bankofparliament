@@ -105,7 +105,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		layout = Layout(
 			# title=title,
 			width=1100,
-			height=900,
+			height=700,
 			showlegend=True,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
