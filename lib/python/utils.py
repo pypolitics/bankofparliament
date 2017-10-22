@@ -361,6 +361,17 @@ def make_node(node, name):
     node['name'] = name
     return node
 
+def translate(value, leftMin, leftMax, rightMin, rightMax):
+    # Figure out how 'wide' each range is
+    leftSpan = leftMax - leftMin
+    rightSpan = rightMax - rightMin
+
+    # Convert the left range into a 0-1 range (float)
+    valueScaled = float(value - leftMin) / float(leftSpan)
+
+    # Convert the 0-1 range into a value in the right range.
+    return rightMin + (valueScaled * rightSpan)
+
 def write_scatter_plot(mp, network_file):
     """
     Write out scatter plot html
@@ -496,6 +507,61 @@ def write_scatter_plot(mp, network_file):
                     link = make_link(data_lines['minor'], nodes = data['nodes'], source=company_node, target=p)
                     per = copy.copy(link)
                     data['links'].append(per)
+    # find the ranges of the items, so we can adjust size of nodes, relative to all other nodes
+    main_range = []
+    for main_category in n:
+
+        main_amount = 0
+        category_range = []
+
+        for cat in n[n.index(main_category)]['items']:
+
+            cat_amount = 0
+
+            t_idx = n.index(main_category)
+            c_idx = n[t_idx]['items'].index(cat)
+
+            item_range = []
+            for item in n[t_idx]['items'][c_idx]['items']:
+                if not 'wealth' in item['node_type']:
+                    if item['amount']:
+                        item_amount = item['amount']
+                    else:
+                        item_amount = 0
+                    item_range.append(item_amount)
+                    category_range.append(item_amount)
+                    main_range.append(item_amount)
+                    cat_amount += item_amount
+
+            cat['category_amount'] = int(cat_amount)
+            category_range.append(cat_amount)
+            main_range.append(cat_amount)
+            main_amount += cat_amount
+
+        main_category['main_amount'] = int(main_amount)
+        main_range.append(main_amount)
+
+    # now we have ranges, make the size adjustments
+    current_min = min(main_range)
+    current_max = max(main_range)
+    new_min = 10
+    new_max = 250
+
+    for main_category in n:
+
+        for cat in n[n.index(main_category)]['items']:
+
+            t_idx = n.index(main_category)
+            c_idx = n[t_idx]['items'].index(cat)
+
+            for item in n[t_idx]['items'][c_idx]['items']:
+                if not 'wealth' in item['node_type']:
+                    v = item['amount']
+                    if not current_min == current_max:
+                        if v:
+                            size_value = int(translate(v, current_min, current_max, new_min, new_max))
+                            # print '%s > %s' % (v, size_value)
+                            item['size'] += size_value
 
     # pprint.pprint(data['links'])
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
