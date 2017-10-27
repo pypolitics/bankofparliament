@@ -357,7 +357,7 @@ def make_link(link, nodes, source, target):
     return link
 
 node_id = 0
-def make_node(node, name, hovertext, node_type, unique=True):
+def make_node(node, name, hovertext, node_type, hyperlink, unique=True):
     """"""
     if unique:
         global node_id
@@ -367,6 +367,7 @@ def make_node(node, name, hovertext, node_type, unique=True):
     node['name'] = name
     node['hovertext'] = hovertext
     node['node_type'] = node_type
+    node['hyperlink'] = hyperlink
     return node
 
 def translate(value, leftMin, leftMax, rightMin, rightMax):
@@ -435,12 +436,16 @@ def write_scatter_plot(mp, network_file):
     # data
     data = {'nodes' : [], 'links' : []}
 
+    person_id = mp['person_id']
+    hyperlink = 'https://www.theyworkforyou.com/mp/%s#register' % person_id
+
     # get main node
     splits = mp['name'].split(' ')
     first = splits[0]
     last = ' '.join(splits[1:])
     label = '<b>%s<br>%s' % (first, last)
-    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
+
+    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=hyperlink)
     data['nodes'].append(node_main)
 
     categories = {  'property_income'       : {'node_type' : 'income'},
@@ -482,7 +487,7 @@ def write_scatter_plot(mp, network_file):
             label = '<b>%s' % categories[category]['node_type'].title() + ' Categories'
             label = '%s' % categories[category]['node_type'].title() + ' Categories'
             hovertext = label
-            type_node = make_node(data_nodes[categories[category]['node_type'] + '_main'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_main')
+            type_node = make_node(data_nodes[categories[category]['node_type'] + '_main'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_main', hyperlink=hyperlink)
             type_copy = copy.copy(type_node)
 
             # find an existing node
@@ -509,7 +514,7 @@ def write_scatter_plot(mp, network_file):
             # CATERGORY NODE
             label = '%s' % category.title()
             hovertext = '%s' % category.title()
-            category_node = make_node(data_nodes[categories[category]['node_type'] + '_cat'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_cat')
+            category_node = make_node(data_nodes[categories[category]['node_type'] + '_cat'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_cat', hyperlink=hyperlink)
             cat_copy = copy.copy(category_node)
 
             # find an existing node
@@ -554,7 +559,7 @@ def write_scatter_plot(mp, network_file):
             else:
                 item_hovertext = '%s' % i['pretty']
 
-            item_node = make_node(data_nodes[categories[category]['node_type'] + '_item'], name=item_label, hovertext=item_hovertext, node_type=categories[category]['node_type'] + '_item', unique=True)
+            item_node = make_node(data_nodes[categories[category]['node_type'] + '_item'], name=item_label, hovertext=item_hovertext, node_type=categories[category]['node_type'] + '_item', hyperlink=hyperlink, unique=True)
             item_copy = copy.copy(item_node)
 
             # print 'Adding item: %s' % item_label

@@ -6,7 +6,7 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
+def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=1100, height=700):
 	"""
 	"""
 
@@ -33,6 +33,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		node_size = []
 		node_name = []
 		node_hovertext = []
+		node_hyperlink = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -49,6 +50,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 			node_opacity.append(node['opacity'])
 			node_size.append(node['size'])
 			node_hovertext.append(node['hovertext'])
+			node_hyperlink.append(node['hyperlink'])
 
 		# create a Kamada-Kawai layout
 		layt = G.layout('kk', dim=2)
@@ -91,6 +93,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		               textposition='middle',
 		               hoverinfo = 'text',
 		               hovertext = node_hovertext,
+		               customdata = node_hyperlink
 		               )
 		traces.append(trace2_2d)
 
@@ -104,12 +107,12 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 
 		layout = Layout(
 			# title=title,
-			width=1100,
-			height=700,
-			showlegend=True,
+			width=width,
+			height=height,
+			showlegend=False,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
-			margin=Margin(t=0),
+			# margin=Margin(t=0),
 			hovermode='closest',
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',
@@ -122,8 +125,9 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True):
 		if div:
 			# add javascript script
 			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>\n'
+			# hyper = '<a href="url">link text</a>\n'
 			html = offline.plot(fig, include_plotlyjs=False, output_type='div')
-			html = js+html
+			html = js + html
 
 			# write it out
 			with open(filename, "a") as f:
