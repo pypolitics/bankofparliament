@@ -48,7 +48,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="panelBody">\n'
 
-    html += '\t\t\t\t<table class="myTable2" style="width: 92%;">\n'
+    html += '\t\t\t\t<table class="myTable2"">\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
     html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Public Salary</td>\n'
