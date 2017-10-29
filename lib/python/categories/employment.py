@@ -31,7 +31,7 @@ class Employment(Category):
 		# TODO: need to decipher if the amount earned, was donated to party, charity etc
 		# TODO: if possible find the employer - could also check companies house to investigate further the links
 		# of the employer, other directors, other MPs, relatives etc
-		if 'Hours:' in raw_string:
+		if 'Hours:' in raw_string or 'hrs' in raw_string:
 
 			amount = regex_for_amount(raw_string) 
 

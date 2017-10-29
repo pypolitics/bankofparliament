@@ -35,6 +35,15 @@ class Property(Category):
 		income = False
 		if '(i)' in raw_string:
 			amount = 100000
+			if 'two' in raw_string.lower():
+				amount = amount * 2
+			if 'three' in raw_string.lower():
+				amount = amount * 3
+			if 'four' in raw_string.lower():
+				amount = amount * 4
+			if 'five' in raw_string.lower():
+				amount = amount * 5
+
 			item = PropertyItem(item_id, self.category_id, raw_string, pretty, registered, amount)
 			item.isWealth = True
 			wealth = True
@@ -42,6 +51,14 @@ class Property(Category):
 
 		if '(ii)' in raw_string:
 			amount = 10000
+			if 'two' in raw_string.lower():
+				amount = amount * 2
+			if 'three' in raw_string.lower():
+				amount = amount * 3
+			if 'four' in raw_string.lower():
+				amount = amount * 4
+			if 'five' in raw_string.lower():
+				amount = amount * 5
 
 			if wealth:
 				# as simgle raw item can be both income and wealth, if it is, make two
