@@ -112,7 +112,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=110
 			showlegend=False,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
-			# margin=Margin(t=0),
+			margin=Margin(t=0),
 			hovermode='closest',
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',

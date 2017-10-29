@@ -30,7 +30,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t<p></p>\n'
 
     # add the clickable thumbnail
-    html += '<a href="pages/network/%s.html">' % member_id
+    html += '<a href="pages/register/%s.html">' % member_id
 
     s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'data', 'images', '%s.jpg' % str(member_id))
 
@@ -141,10 +141,10 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (str(len(family_lobbyists_items)))
     html += '\t\t\t\t\t</tr>\n'
 
-    html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Active Appointments</td>\n'
-    html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(active_appointments))
-    html += '\t\t\t\t\t</tr>\n'
+    # html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
+    # html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Active Appointments</td>\n'
+    # html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(active_appointments))
+    # html += '\t\t\t\t\t</tr>\n'
     html += '\t\t\t\t</table>\n'
 
     html += '\t\t\t</div>\n'

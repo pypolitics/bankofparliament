@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os, locale
+from utils import camel_case_split
+
 locale.setlocale(locale.LC_ALL, '')
 
 def format_integer(number):
@@ -110,6 +112,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
 
         html += '\t\t\t\t\t<tr class="toggle2 income">\n'
         html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:150]
+        # html += '\t\t\t\t\t\t<td class="toggle2 income">&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % '</br>'.join(camel_case_split(item['pretty']))
         html += '\t\t\t\t\t\t<td class="toggle2 income" align="right">%s</td>\n' % format_integer(item['amount'])
         html += '\t\t\t\t\t</tr class="toggle2 income">\n'
 

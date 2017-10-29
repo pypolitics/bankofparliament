@@ -42,6 +42,8 @@
             <form class="navbar-form navbar-left">
               <div class="form-group">
                 <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search for names, parties, constituencies...">
+                <button type="button" onclick="clickFunction()" class="btn btn-default form-control">Toggle View</button>
+
               </div>
             </form>
 
@@ -70,18 +72,20 @@
                   <li><a class="alertMe" data-name="miscellaneous" href="#">Miscellaneous</a></li>
                   <li><a class="alertMe" data-name="family" href="#">Family</a></li>
                   <li><a class="alertMe" data-name="lobbyists" href="#">Family Lobbyists</a></li>
-                  <li><a class="alertMe" data-name="companieshouse" href="#">Active Appointments</a></li>
+                  <!-- <li><a class="alertMe" data-name="companieshouse" href="#">Active Appointments</a></li> -->
                 </ul>
               </li>
             </ul><!-- /.sort dropdown -->
+<!--             <button type="button" onclick="clickFunction()" class="btn btn-default pull-right">Toggle View</button>
+ -->
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
 
       </nav>
 
     <!-- add the toggle view button -->
-    <button type="button" onclick="clickFunction()" class="btn btn-default pull-right">Toggle View</button>
-
+<!--     <button type="button" onclick="clickFunction()" class="btn btn-default pull-right">Toggle View</button>
+ -->
     <!-- close the body header -->
     </header>
 
