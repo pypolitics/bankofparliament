@@ -87,6 +87,8 @@ class Salary(Category):
 								pretty = position
 							else:
 								amount = salaries[pos]
+								if 'joint' in position.lower():
+									amount = amount / 2
 								pretty = position
 
 				next_id = len(self.entries) + 1
