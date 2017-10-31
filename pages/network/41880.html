@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>followthemoney</title>
+    <title>registerofinterests</title>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="../../lib/css/style.css">
-
+    <!-- <link rel="stylesheet" href="../../lib/css/style.css"> -->
+    <link rel="stylesheet" href="../../lib/css/navbar.css">
+    <link rel="stylesheet" href="../../lib/css/party_colours.css">
+    <link rel="stylesheet" href="../../lib/css/graph.css">
+    <link rel="stylesheet" href="../../lib/css/common.css">
   </head>
 
   <body>
@@ -28,16 +31,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
-            <a class="navbar-brand" href="../../index.html">follow the money</a>
+            <a class="navbar-brand" href="../../index.html">register of interests</a>
+            <!-- <a class="navbar-brand" href="../../index.html">follow the money</a> -->
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="../../index.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="../register/41880.html">Registered Interests</a></li>              
-              <li class="active"><a href="../network/41880.html">Registered Network<span class="sr-only">(current)</span></a></li>
+              <li><a href="../register/41880.html">Detail</a></li>              
+              <li class="active"><a href="../network/41880.html">Graph<span class="sr-only">(current)</span></a></li>
               <!-- <li><a href="../companieshouse/41880.html">Companies</a></li> -->
               <!-- <li><a href="../network/41880.html">Registered Network</a></li> -->
               <!-- <li><a href="../companieshouse/41880.html">Conflicts</a></li> -->
@@ -55,7 +58,7 @@
     <div class="container">
       <div class="row" id="therow">
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="1783fbc7-4f2e-4b09-bca3-42dba7a00d03" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("1783fbc7-4f2e-4b09-bca3-42dba7a00d03", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-1.2600326371584971, -1.1596299078234904, null, -1.1596299078234904, -2.050649765755446, null, -2.050649765755446, -3.113067793193575, null, -2.050649765755446, -2.168203725046484, null, -1.1596299078234904, -0.09344005280213759, null, -0.09344005280213759, 0.9239910000669118, null], "x": [0.07394590136107373, 1.1901037558965257, null, 1.1901037558965257, 1.8866056222296144, null, 1.8866056222296144, 1.604006463417309, null, 1.8866056222296144, 2.976866814441035, null, 1.1901037558965257, 1.4189504591172275, null, 1.4189504591172275, 1.5569303016994034, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Ellie<br>Reeves", "Income", "Employment", "\u00a3475", "\u00a31,075", "Salary", "\u00a374,962"], "hovertext": ["Ellie Reeves", "Income Categories", "Employment", "21 June 2017, received \u00a3475 from Monaco Solicitors, 29th Floor, The Shard, 32 London Bridge Street, London SE1 9<br>SG, for legal services. Hours: no hours since my election. (Registered 06 July 2017)", "6 July 2017, received \u00a31,075.84 from Monaco Solicitors, 29th Floor, The Shard, 32 London Bridge Street, London SE1 9<br>SG, for legal services. Hours: no hours since my election. (Registered 06 July 2017)", "Salary", "Basic Salary"], "customdata": ["https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register"], "marker": {"opacity": [1, 1, 1, 0.5, 0.5, 1, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 50, 51, 40, 285]}, "mode": "markers+text", "hoverinfo": "text", "y": [-1.2600326371584971, -1.1596299078234904, -2.050649765755446, -3.113067793193575, -2.168203725046484, -0.09344005280213759, 0.9239910000669118], "x": [0.07394590136107373, 1.1901037558965257, 1.8866056222296144, 1.604006463417309, 2.976866814441035, 1.4189504591172275, 1.5569303016994034], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
+<div id="82131f1e-9b51-42b4-b1ed-36fe57b2d4eb" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("82131f1e-9b51-42b4-b1ed-36fe57b2d4eb", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [0.6638808393602365, 0.3781899228815399, null, 0.3781899228815399, 1.1403119895567442, null, 1.1403119895567442, 1.1009505898295129, null, 1.1403119895567442, 2.235269580634567, null, 0.3781899228815399, -0.7119192042593894, null, -0.7119192042593894, -1.7425725760272575, null], "x": [-2.105546807514754, -1.02748073716231, null, -1.02748073716231, -0.2026189459047585, null, -0.2026189459047585, 0.8934970953535729, null, -0.2026189459047585, -0.30663976111040964, null, -1.02748073716231, -1.0103644136516368, null, -1.0103644136516368, -1.075912993672622, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Ellie<br>Reeves", "Income", "Employment", "\u00a3475", "\u00a31,075", "Salary", "\u00a374,962"], "hovertext": ["Ellie Reeves", "Income Categories", "Employment", "21 June 2017, received \u00a3475 from Monaco Solicitors, 29th Floor, The Shard, 32 London Bridge Street, London SE1 9<br>SG, for legal services. Hours: no hours since my election. (Registered 06 July 2017)", "6 July 2017, received \u00a31,075.84 from Monaco Solicitors, 29th Floor, The Shard, 32 London Bridge Street, London SE1 9<br>SG, for legal services. Hours: no hours since my election. (Registered 06 July 2017)", "Salary", "Basic Salary"], "customdata": ["https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register", "https://www.theyworkforyou.com/mp/25681#register"], "marker": {"opacity": [1, 1, 1, 0.5, 0.5, 1, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 50, 51, 40, 285]}, "mode": "markers+text", "hoverinfo": "text", "y": [0.6638808393602365, 0.3781899228815399, 1.1403119895567442, 1.1009505898295129, 2.235269580634567, -0.7119192042593894, -1.7425725760272575], "x": [-2.105546807514754, -1.02748073716231, -0.2026189459047585, 0.8934970953535729, -0.30663976111040964, -1.0103644136516368, -1.075912993672622], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
       </div>
     <!-- close the container -->
     </div>

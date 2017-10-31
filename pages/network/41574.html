@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>followthemoney</title>
+    <title>registerofinterests</title>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="../../lib/css/style.css">
-
+    <!-- <link rel="stylesheet" href="../../lib/css/style.css"> -->
+    <link rel="stylesheet" href="../../lib/css/navbar.css">
+    <link rel="stylesheet" href="../../lib/css/party_colours.css">
+    <link rel="stylesheet" href="../../lib/css/graph.css">
+    <link rel="stylesheet" href="../../lib/css/common.css">
   </head>
 
   <body>
@@ -28,16 +31,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
-            <a class="navbar-brand" href="../../index.html">follow the money</a>
+            <a class="navbar-brand" href="../../index.html">register of interests</a>
+            <!-- <a class="navbar-brand" href="../../index.html">follow the money</a> -->
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="../../index.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="../register/41574.html">Registered Interests</a></li>              
-              <li class="active"><a href="../network/41574.html">Registered Network<span class="sr-only">(current)</span></a></li>
+              <li><a href="../register/41574.html">Detail</a></li>              
+              <li class="active"><a href="../network/41574.html">Graph<span class="sr-only">(current)</span></a></li>
               <!-- <li><a href="../companieshouse/41574.html">Companies</a></li> -->
               <!-- <li><a href="../network/41574.html">Registered Network</a></li> -->
               <!-- <li><a href="../companieshouse/41574.html">Conflicts</a></li> -->
@@ -55,7 +58,7 @@
     <div class="container">
       <div class="row" id="therow">
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="82278b10-5cab-46f9-a5c3-46e47a8f6e76" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("82278b10-5cab-46f9-a5c3-46e47a8f6e76", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-1.4758592630072949, -0.6486943266019036, null, -0.6486943266019036, 0.24598735631823565, null, 0.24598735631823565, 0.8324932800670746, null, -1.4758592630072949, -2.3290503483766685, null, -2.3290503483766685, -3.321411644607212, null, -3.321411644607212, -4.318137201403794, null], "x": [0.558378659339635, 1.1226484981476492, null, 1.1226484981476492, 1.5898557660414556, null, 1.5898557660414556, 2.4149876701657886, null, 0.558378659339635, 0.011731381970788943, null, 0.011731381970788943, -0.1934476954815307, null, -0.1934476954815307, -0.2949800222143948, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Jared<br>O'Mara", "Misc", "Miscellaneous", "", "Income", "Salary", "\u00a374,962"], "hovertext": ["Jared O'Mara", "Misc Categories", "Miscellaneous", "Trustee and School Governor of Paces Sheffield, a school and charity for disabled people and families.", "Income Categories", "Salary", "Basic Salary"], "customdata": ["https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register"], "marker": {"opacity": [1, 1, 1, 0.5, 1, 1, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 40, 60, 40, 290]}, "mode": "markers+text", "hoverinfo": "text", "y": [-1.4758592630072949, -0.6486943266019036, 0.24598735631823565, 0.8324932800670746, -2.3290503483766685, -3.321411644607212, -4.318137201403794], "x": [0.558378659339635, 1.1226484981476492, 1.5898557660414556, 2.4149876701657886, 0.011731381970788943, -0.1934476954815307, -0.2949800222143948], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
+<div id="c054df32-8209-4e18-b1ad-f1e50a66f01b" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("c054df32-8209-4e18-b1ad-f1e50a66f01b", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-1.4083272394584283, -0.825139527676415, null, -0.825139527676415, -0.0882345624758925, null, -0.0882345624758925, 0.799425010475016, null, -1.4083272394584283, -1.7922145316616216, null, -1.7922145316616216, -2.2203231646834753, null, -2.2203231646834753, -2.3501631902306195, null], "x": [0.19312759497603088, -0.6344031825029137, null, -0.6344031825029137, -1.3277115022410582, null, -1.3277115022410582, -1.8191334816497966, null, 0.19312759497603088, 1.1288406059393974, null, 1.1288406059393974, 2.0500892155541894, null, 2.0500892155541894, 3.0471788784526384, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Jared<br>O'Mara", "Misc", "Miscellaneous", "", "Income", "Salary", "\u00a374,962"], "hovertext": ["Jared O'Mara", "Misc Categories", "Miscellaneous", "Trustee and School Governor of Paces Sheffield, a school and charity for disabled people and families.", "Income Categories", "Salary", "Basic Salary"], "customdata": ["https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register", "https://www.theyworkforyou.com/mp/25636#register"], "marker": {"opacity": [1, 1, 1, 0.5, 1, 1, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 40, 60, 40, 290]}, "mode": "markers+text", "hoverinfo": "text", "y": [-1.4083272394584283, -0.825139527676415, -0.0882345624758925, 0.799425010475016, -1.7922145316616216, -2.2203231646834753, -2.3501631902306195], "x": [0.19312759497603088, -0.6344031825029137, -1.3277115022410582, -1.8191334816497966, 1.1288406059393974, 2.0500892155541894, 3.0471788784526384], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
       </div>
     <!-- close the container -->
     </div>

@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>followthemoney</title>
+    <title>registerofinterests</title>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="../../lib/css/style.css">
-
+    <!-- <link rel="stylesheet" href="../../lib/css/style.css"> -->
+    <link rel="stylesheet" href="../../lib/css/navbar.css">
+    <link rel="stylesheet" href="../../lib/css/party_colours.css">
+    <link rel="stylesheet" href="../../lib/css/graph.css">
+    <link rel="stylesheet" href="../../lib/css/common.css">
   </head>
 
   <body>
@@ -28,16 +31,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
-            <a class="navbar-brand" href="../../index.html">follow the money</a>
+            <a class="navbar-brand" href="../../index.html">register of interests</a>
+            <!-- <a class="navbar-brand" href="../../index.html">follow the money</a> -->
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="../../index.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="../register/41463.html">Registered Interests</a></li>              
-              <li class="active"><a href="../network/41463.html">Registered Network<span class="sr-only">(current)</span></a></li>
+              <li><a href="../register/41463.html">Detail</a></li>              
+              <li class="active"><a href="../network/41463.html">Graph<span class="sr-only">(current)</span></a></li>
               <!-- <li><a href="../companieshouse/41463.html">Companies</a></li> -->
               <!-- <li><a href="../network/41463.html">Registered Network</a></li> -->
               <!-- <li><a href="../companieshouse/41463.html">Conflicts</a></li> -->
@@ -55,7 +58,7 @@
     <div class="container">
       <div class="row" id="therow">
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="7199fe94-85d1-4a3c-ad1e-8685800149c9" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("7199fe94-85d1-4a3c-ad1e-8685800149c9", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-0.9841384268073428, -1.82635527970099, null, -1.82635527970099, -1.6733254591331685, null, -1.6733254591331685, -1.5650046865980713, null, -1.82635527970099, -2.8830403723344604, null, -2.8830403723344604, -3.881849477338044, null, -0.9841384268073428, -0.15506962729011728, null, -0.15506962729011728, 0.616618664361134, null, 0.616618664361134, 1.3840776065759504, null], "x": [0.41626229242324025, -0.29195874716965214, null, -0.29195874716965214, -1.3946493151127053, null, -1.3946493151127053, -2.432611334728614, null, -0.29195874716965214, 0.05901186718815571, null, 0.05901186718815571, 0.3557280656609999, null, 0.41626229242324025, 1.03672832738755, null, 1.03672832738755, 1.7012513836485643, null, 1.7012513836485643, 2.3500083442789967, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Gregory<br>Campbell", "Misc", "Miscellaneous", "", "Family", "", "Income", "Salary", "\u00a374,962"], "hovertext": ["Gregory Campbell", "Misc Categories", "Miscellaneous", "Unremunerated interests currently registered on the NI Assembly website register do not appear here as they are not registrable under House of Commons rules.", "Family", "I employ my wife, Frances Campbell, as part-time Secretary.", "Income Categories", "Salary", "Basic Salary"], "customdata": ["https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register"], "marker": {"opacity": [1, 1, 1, 0.5, 1, 0.5, 1, 1, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 40, 40, 40, 60, 40, 290]}, "mode": "markers+text", "hoverinfo": "text", "y": [-0.9841384268073428, -1.82635527970099, -1.6733254591331685, -1.5650046865980713, -2.8830403723344604, -3.881849477338044, -0.15506962729011728, 0.616618664361134, 1.3840776065759504], "x": [0.41626229242324025, -0.29195874716965214, -1.3946493151127053, -2.432611334728614, 0.05901186718815571, 0.3557280656609999, 1.03672832738755, 1.7012513836485643, 2.3500083442789967], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
+<div id="ac8dd619-3483-44dc-85dc-9649c43983a1" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("ac8dd619-3483-44dc-85dc-9649c43983a1", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-0.3965286450709985, 0.11427439720918002, null, 0.11427439720918002, 1.2308648244462654, null, 1.2308648244462654, 2.271702084164148, null, 0.11427439720918002, -0.4315622026722523, null, -0.4315622026722523, -0.9038230881714183, null, -0.3965286450709985, -0.8793473819854479, null, -0.8793473819854479, -1.4477050538267762, null, -1.4477050538267762, -1.8885635993231826, null], "x": [-0.4726706366102161, 0.501207454029451, null, 0.501207454029451, 0.5615146196051563, null, 0.5615146196051563, 0.6426362645914543, null, 0.501207454029451, 1.4719705851763865, null, 1.4719705851763865, 2.397822142905945, null, -0.4726706366102161, -1.3907606333151246, null, -1.3907606333151246, -2.23178546393519, null, -2.23178546393519, -3.145623257231938, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Gregory<br>Campbell", "Misc", "Miscellaneous", "", "Family", "", "Income", "Salary", "\u00a374,962"], "hovertext": ["Gregory Campbell", "Misc Categories", "Miscellaneous", "Unremunerated interests currently registered on the NI Assembly website register do not appear here as they are not registrable under House of Commons rules.", "Family", "I employ my wife, Frances Campbell, as part-time Secretary.", "Income Categories", "Salary", "Basic Salary"], "customdata": ["https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register", "https://www.theyworkforyou.com/mp/10780#register"], "marker": {"opacity": [1, 1, 1, 0.5, 1, 0.5, 1, 1, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(138, 216, 110)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 40, 40, 40, 60, 40, 290]}, "mode": "markers+text", "hoverinfo": "text", "y": [-0.3965286450709985, 0.11427439720918002, 1.2308648244462654, 2.271702084164148, -0.4315622026722523, -0.9038230881714183, -0.8793473819854479, -1.4477050538267762, -1.8885635993231826], "x": [-0.4726706366102161, 0.501207454029451, 0.5615146196051563, 0.6426362645914543, 1.4719705851763865, 2.397822142905945, -1.3907606333151246, -2.23178546393519, -3.145623257231938], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
       </div>
     <!-- close the container -->
     </div>

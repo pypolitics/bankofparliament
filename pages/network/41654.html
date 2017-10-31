@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>followthemoney</title>
+    <title>registerofinterests</title>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="../../lib/css/style.css">
-
+    <!-- <link rel="stylesheet" href="../../lib/css/style.css"> -->
+    <link rel="stylesheet" href="../../lib/css/navbar.css">
+    <link rel="stylesheet" href="../../lib/css/party_colours.css">
+    <link rel="stylesheet" href="../../lib/css/graph.css">
+    <link rel="stylesheet" href="../../lib/css/common.css">
   </head>
 
   <body>
@@ -28,16 +31,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
-            <a class="navbar-brand" href="../../index.html">follow the money</a>
+            <a class="navbar-brand" href="../../index.html">register of interests</a>
+            <!-- <a class="navbar-brand" href="../../index.html">follow the money</a> -->
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="../../index.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="../register/41654.html">Registered Interests</a></li>              
-              <li class="active"><a href="../network/41654.html">Registered Network<span class="sr-only">(current)</span></a></li>
+              <li><a href="../register/41654.html">Detail</a></li>              
+              <li class="active"><a href="../network/41654.html">Graph<span class="sr-only">(current)</span></a></li>
               <!-- <li><a href="../companieshouse/41654.html">Companies</a></li> -->
               <!-- <li><a href="../network/41654.html">Registered Network</a></li> -->
               <!-- <li><a href="../companieshouse/41654.html">Conflicts</a></li> -->
@@ -55,7 +58,7 @@
     <div class="container">
       <div class="row" id="therow">
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="1afe74d5-9497-4833-8503-2dbef361676e" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("1afe74d5-9497-4833-8503-2dbef361676e", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-1.2115156251880799, -2.336616657392902, null, -2.336616657392902, -2.8411217563432474, null, -2.8411217563432474, -2.352071487781758, null, -2.8411217563432474, -3.86468023735062, null, -2.336616657392902, -2.6472147180114054, null, -2.6472147180114054, -1.9910458624948564, null, -2.6472147180114054, -3.5741636389187708, null], "x": [-0.39761838299426544, -0.295854108343034, null, -0.295854108343034, -1.3150786705539643, null, -1.3150786705539643, -2.311134369428032, null, -1.3150786705539643, -1.713541311060945, null, -0.295854108343034, 0.8033388319850175, null, 0.8033388319850175, 1.6875655444549538, null, 0.8033388319850175, 1.3972274421692994, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Pete<br>Wishart", "Income", "Employment", "\u00a32,265", "\u00a33,600", "Salary", "\u00a374,962", "\u00a315,025"], "hovertext": ["Pete Wishart", "Income Categories", "Employment", "4 November 2016, received \u00a32,265.60 for shows between 13 September and 18 October 2016. Hours: 30 hrs (5 hrs per week). ", "7 April 2017, received \u00a33,600 for shows between 28 February 2017 and 4 April 2017. Hours: 30 hrs (5 hrs per week).", "Salary", "Basic Salary", "Scottish Affairs Committee"], "customdata": ["https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register"], "marker": {"opacity": [1, 1, 1, 0.5, 0.5, 1, 0.5, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 50, 53, 40, 236, 82]}, "mode": "markers+text", "hoverinfo": "text", "y": [-1.2115156251880799, -2.336616657392902, -2.8411217563432474, -2.352071487781758, -3.86468023735062, -2.6472147180114054, -1.9910458624948564, -3.5741636389187708], "x": [-0.39761838299426544, -0.295854108343034, -1.3150786705539643, -2.311134369428032, -1.713541311060945, 0.8033388319850175, 1.6875655444549538, 1.3972274421692994], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
+<div id="41721299-723b-4c6d-906d-545f169bafa6" style="height: 700px; width: 1100px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("41721299-723b-4c6d-906d-545f169bafa6", [{"opacity": 0.2, "name": "lines", "visible": true, "mode": "lines", "hoverinfo": "none", "y": [-2.970022127342376, -1.8399565257488946, null, -1.8399565257488946, -1.4077149325645117, null, -1.4077149325645117, -1.9543914834326412, null, -1.4077149325645117, -0.40755716293016486, null, -1.8399565257488946, -1.4408838886581115, null, -1.4408838886581115, -0.4440352379660601, null, -1.4408838886581115, -2.011857765839985, null], "x": [-0.45643156279432007, -0.4429158888538317, null, -0.4429158888538317, -1.5014184810866993, null, -1.5014184810866993, -2.4589458461251272, null, -1.5014184810866993, -1.9658012280044805, null, -0.4429158888538317, 0.6240242176599446, null, 0.6240242176599446, 1.0979746030605566, null, 0.6240242176599446, 1.5726896259860232, null], "line": {"color": ["rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)", "rgb(0, 0, 0)"], "width": 1}, "type": "scatter"}, {"textposition": "middle", "name": "nodes", "text": ["<b>Pete<br>Wishart", "Income", "Employment", "\u00a32,265", "\u00a33,600", "Salary", "\u00a374,962", "\u00a315,025"], "hovertext": ["Pete Wishart", "Income Categories", "Employment", "4 November 2016, received \u00a32,265.60 for shows between 13 September and 18 October 2016. Hours: 30 hrs (5 hrs per week). ", "7 April 2017, received \u00a33,600 for shows between 28 February 2017 and 4 April 2017. Hours: 30 hrs (5 hrs per week).", "Salary", "Basic Salary", "Scottish Affairs Committee"], "customdata": ["https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register", "https://www.theyworkforyou.com/mp/11333#register"], "marker": {"opacity": [1, 1, 1, 0.5, 0.5, 1, 0.5, 0.5], "colorscale": "Viridis", "color": ["rgb(72, 128, 219)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)", "rgb(229, 100, 94)"], "symbol": "dot", "line": {"color": "rgb(50,50,50)", "width": 0.5}, "size": [120, 60, 40, 50, 53, 40, 236, 82]}, "mode": "markers+text", "hoverinfo": "text", "y": [-2.970022127342376, -1.8399565257488946, -1.4077149325645117, -1.9543914834326412, -0.40755716293016486, -1.4408838886581115, -0.4440352379660601, -2.011857765839985], "x": [-0.45643156279432007, -0.4429158888538317, -1.5014184810866993, -2.4589458461251272, -1.9658012280044805, 0.6240242176599446, 1.0979746030605566, 1.5726896259860232], "type": "scatter"}], {"showlegend": false, "yaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)", "height": 700, "width": 1100, "xaxis": {"showticklabels": false, "title": "", "showbackground": false, "showgrid": false, "zeroline": false, "showline": false}, "hovermode": "closest", "margin": {"t": 0}, "hidesources": true}, {"linkText": "Export to plot.ly", "showLink": true})</script>      <!-- close the row -->
       </div>
     <!-- close the container -->
     </div>
