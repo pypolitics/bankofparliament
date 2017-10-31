@@ -15,8 +15,8 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     # we also have to add data attributes for sorting functions
 
     html = u"\n"
-    html += '\t\t<div class="photo col panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-active_appointments=%s data-previous_appointments=%s data-property=%s data-wealth=%s data-member=%s data-miscellaneous=%s data-family=%s data-lobbyists=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(len(active_appointments)), int(len(previous_appointments)), int(property_wealth), int(total_wealth), str(member_id), int(miscellaneous), int(len(family_items)), int(len(family_lobbyists_items)))
-    html += '\t\t\t<div class="panelHeader">\n'
+    html += '\t\t<div class="thumbnail_panel %s %s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside_uk=%s data-direct_donations=%s data-indirect_donations=%s data-visits_outside_uk=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-active_appointments=%s data-previous_appointments=%s data-property=%s data-wealth=%s data-member=%s data-miscellaneous=%s data-family=%s data-lobbyists=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), str(member_id), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(len(active_appointments)), int(len(previous_appointments)), int(property_wealth), int(total_wealth), str(member_id), int(miscellaneous), int(len(family_items)), int(len(family_lobbyists_items)))
+    html += '\t\t\t<div class="thumbnail_panel_header">\n'
 
     if family:
         html += '\t\t\t\t<img class="family" src="lib/data/images/family.png" title="%s" height="32" width="32" align="right"></img>\n' % family_pretty
@@ -30,25 +30,25 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t<p></p>\n'
 
     # add the clickable thumbnail
-    html += '<a href="pages/register/%s.html">' % member_id
+    html += '\t\t\t\t<a href="pages/register/%s.html">' % member_id
 
     s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'data', 'images', '%s.jpg' % str(member_id))
 
     if os.path.exists(s):
-        html += '\t\t\t\t<img class="picture" src="lib/data/images/%s.jpg" height="128" width="128" align="right=middle"></img>\n' % (str(member_id))
+        html += '<img class="picture" src="lib/data/images/%s.jpg" height="128" width="128" align="right=middle"></img>' % (str(member_id))
     else:
-        html += '\t\t\t\t<img src="lib/data/images/photo.png" height="128" width="128" align="right=middle"></img>\n'
+        html += '<img src="lib/data/images/photo.png" height="128" width="128" align="right=middle"></img>'
  
-    html += '</a>'
+    html += '</a>\n'
 
     # add the mp text
     html += '\t\t\t\t<p class="name">%s</p>\n' % (name)
     html += '\t\t\t\t<p class="party">%s</p>\n' % (party.title())
     html += '\t\t\t\t<p class="constituency">%s</p>\n' % (constituency)
     html += '\t\t\t</div>\n'
-    html += '\t\t\t<div class="panelBody">\n'
+    html += '\t\t\t<div class="thumbnail_body">\n'
 
-    html += '\t\t\t\t<table class="myTable2"">\n'
+    html += '\t\t\t\t<table class="thumbnail_table">\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
     html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Public Salary</td>\n'
@@ -110,7 +110,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t\t</tr>\n'
 
     html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings &#163;70,000 + (Min)</td>\n'
+    html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Shareholdings &#163;70k + (Min)</td>\n'
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (shareholding_wealth_f)
     html += '\t\t\t\t\t</tr>\n'
 
@@ -140,11 +140,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Family Lobbyists</td>\n'
     html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (str(len(family_lobbyists_items)))
     html += '\t\t\t\t\t</tr>\n'
-
-    # html += '\t\t\t\t\t<tr class="toggle" style="display: none">\n'
-    # html += '\t\t\t\t\t\t<td class="toggle" style="display: none">Active Appointments</td>\n'
-    # html += '\t\t\t\t\t\t<td class="toggle" align="right" style="display: none">%s</td>\n' % (len(active_appointments))
-    # html += '\t\t\t\t\t</tr>\n'
+    
     html += '\t\t\t\t</table>\n'
 
     html += '\t\t\t</div>\n'
