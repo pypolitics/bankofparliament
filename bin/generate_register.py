@@ -31,7 +31,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
 
     html += '\t\t\t</div>\n'
     html += '\t\t\t<div class="detailed_panel_body">\n'
-    html += '\t\t\t\t<table class="detailed_table"">\n'
+    html += '\t\t\t\t<table class="detailed_table" line-height:50px;>\n'
 
     ############################################################################################################
     # PUBLIC SALARY
@@ -42,11 +42,12 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in salary_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
         html += '\t\t\t\t\t</tr>\n'
+        html += '\t\t\t\t\t<tr></tr>\n'
 
     ############################################################################################################
     # PRIVATE INCOME
@@ -60,8 +61,8 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in private_items:
-
-        html += '\t\t\t\t\t<tr>\n'
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
+        html += '\t\t\t\t\t<tr class="detailed_row">\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
         html += '\t\t\t\t\t</tr>\n'
@@ -78,8 +79,8 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in rental_items:
-
-        html += '\t\t\t\t\t<tr>\n'
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
+        html += '\t\t\t\t\t<tr class="detailed_row">\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
         html += '\t\t\t\t\t</tr>\n'
@@ -107,7 +108,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in gifts_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         # html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % '</br>'.join(camel_case_split(item['pretty']))
@@ -126,7 +127,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in gifts_outside_uk_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
@@ -144,7 +145,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in direct_donations_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
@@ -162,7 +163,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in indirect_donations_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
@@ -180,7 +181,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in visits_outside_uk_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
@@ -215,6 +216,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
         if link == '':
             link_label = 'Missing'
 
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:200]
         html += '\t\t\t\t\t\t<td align="right"><a target="_blank" href="%s"><div style="height:100;width:100">%s</div></a></td>\n' % (link, link_label)
@@ -238,6 +240,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
         if link == '':
             link_label = 'Missing'
 
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['raw_string'][:200]
         html += '\t\t\t\t\t\t<td align="right"><a target="_blank" href="%s"><div style="height:100;width:100">%s</div></a></td>\n' % (link, link_label)
@@ -255,7 +258,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in property_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
@@ -283,7 +286,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in family_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t</tr>\n'
@@ -299,7 +302,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in family_lobbyists_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t</tr>\n'
@@ -316,7 +319,7 @@ def write_register(html_file, family_pretty, member_id, name, party, constituenc
     html += '\t\t\t\t\t</tr>\n'
 
     for item in miscellaneous_items:
-
+        html += '\t\t\t\t\t<tr class="spacer"><td><br/></td></tr>\n'
         html += '\t\t\t\t\t<tr>\n'
         html += '\t\t\t\t\t\t<td>&nbsp&nbsp&nbsp&nbsp - %s</td>\n' % item['pretty'][:200]
         html += '\t\t\t\t\t\t<td align="right">%s</td>\n' % format_integer(item['amount'])
