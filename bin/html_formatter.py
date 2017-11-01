@@ -367,7 +367,10 @@ def sort_by_options(mps, options):
     """
 
     # sort by options specified on commandline
-    if options.sortby == 'wealth':
+    if options.sortby == 'name':
+        mps = sorted(mps, key=operator.itemgetter('name'))
+
+    elif options.sortby == 'wealth':
         mps = sorted(mps, key=operator.itemgetter('mp_wealth'), reverse=True)
 
     elif options.sortby == 'income':
@@ -385,7 +388,7 @@ def sort_by_options(mps, options):
 
     else:
         mps = sorted(mps, key=operator.itemgetter(
-            '%s' % options.sortby), reverse=True)
+            '%s' % options.sortby))
 
     return mps
 
@@ -408,6 +411,7 @@ def read_json_file():
 def run():
     """"""
     mps = read_json_file()
+    mps = sorted(mps, key=operator.itemgetter('name'))
     main(mps)
 
 if __name__ == "__main__":
@@ -419,7 +423,7 @@ if __name__ == "__main__":
     # parser.add_option("--summary", help="Summary print", action="store_true", default=True)
     # parser.add_option("--detailed", help="Detailed print", action="store_true", default=False)
     parser.add_option("--sortby", help="Sort By",
-                      action="store", default='income')
+                      action="store", default='surname')
 
     # parse the comand line
     (options, args) = parser.parse_args()
