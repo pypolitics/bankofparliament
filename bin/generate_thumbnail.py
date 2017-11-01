@@ -4,7 +4,7 @@
 import os, locale
 locale.setlocale(locale.LC_ALL, '')
 
-def write_thumbnail(html_file, family_pretty, member_id, name, party, party_string, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f,salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, twitter):
+def write_thumbnail(html_file, family_pretty, member_id, name, party, party_string, constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f,salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, twitter, gender):
     ##############################################################################################################################
     # BUILD THE HTML - THUMBNAIL
     ##############################################################################################################################
@@ -33,11 +33,15 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t\t<a href="pages/register/%s.html">' % member_id
 
     s = os.path.join(os.path.dirname(__file__), '..', 'lib', 'data', 'images', '%s.jpg' % str(member_id))
+    if gender == 'M':
+        gender = 'male'
+    else:
+        gender = 'female'
 
     if os.path.exists(s):
         html += '<img class="picture" src="lib/data/images/%s.jpg" height="128" width="128" align="right=middle"></img>' % (str(member_id))
     else:
-        html += '<img src="lib/data/images/photo.png" height="128" width="128" align="right=middle"></img>'
+        html += '<img src="lib/data/images/%s.png" height="128" width="128" align="right=middle"></img>' % gender.lower()
  
     html += '</a>\n'
 
