@@ -14,6 +14,7 @@ from wordcloud import WordCloud
 import csv
 import matplotlib.pyplot as plt
 from plotting import plot_data_to_file
+from constants import party_colours
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
@@ -402,25 +403,25 @@ def write_scatter_plot(mp, network_file):
 
     data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 120},
 
-                    'income_item'        : {'color' : colors['light_red'], 'opacity' : 0.5, 'size' : 40},
-                    'income_cat'        : {'color' : colors['light_red'], 'opacity' : 1, 'size' : 40},
-                    'income_main'        : {'color' : colors['light_red'], 'opacity' : 1, 'size' : 60},
+                    'income_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
+                    'income_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
+                    'income_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
 
-                    'freebies_item'        : {'color' : colors['light_orange'], 'opacity' : 0.5, 'size' : 40},
-                    'freebies_cat'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40},
-                    'freebies_main'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 60},
+                    'freebies_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
+                    'freebies_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
+                    'freebies_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
 
-                    'wealth_item'        : {'color' : colors['light_pink'], 'opacity' : 0.5, 'size' : 40},
-                    'wealth_cat'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 40},
-                    'wealth_main'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 60},
+                    'wealth_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
+                    'wealth_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
+                    'wealth_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
 
-                    'misc_item'        : {'color' : colors['light_green'], 'opacity' : 0.5, 'size' : 40},
-                    'misc_cat'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 40},
-                    'misc_main'        : {'color' : colors['light_green'], 'opacity' : 1, 'size' : 60},
+                    'misc_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
+                    'misc_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
+                    'misc_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
 
 
-                    'companies'        : {'color' : colors['light_yellow'], 'opacity' : 1, 'size' : 60},
-                    'ch_company'        : {'color' : colors['light_yellow'], 'opacity' : 0.5, 'size' : 40},
+                    'companies'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
+                    'ch_company'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
                     'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
                     'ch_officer_matched'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
 
@@ -446,6 +447,8 @@ def write_scatter_plot(mp, network_file):
     label = '<b>%s<br>%s' % (first, last)
 
     node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=hyperlink)
+    node_main['color'] = party_colours[mp['party'].lower()]
+
     data['nodes'].append(node_main)
 
     categories = {  'property_income'       : {'node_type' : 'income'},
