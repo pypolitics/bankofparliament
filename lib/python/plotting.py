@@ -6,7 +6,7 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=1100, height=700):
+def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=1200, height=800):
 	"""
 	"""
 
@@ -107,6 +107,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=110
 
 		layout = Layout(
 			# title=title,
+			autosize=True,
 			width=width,
 			height=height,
 			showlegend=False,
