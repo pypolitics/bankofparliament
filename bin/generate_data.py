@@ -52,7 +52,7 @@ class MemberOfParliament():
 		self.categories = []
 
 		# words that might identify a companieshouse officer as being an MP
-		self.keywords = ['parliament', 'politician', 'politic', 'house of commons', ' mp ']
+		self.keywords = ['parliament', 'politician', 'politic', 'house of commons', ' mp ', 'honourable']
 
 		# set the member
 		self.setMember(member)
