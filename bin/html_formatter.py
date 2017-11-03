@@ -26,7 +26,6 @@ json_dump_location = os.path.join(os.path.dirname(
 lib_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib')
 
 images_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
-companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
 top_html = os.path.join(os.path.dirname(__file__), '../lib/html/top.html')
 register_top_html = os.path.join(os.path.dirname(__file__), '../lib/html/register_top.html')

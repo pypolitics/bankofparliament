@@ -27,8 +27,9 @@ import html_formatter
 from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer, CompaniesHouseCompanySearch
 
 # locale.setlocale( locale.LC_ALL, '' )
-theyworkyou_apikey = 'DLXaKDAYSmeLEBBWfUAmZK3j'
-companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
+sys.path.append(os.path.abspath(os.path.expanduser('~/.apikeys')))
+from apikeys import theyworkyou_apikey, companies_house_user
+
 xml_data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'regmem2017-04-10.xml')
 
 request_wait_time = 3600.0
