@@ -1,0 +1,150 @@
+
+.container {
+    width: 98%;
+    /*margin-left: 40px*/
+}
+
+.thumbnail_picture:hover {
+	transform: scale(1.08);
+
+}
+
+/*photo of mp*/
+.thumbnail_picture {
+	padding:0px;
+	border:1px solid #333;
+	border-radius: 64px;
+	position: relative;
+	max-width: 100%;
+	transition: all 0.s;
+	overflow: hidden;
+	width: 128px;
+	height: 128px
+}
+
+.thumbnail_label {
+
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	margin-top: 8px;
+}
+
+.thumbnail_widget {
+	/*width: 128px;*/
+	/*background-color: white;*/
+	float: left;
+	display: inline-block;
+	margin: 0.8%;
+	position: relative;
+	/*border-radius: 64px;*/
+	/*overflow: hidden;	*/
+}
+
+.labour .thumbnail_picture {
+  background: #DC241f;
+  border: 6px solid #DC241f;
+}
+
+.sinn .thumbnail_picture {
+  background: #008800;
+  border: 6px solid #008800;
+}
+
+.dup .thumbnail_picture {
+  background: #C8292B;
+  border: 6px solid #C8292B;
+}
+
+.plaid .thumbnail_picture {
+  background: #3F8428;
+  border: 6px solid #3F8428;
+}
+
+
+.labour-co-op .thumbnail_picture {
+  background: #DC241f;
+  border: 6px solid #DC241f;
+}
+
+
+.ukip .thumbnail_picture {
+  background: #70147a;
+  border: 6px solid #70147a;
+}
+
+.conservative .thumbnail_picture {
+  background: #0087dc;
+  border: 6px solid #0087dc;
+}
+
+
+.scottish .thumbnail_picture {
+  background: #ffff00;
+  /*margin: 0;*/
+  border: 6px solid #ffff00;
+}
+
+
+.liberal .thumbnail_picture {
+  background: #FDBB30;
+  border: 6px solid #FDBB30;
+}
+
+
+.greenparty .thumbnail_picture {
+  background: #77B829;
+  border: 6px solid #77B829;
+}
+
+.speaker .thumbnail_picture {
+  background: #bdbebf;
+  border: 6px solid #bdbebf;
+}
+
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+/*.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid red;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+}*/
+
+.plotly-graph-div {
+  display: none;
+  position: absolute;
+  /*position: center;*/
+  left: 6.25%;
+  top: 4.5%;
+  /*left: 25%;*/
+  /*width: 25%;*/
+  /*height: 25%;*/
+  /*padding: 16px;*/
+  border-radius: 10px;
+  border: 0.1px solid white;
+  background-color: white;
+  /*opacity: 0.85;*/
+  z-index: 1002;
+  overflow: auto;
+}
+
+

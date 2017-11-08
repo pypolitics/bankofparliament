@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <link rel="icon" href="../../lib/data/images/favicon.png">
+    <link rel="icon" href="lib/data/images/favicon.png">
     <title>Bank of Parliament</title>
     
     <!-- Latest compiled and minified CSS -->
@@ -12,55 +12,48 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/thumbs.css">
+    <link rel="stylesheet" href="../css/nav.css">
   </head>
+<body>
+<div id="header-wrapper">
+    <div id="header" class="container">
+        <div id="logo">
+            <h1><a href="../../index.html">Bank of Parliament</a></h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="../../index.html" accesskey="1" title="">Home</a></li>
+                <li class="current_page_item"><a href="#" accesskey="2" title="">About</a></li>
+                <li><a target="_blank" href="https://github.com/pypolitics/notpolitics" accesskey="3">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-  <body>
-    <!-- open the body header -->
-    <header>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand" href="#">register of interests</a> -->
-            <a class="navbar-brand" href="../../index.html">Bank of Parliament</a>
-          </div>
+<!-- <div id="featured">&nbsp;</div> -->
+<div id="banner-wrapper">
+    <div id="banner" class="container">
+        <div class="box-left">
+            <h2>Bank of Parliament takes publicly available data, regarding the financial interests of politicians and visualises it in an easy to understand way.</h2>
+            <p></p>
+            <span>Find out who received the most gifts, who owns the most property and who has the most lucrative private sector jobs.</span>
+            <!-- <span><b>Filter: </b>Filter by name, party or constituency. <b>Sort: </b>Sort the results. (Top right hand corner)</span> -->
+        </div>
+    </div>
+</div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="../../index.html">Home</a></li>
-              <li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>
-              <li><a target="_blank" href="https://github.com/pypolitics/notpolitics">Github</a></li>
-            </ul>        
+<div id="wrapper">
+  <div id="page" class="container">
+    <div id="content">
+        <p>The purpose of the website is to provide a convenient front end to view the publicly available data regarding the registered financial interests of members of parliament.</p>
 
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        <p>The parliamentary data is really just a starting point for a much deeper delve into the financial interests of members. Using varied sources such as companies house, expenses records and the land registry, the goal is to build a picture of each individuals interests and to then highlight any potential conflicts of interests, that the press and public may find interesting.</p>
 
-      </nav>
-
-    <!-- close the body header -->
-    </header>
-    <div class="aboutBackground">
-      <div class="aboutSection">
-        </br>
-        <p class='aboutBlurb'>The purpose of the website is to provide a convenient front end to view the publicly available data regarding the registered financial interests of members of parliament.</p>
-
-        <p class='aboutBlurb'>The parliamentary data is really just a starting point for a much deeper delve into the financial interests of members. Using varied sources such as companies house, expenses records and the land registry, the goal is to build a picture of each individuals interests and to then highlight any potential conflicts of interests, that the press and public may find interesting.</p>
-
-        </br>
-        <p class="aboutHeader">Disclaimer</p>
-        <p class='aboutBody'>At present, the data presented here in this website is not 100% accurate. There are instances where raw data entries are worded strangely, which has resulted in the incorrect parsing of the raw data.</p>
-        <p class="aboutBody">Development is underway on better solutions to extract accurate data.</p>
-        </br>
+        <p>Disclaimer</p>
+        <p>At present, the data presented here in this website is not 100% accurate. There are instances where raw data entries are worded strangely, which has resulted in the incorrect parsing of the raw data.</p>
+        <p>Development is underway on better solutions to extract accurate data.</p>
 
         <p class="aboutHeader">Data Sources</p>
         <a class="aboutLink" target="_blank" href="https://www.theyworkforyou.com/api/">theyworkforyou</a>
@@ -77,7 +70,7 @@
         <p>elliott.james.smith at gmail.com</p>
         <a class="aboutLink" target="_blank" href="https://github.com/pypolitics/notpolitics">github</a>
         <br></br>
-      </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
+</body>

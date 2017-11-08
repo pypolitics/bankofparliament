@@ -4,7 +4,6 @@
   <head>
     <link rel="icon" href="lib/data/images/favicon.png">
     <title>Bank of Parliament</title>
-    <!-- <title>followthemoney</title> -->
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,88 +12,76 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
     <!-- local stylesheet -->
-    <!-- <link rel="stylesheet" href="lib/css/style.css"> -->
-    <link rel="stylesheet" href="lib/css/navbar.css">
-    <link rel="stylesheet" href="lib/css/party_colours.css">
-    <link rel="stylesheet" href="lib/css/thumbnail.css">
-    <link rel="stylesheet" href="lib/css/common.css">
+    <link rel="stylesheet" href="lib/css/default.css">
+    <link rel="stylesheet" href="lib/css/thumbs.css">
+    <link rel="stylesheet" href="lib/css/nav.css">
   </head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Bank of Parliament</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+				<li><a href="lib/html/about.html" accesskey="2" title="">About</a></li>
+				<li><a target="_blank" href="https://github.com/pypolitics/notpolitics" accesskey="3">Github</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 
-  <body>
-    <!-- open the body header -->
-    <header>
-      <!-- <p class="main_title">Bank of Parliament</p> -->
-      <nav class="navbar navbar-default">
-        <!-- <a class="navbar-brand" href="index.html">Bank of Parliament</a></br> -->
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand" href="index.html">register of interests</a> -->
-            <a class="navbar-brand" href="index.html">Bank of Parliament</a>
+<!-- <div id="featured">&nbsp;</div> -->
+<div id="banner-wrapper">
+	<div id="banner" class="container">
+		<div class="box-left">
+			<h2>Bank of Parliament takes publicly available data, regarding the financial interests of politicians and visualises it in an easy to understand way.</h2>
+			<p></p>
+			<span>Find out who received the most gifts, who owns the most property and who has the most lucrative private sector jobs.</span>
+			<!-- <span><b>Filter: </b>Filter by name, party or constituency. <b>Sort: </b>Sort the results. (Top right hand corner)</span> -->
+		</div>
+	</div>
+</div>
 
-            <!-- <a class="navbar-brand" href="#">parliaments' money</a> -->
-            <!-- <a class="navbar-brand" href="#">follow the money</a> -->
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="lib/html/about.html">About</a></li>
-              <li><a target="_blank" href="https://github.com/pypolitics/notpolitics">Github</a></li>
-            </ul>        
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" id="searchInput" onkeyup="search_function()" class="form-control" placeholder="Search for names, parties, constituencies...">
-                <button type="button" onclick="toggle_function()" class="btn btn-default form-control">Toggle View</button>
-              </div>
-            </form>
-
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="alertMe" data-name="salary" href="#">Public Income</a></li>
-                  <li><a class="alertMe" data-name="private" href="#">Private Income</a></li>
-                  <li><a class="alertMe" data-name="rental" href="#">Rental Income</a></li>
-                  <li><a class="alertMe" data-name="income" href="#">Total Income</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a class="alertMe" data-name="gifts" href="#">Gifts</a></li>
-                  <li><a class="alertMe" data-name="gifts_outside_uk" href="#">Gifts Outside UK</a></li>
-                  <li><a class="alertMe" data-name="direct_donations" href="#">Direct Donations</a></li>
-                  <li><a class="alertMe" data-name="indirect_donations" href="#">Indirect Donations</a></li>
-                  <li><a class="alertMe" data-name="visits_outside_uk" href="#">Overseas Visits</a></li>
-                  <li><a class="alertMe" data-name="freebies" href="#">Total Freebies</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a class="alertMe" data-name="shareholdings_percent" href="#">Shareholdings 15% +</a></li>
-                  <li><a class="alertMe" data-name="shareholdings" href="#">Shareholdings &#163;70,000 +</a></li>
-                  <li><a class="alertMe" data-name="property" href="#">Property</a></li>
-                  <li><a class="alertMe" data-name="wealth" href="#">Total Wealth</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a class="alertMe" data-name="miscellaneous" href="#">Miscellaneous</a></li>
-                  <li><a class="alertMe" data-name="family" href="#">Family</a></li>
-                  <li><a class="alertMe" data-name="lobbyists" href="#">Family Lobbyists</a></li>
-                </ul>
-              </li>
-            </ul><!-- /.sort dropdown -->
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-        <div class="disclaimer-div">
-          <p class=" disclaimer-h1">The House of Commons releases data about the financial interests of Members of Parliament. Here is that data in a readable format.</p>
-          <!-- </br> -->
-          <p class="disclaimer-p"><b>Search: </b>Search for a Member of Parliament, a party, a constituency. <b>Sort: </b>Sort the results via categories.</p>
-          <!-- <p class="disclaimer-p"><b>Sort: </b>Sort the results via categories.</p> -->
-          <p class="disclaimer-p"><b>Detail: </b>Use the Toggle View button or click directly on Member of Parliament for full breakdown of data and graph.</p>
-        </div>
-      </nav>
-    <!-- close the body header -->
-    </header>
-    <!-- add the container for the row of mps -->
-    <div class="container">
-      <div class="row" id="therow">
+<p></p>
+<div id="search_banner">
+	<ul class="nav">
+		<li id="search">
+			<form action="" method="get">
+				<input type="text" id="search_text" onkeyup="search_function()" placeholder="Filter by names, parties, constituencies..." />
+			</form>
+		</li>
+		<li id="options">
+			<a href="#">Sort</a>
+			<ul class="subnav">
+				<li></li>
+					<a class="alertMe" data-name="salary" href="#">Public Income</a>
+					<a class="alertMe" data-name="private" href="#">Private Income</a>
+					<a class="alertMe" data-name="rental" href="#">Rental Income</a>
+					<a class="alertMe" data-name="income" href="#"><b>Total Income</b></a>
+					<!-- <li role="separator" class="divider"></li> -->
+					<a class="alertMe" data-name="gifts" href="#">Gifts</a>
+					<a class="alertMe" data-name="gifts_outside_uk" href="#">Gifts Outside UK</a>
+					<a class="alertMe" data-name="direct_donations" href="#">Direct Donations</a>
+					<a class="alertMe" data-name="indirect_donations" href="#">Indirect Donations</a>
+					<a class="alertMe" data-name="visits_outside_uk" href="#">Overseas Visits</a>
+					<a class="alertMe" data-name="freebies" href="#"><b>Total Freebies</b></a>
+					<!-- <li role="separator" class="divider"></li> -->
+					<a class="alertMe" data-name="shareholdings_percent" href="#">Shareholdings 15% +</a>
+					<a class="alertMe" data-name="shareholdings" href="#">Shareholdings &#163;70k +</a>
+					<a class="alertMe" data-name="property" href="#">Property</a>
+					<a class="alertMe" data-name="wealth" href="#"><b>Total Wealth</b></a>
+					<!-- <li role="separator" class="divider"></li> -->
+					<a class="alertMe" data-name="miscellaneous" href="#">Miscellaneous</a>
+					<a class="alertMe" data-name="family" href="#">Family</a>
+					<a class="alertMe" data-name="lobbyists" href="#">Family Lobbyists</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<p></p>
+<!-- add the container for the row of mps -->
+<div class="container">
+  <div class="row" id="therow">
