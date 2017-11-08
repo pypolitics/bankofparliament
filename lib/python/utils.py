@@ -633,7 +633,7 @@ def write_scatter_plot(mp, network_file):
                             item['size'] += size_value
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    plot_data_to_file(data, network_file, mp['name'], div=True)
+    return plot_data_to_file(data, network_file, mp['name'], div=True)
     # print 'Writing : %s' % network_file
 
 def camel_case_split(identifier):

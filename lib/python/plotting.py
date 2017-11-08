@@ -6,7 +6,7 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=1200, height=800):
+def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=1100, height=619, write=False):
 	"""
 	"""
 
@@ -126,12 +126,13 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=120
 		if div:
 			# add javascript script
 			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>\n'
-			# hyper = '<a href="url">link text</a>\n'
 			html = offline.plot(fig, include_plotlyjs=False, output_type='div')
 			html = js + html
 
 			# write it out
-			with open(filename, "a") as f:
-				f.write(html.encode("utf8"))
+			if write:
+				with open(filename, "a") as f:
+					f.write(html.encode("utf8"))
+			return html
 		else:
 			offline.plot(fig, filename=filename, auto_open=False)
