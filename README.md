@@ -24,26 +24,29 @@ At the time of writing, the British General Election is just over a week away.
 
 ## Todo
 
-* Query companies as well as officer names, some have companies in their own name. Maggie Throup for example.
-* Query committees sat on, topics written and spoken about, see if they conflict with intrests.
-* Split register of interests from companies house data, too much for one page
-* Add wordcloud view / page.
-* Add persons with significant control query.
+* Photo of mp on graph
+* Fix sort drop down button
+* Somehow defer loading of plotly graphs - very slow loading times
+* Better header and filter / sort area
+* Graph styling
+* Better thumbnails on graph nodes
+* Sub category totals
+* Line break tooltip on thumbnail - summary data - or maybe a hover over effect?
+* Text on the About page
+* cleanup css and js
+* Show companies house nodes on separate graph layer
+* Mobile / Tablet compatibility
+* Add expenses data
+* Add panama and paradise leaks to companies / people linked to mp
+
 * Ability to show web of connections, between other MP's (and thier companies), the members of those other companies. Web to show the entirety of parliament (or selected mps) or single web of one person, that can be travelled.
 * Add another record when a company has had previous names.
-* Fix formatting in some cases.
 * Find other companies house users that dont identify themselves as an mp, but do match the date of birth / address as a user this is definately an MP.
 * Evaluate the fuzzy filtering.
-* Better font / style on toggle view button.
-* Fix followthemoney text on About page, doesnt link.
 * Business / Companies House search input.
-* Fix text wrapping.
-* Better header on MP page.
-* Links to shareholding registered intrests.
 * Get ownership of shares from Companies House.
 * Explore what data there is from https://companycheck.co.uk/. They seem to have net worth, assets, liabilities.
 * Figure out the way to display the other appointees of a company the mp is an appointee of. Do we search people too?
-* Parse for values other than 15% when parsing the shareholding data.
 * Perform companies house lookup on shareholding data, ascertain value / assets and set the amount value according to the percentage.
 * Find properties registered to mp (if possible), query zoopla for current market value (if possible), assign more accurate value to property wealth. Rental income may also be possible.
 * For shareholdings less than 15% but more than £70,000, try and use companies house data to find actual value.
