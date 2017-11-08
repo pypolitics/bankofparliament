@@ -14,8 +14,6 @@ sys.path.append('../lib/python')
 import shutil
 
 from generate_thumbnail import write_thumbnail
-from generate_register import write_register
-from generate_companieshouse import write_companieshouse
 from generate_plot import write_scatter_plot
 
 locale.setlocale(locale.LC_ALL, '')
