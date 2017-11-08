@@ -403,21 +403,21 @@ def write_scatter_plot(mp, network_file):
 
     data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 120},
 
-                    'income_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
-                    'income_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
-                    'income_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
+                    'income_item'        : {'color' : colors['light_orange'], 'opacity' : 0.5, 'size' : 40},
+                    'income_cat'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40},
+                    'income_main'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 60},
 
-                    'freebies_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
-                    'freebies_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
-                    'freebies_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
+                    'freebies_item'        : {'color' : colors['light_yellow'], 'opacity' : 0.5, 'size' : 40},
+                    'freebies_cat'        : {'color' : colors['light_yellow'], 'opacity' : 1, 'size' : 40},
+                    'freebies_main'        : {'color' : colors['light_yellow'], 'opacity' : 1, 'size' : 60},
 
                     'wealth_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
                     'wealth_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
                     'wealth_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
 
-                    'misc_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
-                    'misc_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
-                    'misc_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
+                    'misc_item'        : {'color' : colors['light_pink'], 'opacity' : 0.5, 'size' : 40},
+                    'misc_cat'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 40},
+                    'misc_main'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 60},
 
 
                     'companies'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
