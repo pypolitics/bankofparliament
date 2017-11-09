@@ -31,14 +31,10 @@
 }
 
 .thumbnail_widget {
-	/*width: 128px;*/
-	/*background-color: white;*/
 	float: left;
 	display: inline-block;
 	margin: 0.8%;
 	position: relative;
-	/*border-radius: 64px;*/
-	/*overflow: hidden;	*/
 }
 
 .labour .thumbnail_picture {
@@ -115,36 +111,23 @@
   opacity: .80;
   filter: alpha(opacity=80);
 }
-/*.white_content {
-  display: none;
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  padding: 16px;
-  border: 16px solid red;
-  background-color: white;
-  z-index: 1002;
-  overflow: auto;
-}*/
 
 .plotly-graph-div {
+  /*original state*/
   display: none;
-  position: absolute;
-  /*position: center;*/
-  left: 6.25%;
-  top: 4.5%;
-  /*left: 25%;*/
-  /*width: 25%;*/
-  /*height: 25%;*/
-  /*padding: 16px;*/
+
+  top: 50%;
+  left: 50%;
+  position: fixed;
+
+  /*center the plot graph, 1100 x 619*/
+  margin-left:-550px;
+  margin-top:-309px;
   border-radius: 10px;
-  border: 0.1px solid white;
-  background-color: white;
-  /*opacity: 0.85;*/
+  background-color: #ededed;
+
+  /*bring to front*/
   z-index: 1002;
-  overflow: auto;
 }
 
 

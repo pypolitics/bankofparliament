@@ -33,16 +33,17 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     scatter_div = output_line
 
     if os.path.exists(s):
-        html += '\t\t\t<a title="%s" href="javascript:void(0)" onclick=%s><img class="thumbnail_picture %s" src="lib/data/images/%s.jpg" border="0"></a>\n' % (name.title(), onclick_href, party_string.lower(), member_id)
+        html += '\t\t\t<a title="%s" href="javascript:void(0)" onclick="%s"><img class="thumbnail_picture %s" src="lib/data/images/%s.jpg" border="0"></a>\n' % (name.title(), onclick_href, party_string.lower(), member_id)
     else:
-        html += '\t\t\t<a title="%s" href="javascript:void(0)" onclick=%s><img class="thumbnail_picture %s" src="lib/data/images/%s.png" border="0"></a>\n' % (name.title(), onclick_href, party_string.lower(), gender)
+        html += '\t\t\t<a title="%s" href="javascript:void(0)" onclick="%s"><img class="thumbnail_picture %s" src="lib/data/images/%s.png" border="0"></a>\n' % (name.title(), onclick_href, party_string.lower(), gender)
 
     html += '\t\t\t<p class="thumbnail_label">%s</p>\n' % name.title()
     html += '\t\t\t<div class="thumbnail_tooltip" style="display:none">%s, %s\n' % (party.title(), constituency.title())
     html += '\t\t\t</div>\n'
     html += '\t\t</div>\n'
 
-    html += scatter_div
+    html += '\t\t' + scatter_div
+    html += '\n<div id="fade" class="black_overlay"></div>\n'
 
     # write it out
     with open(html_file, "a") as myfile:
