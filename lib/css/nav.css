@@ -1,47 +1,21 @@
-/** {
+* {
 	margin: 0; 
 	padding: 0;
-}*/
+}
 
 /*nav is main search class*/
 #search{
 	float: left;
-	/*height: 40px;*/
-	/*width: 100%;*/
-	/*list-style-type: none;*/
-	/*position: relative;*/
-	/*vertical-align: middle;*/
 }
 
 #options{
 	float: right;
-	/*height: 40px;*/
-	/*width: 100%;*/
-	/*list-style-type: none;*/
-	/*position: relative;*/
-	/*vertical-align: middle;*/
-}
-
-/*drop down items*/
-.nav li a {
-	/*font-size: 20px; */
-	color: white;
-	display: block;
-}
-
-.nav li a:hover {
-	color: black;
-}
-
-form {
-	width: 600px;
-
 }
 
 #search_text{
 
-	/*width: 600px;*/
-	height: 50px;
+	width: 600px;
+	height: 40px;
 	padding: 2px;
 	padding-left: 28px;
 
@@ -50,9 +24,9 @@ form {
 	border: 0 none;
 	color: black;
 	outline: none;
-	display:table-cell; 
-	width:100%
 }
+
+/*placeholder*/
 ::-webkit-input-placeholder { /* WebKit browsers */
 	color: black;
 }
@@ -66,17 +40,26 @@ form {
 	color: black;
 }
 
+/*drop down list items (and sort button)*/
 #options a{
-	font-size: 12px;
-	border-left: 0 none;
 	background-color: gray;
-	float: right;
-	margin: 0px;
-	height: 50px;
+	font-size: 16px;
 	width: 200px;
-	text-align: right;
+	text-align: center;
 }
 
+/*drop down items*/
+.nav li a {
+	/*font-size: 20px; */
+	color: white;
+	display: block;
+}
+
+.nav li a:hover {
+	color: black;
+}
+
+/*hidden drop down*/
 .subnav {
 	visibility: hidden;
 	height: auto;
@@ -84,9 +67,7 @@ form {
 	transition: all 0.1s;
 	position: absolute;
 	z-index: 10;
-
 }
-
 
 /*drop down reveal*/
 #options:hover .subnav {

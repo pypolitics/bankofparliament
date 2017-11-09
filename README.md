@@ -25,7 +25,6 @@ At the time of writing, the British General Election is just over a week away.
 ## Todo
 
 * Photo of mp on graph
-* Fix sort drop down button
 * Somehow defer loading of plotly graphs - very slow loading times
 * Better header and filter / sort area
 * Graph styling
