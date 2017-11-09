@@ -1,82 +1,57 @@
-/*@import url(https://fonts.googleapis.com/css?family=Montserrat);*/
-
-* {
+/** {
 	margin: 0; 
 	padding: 0;
-}
+}*/
 
-.nav {
-	/*background: #232323;*/
-	/*height: 60px;*/
-	/*display: inline-block;*/
-}
-
-.nav li {
+/*nav is main search class*/
+#search{
 	float: left;
-	list-style-type: none;
-	position: relative;
-	/*margin-left: -60px;*/
-	vertical-align: middle;
+	/*height: 40px;*/
+	/*width: 100%;*/
+	/*list-style-type: none;*/
+	/*position: relative;*/
+	/*vertical-align: middle;*/
 }
 
-.nav li a {
-	font-size: 20px; 
-	color: white;
-	/*color: black;*/
-	/*background-color: */
-	display: block;
-	/*line-height: 60px;*/
-	/*padding: 4px;*/
-	/*margin: 8px;*/
-	/*width: 300px;*/
-	vertical-align: middle;
-	text-decoration: none;
-	border-left: 1px solid #2e2e2e;
-	font-family: Montserrat, sans-serif;
-	text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-	/*background-color: #cccdce;*/
-	/*color: black;*/
+#options{
+	float: right;
+	/*height: 40px;*/
+	/*width: 100%;*/
+	/*list-style-type: none;*/
+	/*position: relative;*/
+	/*vertical-align: middle;*/
 }
+
+/*drop down items*/
+.nav li a {
+	/*font-size: 20px; */
+	color: white;
+	display: block;
+}
+
 .nav li a:hover {
-	/*background-color: green;*/
 	color: black;
 }
 
-#settings a {
-	/*padding: 18px;*/
-	height: 24px;
-	font-size: 10px;
-	line-height: 24px;
+form {
+	width: 600px;
+
 }
 
-#search {
-	/*margin-left: 20px;*/
-	width: 50%;
-	/*float: left;*/
-	/*height: 80px;*/
-	/*margin: 4px;*/
-}
 #search_text{
-	/*width: 297px;*/
-	width: 100%;
-	height: 40px;
+
+	/*width: 600px;*/
+	height: 50px;
 	padding: 2px;
 	padding-left: 28px;
 
 	font-size: 16px;
 	background: #F6F6F6;
-	/*font-family: Montserrat, sans-serif;*/
 	border: 0 none;
-	/*border-left: 26px black;*/
-	/*height: 52px;*/
-	/*margin-right: 0;*/
-	/*color: white;*/
 	color: black;
 	outline: none;
-	/*background: #1f7f5c;*/
-	float: left;
-	box-sizing: border-box;
-	transition: all 0.15s;
+	display:table-cell; 
+	width:100%
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
 	color: black;
@@ -90,72 +65,33 @@
 :-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: black;
 }
-#search_text:focus {
-	/*background: rgb(64, 151, 119);*/
-}
-#search_button {
-	border: 0 none;
-	/*background: #1f7f5c url(search.png) center no-repeat;*/
-	/*width: 100%; */
-	/*float: left;*/
-	padding: 0;
-	text-align: center;
-	/*height: 52px;*/
-	cursor: pointer;
-}
 
 #options a{
 	font-size: 12px;
 	border-left: 0 none;
 	background-color: gray;
 	float: right;
-	/*position: absolute;*/
-
-	/*padding: 5px;*/
 	margin: 0px;
-	height: 40px;
+	height: 50px;
 	width: 200px;
 	text-align: right;
-	/*width: 100%;*/
-	/*vertical-align: middle;*/
 }
 
 .subnav {
 	visibility: hidden;
 	height: auto;
 	opacity: 0;
-	/*margin: 5px;*/
 	transition: all 0.1s;
 	position: absolute;
 	z-index: 10;
-	/*width: 800px;*/
-}
-.subnav li {
-	margin: 0px;
-	/*float: none;*/
-	/*width: auto;*/
 
-	/*display: block;*/
-	/*color: black;*/
 }
-.subnav li a {
-	margin: 0px;
-	font-size: 10px;
-	/*border-bottom: 1px solid #2e2e2e;*/
-	/*background: red;*/
-	/*color: black;*/
-}
+
+
+/*drop down reveal*/
 #options:hover .subnav {
 	visibility: visible;
 	top: 100%;
 	opacity: 1;
-	/*background-color: white;*/
-}
-.alertMe a {
-	/*font-size: 10px*/
 }
 
-.nav {
-
-	/*background-color: red;*/
-}
