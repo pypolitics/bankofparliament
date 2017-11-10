@@ -42,8 +42,8 @@ def print_to_html_file(mps):
 
     start_html_file()
     for mp in mps:
-        network_file = False
-        print_mp_panel_into_file(mp, network_file)
+        plot_file = os.path.join(lib_path, 'data', 'plots', '%s.json' % mp['member_id'])
+        print_mp_panel_into_file(mp, plot_file)
 
     end_html_file()
 
@@ -66,7 +66,7 @@ def format_integer(number):
     loc = locale.currency(number, grouping=True).split('.')[0]
     return loc.replace("£", "&#163;")
 
-def print_mp_panel_into_file(member, network_file):
+def print_mp_panel_into_file(member, plot_file):
 
     cat_types = [each['category_type'] for each in member['categories']]
 
@@ -302,7 +302,7 @@ def print_mp_panel_into_file(member, network_file):
     nouns = ' '.join(keywords)
 
     # get scatter plot div string
-    scatter_div = write_scatter_plot(member, network_file)
+    scatter_div = write_scatter_plot(member, plot_file)
 
     # write the thumbail into the main front page
     write_thumbnail(html_file, family_pretty, member_id, name, party, party_dict[party], constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, twitter, gender, scatter_div)

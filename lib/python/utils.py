@@ -382,7 +382,7 @@ def translate(value, leftMin, leftMax, rightMin, rightMax):
     # Convert the 0-1 range into a value in the right range.
     return rightMin + (valueScaled * rightSpan)
 
-def write_scatter_plot(mp, network_file):
+def write_scatter_plot(mp, plot_file):
     """
     Write out scatter plot html
     """
@@ -633,8 +633,8 @@ def write_scatter_plot(mp, network_file):
                             item['size'] += size_value
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    return plot_data_to_file(data, network_file, mp['name'], div=True)
-    # print 'Writing : %s' % network_file
+    return plot_data_to_file(data, plot_file, mp['name'], div=True)
+    # print 'Writing : %s' % plot_file
 
 def camel_case_split(identifier):
     matches = re.finditer('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$|(?<=[0-9])(?=[A-Z]))', identifier)

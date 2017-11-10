@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
+import json
+
 # thirdparty libs
 import igraph as ig
 import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=1100, height=619, write=False):
+def plot_data_to_file(data, plot_file , title, dot_width=0.5, div=True, width=1100, height=619, write=False):
 	"""
 	"""
 
@@ -123,6 +125,12 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=110
 		# plot to file
 		data = Data(traces)
 		fig = Figure(data=data, layout=layout)
+
+		# save data and layout to json
+		json_data = {'data' : data, 'layout' : layout}
+		with open(plot_file, "w") as f:
+			json.dump(json_data, f)
+
 		if div:
 			# add javascript script
 			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>\n'
@@ -131,7 +139,7 @@ def plot_data_to_file(data, filename , title, dot_width=0.5, div=True, width=110
 
 			# write it out
 			if write:
-				with open(filename, "a") as f:
+				with open(plot_file.replace('json', 'html'), "a") as f:
 					f.write(html.encode("utf8"))
 			return html
 		else:
