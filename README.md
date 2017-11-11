@@ -25,12 +25,10 @@ At the time of writing, the British General Election is just over a week away.
 ## Todo
 
 * Photo of mp on graph
-* Somehow defer loading of plotly graphs - very slow loading times
 * Better header and filter / sort area
 * Graph styling
 * Better thumbnails on graph nodes
 * Sub category totals
-* Line break tooltip on thumbnail - summary data - or maybe a hover over effect?
 * Text on the About page
 * Show companies house nodes on separate graph layer
 * Mobile / Tablet compatibility

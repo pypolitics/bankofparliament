@@ -4,14 +4,14 @@
 }
 
 .thumbnail_picture:hover {
-	transform: scale(1.08);
+	/*transform: scale(1.08);*/
 
 }
 
 /*photo of mp*/
 .thumbnail_picture {
 	padding:0px;
-	border:1px solid #333;
+	border:9px solid #333;
 	border-radius: 64px;
 	position: relative;
 	max-width: 100%;
@@ -42,7 +42,17 @@
   border: 6px solid #DC241f;
 }
 
+.labour .thumbnail_detail {
+  background: #DC241f;
+  border: 6px solid #DC241f;
+}
+
 .sinn .thumbnail_picture {
+  background: #008800;
+  border: 6px solid #008800;
+}
+
+.sinn .thumbnail_detail {
   background: #008800;
   border: 6px solid #008800;
 }
@@ -52,19 +62,37 @@
   border: 6px solid #C8292B;
 }
 
+.dup .thumbnail_detail {
+  background: #C8292B;
+  border: 6px solid #C8292B;
+}
+
 .plaid .thumbnail_picture {
   background: #3F8428;
   border: 6px solid #3F8428;
 }
 
+.plaid .thumbnail_detail {
+  background: #3F8428;
+  border: 6px solid #3F8428;
+}
 
 .labour-co-op .thumbnail_picture {
   background: #DC241f;
   border: 6px solid #DC241f;
 }
 
+.labour-co-op .thumbnail_detail {
+  background: #DC241f;
+  border: 6px solid #DC241f;
+}
 
 .ukip .thumbnail_picture {
+  background: #70147a;
+  border: 6px solid #70147a;
+}
+
+.ukip .thumbnail_detail {
   background: #70147a;
   border: 6px solid #70147a;
 }
@@ -74,25 +102,48 @@
   border: 6px solid #0087dc;
 }
 
+.conservative .thumbnail_detail {
+  background: #0087dc;
+  border: 6px solid #0087dc;
+}
 
 .scottish .thumbnail_picture {
   background: #ffff00;
   border: 6px solid #ffff00;
 }
 
+.scottish .thumbnail_detail {
+  background: #ffff00;
+  color: black;
+  border: 6px solid #ffff00;
+}
 
 .liberal .thumbnail_picture {
   background: #FDBB30;
   border: 6px solid #FDBB30;
 }
 
+.liberal .thumbnail_detail {
+  background: #FDBB30;
+  border: 6px solid #FDBB30;
+}
 
 .greenparty .thumbnail_picture {
   background: #77B829;
   border: 6px solid #77B829;
 }
 
+.greenparty .thumbnail_detail {
+  background: #77B829;
+  border: 6px solid #77B829;
+}
+
 .speaker .thumbnail_picture {
+  background: #bdbebf;
+  border: 6px solid #bdbebf;
+}
+
+.speaker .thumbnail_detail {
   background: #bdbebf;
   border: 6px solid #bdbebf;
 }
@@ -105,7 +156,7 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1001;
+  z-index: 1003;
   -moz-opacity: 0.8;
   opacity: .80;
   filter: alpha(opacity=80);
@@ -126,7 +177,60 @@
   background-color: #ededed;
 
   /*bring to front*/
-  z-index: 1002;
+  z-index: 1004;
+  /*display: table-cell;*/
+  text-align: center;
 }
 
+.thumbnail_background {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  /*border-radius: 64px;*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
 
+/*img:hover {
+  opacity: 0;
+}*/
+
+a { position: relative; display: inline-block }
+a h2 {
+    position: absolute;
+    padding:0px;
+    border:9px solid #0087dc;
+    border-radius: 64px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    /*background: #0087dc;*/
+    color: #fff;
+    /*color: black;*/
+    opacity:0;
+    transition:1s;
+    z-index: 1003;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 100;
+    padding-top: 20px;
+    /*vertical-align: middle;*/
+}
+
+.close {
+  color: #d83e27;
+  opacity: 1;
+  /*display: block;*/
+  /*text-align: center;*/
+  /*vertical-align: top;*/
+  /*line-height: 100px;*/
+}
