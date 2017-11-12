@@ -8,7 +8,7 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, plot_file , title, dot_width=0.5, div=True, width=1100, height=619, write=False):
+def plot_data_to_file(data, plot_file, member_id, title, constituency, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
 	"""
 	"""
 
@@ -35,7 +35,7 @@ def plot_data_to_file(data, plot_file , title, dot_width=0.5, div=True, width=11
 		node_size = []
 		node_name = []
 		node_hovertext = []
-		node_hyperlink = []
+		# node_hyperlink = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -52,7 +52,7 @@ def plot_data_to_file(data, plot_file , title, dot_width=0.5, div=True, width=11
 			node_opacity.append(node['opacity'])
 			node_size.append(node['size'])
 			node_hovertext.append(node['hovertext'])
-			node_hyperlink.append(node['hyperlink'])
+			# node_hyperlink.append(node['hyperlink'])
 
 		# create a Kamada-Kawai layout
 		layt = G.layout('kk', dim=2)
@@ -95,7 +95,7 @@ def plot_data_to_file(data, plot_file , title, dot_width=0.5, div=True, width=11
 		               textposition='middle',
 		               hoverinfo = 'text',
 		               hovertext = node_hovertext,
-		               customdata = node_hyperlink
+		               # customdata = node_hyperlink
 		               )
 		traces.append(trace2_2d)
 
@@ -120,12 +120,39 @@ def plot_data_to_file(data, plot_file , title, dot_width=0.5, div=True, width=11
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',
 			hidesources=True,
+			annotations=Annotations([
+				Annotation(
+					showarrow=False,
+					text="Data source: <a href='%s'>theyworkforyou</a>" % hyperlink,
+					xref='paper',
+					yref='paper',
+					x=0,
+					y=0,
+					font=Font(
+						size=12)
+					),
+				Annotation(
+					showarrow=False,
+					text='<a><b>%s,</b> %s</a>' %(title.title(), constituency.title()),
+					xref='paper',
+					yref='paper',
+					x=0.5,
+					y=1,
+					font=Font(
+						size=14, color="#444")
+				)
+			]),
+
+
+
 			)
 
 		# plot to file
 		data = Data(traces)
 		fig = Figure(data=data, layout=layout)
 
+		offline.plot(fig, filename='/Users/elliott/Documents/pypolitics/notpolitics/misc/plot.html', auto_open=True)
+		return
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
 		with open(plot_file, "w") as f:

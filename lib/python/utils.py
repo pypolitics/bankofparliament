@@ -401,7 +401,7 @@ def write_scatter_plot(mp, plot_file):
             'dark_grey' : 'rgb(0, 0, 0)'
     }
 
-    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 120},
+    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 128},
 
                     'income_item'        : {'color' : colors['light_orange'], 'opacity' : 0.5, 'size' : 40},
                     'income_cat'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40},
@@ -633,7 +633,7 @@ def write_scatter_plot(mp, plot_file):
                             item['size'] += size_value
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    return plot_data_to_file(data, plot_file, mp['name'], div=True)
+    return plot_data_to_file(data, plot_file, mp['member_id'], mp['name'], mp['constituency'], hyperlink, div=True)
     # print 'Writing : %s' % plot_file
 
 def camel_case_split(identifier):
