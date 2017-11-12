@@ -178,7 +178,6 @@
 
   /*bring to front*/
   z-index: 1005;
-  /*display: table-cell;*/
   text-align: center;
 }
 
@@ -186,7 +185,6 @@
   position: absolute;
   width: 128px;
   height: 128px;
-  /*border-radius: 64px;*/
   top: 0;
   bottom: 0;
   left: 0;
@@ -197,10 +195,6 @@
   transition: .5s ease;
   background-color: #008CBA;
 }
-
-/*img:hover {
-  opacity: 0;
-}*/
 
 a { position: relative; display: inline-block }
 a h2 {
@@ -213,9 +207,7 @@ a h2 {
     right: 0;
     bottom: 0;
     margin: 0;
-    /*background: #0087dc;*/
     color: #fff;
-    /*color: black;*/
     opacity:0;
     transition:1s;
     z-index: 1003;
@@ -223,14 +215,12 @@ a h2 {
     font-size: 12px;
     font-weight: 100;
     padding-top: 20px;
-    /*vertical-align: middle;*/
 }
 
-.close {
-  color: #d83e27;
+.close{
+  color: black;
   opacity: 1;
-  /*display: block;*/
-  /*text-align: center;*/
-  /*vertical-align: top;*/
-  /*line-height: 100px;*/
+  font-size: 14px;
+  margin-right: 1050px;
+  margin-top:-20px;
 }
