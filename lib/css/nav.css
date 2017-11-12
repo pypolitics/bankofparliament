@@ -6,6 +6,7 @@
 /*nav is main search class*/
 #search{
 	float: left;
+	margin-left: 20px;
 }
 
 #options{
@@ -43,16 +44,17 @@
 /*drop down list items (and sort button)*/
 #options a{
 	background-color: gray;
-	font-size: 16px;
-	width: 200px;
+	width: 100px;
 	text-align: center;
+	margin-right: 20px;
+	z-index: 1003;
 }
 
 /*drop down items*/
 .nav li a {
-	/*font-size: 20px; */
 	color: white;
 	display: block;
+	font-size: 14px;
 }
 
 .nav li a:hover {
@@ -66,7 +68,8 @@
 	opacity: 0;
 	transition: all 0.1s;
 	position: absolute;
-	z-index: 10;
+	z-index: 1003;
+	margin-right: 20px;
 }
 
 /*drop down reveal*/
@@ -74,5 +77,11 @@
 	visibility: visible;
 	top: 100%;
 	opacity: 1;
+	margin-right: 20px;
+}
+
+#sort {
+	color: white;
+	font-size: 16px;
 }
 
