@@ -20,7 +20,11 @@ The data as well as the website are both a work in progress. I fully expected th
 
 Now that a functioning webpage is up, I intend on cleaning up the data and checking for inaccuracies.
 
-At the time of writing, the British General Election is just over a week away.
+## Requirements
+* easy_install pip
+* pip install requests
+* pip install plotly
+* pip install python-igraph
 
 ## Todo
 

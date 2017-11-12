@@ -7,7 +7,7 @@ import operator
 import locale, subprocess
 import pprint
 from optparse import OptionParser
-from textblob import TextBlob
+# from textblob import TextBlob
 
 sys.path.append('../lib/python')
 

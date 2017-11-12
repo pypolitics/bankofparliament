@@ -7,12 +7,12 @@ sys.setdefaultencoding('utf8')
 
 from datetime import datetime, date
 import xml.etree.cElementTree as ElementTree
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+# from fuzzywuzzy import fuzz
+# from fuzzywuzzy import process
 from datetime import datetime
-from wordcloud import WordCloud
+# from wordcloud import WordCloud
 import csv
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from plotting import plot_data_to_file
 from constants import party_colours
 
@@ -401,23 +401,36 @@ def write_scatter_plot(mp, plot_file):
             'dark_grey' : 'rgb(0, 0, 0)'
     }
 
+
+    orange_darker = '#f7a55d'
+    orange_lighter = '#fac99e'
+
+    yellow_darker = '#fff570'
+    yellow_lighter = '#fff899'
+
+    pink_darker = '#ffbaf4'
+    pink_lighter = '#ffe6fb'
+
+    grey_darker = '#b8bab8'
+    grey_lighter = '#cbcdcb'
+
     data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 128},
 
-                    'income_item'        : {'color' : colors['light_orange'], 'opacity' : 0.5, 'size' : 40},
-                    'income_cat'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 40},
-                    'income_main'        : {'color' : colors['light_orange'], 'opacity' : 1, 'size' : 60},
+                    'income_item'        : {'color' : orange_lighter, 'opacity' : 1, 'size' : 30},
+                    'income_cat'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
+                    'income_main'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 60},
 
-                    'freebies_item'        : {'color' : colors['light_yellow'], 'opacity' : 0.5, 'size' : 40},
-                    'freebies_cat'        : {'color' : colors['light_yellow'], 'opacity' : 1, 'size' : 40},
-                    'freebies_main'        : {'color' : colors['light_yellow'], 'opacity' : 1, 'size' : 60},
+                    'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 1, 'size' : 40},
+                    'freebies_cat'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 40},
+                    'freebies_main'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 60},
 
-                    'wealth_item'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
-                    'wealth_cat'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 40},
-                    'wealth_main'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
+                    'wealth_item'        : {'color' : grey_lighter, 'opacity' : 1, 'size' : 40},
+                    'wealth_cat'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 40},
+                    'wealth_main'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 60},
 
-                    'misc_item'        : {'color' : colors['light_pink'], 'opacity' : 0.5, 'size' : 40},
-                    'misc_cat'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 40},
-                    'misc_main'        : {'color' : colors['light_pink'], 'opacity' : 1, 'size' : 60},
+                    'misc_item'        : {'color' : pink_lighter, 'opacity' : 1, 'size' : 40},
+                    'misc_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
+                    'misc_main'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
 
 
                     'companies'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
@@ -487,7 +500,7 @@ def write_scatter_plot(mp, plot_file):
                 category = category_type
 
             # MAIN CATERGORY NODE
-            label = '<b>%s' % categories[category]['node_type'].title() + ' Categories'
+            label = '<b>%s</b></br></br>' % categories[category]['node_type'].title() + ' Categories'
             label = '%s' % categories[category]['node_type'].title() + ' Categories'
             hovertext = label
             type_node = make_node(data_nodes[categories[category]['node_type'] + '_main'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_main', hyperlink=hyperlink)
@@ -515,7 +528,7 @@ def write_scatter_plot(mp, plot_file):
                 type_copy = found
 
             # CATERGORY NODE
-            label = '%s' % category.title()
+            label = '<b>%s</b></br></br>' % category.title()
             hovertext = '%s' % category.title()
             category_node = make_node(data_nodes[categories[category]['node_type'] + '_cat'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_cat', hyperlink=hyperlink)
             cat_copy = copy.copy(category_node)
@@ -633,7 +646,7 @@ def write_scatter_plot(mp, plot_file):
                             item['size'] += size_value
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    return plot_data_to_file(data, plot_file, mp['member_id'], mp['name'], mp['constituency'], hyperlink, div=True)
+    return plot_data_to_file(data, plot_file, mp['member_id'], mp['name'], mp['constituency'], mp['party'], hyperlink, div=True)
     # print 'Writing : %s' % plot_file
 
 def camel_case_split(identifier):

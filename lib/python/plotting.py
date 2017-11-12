@@ -8,7 +8,7 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-def plot_data_to_file(data, plot_file, member_id, title, constituency, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
+def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
 	"""
 	"""
 
@@ -123,7 +123,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, hyperlink
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text="Data source: <a href='%s'>theyworkforyou</a>" % hyperlink,
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data source: </a><a href="%s">theyworkforyou</a>' % hyperlink, 
 					xref='paper',
 					yref='paper',
 					x=0,
@@ -133,7 +133,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, hyperlink
 					),
 				Annotation(
 					showarrow=False,
-					text='<a><b>%s,</b> %s</a>' %(title.title(), constituency.title()),
+					text='<a style="color: black; font-weight: 100; font-size: 14px;"><b>%s,</b> %s</a>' %(title.title(), constituency.title()),
 					xref='paper',
 					yref='paper',
 					x=0.5,
@@ -151,8 +151,10 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, hyperlink
 		data = Data(traces)
 		fig = Figure(data=data, layout=layout)
 
-		offline.plot(fig, filename='/Users/elliott/Documents/pypolitics/notpolitics/misc/plot.html', auto_open=True)
-		return
+		# import os 
+		# fname = os.path.join(os.path.dirname(__file__), '..', '..', 'misc', 'plot.html')
+		# offline.plot(fig, filename=fname, auto_open=True)
+		# return
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
 		with open(plot_file, "w") as f:
