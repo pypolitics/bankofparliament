@@ -16,7 +16,7 @@ class VisitsOutsideUK(Category):
 		# category info
 		self.category_id = 5
 		self.category_type = 'visits_outside_uk'
-		self.category_description = 'Vists outside UK'
+		self.category_description = 'Vists Outside UK'
 		self.isCurrency = True
 
 
