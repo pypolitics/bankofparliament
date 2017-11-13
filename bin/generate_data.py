@@ -312,48 +312,7 @@ class MemberOfParliament():
 		self.categories.append(self.family_lobbyists)
 		self.categories.append(self.salary)
 
-	# def queryConflicts(self):
-	# 	""""""
 
-	# 	print ''
-	# 	# print self.shareholdings
-	# 	for i in self.shareholdings.items:
-	# 		print i.raw_string
-
-	# 		conflict = False
-	# 		if i.company == {}:
-	# 			conflict = True
-	# 		# else:
-	# 		# 	print i.company['company_name']
-
-	# 		print 'Missing Company : %s' % conflict
-
-	# 	# print self.other_shareholdings
-	# 	for i in self.other_shareholdings.items:
-	# 		print i.raw_string
-
-	# 		conflict = False
-	# 		if i.company == {}:
-	# 			conflict = True
-	# 		# else:
-	# 		# 	print i.company['company_name']
-
-	# 		print 'Missing Company : %s' % conflict
-
-	# 	print '\n'
-	# 	for mp in self.mps:
-	# 		print mp
-	# 		for i in mp.items:
-	# 			print ''
-	# 			print '\t', i
-	# 			print '\t', i.company['company_name']
-
-	# 			for per in i.company['persons']:
-	# 				print per['name']
-
-	# 			# if i['resigned_on'] == '' and i['company_status'].lower() == 'active' :
-	# 			# 	pass
-	# 			# 	active = True
 
 	@property
 	def total_wealth(self):
@@ -533,6 +492,7 @@ class MemberOfParliament():
 
 		with open(json_dump_location, 'w') as jsonfile:
 			json.dump(data, jsonfile, indent=3)
+			print 'Writing : %s' % (json_dump_location)
 
 		return data
 
@@ -546,14 +506,6 @@ def main(mps, options):
 
 	for member in mps:
 		mp_list.append(MemberOfParliament(member, mps.index(member)).data)
-
-	if options.json:
-		# write out to file
-		json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members_dump.json')
-
-		print 'Writing : %s' % (json_dump_location)
-		with open(json_dump_location, 'w') as jsonfile:
-			json.dump(mp_list, jsonfile)
 
 	end_time = time.time()
 	elapsed = end_time - start_time
