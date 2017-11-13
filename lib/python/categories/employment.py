@@ -31,7 +31,7 @@ class Employment(Category):
 		# TODO: need to decipher if the amount earned, was donated to party, charity etc
 		# TODO: if possible find the employer - could also check companies house to investigate further the links
 		# of the employer, other directors, other MPs, relatives etc
-		if 'Hours:' in raw_string or 'hrs' in raw_string:
+		if 'hours' in raw_string or 'hrs' in raw_string:
 
 			amount = regex_for_amount(raw_string) 
 
@@ -45,6 +45,10 @@ class Employment(Category):
 				amount = amount * 12
 			elif 'a month' in raw_string.lower():
 				amount = amount * 12
+			elif 'a quarter' in raw_string.lower():
+				amount = amount * 4
+			elif 'quarterly' in raw_string.lower():
+				amount = amount * 4
 
 			next_id = len(self.items) + 1
 			item_id = '%04d' % next_id
