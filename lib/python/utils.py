@@ -382,25 +382,12 @@ def translate(value, leftMin, leftMax, rightMin, rightMax):
     # Convert the 0-1 range into a value in the right range.
     return rightMin + (valueScaled * rightSpan)
 
+
+
 def write_scatter_plot(mp, plot_file):
-    """
-    Write out scatter plot html
-    """
+    """"""
     node_id = 0
     plot_path = '../pages/plots/%s.html' % mp['member_id']
-
-    colors = {'light_blue' : 'rgb(72, 128, 219)',
-            'light_orange' : 'rgb(247, 165, 93)',
-            'light_green' : 'rgb(138, 216, 110)',
-            'light_grey' : 'rgb(184, 186, 184)',
-            'light_turq' : 'rrgb(129, 221, 232)',
-            'light_yellow' : 'rgb(255, 245, 112)',
-            'light_red' : 'rgb(229, 100, 94)',
-            'light_purple' : 'rgb(228, 129, 232)',
-            'light_pink' : 'rgb(255, 186, 244)',
-            'dark_grey' : 'rgb(0, 0, 0)'
-    }
-
 
     orange_darker = '#f7a55d'
     orange_lighter = '#fac99e'
@@ -414,37 +401,29 @@ def write_scatter_plot(mp, plot_file):
     grey_darker = '#b8bab8'
     grey_lighter = '#cbcdcb'
 
-    data_nodes = {  'mp'                : {'color' : colors['light_blue'], 'opacity' : 1, 'size' : 128},
 
-                    'income_item'        : {'color' : orange_lighter, 'opacity' : 1, 'size' : 30},
-                    'income_cat'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
-                    'income_main'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 60},
-
-                    'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 1, 'size' : 40},
-                    'freebies_cat'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 40},
-                    'freebies_main'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 60},
-
-                    'wealth_item'        : {'color' : grey_lighter, 'opacity' : 1, 'size' : 40},
-                    'wealth_cat'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 40},
-                    'wealth_main'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 60},
-
-                    'misc_item'        : {'color' : pink_lighter, 'opacity' : 1, 'size' : 40},
-                    'misc_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
-                    'misc_main'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
-
-
-                    'companies'        : {'color' : colors['light_grey'], 'opacity' : 1, 'size' : 60},
-                    'ch_company'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 40},
-                    'ch_officer'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
-                    'ch_officer_matched'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
-
-                    'ch_person'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
-                    'ch_person_matched'        : {'color' : colors['light_grey'], 'opacity' : 0.5, 'size' : 20},
-
+    data_lines = {  'major' : {'color' : grey_darker, 'opacity' : 1, 'size' : 8, 'name' : None},
+                    'minor' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 2, 'name' : None},
                     }
 
-    data_lines = {  'major' : {'color' : colors['dark_grey'], 'opacity' : 1, 'size' : 8, 'name' : None},
-                    'minor' : {'color' : colors['light_grey'], 'opacity' : 0.2, 'size' : 2, 'name' : None},
+    data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 128},
+
+                    'income_item'        : {'color' : orange_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
+                    'income_cat'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 60},
+
+                    'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'freebies_sub'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 40},
+                    'freebies_cat'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 60},
+
+                    'wealth_item'        : {'color' : grey_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'wealth_sub'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 40},
+                    'wealth_cat'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 60},
+
+                    'miscellaneous_item'        : {'color' : pink_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'miscellaneous_sub'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
+                    'miscellaneous_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
+
                     }
 
     # data
@@ -461,189 +440,123 @@ def write_scatter_plot(mp, plot_file):
 
     node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=hyperlink)
     node_main['color'] = party_colours[mp['party'].lower()]
-
     data['nodes'].append(node_main)
 
-    categories = {  'property_income'       : {'node_type' : 'income'},
-                    'salary'                : {'node_type' : 'income'},
-                    'employment'            : {'node_type' : 'income'},
-
-                    'gifts'                 : {'node_type' : 'freebies'},
-                    'gifts_outside_uk'      : {'node_type' : 'freebies'},
-                    'indirect_donations'    : {'node_type' : 'freebies'},
-                    'direct_donations'      : {'node_type' : 'freebies'},
-                    'visits_outside_uk'     : {'node_type' : 'freebies'},
-
-                    'property_wealth'       : {'node_type' : 'wealth'},
-                    'shareholdings'         : {'node_type' : 'wealth'},
-
-                    'miscellaneous'         : {'node_type' : 'misc'},
-                    'family'                : {'node_type' : 'misc'},
-                    'family_lobbyists'      : {'node_type' : 'misc'},
-    }
-
-
-    n = []
-
+    categories = {'income' : [], 'freebies' : [], 'wealth' : [], 'miscellaneous' : []}
     for each in mp['categories']:
-
         category_type = each['category_type']
 
-        for i in each['items']:
+        if category_type in ['salary', 'employment']:
+            categories['income'].append(each)
+        elif category_type in ['family', 'family_lobbyists', 'miscellaneous']:
+            categories['miscellaneous'].append(each)
+        elif category_type in ['shareholdings']:
+            categories['wealth'].append(each)
+        elif category_type in ['gifts', 'gifts_outside_uk', 'indirect_donations', 'direct_donations', 'visits_outside_uk']:
+            categories['freebies'].append(each)
 
-            if 'property' in each['category_type']:
-                if i['isWealth']:
-                    category = '%s_wealth' % category_type
+        if category_type == 'property':
+            incomes = copy.copy(each)
+            wealths = copy.copy(each)
+            incomes['items'] = []
+            incomes['category_description'] = 'Rental Income'
+            wealths['items'] = []
+            wealths['category_description'] = 'Property'
+
+            for item in each['items']:
+
+                if item['isIncome']:
+                    incomes['items'].append(item)
                 else:
-                    category = '%s_income' % category_type
-            else:
-                category = category_type
+                    wealths['items'].append(item)
 
-            # MAIN CATERGORY NODE
-            label = '<b>%s</b></br></br>' % categories[category]['node_type'].title() + ' Categories'
-            label = '%s' % categories[category]['node_type'].title() + ' Categories'
-            hovertext = label
-            type_node = make_node(data_nodes[categories[category]['node_type'] + '_main'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_main', hyperlink=hyperlink)
-            type_copy = copy.copy(type_node)
+            categories['income'].append(incomes)
+            categories['wealth'].append(wealths)
 
-            # find an existing node
-            found = None
-            for x in data['nodes']:
-                for a in x.itervalues():
-                    if label in str(a):
-                        found = x
-                        break
+    main_range = []
+    for c in categories.keys():
+        if not c == 'wealth':
+            for s in categories[c]:
+                for i in s['items']:
+                    main_range.append(int(i['amount']))
 
-            if not found:
-                # print '\nAdding main category : %s' % label
-                type_copy['amount'] = 0
-                data['nodes'].append(type_copy)
-                link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=type_copy)
-                l = copy.copy(link)
-                data['links'].append(l)
+    current_min = min(main_range)
+    current_max = max(main_range)
+    new_min = 0
 
-                type_copy['items'] = []
-                n.append(type_copy)
-            else:
-                type_copy = found
+    for category in categories.keys():
 
-            # CATERGORY NODE
-            label = '<b>%s</b></br></br>' % category.title()
-            hovertext = '%s' % category.title()
-            category_node = make_node(data_nodes[categories[category]['node_type'] + '_cat'], name=label, hovertext=hovertext, node_type=categories[category]['node_type'] + '_cat', hyperlink=hyperlink)
-            cat_copy = copy.copy(category_node)
+        if category == 'wealth':
+            new_max = 40
+        else:
+            new_max = 100
 
-            # find an existing node
-            found = None
-            for x in data['nodes']:
-                for a in x.itervalues():
-                    if label in str(a):
-                        # if not 'Basic Salary' in str(a):
+        # total category amount
+        amount = 0
+        for s in categories[category]:
+            for i in s['items']:
+                amount += i['amount']
 
-                        found_cat_node_type = data['nodes'][data['nodes'].index(x)]['node_type']
-                        looking_for = categories[category]['node_type'] + '_cat'
-                        if found_cat_node_type == looking_for:
-                            found = x
-                            break
+        amount = "{:,}".format(amount)
+        hovertext = '<b>%s</b></br></br>£%s' % (category.title(), str(amount))
+        label = category.title()
+        cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=hyperlink)
+        cat_copy = copy.copy(cat_node)
+        cat_copy['amount'] = 0
+        data['nodes'].append(cat_copy)
 
-            if not found:
-                # print '\tAdding category : %s' % label
-                cat_copy['amount'] = 0
-                data['nodes'].append(cat_copy)
-                link = make_link(data_lines['major'], nodes = data['nodes'], source=type_copy, target=cat_copy)
-                l = copy.copy(link)
-                data['links'].append(l)
+        link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=cat_copy)
+        l = copy.copy(link)
+        data['links'].append(l)
 
-                cat_copy['items'] = []
-                n[n.index(type_copy)]['items'].append(cat_copy)
+        for sub in categories[category]:
+            if len(sub['items']) < 1:
+                break
 
-            else:
-                cat_copy = found
+            # sub category total amount
+            amount = 0
+            for i in sub['items']:
+                amount += i['amount']
+            amount = "{:,}".format(amount)
 
-            # ITEM NODE
-            if each['isCurrency']:
-                item_label = u'\u00a3' + '%s' % "{:,}".format(i['amount'])
-            else:
-                if 'shareholding' in category:
-                    item_label = '%s' % i['amount'] + r'%'
-                else:
-                    item_label = ''
+            spl = sub['category_description'].split(' ')
+            s = ''
+            for i in spl:
+                s += '%s<br>' % i
 
-            raw_splits = camel_case_split(i['raw_string'])
-            if len(raw_splits) > 1:
-                item_hovertext = '<br>'.join(raw_splits)
-            else:
-                item_hovertext = '%s' % i['pretty']
+            hovertext = '<b>%s</b>£%s' % (s, amount)
+            label = '%s' % sub['category_description']
+            sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=hyperlink)
+            sub_copy = copy.copy(sub_node)
+            sub_copy['amount'] = 0
+            data['nodes'].append(sub_copy)
 
-            item_node = make_node(data_nodes[categories[category]['node_type'] + '_item'], name=item_label, hovertext=item_hovertext, node_type=categories[category]['node_type'] + '_item', hyperlink=hyperlink, unique=True)
-            item_copy = copy.copy(item_node)
-
-            # print 'Adding item: %s' % item_label
-            item_copy['amount'] = i['amount']
-            data['nodes'].append(item_copy)
-            link = make_link(data_lines['major'], nodes = data['nodes'], source=cat_copy, target=item_copy)
+            link = make_link(data_lines['major'], nodes = data['nodes'], source=cat_copy, target=sub_copy)
             l = copy.copy(link)
             data['links'].append(l)
 
-            t_idx = n.index(type_copy)
-            c_idx = n[t_idx]['items'].index(cat_copy)
-            n[t_idx]['items'][c_idx]['items'].append(item_copy)
+            for item in sub['items']:
 
-    # find the ranges of the items, so we can adjust size of nodes, relative to all other nodes
-    main_range = []
-    for main_category in n:
+                if sub['isCurrency']:
+                    label = "£" + "{:,}".format(item['amount'])
+                else:
+                    label = ''
 
-        main_amount = 0
-        category_range = []
+                hovertext = item['pretty']
+                item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=hyperlink)
+                item_copy = copy.copy(item_node)
+                item_copy['amount'] = item['amount']
 
-        for cat in n[n.index(main_category)]['items']:
+                # scale the marker
+                if len(sub['items']) > 1:
+                    size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
+                    item_copy['size'] += size_value
 
-            cat_amount = 0
+                data['nodes'].append(item_copy)
 
-            t_idx = n.index(main_category)
-            c_idx = n[t_idx]['items'].index(cat)
-
-            item_range = []
-            for item in n[t_idx]['items'][c_idx]['items']:
-                if not 'wealth' in item['node_type']:
-                    if item['amount']:
-                        item_amount = item['amount']
-                    else:
-                        item_amount = 0
-                    item_range.append(item_amount)
-                    category_range.append(item_amount)
-                    main_range.append(item_amount)
-                    cat_amount += item_amount
-
-            cat['category_amount'] = int(cat_amount)
-            category_range.append(cat_amount)
-            main_range.append(cat_amount)
-            main_amount += cat_amount
-
-        main_category['main_amount'] = int(main_amount)
-        main_range.append(main_amount)
-
-    # now we have ranges, make the size adjustments
-    current_min = min(main_range)
-    current_max = max(main_range)
-    new_min = 10
-    new_max = 250
-
-    for main_category in n:
-
-        for cat in n[n.index(main_category)]['items']:
-
-            t_idx = n.index(main_category)
-            c_idx = n[t_idx]['items'].index(cat)
-
-            for item in n[t_idx]['items'][c_idx]['items']:
-                if not 'wealth' in item['node_type']:
-                    v = item['amount']
-                    if not current_min == current_max:
-                        if v:
-                            size_value = int(translate(v, current_min, current_max, new_min, new_max))
-                            # print '%s > %s' % (v, size_value)
-                            item['size'] += size_value
+                link = make_link(data_lines['major'], nodes = data['nodes'], source=sub_copy, target=item_copy)
+                l = copy.copy(link)
+                data['links'].append(l)
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
     return plot_data_to_file(data, plot_file, mp['member_id'], mp['name'], mp['constituency'], mp['party'], hyperlink, div=True)
