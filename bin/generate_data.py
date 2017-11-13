@@ -73,7 +73,7 @@ class MemberOfParliament():
 		# self.getMPExpenses()
 
 		# get companies house records
-		self.getMPCompanies()
+		# self.getMPCompanies()
 
 		end_time = time.time()
 		elapsed = end_time - start_time
