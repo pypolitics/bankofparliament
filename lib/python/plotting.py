@@ -8,6 +8,8 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
+parliament_hyperlink = 'http://data.parliament.uk/membersdataplatform/memberquery.aspx'
+
 def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
 	"""
 	"""
@@ -44,7 +46,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 
 		for node in data['nodes']:
 			# clean up category nodes
-			nn = node['name'].split(' Categories')[0]
+			nn = node['name']
 			nn = nn.replace('_', ' ')
 			node_name.append(nn)
 
@@ -108,7 +110,6 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 		          )
 
 		layout = Layout(
-			# title=title,
 			autosize=True,
 			width=width,
 			height=height,
@@ -123,7 +124,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data source: </a><a href="%s">theyworkforyou</a>' % hyperlink, 
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data source: </a><a href="%s">theyworkforyou</a>, <a href="%s">parliament</a>' % (hyperlink, parliament_hyperlink), 
 					xref='paper',
 					yref='paper',
 					x=0,
@@ -142,19 +143,12 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 						size=14, color="#444")
 				)
 			]),
-
-
-
 			)
 
 		# plot to file
 		data = Data(traces)
 		fig = Figure(data=data, layout=layout)
 
-		# import os 
-		# fname = os.path.join(os.path.dirname(__file__), '..', '..', 'misc', 'plot.html')
-		# offline.plot(fig, filename=fname, auto_open=True)
-		# return
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
 		with open(plot_file, "w") as f:
