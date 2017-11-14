@@ -40,6 +40,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		node_name = []
 		node_hovertext = []
 		node_hyperlink = []
+		node_border_color = []
+		node_border_size = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -57,6 +59,9 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 			node_size.append(node['size'])
 			node_hovertext.append(node['hovertext'])
 			node_hyperlink.append(node['hyperlink'])
+
+			node_border_size.append(node['border_style']['size'])
+			node_border_color.append(node['border_style']['color'])
 
 		# create a Kamada-Kawai layout
 		layt = G.layout('kk', dim=2)
@@ -93,7 +98,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		                             color = node_color,
 		                             opacity = node_opacity,
 		                             colorscale = 'Viridis',
-		                             line = Line(color = 'rgb(50,50,50)', width = dot_width),
+		                             line = Line(color = node_border_color, width = node_border_size),
 		                             ),
 		               text = node_name,
 		               textposition='middle',

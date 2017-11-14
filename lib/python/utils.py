@@ -369,6 +369,7 @@ def make_node(node, name, hovertext, node_type, hyperlink=None, unique=True):
     node['hovertext'] = hovertext
     node['node_type'] = node_type
     node['hyperlink'] = hyperlink
+    node['border_style'] = {'color' : 'rgb(50,50,50)', 'size' : 0.5}
     return node
 
 def translate(value, leftMin, leftMax, rightMin, rightMax):
@@ -394,10 +395,10 @@ def write_scatter_plot(mp, plot_file):
     yellow_lighter = '#fff899'
 
     pink_darker = '#ffbaf4'
-    pink_lighter = '#ffe6fb'
+    pink_lighter = 'rgb(255, 235, 251)'
 
     grey_darker = '#b8bab8'
-    grey_lighter = '#cbcdcb'
+    grey_lighter = '#d8dad8'
 
 
     data_lines = {  'major' : {'color' : grey_darker, 'opacity' : 1, 'size' : 8, 'name' : None},
@@ -556,6 +557,10 @@ def write_scatter_plot(mp, plot_file):
                         if item['amount']:
                             size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
                             item_copy['size'] += size_value
+
+                # hyperlinked node - add a border
+                if url:
+                    item_copy['border_style'] = {'color' : '#99ff99', 'size' : 2}
 
                 data['nodes'].append(item_copy)
 
