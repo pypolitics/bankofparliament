@@ -156,6 +156,7 @@ class MemberOfParliament():
 		self.dob = 'Unknown Date of Birth'
 		self.month = None
 		self.year = None
+		self.dods = y['@Dods_Id']
 
 		if self.extended.has_key('DateOfBirth'):
 			if type(self.extended['DateOfBirth']) == str:
@@ -378,6 +379,7 @@ class MemberOfParliament():
 		data['surname'] = self.last_name
 		data['member_id'] = self.member_id
 		data['person_id'] = self.person_id
+		data['dods_id'] = self.dods
 		data['eu_ref_stance'] = self.eu_ref_stance
 		data['twitter'] = self.twitter
 		data['facebook'] = self.facebook

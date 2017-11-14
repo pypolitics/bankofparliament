@@ -8,13 +8,13 @@ import plotly.offline as offline
 import plotly.plotly as py
 from plotly.graph_objs import *
 
-parliament = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/name*'
+parliament = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/refDods='
 
-def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
+def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, party, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
 	"""
 	"""
 
-	parliament_hyperlink = parliament + '+'.join(title.split(' ')) + '/'
+	parliament_hyperlink = parliament + dods_id + '/' + 'GovernmentPosts|BiographyEntries|Committees'
 
 	# number of nodes
 	N = len(data['nodes'])
@@ -132,7 +132,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data source: </a><a href="%s">theyworkforyou</a>, <a href="%s">http://data.parliament.uk/</a>' % (hyperlink, parliament_hyperlink), 
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data source: </a><a href="%s">theyworkforyou</a>, <a href="%s">data.parliament.uk</a>' % (hyperlink, parliament_hyperlink), 
 					xref='paper',
 					yref='paper',
 					x=0,

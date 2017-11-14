@@ -564,7 +564,7 @@ def write_scatter_plot(mp, plot_file):
                 data['links'].append(l)
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    return plot_data_to_file(data, plot_file, mp['member_id'], mp['name'], mp['constituency'], mp['party'], hyperlink, div=True)
+    return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink, div=True)
     # print 'Writing : %s' % plot_file
 
 def camel_case_split(identifier):
