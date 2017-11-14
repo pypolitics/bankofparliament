@@ -25,7 +25,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
     html += '\t\t\t</a>\n'
     html += '\t\t\t<p class="thumbnail_label">%s</p>\n' % name.title()
     html += '\n'
-    html += '\t\t\t<p id=%s style="height: 619px; width: 1100px;" class="plotly-graph-div" data-memberid=%s><a class="close" data-memberid=%s>Close</a></p>\n' % (member_id, member_id, member_id)
+    html += '\t\t\t<p id=%s style="height: 619px; width: 1100px;" class="plotly-graph-div" data-memberid=%s><a class="close" data-memberid=%s></a></p>\n' % (member_id, member_id, member_id)
     html += '\t\t</div>\n'
 
     # write it out
