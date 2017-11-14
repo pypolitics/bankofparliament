@@ -499,7 +499,7 @@ def write_scatter_plot(mp, plot_file):
 
         amount = "{:,}".format(amount)
         hovertext = '<b>%s</b></br></br>£%s' % (category.title(), str(amount))
-        label = category.title()
+        label = '<b>%s</b>' % category.title()
         cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category)
         cat_copy = copy.copy(cat_node)
         cat_copy['amount'] = 0
@@ -524,7 +524,7 @@ def write_scatter_plot(mp, plot_file):
                 s += '%s<br>' % i
 
             hovertext = '<b>%s</b>£%s' % (s, amount)
-            label = '<b>%s</b>' % sub['category_description']
+            label = '%s' % sub['category_description']
             sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category)
             sub_copy = copy.copy(sub_node)
             sub_copy['amount'] = 0
