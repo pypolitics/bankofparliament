@@ -119,7 +119,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 			margin=Margin(
 				l=20,
 				r=20,
-				b=20,
+				b=30,
 				t=20,
 				pad=4
 			),
