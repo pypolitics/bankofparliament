@@ -30,9 +30,7 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 * Photo of mp on graph
 * Better header and filter / sort area
-* Graph styling
 * Better thumbnails on graph nodes
-* Sub category totals
 * Text on the About page
 * Show companies house nodes on separate graph layer
 * Mobile / Tablet compatibility
