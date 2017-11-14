@@ -510,8 +510,6 @@ def write_scatter_plot(mp, plot_file):
         data['links'].append(l)
 
         for sub in categories[category]:
-            if len(sub['items']) < 1:
-                break
 
             # sub category total amount
             amount = 0
@@ -553,7 +551,7 @@ def write_scatter_plot(mp, plot_file):
                 item_copy['amount'] = item['amount']
 
                 # scale the marker
-                if len(sub['items']) > 1:
+                if len(sub['items']) > 0:
                     if not current_min == current_max:
                         size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
                         item_copy['size'] += size_value
