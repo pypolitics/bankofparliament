@@ -116,7 +116,13 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 			showlegend=False,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
-			margin=Margin(t=0),
+			margin=Margin(
+				l=20,
+				r=20,
+				b=20,
+				t=20,
+				pad=4
+			),
 			hovermode='closest',
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',
