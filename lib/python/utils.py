@@ -543,7 +543,7 @@ def write_scatter_plot(mp, plot_file):
                 else:
                     label = ''
 
-                if 'shareholding' in category:
+                if 'shareholding' in sub['category_description'].lower():
                     url = item['link']
                 else:
                     url = None
