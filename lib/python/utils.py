@@ -358,7 +358,7 @@ def make_link(link, nodes, source, target):
     return link
 
 node_id = 0
-def make_node(node, name, hovertext, node_type, hyperlink, unique=True):
+def make_node(node, name, hovertext, node_type, hyperlink=None, unique=True):
     """"""
     if unique:
         global node_id
@@ -381,8 +381,6 @@ def translate(value, leftMin, leftMax, rightMin, rightMax):
 
     # Convert the 0-1 range into a value in the right range.
     return rightMin + (valueScaled * rightSpan)
-
-
 
 def write_scatter_plot(mp, plot_file):
     """"""
@@ -438,7 +436,7 @@ def write_scatter_plot(mp, plot_file):
     last = ' '.join(splits[1:])
     label = '<b>%s<br>%s' % (first, last)
 
-    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=hyperlink)
+    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
     node_main['color'] = party_colours[mp['party'].lower()]
     data['nodes'].append(node_main)
 
@@ -478,7 +476,8 @@ def write_scatter_plot(mp, plot_file):
         if not c == 'wealth':
             for s in categories[c]:
                 for i in s['items']:
-                    main_range.append(int(i['amount']))
+                    if i['amount']:
+                        main_range.append(int(i['amount']))
 
     current_min = min(main_range)
     current_max = max(main_range)
@@ -495,12 +494,13 @@ def write_scatter_plot(mp, plot_file):
         amount = 0
         for s in categories[category]:
             for i in s['items']:
-                amount += i['amount']
+                if i['amount']:
+                    amount += i['amount']
 
         amount = "{:,}".format(amount)
         hovertext = '<b>%s</b></br></br>£%s' % (category.title(), str(amount))
         label = category.title()
-        cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=hyperlink)
+        cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category)
         cat_copy = copy.copy(cat_node)
         cat_copy['amount'] = 0
         data['nodes'].append(cat_copy)
@@ -516,7 +516,8 @@ def write_scatter_plot(mp, plot_file):
             # sub category total amount
             amount = 0
             for i in sub['items']:
-                amount += i['amount']
+                if i['amount']:
+                    amount += i['amount']
             amount = "{:,}".format(amount)
 
             spl = sub['category_description'].split(' ')
@@ -526,7 +527,7 @@ def write_scatter_plot(mp, plot_file):
 
             hovertext = '<b>%s</b>£%s' % (s, amount)
             label = '%s' % sub['category_description']
-            sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=hyperlink)
+            sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category)
             sub_copy = copy.copy(sub_node)
             sub_copy['amount'] = 0
             data['nodes'].append(sub_copy)
@@ -542,15 +543,20 @@ def write_scatter_plot(mp, plot_file):
                 else:
                     label = ''
 
+                if 'shareholding' in category:
+                    url = item['link']
+                else:
+                    url = None
                 hovertext = item['pretty']
-                item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=hyperlink)
+                item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
                 item_copy['amount'] = item['amount']
 
                 # scale the marker
                 if len(sub['items']) > 1:
-                    size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
-                    item_copy['size'] += size_value
+                    if not current_min == current_max:
+                        size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
+                        item_copy['size'] += size_value
 
                 data['nodes'].append(item_copy)
 

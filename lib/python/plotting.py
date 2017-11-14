@@ -37,7 +37,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 		node_size = []
 		node_name = []
 		node_hovertext = []
-		# node_hyperlink = []
+		node_hyperlink = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -54,7 +54,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 			node_opacity.append(node['opacity'])
 			node_size.append(node['size'])
 			node_hovertext.append(node['hovertext'])
-			# node_hyperlink.append(node['hyperlink'])
+			node_hyperlink.append(node['hyperlink'])
 
 		# create a Kamada-Kawai layout
 		layt = G.layout('kk', dim=2)
@@ -97,7 +97,7 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 		               textposition='middle',
 		               hoverinfo = 'text',
 		               hovertext = node_hovertext,
-		               # customdata = node_hyperlink
+		               customdata = node_hyperlink
 		               )
 		traces.append(trace2_2d)
 
@@ -148,6 +148,8 @@ def plot_data_to_file(data, plot_file, member_id, title, constituency, party, hy
 		# plot to file
 		data = Data(traces)
 		fig = Figure(data=data, layout=layout)
+		# html = offline.plot(fig, auto_open=True)
+		# return
 
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
