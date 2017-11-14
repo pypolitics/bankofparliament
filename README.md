@@ -28,10 +28,11 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* Photo of mp on graph
 * Better header and filter / sort area
 * Better thumbnails on graph nodes
 * Text on the About page
+
+* Photo of mp on graph
 * Show companies house nodes on separate graph layer
 * Mobile / Tablet compatibility
 * Add expenses data
