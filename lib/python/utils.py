@@ -553,8 +553,9 @@ def write_scatter_plot(mp, plot_file):
                 # scale the marker
                 if len(sub['items']) > 0:
                     if not current_min == current_max:
-                        size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
-                        item_copy['size'] += size_value
+                        if item['amount']:
+                            size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
+                            item_copy['size'] += size_value
 
                 data['nodes'].append(item_copy)
 
