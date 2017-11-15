@@ -10,66 +10,43 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="lib/css/default.css">
     <link rel="stylesheet" href="lib/css/thumbs.css">
     <link rel="stylesheet" href="lib/css/nav.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
 <body>
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="#">Bank of Parliament</a></h1>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
-				<li><a href="lib/html/about.html" accesskey="2" title="">About</a></li>
-				<li><a target="_blank" href="https://github.com/pypolitics/notpolitics" accesskey="3">Github</a></li>
-			</ul>
-		</div>
+
+<nav class = "navbar navbar-inverse bg-inverse" role = "navigation">
+	<div class = "navbar-header">
+		<a class = "navbar-brand" style="font-weight: 400; font-size: 26px; color: white" href = "#">Bank of Parliament</a>
 	</div>
-</div>
-
-<!-- <div id="featured">&nbsp;</div> -->
-<div id="banner-wrapper">
-	<div id="banner" class="container">
-		<div class="box-left">
-			<h2>Bank of Parliament takes publicly available data, regarding the financial interests of politicians and visualises it in an easy to understand way.</h2>
-			<p></p>
-			<span>Find out who received the most gifts, who owns the most property and who has the most lucrative private sector jobs.</span>
-			<!-- <span><b>Filter: </b>Filter by name, party or constituency. <b>Sort: </b>Sort the results. (Top right hand corner)</span> -->
-		</div>
-	</div>
-</div>
-
-<p></p>
-<div id="search_banner">
-	<ul class="nav">
-
-		<!-- filter input -->
-		<li id="search">
-			<form action="" method="get">
-				<input type="text" id="search_text" onkeyup="search_function()" placeholder="Filter by names, parties, constituencies..." />
+	<div>
+		<ul class = "nav navbar-nav">
+			<li><a target="_blank" href="https://github.com/pypolitics/notpolitics">About</a></li>
+			<li class = "dropdown">
+				<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
+					Sort
+					<b class = "caret"></b>
+				</a>
+				<ul class = "dropdown-menu">
+					<li><a class="alertMe" data-name="income" href = "#">Total Income</a></li>
+					<li><a class="alertMe" data-name="freebies" href = "#">Total Freebies</a></li>
+					<li><a class="alertMe" data-name="wealth" href = "#">Total Wealth</a></li>
+				</ul>
+			</li>
+			<form class="navbar-form navbar-right" role="search">
+				<input class="form-control input-sm" style="width: 400px;" type="text" id="search_text" onkeyup="search_function()" placeholder="Filter by names, parties, constituencies..." >
 			</form>
-		</li>
-
-		<!-- sort drop down -->
-		<li id="options">
-			<a id="sort" href="#">Sort</a>
-			<ul class="subnav">
-				<li></li>
-					<a class="alertMe" data-name="income" href="#">Income</a>
-					<a class="alertMe" data-name="freebies" href="#">Freebies</a>
-					<a class="alertMe" data-name="wealth" href="#">Wealth</a>
-				</li>
-			</ul>
-		</li>
-		<!-- close sort drop down -->
-	</ul>
-</div>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<img class="img-responsive" src="lib/data/images/westminister.png"/>
+	</div>
+</nav>
 <p></p>
 <!-- add the container for the row of mps -->
 <div class="container">
