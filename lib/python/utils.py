@@ -10,6 +10,7 @@ import xml.etree.cElementTree as ElementTree
 # from fuzzywuzzy import fuzz
 # from fuzzywuzzy import process
 from datetime import datetime
+import textwrap
 # from wordcloud import WordCloud
 import csv
 # import matplotlib.pyplot as plt
@@ -546,7 +547,12 @@ def write_scatter_plot(mp, plot_file):
                     url = item['link']
                 else:
                     url = None
-                hovertext = item['pretty']
+
+                # textwrap the hovertext
+                pretty = item['pretty']
+                wrapped = textwrap.wrap(pretty, 50)
+
+                hovertext = '</br>' + '</br>'.join(wrapped)
                 item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
                 item_copy['amount'] = item['amount']

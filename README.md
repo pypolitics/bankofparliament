@@ -29,7 +29,6 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 ## Todo
 
 * Better header and filter / sort area
-* Better thumbnails on graph nodes
 * Text on the About page
 
 * Photo of mp on graph
