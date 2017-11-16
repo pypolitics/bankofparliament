@@ -3,9 +3,8 @@
     width: 98%;
 }
 
-.thumbnail_picture:hover {
-	/*transform: scale(1.08);*/
-
+.row {
+  margin-top: -20px
 }
 
 /*photo of mp*/
@@ -24,8 +23,8 @@
 .thumbnail_label {
 
 	text-align: center;
-	font-size: 11px;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 400;
 	margin-top: 8px;
 }
 
@@ -162,6 +161,10 @@
   filter: alpha(opacity=80);
 }
 
+#fade {
+  /*margin-top: 30px;*/
+
+}
 .plotly-graph-div {
   /*original state*/
   display: none;
@@ -214,5 +217,16 @@ a h2 {
     text-align: center;
     font-size: 12px;
     font-weight: 100;
-    padding-top: 20px;
+    padding-top: 16px;
+}
+
+a.navbar-brand {
+  background: -webkit-linear-gradient(top, #ccccff, #66ffcc);
+  background: linear-gradient(top, #ccccff, #66ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+br {
+  line-height: 18px;
 }
