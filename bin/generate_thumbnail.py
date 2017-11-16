@@ -17,7 +17,7 @@ def write_thumbnail(html_file, family_pretty, member_id, name, party, party_stri
 
     # html block
     html = '\n'
-    html += '\t\t<div class="thumbnail_widget _%s %s %s" data-income=%s data-freebies=%s data-wealth=%s data-member=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), int(total_income), int(total_freebies), int(total_wealth), member_id)
+    html += '\t\t<div class="thumbnail_widget _%s %s %s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside=%s data-direct=%s data-indirect=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-misc=%s data-family=%s data-lobbyists=%s data-member=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), int(miscellaneous), int(len(family_items)), int(len(family_lobbyists_items)), member_id)
     html += '\n'
     html += '\t\t\t<a>\n'
     html += '\t\t\t\t<h2 class="thumbnail_detail %s" data-memberid=%s><b>Income</b></br>%s</br><b>Freebies</b></br>%s</br><b>Wealth</b></br>%s</h2>\n' % (party.lower(), member_id, total_income_f, total_freebies_f, total_wealth_f)
