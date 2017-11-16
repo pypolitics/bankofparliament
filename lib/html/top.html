@@ -22,12 +22,16 @@
 
 <nav class = "navbar navbar-inverse bg-inverse" role = "navigation">
 	<div class = "navbar-header">
-		<a class = "navbar-brand" style="font-weight: 400; font-size: 26px; color: white" href = "#">Bank of Parliament</a>
+		<a class = "navbar-brand" style="font-weight: 700; font-size: 30px; letter-spacing: 3px; color: white" href ="javascript:window.location.reload(true)">bank of parliament</a>
 	</div>
 	<div>
 		<ul class = "nav navbar-nav">
-			<li><a target="_blank" href="https://github.com/pypolitics/notpolitics">About</a></li>
-			<li class = "dropdown">
+			<li><a target="_blank" href="https://github.com/pypolitics/notpolitics">Github</a></li>
+			<form class="navbar-form navbar-left" role="search">
+				<input class="form-control input-sm" style="width: 400px;" type="text" id="search_text" onkeyup="search_function()" placeholder="Filter by names, parties, constituencies..." >
+			</form>
+
+			<li class = "dropdown navbar-right">
 				<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
 					Sort
 					<b class = "caret"></b>
@@ -55,17 +59,18 @@
 					<li><a class="sort_event" data-name="lobbyists" href = "#">Family Lobbyists</a></li>
 				</ul>
 			</li>
-			<form class="navbar-form navbar-right" role="search">
-				<input class="form-control input-sm" style="width: 400px;" type="text" id="search_text" onkeyup="search_function()" placeholder="Filter by names, parties, constituencies..." >
-			</form>
 		</ul>
 	</div>
 	<div class="wrapper">
-		<img class="img-responsive" src="lib/data/images/westminister.jpg"/>
+		<img class="img-responsive" src="/Users/elliott/Documents/pypolitics/notpolitics/lib/data/images/network.png"/>
+		<!-- <div><a>eds</a></div> -->
+		<div id="about_section">
+			<p>Bank of Parliament takes publicly available data, regarding the financial interests of politicians and visualises it in an easy to understand way.</p>
+			<p>Find out who received the most gifts, who owns the most property and who has the most lucrative private sector jobs.</p>
+		</div>
 	</div>
 </nav>
-<p></p>
 <!-- add the container for the row of mps -->
+<a id="fade" class="black_overlay" style="margin: 0px;" data-current=""></a>'
 <div class="container">
-	<div id="fade" class="black_overlay" data-current=""></div>'
 	<div class="row" id="therow">
