@@ -28,9 +28,9 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
+* prevent pan and zoom on plot
+* font on plot
 * data parsing - fix amount parsing on both property and employment categories
-* Better header and filter / sort area
-* Text on the About page
 * pretty strings on item parsing
 
 * Photo of mp on graph
