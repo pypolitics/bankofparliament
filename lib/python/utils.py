@@ -404,6 +404,11 @@ def write_scatter_plot(mp, plot_file):
 
     data_lines = {  'major' : {'color' : grey_darker, 'opacity' : 1, 'size' : 8, 'name' : None},
                     'minor' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 2, 'name' : None},
+
+                    'income_line' : {'color' : orange_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
+                    'wealth_line' : {'color' : grey_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
+                    'freebies_line' : {'color' : yellow_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
+                    'miscellaneous_line' : {'color' : pink_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
                     }
 
     data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 128},
@@ -507,7 +512,7 @@ def write_scatter_plot(mp, plot_file):
         cat_copy['amount'] = 0
         data['nodes'].append(cat_copy)
 
-        link = make_link(data_lines['major'], nodes = data['nodes'], source=node_main, target=cat_copy)
+        link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=node_main, target=cat_copy)
         l = copy.copy(link)
         data['links'].append(l)
 
@@ -532,7 +537,7 @@ def write_scatter_plot(mp, plot_file):
             sub_copy['amount'] = 0
             data['nodes'].append(sub_copy)
 
-            link = make_link(data_lines['major'], nodes = data['nodes'], source=cat_copy, target=sub_copy)
+            link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=cat_copy, target=sub_copy)
             l = copy.copy(link)
             data['links'].append(l)
 
@@ -570,7 +575,7 @@ def write_scatter_plot(mp, plot_file):
 
                 data['nodes'].append(item_copy)
 
-                link = make_link(data_lines['major'], nodes = data['nodes'], source=sub_copy, target=item_copy)
+                link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=sub_copy, target=item_copy)
                 l = copy.copy(link)
                 data['links'].append(l)
 

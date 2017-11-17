@@ -82,7 +82,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		               y = Ye,
 		               mode = 'lines',
 		               visible = True,
-		               line = Line(color = line_color, width = 1),
+		               line = Line(color = line_color, width = 2),
 		               hoverinfo = 'none',
 		               opacity = 0.2,
 		               name = 'lines'
@@ -97,7 +97,6 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		                             size = node_size,
 		                             color = node_color,
 		                             opacity = node_opacity,
-		                             colorscale = 'Viridis',
 		                             line = Line(color = node_border_color, width = node_border_size),
 		                             ),
 		               text = node_name,
@@ -113,13 +112,14 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		          zeroline=False,
 		          showgrid=False,
 		          showticklabels=False,
-		          title=''
+		          title='',
+		          fixedrange=True
 		          )
 
 		layout = Layout(
 			autosize=True,
-			width=width,
-			height=height,
+			# width=width,
+			# height=height,
 			showlegend=False,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
@@ -134,6 +134,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',
 			hidesources=True,
+			font=Font(size=14, color="#444", family="Abel"),
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
@@ -143,17 +144,17 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 					x=0,
 					y=0,
 					font=Font(
-						size=12)
+						size=12, family="Abel")
 					),
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 14px;"><b>%s,</b> %s</a>' %(title.title(), constituency.title()),
+					text='<a style="color: black; font-weight: 200;"><b>%s,</b> %s</a>' %(title.title(), constituency.title()),
 					xref='paper',
 					yref='paper',
 					x=0.5,
 					y=1,
 					font=Font(
-						size=14, color="#444")
+						size=18, color="#444", family="Abel")
 				)
 			]),
 			)
