@@ -24,24 +24,28 @@ class Property(Category):
 		Method performing the logic of parsing raw data into item class
 		"""
 
+		pretty= raw_string.split(':')[0]
 		next_id = len(self.items) + 1
 		item_id = '%04d' % next_id
 
-		# not much we can really split on
-		pretty = raw_string.split(' (Registered')[0]
+		# find the registered date
 		registered = regex_for_registered(raw_string)
-	
+
 		wealth = False
 		income = False
+
 		if '(i)' in raw_string:
+			# wealth
 			amount = 100000
-			if 'two' in raw_string.lower():
+			if 'one' in raw_string.lower():
+				amount = amount * 1
+			elif 'two' in raw_string.lower():
 				amount = amount * 2
-			if 'three' in raw_string.lower():
+			elif 'three' in raw_string.lower():
 				amount = amount * 3
-			if 'four' in raw_string.lower():
+			elif 'four' in raw_string.lower():
 				amount = amount * 4
-			if 'five' in raw_string.lower():
+			elif 'five' in raw_string.lower():
 				amount = amount * 5
 
 			item = PropertyItem(item_id, self.category_id, raw_string, pretty, registered, amount)
@@ -50,14 +54,17 @@ class Property(Category):
 			self.items.append(item)
 
 		if '(ii)' in raw_string:
+			# rental
 			amount = 10000
+			if 'one' in raw_string.lower():
+				amount = amount * 1
 			if 'two' in raw_string.lower():
 				amount = amount * 2
-			if 'three' in raw_string.lower():
+			elif 'three' in raw_string.lower():
 				amount = amount * 3
-			if 'four' in raw_string.lower():
+			elif 'four' in raw_string.lower():
 				amount = amount * 4
-			if 'five' in raw_string.lower():
+			elif 'five' in raw_string.lower():
 				amount = amount * 5
 
 			if wealth:
