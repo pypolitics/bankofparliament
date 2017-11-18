@@ -28,10 +28,7 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* prevent pan and zoom on plot
-* font on plot
-* data parsing - fix amount parsing on both property and employment categories
-* pretty strings on item parsing
+* banner stretch
 
 * Photo of mp on graph
 * Show companies house nodes on separate graph layer
