@@ -196,7 +196,7 @@
                "registered": "05/06/2015", 
                "isIncome": false, 
                "amount": 100000, 
-               "pretty": "A third share in six residential properties in York: (i) and (ii).", 
+               "pretty": "A third share in six residential properties in York", 
                "item_id": "0001", 
                "category_id": 7, 
                "isGift": false
@@ -209,7 +209,7 @@
                "registered": "05/06/2015", 
                "isIncome": true, 
                "amount": 10000, 
-               "pretty": "A third share in six residential properties in York: (i) and (ii).", 
+               "pretty": "A third share in six residential properties in York", 
                "item_id": "0002", 
                "category_id": 7, 
                "isGift": false
@@ -247,11 +247,12 @@
                "isGift": false, 
                "company": {
                   "status": "active", 
-                  "has_insolvency_history": false, 
+                  "has_insolvency_history": true, 
                   "links": {
                      "filing_history": "/company/08674604/filing-history", 
                      "self": "/company/08674604", 
                      "officers": "/company/08674604/officers", 
+                     "insolvency": "/company/08674604/insolvency", 
                      "persons_with_significant_control": "/company/08674604/persons-with-significant-control"
                   }, 
                   "can_file": true, 
@@ -261,14 +262,13 @@
                      "47990", 
                      "63120"
                   ], 
-                  "etag": "0c0247871a2e1da3aa4f65487e669e90fc7bb1f5", 
+                  "etag": "214ef8054460f6cc8f0d7fd6d6c23af61c177ffa", 
                   "registered_office_address": {
-                     "locality": "York", 
-                     "country": "England", 
-                     "region": "North Yorkshire", 
                      "postal_code": "YO31 7RE", 
-                     "address_line_2": "Heworth Green", 
-                     "address_line_1": "Apollo House Eboracum Way"
+                     "region": "York", 
+                     "locality": "Heworth Green", 
+                     "address_line_2": "Eboracum Way", 
+                     "address_line_1": "Apollo House"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
@@ -305,7 +305,7 @@
                      "overdue": true
                   }, 
                   "company_name": "SHOPTILITY LIMITED", 
-                  "company_status": "active", 
+                  "company_status": "liquidation", 
                   "has_charges": false, 
                   "type": "ltd", 
                   "registered_office_is_in_dispute": false
