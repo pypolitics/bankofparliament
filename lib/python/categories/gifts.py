@@ -57,6 +57,7 @@ class Gifts(Category):
 
 				if 'name of donor' in pair[0].lower():
 					donor = value
+					pretty = donor
 				elif 'address of donor' in pair[0].lower():
 					address = value
 				elif 'received' in pair[0].lower():
@@ -65,8 +66,8 @@ class Gifts(Category):
 					accepted = value
 				elif 'donor status' in pair[0].lower():
 					status = value
-				elif 'amount' in pair[0].lower():
-					pretty = value
+				# elif 'amount' in pair[0].lower():
+				# 	pretty = value
 
 		item = GiftsItem(item_id, self.category_id, raw_string, pretty, registered, amount)
 		item.donor = donor
@@ -74,7 +75,6 @@ class Gifts(Category):
 		item.received = received
 		item.accepted = accepted
 		item.status = status
-
 		self.items.append(item)
 
 class GiftsOutsideUK(Category):
@@ -130,6 +130,7 @@ class GiftsOutsideUK(Category):
 
 				if 'name of donor' in pair[0].lower():
 					donor = value
+					pretty = donor
 				elif 'address of donor' in pair[0].lower():
 					address = value
 				elif 'received' in pair[0].lower():
@@ -138,8 +139,8 @@ class GiftsOutsideUK(Category):
 					accepted = value
 				elif 'donor status' in pair[0].lower():
 					status = value
-				elif 'amount' in pair[0].lower():
-					pretty = value
+				# elif 'amount' in pair[0].lower():
+				# 	pretty = value
 
 		item = GiftsItem(item_id, self.category_id, raw_string, pretty, registered, amount)
 		item.donor = donor
@@ -147,5 +148,4 @@ class GiftsOutsideUK(Category):
 		item.received = received
 		item.accepted = accepted
 		item.status = status
-
 		self.items.append(item)

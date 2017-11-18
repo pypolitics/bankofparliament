@@ -60,6 +60,7 @@ class VisitsOutsideUK(Category):
 
 				if 'name of donor' in pair[0].lower():
 					donor = value
+					pretty = donor
 				elif 'address of donor' in pair[0].lower():
 					address = value
 				elif 'destination' in pair[0].lower():
@@ -69,12 +70,13 @@ class VisitsOutsideUK(Category):
 				elif 'dates' in pair[0].lower():
 					dates = value
 				elif 'purpose' in pair[0].lower():
-					pretty = value
+					purpose = value
 
 		item = VisitsOutsideUKItem(item_id, self.category_id, raw_string, pretty, registered, amount)
 		item.donor = donor
 		item.address = address
 		item.destination = destination
 		item.dates = dates
+		item.purpose = purpose
 
 		self.items.append(item)
