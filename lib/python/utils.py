@@ -401,6 +401,8 @@ def write_scatter_plot(mp, plot_file):
     grey_darker = '#b8bab8'
     grey_lighter = '#d8dad8'
 
+    green_darker = '#00ff99'
+    green_lighter = '#4dffb8'
 
     data_lines = {  'major' : {'color' : grey_darker, 'opacity' : 1, 'size' : 8, 'name' : None},
                     'minor' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 2, 'name' : None},
@@ -409,6 +411,8 @@ def write_scatter_plot(mp, plot_file):
                     'wealth_line' : {'color' : grey_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
                     'freebies_line' : {'color' : yellow_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
                     'miscellaneous_line' : {'color' : pink_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
+                    'expenses_line' : {'color' : green_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
+
                     }
 
     data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 128},
@@ -429,6 +433,10 @@ def write_scatter_plot(mp, plot_file):
                     'miscellaneous_sub'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
                     'miscellaneous_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
 
+                    'expenses_item'        : {'color' : green_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
+                    'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
+
                     }
 
     # data
@@ -447,7 +455,7 @@ def write_scatter_plot(mp, plot_file):
     node_main['color'] = party_colours[mp['party'].lower()]
     data['nodes'].append(node_main)
 
-    categories = {'income' : [], 'freebies' : [], 'wealth' : [], 'miscellaneous' : []}
+    categories = {'income' : [], 'freebies' : [], 'wealth' : [], 'miscellaneous' : [], 'expenses' : []}
     for each in mp['categories']:
         category_type = each['category_type']
 
@@ -477,6 +485,9 @@ def write_scatter_plot(mp, plot_file):
 
             categories['income'].append(incomes)
             categories['wealth'].append(wealths)
+
+    # now expenses
+    categories['expenses'] = mp['expenses']
 
     main_range = []
     for c in categories.keys():
@@ -530,7 +541,11 @@ def write_scatter_plot(mp, plot_file):
             for i in spl:
                 s += '%s<br>' % i
 
-            hovertext = '<b>%s</b>£%s' % (s, amount)
+            if not category == 'expenses':
+                hovertext = '<b>%s</b>£%s' % (s, amount)
+            else:
+                hovertext = '<b>%s</br></br></b>£%s' % (sub['category_description'], amount)
+
             label = '%s' % sub['category_description']
             sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category)
             sub_copy = copy.copy(sub_node)
@@ -586,3 +601,69 @@ def write_scatter_plot(mp, plot_file):
 def camel_case_split(identifier):
     matches = re.finditer('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$|(?<=[0-9])(?=[A-Z]))', identifier)
     return [m.group(0) for m in matches]
+
+def read_expenses(expenses_data):
+    """
+    read expenses csv file, organise into ready made plot categories
+    """
+
+    expenses_dictionary = {}
+    office = ['Office spend', 'Staffing spend', 'Startup spend', 'Windup spend']
+    other = ['Accommodation spend', 'Travel/subs spend', 'Other spend']
+    total = []
+
+    keys = office + other + total
+
+    for year in expenses_data.keys():
+        expenses_dictionary[year] = []
+        with open(expenses_data[year], 'rb') as f:
+
+            # replace null
+            reader = csv.reader(x.replace('\0', '').replace('\xef\xbb\xbf', '').replace(' CC', '').replace(' BC', '') for x in f)
+            headers = reader.next()
+
+            for row in reader:
+                if row != []:
+                    data = {'office' : {'items' : []}, 'other' : {'items' : []}}
+
+                    data = {}
+                    data['category_amount'] = 0
+                    data['category_description'] = '%s' % year.replace('-', ' - ')
+                    data['isCurrency'] = True
+                    data['items'] = []
+                    data['name'] = row[headers.index('MP name')].replace(u'\xa3', '').replace(',','')
+                    data['constituency'] = row[headers.index('Constituency')].replace(' CC', '').replace(' BC', '')
+
+                    for head in headers:
+                        if head in keys:
+                            i = head.decode('utf-8')
+                            cell = row[headers.index(head)]
+                            cell_amount = cell.replace(u'\xa3', '').replace(',','')
+                            try:
+                                amount = int(float(cell_amount))
+                            except:
+                                amount = amount
+
+                            item = {}
+                            item['amount'] = amount
+                            item['pretty'] = head
+
+                            data['items'].append(item)
+
+                    expenses_dictionary[year].append(data)
+            f.close()
+
+    return expenses_dictionary
+
+def match_expenses(mp, year, expenses_dictionary):
+    """
+    Match a year and an mp to its expenses record
+    """
+    for ex in expenses_dictionary[year]:
+        if mp['name'] == ex['name']:
+            return [ex]
+        elif mp['constituency'] == ex['constituency']:
+            return [ex]
+
+    print 'Unmatched : ', mp['name']
+    return {'items' : [], 'category_amount' : 0, 'category_description' : year, 'isCurrency' : True, 'name' : mp['name']}

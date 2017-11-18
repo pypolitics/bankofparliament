@@ -14,7 +14,7 @@ sys.path.append('../lib/python')
 import shutil
 
 from generate_thumbnail import write_thumbnail
-from generate_plot import write_scatter_plot
+from utils import write_scatter_plot, read_expenses, match_expenses
 
 locale.setlocale(locale.LC_ALL, '')
 
@@ -29,6 +29,14 @@ images_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
 top_html = os.path.join(os.path.dirname(__file__), '../lib/html/top.html')
 tail_html = os.path.join(os.path.dirname(__file__), '../lib/html/tail.html')
 html_file = os.path.join(os.path.dirname(__file__), '../index.html')
+
+
+expenses_data_paths = {
+            # '2017-2018' : '../lib/data/export_17_18.csv',
+            '2016-2017' : '../lib/data/export_16_17.csv'
+            }
+
+expenses_data = read_expenses(expenses_data_paths)
 
 def main(mps):
     """
@@ -300,6 +308,9 @@ def print_mp_panel_into_file(member, plot_file):
     keywords.append(party_dict[party])
 
     nouns = ' '.join(keywords)
+
+    for year in expenses_data.keys():
+        member['expenses'] = match_expenses(member, year, expenses_data)
 
     # get scatter plot div string
     scatter_div = write_scatter_plot(member, plot_file)
