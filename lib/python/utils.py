@@ -417,23 +417,23 @@ def write_scatter_plot(mp, plot_file):
 
     data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 128},
 
-                    'income_item'        : {'color' : orange_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'income_item'        : {'color' : orange_lighter, 'opacity' : 0.8, 'size' : 30},
                     'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
                     'income_cat'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 60},
 
-                    'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 0.8, 'size' : 30},
                     'freebies_sub'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 40},
                     'freebies_cat'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 60},
 
-                    'wealth_item'        : {'color' : grey_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'wealth_item'        : {'color' : grey_lighter, 'opacity' : 0.8, 'size' : 30},
                     'wealth_sub'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 40},
                     'wealth_cat'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 60},
 
-                    'miscellaneous_item'        : {'color' : pink_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'miscellaneous_item'        : {'color' : pink_lighter, 'opacity' : 0.8, 'size' : 30},
                     'miscellaneous_sub'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
                     'miscellaneous_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
 
-                    'expenses_item'        : {'color' : green_lighter, 'opacity' : 0.9, 'size' : 30},
+                    'expenses_item'        : {'color' : green_lighter, 'opacity' : 0.8, 'size' : 30},
                     'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
                     'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
 
@@ -516,7 +516,13 @@ def write_scatter_plot(mp, plot_file):
                     amount += i['amount']
 
         amount = "{:,}".format(amount)
+
         hovertext = '<b>%s</b></br></br>£%s' % (category.title(), str(amount))
+        if category in ['wealth', 'income']:
+            hovertext = '<b>%s</b></br></br>£%s (Min)' % (category.title(), str(amount))
+        else:
+            hovertext = '<b>%s</b></br></br>£%s' % (category.title(), str(amount))
+
         label = '<b>%s</b>' % category.title()
         cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category)
         cat_copy = copy.copy(cat_node)
@@ -528,7 +534,6 @@ def write_scatter_plot(mp, plot_file):
         data['links'].append(l)
 
         for sub in categories[category]:
-
             # sub category total amount
             amount = 0
             for i in sub['items']:
@@ -542,7 +547,13 @@ def write_scatter_plot(mp, plot_file):
                 s += '%s<br>' % i
 
             if not category == 'expenses':
-                hovertext = '<b>%s</b>£%s' % (s, amount)
+                if sub['category_description'] in ['Other Shareholdings', 'Property', 'Rental Income']:
+                    hovertext = '<b>%s</b>£%s (Min)' % (s, amount)
+
+                elif sub['category_description'] == 'Shareholdings':
+                    hovertext = '<b>Shareholdings</b>'
+                else:
+                    hovertext = '<b>%s</b>£%s' % (s, amount)
             else:
                 hovertext = '<b>%s</br></br></b>£%s' % (sub['category_description'], amount)
 
@@ -559,7 +570,16 @@ def write_scatter_plot(mp, plot_file):
             for item in sub['items']:
 
                 if sub['isCurrency']:
+
+                    # the item is a currency, see if it requires a '(Min)' suffix too
                     label = "£" + "{:,}".format(item['amount'])
+                    if sub['category_description'] in ['Other Shareholdings', 'Property', 'Rental Income']:
+                        label += '+'
+
+
+                # its not currency
+                elif sub['category_description'] == 'Shareholdings':
+                    label = '%s' % item['amount'] + r'%'
                 else:
                     label = ''
 

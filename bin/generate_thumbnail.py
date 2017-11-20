@@ -29,7 +29,7 @@ def write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, 
     html += '\t\t\t\t\t</br>%s</br>\n' % total_income_f
     html += '\t\t\t\t\t<b>Freebies</b>\n'
     html += '\t\t\t\t\t</br>%s</br>\n' % total_freebies_f
-    html += '\t\t\t\t\t<b>Wealth</b>\n'
+    html += '\t\t\t\t\t<b>Wealth (Min)</b>\n'
     html += '\t\t\t\t\t</br>%s</br>\n' % total_wealth_f
     html += '\t\t\t\t\t<b>Expenses</b>\n'
     html += '\t\t\t\t\t</br>%s</br>\n' % total_expenses_f
