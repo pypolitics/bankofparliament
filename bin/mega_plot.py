@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # thirdparty libs
@@ -8,7 +9,7 @@ from plotly.graph_objs import *
 from optparse import OptionParser
 import os, sys, json
 import operator, copy
-import sys
+
 sys.path.append('../lib/python')
 from constants import party_colours
 
@@ -28,38 +29,10 @@ green_darker = '#00ff99'
 green_lighter = '#4dffb8'
 
 data_lines = {  'major' : {'color' : 'white', 'opacity' : 1, 'size' : 4, 'name' : None},
-                # 'minor' : {'color' : 'rgb(25, 3, 79)', 'opacity' : 0, 'size' : 4, 'name' : None},
-
-                'income_line' : {'color' : orange_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                'wealth_line' : {'color' : grey_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                'freebies_line' : {'color' : yellow_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                'miscellaneous_line' : {'color' : pink_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                'expenses_line' : {'color' : green_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-
-                }
+				}
 
 data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 30},
 				'item'              : {'color' : grey_lighter, 'opacity' : 1, 'size' : 10},
-
-                'income_item'        : {'color' : orange_lighter, 'opacity' : 0.9, 'size' : 30},
-                'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
-                'income_cat'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 60},
-
-                'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 0.9, 'size' : 30},
-                'freebies_sub'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 40},
-                'freebies_cat'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 60},
-
-                'wealth_item'        : {'color' : grey_lighter, 'opacity' : 0.9, 'size' : 30},
-                'wealth_sub'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 40},
-                'wealth_cat'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 60},
-
-                'miscellaneous_item'        : {'color' : pink_lighter, 'opacity' : 0.9, 'size' : 30},
-                'miscellaneous_sub'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
-                'miscellaneous_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
-
-                'expenses_item'        : {'color' : green_lighter, 'opacity' : 0.9, 'size' : 30},
-                'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
-                'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
 
                 }
 
@@ -82,13 +55,14 @@ def main(mps):
 		first = splits[0]
 		last = ' '.join(splits[1:])
 		label = '<b>%s<br>%s' % (first, last)
+		label = mp['name']
 
 		node_mp = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
 		node_copy = copy.copy(node_mp)
 		node_copy['color'] = party_colours[mp['party'].lower()]
 		data['nodes'].append(node_copy)
 
-		link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_copy, amount=0)
+		link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_copy, amount=0, party=mp['party'])
 		l = copy.copy(link)
 		data['links'].append(l)
 
@@ -98,25 +72,30 @@ def main(mps):
 			if cat['category_description'] in ['Indirect Donations', 'Direct Donations', 'Gifts', 'Vists Outside UK', 'Gifts Outside UK']:
 
 				for item in cat['items']:
-
+					# WE NEED THESE AS ENTITIES IN THIER OWN RIGHT - need to json plotly plot them
 					node_item = make_node(data_nodes['item'], name=item['pretty'], hovertext=item['pretty'], node_type='mp')
 					node_item_copy = copy.copy(node_item)
 
 					if node_item_copy not in data['nodes']:
 						# print '\t\tNot in nodes : %s' % item['pretty']
+						# node_item_copy['color'] = party_colours[mp['party'].lower()]
 						data['nodes'].append(node_item_copy)
 					# else:
 						# print '\t\tMatched a node : %s' % item['pretty']
 
-					link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_item_copy, amount=item['amount'])
+					link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_item_copy, amount=item['amount'], party=mp['party'])
 					l = copy.copy(link)
 					data['links'].append(l)
 
 	print 'Find sizes'
 	# find the total node amounts
+	names = [str(i['name']) for i in mps]
+
+	# print names
 	amounts = []
 	for node in data['nodes']:
 		node['amount'] = 0
+
 		if node['name'] != 'House of Commons':
 
 			for link in data['links']:
@@ -125,6 +104,9 @@ def main(mps):
 
 					node['amount'] += link['amount']
 					amounts.append(link['amount'])
+
+					node['color'] = party_colours[link['party'].lower()]
+
 
 	# scale the nodes, by their amounts
 	current_min = min(amounts)
@@ -135,7 +117,8 @@ def main(mps):
 	for n in data['nodes']:
 		size_value = int(translate(int(n['amount']), current_min, current_max, new_min, new_max))
 		n['size'] = size_value
-		n['name'] = n['name'] + u' £' + "{:,}".format(n['amount'])
+		if n['name'] not in names:
+			n['name'] = n['name'] + u' £' + "{:,}".format(n['amount'])
 
 	plot(data)
 
@@ -179,6 +162,9 @@ def plot(data, dot_width=0.5):
 		node_opacity = []
 		node_size = []
 		node_name = []
+		node_amount = []
+		node_hyperlink = []
+		node_customdata = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -190,6 +176,11 @@ def plot(data, dot_width=0.5):
 			node_color.append(node['color'])
 			node_opacity.append(node['opacity'])
 			node_size.append(node['size'])
+			node_amount.append(node['amount'])
+			node_hyperlink.append(node['hyperlink'])
+			node_customdata.append(node['customdata'])
+
+		# print node_customdata
 
 		# create a Kamada-Kawai layout
 		layt = G.layout('kk', dim=3)
@@ -227,11 +218,13 @@ def plot(data, dot_width=0.5):
 		               marker = Marker(symbol = 'dot',
 		                             size = node_size,
 		                             color = node_color,
+		                             # color = node_amount,
 		                             opacity = node_opacity,
-		                             colorscale = 'Viridis',
+		                             # colorscale = 'Portland',
 		                             line = Line(color = 'rgb(50,50,50)', width = dot_width)),
 		               text = node_name,
-		               hoverinfo = 'text'
+		               hoverinfo = 'text',
+		               customdata = node_customdata,
 		               )
 
 
@@ -245,8 +238,9 @@ def plot(data, dot_width=0.5):
 
 		layout = Layout(
 			# title=title,
-			width=1300,
-			height=800,
+			autosize=True,
+			# width=1300,
+			# height=800,
 			showlegend=False,
 			# plot_bgcolor='rgba(0,0,0,0)',
 			# paper_bgcolor='rgba(0,0,0,0)',
@@ -265,6 +259,11 @@ def plot(data, dot_width=0.5):
 		data = Data([trace1, trace2])
 		fig = Figure(data=data, layout=layout)
 
+		# save data and layout to json
+		json_data = {'data' : data, 'layout' : layout}
+		with open('../lib/data/plots/mega_plot.json', "w") as f:
+			json.dump(json_data, f)
+
 		print 'Now Plot'
 		html = offline.plot(fig, auto_open=True)
 
@@ -280,15 +279,17 @@ def make_node(node, name, hovertext, node_type, hyperlink=None, unique=False):
     node['hovertext'] = hovertext
     node['node_type'] = node_type
     node['hyperlink'] = hyperlink
+    node['customdata'] = {'name' : name, 'plotfile' : '12345.json'}
     node['border_style'] = {'color' : 'rgb(50,50,50)', 'size' : 0.5}
     return node
 
-def make_link(link, nodes, source, target, amount):
+def make_link(link, nodes, source, target, amount, party):
     """"""
 
     link['source'] = nodes.index(source)
     link['target'] = nodes.index(target)
     link['amount'] = amount
+    link['party'] = party
     # print link
     return link
 
