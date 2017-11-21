@@ -25,7 +25,7 @@ def write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, 
     html += '\n'
     html += '\t\t\t<a>\n'
     html += '\t\t\t\t<h2 class="thumbnail_detail %s" data-memberid=%s>\n' % (party.lower(), member_id)
-    html += '\t\t\t\t\t<b>Income</b>\n'
+    html += '\t\t\t\t\t<b>Income (Min)</b>\n'
     html += '\t\t\t\t\t</br>%s</br>\n' % total_income_f
     html += '\t\t\t\t\t<b>Freebies</b>\n'
     html += '\t\t\t\t\t</br>%s</br>\n' % total_freebies_f
@@ -36,7 +36,7 @@ def write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, 
     html += '\t\t\t\t</h2>\n'
     html += '\t\t\t\t<img class="thumbnail_picture %s" data-memberid=%s src="lib/data/images/%s" border="0"></a>\n' % (party.lower(), member_id, photo)
     html += '\t\t\t</a>\n'
-    html += '\t\t\t<p class="thumbnail_label">%s</p>\n' % name
+    html += '\t\t\t<p href="#" class="thumbnail_label" title="%s, %s">%s</p>\n' % (party.title(), constituency.title(), name)
     html += '\n'
     html += '\t\t\t<p id=%s style="height: 619px; width: 1100px;" class="plotly-graph-div" data-memberid=%s><a class="close" data-memberid=%s></a></p>\n' % (member_id, member_id, member_id)
     html += '\t\t</div>\n'
