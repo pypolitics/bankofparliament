@@ -31,9 +31,10 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 * banner stretch
 
 * Photo of mp on graph
+* Firefox, Chrome etc compatibility
+* Use flexbox for grid layout
 * Show companies house nodes on separate graph layer
 * Mobile / Tablet compatibility
-* Add expenses data
 * Add panama and paradise leaks to companies / people linked to mp
 
 * Ability to show web of connections, between other MP's (and thier companies), the members of those other companies. Web to show the entirety of parliament (or selected mps) or single web of one person, that can be travelled.
