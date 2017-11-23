@@ -15,7 +15,7 @@
 
     <!-- local stylesheet -->
     <link rel="stylesheet" href="lib/css/thumbs.css">
-    <!-- <link rel="stylesheet" href="lib/css/nav.css"> -->
+    <link rel="stylesheet" href="lib/css/isotope.css">
   </head>
 <body>
 
@@ -26,7 +26,7 @@
 	<div>
 		<ul class = "nav navbar-nav">
 			<li><a target="_blank" href="https://github.com/pypolitics/notpolitics">Github</a></li>
-			<li><a target="_blank" href="lib/html/network.html">Dev</a></li>
+			<!-- <li><a target="_blank" href="lib/html/network.html">Dev</a></li> -->
 			<form class="navbar-form navbar-left" role="search">
 				<input class="form-control input-sm" style="width: 400px;" type="text" id="search_text" onkeyup="search_function()" placeholder="Filter by names, parties, constituencies..." >
 			</form>
@@ -73,6 +73,7 @@
 </nav>
 <!-- add the container for the row of mps -->
 <a id="fade" class="black_overlay" style="margin: 0px;" data-current=""></a>'
-<div class="container-fluid bg-3 text-center">
-  </br>
-  <div class="row" id="therow">
+<div>
+	<p id="plot" class="plotly-graph-div" style="width:90%; height:90%"></p>
+</div>
+<div class="grid" id="therow">

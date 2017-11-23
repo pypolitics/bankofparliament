@@ -18,19 +18,23 @@ def write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, 
     party = party.replace('/', '-')
 
     html = '\n'
-    html += '\t\t<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 thumbnail_widget _%s _%s _%s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside=%s data-direct=%s data-indirect=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-misc=%s data-family=%s data-lobbyists=%s data-expenses=%s data-member=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), int(miscellaneous), int(len(family_items)), int(len(family_lobbyists_items)), int(total_expenses), member_id)
+    html += '\t\t<div class="element-item thumbnail_widget _%s _%s _%s" data-salary=%s data-privateinc=%s data-rental=%s data-income=%s data-gifts=%s data-gifts_outside=%s data-direct=%s data-indirect=%s data-visits=%s data-freebies=%s data-shareholdings=%s data-shareholdings_percent=%s data-property=%s data-wealth=%s data-misc=%s data-family=%s data-lobbyists=%s data-expenses=%s data-member=%s>\n' % (name.lower(), party_string.lower(), constituency.lower(), int(salary), int(private_income), int(rental_income), int(total_income), int(gifts), int(gifts_outside_uk), int(direct_donations), int(indirect_donations), int(visits_outside_uk), int(total_freebies), int(shareholdings), int(shareholdings_percent), int(property_wealth), int(total_wealth), int(miscellaneous), int(len(family_items)), int(len(family_lobbyists_items)), int(total_expenses), member_id)
     html += '\t\t\t<a>\n'
     html += '\t\t\t\t<h2 class="thumbnail_detail %s" data-memberid=%s>\n' % (party.lower(), member_id)
-    # html += '\t\t\t\t<b>Income</b>\n'
-    # html += '\t\t\t\t</br>%s</br>\n' % total_income_f
-    # html += '\t\t\t\t\t<b>Wealth</b>\n'
-    # html += '\t\t\t\t\t</br>%s</br>\n' % total_wealth_f
+    html += '\t\t\t\t<b>Income</b>\n'
+    html += '\t\t\t\t</br>%s</br>\n' % total_income_f
+    html += '\t\t\t\t<b>Freeblies</b>\n'
+    html += '\t\t\t\t</br>%s</br>\n' % total_freebies_f
+    html += '\t\t\t\t\t<b>Wealth</b>\n'
+    html += '\t\t\t\t\t</br>%s</br>\n' % total_wealth_f
+    html += '\t\t\t\t\t<b>Expenses</b>\n'
+    html += '\t\t\t\t\t</br>%s</br>\n' % total_expenses_f
     html += '\t\t\t\t</h2>'
     html += '\t\t\t\t<img src="lib/data/images/%s" class="img-responsive %s data-memberid=%s" style="width:100' % (photo, party.lower(), member_id) + r'%' + '; border-radius:50' + r'%' + '" alt="Image">\n'
     html += '\t\t\t</a>\n'
     html += '\t\t\t<p class="thumbnail_label">%s</p>\n' % name.title()
-    html += '\t\t\t<p id=%s style="height: 619px; width: 1100px;" class="plotly-graph-div" data-memberid=%s><a class="close" data-memberid=%s></a></p>\n' % (member_id, member_id, member_id)
     html += '\t\t</div>\n'
+
 
     # write it out
     with open(html_file, "a") as myfile:
