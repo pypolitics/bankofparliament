@@ -180,16 +180,15 @@
   top: 50%;
   left: 50%;
   position: fixed;
-
-  /*center the plot graph, 1100 x 619*/
-  margin-left:-580px;
-  margin-top:-309px;
   border-radius: 10px;
   background-color: #ededed;
 
   /*bring to front*/
   z-index: 1005;
   text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
 }
 
 .thumbnail_background {
