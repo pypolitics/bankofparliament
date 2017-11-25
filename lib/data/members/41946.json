@@ -321,63 +321,36 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "has_insolvency_history": false, 
-                  "links": {
-                     "filing_history": "/company/03076941/filing-history", 
-                     "self": "/company/03076941", 
-                     "officers": "/company/03076941/officers", 
-                     "persons_with_significant_control": "/company/03076941/persons-with-significant-control"
-                  }, 
-                  "can_file": true, 
-                  "sic_codes": [
-                     "96030"
-                  ], 
-                  "etag": "5549f1cc4cb6f1feea41beb1c15460dee31a839e", 
-                  "registered_office_address": {
-                     "postal_code": "YO60 6QB", 
-                     "locality": "York", 
-                     "address_line_2": "Terrington", 
-                     "address_line_1": "Southwood Farm"
-                  }, 
-                  "undeliverable_registered_office_address": false, 
-                  "items": [], 
-                  "jurisdiction": "england-wales", 
-                  "confirmation_statement": {
-                     "next_due": "2017-12-04", 
-                     "last_made_up_to": "2016-11-20", 
-                     "next_made_up_to": "2017-11-20", 
-                     "overdue": false
-                  }, 
-                  "last_full_members_list_date": "2015-11-20", 
-                  "company_number": "03076941", 
                   "date_of_creation": "1995-07-03", 
-                  "has_been_liquidated": false, 
-                  "accounts": {
-                     "next_due": "2018-01-31", 
-                     "next_made_up_to": "2017-04-30", 
-                     "last_accounts": {
-                        "period_start_on": "2015-05-01", 
-                        "type": "total-exemption-small", 
-                        "made_up_to": "2016-04-30", 
-                        "period_end_on": "2016-04-30"
-                     }, 
-                     "next_accounts": {
-                        "due_on": "2018-01-31", 
-                        "period_start_on": "2016-05-01", 
-                        "period_end_on": "2017-04-30", 
-                        "overdue": false
-                     }, 
-                     "accounting_reference_date": {
-                        "day": "30", 
-                        "month": "04"
-                     }, 
-                     "overdue": false
+                  "kind": "searchresults#company", 
+                  "description": "03076941 - Incorporated on  3 July 1995", 
+                  "links": {
+                     "self": "/company/03076941"
                   }, 
-                  "company_name": "MOWTHORPE (UK) LTD", 
+                  "title": "MOWTHORPE (UK) LTD", 
+                  "matches": {
+                     "snippet": [], 
+                     "title": [
+                        1, 
+                        9, 
+                        11, 
+                        14
+                     ]
+                  }, 
+                  "company_type": "ltd", 
+                  "company_number": "03076941", 
+                  "address_snippet": "Southwood Farm, Terrington, York, YO60 6QB", 
+                  "snippet": "", 
                   "company_status": "active", 
-                  "has_charges": false, 
-                  "type": "ltd", 
-                  "registered_office_is_in_dispute": false
+                  "address": {
+                     "premises": "Southwood Farm", 
+                     "locality": "York", 
+                     "postal_code": "YO60 6QB", 
+                     "address_line_1": "Terrington"
+                  }, 
+                  "description_identifier": [
+                     "incorporated-on"
+                  ]
                }
             }
          ], 
@@ -394,6 +367,7 @@
          "year": 1956, 
          "category_id": 8, 
          "category_amount": 15, 
+         "display": "mr robert goodwill", 
          "category_donations": 0, 
          "first": "robert"
       }, 
@@ -409,12 +383,44 @@
                "registered": null, 
                "isIncome": false, 
                "amount": 70000, 
-               "link": "", 
+               "link": "https://beta.companieshouse.gov.uk/company/00048839", 
                "pretty": "Barclays; banking", 
                "item_id": "0001", 
                "category_id": 9, 
                "isGift": false, 
-               "company": {}
+               "company": {
+                  "snippet": "BARCLAYS BANK ", 
+                  "kind": "searchresults#company", 
+                  "description": "00048839 - Incorporated on 20 July 1896", 
+                  "links": {
+                     "self": "/company/00048839"
+                  }, 
+                  "title": "BARCLAYS PLC", 
+                  "matches": {
+                     "snippet": [
+                        1, 
+                        8
+                     ], 
+                     "title": [
+                        1, 
+                        8
+                     ]
+                  }, 
+                  "company_type": "plc", 
+                  "company_number": "00048839", 
+                  "address_snippet": "1  Churchill Place, London, E14 5HP", 
+                  "date_of_creation": "1896-07-20", 
+                  "company_status": "active", 
+                  "address": {
+                     "premises": "1 ", 
+                     "locality": "London", 
+                     "postal_code": "E14 5HP", 
+                     "address_line_1": "Churchill Place"
+                  }, 
+                  "description_identifier": [
+                     "incorporated-on"
+                  ]
+               }
             }
          ], 
          "category_description": "Other Shareholdings", 
@@ -430,6 +436,7 @@
          "year": 1956, 
          "category_id": 9, 
          "category_amount": 70000, 
+         "display": "mr robert goodwill", 
          "category_donations": 0, 
          "first": "robert"
       }, 
