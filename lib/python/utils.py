@@ -600,7 +600,7 @@ def write_scatter_plot(mp, plot_file):
                 if 'shareholding' in sub['category_description'].lower():
                     hovertext = '</br></br><b>Register of Interests Raw String:</b>'
                     hovertext += '</br>' + '</br>'.join(wrapped)
-                    # hovertext += '</br></br><b>Companies House Data:</b></br>'
+
                     hovertext += '</br>'
                     if item['company'].has_key('company_name'):
                         hovertext += '</br><b>Company Name:</b> %s' % item['company']['company_name'].title()
@@ -608,13 +608,7 @@ def write_scatter_plot(mp, plot_file):
                         hovertext += '</br><b>Company Number:</b> %s' % item['company']['company_number']
                     if item['company'].has_key('company_status'):
                         hovertext += '</br><b>Company Status:</b> %s' % item['company']['company_status'].title()
-                    if item['company'].has_key('type'):
-                        hovertext += '</br><b>Company Type:</b> %s' % item['company']['type'].title()
-                    if item['company'].has_key('jurisdiction'):
-                        hovertext += '</br><b>Jurisdiction:</b> %s' % item['company']['jurisdiction'].title()
-
                     if item['company'].has_key('sic_codes'):
-
                         for sic in item['company']['sic_codes']:
                             hovertext += '</br><b>Sic Code:</b> %s</br>' % read_sic_codes(sic)
 
@@ -654,7 +648,19 @@ def write_scatter_plot(mp, plot_file):
                             pretty += '</br>%s</br>' % control.replace('-', ' ').title()
 
                         label = ''
-                        hovertext = '%s</br>' % person['name']
+                        hovertext = '<b>%s</b></br>' % person['name']
+                        hovertext += '</br>'
+                        hovertext += '</br><b>Kind:</b> %s' % person['kind'].replace('-', ' ').title()
+
+                        if person.has_key('nationality'):
+                            hovertext += '</br><b>Nationality:</b> %s' % person['nationality']
+                        if person.has_key('identification'):
+                            hovertext += '</br><b>Registered:</b> %s' % person['identification']['country_registered']
+
+                        hovertext += '</br>'
+                        for control in person['natures_of_control']:
+                            hovertext += '</br><b>Control:</b> %s' % control.replace('-', ' ').title()
+
                         if url:
                             url = item['link'] + '/persons-with-significant-control/'
 
