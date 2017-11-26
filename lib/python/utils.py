@@ -595,7 +595,7 @@ def write_scatter_plot(mp, plot_file):
                 # textwrap the hovertext
                 pretty = item['pretty']
                 wrapped = textwrap.wrap(pretty, 50)
-                hovertext += '</br>' + '</br>'.join(wrapped)
+                hovertext = '</br>' + '</br>'.join(wrapped)
 
                 if 'shareholding' in sub['category_description'].lower():
                     hovertext = '</br></br><b>Register of Interests Raw String:</b>'
