@@ -648,19 +648,21 @@ def write_scatter_plot(mp, plot_file):
                             pretty += '</br>%s</br>' % control.replace('-', ' ').title()
 
                         label = ''
-                        hovertext = '<b>%s</b></br>' % person['name']
-                        hovertext += '</br>'
-                        hovertext += '</br><b>Kind:</b> %s' % person['kind'].replace('-', ' ').title()
+                        hovertext = '%s</br>' % person['name']
+                        # hovertext = '<b>%s</b></br>' % person['name']
+                        # hovertext += '</br>'
+                        # hovertext += '</br><b>Kind:</b> %s' % person['kind'].replace('-', ' ').title()
 
-                        if person.has_key('nationality'):
-                            hovertext += '</br><b>Nationality:</b> %s' % person['nationality']
-                        if person.has_key('identification'):
-                            if person['identification'].has_key('country_registered'):
-                                hovertext += '</br><b>Registered:</b> %s' % person['identification']['country_registered']
+                        # if person.has_key('nationality'):
+                        #     hovertext += '</br><b>Nationality:</b> %s' % person['nationality']
 
-                        hovertext += '</br>'
-                        for control in person['natures_of_control']:
-                            hovertext += '</br><b>Control:</b> %s' % control.replace('-', ' ').title()
+                        # if person.has_key('identification'):
+                        #     if person['identification'].has_key('country_registered'):
+                        #         hovertext += '</br><b>Registered:</b> %s' % person['identification']['country_registered']
+
+                        # hovertext += '</br>'
+                        # for control in person['natures_of_control']:
+                        #     hovertext += '</br><b>Control:</b> %s' % control.replace('-', ' ').title()
 
                         if url:
                             url = item['link'] + '/persons-with-significant-control/'
