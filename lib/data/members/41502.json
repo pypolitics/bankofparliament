@@ -205,7 +205,36 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "16/03/2017", 
+               "officers": [
+                  {
+                     "name": "COWAN, Ronnie", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SaWRUFzw8FwIRZyDixDNJsN3_n4/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-04-19", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 9
+                     }, 
+                     "address": {
+                        "locality": "Poole", 
+                        "premises": "Unit 4", 
+                        "country": "United Kingdom", 
+                        "region": "Dorset", 
+                        "postal_code": "BH12 1JY", 
+                        "address_line_2": "Ingworth Road", 
+                        "address_line_1": "Vista Place, Coy Pond Business Park"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Scottish", 
+                     "occupation": "I T Consultant"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/07609331", 
@@ -214,41 +243,49 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "date_of_creation": "2011-04-19", 
-                  "kind": "searchresults#company", 
-                  "date_of_cessation": "2017-06-27", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/07609331"
+                     "filing_history": "/company/07609331/filing-history", 
+                     "self": "/company/07609331", 
+                     "officers": "/company/07609331/officers"
                   }, 
-                  "title": "RONNIE COWAN SOLUTIONS LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        6, 
-                        8, 
-                        12, 
-                        14, 
-                        22
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "company_number": "07609331", 
-                  "address_snippet": "Unit 4  Vista Place, Coy Pond Business Park, Ingworth Road, Poole, Dorset, BH12 1JY", 
-                  "company_status": "dissolved", 
-                  "snippet": "", 
-                  "address": {
-                     "locality": "Poole", 
-                     "premises": "Unit 4 ", 
-                     "region": "Dorset", 
-                     "postal_code": "BH12 1JY", 
-                     "address_line_2": "Ingworth Road", 
-                     "address_line_1": "Vista Place, Coy Pond Business Park"
-                  }, 
-                  "description_identifier": [
-                     "dissolved-on"
+                  "can_file": false, 
+                  "sic_codes": [
+                     "63990"
                   ], 
-                  "description": "07609331 - Dissolved on 27 June 2017"
+                  "etag": "fd3effa2d27d979af28cc4bd6ed60cc6b37f6b27", 
+                  "registered_office_address": {
+                     "postal_code": "BH12 1JY", 
+                     "region": "Dorset", 
+                     "locality": "Poole", 
+                     "address_line_2": "Ingworth Road", 
+                     "address_line_1": "Unit 4 Vista Place, Coy Pond Business Park"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "last_full_members_list_date": "2016-04-19", 
+                  "company_number": "07609331", 
+                  "date_of_creation": "2011-04-19", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "last_accounts": {
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2015-04-30", 
+                        "period_end_on": "2015-04-30"
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "04"
+                     }
+                  }, 
+                  "company_name": "RONNIE COWAN SOLUTIONS LIMITED", 
+                  "company_status": "dissolved", 
+                  "has_charges": false, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false, 
+                  "date_of_cessation": "2017-06-27"
                }
             }
          ], 

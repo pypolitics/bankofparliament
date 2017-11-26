@@ -400,6 +400,7 @@ def write_scatter_plot(mp, plot_file):
 
     grey_darker = '#b8bab8'
     grey_lighter = '#d8dad8'
+    grey_lighter_white = '#e5e6e5'
 
     green_darker = '#00ff99'
     green_lighter = '#4dffb8'
@@ -436,6 +437,9 @@ def write_scatter_plot(mp, plot_file):
                     'expenses_item'        : {'color' : green_lighter, 'opacity' : 0.8, 'size' : 30},
                     'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
                     'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
+
+                    'person_item'        : {'color' : grey_lighter_white, 'opacity' : 0.5, 'size' : 20},
+                    'officer_item'        : {'color' : 'white', 'opacity' : 0.5, 'size' : 10},
 
                     }
 
@@ -613,6 +617,56 @@ def write_scatter_plot(mp, plot_file):
                 link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=sub_copy, target=item_copy)
                 l = copy.copy(link)
                 data['links'].append(l)
+
+                # significant persons
+                if item.has_key('persons'):
+                    for person in item['persons']:
+                        pretty = '<b>%s</b></br>' % person['name']
+                        for control in person['natures_of_control']:
+                            pretty += '</br>%s</br>' % control.replace('-', ' ').title()
+
+                        label = ''
+                        hovertext = '%s</br>' % person['name']
+                        person_node = make_node(data_nodes['person_item'], name=label, hovertext=hovertext, node_type=category)
+                        person_copy = copy.copy(person_node)
+
+                        found = False
+                        for i in data['nodes']:
+
+                            if i['hovertext'] == '%s</br>' % person['name']:
+                                found = i
+                                break
+
+                        if not found:
+                            data['nodes'].append(person_copy)
+                            found = person_copy
+
+                        link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
+                        l = copy.copy(link)
+                        data['links'].append(l)
+
+                # # officers
+                # if item.has_key('officers'):
+                #     for officer in item['officers']:
+
+                #         label = ''
+                #         hovertext = officer['name']
+                #         officer_node = make_node(data_nodes['officer_item'], name=label, hovertext=hovertext, node_type=category)
+                #         officer_copy = copy.copy(officer_node)
+
+                #         found = False
+                #         for i in data['nodes']:
+                #             if i['hovertext'] == officer['name']:
+                #                 found = i
+                #                 break
+
+                #         if not found:
+                #             data['nodes'].append(officer_copy)
+                #             found = officer_copy
+
+                #         link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
+                #         l = copy.copy(link)
+                #         data['links'].append(l)
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
     return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink, div=True)

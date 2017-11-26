@@ -358,7 +358,67 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alan Mak", 
+                     "links": {
+                        "self": "/company/08955272/persons-with-significant-control/individual/YqZCGq_WGQ6KepmuQaw3Nz93-ns"
+                     }, 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1983, 
+                        "month": 11
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Mak", 
+                        "forename": "Alan"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "f00b2b7e4a46b04e33394d6dd8141b31a4ed4d9d", 
+                     "address": {
+                        "premises": "80-83", 
+                        "locality": "London", 
+                        "postal_code": "EC1A 9ET", 
+                        "care_of": "C/O CARBON ACCOUNTANCY", 
+                        "address_line_1": "Long Lane"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "05/06/2015", 
+               "officers": [
+                  {
+                     "name": "MAK, Alan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/IBMxE4KlqKYUnUpnSCDtNzebif4/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "80-83", 
+                        "country": "United Kingdom", 
+                        "care_of": "C/O CARBON ACCOUNTANCY", 
+                        "postal_code": "EC1A 9ET", 
+                        "address_line_1": "Long Lane"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-03-24", 
+                     "date_of_birth": {
+                        "year": 1983, 
+                        "month": 11
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08955272", 
@@ -367,36 +427,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "08955272 - Incorporated on 24 March 2014", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08955272"
+                     "filing_history": "/company/08955272/filing-history", 
+                     "self": "/company/08955272", 
+                     "officers": "/company/08955272/officers", 
+                     "persons_with_significant_control": "/company/08955272/persons-with-significant-control"
                   }, 
-                  "title": "SPIREPOINT GLOBAL LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        10, 
-                        12, 
-                        17
-                     ]
-                  }, 
-                  "date_of_creation": "2014-03-24", 
-                  "company_type": "ltd", 
-                  "company_number": "08955272", 
-                  "address_snippet": "80-83  Long Lane, London, EC1A 9ET", 
-                  "company_status": "active", 
-                  "address": {
-                     "premises": "80-83 ", 
-                     "address_line_1": "Long Lane", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "70229"
+                  ], 
+                  "etag": "e7914cad820b795bbbed76931365747f97f5ffab", 
+                  "registered_office_address": {
+                     "address_line_1": "80-83 Long Lane", 
                      "postal_code": "EC1A 9ET", 
+                     "care_of": "C/O CARBON ACCOUNTANCY", 
                      "locality": "London"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-04-07", 
+                     "last_made_up_to": "2017-03-24", 
+                     "next_made_up_to": "2018-03-24", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08955272", 
+                  "last_full_members_list_date": "2016-03-24", 
+                  "date_of_creation": "2014-03-24", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2017-12-31", 
+                     "next_made_up_to": "2017-03-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-04-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-03-31", 
+                        "period_end_on": "2016-03-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2017-12-31", 
+                        "period_start_on": "2016-04-01", 
+                        "period_end_on": "2017-03-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "SPIREPOINT GLOBAL LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }, 
             {
@@ -404,7 +492,125 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alan Mak", 
+                     "links": {
+                        "self": "/company/08943685/persons-with-significant-control/individual/IxLZszGs9gv72QT_408gNLU5IP0"
+                     }, 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1983
+                     }, 
+                     "name_elements": {
+                        "forename": "Alan", 
+                        "surname": "Mak", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "82ae983dc0b72a5f9ff94c50472e997b9062dd09", 
+                     "address": {
+                        "premises": "80-83", 
+                        "address_line_1": "Long Lane", 
+                        "postal_code": "EC1A 9ET", 
+                        "care_of": "C/O CARBON ACCOUNTANCY", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Lewis Elliot Sidnick", 
+                     "links": {
+                        "self": "/company/08943685/persons-with-significant-control/individual/GJuyqxP0MVGqdnwYsn5im9csgh0"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "Great Britain", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1977, 
+                        "month": 3
+                     }, 
+                     "name_elements": {
+                        "surname": "Sidnick", 
+                        "forename": "Lewis", 
+                        "middle_name": "Elliot", 
+                        "title": "Mr"
+                     }, 
+                     "etag": "b6bf5ca55d39ceb45eb20a2c80f4785c48f7e774", 
+                     "address": {
+                        "premises": "80-83", 
+                        "locality": "London", 
+                        "postal_code": "EC1A 9ET", 
+                        "care_of": "C/O CARBON ACCOUNTANCY", 
+                        "address_line_1": "Long Lane"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "05/06/2015", 
+               "officers": [
+                  {
+                     "name": "SIDNICK, Lewis Elliot", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/mnyzbiOc18WJKZZvp9BROCBddjI/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "80-83", 
+                        "country": "England", 
+                        "care_of": "C/O CARBON ACCOUNTANCY", 
+                        "postal_code": "EC1A 9ET", 
+                        "address_line_1": "Long Lane"
+                     }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2014-03-17", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1977
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "MAK, Alan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/IBMxE4KlqKYUnUpnSCDtNzebif4/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-03-17", 
+                     "resigned_on": "2015-05-12", 
+                     "date_of_birth": {
+                        "year": 1983, 
+                        "month": 11
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "80-83", 
+                        "country": "England", 
+                        "care_of": "C/O CARBON ACCOUNTANCY", 
+                        "postal_code": "EC1A 9ET", 
+                        "address_line_1": "Long Lane"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08943685", 
@@ -413,36 +619,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "date_of_creation": "2014-03-17", 
-                  "kind": "searchresults#company", 
-                  "description": "08943685 - Incorporated on 17 March 2014", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08943685"
+                     "filing_history": "/company/08943685/filing-history", 
+                     "self": "/company/08943685", 
+                     "officers": "/company/08943685/officers", 
+                     "persons_with_significant_control": "/company/08943685/persons-with-significant-control"
                   }, 
-                  "title": "FITZGERALD PARTNERS LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        10, 
-                        12, 
-                        19
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "80-83  Long Lane, London, EC1A 9ET", 
-                  "company_number": "08943685", 
-                  "company_status": "active", 
-                  "snippet": "", 
-                  "address": {
-                     "premises": "80-83 ", 
-                     "address_line_1": "Long Lane", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "70229"
+                  ], 
+                  "etag": "d98480b0075ebeae13fbae15c80c7d600d4f1b08", 
+                  "registered_office_address": {
+                     "address_line_1": "80-83 Long Lane", 
                      "postal_code": "EC1A 9ET", 
+                     "care_of": "C/O CARBON ACCOUNTANCY", 
                      "locality": "London"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-03-22", 
+                     "last_made_up_to": "2017-03-08", 
+                     "next_made_up_to": "2018-03-08", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08943685", 
+                  "last_full_members_list_date": "2016-03-17", 
+                  "date_of_creation": "2014-03-17", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2017-12-31", 
+                     "next_made_up_to": "2017-03-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-04-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-03-31", 
+                        "period_end_on": "2016-03-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2017-12-31", 
+                        "period_start_on": "2016-04-01", 
+                        "period_end_on": "2017-03-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "FITZGERALD PARTNERS LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }
          ], 

@@ -3,7 +3,7 @@
 import os
 
 # local libs
-from utils import PrettyPrintUnicode
+from utils import PrettyPrintUnicode, getlink
 
 base_url = 'https://beta.companieshouse.gov.uk'
 
@@ -192,7 +192,10 @@ class ShareholdingsItem(Item):
 
 		self.isWealth = True
 		self.link = link
-		self.company = company
+
+		self.company = getlink(company, 'self')
+		self.persons = getlink(self.company, 'persons_with_significant_control')['items']
+		self.officers = getlink(self.company, 'officers')['items']
 
 class OtherShareholdingsItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount, company, link):
@@ -205,6 +208,10 @@ class OtherShareholdingsItem(Item):
 		self.isWealth = True
 		self.link = link
 		self.company = company
+
+		self.company = getlink(company, 'self')
+		self.persons = getlink(self.company, 'persons_with_significant_control')['items']
+		self.officers = getlink(self.company, 'officers')['items']
 
 class GiftsItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):

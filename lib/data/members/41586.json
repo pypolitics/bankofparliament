@@ -208,7 +208,67 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Darren Jones", 
+                     "links": {
+                        "self": "/company/10447527/persons-with-significant-control/individual/W4BV3QrOas8mBnQFrlYJmOQ_-RA"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1986
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Jones", 
+                        "forename": "Darren"
+                     }, 
+                     "notified_on": "2016-10-26", 
+                     "etag": "32e4b423509e124fd9c0fcab9e33f2a9faca8358", 
+                     "address": {
+                        "premises": "71-75", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "WC2H 9JQ", 
+                        "address_line_1": "Shelton Street"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "05/07/2017", 
+               "officers": [
+                  {
+                     "name": "JONES, Darren", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/OoQnaVnngqfyDWKf5-AuHFCkLAM/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-10-26", 
+                     "date_of_birth": {
+                        "year": 1986, 
+                        "month": 11
+                     }, 
+                     "address": {
+                        "premises": "71-75", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "WC2H 9JQ", 
+                        "address_line_1": "Shelton Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Lawyer"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/10447527", 
@@ -217,40 +277,70 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "company_status": "active", 
-                  "kind": "searchresults#company", 
-                  "description": "10447527 - Incorporated on 26 October 2016", 
+                  "has_insolvency_history": false, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "69102", 
+                     "70210"
+                  ], 
                   "links": {
-                     "self": "/company/10447527"
+                     "filing_history": "/company/10447527/filing-history", 
+                     "self": "/company/10447527", 
+                     "officers": "/company/10447527/officers", 
+                     "persons_with_significant_control": "/company/10447527/persons-with-significant-control"
                   }, 
-                  "title": "OFFICE OF DARREN JONES LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        6, 
-                        11, 
-                        16, 
-                        18, 
-                        22
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "71-75  Shelton Street, Covent Garden, London, England, WC2H 9JQ", 
-                  "company_number": "10447527", 
-                  "date_of_creation": "2016-10-26", 
-                  "snippet": "", 
-                  "address": {
-                     "locality": "London", 
-                     "premises": "71-75 ", 
+                  "registered_office_address": {
+                     "address_line_2": "Covent Garden", 
                      "country": "England", 
                      "postal_code": "WC2H 9JQ", 
-                     "address_line_2": "Covent Garden", 
-                     "address_line_1": "Shelton Street"
+                     "locality": "London", 
+                     "address_line_1": "71-75 Shelton Street"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "company_number": "10447527", 
+                  "date_of_creation": "2016-10-26", 
+                  "confirmation_statement": {
+                     "next_due": "2018-11-07", 
+                     "last_made_up_to": "2017-10-24", 
+                     "next_made_up_to": "2018-10-24", 
+                     "overdue": false
+                  }, 
+                  "accounts": {
+                     "next_due": "2019-07-31", 
+                     "next_made_up_to": "2018-10-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-10-26", 
+                        "type": "dormant", 
+                        "made_up_to": "2017-10-31", 
+                        "period_end_on": "2017-10-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2019-07-31", 
+                        "period_start_on": "2017-11-01", 
+                        "period_end_on": "2018-10-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "10"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "OFFICE OF DARREN JONES LIMITED", 
+                  "company_status": "active", 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "2016-10-26", 
+                        "ceased_on": "2017-06-20", 
+                        "name": "BITDATA LIMITED"
+                     }
+                  ], 
+                  "has_charges": false, 
+                  "etag": "b341facc4cfb5836b1851a4ed8b737d97aa8d0d0", 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }
          ], 

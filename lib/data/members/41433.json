@@ -390,7 +390,69 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr William Esterson", 
+                     "links": {
+                        "self": "/company/10394382/persons-with-significant-control/individual/KuEru3sDPzvTzl4YeN_Pzou3nhM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1966
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Esterson", 
+                        "forename": "William"
+                     }, 
+                     "notified_on": "2016-09-26", 
+                     "etag": "83d14f857aff831b2610b4f48bf423a877523ad3", 
+                     "address": {
+                        "locality": "Maghull", 
+                        "premises": "1", 
+                        "country": "United Kingdom", 
+                        "care_of": "MCPARLAND WILLIAMS", 
+                        "postal_code": "L31 2HB", 
+                        "address_line_1": "Liverpool Road North"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "14/10/2016", 
+               "officers": [
+                  {
+                     "name": "ESTERSON, William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/0-gdD72SdOr1Voya9qdQVH97aME/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Maghull", 
+                        "premises": "1", 
+                        "country": "United Kingdom", 
+                        "care_of": "MCPARLAND WILLIAMS", 
+                        "postal_code": "L31 2HB", 
+                        "address_line_1": "Liverpool Road North"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-09-26", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 10
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Politician"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/10394382", 
@@ -399,39 +461,59 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "10394382 - Incorporated on 26 September 2016", 
-                  "links": {
-                     "self": "/company/10394382"
-                  }, 
-                  "title": "BILL ESTERSON CAMPAIGNS LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        4, 
-                        6, 
-                        13, 
-                        15, 
-                        23
-                     ]
-                  }, 
-                  "date_of_creation": "2016-09-26", 
-                  "company_type": "ltd", 
-                  "company_number": "10394382", 
-                  "address_snippet": "1  Liverpool Road North, Maghull, United Kingdom, L31 2HB", 
                   "company_status": "active", 
-                  "address": {
-                     "premises": "1 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "73110"
+                  ], 
+                  "links": {
+                     "filing_history": "/company/10394382/filing-history", 
+                     "self": "/company/10394382", 
+                     "officers": "/company/10394382/officers", 
+                     "persons_with_significant_control": "/company/10394382/persons-with-significant-control"
+                  }, 
+                  "registered_office_address": {
                      "country": "United Kingdom", 
                      "locality": "Maghull", 
                      "postal_code": "L31 2HB", 
-                     "address_line_1": "Liverpool Road North"
+                     "care_of": "MCPARLAND WILLIAMS", 
+                     "address_line_1": "1 Liverpool Road North"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-10-09", 
+                     "last_made_up_to": "2017-09-25", 
+                     "next_made_up_to": "2018-09-25", 
+                     "overdue": false
+                  }, 
+                  "company_number": "10394382", 
+                  "date_of_creation": "2016-09-26", 
+                  "has_insolvency_history": false, 
+                  "etag": "ac5d869849b8f042656bc5db74346eedd55ee416", 
+                  "accounts": {
+                     "next_due": "2018-06-26", 
+                     "next_made_up_to": "2017-09-30", 
+                     "last_accounts": {
+                        "type": "null"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-06-26", 
+                        "period_start_on": "2016-09-26", 
+                        "period_end_on": "2017-09-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "09"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "BILL ESTERSON CAMPAIGNS LIMITED", 
+                  "registered_office_is_in_dispute": false, 
+                  "has_charges": false, 
+                  "type": "ltd"
                }
             }
          ], 

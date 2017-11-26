@@ -261,7 +261,83 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": null, 
+               "officers": [
+                  {
+                     "appointed_on": "2003-08-01", 
+                     "officer_role": "secretary", 
+                     "name": "SOWERBUTTS, Lucinda Alison", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/jyxyaDmzFg1orxEcKVcrBtoVUWk/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Frampton Mansell", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "The Downs Barn", 
+                        "postal_code": "GL6 8HX", 
+                        "locality": "Cirencester"
+                     }
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian Neame", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/TajhiIijW7NOEBSAsJavUHHSLcM/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2003-08-01", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1959
+                     }, 
+                     "address": {
+                        "address_line_2": "Frampton Mansell", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "The Downs Farm", 
+                        "postal_code": "GL6 8HX", 
+                        "locality": "Stroud"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Property"
+                  }, 
+                  {
+                     "name": "SECRETARIAL APPOINTMENTS LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/fwDCpBl85F54DmEmvcpFDLK_yUc/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2003-08-01", 
+                     "resigned_on": "2003-08-01", 
+                     "address": {
+                        "address_line_1": "16 Churchill Way", 
+                        "postal_code": "CF10 2DX", 
+                        "locality": "Cardiff"
+                     }, 
+                     "officer_role": "corporate-nominee-secretary"
+                  }, 
+                  {
+                     "name": "CORPORATE APPOINTMENTS LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zlFriInDEeobOsZ2xcrESHMjccE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2003-08-01", 
+                     "resigned_on": "2003-08-01", 
+                     "address": {
+                        "locality": "Cardiff", 
+                        "postal_code": "CF10 2DX", 
+                        "address_line_1": "16 Churchill Way"
+                     }, 
+                     "officer_role": "corporate-nominee-director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/04854535", 
@@ -270,37 +346,48 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "04854535 - Dissolved on 15 November 2016", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/04854535"
+                     "filing_history": "/company/04854535/filing-history", 
+                     "charges": "/company/04854535/charges", 
+                     "self": "/company/04854535", 
+                     "officers": "/company/04854535/officers"
                   }, 
-                  "title": "THOMPSON SOWERBUTTS LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        8, 
-                        10, 
-                        19
-                     ]
-                  }, 
-                  "date_of_creation": "2003-08-01", 
-                  "company_type": "ltd", 
-                  "company_number": "04854535", 
-                  "address_snippet": "The Downs Barn, Frampton Mansell, Stroud, Gloucestershire, GL6 8HX", 
-                  "company_status": "dissolved", 
-                  "address": {
-                     "premises": "The Downs Barn", 
-                     "region": "Gloucestershire", 
-                     "address_line_1": "Frampton Mansell", 
-                     "postal_code": "GL6 8HX", 
-                     "locality": "Stroud"
-                  }, 
-                  "description_identifier": [
-                     "dissolved-on"
+                  "can_file": false, 
+                  "sic_codes": [
+                     "68100"
                   ], 
+                  "etag": "dd06690aeecbfda984416ca4296bc98466212900", 
+                  "registered_office_address": {
+                     "address_line_2": "Frampton Mansell", 
+                     "region": "Gloucestershire", 
+                     "locality": "Stroud", 
+                     "postal_code": "GL6 8HX", 
+                     "address_line_1": "The Downs Barn"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "last_full_members_list_date": "2015-08-01", 
+                  "company_number": "04854535", 
+                  "date_of_creation": "2003-08-01", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "last_accounts": {
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2015-03-31"
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }
+                  }, 
+                  "company_name": "THOMPSON SOWERBUTTS LIMITED", 
+                  "company_status": "dissolved", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false, 
                   "date_of_cessation": "2016-11-15"
                }
             }, 
@@ -309,7 +396,60 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "12/06/2013", 
+               "officers": [
+                  {
+                     "name": "WILLIAMS, Mark Oliver David", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/rN5g2LUi06Selglra0ZttBJAqns/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-01-03", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1964
+                     }, 
+                     "address": {
+                        "locality": "Brentwood", 
+                        "premises": "Jupiter House", 
+                        "region": "Essex", 
+                        "postal_code": "CM13 3BE", 
+                        "address_line_2": "The Drive", 
+                        "address_line_1": "Warley Hill Business Park"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "English", 
+                     "occupation": "Contracts Manager"
+                  }, 
+                  {
+                     "name": "PITTAWAY, John Scott", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/9p-rKgLSZSUJ_l2pI79a-NtiVrE/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-01-03", 
+                     "resigned_on": "2012-02-01", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1969
+                     }, 
+                     "address": {
+                        "premises": "31", 
+                        "country": "United Kingdom", 
+                        "locality": "Romford", 
+                        "postal_code": "RM2 5UL", 
+                        "address_line_1": "Heath Park Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Architect"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/07894958", 
@@ -318,38 +458,68 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "company_status": "liquidation", 
-                  "kind": "searchresults#company", 
-                  "description": "07894958 - Incorporated on  3 January 2012 - Liquidation", 
+                  "has_insolvency_history": true, 
                   "links": {
-                     "self": "/company/07894958"
+                     "filing_history": "/company/07894958/filing-history", 
+                     "self": "/company/07894958", 
+                     "officers": "/company/07894958/officers", 
+                     "insolvency": "/company/07894958/insolvency"
                   }, 
-                  "title": "RENEWABLE DESIGN AND BUILD LTD", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        9, 
-                        11, 
-                        16
-                     ]
+                  "can_file": true, 
+                  "sic_codes": [
+                     "43390"
+                  ], 
+                  "etag": "feb533e6cf6ea260ea7a6736f5a0d926384e3a58", 
+                  "annual_return": {
+                     "next_due": "2015-01-31", 
+                     "last_made_up_to": "2014-01-03", 
+                     "next_made_up_to": "2015-01-03", 
+                     "overdue": true
                   }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "Jupiter House Warley Hill Business Park, The Drive, Brentwood, Essex, CM13 3BE", 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2017-01-17", 
+                     "next_made_up_to": "2017-01-03", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2014-01-03", 
                   "company_number": "07894958", 
                   "date_of_creation": "2012-01-03", 
-                  "snippet": "", 
-                  "address": {
-                     "premises": "Jupiter House Warley Hill Business Park", 
-                     "region": "Essex", 
-                     "locality": "Brentwood", 
-                     "postal_code": "CM13 3BE", 
-                     "address_line_1": "The Drive"
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2014-12-31", 
+                     "next_made_up_to": "2014-03-31", 
+                     "last_accounts": {
+                        "period_start_on": "2012-01-03", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2013-01-31", 
+                        "period_end_on": "2013-01-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2014-12-31", 
+                        "period_start_on": "2013-02-01", 
+                        "period_end_on": "2014-03-31", 
+                        "overdue": true
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }, 
+                     "overdue": true
                   }, 
-                  "description_identifier": [
-                     "incorporated-on", 
-                     "liquidation"
-                  ]
+                  "company_name": "RENEWABLE DESIGN AND BUILD LTD", 
+                  "company_status": "liquidation", 
+                  "has_charges": false, 
+                  "registered_office_address": {
+                     "address_line_2": "The Drive", 
+                     "region": "Essex", 
+                     "address_line_1": "Jupiter House Warley Hill Business Park", 
+                     "postal_code": "CM13 3BE", 
+                     "locality": "Brentwood"
+                  }, 
+                  "type": "ltd"
                }
             }, 
             {
@@ -357,7 +527,277 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-06-22", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/f2DHF2t5XAvMWFuJIYj0W9dHkgM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "3cdc43c95a1bc30f6b515689276b2a86aa1f060d", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/bNURY7wFnIjkFiCcwHR418FANd0"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8d15a261f81d680bb128fbe33932c784a4b6fa31", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W4 2BS", 
+                        "address_line_1": "Chiswick"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/AO4kGcJmWea1MjAJET4EbsYlEZ4"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "name_elements": {
+                        "surname": "Sowerbutts", 
+                        "title": "Mr", 
+                        "middle_name": "Neame", 
+                        "forename": "Julian"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "58759bb8e84e4747d5bb1c628b15851ac0480df0", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/6xOXaTJQaDpF9jjuhyFYHTMtj1w"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Hollingbery", 
+                        "forename": "George"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "a37b19258cbed841025c3dfc224cb205030ec55a", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/RlDfg3tlvfFn7lfeP3Dji0FXza8"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "etag": "df127cf9e2d6cfdda62e753507d4649aff358b03", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/9k-eXk_DJAV5OtYJpU_pmMl12to"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Witzenberger", 
+                        "forename": "Mark"
+                     }, 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "etag": "b0f8c724541b96e29214d641f3d7bbcfd33c905a", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/78SfqTnqqk87NNwtpwDEZLlZ-vM"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "f4556fa52980e080988ba0a2564084c264493e4c", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "29/05/2015", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/PxXkf614bDAVVodGu1gH0LeDui8/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "38 Binns Road", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-30", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1984
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-09-09", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1959
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "Rodney Road", 
+                        "postal_code": "GL50 1HX", 
+                        "locality": "Cheltenham"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08682525", 
@@ -366,35 +806,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "date_of_creation": "2013-09-09", 
-                  "kind": "searchresults#company", 
-                  "description": "08682525 - Incorporated on  9 September 2013", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08682525"
+                     "filing_history": "/company/08682525/filing-history", 
+                     "charges": "/company/08682525/charges", 
+                     "self": "/company/08682525", 
+                     "officers": "/company/08682525/officers", 
+                     "persons_with_significant_control": "/company/08682525/persons-with-significant-control"
                   }, 
-                  "title": "RENDESCO LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        8
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, GL50 1HX", 
-                  "company_number": "08682525", 
-                  "snippet": "", 
-                  "company_status": "active", 
-                  "address": {
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
+                  "etag": "4cee3febba210122e359ea939fac85f1013e1325", 
+                  "registered_office_address": {
                      "region": "Gloucestershire", 
-                     "address_line_1": "Rodney Road", 
+                     "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "locality": "Cheltenham"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-23", 
+                     "last_made_up_to": "2017-09-09", 
+                     "next_made_up_to": "2018-09-09", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08682525", 
+                  "last_full_members_list_date": "2015-09-09", 
+                  "date_of_creation": "2013-09-09", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }, 
             {
@@ -402,7 +871,158 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/09550005/persons-with-significant-control/individual/tJE-DBgH5rOZmh2DxKbkWRemHvA"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "684b67ebb402d7c83062197e5b2a0eef137eb6be", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/09550005/persons-with-significant-control/individual/9TQMf9Nb3_qaFNrALuJjw3G9xiw"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1984
+                     }, 
+                     "name_elements": {
+                        "forename": "Alastair", 
+                        "surname": "Murray", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8c157c024f84d9932a49cf3356d275a2cd68d319", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/09550005/persons-with-significant-control/individual/bL2_r77wUN2wR1DYc_YqpgSPrgE"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Neame", 
+                        "forename": "Julian", 
+                        "surname": "Sowerbutts", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "etag": "22839bc2f18079ed6dc95a73f107f39706a3647a", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/1-25B5y-X-ybZAvjcaTlVA8Thcs/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Cheltenham", 
+                        "premises": "41", 
+                        "country": "United Kingdom", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL50 1HX", 
+                        "address_line_1": "Rodney Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-20", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1985
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-04-20", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1959
+                     }, 
+                     "address": {
+                        "locality": "Cheltenham", 
+                        "premises": "41", 
+                        "country": "United Kingdom", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL50 1HX", 
+                        "address_line_1": "Rodney Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/09550005", 
@@ -411,36 +1031,63 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "09550005 - Incorporated on 20 April 2015", 
-                  "links": {
-                     "self": "/company/09550005"
-                  }, 
-                  "title": "RENDESCO2 LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        9
-                     ]
-                  }, 
                   "date_of_creation": "2015-04-20", 
-                  "company_type": "ltd", 
-                  "company_number": "09550005", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, United Kingdom, GL50 1HX", 
-                  "company_status": "active", 
-                  "address": {
-                     "locality": "Cheltenham", 
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
+                  "links": {
+                     "filing_history": "/company/09550005/filing-history", 
+                     "charges": "/company/09550005/charges", 
+                     "self": "/company/09550005", 
+                     "officers": "/company/09550005/officers", 
+                     "persons_with_significant_control": "/company/09550005/persons-with-significant-control"
+                  }, 
+                  "registered_office_address": {
                      "country": "United Kingdom", 
                      "region": "Gloucestershire", 
+                     "address_line_1": "41 Rodney Road", 
                      "postal_code": "GL50 1HX", 
-                     "address_line_1": "Rodney Road"
+                     "locality": "Cheltenham"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-05-04", 
+                     "last_made_up_to": "2017-04-20", 
+                     "next_made_up_to": "2018-04-20", 
+                     "overdue": false
+                  }, 
+                  "company_number": "09550005", 
+                  "last_full_members_list_date": "2016-04-20", 
+                  "has_insolvency_history": false, 
+                  "etag": "7e00d8a00a95f26f888c0d84b40b5652d0f7c3eb", 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO2 LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }, 
             {
@@ -448,7 +1095,158 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/09626880/persons-with-significant-control/individual/wuYkJoKVUJr3kAs6Tn6jatk8u2M"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8fb629f4781fd4423ab847107e6369ef71dde8ee", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/09626880/persons-with-significant-control/individual/oUBps4DTsqvQDry-KtEsaFJVMV4"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1984
+                     }, 
+                     "etag": "51816035c25bbffd69ca8ebc20e5e7731dc21e18", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/09626880/persons-with-significant-control/individual/4_-uhsXfL8epjqvbtAX4evJ3LpI"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Neame", 
+                        "forename": "Julian", 
+                        "surname": "Sowerbutts", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "etag": "5ee870e790abb6cec6f5a2279ec57e25be9f510a", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/1-25B5y-X-ybZAvjcaTlVA8Thcs/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Cheltenham", 
+                        "premises": "41", 
+                        "country": "United Kingdom", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL50 1HX", 
+                        "address_line_1": "Rodney Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-06-06", 
+                     "date_of_birth": {
+                        "year": 1985, 
+                        "month": 8
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-06-06", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "locality": "Cheltenham", 
+                        "premises": "41", 
+                        "country": "United Kingdom", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL50 1HX", 
+                        "address_line_1": "Rodney Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/09626880", 
@@ -457,36 +1255,63 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "09626880 - Incorporated on  6 June 2015", 
+                  "has_insolvency_history": false, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
                   "links": {
-                     "self": "/company/09626880"
+                     "filing_history": "/company/09626880/filing-history", 
+                     "charges": "/company/09626880/charges", 
+                     "self": "/company/09626880", 
+                     "officers": "/company/09626880/officers", 
+                     "persons_with_significant_control": "/company/09626880/persons-with-significant-control"
                   }, 
-                  "title": "RENDESCO3 LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        9
-                     ]
-                  }, 
-                  "date_of_creation": "2015-06-06", 
-                  "company_type": "ltd", 
-                  "company_number": "09626880", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, United Kingdom, GL50 1HX", 
-                  "company_status": "active", 
-                  "address": {
-                     "locality": "Cheltenham", 
-                     "premises": "41 ", 
+                  "registered_office_address": {
                      "country": "United Kingdom", 
                      "region": "Gloucestershire", 
+                     "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "address_line_1": "Rodney Road"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "date_of_creation": "2015-06-06", 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-06-20", 
+                     "last_made_up_to": "2017-06-06", 
+                     "next_made_up_to": "2018-06-06", 
+                     "overdue": false
+                  }, 
+                  "company_number": "09626880", 
+                  "last_full_members_list_date": "2016-06-06", 
+                  "company_status": "active", 
+                  "etag": "80cc0c25de0cd3d78d471f085a56f10242cc5c80", 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO3 LIMITED", 
+                  "registered_office_is_in_dispute": false, 
+                  "has_charges": true, 
+                  "type": "ltd"
                }
             }, 
             {
@@ -494,7 +1319,156 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/10154203/persons-with-significant-control/individual/RR70ZUcCmeW5B25msS0qsh6eMnk"
+                     }, 
+                     "notified_on": "2016-04-29", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1963
+                     }, 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "etag": "63b4638f5919d0dd4ee8910bec871304ccbaea40", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/10154203/persons-with-significant-control/individual/90Ef5Tt_BkQbZXSNiuy7xdD2QYc"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "notified_on": "2016-04-29", 
+                     "etag": "ae61b367159a69e24e05ff9cc8bd534450497e61", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W4 2BS", 
+                        "address_line_1": "Chiswick"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/10154203/persons-with-significant-control/individual/gDCcUKkKrgGZQsesazMqHMumZDg"
+                     }, 
+                     "notified_on": "2016-04-29", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Neame", 
+                        "title": "Mr", 
+                        "surname": "Sowerbutts", 
+                        "forename": "Julian"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "etag": "90ec42544c39dc83349dc044047d0bdb6a8cff32", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/1-25B5y-X-ybZAvjcaTlVA8Thcs/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-04-28", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1985
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Rodney Road", 
+                        "postal_code": "GL50 1HX", 
+                        "locality": "Cheltenham"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-04-28", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "country": "United Kingdom", 
+                        "locality": "Cheltenham", 
+                        "postal_code": "GL50 1HX", 
+                        "address_line_1": "Rodney Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/10154203", 
@@ -503,34 +1477,60 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "company_status": "active", 
-                  "kind": "searchresults#company", 
-                  "description": "10154203 - Incorporated on 28 April 2016", 
-                  "links": {
-                     "self": "/company/10154203"
-                  }, 
-                  "title": "RENDESCO4 LTD", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        9
-                     ]
-                  }, 
                   "date_of_creation": "2016-04-28", 
-                  "company_type": "ltd", 
-                  "company_number": "10154203", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, United Kingdom, GL50 1HX", 
-                  "snippet": "", 
-                  "address": {
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "registered_office_is_in_dispute": false, 
+                  "links": {
+                     "filing_history": "/company/10154203/filing-history", 
+                     "charges": "/company/10154203/charges", 
+                     "self": "/company/10154203", 
+                     "officers": "/company/10154203/officers", 
+                     "persons_with_significant_control": "/company/10154203/persons-with-significant-control"
+                  }, 
+                  "registered_office_address": {
                      "country": "United Kingdom", 
                      "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "address_line_1": "Rodney Road"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-05-12", 
+                     "last_made_up_to": "2017-04-28", 
+                     "next_made_up_to": "2018-04-28", 
+                     "overdue": false
+                  }, 
+                  "company_number": "10154203", 
+                  "has_insolvency_history": false, 
+                  "etag": "757a709aa1436a515d4e54fcb9f2e273ccda55c9", 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-04-28", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO4 LTD", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "sic_codes": [
+                     "96090"
                   ]
                }
             }, 
@@ -539,7 +1539,277 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-06-22", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/f2DHF2t5XAvMWFuJIYj0W9dHkgM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "3cdc43c95a1bc30f6b515689276b2a86aa1f060d", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/bNURY7wFnIjkFiCcwHR418FANd0"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8d15a261f81d680bb128fbe33932c784a4b6fa31", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W4 2BS", 
+                        "address_line_1": "Chiswick"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/AO4kGcJmWea1MjAJET4EbsYlEZ4"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1959
+                     }, 
+                     "name_elements": {
+                        "surname": "Sowerbutts", 
+                        "title": "Mr", 
+                        "middle_name": "Neame", 
+                        "forename": "Julian"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "58759bb8e84e4747d5bb1c628b15851ac0480df0", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/6xOXaTJQaDpF9jjuhyFYHTMtj1w"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Hollingbery", 
+                        "forename": "George"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "a37b19258cbed841025c3dfc224cb205030ec55a", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/RlDfg3tlvfFn7lfeP3Dji0FXza8"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "etag": "df127cf9e2d6cfdda62e753507d4649aff358b03", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/9k-eXk_DJAV5OtYJpU_pmMl12to"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Witzenberger", 
+                        "forename": "Mark"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "etag": "b0f8c724541b96e29214d641f3d7bbcfd33c905a", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/78SfqTnqqk87NNwtpwDEZLlZ-vM"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1963
+                     }, 
+                     "etag": "f4556fa52980e080988ba0a2564084c264493e4c", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/PxXkf614bDAVVodGu1gH0LeDui8/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "38 Binns Road", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-30", 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-09-09", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "Rodney Road", 
+                        "postal_code": "GL50 1HX", 
+                        "locality": "Cheltenham"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08682525", 
@@ -548,35 +1818,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "date_of_creation": "2013-09-09", 
-                  "kind": "searchresults#company", 
-                  "description": "08682525 - Incorporated on  9 September 2013", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08682525"
+                     "filing_history": "/company/08682525/filing-history", 
+                     "charges": "/company/08682525/charges", 
+                     "self": "/company/08682525", 
+                     "officers": "/company/08682525/officers", 
+                     "persons_with_significant_control": "/company/08682525/persons-with-significant-control"
                   }, 
-                  "title": "RENDESCO LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        8
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, GL50 1HX", 
-                  "company_number": "08682525", 
-                  "company_status": "active", 
-                  "snippet": "", 
-                  "address": {
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
+                  "etag": "4cee3febba210122e359ea939fac85f1013e1325", 
+                  "registered_office_address": {
                      "region": "Gloucestershire", 
-                     "address_line_1": "Rodney Road", 
+                     "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "locality": "Cheltenham"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-23", 
+                     "last_made_up_to": "2017-09-09", 
+                     "next_made_up_to": "2018-09-09", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08682525", 
+                  "last_full_members_list_date": "2015-09-09", 
+                  "date_of_creation": "2013-09-09", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }, 
             {
@@ -584,7 +1883,277 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-06-22", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/f2DHF2t5XAvMWFuJIYj0W9dHkgM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "3cdc43c95a1bc30f6b515689276b2a86aa1f060d", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/bNURY7wFnIjkFiCcwHR418FANd0"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8d15a261f81d680bb128fbe33932c784a4b6fa31", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W4 2BS", 
+                        "address_line_1": "Chiswick"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/AO4kGcJmWea1MjAJET4EbsYlEZ4"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "name_elements": {
+                        "surname": "Sowerbutts", 
+                        "title": "Mr", 
+                        "middle_name": "Neame", 
+                        "forename": "Julian"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "58759bb8e84e4747d5bb1c628b15851ac0480df0", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/6xOXaTJQaDpF9jjuhyFYHTMtj1w"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Hollingbery", 
+                        "forename": "George"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "a37b19258cbed841025c3dfc224cb205030ec55a", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/RlDfg3tlvfFn7lfeP3Dji0FXza8"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "etag": "df127cf9e2d6cfdda62e753507d4649aff358b03", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/9k-eXk_DJAV5OtYJpU_pmMl12to"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Witzenberger", 
+                        "forename": "Mark"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "etag": "b0f8c724541b96e29214d641f3d7bbcfd33c905a", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/78SfqTnqqk87NNwtpwDEZLlZ-vM"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "f4556fa52980e080988ba0a2564084c264493e4c", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/PxXkf614bDAVVodGu1gH0LeDui8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-30", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1984
+                     }, 
+                     "address": {
+                        "premises": "38 Binns Road", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-09-09", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1959
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "Rodney Road", 
+                        "postal_code": "GL50 1HX", 
+                        "locality": "Cheltenham"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08682525", 
@@ -593,35 +2162,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "08682525 - Incorporated on  9 September 2013", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08682525"
+                     "filing_history": "/company/08682525/filing-history", 
+                     "charges": "/company/08682525/charges", 
+                     "self": "/company/08682525", 
+                     "officers": "/company/08682525/officers", 
+                     "persons_with_significant_control": "/company/08682525/persons-with-significant-control"
                   }, 
-                  "title": "RENDESCO LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        8
-                     ]
-                  }, 
-                  "date_of_creation": "2013-09-09", 
-                  "company_type": "ltd", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, GL50 1HX", 
-                  "company_number": "08682525", 
-                  "company_status": "active", 
-                  "address": {
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
+                  "etag": "4cee3febba210122e359ea939fac85f1013e1325", 
+                  "registered_office_address": {
                      "region": "Gloucestershire", 
                      "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "address_line_1": "Rodney Road"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-23", 
+                     "last_made_up_to": "2017-09-09", 
+                     "next_made_up_to": "2018-09-09", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08682525", 
+                  "last_full_members_list_date": "2015-09-09", 
+                  "date_of_creation": "2013-09-09", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }, 
             {
@@ -629,7 +2227,277 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-06-22", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/f2DHF2t5XAvMWFuJIYj0W9dHkgM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "3cdc43c95a1bc30f6b515689276b2a86aa1f060d", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/bNURY7wFnIjkFiCcwHR418FANd0"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8d15a261f81d680bb128fbe33932c784a4b6fa31", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W4 2BS", 
+                        "address_line_1": "Chiswick"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/AO4kGcJmWea1MjAJET4EbsYlEZ4"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "name_elements": {
+                        "surname": "Sowerbutts", 
+                        "title": "Mr", 
+                        "middle_name": "Neame", 
+                        "forename": "Julian"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "58759bb8e84e4747d5bb1c628b15851ac0480df0", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/6xOXaTJQaDpF9jjuhyFYHTMtj1w"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Hollingbery", 
+                        "forename": "George"
+                     }, 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1963
+                     }, 
+                     "etag": "a37b19258cbed841025c3dfc224cb205030ec55a", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/RlDfg3tlvfFn7lfeP3Dji0FXza8"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "etag": "df127cf9e2d6cfdda62e753507d4649aff358b03", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/9k-eXk_DJAV5OtYJpU_pmMl12to"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Witzenberger", 
+                        "forename": "Mark"
+                     }, 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "etag": "b0f8c724541b96e29214d641f3d7bbcfd33c905a", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/78SfqTnqqk87NNwtpwDEZLlZ-vM"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "f4556fa52980e080988ba0a2564084c264493e4c", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/PxXkf614bDAVVodGu1gH0LeDui8/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "38 Binns Road", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-30", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1984
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-09-09", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "Rodney Road", 
+                        "postal_code": "GL50 1HX", 
+                        "locality": "Cheltenham"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08682525", 
@@ -638,35 +2506,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "date_of_creation": "2013-09-09", 
-                  "kind": "searchresults#company", 
-                  "description": "08682525 - Incorporated on  9 September 2013", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08682525"
+                     "filing_history": "/company/08682525/filing-history", 
+                     "charges": "/company/08682525/charges", 
+                     "self": "/company/08682525", 
+                     "officers": "/company/08682525/officers", 
+                     "persons_with_significant_control": "/company/08682525/persons-with-significant-control"
                   }, 
-                  "title": "RENDESCO LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        8
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, GL50 1HX", 
-                  "company_number": "08682525", 
-                  "company_status": "active", 
-                  "snippet": "", 
-                  "address": {
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
+                  "etag": "4cee3febba210122e359ea939fac85f1013e1325", 
+                  "registered_office_address": {
                      "region": "Gloucestershire", 
-                     "address_line_1": "Rodney Road", 
+                     "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "locality": "Cheltenham"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-23", 
+                     "last_made_up_to": "2017-09-09", 
+                     "next_made_up_to": "2018-09-09", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08682525", 
+                  "last_full_members_list_date": "2015-09-09", 
+                  "date_of_creation": "2013-09-09", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }, 
             {
@@ -674,7 +2571,277 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-06-22", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/f2DHF2t5XAvMWFuJIYj0W9dHkgM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "3cdc43c95a1bc30f6b515689276b2a86aa1f060d", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Alastair Murray", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/bNURY7wFnIjkFiCcwHR418FANd0"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Murray", 
+                        "forename": "Alastair"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "8d15a261f81d680bb128fbe33932c784a4b6fa31", 
+                     "address": {
+                        "premises": "42 Cornwall Grove", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W4 2BS", 
+                        "address_line_1": "Chiswick"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Julian Neame Sowerbutts", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/AO4kGcJmWea1MjAJET4EbsYlEZ4"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "name_elements": {
+                        "surname": "Sowerbutts", 
+                        "title": "Mr", 
+                        "middle_name": "Neame", 
+                        "forename": "Julian"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "58759bb8e84e4747d5bb1c628b15851ac0480df0", 
+                     "address": {
+                        "locality": "Stroud", 
+                        "premises": "The Downs Barn", 
+                        "country": "England", 
+                        "region": "Gloucestershire", 
+                        "postal_code": "GL6 8HX", 
+                        "address_line_1": "Frampton Mansell"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/6xOXaTJQaDpF9jjuhyFYHTMtj1w"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Hollingbery", 
+                        "forename": "George"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "a37b19258cbed841025c3dfc224cb205030ec55a", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/RlDfg3tlvfFn7lfeP3Dji0FXza8"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "Mark", 
+                        "surname": "Witzenberger", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "etag": "df127cf9e2d6cfdda62e753507d4649aff358b03", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mark Witzenberger", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/9k-eXk_DJAV5OtYJpU_pmMl12to"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Witzenberger", 
+                        "forename": "Mark"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 2
+                     }, 
+                     "etag": "b0f8c724541b96e29214d641f3d7bbcfd33c905a", 
+                     "address": {
+                        "premises": "3 Drift Close", 
+                        "country": "United Kingdom", 
+                        "postal_code": "GL7 1QB", 
+                        "locality": "Cirencester"
+                     }, 
+                     "nationality": "German"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Hollingbery", 
+                     "links": {
+                        "self": "/company/08682525/persons-with-significant-control/individual/78SfqTnqqk87NNwtpwDEZLlZ-vM"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "forename": "George", 
+                        "surname": "Hollingbery", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
+                     }, 
+                     "etag": "f4556fa52980e080988ba0a2564084c264493e4c", 
+                     "address": {
+                        "locality": "Alresford", 
+                        "premises": "Weir House", 
+                        "country": "United Kingdom", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO249DG", 
+                        "address_line_1": "Alresford House"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "03/07/2017", 
+               "officers": [
+                  {
+                     "name": "MURRAY, Alastair", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/PxXkf614bDAVVodGu1gH0LeDui8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-30", 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 8
+                     }, 
+                     "address": {
+                        "premises": "38 Binns Road", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Chiswick", 
+                        "postal_code": "W4 2BS", 
+                        "locality": "London"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOWERBUTTS, Julian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RrEqjTYWZu2n303vcDGCAYwimLI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-09-09", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "premises": "41", 
+                        "region": "Gloucestershire", 
+                        "address_line_1": "Rodney Road", 
+                        "postal_code": "GL50 1HX", 
+                        "locality": "Cheltenham"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08682525", 
@@ -683,35 +2850,64 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "08682525 - Incorporated on  9 September 2013", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08682525"
+                     "filing_history": "/company/08682525/filing-history", 
+                     "charges": "/company/08682525/charges", 
+                     "self": "/company/08682525", 
+                     "officers": "/company/08682525/officers", 
+                     "persons_with_significant_control": "/company/08682525/persons-with-significant-control"
                   }, 
-                  "title": "RENDESCO LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        8
-                     ]
-                  }, 
-                  "date_of_creation": "2013-09-09", 
-                  "company_type": "ltd", 
-                  "company_number": "08682525", 
-                  "address_snippet": "41  Rodney Road, Cheltenham, Gloucestershire, GL50 1HX", 
-                  "company_status": "active", 
-                  "address": {
-                     "premises": "41 ", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "96090"
+                  ], 
+                  "etag": "4cee3febba210122e359ea939fac85f1013e1325", 
+                  "registered_office_address": {
                      "region": "Gloucestershire", 
-                     "address_line_1": "Rodney Road", 
+                     "locality": "Cheltenham", 
                      "postal_code": "GL50 1HX", 
-                     "locality": "Cheltenham"
+                     "address_line_1": "41 Rodney Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-23", 
+                     "last_made_up_to": "2017-09-09", 
+                     "next_made_up_to": "2018-09-09", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08682525", 
+                  "last_full_members_list_date": "2015-09-09", 
+                  "date_of_creation": "2013-09-09", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "RENDESCO LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }
          ], 

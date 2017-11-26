@@ -190,7 +190,83 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Ms Sarah Ann Jones", 
+                     "links": {
+                        "self": "/company/08669090/persons-with-significant-control/individual/NNBsSlo_3zpf0Hs-Cc8IcOpBw-w"
+                     }, 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 12
+                     }, 
+                     "name_elements": {
+                        "surname": "Jones", 
+                        "title": "Ms", 
+                        "middle_name": "Ann", 
+                        "forename": "Sarah"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "a066f4e83939f2bd17759e624e2583b2d88daf77", 
+                     "address": {
+                        "premises": "43", 
+                        "locality": "Croydon", 
+                        "postal_code": "CR0 5ED", 
+                        "address_line_1": "Spring Park Road"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2013-08-30", 
+                     "officer_role": "secretary", 
+                     "name": "JONES, Sarah Ann", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/VDV_hX0YdhOMslIMNMNvRMrvn34/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "43", 
+                        "country": "United Kingdom", 
+                        "locality": "Croydon", 
+                        "postal_code": "CR0 5ED", 
+                        "address_line_1": "Spring Park Road"
+                     }
+                  }, 
+                  {
+                     "name": "JONES, Sarah Ann", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/DA8cxgxOlLiC2PigDGPGZYdf9Vo/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-08-30", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1972
+                     }, 
+                     "address": {
+                        "premises": "43", 
+                        "country": "United Kingdom", 
+                        "locality": "Croydon", 
+                        "postal_code": "CR0 5ED", 
+                        "address_line_1": "Spring Park Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Campaigner"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/08669090", 
@@ -199,36 +275,63 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "08669090 - Incorporated on 30 August 2013", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/08669090"
+                     "filing_history": "/company/08669090/filing-history", 
+                     "self": "/company/08669090", 
+                     "officers": "/company/08669090/officers", 
+                     "persons_with_significant_control": "/company/08669090/persons-with-significant-control"
                   }, 
-                  "title": "LLOYD-JONES COMMUNICATIONS LTD", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        11, 
-                        13, 
-                        26
-                     ]
-                  }, 
-                  "date_of_creation": "2013-08-30", 
-                  "company_type": "ltd", 
-                  "company_number": "08669090", 
-                  "address_snippet": "43  Spring Park Road, Croydon, CR0 5ED", 
-                  "company_status": "active", 
-                  "address": {
-                     "premises": "43 ", 
-                     "address_line_1": "Spring Park Road", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "82990"
+                  ], 
+                  "etag": "b22ac52503fb997e935b39ad3cb845a53626a490", 
+                  "registered_office_address": {
+                     "locality": "Croydon", 
                      "postal_code": "CR0 5ED", 
-                     "locality": "Croydon"
+                     "address_line_1": "43 Spring Park Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-13", 
+                     "last_made_up_to": "2017-08-30", 
+                     "next_made_up_to": "2018-08-30", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08669090", 
+                  "last_full_members_list_date": "2015-08-30", 
+                  "date_of_creation": "2013-08-30", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2017-12-31", 
+                     "next_made_up_to": "2017-03-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-04-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-03-31", 
+                        "period_end_on": "2016-03-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2017-12-31", 
+                        "period_start_on": "2016-04-01", 
+                        "period_end_on": "2017-03-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "LLOYD-JONES COMMUNICATIONS LTD", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "company_status_detail": "active-proposal-to-strike-off", 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }
          ], 

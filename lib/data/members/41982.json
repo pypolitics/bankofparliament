@@ -242,7 +242,71 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Ms Esther Louise Mcvey Llb Hons", 
+                     "links": {
+                        "self": "/company/09818639/persons-with-significant-control/individual/z7AB9uqP-0zZ-e-yA_6b_BKlxU0"
+                     }, 
+                     "notified_on": "2016-07-04", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Louise", 
+                        "title": "Ms", 
+                        "surname": "Mcvey", 
+                        "honours": "Llb Hons", 
+                        "forename": "Esther"
+                     }, 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1967
+                     }, 
+                     "etag": "ab6411b0be7c04b2d1bf3df94b97f788e9d14240", 
+                     "address": {
+                        "locality": "Wirral", 
+                        "premises": "3", 
+                        "country": "England", 
+                        "region": "Merseyside", 
+                        "postal_code": "CH48 1LE", 
+                        "address_line_2": "West Kirby", 
+                        "address_line_1": "Boundary Road"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "name": "MCVEY, Esther Louise", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Ny9TfKeZ51O24XJWim-E4tGcZrA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Wirral", 
+                        "premises": "3", 
+                        "country": "England", 
+                        "region": "Merseyside", 
+                        "postal_code": "CH48 1LE", 
+                        "address_line_2": "West Kirby", 
+                        "address_line_1": "Boundary Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-10-09", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 10
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Advisor"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/09818639", 
@@ -251,37 +315,63 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "company_status": "active", 
-                  "kind": "searchresults#company", 
-                  "description": "09818639 - Incorporated on  9 October 2015", 
+                  "has_insolvency_history": false, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "82990"
+                  ], 
                   "links": {
-                     "self": "/company/09818639"
+                     "filing_history": "/company/09818639/filing-history", 
+                     "self": "/company/09818639", 
+                     "officers": "/company/09818639/officers", 
+                     "persons_with_significant_control": "/company/09818639/persons-with-significant-control"
                   }, 
-                  "title": "LYJ LIMITED", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        3
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "3  Boundary Road, West Kirby, Wirral, Merseyside, England, CH48 1LE", 
-                  "company_number": "09818639", 
-                  "date_of_creation": "2015-10-09", 
-                  "snippet": "", 
-                  "address": {
+                  "registered_office_address": {
                      "locality": "Wirral", 
-                     "premises": "3 ", 
                      "country": "England", 
                      "region": "Merseyside", 
                      "postal_code": "CH48 1LE", 
                      "address_line_2": "West Kirby", 
-                     "address_line_1": "Boundary Road"
+                     "address_line_1": "3 Boundary Road"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-07-18", 
+                     "last_made_up_to": "2017-07-04", 
+                     "next_made_up_to": "2018-07-04", 
+                     "overdue": false
+                  }, 
+                  "company_number": "09818639", 
+                  "date_of_creation": "2015-10-09", 
+                  "etag": "c51104105fa87ffb451a26f9d598e3ec48b08f99", 
+                  "accounts": {
+                     "next_due": "2018-07-31", 
+                     "next_made_up_to": "2017-10-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-10-09", 
+                        "type": "micro-entity", 
+                        "made_up_to": "2016-10-31", 
+                        "period_end_on": "2016-10-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-07-31", 
+                        "period_start_on": "2016-11-01", 
+                        "period_end_on": "2017-10-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "10"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "LYJ LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }
          ], 

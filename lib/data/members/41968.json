@@ -601,7 +601,83 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Royston Matthew Smith", 
+                     "links": {
+                        "self": "/company/05933160/persons-with-significant-control/individual/Zjnc-9PLrGKbZ61-AJpS0UHyxHU"
+                     }, 
+                     "notified_on": "2016-07-01", 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "significant-influence-or-control"
+                     ], 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1964
+                     }, 
+                     "name_elements": {
+                        "middle_name": "Matthew", 
+                        "title": "Mr", 
+                        "surname": "Smith", 
+                        "forename": "Royston"
+                     }, 
+                     "etag": "c24ef1a7a07b31df9f232f4b18104541a8c4630a", 
+                     "address": {
+                        "locality": "Southampton", 
+                        "premises": "Unit1,", 
+                        "region": "Hampshire", 
+                        "postal_code": "SO15 1JR", 
+                        "address_line_2": "Millbrook Road East", 
+                        "address_line_1": "Freemantle Business Centre"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "04/06/2015", 
+               "officers": [
+                  {
+                     "appointed_on": "2006-09-12", 
+                     "officer_role": "secretary", 
+                     "name": "GERRARD, Amanda", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/jSo7xML1u4ZUmJlmPt8h2apwUpw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "region": "Hampshire", 
+                        "locality": "Southampton", 
+                        "postal_code": "SO19 4DT", 
+                        "address_line_1": "24 Little Lances Hill"
+                     }
+                  }, 
+                  {
+                     "name": "SMITH, Royston Matthew", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/4ythxb0MvYxXShXtQ74EZ9-8JC0/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Bitterne", 
+                        "region": "Hampshire", 
+                        "address_line_1": "24 Little Lance's Hill", 
+                        "postal_code": "SO19 4DT", 
+                        "locality": "Southampton"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2006-09-12", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1964
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Engineer"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 15, 
                "link": "https://beta.companieshouse.gov.uk/company/05933160", 
@@ -610,35 +686,65 @@
                "category_id": 8, 
                "isGift": false, 
                "company": {
-                  "snippet": "", 
-                  "kind": "searchresults#company", 
-                  "description": "05933160 - Incorporated on 12 September 2006", 
+                  "status": "active", 
+                  "has_insolvency_history": false, 
                   "links": {
-                     "self": "/company/05933160"
+                     "filing_history": "/company/05933160/filing-history", 
+                     "self": "/company/05933160", 
+                     "officers": "/company/05933160/officers", 
+                     "persons_with_significant_control": "/company/05933160/persons-with-significant-control"
                   }, 
-                  "title": "VIGILO LTD", 
-                  "matches": {
-                     "snippet": [], 
-                     "title": [
-                        1, 
-                        6
-                     ]
-                  }, 
-                  "company_type": "ltd", 
-                  "address_snippet": "Unit1, Freemantle Business Centre Millbrook Road East, Southampton, Hampshire, SO15 1JR", 
-                  "company_number": "05933160", 
-                  "date_of_creation": "2006-09-12", 
-                  "company_status": "active", 
-                  "address": {
-                     "premises": "Unit1, Freemantle Business Centre", 
-                     "region": "Hampshire", 
-                     "address_line_1": "Millbrook Road East", 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "70210"
+                  ], 
+                  "etag": "ffdc887de054b5c8d3281170454d093d60974cee", 
+                  "registered_office_address": {
                      "postal_code": "SO15 1JR", 
-                     "locality": "Southampton"
+                     "region": "Hampshire", 
+                     "locality": "Southampton", 
+                     "address_line_2": "Millbrook Road East", 
+                     "address_line_1": "Unit1, Freemantle Business Centre"
                   }, 
-                  "description_identifier": [
-                     "incorporated-on"
-                  ]
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-26", 
+                     "last_made_up_to": "2017-09-12", 
+                     "next_made_up_to": "2018-09-12", 
+                     "overdue": false
+                  }, 
+                  "company_number": "05933160", 
+                  "last_full_members_list_date": "2015-09-12", 
+                  "date_of_creation": "2006-09-12", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-06-30", 
+                     "next_made_up_to": "2017-09-30", 
+                     "last_accounts": {
+                        "period_start_on": "2015-10-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-09-30", 
+                        "period_end_on": "2016-09-30"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-06-30", 
+                        "period_start_on": "2016-10-01", 
+                        "period_end_on": "2017-09-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "09"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "VIGILO LTD", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
                }
             }
          ], 
