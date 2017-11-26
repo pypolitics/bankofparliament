@@ -591,18 +591,18 @@ def write_scatter_plot(mp, plot_file):
                 # textwrap the hovertext
                 pretty = item['pretty']
                 wrapped = textwrap.wrap(pretty, 50)
-
                 hovertext = '</br>' + '</br>'.join(wrapped)
                 item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
                 item_copy['amount'] = item['amount']
 
                 # scale the marker
-                if len(sub['items']) > 0:
-                    if not current_min == current_max:
-                        if item['amount']:
-                            size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
-                            item_copy['size'] += size_value
+                if not sub['category_description'] == 'Shareholdings':
+                    if len(sub['items']) > 0:
+                        if not current_min == current_max:
+                            if item['amount']:
+                                size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
+                                item_copy['size'] += size_value
 
                 # hyperlinked node - add a border
                 if url:
