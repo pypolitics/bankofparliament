@@ -655,7 +655,8 @@ def write_scatter_plot(mp, plot_file):
                         if person.has_key('nationality'):
                             hovertext += '</br><b>Nationality:</b> %s' % person['nationality']
                         if person.has_key('identification'):
-                            hovertext += '</br><b>Registered:</b> %s' % person['identification']['country_registered']
+                            if person['identification'].has_key('country_registered'):
+                                hovertext += '</br><b>Registered:</b> %s' % person['identification']['country_registered']
 
                         hovertext += '</br>'
                         for control in person['natures_of_control']:
