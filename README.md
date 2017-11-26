@@ -28,7 +28,9 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* banner stretch
+* identify person with significant as an mp, extract the percentage ownership
+* if the mp doesnt exist, add a custom one to complete the visualisation
+* when the wealth/shareholdings node, destroy plot a draw just the companies house / shareholdings data (expanded to inc officers)
 
 * Photo of mp on graph
 * Firefox, Chrome etc compatibility
