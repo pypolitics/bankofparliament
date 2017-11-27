@@ -598,8 +598,7 @@ def write_scatter_plot(mp, plot_file):
                 hovertext = '</br>' + '</br>'.join(wrapped)
 
                 if 'shareholding' in sub['category_description'].lower():
-                    hovertext = '</br></br><b>Register of Interests Raw String:</b>'
-                    hovertext += '</br>' + '</br>'.join(wrapped)
+                    hovertext = ''
 
                     hovertext += '</br>'
                     if item['company'].has_key('company_name'):
@@ -612,8 +611,11 @@ def write_scatter_plot(mp, plot_file):
                         for sic in item['company']['sic_codes']:
                             hovertext += '</br><b>Sic Code:</b> %s</br>' % read_sic_codes(sic)
 
+                    hovertext += '</br><b>Register of Interests Raw Entry:</b>'
+                    hovertext += '</br>' + '</br>'.join(wrapped)
+                    hovertext += '</br>'
+
                     if url:
-                        hovertext += '</br>'
                         hovertext += 'Click node to visit Companies House record.'
 
                 item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
