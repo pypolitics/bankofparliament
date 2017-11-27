@@ -607,11 +607,11 @@ def write_scatter_plot(mp, plot_file):
                         hovertext += '</br><b>Company Number:</b> %s' % item['company']['company_number']
                     if item['company'].has_key('company_status'):
                         hovertext += '</br><b>Company Status:</b> %s' % item['company']['company_status'].title()
-                    if item['company'].has_key('sic_codes'):
-                        for sic in item['company']['sic_codes']:
-                            hovertext += '</br><b>Sic Code:</b> %s</br>' % read_sic_codes(sic)
+                    # if item['company'].has_key('sic_codes'):
+                    #     for sic in item['company']['sic_codes']:
+                    #         hovertext += '</br><b>Sic Code:</b> %s</br>' % read_sic_codes(sic)
 
-                    hovertext += '</br><b>Register of Interests Raw Entry:</b>'
+                    hovertext += '</br></br><b>Register of Interests Raw Entry:</b>'
                     hovertext += '</br>' + '</br>'.join(wrapped)
                     hovertext += '</br>'
 
