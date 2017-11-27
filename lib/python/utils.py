@@ -616,7 +616,7 @@ def write_scatter_plot(mp, plot_file):
                     hovertext += '</br>'
 
                     if url:
-                        hovertext += 'Click node to visit Companies House record.'
+                        hovertext += '</br>Click node to visit Companies House record.'
 
                 item_node = make_node(data_nodes['%s_item' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
@@ -711,7 +711,7 @@ def write_scatter_plot(mp, plot_file):
                 #         data['links'].append(l)
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
-    return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink, div=True)
+    return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
     # print 'Writing : %s' % plot_file
 
 def camel_case_split(identifier):
