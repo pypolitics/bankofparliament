@@ -177,8 +177,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		data = Data(traces)
 		config = {'displayModeBar': False, 'showLink':False}
 		fig = Figure(data=data, layout=layout)
-		html = offline.plot(fig, auto_open=True, config=config)
-		return
+		# html = offline.plot(fig, auto_open=True, config=config)
+		# return
 
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
