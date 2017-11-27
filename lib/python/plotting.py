@@ -10,10 +10,10 @@ from plotly.graph_objs import *
 
 parliament = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/refDods='
 
-def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, party, hyperlink=None, dot_width=0.5, div=True, width=1100, height=619, write=False):
+def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, party, hyperlink=None):
 	"""
 	"""
-
+	imagepath = 'https://raw.githubusercontent.com/pypolitics/notpolitics/master/lib/data/images/%s.png' % member_id
 	parliament_hyperlink = parliament + dods_id + '/' + 'GovernmentPosts|BiographyEntries|Committees'
 
 	# number of nodes
@@ -116,10 +116,24 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		          fixedrange=True
 		          )
 
+		# these images do not yet exist, need to make them
+		# pin an image to the middle of the first marker
+		images = [dict(source= imagepath,
+						xref= "x",
+						yref= "y",
+						x= Xe[0], # first index
+						y= Ye[0], # first index
+						sizex= 1,
+						sizey= 1,
+						sizing="contain",
+						xanchor= "center",
+						yanchor= "middle",)
+		]
+		# set to nothing for now
+		images = []
+
 		layout = Layout(
 			autosize=True,
-			# width=width,
-			# height=height,
 			showlegend=False,
 			xaxis=XAxis(axis),
 			yaxis = YAxis(axis),
@@ -138,7 +152,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data source: </a><a href="%s">theyworkforyou</a>, <a href="%s">data.parliament.uk</a>' % (hyperlink, parliament_hyperlink), 
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s">theyworkforyou</a>, <a href="%s">data.parliament.uk</a>' % (hyperlink, parliament_hyperlink), 
 					xref='paper',
 					yref='paper',
 					x=0,
@@ -148,7 +162,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 					),
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 200;"><b>%s,</b> %s</a>' %(title.title(), constituency.title()),
+					text='<a style="color: black; font-weight: 200;"><b>%s,</b> %s, %s</a>' %(title.title(), constituency.title(), party.title()),
 					xref='paper',
 					yref='paper',
 					x=0.5,
@@ -157,29 +171,16 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 						size=18, color="#444", family="Abel")
 				)
 			]),
-			)
+			images=images
+				)
 
-		# plot to file
 		data = Data(traces)
+		config = {'displayModeBar': False, 'showLink':False}
 		fig = Figure(data=data, layout=layout)
-		# html = offline.plot(fig, auto_open=True)
-		# return
+		html = offline.plot(fig, auto_open=True, config=config)
+		return
 
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
 		with open(plot_file, "w") as f:
 			json.dump(json_data, f)
-
-		if div:
-			# add javascript script
-			js = '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>\n'
-			html = offline.plot(fig, include_plotlyjs=False, output_type='div')
-			html = js + html
-
-			# write it out
-			if write:
-				with open(plot_file.replace('json', 'html'), "a") as f:
-					f.write(html.encode("utf8"))
-			return html
-		else:
-			offline.plot(fig, filename=filename, auto_open=False)
