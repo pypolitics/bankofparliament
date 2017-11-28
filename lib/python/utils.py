@@ -7,7 +7,7 @@ sys.setdefaultencoding('utf8')
 
 from datetime import datetime, date
 import xml.etree.cElementTree as ElementTree
-# from fuzzywuzzy import fuzz
+from fuzzywuzzy import fuzz
 # from fuzzywuzzy import process
 from datetime import datetime
 import textwrap
@@ -15,7 +15,7 @@ import textwrap
 import csv
 # import matplotlib.pyplot as plt
 from plotting import plot_data_to_file
-from constants import party_colours
+from constants import party_colours, name_titles
 
 companies_house_user = 'ZCCtuxpY7uvkDyxLUz37dCYFIgke9PKfhMlEGC-Q'
 
@@ -416,7 +416,7 @@ def write_scatter_plot(mp, plot_file):
 
                     }
 
-    data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 128},
+    data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 120},
 
                     'income_item'        : {'color' : orange_lighter, 'opacity' : 0.8, 'size' : 30},
                     'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
@@ -438,7 +438,7 @@ def write_scatter_plot(mp, plot_file):
                     'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
                     'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
 
-                    'person_item'        : {'color' : grey_lighter_white, 'opacity' : 0.5, 'size' : 20},
+                    'person_item'        : {'color' : grey_lighter_white, 'opacity' : 0.5, 'size' : 15},
                     'officer_item'        : {'color' : 'white', 'opacity' : 0.5, 'size' : 10},
 
                     }
@@ -577,13 +577,16 @@ def write_scatter_plot(mp, plot_file):
 
                     # the item is a currency, see if it requires a '(Min)' suffix too
                     label = "£" + "{:,}".format(item['amount'])
-                    if sub['category_description'] in ['Other Shareholdings', 'Property', 'Rental Income']:
+                    if sub['category_description'] in ['Property', 'Rental Income']:
                         label += '+'
-
+                    if sub['category_description'] in ['Other Shareholdings']:
+                        label = '%sk+' % str(item['amount'])[:2]
 
                 # its not currency
                 elif sub['category_description'] == 'Shareholdings':
                     label = '%s' % item['amount'] + r'%'
+                    if item['amount'] == 15:
+                        label += '+'
                 else:
                     label = ''
 
@@ -607,9 +610,6 @@ def write_scatter_plot(mp, plot_file):
                         hovertext += '</br><b>Company Number:</b> %s' % item['company']['company_number']
                     if item['company'].has_key('company_status'):
                         hovertext += '</br><b>Company Status:</b> %s' % item['company']['company_status'].title()
-                    # if item['company'].has_key('sic_codes'):
-                    #     for sic in item['company']['sic_codes']:
-                    #         hovertext += '</br><b>Sic Code:</b> %s</br>' % read_sic_codes(sic)
 
                     hovertext += '</br></br><b>Register of Interests Raw Entry:</b>'
                     hovertext += '</br>' + '</br>'.join(wrapped)
@@ -623,7 +623,8 @@ def write_scatter_plot(mp, plot_file):
                 item_copy['amount'] = item['amount']
 
                 # scale the marker
-                if not sub['category_description'] == 'Shareholdings':
+                if not sub['category_description'] in ['Shareholdings']:
+
                     if len(sub['items']) > 0:
                         if not current_min == current_max:
                             if item['amount']:
@@ -644,75 +645,94 @@ def write_scatter_plot(mp, plot_file):
                 # COMPANIES HOUSE STUFF ONLY
                 # significant persons
                 if item.has_key('persons'):
+                    # foundMP = False
+
                     for person in item['persons']:
-                        pretty = '<b>%s</b></br>' % person['name']
-                        for control in person['natures_of_control']:
-                            pretty += '</br>%s</br>' % control.replace('-', ' ').title()
-
+                        # isMP = False
                         label = ''
-                        hovertext = '%s</br>' % person['name']
-                        # hovertext = '<b>%s</b></br>' % person['name']
-                        # hovertext += '</br>'
-                        # hovertext += '</br><b>Kind:</b> %s' % person['kind'].replace('-', ' ').title()
 
-                        # if person.has_key('nationality'):
-                        #     hovertext += '</br><b>Nationality:</b> %s' % person['nationality']
-
-                        # if person.has_key('identification'):
-                        #     if person['identification'].has_key('country_registered'):
-                        #         hovertext += '</br><b>Registered:</b> %s' % person['identification']['country_registered']
-
-                        # hovertext += '</br>'
-                        # for control in person['natures_of_control']:
-                        #     hovertext += '</br><b>Control:</b> %s' % control.replace('-', ' ').title()
-
+                        name = clean_name(person['name'])
+                        hovertext = '%s' % name.title()
                         if url:
                             url = item['link'] + '/persons-with-significant-control/'
 
                         person_node = make_node(data_nodes['person_item'], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                         person_copy = copy.copy(person_node)
 
-                        found = False
-                        for i in data['nodes']:
+                        # fuzzy logic a cleaned name for match with mp
+                        # set our threshold at 90%
+                        ratio = fuzz.token_set_ratio(name, mp['name'])
 
-                            if i['hovertext'] == '%s</br>' % person['name']:
-                                found = i
-                                # break
+                        if ratio >= 90:
+                            # isMP = True
+                            # foundMP = True
+                            # person_copy['isMP'] = True
+                            person_copy['color'] = party_colours[mp['party'].lower()]
 
-                        if not found:
-                            data['nodes'].append(person_copy)
-                            found = person_copy
+                            # update the upstrem node with new percentage if higher than current value
+                            for control in person['natures_of_control']:
+                                if 'ownership' in control:
+                                    # find the first digits, always the minimum
+                                    minimum = re.search('[\d]+', control).group()
 
-                        link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
-                        l = copy.copy(link)
-                        data['links'].append(l)
+                                    # if the minimum is bigger than the current percentage value, update it
+                                    if int(minimum) > item['amount']:
+                                        data['nodes'][data['nodes'].index(item_copy)]['name'] = str(minimum) + r'%+'
 
-                # # officers
-                # if item.has_key('officers'):
-                #     for officer in item['officers']:
-
-                #         label = ''
-                #         hovertext = officer['name']
-                #         officer_node = make_node(data_nodes['officer_item'], name=label, hovertext=hovertext, node_type=category)
-                #         officer_copy = copy.copy(officer_node)
-
+                #         # go looking for node with the same hovertext, that isnt the main mp node.
                 #         found = False
                 #         for i in data['nodes']:
-                #             if i['hovertext'] == officer['name']:
-                #                 found = i
-                #                 break
+
+                #             if i['hovertext'] == hovertext:
+                #                 if i['node_type'] != 'mp':
+                #                     found = i
 
                 #         if not found:
-                #             data['nodes'].append(officer_copy)
-                #             found = officer_copy
+                #             data['nodes'].append(person_copy)
+                #             found = person_copy
 
                 #         link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
                 #         l = copy.copy(link)
                 #         data['links'].append(l)
 
+                #     if not foundMP:
+                #         # maybe make a node for the
+                #         label = ''
+                #         hovertext = '%s' % mp['name'].title()
+                #         url = None
+
+                #         person_node = make_node(data_nodes['person_item'], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+                #         person_copy = copy.copy(person_node)
+                #         person_copy['color'] = party_colours[mp['party'].lower()]
+
+                #         found = False
+                #         for i in data['nodes']:
+
+                #             if i['hovertext'] == '%s' % hovertext:
+                #                 if i['node_type'] != 'mp':
+                #                     found = i
+
+                #         if not found:
+                #             data['nodes'].append(person_copy)
+                #             found = person_copy
+
+                #         link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
+                #         l = copy.copy(link)
+                #         data['links'].append(l)
+
+
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
     return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
     # print 'Writing : %s' % plot_file
+
+def clean_name(name):
+    name_list = []
+
+    for n in name.lower().split(' '):
+        if n not in name_titles:
+            name_list.append(n)
+
+    return ' '.join(name_list).lower().strip()
 
 def camel_case_split(identifier):
     matches = re.finditer('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$|(?<=[0-9])(?=[A-Z]))', identifier)

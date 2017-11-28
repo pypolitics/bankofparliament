@@ -17,3 +17,5 @@ party_colours['liberal democrat'] = '#FDBB30'
 party_colours['green'] = '#77B829'
 party_colours['speaker'] = '#bdbebf'
 party_colours['independent'] = '#bdbebf'
+
+name_titles = ['miss', 'mrs', 'ms', 'mr', 'sir', 'lady', 'dr', 'rt hon', 'hon', 'rt', 'rev', 'lord']

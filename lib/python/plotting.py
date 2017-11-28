@@ -123,8 +123,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 						yref= "y",
 						x= Xe[0], # first index
 						y= Ye[0], # first index
-						sizex= 1,
-						sizey= 1,
+						sizex= 1.5,
+						sizey= 1.5,
 						sizing="contain",
 						xanchor= "center",
 						yanchor= "middle",)
@@ -145,6 +145,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 				pad=4
 			),
 			hovermode='closest',
+			# dragmode='pan',
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',
 			hidesources=True,
