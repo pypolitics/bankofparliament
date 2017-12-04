@@ -1,21 +1,21 @@
 # constants
 
-party_colours = {}
-party_colours['labour'] = '#DC241f'
-party_colours['labour/co-operative'] = '#DC241f'
-# party_colours['social democratic and labour party'] = '#DC241f'
-party_colours['sinn fein'] = '#008800'
-party_colours[u'sinn f\xe9in'] = '#008800'
-party_colours['dup'] = '#C8292B'
-party_colours['uup'] = '#C8292B'
-party_colours['plaid cymru'] = '#3F8428'
-party_colours['labour-co-op'] = '#DC241f'
-party_colours['ukip'] = '#70147a'
-party_colours['conservative'] = '#0087dc'
-party_colours['scottish national party'] = '#ffff00'
-party_colours['liberal democrat'] = '#FDBB30'
-party_colours['green'] = '#77B829'
-party_colours['speaker'] = '#bdbebf'
-party_colours['independent'] = '#bdbebf'
+PARTY_COLOURS = {}
+PARTY_COLOURS['labour'] = '#DC241f'
+PARTY_COLOURS['labour/co-operative'] = '#DC241f'
+PARTY_COLOURS['sinn fein'] = '#008800'
+PARTY_COLOURS[u'sinn f\xe9in'] = '#008800'
+PARTY_COLOURS['dup'] = '#C8292B'
+PARTY_COLOURS['uup'] = '#C8292B'
+PARTY_COLOURS['plaid cymru'] = '#3F8428'
+PARTY_COLOURS['labour-co-op'] = '#DC241f'
+PARTY_COLOURS['ukip'] = '#70147a'
+PARTY_COLOURS['conservative'] = '#0087dc'
+PARTY_COLOURS['scottish national party'] = '#ffff00'
+PARTY_COLOURS['liberal democrat'] = '#FDBB30'
+PARTY_COLOURS['green'] = '#77B829'
+PARTY_COLOURS['speaker'] = '#bdbebf'
+PARTY_COLOURS['independent'] = '#bdbebf'
 
-name_titles = ['miss', 'mrs', 'ms', 'mr', 'sir', 'lady', 'dr', 'rt hon', 'hon', 'rt', 'rev', 'lord']
+NAME_TITLES = ['miss', 'mrs', 'ms', 'mr', 'sir', 'lady', 'dr', 'rt hon', 'hon', 'rt', 'rev', 'lord']
+KEYWORDS = ['parliament', 'politician', 'politic', 'house of commons', ' mp ', 'honourable']

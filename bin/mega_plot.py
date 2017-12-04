@@ -11,7 +11,7 @@ import os, sys, json
 import operator, copy
 
 sys.path.append('../lib/python')
-from constants import party_colours
+from constants import PARTY_COLOURS
 
 orange_darker = '#f7a55d'
 orange_lighter = '#fac99e'
@@ -59,7 +59,7 @@ def main(mps):
 
 		node_mp = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
 		node_copy = copy.copy(node_mp)
-		node_copy['color'] = party_colours[mp['party'].lower()]
+		node_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
 		data['nodes'].append(node_copy)
 
 		link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_copy, amount=0, party=mp['party'])
@@ -78,7 +78,7 @@ def main(mps):
 
 					if node_item_copy not in data['nodes']:
 						# print '\t\tNot in nodes : %s' % item['pretty']
-						# node_item_copy['color'] = party_colours[mp['party'].lower()]
+						# node_item_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
 						data['nodes'].append(node_item_copy)
 					# else:
 						# print '\t\tMatched a node : %s' % item['pretty']
@@ -105,7 +105,7 @@ def main(mps):
 					node['amount'] += link['amount']
 					amounts.append(link['amount'])
 
-					node['color'] = party_colours[link['party'].lower()]
+					node['color'] = PARTY_COLOURS[link['party'].lower()]
 
 
 	# scale the nodes, by their amounts
