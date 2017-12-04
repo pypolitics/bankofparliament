@@ -90,7 +90,7 @@ def write_shareholder_plot(mp, plot_file):
     label = '<b>%s<br>%s' % (first, last)
     label = ''
 
-    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
+    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink='%s' % mp['member_id'])
     # node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
 
