@@ -61,11 +61,11 @@ class Shareholdings(Category):
 		company = None
 		url = ''
 
-		print '\tRaw String : %s' % raw_string
+		# print '\tRaw String : %s' % raw_string
 
 		# check if we have pre-defined this
 		if raw_string in urls.keys():
-			print '\tPatched : %s' % urls[raw_string]
+			# print '\tPatched : %s' % urls[raw_string]
 			company = patched_company(urls[raw_string])
 			# test the patch url, may have been set to ''
 			if company.has_key('company_name'):
@@ -79,7 +79,7 @@ class Shareholdings(Category):
 		if not company and company != {}:
 			# no patches have been applied
 			company_search_string = make_search_string(raw_string)
-			print '\tSearch String : %s' % company_search_string
+			# print '\tSearch String : %s' % company_search_string
 
 			# do the query
 			limit = '50'
@@ -93,7 +93,7 @@ class Shareholdings(Category):
 					company = i
 					break
 		if company:
-			print '\tMatched Company : %s' % company['title']
+			# print '\tMatched Company : %s' % company['title']
 			link = company['links']['self']
 			url = 'https://beta.companieshouse.gov.uk%s' % link
 		else:
@@ -101,7 +101,7 @@ class Shareholdings(Category):
 						'links' : {'self' : ''},
 						'company_status' : 'active',
 						'company_name' : raw_string,}
-			print '\tUnmatched Company : %s' % company['title']
+			# print '\tUnmatched Company : %s' % company['title']
 
 		self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount, company, url))
 
