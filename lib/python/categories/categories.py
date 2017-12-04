@@ -1,9 +1,5 @@
 # system  libs
 import locale
-import inspect
-
-# local libs
-from utils import padded_string
 
 class Category():
 	'''
