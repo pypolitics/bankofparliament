@@ -9,6 +9,7 @@ import plotly.plotly as py
 from plotly.graph_objs import *
 
 parliament = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/refDods='
+companieshouse = 'https://beta.companieshouse.gov.uk/search?q='
 
 def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, party, hyperlink=None):
 	"""
@@ -21,6 +22,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 
 	# number of links
 	L = len(data['links'])
+
 	if L > 0:
 		# for every link, create a tuple of source and target (ids, of nodes)
 		Edges = [(data['links'][k]['source'], data['links'][k]['target']) for k in range(L)]
@@ -103,7 +105,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		               textposition='middle',
 		               hoverinfo = 'text',
 		               hovertext = node_hovertext,
-		               customdata = node_hyperlink
+		               customdata = node_hyperlink,
+		               textfont=Font(size=12, color="#444", family="Abel")
 		               )
 		traces.append(trace2_2d)
 
@@ -153,7 +156,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s">theyworkforyou</a>, <a href="%s">data.parliament.uk</a>' % (hyperlink, parliament_hyperlink), 
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s">theyworkforyou</a>,  <a href="%s">data.parliament.uk</a>,  <a href="%s%s">beta.companieshouse.gov.uk</a>' % (hyperlink, parliament_hyperlink, companieshouse, title.replace(' ', '+')), 
 					xref='paper',
 					yref='paper',
 					x=0,
