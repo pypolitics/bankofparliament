@@ -2,7 +2,6 @@
 # system libs
 import locale, ast, os, operator, json, sys, pprint, re
 from bs4 import BeautifulSoup
-from wordcloud import WordCloud
 from optparse import OptionParser
 import time
 from datetime import datetime
@@ -20,13 +19,9 @@ from categories.gifts import GiftsOutsideUK, Gifts
 from categories.visits import VisitsOutsideUK
 from categories.donations import DirectDonations, IndirectDonations
 from categories.salary import Salary
-from categories.companies_house import CompaniesHouseUser
-from utils import get_all_mps, get_request, get_house_of_commons_member, get_house_of_commons_member2
-import html_formatter
+from categories.companies_house import CompaniesHouse
+from utils import get_all_mps, get_request, get_house_of_commons_member
 
-from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseOfficer, CompaniesHouseCompanySearch
-
-# locale.setlocale( locale.LC_ALL, '' )
 sys.path.append(os.path.abspath(os.path.expanduser('~/.apikeys')))
 from apikeys import theyworkyou_apikey, companies_house_user
 
@@ -68,12 +63,6 @@ class MemberOfParliament():
 
 		# make sense of the html info, regarding registered intrests
 		self.getMPIntrests()
-
-		# todo
-		# self.getMPExpenses()
-
-		# get companies house records
-		# self.getMPCompanies()
 
 		end_time = time.time()
 		elapsed = end_time - start_time
@@ -173,59 +162,6 @@ class MemberOfParliament():
 		if self.extended['BasicDetails']['GivenMiddleNames']:
 			self.middle = self.extended['BasicDetails']['GivenMiddleNames'].lower()
 
-	def getMPCompanies(self):
-		"""Method to query companies house for appointments"""
-
-		self.mps = []
-
-		first_name = self.extended['BasicDetails']['GivenForename'].lower()
-		last_name = self.extended['BasicDetails']['GivenSurname'].lower()
-		display_as_name = self.extended['DisplayAs'].lower()
-		names = ['%s %s' % (first_name, last_name), display_as_name]
-
-		middle_name = ''
-		if self.extended['BasicDetails']['GivenMiddleNames']:
-			middle_name = self.extended['BasicDetails']['GivenMiddleNames'].lower()
-			names.append('%s %s %s' % ( first_name, middle_name, last_name))
-
-		users = CompaniesHouseUserSearch(names)
-		users.identify(keywords=self.keywords, month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
-		
-		for i in users.matched:
-			officer = CompaniesHouseOfficer(i, defer=True, get_officers=self.company_officers, get_filing=self.company_filing, get_persons=self.company_persons)
-
-			# dont get the appointments if weve already got the record
-			if not officer.links in [each.links for each in self.mps]:
-				officer._get_appointments(i)
-				self.mps.append(officer)
-
-		companies = CompaniesHouseCompanySearch(names)
-		companies.get_data(keywords=self.keywords, month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
-
-		for i in companies.matched_officers:
-			officer = CompaniesHouseOfficer(i, defer=True, get_officers=self.company_officers, get_filing=self.company_filing, get_persons=self.company_persons)
-
-			# dont get the appointments if weve already got the record
-			if not officer.links in [each.links for each in self.mps]:
-				officer._get_appointments(i)
-				self.mps.append(officer)
-
-		for i in companies.matched_persons:
-			officer = CompaniesHouseOfficer(i, defer=True, get_officers=self.company_officers, get_filing=self.company_filing, get_persons=self.company_persons)
-
-			# dont get the appointments if weve already got the record
-			if not officer.links in [each.links for each in self.mps]:
-				officer._get_appointments(i)
-				self.mps.append(officer)
-
-	def getMPExpenses(self):
-		"""Method to parse expenses"""
-
-		self.expenses = []
-		for i in self.full_info.keys():
-			if i.startswith('expenses'):
-				self.expenses.append(i)
-
 	def getMPIntrests(self):
 		"""Method to parse the full_info variable"""
 
@@ -282,8 +218,17 @@ class MemberOfParliament():
 		for each in headings.keys():
 			headings[each].parse()
 
-		# store dictionary values (classes), as MemberOfParliament class variable
+		first_name = self.extended['BasicDetails']['GivenForename'].lower()
+		last_name = self.extended['BasicDetails']['GivenSurname'].lower()
+		display_as_name = self.extended['DisplayAs'].lower()
+
+		middle_name = ''
+		if self.extended['BasicDetails']['GivenMiddleNames']:
+			middle_name = self.extended['BasicDetails']['GivenMiddleNames'].lower()
+
+		# faked catergories, for ease of plotting later on
 		self.salary = Salary(self.office, self.first_name, self.last_name, self.party)
+		self.companieshouse = CompaniesHouse(month=self.month, year=self.year, first=first_name, middle=middle_name, last=last_name, display=display_as_name)
 
 		self.employment = headings['Employment and earnings']
 		self.indirect = headings['Support linked to an MP but received by a local party organisation']
@@ -312,8 +257,7 @@ class MemberOfParliament():
 		self.categories.append(self.family)
 		self.categories.append(self.family_lobbyists)
 		self.categories.append(self.salary)
-
-
+		self.categories.append(self.companieshouse)
 
 	@property
 	def total_wealth(self):
@@ -353,19 +297,10 @@ class MemberOfParliament():
 		return value
 
 	@property
-	def total_expenses(self):
-		"""total expenses of mp"""
-		value = 0
-		# for category in self.categories:
-		# 	if category.expenses > 0:
-		# 		value += category.expenses
-		return value
-
-	@property
 	def total_annual(self):
 		"""total annual of mp"""
 
-		return self.total_income + self.total_gifts + self.total_expenses + self.total_donations
+		return self.total_income + self.total_gifts + self.total_donations
 
 	@property
 	def data(self):
@@ -375,6 +310,8 @@ class MemberOfParliament():
 		data['party'] = self.party
 		data['constituency'] = self.constituency
 		data['dob'] = self.dob
+		data['month'] = self.month
+		data['year'] = self.year
 		data['forname'] = self.first_name
 		data['surname'] = self.last_name
 		data['member_id'] = self.member_id
@@ -388,6 +325,7 @@ class MemberOfParliament():
 		data['gender'] = self.extended['Gender']
 		data['town_of_birth'] = self.extended['BasicDetails']['TownOfBirth']
 		data['country_of_birth'] = self.extended['BasicDetails']['CountryOfBirth']
+		data['extended'] = self.extended
 
 		data['categories'] = []
 
@@ -401,9 +339,6 @@ class MemberOfParliament():
 			cat_data['items'] = temp
 			data['categories'].append(cat_data)
 
-		# companies house stuff
-		data['companies_house'] = []
-		
 		vals = self.name.split(' ')
 		vals.append(self.constituency)
 		vals.append(self.party)
