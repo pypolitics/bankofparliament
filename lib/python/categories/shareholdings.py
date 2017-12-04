@@ -71,7 +71,9 @@ class Shareholdings(Category):
 			if company.has_key('company_name'):
 				company['title'] = company['company_name']
 			else:
-				company = {}
+				# spoof the record
+				company['title'] = pretty
+				company['links'] = {'self' : ''}
 				company_search_string = ''
 
 		if not company and company != {}:
@@ -90,14 +92,16 @@ class Shareholdings(Category):
 				if check_match(i, company_search_string, self.month, self.year, self.first, self.middle, self.last, self.display):
 					company = i
 					break
-
 		if company:
-			print '\tMatched Company : %s\n' % company['title']
+			print '\tMatched Company : %s' % company['title']
 			link = company['links']['self']
 			url = 'https://beta.companieshouse.gov.uk%s' % link
 		else:
-			print '\t\tUnatched Company : %s\n' % (company_search_string)
-			company = {}
+			company = {'title' : raw_string,
+						'links' : {'self' : ''},
+						'company_status' : 'active',
+						'company_name' : raw_string,}
+			print '\tUnmatched Company : %s' % company['title']
 
 		self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount, company, url))
 
