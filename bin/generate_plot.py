@@ -6,7 +6,10 @@ from optparse import OptionParser
 sys.path.append('../lib/python')
 lib_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib')
 
-from utils import write_scatter_plot, read_json_file, read_expenses, match_expenses
+from utils import read_json_file, read_expenses, match_expenses
+
+from register_plot import write_scatter_plot
+from shareholdings_plot import write_shareholder_plot
 
 expenses_data_paths = {
             # '2017-2018' : '../lib/data/export_17_18.csv',
@@ -43,9 +46,11 @@ if __name__ == "__main__":
     for mp in mps:
         print '\nProcessing Plot : %s' % mp['name']
         plot_file = os.path.join(lib_path, 'data', 'plots', '%s.json' % mp['member_id'])
+        shareholdings_file = os.path.join(lib_path, 'data', 'plots', 'shareholdings', '%s.json' % mp['member_id'])
 
         # add expenses
         for year in expenses_data.keys():
             mp['expenses'] = match_expenses(mp, year, expenses_data)
 
         write_scatter_plot(mp, plot_file)
+        write_shareholder_plot(mp, shareholdings_file)
