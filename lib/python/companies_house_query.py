@@ -342,7 +342,7 @@ class CompaniesHouseUserSearch():
 					match_dob = True
 					match_count += 1
 				else:
-
+					# subtract one
 					match_dob = False
 					match_count -= 1
 
@@ -378,6 +378,25 @@ class CompaniesHouseUserSearch():
 
 			# look for first middle last name
 			if filter_by_name_string(record, '%s %s %s' % (first, middle, last)) != []:
+				match_fml = True
+			else:
+				match_fml = False
+
+			# FUZZY MATCH
+			# look for display name first
+			if fuzz.token_set_ratio(record['title'], display) >= 90:
+				match_display = True
+			else:
+				match_display = False
+
+			# look for first last name
+			if fuzz.token_set_ratio(record['title'], '%s %s' % (first, last)) >= 90:
+				match_fl = True
+			else:
+				match_fl = False
+
+			# look for first middle last name
+			if fuzz.token_set_ratio(record['title'], '%s %s %s' % (first, middle, last)) >= 90:
 				match_fml = True
 			else:
 				match_fml = False
@@ -503,6 +522,7 @@ class CompaniesHouseAppointment():
 
 		self.company_name = company_cls.company_name
 		self.company_status = company_cls.company_status
+		self.company_number = company_cls.company_number
 
 		self.company = company_cls.data
 
