@@ -63,15 +63,17 @@ class CompaniesHouse(Category):
 
 			for i in companies.matched_companies:
 				company = getlink(i, 'self')
-				# print '\tAdding Company Search Company : %s' % company['company_name']
+				# check for errors
+				if not company.has_key('errors'):
+					print '\tAdding Company Search Company : %s' % company['company_name']
 
-				raw_string = ' '.join(self.names)
-				pretty = raw_string
-				registered = ''
-				amount = 0
-				url = base_url + company['links']['self']
+					raw_string = ' '.join(self.names)
+					pretty = raw_string
+					registered = ''
+					amount = 0
+					url = base_url + company['links']['self']
 
-				self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount, company, url))
+					self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount, company, url))
 
 		users = CompaniesHouseUserSearch(self.names)
 		users.identify(keywords=KEYWORDS, month=self.month, year=self.year, first=self.first, middle=self.middle, last=self.last, display=self.display)
@@ -80,15 +82,17 @@ class CompaniesHouse(Category):
 
 			for app in i['appointments']:
 				company = getlink(app, 'company')
-				# print '\tAdding Officer Search Company : %s' % company['company_name']
+				# check for errors
+				if not company.has_key('errors'):
+					print '\tAdding Officer Search Company : %s' % company['company_name']
 
-				raw_string = ' '.join(self.names)
-				pretty = raw_string
-				registered = ''
-				amount = 0
-				url = base_url + company['links']['self']
+					raw_string = ' '.join(self.names)
+					pretty = raw_string
+					registered = ''
+					amount = 0
+					url = base_url + company['links']['self']
 
-				self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount, company, url))
+					self.items.append(ShareholdingsItem(item_id, self.category_id, raw_string, pretty, registered, amount, company, url))
 
 	@property
 	def data(self):
