@@ -7,6 +7,14 @@ from constants import PARTY_COLOURS
 from plotting import plot_data_to_file
 from plot_utils import make_node, make_link, translate, clean_name
 
+def reverse_name(name):
+
+    if ', ' in name:
+        spl = name.split(', ')
+        return '%s %s' % (spl[1], spl[0])
+    else:
+        return name
+
 def write_shareholder_plot(mp, plot_file):
     """"""
     node_id = 0
@@ -39,7 +47,7 @@ def write_shareholder_plot(mp, plot_file):
 
                     }
 
-    data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 60},
+    data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 128},
 
                     'income_item'        : {'color' : orange_lighter, 'opacity' : 0.8, 'size' : 30},
                     'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
@@ -88,10 +96,10 @@ def write_shareholder_plot(mp, plot_file):
     first = splits[0]
     last = ' '.join(splits[1:])
     label = '<b>%s<br>%s' % (first, last)
-    label = ''
+    # label = ''
 
     node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink='%s' % mp['member_id'])
-    # node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
+    node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
 
     for category in mp['categories']:
@@ -160,14 +168,17 @@ def write_shareholder_plot(mp, plot_file):
                     for person in item['persons']:
 
                         name = clean_name(person['name'])
-                        hovertext = '%s' % name.title()
+                        name = reverse_name(name)
+                        hovertext = 'Controlling Person : %s' % name.title()
                         label = name.title()
+                        label = ''
 
                         if url:
                             url = item['link'] + '/persons-with-significant-control/'
 
                         if person.has_key('ceased_on'):
                             n = 'inactive_person'
+                            n = 'active_person'
                         else:
                             n = 'active_person'
 
@@ -178,21 +189,23 @@ def write_shareholder_plot(mp, plot_file):
                         # set our threshold at 90%
                         ratio = fuzz.token_set_ratio(name, mp['name'])
 
-                        if ratio < 90:
-                            # only if the person is not our mp
+                        if ratio > 90:
+                            person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+                            person_copy['size'] += 40
+                            person_copy['opacity'] = 1
 
                             # lets check they dont already exist
-                            found = person_copy
-                            for each in data['nodes']:
-                                if fuzz.token_set_ratio(label, each['name']) >= 90:
-                                    found = each
+                        found = person_copy
+                        for each in data['nodes']:
+                            if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+                                found = each
 
-                            if found == person_copy:
-                                data['nodes'].append(found)
-                            
-                            link = make_link(data_lines['wealth_line'], nodes = data['nodes'], source=item_copy, target=found)
-                            l = copy.copy(link)
-                            data['links'].append(l)
+                        if found == person_copy:
+                            data['nodes'].append(found)
+
+                        link = make_link(data_lines['wealth_line'], nodes = data['nodes'], source=item_copy, target=found)
+                        l = copy.copy(link)
+                        data['links'].append(l)
 
                 if item.has_key('officers'):
 
@@ -204,11 +217,12 @@ def write_shareholder_plot(mp, plot_file):
                             n = 'active_officer'
 
                         name = clean_name(person['name'])
-                        hovertext = '%s' % name.title()
+                        name = reverse_name(name)
+                        hovertext = 'Officer : %s' % name.title()
                         label = ''
 
                         if url:
-                            url = item['link'] + '/persons-with-significant-control/'
+                            url = item['link'] + '/officers/'
 
                         person_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                         person_copy = copy.copy(person_node)
@@ -217,22 +231,27 @@ def write_shareholder_plot(mp, plot_file):
                         # set our threshold at 90%
                         ratio = fuzz.token_set_ratio(name, mp['name'])
 
-                        if ratio < 90:
+                        if ratio > 90:
+                            person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+                            person_copy['size'] += 40
+                            person_copy['opacity'] = 1
+
                             # only if the person is not our mp
 
                             # lets check they dont already exist
-                            found = person_copy
-                            for each in data['nodes']:
-                                if each['node_type'] != 'mp':
-                                    if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
-                                        found = each
+                        found = person_copy
+                        for each in data['nodes']:
+                            # if each['node_type'] != 'mp':
+                            if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+                                found = each
 
-                            if found == person_copy:
-                                data['nodes'].append(found)
-                            
-                            link = make_link(data_lines['wealth_line'], nodes = data['nodes'], source=item_copy, target=found)
-                            l = copy.copy(link)
-                            data['links'].append(l)
+                        # found hasnt changed - so, no match was make, add the node
+                        if found == person_copy:
+                            data['nodes'].append(found)
+
+                        link = make_link(data_lines['wealth_line'], nodes = data['nodes'], source=item_copy, target=found)
+                        l = copy.copy(link)
+                        data['links'].append(l)
 
     return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
     # print 'Writing : %s' % plot_file
