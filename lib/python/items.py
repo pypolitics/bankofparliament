@@ -194,8 +194,13 @@ class ShareholdingsItem(Item):
 		self.link = link
 
 		self.company = getlink(company, 'self')
-		self.persons = getlink(self.company, 'persons_with_significant_control')['items']
-		self.officers = getlink(self.company, 'officers')['items']
+		persons = getlink(self.company, 'persons_with_significant_control')
+		self.persons = persons['items']
+		officers = getlink(self.company, 'officers')
+		self.officers = officers['items']
+
+		# TODO - check the total results against the number of results returned, may
+		# need to query again for the remainder
 
 class OtherShareholdingsItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount, company, link):
@@ -207,11 +212,15 @@ class OtherShareholdingsItem(Item):
 
 		self.isWealth = True
 		self.link = link
-		self.company = company
 
 		self.company = getlink(company, 'self')
-		self.persons = getlink(self.company, 'persons_with_significant_control')['items']
-		self.officers = getlink(self.company, 'officers')['items']
+		persons = getlink(self.company, 'persons_with_significant_control')
+		self.persons = persons['items']
+		officers = getlink(self.company, 'officers')
+		self.officers = officers['items']
+
+		# TODO - check the total results against the number of results returned, may
+		# need to query again for the remainder
 
 class GiftsItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
