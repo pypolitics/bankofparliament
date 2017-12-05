@@ -7,14 +7,13 @@ import operator
 import locale, subprocess
 import pprint
 from optparse import OptionParser
-# from textblob import TextBlob
 
 sys.path.append('../lib/python')
 
 import shutil
 
 from generate_thumbnail import write_thumbnail
-from utils import write_scatter_plot, read_expenses, match_expenses
+from utils import read_expenses, match_expenses
 
 locale.setlocale(locale.LC_ALL, '')
 
@@ -129,21 +128,6 @@ def print_mp_panel_into_file(member, plot_file):
         twitter = member['twitter']
     else:
         twitter = ''
-
-    for user in member['companies_house']:
-        for item in user['items']:
-
-            company_name = item['company_name'].split(' ')
-
-            for n in company_name:
-                if not n.lower() in exclude:
-                    keywords.append(n.lower())
-
-            if item['resigned_on'] == '' and item['company_status'].lower() == 'active' :
-                active_appointments.append(item)
-
-            else:
-                previous_appointments.append(item)
 
     # find category info
     for category in member['categories']:
