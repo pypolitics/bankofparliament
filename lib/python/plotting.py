@@ -358,7 +358,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 				),
 				Annotation(
 					showarrow=False,
-					text='<b>⬅</b>',
+					text='<a style="color:red">⬅</a>',
 					xref='paper',
 					yref='paper',
 					x=0,
