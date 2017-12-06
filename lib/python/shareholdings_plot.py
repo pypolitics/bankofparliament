@@ -4,7 +4,7 @@ import textwrap
 from fuzzywuzzy import fuzz
 
 from constants import PARTY_COLOURS
-from plotting import plot_data_to_file
+from plotting import plot_data_to_file, plot_3d_data_to_file
 from plot_utils import make_node, make_link, translate, clean_name
 
 def reverse_name(name):
@@ -47,7 +47,7 @@ def write_shareholder_plot(mp, plot_file):
 
                     }
 
-    data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 128},
+    data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 128, 'symbol' : 'circle'},
 
                     'income_item'        : {'color' : orange_lighter, 'opacity' : 0.8, 'size' : 30},
                     'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
@@ -69,18 +69,18 @@ def write_shareholder_plot(mp, plot_file):
                     'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
                     'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
 
-                    'person_item'        : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 25},
-                    'officer_item'        : {'color' : 'white', 'opacity' : 0.5, 'size' : 15},
+                    'person_item'        : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 25, 'symbol' : 'circle'},
+                    'officer_item'        : {'color' : 'white', 'opacity' : 0.5, 'size' : 15, 'symbol' : 'circle'},
 
-                    'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 30},
-                    'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 30},
-                    'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 30},
-                    'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 30},
+                    'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
+                    'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
+                    'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
+                    'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 40, 'symbol' : 'diamond'},
 
-                    'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 20},
-                    'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20},
-                    'active_officer'           : {'color' : 'white', 'opacity' : 0.5, 'size' : 10},
-                    'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 10},
+                    'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
+                    'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
+                    'active_officer'           : {'color' : orange_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
+                    'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
 
 
                     }
@@ -95,8 +95,9 @@ def write_shareholder_plot(mp, plot_file):
     splits = mp['name'].split(' ')
     first = splits[0]
     last = ' '.join(splits[1:])
-    label = '<b>%s<br>%s' % (first, last)
-    # label = ''
+
+    # for some reason, cant do html formatting for 3d scatter plots
+    label = '%s %s' % (first, last)
 
     node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink='%s' % mp['member_id'])
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
@@ -139,7 +140,13 @@ def write_shareholder_plot(mp, plot_file):
                     else:
                         n = 'undeclared_inactive_company'
 
-                item_node = make_node(data_nodes[n], name='', hovertext=hovertext, node_type=category, hyperlink=url)
+                label = ''
+                # label = item['pretty'].title()
+                # if item['company'].has_key('company_name'):
+                #     label = item['company']['company_name'].title()
+
+
+                item_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
                 item_copy['amount'] = item['amount']
 
@@ -169,7 +176,7 @@ def write_shareholder_plot(mp, plot_file):
 
                         name = clean_name(person['name'])
                         name = reverse_name(name)
-                        hovertext = 'Controlling Person : %s' % name.title()
+                        hovertext = '%s' % name.title()
                         label = name.title()
                         label = ''
 
@@ -199,6 +206,8 @@ def write_shareholder_plot(mp, plot_file):
                         for each in data['nodes']:
                             if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
                                 found = each
+                                if not each['node_type'] == 'mp':
+                                    each['size'] += 5
 
                         if found == person_copy:
                             data['nodes'].append(found)
@@ -218,7 +227,7 @@ def write_shareholder_plot(mp, plot_file):
 
                         name = clean_name(person['name'])
                         name = reverse_name(name)
-                        hovertext = 'Officer : %s' % name.title()
+                        hovertext = '%s' % name.title()
                         label = ''
 
                         if url:
@@ -244,6 +253,8 @@ def write_shareholder_plot(mp, plot_file):
                             # if each['node_type'] != 'mp':
                             if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
                                 found = each
+                                if not each['node_type'] == 'mp':
+                                    each['size'] += 5
 
                         # found hasnt changed - so, no match was make, add the node
                         if found == person_copy:
@@ -253,5 +264,4 @@ def write_shareholder_plot(mp, plot_file):
                         l = copy.copy(link)
                         data['links'].append(l)
 
-    return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
-    # print 'Writing : %s' % plot_file
+    return plot_3d_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
