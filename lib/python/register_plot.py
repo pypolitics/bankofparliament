@@ -313,7 +313,7 @@ def write_scatter_plot(mp, plot_file):
                                         if url == None:
                                             min_label += '+'
                                         else:
-                                            min_label = '<a href="%s">%s+</a>' % (url, label)
+                                            min_label = '<a href="%s">%s+</a>' % (url, min_label)
 
                                         data['nodes'][data['nodes'].index(item_copy)]['name'] = min_label
 
