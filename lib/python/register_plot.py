@@ -308,7 +308,14 @@ def write_scatter_plot(mp, plot_file):
 
                                     # if the minimum is bigger than the current percentage value, update it
                                     if int(minimum) > item['amount']:
-                                        data['nodes'][data['nodes'].index(item_copy)]['name'] = str(minimum) + r'%+'
+
+                                        min_label = '%s' % str(minimum) + r'%'
+                                        if url == None:
+                                            min_label += '+'
+                                        else:
+                                            min_label = '<a href="%s">%s+</a>' % (url, label)
+
+                                        data['nodes'][data['nodes'].index(item_copy)]['name'] = min_label
 
                 #         # go looking for node with the same hovertext, that isnt the main mp node.
                 #         found = False
