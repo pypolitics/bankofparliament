@@ -355,6 +355,17 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 					y=1,
 					font=Font(
 						size=18, color="#444", family="Abel")
+				),
+				Annotation(
+					showarrow=False,
+					text='BACK',
+					xref='paper',
+					yref='paper',
+					x=0,
+					y=1,
+					captureevents=True,
+					font=Font(
+						size=18, color="#444", family="Abel")
 				)
 			]),
 			images=images

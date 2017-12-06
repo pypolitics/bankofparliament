@@ -28,11 +28,8 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* shareholding plot click on register shareholding node - not on mp
 * add a back button to shareholding plot
 * about page
-* mouse cursor symbols - hover over photo, not on plot background
-* blue hyperlink text where hyperlinks exists
 
 * companies house lookup on miscellaneous, family lobbyists - find a company to make an item
 * find companies for donors
