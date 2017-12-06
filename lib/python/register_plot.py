@@ -138,9 +138,11 @@ def write_scatter_plot(mp, plot_file):
         # total category amount
         amount = 0
         for s in categories[category]:
-            for i in s['items']:
-                if i['amount']:
-                    amount += i['amount']
+
+            if not s['category_description'] == 'Shareholdings':
+                for i in s['items']:
+                    if i['amount']:
+                        amount += i['amount']
 
         amount = "{:,}".format(amount)
 
@@ -220,7 +222,6 @@ def write_scatter_plot(mp, plot_file):
                 # its not currency
                 elif sub['category_description'] == 'Shareholdings':
                     label = '%s' % item['amount'] + r'%'
-                    # if item['amount'] == 15:
                     if url == None:
                         label += '+'
                     else:
@@ -276,10 +277,8 @@ def write_scatter_plot(mp, plot_file):
                 # COMPANIES HOUSE STUFF ONLY
                 # significant persons
                 if item.has_key('persons'):
-                    # foundMP = False
 
                     for person in item['persons']:
-                        # isMP = False
                         label = ''
 
                         name = clean_name(person['name'])
@@ -295,9 +294,7 @@ def write_scatter_plot(mp, plot_file):
                         ratio = fuzz.token_set_ratio(name, mp['name'])
 
                         if ratio >= 90:
-                            # isMP = True
-                            # foundMP = True
-                            # person_copy['isMP'] = True
+
                             person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
 
                             # update the upstrem node with new percentage if higher than current value
@@ -316,48 +313,6 @@ def write_scatter_plot(mp, plot_file):
                                             min_label = '<a href="%s">%s+</a>' % (url, min_label)
 
                                         data['nodes'][data['nodes'].index(item_copy)]['name'] = min_label
-
-                #         # go looking for node with the same hovertext, that isnt the main mp node.
-                #         found = False
-                #         for i in data['nodes']:
-
-                #             if i['hovertext'] == hovertext:
-                #                 if i['node_type'] != 'mp':
-                #                     found = i
-
-                #         if not found:
-                #             data['nodes'].append(person_copy)
-                #             found = person_copy
-
-                #         link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
-                #         l = copy.copy(link)
-                #         data['links'].append(l)
-
-                #     if not foundMP:
-                #         # maybe make a node for the
-                #         label = ''
-                #         hovertext = '%s' % mp['name'].title()
-                #         url = None
-
-                #         person_node = make_node(data_nodes['person_item'], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
-                #         person_copy = copy.copy(person_node)
-                #         person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
-
-                #         found = False
-                #         for i in data['nodes']:
-
-                #             if i['hovertext'] == '%s' % hovertext:
-                #                 if i['node_type'] != 'mp':
-                #                     found = i
-
-                #         if not found:
-                #             data['nodes'].append(person_copy)
-                #             found = person_copy
-
-                #         link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=item_copy, target=found)
-                #         l = copy.copy(link)
-                #         data['links'].append(l)
-
 
     title = '%s, %s, %s' % (mp['name'], mp['party'], mp['constituency'])
     return plot_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
