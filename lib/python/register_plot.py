@@ -214,7 +214,7 @@ def write_scatter_plot(mp, plot_file):
                         if url == None:
                             label = '%sk+' % str(item['amount'])[:2]
                         else:
-                            label = '<a href="">%sk+</a>' % str(item['amount'])[:2]
+                            label = '<a href="%s">%sk+</a>' % (url, str(item['amount'])[:2])
 
 
                 # its not currency
@@ -224,7 +224,7 @@ def write_scatter_plot(mp, plot_file):
                     if url == None:
                         label += '+'
                     else:
-                        label = '<a href="">%s+</a>' % label
+                        label = '<a href="%s">%s+</a>' % (url, label)
                 else:
                     label = ''
 
