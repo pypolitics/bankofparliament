@@ -28,7 +28,6 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* snp text color, black not white
 * about page
 * mouse cursor symbols - hover over photo, not on plot background
 * blue hyperlink text where hyperlinks exists
