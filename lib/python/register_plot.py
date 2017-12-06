@@ -191,7 +191,8 @@ def write_scatter_plot(mp, plot_file):
             url = None
             if 'shareholdings' in sub['category_description'].lower():
                 url = '%s' % mp['member_id']
-                label = '<a href="%s">%s</a>' % (str(mp['member_id']), sub['category_description'])
+                # spoof a hyperlink - no a tag, no cursor
+                label = '<span style="color: #477cd8;">%s</span>' % sub['category_description']
             else:
                 label = '%s' % sub['category_description']
 
@@ -224,7 +225,8 @@ def write_scatter_plot(mp, plot_file):
                         if url == None:
                             label = '%sk+' % str(item['amount'])[:2]
                         else:
-                            label = '<a href="%s">%sk+</a>' % (url, str(item['amount'])[:2])
+                            # label = '<a href="%s">%sk+</a>' % (url, str(item['amount'])[:2])
+                            label = '<span style="color: #477cd8;">%sk+</span>' % (str(item['amount'])[:2])
 
 
                 # its not currency
@@ -233,7 +235,8 @@ def write_scatter_plot(mp, plot_file):
                     if url == None:
                         label += '+'
                     else:
-                        label = '<a href="%s">%s+</a>' % (url, label)
+                        # label = '<a href="%s">%s+</a>' % (url, label)
+                        label = '<span style="color: #477cd8;">%s+</span>' % label
                 else:
                     label = ''
 
@@ -318,7 +321,8 @@ def write_scatter_plot(mp, plot_file):
                                         if url == None:
                                             min_label += '+'
                                         else:
-                                            min_label = '<a href="%s">%s+</a>' % (url, min_label)
+                                            # min_label = '<a href="%s">%s+</a>' % (url, min_label)
+                                            min_label = '<span style="color: #477cd8;">%s+</span>' % min_label
 
                                         data['nodes'][data['nodes'].index(item_copy)]['name'] = min_label
 
