@@ -28,8 +28,13 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* if the mp doesnt exist, add a custom one to complete the visualisation
-* when the wealth/shareholdings node, destroy plot a draw just the companies house / shareholdings data (expanded to inc officers)
+* snp text color, black not white
+* about page
+* mouse cursor symbols - hover over photo, not on plot background
+* blue hyperlink text where hyperlinks exists
+* companies house lookup on miscellaneous, family lobbyists - find a company to make an item
+* find companies for donors
+* find companies for private employment
 * if there is a shareholder of a company that is also a company they have shares, link with dotted line (example, andrew bridgen)
 
 * Firefox, Chrome etc compatibility
