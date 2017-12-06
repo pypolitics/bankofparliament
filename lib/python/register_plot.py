@@ -196,27 +196,37 @@ def write_scatter_plot(mp, plot_file):
 
             for item in sub['items']:
 
+                if 'shareholding' in sub['category_description'].lower():
+                    if item['link'] != '':
+                        url = item['link']
+                    else:
+                        url = None
+                else:
+                    url = None
+
                 if sub['isCurrency']:
 
                     # the item is a currency, see if it requires a '(Min)' suffix too
                     label = "£" + "{:,}".format(item['amount'])
                     if sub['category_description'] in ['Property', 'Rental Income']:
                         label += '+'
-                    if sub['category_description'] in ['Other Shareholdings']:
-                        label = '%sk+' % str(item['amount'])[:2]
+                    elif sub['category_description'] in ['Other Shareholdings']:
+                        if url == None:
+                            label = '%sk+' % str(item['amount'])[:2]
+                        else:
+                            label = '<a href="">%sk+</a>' % str(item['amount'])[:2]
+
 
                 # its not currency
                 elif sub['category_description'] == 'Shareholdings':
                     label = '%s' % item['amount'] + r'%'
-                    if item['amount'] == 15:
+                    # if item['amount'] == 15:
+                    if url == None:
                         label += '+'
+                    else:
+                        label = '<a href="">%s+</a>' % label
                 else:
                     label = ''
-
-                if 'shareholding' in sub['category_description'].lower():
-                    url = item['link']
-                else:
-                    url = None
 
                 # textwrap the hovertext
                 pretty = item['pretty']
@@ -252,11 +262,9 @@ def write_scatter_plot(mp, plot_file):
                         if not current_min == current_max:
                             if item['amount']:
                                 size_value = int(translate(int(item['amount']), current_min, current_max, new_min, new_max))
+                                # if 'expenses' in category:
+                                #     size_value = size_value / 2
                                 item_copy['size'] += size_value
-
-                # hyperlinked node - add a border
-                if url:
-                    item_copy['border_style'] = {'color' : '#99ff99', 'size' : 2}
 
                 data['nodes'].append(item_copy)
 
