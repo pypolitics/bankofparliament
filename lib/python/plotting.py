@@ -358,14 +358,14 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 				),
 				Annotation(
 					showarrow=False,
-					text='BACK',
+					text='<b>⬅</b>',
 					xref='paper',
 					yref='paper',
 					x=0,
 					y=1,
 					captureevents=True,
 					font=Font(
-						size=18, color="#444", family="Abel")
+						size=28, color="red", family="Abel")
 				)
 			]),
 			images=images
