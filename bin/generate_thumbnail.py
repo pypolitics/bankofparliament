@@ -29,7 +29,7 @@ def write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, 
     html += '\t\t\t\t\t</br>%s</br>\n' % total_wealth_f
     html += '\t\t\t\t\t<b>Expenses</b>\n'
     html += '\t\t\t\t\t</br>%s</br>\n' % total_expenses_f
-    html += '\t\t\t\t</h2>'
+    html += '\t\t\t\t</h2>\n'
     html += '\t\t\t\t<img src="lib/data/images/%s" class="img-responsive %s data-memberid=%s" style="width:100' % (photo, party.lower(), member_id) + r'%' + '; border-radius:50' + r'%' + '" alt="Image">\n'
     html += '\t\t\t</a>\n'
     html += '\t\t\t<p class="thumbnail_label">%s</p>\n' % name.title()
