@@ -78,7 +78,9 @@ def write_scatter_plot(mp, plot_file):
     last = ' '.join(splits[1:])
     label = '<b>%s<br>%s' % (first, last)
 
-    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink='%s' % mp['member_id'])
+    # url = '%s' % mp['member_id']
+    url = None
+    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=url)
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
 
@@ -186,8 +188,14 @@ def write_scatter_plot(mp, plot_file):
             else:
                 hovertext = '<b>%s</br></br></b>£%s' % (sub['category_description'], amount)
 
-            label = '%s' % sub['category_description']
-            sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category)
+            url = None
+            if 'shareholdings' in sub['category_description'].lower():
+                url = '%s' % mp['member_id']
+                label = '<a href="%s">%s</a>' % (str(mp['member_id']), sub['category_description'])
+            else:
+                label = '%s' % sub['category_description']
+
+            sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
             sub_copy = copy.copy(sub_node)
             sub_copy['amount'] = 0
             data['nodes'].append(sub_copy)

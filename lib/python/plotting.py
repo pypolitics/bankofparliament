@@ -116,7 +116,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		          showgrid=False,
 		          showticklabels=False,
 		          title='',
-		          fixedrange=True
+		          # fixedrange=True
 		          )
 
 		# these images do not yet exist, need to make them
@@ -148,7 +148,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 				pad=4
 			),
 			hovermode='closest',
-			# dragmode='pan',
+			dragmode='pan',
 			plot_bgcolor='rgba(0,0,0,0)',
 			paper_bgcolor='rgba(0,0,0,0)',
 			hidesources=True,
@@ -179,18 +179,15 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 				)
 
 		data = Data(traces)
-		config = {'displayModeBar': False, 'showLink':False}
+		config = {'displayModeBar': False, 'showLink':False, 'scrollZoom': True}
 		fig = Figure(data=data, layout=layout)
-		html = offline.plot(fig, auto_open=True, config=config)
-		return
+		# html = offline.plot(fig, auto_open=True, config=config)
+		# return
 
 		# save data and layout to json
 		json_data = {'data' : data, 'layout' : layout}
 		with open(plot_file, "w") as f:
 			json.dump(json_data, f)
-
-
-
 
 def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituency, party, hyperlink=None):
 	"""
