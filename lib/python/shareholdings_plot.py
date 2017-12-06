@@ -231,7 +231,7 @@ def write_shareholder_plot(mp, plot_file):
                         label = ''
 
                         if url:
-                            url = item['link'] + '/officers/'
+                            url = 'https://beta.companieshouse.gov.uk/' + person['links']['officer']['appointments']
 
                         person_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                         person_copy = copy.copy(person_node)
