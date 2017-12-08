@@ -36,15 +36,8 @@ def write_shareholder_plot(mp, plot_file):
     green_darker = '#00ff99'
     green_lighter = '#4dffb8'
 
-    data_lines = {  'major' : {'color' : grey_darker, 'opacity' : 1, 'size' : 8, 'name' : None},
-                    'minor' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 2, 'name' : None},
-
-                    'income_line' : {'color' : orange_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                    'wealth_line' : {'color' : grey_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                    'freebies_line' : {'color' : yellow_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                    'miscellaneous_line' : {'color' : pink_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-                    'expenses_line' : {'color' : green_darker, 'opacity' : 0.4, 'size' : 8, 'name' : None},
-
+    data_lines = {
+                    'line' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 8, 'name' : None},
                     }
 
     data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 128, 'symbol' : 'circle'},
@@ -99,7 +92,7 @@ def write_shareholder_plot(mp, plot_file):
     # for some reason, cant do html formatting for 3d scatter plots
     label = '%s %s' % (first, last)
 
-    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=None)
+    node_main = make_node(data_nodes['mp'], name=label, hovertext='<b>%s</b>' % mp['name'], node_type='mp', hyperlink=None)
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
 
@@ -134,7 +127,6 @@ def write_shareholder_plot(mp, plot_file):
                     # this is given by the register of interests
                     n = 'declared_company'
                 else:
-
                     if item['company']['company_status'] == 'active':
                         n = 'undeclared_active_company'
                     else:
@@ -163,9 +155,10 @@ def write_shareholder_plot(mp, plot_file):
                 if not found:
                     data['nodes'].append(item_copy)
 
-                link = make_link(data_lines['income_line'], nodes = data['nodes'], source=node_main, target=item_copy)
+                link = make_link(data_lines['line'], nodes = data['nodes'], source=node_main, target=item_copy)
                 l = copy.copy(link)
-                data['links'].append(l)
+                if l not in data['links']:
+                    data['links'].append(l)
 
                 ################################################################################################################
                 # COMPANIES HOUSE STUFF ONLY
@@ -212,9 +205,10 @@ def write_shareholder_plot(mp, plot_file):
                         if found == person_copy:
                             data['nodes'].append(found)
 
-                        link = make_link(data_lines['wealth_line'], nodes = data['nodes'], source=item_copy, target=found)
+                        link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=found)
                         l = copy.copy(link)
-                        data['links'].append(l)
+                        if l not in data['links']:
+                            data['links'].append(l)
 
                 if item.has_key('officers'):
 
@@ -260,8 +254,9 @@ def write_shareholder_plot(mp, plot_file):
                         if found == person_copy:
                             data['nodes'].append(found)
 
-                        link = make_link(data_lines['wealth_line'], nodes = data['nodes'], source=item_copy, target=found)
+                        link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=found)
                         l = copy.copy(link)
-                        data['links'].append(l)
+                        if l not in data['links']:
+                            data['links'].append(l)
 
     return plot_3d_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
