@@ -115,8 +115,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		          zeroline=False,
 		          showgrid=False,
 		          showticklabels=False,
-		          title='',
-		          # fixedrange=True
+		          title=''
 		          )
 
 		# these images do not yet exist, need to make them
@@ -179,9 +178,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 				)
 
 		data = Data(traces)
-		config = {'displayModeBar': False, 'showLink':False, 'scrollZoom': True}
-		fig = Figure(data=data, layout=layout)
-		# html = offline.plot(fig, auto_open=True, config=config)
+		# fig = Figure(data=data, layout=layout)
+		# html = offline.plot(fig, auto_open=True)
 		# return
 
 		# save data and layout to json
@@ -268,7 +266,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 		               z =Ze,
 		               mode = 'lines',
 		               visible = True,
-		               line = Line(color = line_color, width = 2),
+		               line = Line(color = 'gray', width = 3),
 		               hoverinfo = 'none',
 		               opacity = 0.2,
 		               name = 'lines'
@@ -372,9 +370,8 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 				)
 
 		data = Data(traces)
-		config = {'displayModeBar': False, 'showLink':False}
-		fig = Figure(data=data, layout=layout)
-		# html = offline.plot(fig, auto_open=True, config=config)
+		# fig = Figure(data=data, layout=layout)
+		# html = offline.plot(fig, auto_open=True)
 		# return
 
 		# save data and layout to json
