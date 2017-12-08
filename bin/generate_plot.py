@@ -8,7 +8,7 @@ lib_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib')
 
 from utils import read_json_file, read_expenses, match_expenses
 
-from register_plot import write_scatter_plot
+from register_plot import write_register_plot
 from shareholdings_plot import write_shareholder_plot
 
 expenses_data_paths = {
@@ -52,5 +52,5 @@ if __name__ == "__main__":
         for year in expenses_data.keys():
             mp['expenses'] = match_expenses(mp, year, expenses_data)
 
-        write_scatter_plot(mp, plot_file)
+        write_register_plot(mp, plot_file)
         write_shareholder_plot(mp, shareholdings_file)

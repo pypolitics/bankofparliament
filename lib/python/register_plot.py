@@ -7,7 +7,7 @@ from constants import PARTY_COLOURS
 from plotting import plot_data_to_file
 from plot_utils import make_node, make_link, translate, clean_name
 
-def write_scatter_plot(mp, plot_file):
+def write_register_plot(mp, plot_file):
     """"""
     node_id = 0
     plot_path = '../pages/plots/%s.html' % mp['member_id']
