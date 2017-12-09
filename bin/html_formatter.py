@@ -288,7 +288,7 @@ def print_mp_panel_into_file(member, plot_file):
                 'dup' : 'dup irish', # irish
                 'ukip' : 'ukip',
                 'uup' : 'uup irish', # irish
-                'green' : 'greenparty green',
+                'green' : 'greenparty',
                 'plaid cymru' : 'plaid wales welsh cymru',
                 'sinn fein' : 'sinn fein irish' # irish
     }
