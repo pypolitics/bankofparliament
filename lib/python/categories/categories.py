@@ -9,6 +9,7 @@ class Category():
 
 		# lists of raw entries and parsed entries (dictionaries)
 		self.raw_items = []
+		self.raw_data = []
 		# self.entries = []
 		self.items = []
 		
@@ -37,7 +38,7 @@ class Category():
 
 		# process the raw
 		for raw in self.raw_items:
-			self.do_logic(raw)
+			self.do_logic(raw, self.raw_data[self.raw_items.index(raw)])
 
 		# add some variables for the category
 		# decorators arent stored as local class variables, but....
@@ -135,8 +136,9 @@ class Category():
 		"""
 		return vars(self)
 
-	def add_entry(self, raw_data):
+	def add_entry(self, raw_data, data):
 		"""
 		Adds raw data, in the form of a string to a list of raw entries
 		"""
 		self.raw_items.append(raw_data)
+		self.raw_data.append(data)
