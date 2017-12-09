@@ -31,51 +31,34 @@ class VisitsOutsideUK(Category):
 		# not much we can really split on
 		pretty = raw_string.split(' (Registered')[0]
 		registered = regex_for_registered(raw_string)
-
-		# hold a list of lists with search pair, to then regex out the value between them
-		regex_pairs = []
-		regex_pairs.append(['Name of donor: ', 'Address of donor: '])
-		regex_pairs.append(['Address of donor: ', 'Amount of donation '])
-		regex_pairs.append(['Address of donor: ', 'Estimate of the probable value'])
-		regex_pairs.append(['Destination of visit: ', 'Dates of visit: '])
-		regex_pairs.append(['Destination of visit: ', 'Date of visit: '])
-		regex_pairs.append(['Dates of visit: ', 'Purpose of visit: '])
-		regex_pairs.append(['Date of visit: ', 'Purpose of visit: '])
-		regex_pairs.append(['Purpose of visit: ', r'\(Registered '])
-
 		amount = regex_for_amount(raw_string)
 
 		donor = None
 		address = None
 		destination = None
-		dates = None
 		purpose = None
 
-		for pair in regex_pairs:
-			regex_search = get_regex_pair_search(pair, raw_string)
+		for key in raw_data:
+			if 'name of donor' in key.lower():
+				# name of donor might be: (1) Policy Network (2) Les Gracques
+				# split to list
+				# TODO
+				donor = raw_data[key]
+				pretty = donor
 
-			if regex_search:
-				value = regex_search.group(1)
+			elif 'address' in key.lower():
+				address = raw_data[key]
+				# address may be like name
 
-				if 'name of donor' in pair[0].lower():
-					donor = value
-					pretty = donor
-				elif 'address of donor' in pair[0].lower():
-					address = value
-				elif 'destination' in pair[0].lower():
-					destination = value
-				elif 'date' in pair[0].lower():
-					dates = value
-				elif 'dates' in pair[0].lower():
-					dates = value
-				elif 'purpose' in pair[0].lower():
-					purpose = value
+			elif 'purpose' in key.lower():
+				purpose = raw_data[key]
+			elif 'destination' in key.lower():
+				destination = raw_data[key]
 
 		item = VisitsOutsideUKItem(item_id, self.category_id, raw_string, pretty, registered, amount)
 		item.donor = donor
 		item.address = address
 		item.destination = destination
-		item.dates = dates
 		item.purpose = purpose
-
+		item.lookup()
 		self.items.append(item)
