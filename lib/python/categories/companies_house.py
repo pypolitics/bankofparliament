@@ -65,7 +65,7 @@ class CompaniesHouse(Category):
 				company = getlink(i, 'self')
 				# check for errors
 				if not company.has_key('errors'):
-					print '\tAdding Company Search Company : %s' % company['company_name']
+					# print '\tAdding Company Search Company : %s' % company['company_name']
 
 					raw_string = ' '.join(self.names)
 					pretty = raw_string
@@ -84,7 +84,7 @@ class CompaniesHouse(Category):
 				company = getlink(app, 'company')
 				# check for errors
 				if not company.has_key('errors'):
-					print '\tAdding Officer Search Company : %s' % company['company_name']
+					# print '\tAdding Officer Search Company : %s' % company['company_name']
 
 					raw_string = ' '.join(self.names)
 					pretty = raw_string
