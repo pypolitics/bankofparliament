@@ -19,7 +19,7 @@ class Miscellaneous(Category):
 		self.category_description = 'Miscellaneous'
 		self.isCurrency = False
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into item class
 		"""

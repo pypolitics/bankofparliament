@@ -17,7 +17,7 @@ class IndirectDonations(Category):
 		self.category_description = 'Indirect Donations'
 		self.isCurrency = True
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into dictionary
 		"""
@@ -61,7 +61,7 @@ class IndirectDonations(Category):
 		item.donor = donor
 		item.address = address
 		item.status = status
-
+		item.raw_data = raw_data
 		self.items.append(item)
 
 class DirectDonations(Category):
@@ -79,7 +79,7 @@ class DirectDonations(Category):
 		self.category_description = 'Direct Donations'
 		self.isCurrency = True
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into dictionary
 		"""
@@ -135,5 +135,6 @@ class DirectDonations(Category):
 		item.received = received
 		item.accepted = accepted
 		item.status = status
+		item.raw_data = raw_data
 
 		self.items.append(item)

@@ -19,7 +19,7 @@ class FamilyLobbyists(Category):
 		self.category_description = 'Family Lobbyists'
 		self.isCurrency = False
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into item class
 		"""
@@ -33,7 +33,6 @@ class FamilyLobbyists(Category):
 		registered = regex_for_registered(raw_string)
 
 		item = FamilyLobbyistsItem(item_id, self.category_id, raw_string, pretty, registered, amount)
-
 		self.items.append(item)
 
 class Family(Category):
@@ -51,7 +50,7 @@ class Family(Category):
 		self.category_description = 'Family'
 		self.isCurrency = False
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into item class
 		"""

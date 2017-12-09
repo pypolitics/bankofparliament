@@ -19,7 +19,7 @@ class Gifts(Category):
 		self.category_description = 'Gifts'
 		self.isCurrency = True
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into dictionary
 		"""
@@ -75,6 +75,7 @@ class Gifts(Category):
 		item.received = received
 		item.accepted = accepted
 		item.status = status
+		item.raw_data = raw_data
 		self.items.append(item)
 
 class GiftsOutsideUK(Category):
@@ -92,7 +93,7 @@ class GiftsOutsideUK(Category):
 		self.category_description = 'Gifts Outside UK'
 		self.isCurrency = True
 
-	def do_logic(self, raw_string):
+	def do_logic(self, raw_string, raw_data):
 		"""
 		Method performing the logic of parsing raw data into dictionary
 		"""
@@ -148,4 +149,5 @@ class GiftsOutsideUK(Category):
 		item.received = received
 		item.accepted = accepted
 		item.status = status
+		item.raw_data = raw_data
 		self.items.append(item)
