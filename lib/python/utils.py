@@ -280,13 +280,15 @@ def read_sic_codes(sic):
             return row[-1]
     return ''
 
-def cleanup_raw_string(raw):
+def cleanup_raw_string(raw, exclude_extra=[]):
     """Cleanup a raw string from the register of intrests, ready for querying with"""
 
     raw = raw.lower()
     raw_list = re.sub('[^0-9a-zA-Z]+', ' ', raw).split(' ')
 
     exclude = ['shareholder', 'director', 'of', 'services', 'service', 'recruitment', 'international', 'specialist','and', '(', ')', '%', 'registered', '', 'from', 'an', 'a', 'company', 'shareholding', 'shareholdings', 'business']
+    for each in exclude_extra:
+        exclude.append(each)
 
     months = [date(2000, m, 1).strftime('%b').lower() for m in range(1, 13)]
     months_short = [date(2000, m, 1).strftime('%B').lower() for m in range(1, 13)]
