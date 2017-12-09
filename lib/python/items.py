@@ -252,6 +252,36 @@ class VisitsOutsideUKItem(Item):
 
 		self.isGift = True
 
+	def lookup(self):
+
+		self.company = {'company_name' : self.donor, 'company_number' : 'N/A', 'company_status' : 'Active'}
+		self.persons = []
+		self.officers = []
+		self.link = None
+
+		# print '\nSearch : %s, %s' % (self.donor, self.address)
+		companies = CompaniesHouseCompanySearch([self.donor])
+
+		for i in companies.data:
+			name_ratio = fuzz.token_set_ratio(i['title'].lower(), self.donor)
+
+			# if the company name matches enough
+			if name_ratio > 90:
+				if i['address_snippet']:
+
+					addr_ratio = fuzz.token_set_ratio(i['address_snippet'].lower(), self.address)
+					# if the address matches enough
+					if addr_ratio > 90:
+
+						self.link = i['links']['self']
+						self.company = getlink(i, 'self')
+						persons = getlink(self.company, 'persons_with_significant_control')
+						self.persons = persons['items']
+						officers = getlink(self.company, 'officers')
+						self.officers = officers['items']
+						# print 'Matched : %s' % self.donor
+						break
+
 class EmploymentItem(Item):
 	def __init__(self, item_id, category_id, raw_string, pretty, registered, amount):
 		"""
