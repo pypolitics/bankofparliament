@@ -33,10 +33,11 @@ class VisitsOutsideUK(Category):
 		registered = regex_for_registered(raw_string)
 		amount = regex_for_amount(raw_string)
 
-		donor = None
-		address = None
-		destination = None
-		purpose = None
+		donor = raw_data['raw_string']
+		address = ''
+		destination = ''
+		purpose = ''
+		status = 'visit'
 
 		for key in raw_data:
 			if 'name of donor' in key.lower():
@@ -60,5 +61,6 @@ class VisitsOutsideUK(Category):
 		item.address = address
 		item.destination = destination
 		item.purpose = purpose
+		item.status = status
 		item.lookup()
 		self.items.append(item)

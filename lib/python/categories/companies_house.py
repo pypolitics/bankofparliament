@@ -68,7 +68,7 @@ class CompaniesHouse(Category):
 					# print '\tAdding Company Search Company : %s' % company['company_name']
 
 					raw_string = ' '.join(self.names)
-					pretty = raw_string
+					pretty = self.display.title()
 					registered = ''
 					amount = 0
 					url = base_url + company['links']['self']
@@ -87,7 +87,7 @@ class CompaniesHouse(Category):
 					# print '\tAdding Officer Search Company : %s' % company['company_name']
 
 					raw_string = ' '.join(self.names)
-					pretty = raw_string
+					pretty = self.display.title()
 					registered = ''
 					amount = 0
 					url = base_url + company['links']['self']
