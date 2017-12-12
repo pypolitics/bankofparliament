@@ -50,15 +50,16 @@ def write_shareholder_plot(mp, plot_file):
                     'gift_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
                     'gift_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'circle'},
 
-                    'donor_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
-                    'donor_company_resigned'     : {'color' : grey_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
-                    'donor_company_dissolved'    : {'color' : grey_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
-                    'donor_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'circle'},
+                    'donor_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 20, 'symbol' : 'diamond'},
+                    'donor_company_resigned'     : {'color' : grey_darker, 'opacity' : 1, 'size' : 20, 'symbol' : 'diamond'},
+                    'donor_company_dissolved'    : {'color' : grey_darker, 'opacity' : 1, 'size' : 20, 'symbol' : 'diamond'},
+                    'donor_person'               : {'color' : dark_blue, 'opacity' : 1, 'size' : 20, 'symbol' : 'circle'},
+                    'donor_company_officer'      : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 10, 'symbol' : 'circle'},
 
-                    'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
-                    'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
-                    'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
-                    'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 30, 'symbol' : 'diamond'},
+                    'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
+                    'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
+                    'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
+                    'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 40, 'symbol' : 'diamond'},
 
                     'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
                     'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
@@ -294,5 +295,91 @@ def write_shareholder_plot(mp, plot_file):
                             data['links'].append(l)
 
 
+                        # OFFICERS OF APPOINTMENT
+                        for person in appointment['officers']:
+
+                            if person.has_key('resigned_on'):
+                                n = 'inactive_person'
+                            else:
+                                n = 'active_person'
+
+                            name = clean_name(person['name'])
+                            name = reverse_name(name)
+                            hovertext = '%s' % name.title()
+                            label = ''
+
+                            if url:
+                                url = 'https://beta.companieshouse.gov.uk/' + person['links']['officer']['appointments']
+
+                            person_node = make_node(data_nodes['donor_company_officer'], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+                            person_copy = copy.copy(person_node)
+
+                            # fuzzy logic a cleaned name for match with mp
+                            # set our threshold at 90%
+                            ratio = fuzz.token_set_ratio(name, mp['name'])
+
+                            if ratio > 90:
+                                person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+                                person_copy['opacity'] = 1
+
+                            # lets check they dont already exist
+                            found = person_copy
+                            for each in data['nodes']:
+                                if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+                                    found = each
+                                    if not each['node_type'] == 'mp':
+                                        each['size'] += 2
+
+                            # found hasnt changed - so, no match was make, add the node
+                            if found == person_copy:
+                                data['nodes'].append(found)
+
+                            link = make_link(data_lines['line'], nodes = data['nodes'], source=app_copy, target=found)
+                            l = copy.copy(link)
+                            if l not in data['links']:
+                                data['links'].append(l)
+
+                        for person in appointment['persons_with_significant_control']:
+
+                            name = clean_name(person['name'])
+                            name = reverse_name(name)
+                            hovertext = '%s' % name.title()
+                            label = name.title()
+                            label = ''
+
+                            if url:
+                                url = item['link'] + '/persons-with-significant-control/'
+
+                            if person.has_key('ceased_on'):
+                                n = 'inactive_person'
+                            else:
+                                n = 'active_person'
+
+                            person_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+                            person_copy = copy.copy(person_node)
+
+                            # fuzzy logic a cleaned name for match with mp
+                            # set our threshold at 90%
+                            ratio = fuzz.token_set_ratio(name, mp['name'])
+
+                            if ratio > 90:
+                                person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+                                person_copy['opacity'] = 1
+
+                                # lets check they dont already exist
+                            found = person_copy
+                            for each in data['nodes']:
+                                if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+                                    found = each
+                                    if not each['node_type'] == 'mp':
+                                        each['size'] += 2
+
+                            if found == person_copy:
+                                data['nodes'].append(found)
+
+                            link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=found)
+                            l = copy.copy(link)
+                            if l not in data['links']:
+                                data['links'].append(l)
 
     return plot_3d_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
