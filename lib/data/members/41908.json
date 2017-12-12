@@ -249,6 +249,14 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "17 August 2017, payment of \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for a survey. Hours: 45 mins. Fee paid direct to charity. (Registered 13 October 2017)", 
+               "17 August 2017, payment of \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for a survey. Hours": "45 mins. Fee paid direct to charity. (Registered 13 October 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "17 August 2017, payment of \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for a survey. Hours: 45 mins. Fee paid direct to charity. (Registered 13 October 2017)", 
@@ -264,8 +272,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 200, 
          "raw_items": [
@@ -278,9 +284,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -291,9 +298,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -304,9 +312,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -317,46 +326,86 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: British CouncilAddress of donor: 10 Spring Gardens, London SW1A 2BNEstimate of the probable value (or amount of any donation): Flights, accommodation and in-country transport with a value of \u00a3721.48Destination of visit: MoroccoDates of visit: 20 March to 2 April 2017Purpose of visit: British Council APPG \u2013 Inquiry Committee Delegation Visit.(Registered 27 April 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights, accommodation and in-country transport with a value of \u00a3721.48", 
+               "Purpose of visit": "British Council APPG \u2013 Inquiry Committee Delegation Visit.", 
+               "Destination of visit": "Morocco", 
+               "(Registered 27 April 2017)": "(Registered 27 April 2017)", 
+               "Dates of visit": "20 March to 2 April 2017", 
+               "Name of donor": "British Council", 
+               "Address of donor": "10 Spring Gardens, London SW1A 2BN"
+            }, 
+            {
+               "raw_string": "Name of donor: German Marshall Fund of the United StatesAddress of donor: Vo\u00dfstra\u00dfe 20, 10117 BerlinEstimate of the probable value (or amount of any donation): Travel \u00a3722; one night\u2019s hotel accommodation \u00a3132; total value \u00a3854Destination of visit: BudapestDates of visit: 26-27 October 2017Purpose of visit: To take part in a seminar with other European parliamentarians.(Registered 09 November 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Travel \u00a3722; one night\u2019s hotel accommodation \u00a3132; total value \u00a3854", 
+               "Purpose of visit": "To take part in a seminar with other European parliamentarians.", 
+               "Destination of visit": "Budapest", 
+               "(Registered 09 November 2017)": "(Registered 09 November 2017)", 
+               "Dates of visit": "26-27 October 2017", 
+               "Name of donor": "German Marshall Fund of the United States", 
+               "Address of donor": "Vo\u00dfstra\u00dfe 20, 10117 Berlin"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 1443, 
          "items": [
             {
                "raw_string": "Name of donor: British CouncilAddress of donor: 10 Spring Gardens, London SW1A 2BNEstimate of the probable value (or amount of any donation): Flights, accommodation and in-country transport with a value of \u00a3721.48Destination of visit: MoroccoDates of visit: 20 March to 2 April 2017Purpose of visit: British Council APPG \u2013 Inquiry Committee Delegation Visit.(Registered 27 April 2017)", 
-               "dates": "20 March to 2 April 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "27/04/2017", 
                "destination": "Morocco", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 721, 
+               "link": null, 
                "purpose": "British Council APPG \u2013 Inquiry Committee Delegation Visit.", 
                "pretty": "British Council", 
                "address": "10 Spring Gardens, London SW1A 2BN", 
                "item_id": "0001", 
                "donor": "British Council", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "British Council", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: German Marshall Fund of the United StatesAddress of donor: Vo\u00dfstra\u00dfe 20, 10117 BerlinEstimate of the probable value (or amount of any donation): Travel \u00a3722; one night\u2019s hotel accommodation \u00a3132; total value \u00a3854Destination of visit: BudapestDates of visit: 26-27 October 2017Purpose of visit: To take part in a seminar with other European parliamentarians.(Registered 09 November 2017)", 
-               "dates": "26-27 October 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "09/11/2017", 
                "destination": "Budapest", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 722, 
+               "link": null, 
                "purpose": "To take part in a seminar with other European parliamentarians.", 
                "pretty": "German Marshall Fund of the United States", 
                "address": "Vo\u00dfstra\u00dfe 20, 10117 Berlin", 
                "item_id": "0002", 
                "donor": "German Marshall Fund of the United States", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "German Marshall Fund of the United States", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 1443, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -370,9 +419,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -383,6 +433,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "From 23 February 2016 until 1 September 2017, a flat in Edinburgh, owned jointly with my wife: (i) and (ii). (Registered 25 February 2016; updated 09 November 2017)", 
+               "From 23 February 2016 until 1 September 2017, a flat in Edinburgh, owned jointly with my wife": "(i) and (ii). (Registered 25 February 2016; updated 09 November 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "From 23 February 2016 until 1 September 2017, a flat in Edinburgh, owned jointly with my wife: (i) and (ii). (Registered 25 February 2016; updated 09 November 2017)", 
@@ -411,8 +469,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 10000, 
          "raw_items": [
@@ -426,8 +482,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "gethins", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -437,7 +494,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1976, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "stephen gethins", 
          "category_donations": 0, 
@@ -445,8 +502,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "gethins", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -456,13 +514,25 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1976, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "stephen gethins", 
          "category_donations": 0, 
          "first": "stephen"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Adviser (unpaid) at Beyond Borders Scotland, a not-for profit organisation facilitating international dialogue and cultural exchange. (Registered 01 September 2015)", 
+               "Adviser (unpaid) at Beyond Borders Scotland, a not-for profit organisation facilitating international dialogue and cultural exchange. (Registered 01 September 2015)": "Adviser (unpaid) at Beyond Borders Scotland, a not-for profit organisation facilitating international dialogue and cultural exchange. (Registered 01 September 2015)"
+            }, 
+            {
+               "raw_string": "When elected to the House on 7 May 2015, I automatically became an unremunerated trustee of the Links Trust, St Andrews. It manages the golf courses owned by the public around the town. As a trustee I receive a card entitling me to 25% discount in the golf course shops or restaurants. (Registered 13 April 2016)", 
+               "When elected to the House on 7 May 2015, I automatically became an unremunerated trustee of the Links Trust, St Andrews. It manages the golf courses owned by the public around the town. As a trustee I receive a card entitling me to 25% discount in the golf course shops or restaurants. (Registered 13 April 2016)": "When elected to the House on 7 May 2015, I automatically became an unremunerated trustee of the Links Trust, St Andrews. It manages the golf courses owned by the public around the town. As a trustee I receive a card entitling me to 25% discount in the golf course shops or restaurants. (Registered 13 April 2016)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Adviser (unpaid) at Beyond Borders Scotland, a not-for profit organisation facilitating international dialogue and cultural exchange. (Registered 01 September 2015)", 
@@ -491,8 +561,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -506,9 +574,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -519,9 +588,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

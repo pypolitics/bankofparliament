@@ -184,9 +184,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -197,6 +198,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Musicians UnionAddress of donor: 60-62 Clapham Road, London SW9 0JJAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 03 July 2017)", 
+               "(Registered 03 July 2017)": "(Registered 03 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Musicians Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "60-62 Clapham Road, London SW9 0JJ"
+            }, 
+            {
+               "raw_string": "Name of donor: UNISON South WestAddress of donor: Ground Floor, 2 Tangier Central, Castle Street, Taunton TA1 4ABAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "UNISON South West", 
+               "Donor status": "trade union", 
+               "Address of donor": "Ground Floor, 2 Tangier Central, Castle Street, Taunton TA1 4AB"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Musicians UnionAddress of donor: 60-62 Clapham Road, London SW9 0JJAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 03 July 2017)", 
@@ -204,15 +225,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "03/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Musicians Union", 
                "address": "60-62 Clapham Road, London SW9 0JJ", 
                "item_id": "0001", 
                "donor": "Musicians Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Musicians Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: UNISON South WestAddress of donor: Ground Floor, 2 Tangier Central, Castle Street, Taunton TA1 4ABAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
@@ -220,19 +250,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": null, 
                "pretty": "UNISON South West", 
                "address": "Ground Floor, 2 Tangier Central, Castle Street, Taunton TA1 4AB", 
                "item_id": "0002", 
                "donor": "UNISON South West", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "UNISON South West", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -246,9 +283,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -259,9 +297,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -272,9 +311,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -285,9 +325,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -298,9 +339,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -312,8 +354,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "debbonaire", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -323,7 +366,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1966, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "thangam debbonaire", 
          "category_donations": 0, 
@@ -331,8 +374,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "debbonaire", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -342,16 +386,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1966, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "thangam debbonaire", 
          "category_donations": 0, 
          "first": "thangam"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -362,9 +407,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -375,9 +421,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -471,12 +518,6 @@
                            "appointments": "/officers/QY2KhmvQ3567Sj5UpmN5J7aQKNc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-06-18", 
-                     "date_of_birth": {
-                        "year": 1994, 
-                        "month": 11
-                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
@@ -484,8 +525,14 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_1": "105 Queens Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-06-18", 
+                     "date_of_birth": {
+                        "year": 1994, 
+                        "month": 11
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Student"
                   }, 
                   {
@@ -495,6 +542,12 @@
                            "appointments": "/officers/zzdqb7VRWaeySclHfuQD0AwkboQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-06-24", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1996
+                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
@@ -502,14 +555,8 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_1": "105 Queens Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-06-24", 
-                     "date_of_birth": {
-                        "year": 1996, 
-                        "month": 3
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sabbatical Officer"
                   }, 
                   {
@@ -522,8 +569,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-02-11", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1973
+                        "year": 1973, 
+                        "month": 4
                      }, 
                      "address": {
                         "premises": "The Richmond Building", 
@@ -532,8 +579,8 @@
                         "address_line_2": "Clifton", 
                         "locality": "Bristol"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "It Manager"
                   }, 
                   {
@@ -553,8 +600,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-06-24", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1995
+                        "year": 1995, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -567,18 +614,18 @@
                            "appointments": "/officers/OErdBl6F6ciAw_MDBcebdVaAS2o/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-06-18", 
-                     "date_of_birth": {
-                        "year": 1992, 
-                        "month": 5
-                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road", 
                         "postal_code": "BS8 1LN", 
                         "locality": "Bristol"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-06-18", 
+                     "date_of_birth": {
+                        "year": 1992, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "French", 
@@ -594,8 +641,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-06-18", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1994
+                        "year": 1994, 
+                        "month": 4
                      }, 
                      "address": {
                         "premises": "The Richmond Building", 
@@ -628,8 +675,8 @@
                         "month": 6, 
                         "year": 1996
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sabbatical Officer"
                   }, 
                   {
@@ -639,18 +686,18 @@
                            "appointments": "/officers/uD_IOBu4CHXZN50tWJjSzYWJCII/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2017-06-24", 
-                     "date_of_birth": {
-                        "year": 1994, 
-                        "month": 8
-                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road", 
                         "postal_code": "BS8 1LN", 
                         "locality": "Bristol"
+                     }, 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2017-06-24", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1994
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -663,18 +710,18 @@
                            "appointments": "/officers/7evtNFkYW8qYLNY5CQclseFV61o/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-06-24", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1998
-                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "postal_code": "BS8 1LN", 
                         "locality": "Bristol", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-06-24", 
+                     "date_of_birth": {
+                        "year": 1998, 
+                        "month": 10
                      }, 
                      "officer_role": "director", 
                      "nationality": "Indian", 
@@ -687,18 +734,18 @@
                            "appointments": "/officers/Lts5p_QtJE9JLAiNavtsMjNiFtM/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-05-14", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1956
+                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road", 
                         "postal_code": "BS8 1LN", 
                         "locality": "Bristol"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-05-14", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1956
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -711,6 +758,12 @@
                            "appointments": "/officers/-nO7ZRcdcIHLS_937prMezG2aFs/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-05-10", 
+                     "date_of_birth": {
+                        "year": 1981, 
+                        "month": 5
+                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
@@ -718,14 +771,8 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_1": "105 Queens Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-05-10", 
-                     "date_of_birth": {
-                        "year": 1981, 
-                        "month": 5
-                     }, 
-                     "nationality": "Canadian", 
                      "officer_role": "director", 
+                     "nationality": "Canadian", 
                      "occupation": "Higher Education Management"
                   }, 
                   {
@@ -745,11 +792,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-06-24", 
                      "date_of_birth": {
-                        "year": 1993, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1993
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Indian", 
+                     "officer_role": "director", 
                      "occupation": "Sabbatical Officer"
                   }, 
                   {
@@ -826,6 +873,13 @@
                            "appointments": "/officers/imKJgBSgH-OWEwS-QkhBiiiY20g/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-06-23", 
+                     "resigned_on": "2016-06-18", 
+                     "date_of_birth": {
+                        "year": 1990, 
+                        "month": 6
+                     }, 
                      "address": {
                         "locality": "Bristol", 
                         "premises": "The Richmond Building", 
@@ -833,13 +887,6 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-06-23", 
-                     "resigned_on": "2016-06-18", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1990
                      }, 
                      "nationality": "British; American", 
                      "officer_role": "director", 
@@ -852,21 +899,21 @@
                            "appointments": "/officers/u_Y4UUfHAxWB4ZgTHNy9hvG5mMg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2009-08-01", 
-                     "resigned_on": "2011-07-15", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1985
-                     }, 
                      "address": {
                         "premises": "8", 
                         "locality": "Bristol", 
                         "postal_code": "BS8 2HY", 
                         "address_line_1": "Alma Vale Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-08-01", 
+                     "resigned_on": "2011-07-15", 
+                     "date_of_birth": {
+                        "year": 1985, 
+                        "month": 7
+                     }, 
                      "nationality": "South African", 
+                     "officer_role": "director", 
                      "occupation": "Students' Union Sabbatical Officer"
                   }, 
                   {
@@ -890,8 +937,8 @@
                         "year": 1994, 
                         "month": 3
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Elected Student Officer"
                   }, 
                   {
@@ -930,8 +977,8 @@
                      "appointed_on": "2011-07-18", 
                      "resigned_on": "2012-06-29", 
                      "date_of_birth": {
-                        "year": 1990, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1990
                      }, 
                      "address": {
                         "premises": "Queens Road", 
@@ -939,8 +986,8 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_1": "Clifton"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sabbatical Officer"
                   }, 
                   {
@@ -1014,8 +1061,8 @@
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Students' Union Sabbatical Officer"
                   }, 
                   {
@@ -1036,8 +1083,8 @@
                      "appointed_on": "2015-06-29", 
                      "resigned_on": "2017-06-23", 
                      "date_of_birth": {
-                        "year": 1995, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1995
                      }, 
                      "officer_role": "director", 
                      "nationality": "Uk", 
@@ -1050,13 +1097,6 @@
                            "appointments": "/officers/F6zqrvOKVx1C3H3Ueli2Zg7nnXI/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-06-23", 
-                     "resigned_on": "2015-06-28", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1991
-                     }, 
                      "address": {
                         "locality": "Bristol", 
                         "premises": "The Richmond Building", 
@@ -1065,8 +1105,15 @@
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-06-23", 
+                     "resigned_on": "2015-06-28", 
+                     "date_of_birth": {
+                        "year": 1991, 
+                        "month": 12
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Elected Student Officer"
                   }, 
                   {
@@ -1100,13 +1147,6 @@
                            "appointments": "/officers/PM8mw4zsfv-cW-WX9T3lPyfc1pw/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-06-25", 
-                     "resigned_on": "2013-06-28", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1991
-                     }, 
                      "address": {
                         "locality": "Bristol", 
                         "premises": "The Richmond Building", 
@@ -1114,6 +1154,13 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-06-25", 
+                     "resigned_on": "2013-06-28", 
+                     "date_of_birth": {
+                        "year": 1991, 
+                        "month": 1
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1130,8 +1177,8 @@
                      "appointed_on": "2011-12-05", 
                      "resigned_on": "2012-06-29", 
                      "date_of_birth": {
-                        "year": 1991, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1991
                      }, 
                      "address": {
                         "premises": "Queens Road", 
@@ -1139,8 +1186,8 @@
                         "postal_code": "BS8 1LN", 
                         "locality": "Bristol"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Student"
                   }, 
                   {
@@ -1175,13 +1222,6 @@
                            "appointments": "/officers/c1xeVpDvaAjyef4dtoL0pICSZXA/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-09-19", 
-                     "resigned_on": "2015-06-05", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 8
-                     }, 
                      "address": {
                         "locality": "Bristol", 
                         "premises": "The Richmond Building", 
@@ -1190,8 +1230,15 @@
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-09-19", 
+                     "resigned_on": "2015-06-05", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1966
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Domestic Violence Researcher/Trainer/Practitioner"
                   }, 
                   {
@@ -1201,13 +1248,6 @@
                            "appointments": "/officers/SPiFOrjagdhVmZubsveBTLFHSqY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-04-16", 
-                     "resigned_on": "2016-04-29", 
-                     "date_of_birth": {
-                        "year": 1983, 
-                        "month": 5
-                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "postal_code": "BS8 1LN", 
@@ -1215,8 +1255,15 @@
                         "address_line_2": "Clifton", 
                         "locality": "Bristol"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-04-16", 
+                     "resigned_on": "2016-04-29", 
+                     "date_of_birth": {
+                        "year": 1983, 
+                        "month": 5
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1250,13 +1297,6 @@
                            "appointments": "/officers/KGkhsEC9HugG6EB-j1zJb9FuxSg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-06-25", 
-                     "resigned_on": "2012-10-01", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1993
-                     }, 
                      "address": {
                         "locality": "Bristol", 
                         "premises": "The Richmond Building", 
@@ -1264,6 +1304,13 @@
                         "postal_code": "BS8 1LN", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-06-25", 
+                     "resigned_on": "2012-10-01", 
+                     "date_of_birth": {
+                        "year": 1993, 
+                        "month": 9
                      }, 
                      "nationality": "English/Italian", 
                      "officer_role": "director", 
@@ -1276,19 +1323,19 @@
                            "appointments": "/officers/GZXYJO2ueeWhnIAot2yI_WO-chk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-06-18", 
-                     "resigned_on": "2017-06-23", 
-                     "date_of_birth": {
-                        "year": 1993, 
-                        "month": 7
-                     }, 
                      "address": {
                         "premises": "The Richmond Building", 
                         "address_line_2": "Clifton", 
                         "address_line_1": "105 Queens Road", 
                         "postal_code": "BS8 1LN", 
                         "locality": "Bristol"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-06-18", 
+                     "resigned_on": "2017-06-23", 
+                     "date_of_birth": {
+                        "year": 1993, 
+                        "month": 7
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1298,7 +1345,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/06977417", 
-               "pretty": "thangam debbonaire thangam elizabeth rachel debbonaire", 
+               "pretty": "Thangam Debbonaire", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1376,18 +1423,18 @@
                            "appointments": "/officers/NDC2sLFkCmfUJNPokSIJfyH6ttY/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-11-26", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1987
-                     }, 
                      "address": {
                         "address_line_2": "Hareclive Road", 
                         "region": "Bristol", 
                         "locality": "Hartcliffe", 
                         "postal_code": "BS13 9JN", 
                         "address_line_1": "The Gatehouse Centre"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-11-26", 
+                     "date_of_birth": {
+                        "year": 1987, 
+                        "month": 11
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1403,8 +1450,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2013-11-04", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1956
+                        "year": 1956, 
+                        "month": 6
                      }, 
                      "address": {
                         "address_line_2": "Hareclive Road", 
@@ -1413,8 +1460,8 @@
                         "postal_code": "BS13 9JN", 
                         "locality": "Hartcliffe"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Manager"
                   }, 
                   {
@@ -1434,11 +1481,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-09-01", 
                      "date_of_birth": {
-                        "year": 1968, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1968
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Service Manager"
                   }, 
                   {
@@ -1526,19 +1573,19 @@
                            "appointments": "/officers/LZ88nQWalMiu4L3rx5S6M1RugWI/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "37", 
-                        "region": "Avon", 
-                        "locality": "Bristol", 
-                        "postal_code": "BS13 9AG", 
-                        "address_line_1": "Innox Gardens"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2008-09-16", 
                      "resigned_on": "2014-04-01", 
                      "date_of_birth": {
                         "year": 1987, 
                         "month": 8
+                     }, 
+                     "address": {
+                        "premises": "37", 
+                        "region": "Avon", 
+                        "locality": "Bristol", 
+                        "postal_code": "BS13 9AG", 
+                        "address_line_1": "Innox Gardens"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1551,13 +1598,6 @@
                            "appointments": "/officers/ppoC2A9H6KpvDbUuo3uyrRJEFRE/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2008-09-16", 
-                     "resigned_on": "2011-09-13", 
-                     "date_of_birth": {
-                        "year": 1979, 
-                        "month": 8
-                     }, 
                      "address": {
                         "locality": "Bristol", 
                         "premises": "94", 
@@ -1565,6 +1605,13 @@
                         "postal_code": "BS5 9QA", 
                         "address_line_2": "Barton Hill", 
                         "address_line_1": "Hayward Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-09-16", 
+                     "resigned_on": "2011-09-13", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1979
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1586,8 +1633,8 @@
                      "appointed_on": "2006-01-30", 
                      "resigned_on": "2008-02-27", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1600,6 +1647,12 @@
                            "appointments": "/officers/s9g6m2jJMEfxWCg_ydZXScwRXc0/appointments"
                         }
                      }, 
+                     "appointed_on": "2007-09-26", 
+                     "resigned_on": "2008-09-29", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 9
+                     }, 
                      "address": {
                         "postal_code": "BS4 1QR", 
                         "region": "Avon", 
@@ -1607,14 +1660,8 @@
                         "address_line_2": "Knowle", 
                         "locality": "Bristol"
                      }, 
-                     "appointed_on": "2007-09-26", 
-                     "resigned_on": "2008-09-29", 
-                     "date_of_birth": {
-                        "year": 1961, 
-                        "month": 9
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Career Advisor"
                   }, 
                   {
@@ -1624,13 +1671,6 @@
                            "appointments": "/officers/j2pFHswkxkvwKXuPJhidi8Qdj5w/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Hartcliffe", 
-                        "region": "Avon", 
-                        "locality": "Bristol", 
-                        "postal_code": "BS13 9RL", 
-                        "address_line_1": "1 Fulford Road"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2006-01-16", 
                      "resigned_on": "2014-01-21", 
@@ -1638,8 +1678,15 @@
                         "month": 3, 
                         "year": 1983
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "address_line_2": "Hartcliffe", 
+                        "region": "Avon", 
+                        "locality": "Bristol", 
+                        "postal_code": "BS13 9RL", 
+                        "address_line_1": "1 Fulford Road"
+                     }, 
                      "nationality": "Guyanese", 
+                     "officer_role": "director", 
                      "occupation": "Student"
                   }, 
                   {
@@ -1649,20 +1696,20 @@
                            "appointments": "/officers/9BZqssMNnRGx2O9Ivl3g0vz2m2Q/appointments"
                         }
                      }, 
-                     "appointed_on": "2006-01-16", 
-                     "resigned_on": "2007-05-02", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 2
-                     }, 
                      "address": {
                         "postal_code": "BS10 7RJ", 
                         "address_line_1": "5 Mount Pleasant", 
                         "address_line_2": "Hallen", 
                         "locality": "Bristol"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2006-01-16", 
+                     "resigned_on": "2007-05-02", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1969
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Domestic Abuse Response Worker"
                   }, 
                   {
@@ -1672,19 +1719,19 @@
                            "appointments": "/officers/c1xeVpDvaAjyef4dtoL0pICSZXA/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-09-14", 
+                     "resigned_on": "2014-01-21", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 8
+                     }, 
                      "address": {
                         "postal_code": "BS13 9JN", 
                         "region": "Bristol", 
                         "locality": "Hartcliffe", 
                         "address_line_2": "Hareclive Road", 
                         "address_line_1": "The Gatehouse Centre"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-09-14", 
-                     "resigned_on": "2014-01-21", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1966
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1710,8 +1757,8 @@
                         "address_line_2": "Bishport Avenue", 
                         "address_line_1": "22 Chestnut House"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Civil Servant"
                   }, 
                   {
@@ -1796,8 +1843,8 @@
                      "appointed_on": "2006-01-16", 
                      "resigned_on": "2007-09-26", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1963
                      }, 
                      "address": {
                         "postal_code": "BS13 9RF", 
@@ -1805,8 +1852,8 @@
                         "address_line_2": "Hartcliffe", 
                         "locality": "Bristol"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "S M S A"
                   }, 
                   {
@@ -1827,11 +1874,11 @@
                      "appointed_on": "2011-10-05", 
                      "resigned_on": "2014-11-27", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1983
+                        "year": 1983, 
+                        "month": 10
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Hr Advisor"
                   }, 
                   {
@@ -1841,21 +1888,21 @@
                            "appointments": "/officers/0AdcZ67BQkddGAJDoPiv9mseV3s/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2007-09-26", 
+                     "resigned_on": "2012-11-26", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 4
+                     }, 
                      "address": {
                         "region": "Avon", 
                         "locality": "Hartcliffe", 
                         "postal_code": "BS13 0JT", 
                         "address_line_1": "30 Grinfield Avenue"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2007-09-26", 
-                     "resigned_on": "2012-11-26", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1964
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Family Link Worker"
                   }, 
                   {
@@ -1878,8 +1925,8 @@
                         "year": 1970, 
                         "month": 6
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Customer Advisor"
                   }, 
                   {
@@ -1903,15 +1950,15 @@
                         "year": 1961, 
                         "month": 3
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Local Government Officer"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/05676400", 
-               "pretty": "thangam debbonaire thangam elizabeth rachel debbonaire", 
+               "pretty": "Thangam Debbonaire", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

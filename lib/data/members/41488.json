@@ -396,9 +396,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -409,9 +410,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -422,9 +424,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -435,9 +438,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -448,9 +452,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -461,9 +466,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -474,9 +480,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -488,8 +495,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "heald", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -499,7 +507,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1954, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "sir oliver heald", 
          "category_donations": 0, 
@@ -507,8 +515,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "heald", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -518,16 +527,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1954, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "sir oliver heald", 
          "category_donations": 0, 
          "first": "oliver"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -538,6 +548,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my wife, Christine Heald, as Office Manager.", 
+               "I employ my wife, Christine Heald, as Office Manager.": "I employ my wife, Christine Heald, as Office Manager."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my wife, Christine Heald, as Office Manager.", 
@@ -553,8 +571,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -567,9 +583,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -648,12 +665,6 @@
                            "appointments": "/officers/p2sh5yJm6y0EJtwvzpyuMEy3waQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-09-14", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 11
-                     }, 
                      "address": {
                         "premises": "290a", 
                         "country": "England", 
@@ -661,8 +672,14 @@
                         "postal_code": "KT6 7AQ", 
                         "address_line_1": "Ewell Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-09-14", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1956
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -672,19 +689,19 @@
                            "appointments": "/officers/ePX0DWgWCnabz1zGUrZ2N6rDd_w/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-05-10", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 7
+                     }, 
                      "address": {
                         "address_line_2": "London", 
                         "postal_code": "WC2A 1PP", 
                         "address_line_1": "Megarry House 119 Chancery Lane"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-05-10", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1956
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -718,18 +735,18 @@
                            "appointments": "/officers/7cMTqAmHVS9CQ-MPrL1TGzQPB7Y/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-07-01", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 1
-                     }, 
                      "address": {
                         "premises": "7", 
                         "country": "England", 
                         "address_line_1": "Stone Buildings", 
                         "postal_code": "WC2A 3SZ", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-07-01", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1962
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -742,18 +759,18 @@
                            "appointments": "/officers/p3v5Iswn1BwFSml6ikAWBShqssk/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-08-08", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 8
+                     }, 
                      "address": {
                         "premises": "113", 
                         "country": "England", 
                         "address_line_1": "Chancery Lane", 
                         "postal_code": "WC2A 1PL", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2017-08-08", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 8
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -766,16 +783,16 @@
                            "appointments": "/officers/o30qCI-GJYdwxMdquNFkZVX1TGs/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2003-10-16", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1947
+                     }, 
                      "address": {
                         "postal_code": "WC2A 1PP", 
                         "address_line_2": "London", 
                         "address_line_1": "Megarry House 119 Chancery Lane"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2003-10-16", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -813,8 +830,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2004-10-14", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 1
                      }, 
                      "address": {
                         "postal_code": "WC2A 1PP", 
@@ -835,8 +852,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-06-14", 
                      "date_of_birth": {
-                        "year": 1945, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1945
                      }, 
                      "address": {
                         "postal_code": "WC2A 1PP", 
@@ -862,11 +879,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-01-05", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1956
+                        "year": 1956, 
+                        "month": 7
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Judge"
                   }, 
                   {
@@ -879,8 +896,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-10-18", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 11
                      }, 
                      "address": {
                         "postal_code": "WC2A 1PP", 
@@ -898,18 +915,18 @@
                            "appointments": "/officers/fUl8YjgYVbSbHO5va_s6rAUaueI/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2012-07-12", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1950
-                     }, 
                      "address": {
                         "premises": "Rolls Building", 
                         "country": "United Kingdom", 
                         "locality": "London", 
                         "postal_code": "EC4A 1NL", 
                         "address_line_1": "Fetter Lane"
+                     }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2012-07-12", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1950
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -925,16 +942,16 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1996-10-16", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1940
+                        "year": 1940, 
+                        "month": 1
                      }, 
                      "address": {
                         "address_line_2": "London", 
                         "postal_code": "WC2A 1PP", 
                         "address_line_1": "Megarry House 119 Chancery Lane"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -969,8 +986,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-05-03", 
                      "date_of_birth": {
-                        "year": 1943, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1943
                      }, 
                      "address": {
                         "premises": "Henderson Chambers", 
@@ -979,8 +996,8 @@
                         "postal_code": "EC4Y 9DB", 
                         "address_line_1": "Harcourt Buildings, Temple"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Queen'S Council"
                   }, 
                   {
@@ -998,11 +1015,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-01-17", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1963
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Publisher"
                   }, 
                   {
@@ -1034,16 +1051,16 @@
                            "appointments": "/officers/tQ-AuFoxmU7_U8RV4pfLWzFZaXM/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "WC2A 1PP", 
-                        "address_line_2": "London", 
-                        "address_line_1": "Megarry House 119 Chancery Lane"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-02-12", 
                      "date_of_birth": {
                         "month": 8, 
                         "year": 1959
+                     }, 
+                     "address": {
+                        "postal_code": "WC2A 1PP", 
+                        "address_line_2": "London", 
+                        "address_line_1": "Megarry House 119 Chancery Lane"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1056,19 +1073,19 @@
                            "appointments": "/officers/mx_YntleH6snpcBTIxkR6HO-fjg/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "London", 
-                        "postal_code": "WC2A 1PP", 
-                        "address_line_1": "Megarry House 119 Chancery Lane"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2004-06-22", 
                      "date_of_birth": {
                         "year": 1953, 
                         "month": 11
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "WC2A 1PP", 
+                        "address_line_1": "Megarry House 119 Chancery Lane"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1081,8 +1098,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-07-15", 
                      "date_of_birth": {
-                        "year": 1972, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1972
                      }, 
                      "address": {
                         "premises": "20", 
@@ -1091,8 +1108,8 @@
                         "postal_code": "SW1H 0NF", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Hm Attorney General"
                   }, 
                   {
@@ -1138,16 +1155,16 @@
                      "appointed_on": "2000-10-19", 
                      "resigned_on": "2008-07-07", 
                      "date_of_birth": {
-                        "year": 1935, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1935
                      }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "N1 4ED", 
                         "address_line_1": "17 Northchurch Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1161,8 +1178,8 @@
                      "appointed_on": "2007-08-21", 
                      "resigned_on": "2010-05-11", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1951
+                        "year": 1951, 
+                        "month": 2
                      }, 
                      "address": {
                         "postal_code": "WC2A 1PP", 
@@ -1180,19 +1197,19 @@
                            "appointments": "/officers/ZLpnbjabpGR73gFhusIgd7XIilw/appointments"
                         }
                      }, 
+                     "resigned_on": "2002-10-10", 
+                     "date_of_birth": {
+                        "year": 1923, 
+                        "month": 3
+                     }, 
                      "address": {
                         "address_line_2": "Lincoln's Inn", 
                         "locality": "London", 
                         "postal_code": "WC2A 3SR", 
                         "address_line_1": "9 Old Square"
                      }, 
-                     "resigned_on": "2002-10-10", 
-                     "date_of_birth": {
-                        "year": 1923, 
-                        "month": 3
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired Circuit Judge"
                   }, 
                   {
@@ -1206,16 +1223,16 @@
                      "appointed_on": "2000-10-19", 
                      "resigned_on": "2004-10-14", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1944
                      }, 
                      "address": {
                         "address_line_1": "6 Raymond Buildings Grays Inn", 
                         "postal_code": "WC1R 5BP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1251,16 +1268,16 @@
                      "appointed_on": "1993-09-20", 
                      "resigned_on": "2008-07-07", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1938
+                        "year": 1938, 
+                        "month": 7
                      }, 
                      "address": {
                         "address_line_1": "40 Arlington Avenue", 
                         "postal_code": "N1 7AY", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Lord Justice Of Appeal"
                   }, 
                   {
@@ -1274,16 +1291,16 @@
                      "appointed_on": "2010-10-11", 
                      "resigned_on": "2014-03-09", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 1
                      }, 
                      "address": {
                         "postal_code": "WC2A 1PP", 
                         "address_line_2": "London", 
                         "address_line_1": "Megarry House 119 Chancery Lane"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1297,8 +1314,8 @@
                      "appointed_on": "2014-07-22", 
                      "resigned_on": "2015-07-29", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1958
+                        "year": 1958, 
+                        "month": 7
                      }, 
                      "address": {
                         "premises": "113", 
@@ -1307,8 +1324,8 @@
                         "postal_code": "WC2A 1PL", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1330,8 +1347,8 @@
                         "postal_code": "WC2A 1PP", 
                         "address_line_1": "Megarry House 119 Chancery Lane"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Circuit Judge"
                   }, 
                   {
@@ -1341,16 +1358,16 @@
                            "appointments": "/officers/N13JjLYNVC31FXSp4JOso3wbUTU/appointments"
                         }
                      }, 
+                     "appointed_on": "1998-08-25", 
+                     "resigned_on": "2001-06-12", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 7
+                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "SW1E 6JP", 
                         "address_line_1": "9 Buckingham Gate"
-                     }, 
-                     "appointed_on": "1998-08-25", 
-                     "resigned_on": "2001-06-12", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1948
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1373,8 +1390,8 @@
                         "postal_code": "SW1W 8JP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Circuit Judge"
                   }, 
                   {
@@ -1404,7 +1421,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/00005034", 
-               "pretty": "oliver heald sir oliver heald", 
+               "pretty": "Sir Oliver Heald", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1494,8 +1511,8 @@
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "House Of Commons"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1508,8 +1525,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-10-17", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1955
+                        "year": 1955, 
+                        "month": 3
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1519,8 +1536,8 @@
                         "address_line_2": "House Of Commons", 
                         "address_line_1": "Of Commons"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1553,20 +1570,20 @@
                            "appointments": "/officers/TWC621bh77qlzPRGf--h4OTz7rk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-09-10", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1957
-                     }, 
                      "address": {
                         "premises": "East Cloister", 
                         "locality": "London", 
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "House Of Commons"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-09-10", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1576,17 +1593,17 @@
                            "appointments": "/officers/MycLLxVsp-iWloG9N3ViOV9Tq2I/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-04-01", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1976
-                     }, 
                      "address": {
                         "premises": "East Cloister", 
                         "locality": "London", 
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "House Of Commons"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-04-01", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1976
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1602,8 +1619,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2015-10-21", 
                      "date_of_birth": {
-                        "year": 1977, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1977
                      }, 
                      "address": {
                         "premises": "East Cloister", 
@@ -1611,8 +1628,8 @@
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1622,18 +1639,18 @@
                            "appointments": "/officers/DlZUjxdvtluRLZMvRKb9WfoM2HE/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-02-22", 
+                     "resigned_on": "2014-01-01", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1973
+                     }, 
                      "address": {
                         "premises": "East Cloister", 
                         "locality": "London", 
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "House Of Commons"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-02-22", 
-                     "resigned_on": "2014-01-01", 
-                     "date_of_birth": {
-                        "year": 1973, 
-                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1659,8 +1676,8 @@
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "House Of Commons"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1674,8 +1691,8 @@
                      "appointed_on": "2012-07-25", 
                      "resigned_on": "2012-09-05", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1978
+                        "year": 1978, 
+                        "month": 10
                      }, 
                      "address": {
                         "premises": "East Cloister", 
@@ -1683,8 +1700,8 @@
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "House Of Commons"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1694,18 +1711,18 @@
                            "appointments": "/officers/s8vWeKO1rpqe-xNqlgfeU4Mqek4/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "East Cloister", 
-                        "address_line_1": "House Of Commons", 
-                        "postal_code": "SW1A 0AA", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-07-25", 
                      "resigned_on": "2012-09-05", 
                      "date_of_birth": {
                         "month": 12, 
                         "year": 1954
+                     }, 
+                     "address": {
+                        "premises": "East Cloister", 
+                        "address_line_1": "House Of Commons", 
+                        "postal_code": "SW1A 0AA", 
+                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1718,6 +1735,12 @@
                            "appointments": "/officers/5Rmz5oTkHYkiAA5yaGI4UBmmgsQ/appointments"
                         }
                      }, 
+                     "address": {
+                        "premises": "East Cloister", 
+                        "locality": "London", 
+                        "postal_code": "SW1A 0AA", 
+                        "address_line_1": "House Of Commons"
+                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-07-25", 
                      "resigned_on": "2016-03-15", 
@@ -1725,21 +1748,15 @@
                         "year": 1957, 
                         "month": 7
                      }, 
-                     "address": {
-                        "premises": "East Cloister", 
-                        "locality": "London", 
-                        "postal_code": "SW1A 0AA", 
-                        "address_line_1": "House Of Commons"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07960177", 
-               "pretty": "oliver heald sir oliver heald", 
+               "pretty": "Sir Oliver Heald", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1756,11 +1773,11 @@
                   "sic_codes": [
                      "63990"
                   ], 
-                  "etag": "864ddad4a8bc24316d962251d481ad4c565bfae5", 
+                  "etag": "529e784f9e90ddeb75f9334747551ce7e5e14665", 
                   "registered_office_address": {
-                     "address_line_2": "House Of Commons", 
-                     "address_line_1": "East Cloister", 
                      "postal_code": "SW1A 0AA", 
+                     "address_line_1": "East Cloister", 
+                     "address_line_2": "House Of Commons", 
                      "locality": "London"
                   }, 
                   "undeliverable_registered_office_address": false, 

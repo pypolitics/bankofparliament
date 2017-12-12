@@ -277,9 +277,15 @@
    "eu_ref_stance": "Leave", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [
+            {
+               "raw_string": "Contract with Quercus Editions Limited for writing a book. Address: Quercus Editions Limited, 55 Baker Street, 7th Floor, South Block, London, W1U 8EW.", 
+               "Contract with Quercus Editions Limited for writing a book. Address": "Quercus Editions Limited, 55 Baker Street, 7th Floor, South Block, London, W1U 8EW."
+            }
+         ], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [
@@ -292,6 +298,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: First Corporate Shipping Ltd (trading as The Bristol Port Company)Address of donor: St. Andrew\u2019s Road, Avonmouth, Bristol BS11 9DQAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: company, registration 02641767(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "First Corporate Shipping Ltd (trading as The Bristol Port Company)", 
+               "Donor status": "company, registration 02641767", 
+               "Address of donor": "St. Andrew\u2019s Road, Avonmouth, Bristol BS11 9DQ"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: First Corporate Shipping Ltd (trading as The Bristol Port Company)Address of donor: St. Andrew\u2019s Road, Avonmouth, Bristol BS11 9DQAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: company, registration 02641767(Registered 07 July 2017)", 
@@ -299,19 +317,313 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Terence Charles Mordaunt", 
+                     "links": {
+                        "self": "/company/02641767/persons-with-significant-control/individual/WMrkoK-fvdJyv1fS2RDthI4HuXk"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Charles", 
+                        "forename": "Terence", 
+                        "surname": "Mordaunt", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 5
+                     }, 
+                     "etag": "9372fa7c36aab493bd80a9e2ecc4f725192888c4", 
+                     "address": {
+                        "premises": "Level 8", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "EC4V 4AY", 
+                        "address_line_1": "71 Queen Victoria Street"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Sir David Charles Ord", 
+                     "links": {
+                        "self": "/company/02641767/persons-with-significant-control/individual/nXbC9pAv9q6sLCj5xElbDSQ7FZ8"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-25-to-50-percent", 
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1948
+                     }, 
+                     "name_elements": {
+                        "middle_name": "Charles", 
+                        "forename": "David", 
+                        "surname": "Ord", 
+                        "title": "Sir"
+                     }, 
+                     "etag": "b02e92737d9a11dddb2697c2f0da285ee8f3a1ef", 
+                     "address": {
+                        "premises": "Level 8", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "EC4V 4AY", 
+                        "address_line_1": "71 Queen Victoria Street"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2015-11-02", 
+                     "officer_role": "secretary", 
+                     "name": "SHARPER, Ian David", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ud1fBYBZ2RkuE5RHzVa58nHjM-I/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Level 8", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "EC4V 4AY", 
+                        "address_line_1": "71 Queen Victoria Street"
+                     }
+                  }, 
+                  {
+                     "name": "MORDAUNT, Terence Charles", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/UbnmC7jsFmfTF9JMnYBOoLXQehA/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1991-12-19", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 5
+                     }, 
+                     "address": {
+                        "locality": "Chippenham", 
+                        "premises": "Westwood House", 
+                        "region": "Wiltshire", 
+                        "postal_code": "SN14 8AR", 
+                        "address_line_2": "Colerne", 
+                        "address_line_1": "Rode Hill"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "ORD, David Charles, Sir", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/BC0aoWFbSv1eNja18u0B_mhbaTM/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1991-12-19", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1948
+                     }, 
+                     "address": {
+                        "premises": "Wraxall Court", 
+                        "region": "North Somerset", 
+                        "locality": "Wraxall", 
+                        "postal_code": "BS48 1NA", 
+                        "address_line_1": "Wraxall Hill"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BARKWORTH, Helena Frances", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/NQNSLzO6GkhBXmVmzu2Iph9Givk/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1991-09-05", 
+                     "resigned_on": "1991-12-19", 
+                     "address": {
+                        "address_line_2": "West Hampstead", 
+                        "locality": "London", 
+                        "postal_code": "NW6 2AN", 
+                        "address_line_1": "12 Hemstal Road"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "ORD, David Charles, Sir", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/BC0aoWFbSv1eNja18u0B_mhbaTM/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1991-12-19", 
+                     "resigned_on": "2015-11-02", 
+                     "address": {
+                        "premises": "Wraxall Court", 
+                        "region": "North Somerset", 
+                        "locality": "Wraxall", 
+                        "postal_code": "BS48 1NA", 
+                        "address_line_1": "Wraxall Hill"
+                     }, 
+                     "officer_role": "secretary", 
+                     "nationality": "British", 
+                     "occupation": "Management Consultant"
+                  }, 
+                  {
+                     "name": "SWIFT INCORPORATIONS LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/8d_bnTiwfxh8JIr3YfuwkmkWkCg/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1991-08-30", 
+                     "resigned_on": "1991-09-03", 
+                     "address": {
+                        "premises": "26", 
+                        "address_line_1": "Church Street", 
+                        "postal_code": "NW8 8EP", 
+                        "locality": "London"
+                     }, 
+                     "officer_role": "corporate-nominee-secretary"
+                  }, 
+                  {
+                     "name": "FOSTER, Stephen Andrew", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/21lwipTN9sIvdp4b6CE7Rxqk3wQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "E6 4RN", 
+                        "address_line_1": "12 Northumberland Road"
+                     }, 
+                     "appointed_on": "1991-09-05", 
+                     "resigned_on": "1991-12-19", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 3
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Solicitor"
+                  }, 
+                  {
+                     "name": "INSTANT COMPANIES LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SBjtBss_I4XEupbfAUXoeAkMcIk/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1991-08-30", 
+                     "resigned_on": "1991-09-05", 
+                     "address": {
+                        "premises": "1", 
+                        "region": "Avon", 
+                        "locality": "Bristol", 
+                        "postal_code": "BS1 6BU", 
+                        "address_line_1": "Mitchell Lane"
+                     }, 
+                     "officer_role": "corporate-nominee-director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": "https://beta.companieshouse.gov.uk/company/02641767", 
                "pretty": "First Corporate Shipping Ltd (trading as The Bristol Port Company)", 
                "address": "St. Andrew\u2019s Road, Avonmouth, Bristol BS11 9DQ", 
                "item_id": "0001", 
                "donor": "First Corporate Shipping Ltd (trading as The Bristol Port Company)", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "active", 
+                  "links": {
+                     "filing_history": "/company/02641767/filing-history", 
+                     "self": "/company/02641767", 
+                     "officers": "/company/02641767/officers", 
+                     "persons_with_significant_control": "/company/02641767/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "74990"
+                  ], 
+                  "etag": "28d7a40f42e6716887f05285d452d3082c99889d", 
+                  "registered_office_address": {
+                     "country": "United Kingdom", 
+                     "address_line_1": "Level 8 71 Queen Victoria Street", 
+                     "postal_code": "EC4V 4AY", 
+                     "locality": "London"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-13", 
+                     "last_made_up_to": "2017-08-30", 
+                     "next_made_up_to": "2018-08-30", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-08-30", 
+                  "company_number": "02641767", 
+                  "date_of_creation": "1991-08-30", 
+                  "has_insolvency_history": false, 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2019-03-31", 
+                     "next_made_up_to": "2018-06-30", 
+                     "last_accounts": {
+                        "period_start_on": "2016-07-01", 
+                        "type": "dormant", 
+                        "made_up_to": "2017-06-30", 
+                        "period_end_on": "2017-06-30"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2019-03-31", 
+                        "period_start_on": "2017-07-01", 
+                        "period_end_on": "2018-06-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "06"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "THE BRISTOL PORT COMPANY LIMITED", 
+                  "registered_office_is_in_dispute": false, 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "1991-08-30", 
+                        "ceased_on": "1991-09-17", 
+                        "name": "BASEPROOF LIMITED"
+                     }
+                  ], 
+                  "has_charges": false, 
+                  "type": "ltd"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -324,9 +636,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -337,28 +650,45 @@
          "category_wealth": 0
       }, 
       {
-         "items": [
+         "raw_data": [
             {
                "raw_string": "I have accepted Honorary Membership for life of the Carlton Club.", 
-               "received": null, 
-               "accepted": null, 
-               "isWealth": false, 
-               "nouns": [], 
-               "isDonation": false, 
-               "registered": null, 
-               "isIncome": false, 
-               "amount": 0, 
-               "status": null, 
-               "pretty": "I have accepted Honorary Membership for life of the Carlton Club.", 
-               "address": null, 
-               "item_id": "0001", 
-               "donor": null, 
-               "category_id": 4, 
-               "isGift": true
+               "I have accepted Honorary Membership for life of the Carlton Club.": "I have accepted Honorary Membership for life of the Carlton Club."
             }
          ], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [
+            {
+               "raw_string": "I have accepted Honorary Membership for life of the Carlton Club.", 
+               "status": "", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "persons": [], 
+               "raw_data": {
+                  "raw_string": "I have accepted Honorary Membership for life of the Carlton Club.", 
+                  "I have accepted Honorary Membership for life of the Carlton Club.": "I have accepted Honorary Membership for life of the Carlton Club."
+               }, 
+               "registered": null, 
+               "officers": [], 
+               "isIncome": false, 
+               "amount": 0, 
+               "link": null, 
+               "pretty": "I have accepted Honorary Membership for life of the Carlton Club.", 
+               "address": "", 
+               "item_id": "0001", 
+               "donor": "I have accepted Honorary Membership for life of the Carlton Club.", 
+               "category_id": 4, 
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "I have accepted Honorary Membership for life of the Carlton Club.", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
+            }
+         ], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [
@@ -371,9 +701,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -384,9 +715,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -397,6 +729,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Residential property in London SE1: (i) and (ii). (Registered 20 October 2011)", 
+               "Residential property in London SE1": "(i) and (ii). (Registered 20 October 2011)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Residential property in London SE1: (i) and (ii). (Registered 20 October 2011)", 
@@ -425,8 +765,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 10000, 
          "raw_items": [
@@ -440,8 +778,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "fox", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -451,7 +790,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1961, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "dr liam fox", 
          "category_donations": 0, 
@@ -459,8 +798,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "fox", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -470,16 +810,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1961, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "dr liam fox", 
          "category_donations": 0, 
          "first": "liam"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -490,9 +831,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -503,9 +845,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

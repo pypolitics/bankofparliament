@@ -43,7 +43,22 @@
          "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
          "@xsi:nil": "true"
       }, 
-      "Committees": null, 
+      "Committees": {
+         "Committee": {
+            "StartDate": "2017-12-04T00:00:00", 
+            "EndDate": {
+               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+               "@xsi:nil": "true"
+            }, 
+            "Name": "Environmental Audit Committee", 
+            "IsCoOpted": "False", 
+            "EndNote": null, 
+            "ChairDates": null, 
+            "IsAlternate": "False", 
+            "IsExOfficio": "False", 
+            "@Id": "62"
+         }
+      }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
          "DateOfRetirement": {
@@ -124,7 +139,10 @@
       "Foreign", 
       "and", 
       "Commonwealth", 
-      "Office"
+      "Office", 
+      "Environmental", 
+      "Audit", 
+      "Committee"
    ], 
    "mp_income": 117848, 
    "mp_donations": 0, 
@@ -138,6 +156,22 @@
    "eu_ref_stance": "", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "Payments received as a Councillor, Aberdeenshire Council, Woodhill House, Aberdeen AB16 5GB. I resigned from this role on 14 July 2017. (Registered 28 June 2017; updated 24 July 2017)", 
+               "Payments received as a Councillor, Aberdeenshire Council, Woodhill House, Aberdeen AB16 5GB. I resigned from this role on 14 July 2017. (Registered 28 June 2017; updated 24 July 2017)": "Payments received as a Councillor, Aberdeenshire Council, Woodhill House, Aberdeen AB16 5GB. I resigned from this role on 14 July 2017. (Registered 28 June 2017; updated 24 July 2017)"
+            }, 
+            {
+               "raw_string": "29 June 2017, received \u00a32,050.51. Hours: 19 hrs. (Registered 29 June 2017)", 
+               "29 June 2017, received \u00a32,050.51. Hours": "19 hrs. (Registered 29 June 2017)"
+            }, 
+            {
+               "raw_string": "28 July 2017, received final payment of \u00a3836.13. Hours: 16 hrs. (Registered 26 July 2017)", 
+               "28 July 2017, received final payment of \u00a3836.13. Hours": "16 hrs. (Registered 26 July 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "29 June 2017, received \u00a32,050.51. Hours: 19 hrs. (Registered 29 June 2017)", 
@@ -166,8 +200,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 2886, 
          "raw_items": [
@@ -182,9 +214,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -195,9 +228,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -208,9 +242,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -221,9 +256,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -234,9 +270,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -247,6 +284,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "House in Inverurie, co-owned with my wife: (i) and (ii). (Registered 28 June 2017)", 
+               "House in Inverurie, co-owned with my wife": "(i) and (ii). (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Farm and agricultural land in Aberdeenshire, including three cottages which are rented out: (i) and (ii). (Registered 28 June 2017)", 
+               "Farm and agricultural land in Aberdeenshire, including three cottages which are rented out": "(i) and (ii). (Registered 28 June 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "House in Inverurie, co-owned with my wife: (i) and (ii). (Registered 28 June 2017)", 
@@ -301,8 +350,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 40000, 
          "raw_items": [
@@ -317,8 +364,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "clark", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 5, 
@@ -328,7 +376,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "colin clark", 
          "category_donations": 0, 
@@ -336,7 +384,65 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "clark", 
+         "raw_data": [
+            {
+               "raw_string": "Nessgro Ltd; a produce marketing company. (Registered 28 June 2017)", 
+               "Nessgro Ltd; a produce marketing company. (Registered 28 June 2017)": "Nessgro Ltd; a produce marketing company. (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Partner in Thomastown Farm and Cottages (trading as R&M Clark). (Registered 28 June 2017)", 
+               "Partner in Thomastown Farm and Cottages (trading as R&M Clark). (Registered 28 June 2017)": "Partner in Thomastown Farm and Cottages (trading as R&M Clark). (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Sciemus Ltd; technology and insurance. (Registered 28 June 2017)", 
+               "Sciemus Ltd; technology and insurance. (Registered 28 June 2017)": "Sciemus Ltd; technology and insurance. (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Maven Capital (Llandudno) LLP; property investment. (Partner) (Registered 28 June 2017)", 
+               "Maven Capital (Llandudno) LLP; property investment. (Partner) (Registered 28 June 2017)": "Maven Capital (Llandudno) LLP; property investment. (Partner) (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Maven Capital (Marlow) LLP; property investment. (Partner) (Registered 28 June 2017)", 
+               "Maven Capital (Marlow) LLP; property investment. (Partner) (Registered 28 June 2017)": "Maven Capital (Marlow) LLP; property investment. (Partner) (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Maven Capital (Telfer House) LLP; property investment. (Partner) (Registered 28 June 2017)", 
+               "Maven Capital (Telfer House) LLP; property investment. (Partner) (Registered 28 June 2017)": "Maven Capital (Telfer House) LLP; property investment. (Partner) (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Maven Co-invest Flexlife; subsea technology. (Registered 28 June 2017)", 
+               "Maven Co-invest Flexlife; subsea technology. (Registered 28 June 2017)": "Maven Co-invest Flexlife; subsea technology. (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Maven Co-invest R&M; fabrication. (Registered 28 June 2017)", 
+               "Maven Co-invest R&M; fabrication. (Registered 28 June 2017)": "Maven Co-invest R&M; fabrication. (Registered 28 June 2017)"
+            }, 
+            {
+               "raw_string": "Maven Co-invest RMEC; well services, oil and gas. (Registered 28 June 2017)", 
+               "Maven Co-invest RMEC; well services, oil and gas. (Registered 28 June 2017)": "Maven Co-invest RMEC; well services, oil and gas. (Registered 28 June 2017)"
+            }
+         ], 
+         "category_description": "Other Shareholdings", 
+         "category_gifts": 0, 
+         "month": 5, 
+         "middle": "james", 
+         "category_type": "shareholdings", 
+         "category_wealth": 630000, 
+         "category_income": 0, 
+         "raw_items": [
+            "Nessgro Ltd; a produce marketing company. (Registered 28 June 2017)", 
+            "Partner in Thomastown Farm and Cottages (trading as R&M Clark). (Registered 28 June 2017)", 
+            "Sciemus Ltd; technology and insurance. (Registered 28 June 2017)", 
+            "Maven Capital (Llandudno) LLP; property investment. (Partner) (Registered 28 June 2017)", 
+            "Maven Capital (Marlow) LLP; property investment. (Partner) (Registered 28 June 2017)", 
+            "Maven Capital (Telfer House) LLP; property investment. (Partner) (Registered 28 June 2017)", 
+            "Maven Co-invest Flexlife; subsea technology. (Registered 28 June 2017)", 
+            "Maven Co-invest R&M; fabrication. (Registered 28 June 2017)", 
+            "Maven Co-invest RMEC; well services, oil and gas. (Registered 28 June 2017)"
+         ], 
+         "year": 1969, 
          "items": [
             {
                "raw_string": "Nessgro Ltd; a produce marketing company. (Registered 28 June 2017)", 
@@ -363,8 +469,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1969
                      }, 
                      "etag": "c6ade0019fe875f80b36706bb3572dfa3885f532", 
                      "address": {
@@ -395,8 +501,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 9
                      }, 
                      "etag": "e758454d94bb7906e1a63afce1be99003a05a6e6", 
                      "address": {
@@ -449,8 +555,8 @@
                         "month": 5, 
                         "year": 1969
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -471,8 +577,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2004-10-05", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -644,8 +750,8 @@
                         "ownership-of-shares-75-to-100-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1950, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1950
                      }, 
                      "name_elements": {
                         "middle_name": "Michael", 
@@ -718,15 +824,15 @@
                   "items": [], 
                   "jurisdiction": "scotland", 
                   "confirmation_statement": {
-                     "next_due": "2017-12-24", 
-                     "last_made_up_to": "2016-12-10", 
-                     "next_made_up_to": "2017-12-10", 
+                     "next_due": "2018-12-24", 
+                     "last_made_up_to": "2017-12-10", 
+                     "next_made_up_to": "2018-12-10", 
                      "overdue": false
                   }, 
                   "company_number": "SC522233", 
                   "date_of_creation": "2015-12-10", 
                   "has_insolvency_history": false, 
-                  "etag": "cac124739b1f86f2a1c8d592755a339410ab7f33", 
+                  "etag": "60a13d4c13b6f7d251e1ef327f044def6886e472", 
                   "accounts": {
                      "next_due": "2018-09-30", 
                      "next_made_up_to": "2017-12-31", 
@@ -810,18 +916,18 @@
                            "appointments": "/officers/y_4j823W5Oha82tZmROnDu_2v30/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-12-01", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 10
+                     }, 
                      "address": {
                         "premises": "8/10", 
                         "country": "England", 
                         "address_line_1": "Grosvenor Gardens", 
                         "postal_code": "SW1W 0DH", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-12-01", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1958
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -834,18 +940,18 @@
                            "appointments": "/officers/l8sidH1XBCjNUViiKCoK0PU4gqA/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-06-22", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 12
-                     }, 
                      "address": {
                         "premises": "5th Floor", 
                         "country": "England", 
                         "address_line_1": "52 Cornhill", 
                         "postal_code": "EC3V 3PD", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-06-22", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -858,6 +964,12 @@
                            "appointments": "/officers/Qzr2Yyso_Evbo-24He0xeKR8EOw/appointments"
                         }
                      }, 
+                     "country_of_residence": "Bermuda", 
+                     "appointed_on": "2017-10-04", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1972
+                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "Sciemus Ltd", 
@@ -866,14 +978,8 @@
                         "address_line_2": "52 Corninhill", 
                         "address_line_1": "Sciemus Ltd"
                      }, 
-                     "country_of_residence": "Bermuda", 
-                     "appointed_on": "2017-10-04", 
-                     "date_of_birth": {
-                        "year": 1972, 
-                        "month": 5
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Reinsurance And Asset Management"
                   }, 
                   {
@@ -893,11 +999,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-02-04", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1969
+                        "year": 1969, 
+                        "month": 1
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Australian", 
+                     "officer_role": "director", 
                      "occupation": "Insurance Underwriter"
                   }, 
                   {
@@ -916,8 +1022,8 @@
                         "postal_code": "WD4 8PP", 
                         "locality": "Kings Langley"
                      }, 
-                     "officer_role": "secretary", 
                      "nationality": "British", 
+                     "officer_role": "secretary", 
                      "occupation": "Director"
                   }, 
                   {
@@ -994,8 +1100,8 @@
                      "appointed_on": "2009-02-13", 
                      "resigned_on": "2011-01-14", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 1
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1008,13 +1114,6 @@
                            "appointments": "/officers/q-T_6vcLcdXtTTdzJNz5HuCrQd4/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "47", 
-                        "region": "Hertfordshire", 
-                        "locality": "Kings Langley", 
-                        "postal_code": "WD4 8PP", 
-                        "address_line_1": "Upper Highway"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2004-02-20", 
                      "resigned_on": "2006-05-23", 
@@ -1022,8 +1121,15 @@
                         "year": 1960, 
                         "month": 5
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "47", 
+                        "region": "Hertfordshire", 
+                        "locality": "Kings Langley", 
+                        "postal_code": "WD4 8PP", 
+                        "address_line_1": "Upper Highway"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chief Operations Officer"
                   }, 
                   {
@@ -1033,13 +1139,6 @@
                            "appointments": "/officers/O-USD74EgLUrEF-5BAJ6wBs85Oc/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2003-09-16", 
-                     "resigned_on": "2016-02-23", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 2
-                     }, 
                      "address": {
                         "premises": "52", 
                         "country": "England", 
@@ -1047,8 +1146,15 @@
                         "postal_code": "EC3V 3PD", 
                         "address_line_1": "Cornhill"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2003-09-16", 
+                     "resigned_on": "2016-02-23", 
+                     "date_of_birth": {
+                        "year": 1968, 
+                        "month": 2
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chief Executive Officer"
                   }, 
                   {
@@ -1057,6 +1163,13 @@
                         "officer": {
                            "appointments": "/officers/USlOWH0apThNdPct37-xNVQR5Yg/appointments"
                         }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2003-09-16", 
+                     "resigned_on": "2014-09-11", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1970
                      }, 
                      "address": {
                         "locality": "Farnborough", 
@@ -1067,15 +1180,8 @@
                         "postal_code": "GU14 0LX", 
                         "address_line_1": "Cody Technology Park, Old Ively Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2003-09-16", 
-                     "resigned_on": "2014-09-11", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1970
-                     }, 
-                     "nationality": "Irish", 
                      "officer_role": "director", 
+                     "nationality": "Irish", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1085,19 +1191,19 @@
                            "appointments": "/officers/JhBAVvb-Y6QsUdJ8jsnCSEGleF0/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2013-04-01", 
-                     "resigned_on": "2014-09-03", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "premises": "One", 
                         "country": "United Kingdom", 
                         "address_line_1": "Silk Street", 
                         "postal_code": "EC2Y 8HQ", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2013-04-01", 
+                     "resigned_on": "2014-09-03", 
+                     "date_of_birth": {
+                        "year": 1971, 
+                        "month": 9
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1113,8 +1219,8 @@
                      "appointed_on": "2005-07-14", 
                      "resigned_on": "2007-10-15", 
                      "date_of_birth": {
-                        "year": 1948, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1948
                      }, 
                      "address": {
                         "region": "Hampshire", 
@@ -1133,19 +1239,19 @@
                            "appointments": "/officers/AZLXP2CUUzM6ZrIYD8epNUg0XuQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2004-05-14", 
+                     "resigned_on": "2005-09-30", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 6
+                     }, 
                      "address": {
                         "address_line_2": "Eaton Ford", 
                         "region": "Cambridgeshire", 
                         "address_line_1": "10 Kipling Place", 
                         "postal_code": "PE19 7RG", 
                         "locality": "St Neots"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2004-05-14", 
-                     "resigned_on": "2005-09-30", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1949
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1158,13 +1264,6 @@
                            "appointments": "/officers/ZVEWsn_EXPOJwicFTHs98_MvmYA/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-01-07", 
-                     "resigned_on": "2016-01-28", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1976
-                     }, 
                      "address": {
                         "premises": "25", 
                         "country": "England", 
@@ -1172,8 +1271,15 @@
                         "postal_code": "L18 3JG", 
                         "locality": "Liverpool"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-01-07", 
+                     "resigned_on": "2016-01-28", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1976
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Academic"
                   }, 
                   {
@@ -1183,6 +1289,13 @@
                            "appointments": "/officers/qoW80FlvqS9p1-r3G6paUZMc6S8/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2005-08-12", 
+                     "resigned_on": "2011-11-21", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1959
+                     }, 
                      "address": {
                         "locality": "Farnborough", 
                         "premises": "A8", 
@@ -1191,13 +1304,6 @@
                         "care_of": "SCIEMUS LTD", 
                         "postal_code": "GU14 0LX", 
                         "address_line_1": "Cody Technology Park"
-                     }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2005-08-12", 
-                     "resigned_on": "2011-11-21", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1959
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1210,19 +1316,19 @@
                            "appointments": "/officers/eESHlSAf5gk8ZKzltYPQU1tobXY/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2007-03-28", 
-                     "resigned_on": "2008-04-08", 
-                     "date_of_birth": {
-                        "year": 1965, 
-                        "month": 10
-                     }, 
                      "address": {
                         "address_line_2": "Whiting Lane", 
                         "region": "Worcestershire", 
                         "locality": "Berrow", 
                         "postal_code": "WR13 6AY", 
                         "address_line_1": "Berewe Court"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2007-03-28", 
+                     "resigned_on": "2008-04-08", 
+                     "date_of_birth": {
+                        "year": 1965, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1235,13 +1341,6 @@
                            "appointments": "/officers/oihF7m8tKYgJHCBfq6ajLWLFuPw/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-06-06", 
-                     "resigned_on": "2014-09-11", 
-                     "date_of_birth": {
-                        "year": 1945, 
-                        "month": 1
-                     }, 
                      "address": {
                         "premises": "One", 
                         "country": "United Kingdom", 
@@ -1249,8 +1348,15 @@
                         "postal_code": "EC2Y 8HQ", 
                         "address_line_1": "Silk Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-06-06", 
+                     "resigned_on": "2014-09-11", 
+                     "date_of_birth": {
+                        "year": 1945, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1264,8 +1370,8 @@
                      "appointed_on": "2008-04-08", 
                      "resigned_on": "2009-02-13", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1960
+                        "year": 1960, 
+                        "month": 5
                      }, 
                      "address": {
                         "region": "Avon", 
@@ -1273,8 +1379,8 @@
                         "postal_code": "BA1 2ET", 
                         "address_line_1": "16 The Circus"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "General Manager"
                   }, 
                   {
@@ -1284,6 +1390,13 @@
                            "appointments": "/officers/mZpv-equ2RBGdY_8iDQzEC71NM4/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-01-05", 
+                     "resigned_on": "2014-12-02", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1949
+                     }, 
                      "address": {
                         "locality": "Farnborough", 
                         "premises": "A8", 
@@ -1291,13 +1404,6 @@
                         "region": "Hampshire", 
                         "postal_code": "GU14 0LX", 
                         "address_line_1": "Cody Technology Park"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-01-05", 
-                     "resigned_on": "2014-12-02", 
-                     "date_of_birth": {
-                        "year": 1949, 
-                        "month": 7
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1310,13 +1416,6 @@
                            "appointments": "/officers/3uNlm16QX1fwftilOMhAd-MhpP4/appointments"
                         }
                      }, 
-                     "country_of_residence": "United States", 
-                     "appointed_on": "2004-05-14", 
-                     "resigned_on": "2012-11-01", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1955
-                     }, 
                      "address": {
                         "locality": "Farnborough", 
                         "premises": "A8", 
@@ -1325,8 +1424,15 @@
                         "postal_code": "GU14 0LX", 
                         "address_line_1": "Cody Technology Park, Old Ively Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United States", 
+                     "appointed_on": "2004-05-14", 
+                     "resigned_on": "2012-11-01", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 9
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -1336,6 +1442,13 @@
                            "appointments": "/officers/D13g5chC4CTlILqsOoJuctl_XK0/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2004-05-14", 
+                     "resigned_on": "2005-07-14", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 1
+                     }, 
                      "address": {
                         "premises": "29", 
                         "postal_code": "SW15 1LW", 
@@ -1343,15 +1456,8 @@
                         "address_line_2": "Putney", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2004-05-14", 
-                     "resigned_on": "2005-07-14", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1953
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Nonexecutive Director"
                   }, 
                   {
@@ -1365,8 +1471,8 @@
                      "appointed_on": "2015-12-01", 
                      "resigned_on": "2016-06-27", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 2
                      }, 
                      "address": {
                         "premises": "5th Floor, 52", 
@@ -1375,8 +1481,8 @@
                         "postal_code": "EC3V 3PD", 
                         "address_line_1": "Cornhill"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Commercial Director"
                   }, 
                   {
@@ -1511,8 +1617,8 @@
                         "right-to-appoint-and-remove-members-limited-liability-partnership"
                      ], 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1969
                      }, 
                      "name_elements": {
                         "middle_name": "Alexander", 
@@ -1569,8 +1675,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1969
+                        "year": 1969, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1615,8 +1721,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1966
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1663,8 +1769,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1962
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1687,8 +1793,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1968
+                        "year": 1968, 
+                        "month": 4
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1735,8 +1841,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1964
+                        "year": 1964, 
+                        "month": 7
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1783,8 +1889,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1961
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1855,8 +1961,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 3
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1879,8 +1985,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1903,8 +2009,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1963
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1927,8 +2033,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 9
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1951,8 +2057,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1948, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1948
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -1999,8 +2105,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1978, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1978
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2023,8 +2129,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1965
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2115,7 +2221,7 @@
                            "appointments": "/officers/MgkHSbTn25aH5jXyiWGh_RAG3yk/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-02-27", 
                      "resigned_on": "2013-03-13", 
                      "date_of_birth": {
@@ -2125,9 +2231,9 @@
                      "address": {
                         "premises": "First Floor Kintyre House", 
                         "country": "United Kingdom", 
-                        "address_line_1": "205 West George Street", 
+                        "locality": "Glasgow", 
                         "postal_code": "G2 2LW", 
-                        "locality": "Glasgow"
+                        "address_line_1": "205 West George Street"
                      }, 
                      "officer_role": "llp-member"
                   }
@@ -2212,18 +2318,18 @@
                            "appointments": "/officers/yrOfJHkdgfrWTKsoLsI3DCcDrFU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-03-18", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1969
-                     }, 
                      "address": {
                         "premises": "Kintyre House", 
                         "country": "United Kingdom", 
                         "locality": "Glasgow", 
                         "postal_code": "G2 2LW", 
                         "address_line_1": "205 West George Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-03-18", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 11
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2249,8 +2355,8 @@
                         "postal_code": "EC3V 3LF", 
                         "address_line_1": "1-2 Royal Exchange Buildings"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Investment Manager"
                   }
                ], 
@@ -2275,12 +2381,12 @@
                   "sic_codes": [
                      "41100"
                   ], 
-                  "etag": "18ac2c619951ddad010930622071d03231496b8d", 
+                  "etag": "f90f1440d65478a71c0c8a379d65cc326afe761c", 
                   "registered_office_address": {
-                     "country": "England", 
                      "address_line_2": "1-2 Royal Exchange Buildings", 
-                     "locality": "London", 
+                     "country": "England", 
                      "postal_code": "EC3V 3LF", 
+                     "locality": "London", 
                      "address_line_1": "Fifth Floor"
                   }, 
                   "undeliverable_registered_office_address": false, 
@@ -2329,7 +2435,70 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Ramsay Duff", 
+                     "links": {
+                        "self": "/company/SO304751/persons-with-significant-control/individual/U9ksBW71PkxKkZI2as2HYtZt18o"
+                     }, 
+                     "notified_on": "2016-06-30", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "right-to-appoint-and-remove-members-limited-liability-partnership"
+                     ], 
+                     "name_elements": {
+                        "surname": "Duff", 
+                        "forename": "George", 
+                        "middle_name": "Ramsay", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 2
+                     }, 
+                     "etag": "6b95d996215b122edbc1fae22121ba147cdf8ba2", 
+                     "address": {
+                        "premises": "Kintyre House", 
+                        "region": "Glasgow", 
+                        "address_line_1": "205 West George Street", 
+                        "postal_code": "G2 2LW", 
+                        "locality": "Glasgow"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Paul Mcphie Johnston", 
+                     "links": {
+                        "self": "/company/SO304751/persons-with-significant-control/individual/CcwRgui_N2_Xpe0cjHyqXMucKTA"
+                     }, 
+                     "notified_on": "2016-06-30", 
+                     "country_of_residence": "Scotland", 
+                     "natures_of_control": [
+                        "right-to-appoint-and-remove-members-limited-liability-partnership"
+                     ], 
+                     "name_elements": {
+                        "surname": "Johnston", 
+                        "forename": "Paul", 
+                        "middle_name": "Mcphie", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1972
+                     }, 
+                     "etag": "eb20c3285353c92c36e232f13e98601bca8134ef", 
+                     "address": {
+                        "premises": "Kintyre House", 
+                        "region": "Glasgow", 
+                        "locality": "Glasgow", 
+                        "postal_code": "G2 2LW", 
+                        "address_line_1": "205 West George Street"
+                     }, 
+                     "nationality": "Scottish"
+                  }
+               ], 
                "registered": "28/06/2017", 
                "officers": [
                   {
@@ -2339,18 +2508,18 @@
                            "appointments": "/officers/MgkHSbTn25aH5jXyiWGh_RAG3yk/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-02-25", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 2
                      }, 
                      "address": {
                         "locality": "Glasgow", 
                         "premises": "Kintyre House", 
                         "country": "Scotland", 
                         "region": "Glasgow", 
-                        "postal_code": "G2  2LW", 
+                        "postal_code": "G2 2LW", 
                         "address_line_1": "205 West George Street"
                      }, 
                      "officer_role": "llp-designated-member"
@@ -2365,8 +2534,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2014-01-24", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1972
+                        "year": 1972, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "Menteith House", 
@@ -2387,8 +2556,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Barnet", 
@@ -2410,8 +2579,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1969
+                        "year": 1969, 
+                        "month": 5
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2506,8 +2675,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1955
+                        "year": 1955, 
+                        "month": 7
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2674,8 +2843,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1958
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2744,8 +2913,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1962
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2792,8 +2961,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1963
+                        "year": 1963, 
+                        "month": 7
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -2912,8 +3081,8 @@
                      "country_of_residence": "U.K", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "19", 
@@ -2959,8 +3128,8 @@
                      "appointed_on": "2014-01-24", 
                      "resigned_on": "2014-02-25", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1975
                      }, 
                      "address": {
                         "premises": "Menteith House", 
@@ -2987,7 +3156,8 @@
                      "filing_history": "/company/SO304751/filing-history", 
                      "charges": "/company/SO304751/charges", 
                      "self": "/company/SO304751", 
-                     "officers": "/company/SO304751/officers"
+                     "officers": "/company/SO304751/officers", 
+                     "persons_with_significant_control": "/company/SO304751/persons-with-significant-control"
                   }, 
                   "etag": "056f69ecc2f70e56596ae8c5e0f0e5c83f081b08", 
                   "registered_office_address": {
@@ -3303,32 +3473,20 @@
                }
             }
          ], 
-         "category_description": "Other Shareholdings", 
-         "category_gifts": 0, 
-         "month": 5, 
-         "middle": "james", 
-         "category_type": "shareholdings", 
-         "category_wealth": 630000, 
-         "category_income": 0, 
-         "raw_items": [
-            "Nessgro Ltd; a produce marketing company. (Registered 28 June 2017)", 
-            "Partner in Thomastown Farm and Cottages (trading as R&M Clark). (Registered 28 June 2017)", 
-            "Sciemus Ltd; technology and insurance. (Registered 28 June 2017)", 
-            "Maven Capital (Llandudno) LLP; property investment. (Partner) (Registered 28 June 2017)", 
-            "Maven Capital (Marlow) LLP; property investment. (Partner) (Registered 28 June 2017)", 
-            "Maven Capital (Telfer House) LLP; property investment. (Partner) (Registered 28 June 2017)", 
-            "Maven Co-invest Flexlife; subsea technology. (Registered 28 June 2017)", 
-            "Maven Co-invest R&M; fabrication. (Registered 28 June 2017)", 
-            "Maven Co-invest RMEC; well services, oil and gas. (Registered 28 June 2017)"
-         ], 
-         "year": 1969, 
-         "category_id": 9, 
          "category_amount": 630000, 
          "display": "colin clark", 
          "category_donations": 0, 
          "first": "colin"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Director (unpaid) of Nessgro Ltd, a produce marketing company. (Registered 28 June 2017)", 
+               "Director (unpaid) of Nessgro Ltd, a produce marketing company. (Registered 28 June 2017)": "Director (unpaid) of Nessgro Ltd, a produce marketing company. (Registered 28 June 2017)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Director (unpaid) of Nessgro Ltd, a produce marketing company. (Registered 28 June 2017)", 
@@ -3344,8 +3502,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -3358,9 +3514,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -3371,9 +3528,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -3407,7 +3565,14 @@
          "category_gifts": 0, 
          "category_type": "salary", 
          "category_wealth": 0, 
-         "offices": null, 
+         "offices": [
+            {
+               "dept": "Environmental Audit Committee", 
+               "from_date": "2017-12-04", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
+            }
+         ], 
          "chair_salary": 15025, 
          "panel_of_chairs_salary": 15025, 
          "entries": [], 
@@ -3427,7 +3592,70 @@
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr George Ramsay Duff", 
+                     "links": {
+                        "self": "/company/SO304751/persons-with-significant-control/individual/U9ksBW71PkxKkZI2as2HYtZt18o"
+                     }, 
+                     "notified_on": "2016-06-30", 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "right-to-appoint-and-remove-members-limited-liability-partnership"
+                     ], 
+                     "name_elements": {
+                        "surname": "Duff", 
+                        "forename": "George", 
+                        "middle_name": "Ramsay", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 2
+                     }, 
+                     "etag": "6b95d996215b122edbc1fae22121ba147cdf8ba2", 
+                     "address": {
+                        "premises": "Kintyre House", 
+                        "region": "Glasgow", 
+                        "address_line_1": "205 West George Street", 
+                        "postal_code": "G2 2LW", 
+                        "locality": "Glasgow"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Paul Mcphie Johnston", 
+                     "links": {
+                        "self": "/company/SO304751/persons-with-significant-control/individual/CcwRgui_N2_Xpe0cjHyqXMucKTA"
+                     }, 
+                     "notified_on": "2016-06-30", 
+                     "country_of_residence": "Scotland", 
+                     "natures_of_control": [
+                        "right-to-appoint-and-remove-members-limited-liability-partnership"
+                     ], 
+                     "name_elements": {
+                        "surname": "Johnston", 
+                        "forename": "Paul", 
+                        "middle_name": "Mcphie", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 11
+                     }, 
+                     "etag": "eb20c3285353c92c36e232f13e98601bca8134ef", 
+                     "address": {
+                        "premises": "Kintyre House", 
+                        "region": "Glasgow", 
+                        "locality": "Glasgow", 
+                        "postal_code": "G2 2LW", 
+                        "address_line_1": "205 West George Street"
+                     }, 
+                     "nationality": "Scottish"
+                  }
+               ], 
                "registered": "", 
                "officers": [
                   {
@@ -3437,18 +3665,18 @@
                            "appointments": "/officers/MgkHSbTn25aH5jXyiWGh_RAG3yk/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-02-25", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1962
                      }, 
                      "address": {
                         "locality": "Glasgow", 
                         "premises": "Kintyre House", 
                         "country": "Scotland", 
                         "region": "Glasgow", 
-                        "postal_code": "G2  2LW", 
+                        "postal_code": "G2 2LW", 
                         "address_line_1": "205 West George Street"
                      }, 
                      "officer_role": "llp-designated-member"
@@ -3485,8 +3713,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Barnet", 
@@ -3556,8 +3784,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1968
+                        "year": 1968, 
+                        "month": 4
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3580,8 +3808,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 5
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3652,8 +3880,8 @@
                      "country_of_residence": "U.K.", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1963
+                        "year": 1963, 
+                        "month": 3
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3700,8 +3928,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1969
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3724,8 +3952,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1961
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3748,8 +3976,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3866,8 +4094,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -3986,8 +4214,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-04-03", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1958
+                        "year": 1958, 
+                        "month": 10
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4073,7 +4301,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SO304751", 
-               "pretty": "colin clark colin james clark", 
+               "pretty": "Colin Clark", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -4085,7 +4313,8 @@
                      "filing_history": "/company/SO304751/filing-history", 
                      "charges": "/company/SO304751/charges", 
                      "self": "/company/SO304751", 
-                     "officers": "/company/SO304751/officers"
+                     "officers": "/company/SO304751/officers", 
+                     "persons_with_significant_control": "/company/SO304751/persons-with-significant-control"
                   }, 
                   "etag": "056f69ecc2f70e56596ae8c5e0f0e5c83f081b08", 
                   "registered_office_address": {
@@ -4292,8 +4521,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1969
+                        "year": 1969, 
+                        "month": 5
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4316,8 +4545,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 8
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4340,8 +4569,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1968, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1968
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4364,8 +4593,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1965
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4388,8 +4617,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1964, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1964
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4460,8 +4689,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4532,8 +4761,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4580,8 +4809,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 9
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4628,8 +4857,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1958
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4724,8 +4953,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2013-03-28", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1963
                      }, 
                      "address": {
                         "locality": "Glasgow", 
@@ -4768,7 +4997,7 @@
                            "appointments": "/officers/MgkHSbTn25aH5jXyiWGh_RAG3yk/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-02-27", 
                      "resigned_on": "2013-03-13", 
                      "date_of_birth": {
@@ -4778,9 +5007,9 @@
                      "address": {
                         "premises": "First Floor Kintyre House", 
                         "country": "United Kingdom", 
-                        "address_line_1": "205 West George Street", 
+                        "locality": "Glasgow", 
                         "postal_code": "G2 2LW", 
-                        "locality": "Glasgow"
+                        "address_line_1": "205 West George Street"
                      }, 
                      "officer_role": "llp-member"
                   }
@@ -4788,7 +5017,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SO304300", 
-               "pretty": "colin clark colin james clark", 
+               "pretty": "Colin Clark", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -4907,8 +5136,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 9
                      }, 
                      "etag": "e758454d94bb7906e1a63afce1be99003a05a6e6", 
                      "address": {
@@ -4975,8 +5204,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2004-10-05", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1966
                      }, 
                      "address": {
                         "locality": "Inverness", 
@@ -5044,7 +5273,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC274212", 
-               "pretty": "colin clark colin james clark", 
+               "pretty": "Colin Clark", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -5259,8 +5488,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-05-31", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1974
+                        "year": 1974, 
+                        "month": 4
                      }, 
                      "address": {
                         "locality": "March", 
@@ -5271,8 +5500,8 @@
                         "address_line_2": "Doddington", 
                         "address_line_1": "Floods Ferry Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5292,11 +5521,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-05-31", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1966
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Occupational Therapist"
                   }, 
                   {
@@ -5306,17 +5535,17 @@
                            "appointments": "/officers/beee1NTxZglXtr1IhAI1ZGaoiHM/appointments"
                         }
                      }, 
+                     "appointed_on": "2001-06-21", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "Opg Ltd", 
                         "country": "United Kingdom", 
                         "locality": "Inverness", 
                         "postal_code": "IV2 7XB", 
                         "address_line_1": "Dalcross Industrial Estate"
-                     }, 
-                     "appointed_on": "2001-06-21", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1969
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -5341,8 +5570,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-05-20", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1966
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -5355,6 +5584,8 @@
                            "appointments": "/officers/eugziix81vlma8LFsAbxFh_xa1U/appointments"
                         }
                      }, 
+                     "appointed_on": "2001-06-21", 
+                     "resigned_on": "2016-03-15", 
                      "address": {
                         "premises": "Opg Ltd", 
                         "country": "United Kingdom", 
@@ -5362,10 +5593,8 @@
                         "postal_code": "IV2 7XB", 
                         "address_line_1": "Dalcross Industrial Estate"
                      }, 
-                     "appointed_on": "2001-06-21", 
-                     "resigned_on": "2016-03-15", 
-                     "nationality": "British", 
-                     "officer_role": "secretary"
+                     "officer_role": "secretary", 
+                     "nationality": "British"
                   }, 
                   {
                      "name": "BRIAN REID LTD.", 
@@ -5391,6 +5620,13 @@
                            "appointments": "/officers/5hnlmHzEcLVXVSjbuvOPZh23_Ug/appointments"
                         }
                      }, 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2001-10-03", 
+                     "resigned_on": "2008-03-21", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1958
+                     }, 
                      "address": {
                         "address_line_2": "Newtyle", 
                         "region": "Perthshire", 
@@ -5398,15 +5634,8 @@
                         "postal_code": "PH12 8SG", 
                         "locality": "Blairgowrie"
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2001-10-03", 
-                     "resigned_on": "2008-03-21", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 11
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5419,8 +5648,8 @@
                      "appointed_on": "2001-10-03", 
                      "resigned_on": "2004-09-29", 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1969
                      }, 
                      "address": {
                         "postal_code": "PE9 2YQ", 
@@ -5429,8 +5658,8 @@
                         "address_line_2": "31b Scotgate Rock Terrace", 
                         "locality": "Stamford"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5444,8 +5673,8 @@
                      "appointed_on": "2004-09-29", 
                      "resigned_on": "2010-05-21", 
                      "date_of_birth": {
-                        "year": 1957, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1957
                      }, 
                      "address": {
                         "postal_code": "PE7 1TF", 
@@ -5454,8 +5683,8 @@
                         "address_line_2": "Whittlesey", 
                         "address_line_1": "11 Manor View"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5489,13 +5718,6 @@
                            "appointments": "/officers/bkPn_9C5incS0R4TjLp6D2ecdgE/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2007-08-22", 
-                     "resigned_on": "2016-05-31", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1972
-                     }, 
                      "address": {
                         "locality": "Duns", 
                         "premises": "Greenvale", 
@@ -5504,8 +5726,15 @@
                         "address_line_2": "Craigswalls", 
                         "address_line_1": "Ap"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2007-08-22", 
+                     "resigned_on": "2016-05-31", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1972
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "General Manager"
                   }, 
                   {
@@ -5529,8 +5758,8 @@
                         "year": 1957, 
                         "month": 2
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5544,8 +5773,8 @@
                      "appointed_on": "2016-05-31", 
                      "resigned_on": "2017-05-31", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1977
+                        "year": 1977, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Peterborough", 
@@ -5579,7 +5808,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC220498", 
-               "pretty": "colin clark colin james clark", 
+               "pretty": "Colin Clark", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -5691,6 +5920,12 @@
                            "appointments": "/officers/ynBt3xf_NSJOdqvxoXKp0qaWJKc/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2003-01-30", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 9
+                     }, 
                      "address": {
                         "locality": "Paddock Wood", 
                         "premises": "The Fresh Produce Centre", 
@@ -5698,12 +5933,6 @@
                         "region": "Kent", 
                         "postal_code": "TN12 6UT", 
                         "address_line_1": "Transfesa Road"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2003-01-30", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -5716,6 +5945,12 @@
                            "appointments": "/officers/HZh4WyDEJQGyqYb0Kblznl9OnQI/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2003-01-30", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1954
+                     }, 
                      "address": {
                         "postal_code": "TN27 8EX", 
                         "region": "Kent", 
@@ -5723,14 +5958,8 @@
                         "address_line_2": "Sissinghurst Road", 
                         "address_line_1": "Great Batchelors"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2003-01-30", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 11
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -5794,13 +6023,6 @@
                            "appointments": "/officers/dzl1LSiiFie080A17Bwy826gchA/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Moulton", 
-                        "region": "Lincolnshire", 
-                        "address_line_1": "Damson House Shivean Gate", 
-                        "postal_code": "PE12 6PF", 
-                        "locality": "Spalding"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2005-03-29", 
                      "resigned_on": "2006-09-24", 
@@ -5808,8 +6030,15 @@
                         "year": 1962, 
                         "month": 1
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "address_line_2": "Moulton", 
+                        "region": "Lincolnshire", 
+                        "address_line_1": "Damson House Shivean Gate", 
+                        "postal_code": "PE12 6PF", 
+                        "locality": "Spalding"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Accountant"
                   }, 
                   {
@@ -5819,17 +6048,17 @@
                            "appointments": "/officers/w_Lu89MbjmroildnJ74KXUf5kFE/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Lincolnshire", 
-                        "locality": "Stamford", 
-                        "postal_code": "PE9 2HL", 
-                        "address_line_1": "35 St Leonards Street"
-                     }, 
                      "appointed_on": "2004-12-14", 
                      "resigned_on": "2005-09-27", 
                      "date_of_birth": {
                         "month": 9, 
                         "year": 1971
+                     }, 
+                     "address": {
+                        "region": "Lincolnshire", 
+                        "locality": "Stamford", 
+                        "postal_code": "PE9 2HL", 
+                        "address_line_1": "35 St Leonards Street"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -5842,6 +6071,12 @@
                            "appointments": "/officers/0U7sPDE5CcIWOAZ7Aw_fFmWhA0o/appointments"
                         }
                      }, 
+                     "appointed_on": "2003-01-30", 
+                     "resigned_on": "2004-09-29", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1969
+                     }, 
                      "address": {
                         "postal_code": "PE9 2YQ", 
                         "region": "Lincolnshire", 
@@ -5849,14 +6084,8 @@
                         "address_line_2": "31b Scotgate Rock Terrace", 
                         "address_line_1": "Mews Cottage"
                      }, 
-                     "appointed_on": "2003-01-30", 
-                     "resigned_on": "2004-09-29", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 5
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5866,6 +6095,13 @@
                            "appointments": "/officers/4hCcdK90MyNUt8jFnZgessh4eSQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-09-29", 
+                     "resigned_on": "2006-09-24", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1957
+                     }, 
                      "address": {
                         "postal_code": "PE7 1TF", 
                         "region": "Cambridgeshire", 
@@ -5873,15 +6109,8 @@
                         "address_line_2": "Whittlesey", 
                         "locality": "Peterborough"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-09-29", 
-                     "resigned_on": "2006-09-24", 
-                     "date_of_birth": {
-                        "year": 1957, 
-                        "month": 5
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -5895,8 +6124,8 @@
                      "appointed_on": "2004-11-08", 
                      "resigned_on": "2006-09-24", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1950
+                        "year": 1950, 
+                        "month": 10
                      }, 
                      "address": {
                         "region": "Cambridgeshire", 
@@ -5915,18 +6144,18 @@
                            "appointments": "/officers/YN_YTqOT1FlBszAevUv6xbnN6DA/appointments"
                         }
                      }, 
+                     "appointed_on": "2007-03-28", 
+                     "resigned_on": "2008-09-24", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 9
+                     }, 
                      "address": {
                         "address_line_2": "Brightling Road", 
                         "region": "East Sussex", 
                         "address_line_1": "Coldharbour Cottage", 
                         "postal_code": "TN32 5ES", 
                         "locality": "Robertsbridge"
-                     }, 
-                     "appointed_on": "2007-03-28", 
-                     "resigned_on": "2008-09-24", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -5950,11 +6179,11 @@
                      "appointed_on": "2003-01-30", 
                      "resigned_on": "2005-03-29", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 2
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -6000,7 +6229,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/04545444", 
-               "pretty": "colin clark colin james clark", 
+               "pretty": "Colin Clark", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -6092,5 +6321,8 @@
    "wrans_subjects": "New Zealand: Diplomatic Relations", 
    "member_id": "41848", 
    "constituency": "Gordon", 
-   "mp_gifts": 0
+   "mp_gifts": 0, 
+   "commitees": [
+      "Environmental Audit Committee"
+   ]
 }

@@ -302,9 +302,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -315,6 +316,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: GMBAddress of donor: 1 Mosley Street, Newcastle upon Tyne, NE1 1YEAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "GMB", 
+               "Donor status": "trade union", 
+               "Address of donor": "1 Mosley Street, Newcastle upon Tyne, NE1 1YE"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: GMBAddress of donor: 1 Mosley Street, Newcastle upon Tyne, NE1 1YEAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 07 July 2017)", 
@@ -322,19 +335,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "GMB", 
                "address": "1 Mosley Street, Newcastle upon Tyne, NE1 1YE", 
                "item_id": "0001", 
                "donor": "GMB", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "GMB", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -347,28 +367,47 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Catholic Bishops\u2019 Conference of England and WalesAddress of donor: 39 Eccleston Square, London SW1V 1BXAmount of donation or nature and value if donation in kind: an educational allowance of \u00a35,330 and accommodation provided for an intern in my parliamentary office for 10 months: October 2016 \u2013 July 2017Date received: 10 October 2016Date accepted: 10 October 2016Donor status: registered charity(Registered 10 October 2016)", 
+               "Date received": "10 October 2016", 
+               "Amount of donation or nature and value if donation in kind": "October 2016 \u2013 July 2017", 
+               "Date accepted": "10 October 2016", 
+               "(Registered 10 October 2016)": "(Registered 10 October 2016)", 
+               "Name of donor": "Catholic Bishops\u2019 Conference of England and Wales", 
+               "Donor status": "registered charity", 
+               "Address of donor": "39 Eccleston Square, London SW1V 1BX"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Catholic Bishops\u2019 Conference of England and WalesAddress of donor: 39 Eccleston Square, London SW1V 1BXAmount of donation or nature and value if donation in kind: an educational allowance of \u00a35,330 and accommodation provided for an intern in my parliamentary office for 10 months: October 2016 \u2013 July 2017Date received: 10 October 2016Date accepted: 10 October 2016Donor status: registered charity(Registered 10 October 2016)", 
-               "received": "10 October 2016", 
-               "accepted": "10 October 2016", 
+               "status": "registered charity", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "10/10/2016", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5330, 
-               "status": "registered charity", 
+               "link": null, 
                "pretty": "Catholic Bishops\u2019 Conference of England and Wales", 
                "address": "39 Eccleston Square, London SW1V 1BX", 
                "item_id": "0001", 
                "donor": "Catholic Bishops\u2019 Conference of England and Wales", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Catholic Bishops\u2019 Conference of England and Wales", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -381,9 +420,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -394,9 +434,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -407,9 +448,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -420,6 +462,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Joint owner of residential rented property in Northumberland: (i).", 
+               "Joint owner of residential rented property in Northumberland": "(i)."
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Joint owner of residential rented property in Northumberland: (i).", 
@@ -435,8 +485,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [
@@ -450,8 +498,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "mckinnell", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -461,7 +510,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1976, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "catherine mckinnell", 
          "category_donations": 0, 
@@ -469,8 +518,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "mckinnell", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -480,13 +530,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1976, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "catherine mckinnell", 
          "category_donations": 0, 
          "first": "catherine"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Solicitor (currently non-practising).", 
+               "Solicitor (currently non-practising).": "Solicitor (currently non-practising)."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Solicitor (currently non-practising).", 
@@ -502,8 +560,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -516,9 +572,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -529,9 +586,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

@@ -311,9 +311,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -324,9 +325,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -337,46 +339,432 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: The United & Cecil ClubAddress of donor: Beckfield, Crouch Lane, Winkfield, Windsor SL4 4TNAmount of donation or nature and value if donation in kind:  \u00a32,500Date received: 4 May 2017Date accepted: 4 May 2017Donor status: members' association(Registered 09 June 2017)", 
+               "Date received": "4 May 2017", 
+               "(Registered 09 June 2017)": "(Registered 09 June 2017)", 
+               "Amount of donation or nature and value if donation in kind": " \u00a32,500", 
+               "Date accepted": "4 May 2017", 
+               "Name of donor": "The United & Cecil Club", 
+               "Donor status": "members' association", 
+               "Address of donor": "Beckfield, Crouch Lane, Winkfield, Windsor SL4 4TN"
+            }, 
+            {
+               "raw_string": "Name of donor: Crockett & Jones LtdAddress of donor: 27 Perry Street, Northampton NN1 4HNAmount of donation or nature and value if donation in kind: \u00a32,500Date received: 29 May 2017Date accepted: 30 May 2017Donor status: company, registration 451921(Registered 23 June 2017)", 
+               "Date received": "29 May 2017", 
+               "(Registered 23 June 2017)": "(Registered 23 June 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,500", 
+               "Date accepted": "30 May 2017", 
+               "Name of donor": "Crockett & Jones Ltd", 
+               "Donor status": "company, registration 451921", 
+               "Address of donor": "27 Perry Street, Northampton NN1 4HN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: The United & Cecil ClubAddress of donor: Beckfield, Crouch Lane, Winkfield, Windsor SL4 4TNAmount of donation or nature and value if donation in kind:  \u00a32,500Date received: 4 May 2017Date accepted: 4 May 2017Donor status: members' association(Registered 09 June 2017)", 
-               "received": "4 May 2017", 
-               "accepted": "4 May 2017", 
+               "status": "members' association", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "09/06/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2500, 
-               "status": "members' association", 
+               "link": null, 
                "pretty": "The United & Cecil Club", 
                "address": "Beckfield, Crouch Lane, Winkfield, Windsor SL4 4TN", 
                "item_id": "0001", 
                "donor": "The United & Cecil Club", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "The United & Cecil Club", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Crockett & Jones LtdAddress of donor: 27 Perry Street, Northampton NN1 4HNAmount of donation or nature and value if donation in kind: \u00a32,500Date received: 29 May 2017Date accepted: 30 May 2017Donor status: company, registration 451921(Registered 23 June 2017)", 
-               "received": "29 May 2017", 
-               "accepted": "30 May 2017", 
+               "status": "company, registration 451921", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Jonathan Philip Marshall Jones", 
+                     "links": {
+                        "self": "/company/00451921/persons-with-significant-control/individual/39QGUZkmfDJ_2QFsywvncqtykx4"
+                     }, 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "voting-rights-25-to-50-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 3
+                     }, 
+                     "name_elements": {
+                        "surname": "Jones", 
+                        "title": "Mr", 
+                        "middle_name": "Philip Marshall", 
+                        "forename": "Jonathan"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "625629dce7fd681f027f97ff852ac408f2206e0a", 
+                     "address": {
+                        "premises": "27", 
+                        "locality": "Northampton", 
+                        "postal_code": "NN1 4HN", 
+                        "address_line_1": "Perry Street"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "23/06/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2012-07-11", 
+                     "officer_role": "secretary", 
+                     "name": "COLES, Adam", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/_w46g03xUzCii9wMTSO5gIHxEFo/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "country": "England", 
+                        "address_line_1": "Perry Street", 
+                        "postal_code": "NN1 4HN", 
+                        "locality": "Northampton"
+                     }
+                  }, 
+                  {
+                     "name": "JONES, Jonathan Philip Marshall", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/9Nm_xy0Ycp-LUlg8CLYj801SBaY/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "address_line_1": "Perry Street", 
+                        "postal_code": "NN1 4HN", 
+                        "locality": "Northampton"
+                     }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1953
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Footwear Manufacturer"
+                  }, 
+                  {
+                     "name": "JONES, Nicholas Marshall", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/98e-97RSpIwIS3nc0qKGCAQBAKc/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "address_line_1": "Perry Street", 
+                        "postal_code": "NN1 4HN", 
+                        "locality": "Northampton"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2007-07-04", 
+                     "date_of_birth": {
+                        "year": 1951, 
+                        "month": 4
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Footwear Manufacturer"
+                  }, 
+                  {
+                     "name": "WILSON JONES, Mark Roland", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ikzO6mXzSrudP_CGCvh-4P_vLoc/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "locality": "Northampton", 
+                        "postal_code": "NN1 4HN", 
+                        "address_line_1": "Perry Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-07-13", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 5
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Academic"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "2012-07-11", 
+                     "name": "BANKS, Julian Charles", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/DKqDrsuMGEWGwM_l9VQdhtPbhZg/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "NN2 8PE", 
+                        "region": "Northamptonshire", 
+                        "address_line_1": "44 Yardley Drive", 
+                        "address_line_2": "Kingsthorpe", 
+                        "locality": "Northampton"
+                     }
+                  }, 
+                  {
+                     "name": "BARNETT, Ian Gordon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/IaCJQL20fcAKioY_6U5X_HRwcqc/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "region": "Northants", 
+                        "locality": "Northampton", 
+                        "postal_code": "NN1 5AB", 
+                        "address_line_1": "7 Spencer Parade"
+                     }, 
+                     "resigned_on": "1996-03-08", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1940
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Solicitor"
+                  }, 
+                  {
+                     "name": "HEATON, Stephen Francis Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/2Fqcr2Eoh8DurbKgMoSaD0w812c/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "HP16 9DA", 
+                        "region": "Bucks", 
+                        "locality": "Great Missenden", 
+                        "address_line_2": "Prestwood", 
+                        "address_line_1": "Pankridge Farm"
+                     }, 
+                     "resigned_on": "2006-08-29", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 8
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chartered Accountant"
+                  }, 
+                  {
+                     "name": "JONES, Richard Marshall", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/WzVI3X0F-gcYuw9Rc-tfnxOQPHY/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2016-03-04", 
+                     "date_of_birth": {
+                        "year": 1924, 
+                        "month": 2
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "locality": "Northampton", 
+                        "postal_code": "NN1 4HN", 
+                        "address_line_1": "Perry Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Footwear Manufacturer"
+                  }, 
+                  {
+                     "name": "SHARMAN, Richard Mark", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/S4V0QWiewaSLykOllu3dI-_aTO0/appointments"
+                        }
+                     }, 
+                     "resigned_on": "1999-07-08", 
+                     "date_of_birth": {
+                        "year": 1936, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "postal_code": "L16 8AJ", 
+                        "region": "Leicestershire", 
+                        "locality": "Market Harborough", 
+                        "address_line_2": "Manor Gardens", 
+                        "address_line_1": "30 Hagley Close"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Production Director"
+                  }, 
+                  {
+                     "name": "STEYNS, Roland Albert", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sr6Rlb3KNxxc3_x35eglO_6IpuE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1997-08-08", 
+                     "resigned_on": "2005-09-07", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1940
+                     }, 
+                     "address": {
+                        "postal_code": "NN4 0BX", 
+                        "region": "Northamptonshire", 
+                        "locality": "Hardingstone", 
+                        "address_line_2": "Back Lane", 
+                        "address_line_1": "Ivy Farm House"
+                     }, 
+                     "nationality": "Belgian", 
+                     "officer_role": "director", 
+                     "occupation": "Footwear Manufacturer"
+                  }, 
+                  {
+                     "name": "STRETTON, Ivor Rex", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/KHLjw0G4xxFyd8pA7xhBK7iXzu0/appointments"
+                        }
+                     }, 
+                     "resigned_on": "1997-08-08", 
+                     "date_of_birth": {
+                        "year": 1924, 
+                        "month": 2
+                     }, 
+                     "address": {
+                        "address_line_2": "Hardingstone", 
+                        "region": "Northamptonshire", 
+                        "address_line_1": "20 Martins Lane", 
+                        "postal_code": "NN4 6DL", 
+                        "locality": "Northampton"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Technical Executive"
+                  }, 
+                  {
+                     "name": "WILSON-JONES, Edward, Professor", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/EloS_0pAoXj8ZjKTRGnjeHQDmIA/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2015-07-08", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1926
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "address_line_1": "Perry Street", 
+                        "postal_code": "NN1 4HN", 
+                        "locality": "Northampton"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Medical Practitioner"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 2500, 
-               "status": "company, registration 451921", 
+               "link": "https://beta.companieshouse.gov.uk/company/00451921", 
                "pretty": "Crockett & Jones Ltd", 
                "address": "27 Perry Street, Northampton NN1 4HN", 
                "item_id": "0002", 
                "donor": "Crockett & Jones Ltd", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "active", 
+                  "links": {
+                     "filing_history": "/company/00451921/filing-history", 
+                     "charges": "/company/00451921/charges", 
+                     "self": "/company/00451921", 
+                     "officers": "/company/00451921/officers", 
+                     "persons_with_significant_control": "/company/00451921/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "15200", 
+                     "47721"
+                  ], 
+                  "etag": "4213563f6378f1f3b0525f0f6e509e9f2792209e", 
+                  "registered_office_address": {
+                     "locality": "Northampton", 
+                     "postal_code": "NN1 4HN", 
+                     "address_line_1": "27 Perry Street"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-08-03", 
+                     "last_made_up_to": "2017-07-20", 
+                     "next_made_up_to": "2018-07-20", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-07-20", 
+                  "company_number": "00451921", 
+                  "date_of_creation": "1948-04-07", 
+                  "has_insolvency_history": false, 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-11-30", 
+                     "next_made_up_to": "2018-02-28", 
+                     "last_accounts": {
+                        "period_start_on": "2016-03-01", 
+                        "type": "group", 
+                        "made_up_to": "2017-02-28", 
+                        "period_end_on": "2017-02-28"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-11-30", 
+                        "period_start_on": "2017-03-01", 
+                        "period_end_on": "2018-02-28", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "28", 
+                        "month": "02"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "CROCKETT AND JONES LIMITED", 
+                  "registered_office_is_in_dispute": false, 
+                  "has_charges": true, 
+                  "type": "ltd"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -390,9 +778,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -403,9 +792,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -416,9 +806,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -429,6 +820,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Until September 2017, vacant land in Staffordshire: (i). (Updated 07 September 2017)", 
+               "Until September 2017, vacant land in Staffordshire": "(i). (Updated 07 September 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Until September 2017, vacant land in Staffordshire: (i). (Updated 07 September 2017)", 
@@ -444,8 +843,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [
@@ -459,7 +856,35 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "ellis", 
+         "raw_data": [
+            {
+               "raw_string": "Arnold Estates Ltd. UK property company.", 
+               "Arnold Estates Ltd. UK property company.": "Arnold Estates Ltd. UK property company."
+            }, 
+            {
+               "raw_string": "Arnold Estates LLC. US property company.", 
+               "Arnold Estates LLC. US property company.": "Arnold Estates LLC. US property company."
+            }, 
+            {
+               "raw_string": "MSA Properties Ltd. Property investment company. (Registered 27 May 2014)", 
+               "MSA Properties Ltd. Property investment company. (Registered 27 May 2014)": "MSA Properties Ltd. Property investment company. (Registered 27 May 2014)"
+            }
+         ], 
+         "category_description": "Shareholdings", 
+         "category_gifts": 0, 
+         "month": 10, 
+         "middle": "tyrone", 
+         "category_type": "shareholdings", 
+         "category_wealth": 45, 
+         "category_income": 0, 
+         "raw_items": [
+            "Arnold Estates Ltd. UK property company.", 
+            "Arnold Estates LLC. US property company.", 
+            "MSA Properties Ltd. Property investment company. (Registered 27 May 2014)"
+         ], 
+         "year": 1967, 
          "items": [
             {
                "raw_string": "Arnold Estates Ltd. UK property company.", 
@@ -527,11 +952,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "1997-04-04", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1978
+                        "year": 1978, 
+                        "month": 3
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Student"
                   }, 
                   {
@@ -541,12 +966,6 @@
                            "appointments": "/officers/AAD4YwhfJoxa9S1P5e3-qdqx4iU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2001-04-03", 
-                     "date_of_birth": {
-                        "year": 1932, 
-                        "month": 12
-                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "region": "Northamptonshire", 
@@ -554,8 +973,14 @@
                         "postal_code": "NN3 3BY", 
                         "locality": "Northampton"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-04-03", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1932
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Manager"
                   }, 
                   {
@@ -574,8 +999,8 @@
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
                      }, 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -619,18 +1044,18 @@
                            "appointments": "/officers/AAD4YwhfJoxa9S1P5e3-qdqx4iU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "resigned_on": "2000-08-17", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1932
-                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "region": "Northamptonshire", 
                         "locality": "Northampton", 
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "84 Church Way"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "2000-08-17", 
+                     "date_of_birth": {
+                        "year": 1932, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -656,8 +1081,8 @@
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director Of Companies"
                   }, 
                   {
@@ -667,12 +1092,6 @@
                            "appointments": "/officers/_JNynmJhNFCm8AYpbvq71fDTDYg/appointments"
                         }
                      }, 
-                     "appointed_on": "1997-04-04", 
-                     "resigned_on": "2000-01-05", 
-                     "date_of_birth": {
-                        "year": 1967, 
-                        "month": 10
-                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "region": "Northamptonshire", 
@@ -680,8 +1099,14 @@
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "1997-04-04", 
+                     "resigned_on": "2000-01-05", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1967
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -691,12 +1116,6 @@
                            "appointments": "/officers/znW3UBRCUfZ4kpHvUvM0YSAFoKY/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "NN3 3BY", 
-                        "locality": "Northampton", 
-                        "address_line_2": "Weston Favell", 
-                        "address_line_1": "84 Church Way"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1997-04-04", 
                      "resigned_on": "2015-03-31", 
@@ -704,8 +1123,14 @@
                         "month": 9, 
                         "year": 1970
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "postal_code": "NN3 3BY", 
+                        "locality": "Northampton", 
+                        "address_line_2": "Weston Favell", 
+                        "address_line_1": "84 Church Way"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Musician"
                   }
                ], 
@@ -844,8 +1269,8 @@
                         "voting-rights-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1978
+                        "year": 1978, 
+                        "month": 3
                      }, 
                      "name_elements": {
                         "surname": "Ellis", 
@@ -873,18 +1298,18 @@
                            "appointments": "/officers/EpOwdQo_2E5CubFw1-y4Fw3krlY/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-05-07", 
-                     "date_of_birth": {
-                        "year": 1978, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "84 Church Way", 
                         "country": "United Kingdom", 
                         "locality": "Northampton", 
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "Weston Favell"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-05-07", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1978
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -897,12 +1322,6 @@
                            "appointments": "/officers/znW3UBRCUfZ4kpHvUvM0YSAFoKY/appointments"
                         }
                      }, 
-                     "country_of_residence": "Usa", 
-                     "appointed_on": "2014-05-15", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1970
-                     }, 
                      "address": {
                         "locality": "Germantown", 
                         "premises": "936", 
@@ -910,6 +1329,12 @@
                         "region": "New York", 
                         "postal_code": "12526", 
                         "address_line_1": "County Route 6"
+                     }, 
+                     "country_of_residence": "Usa", 
+                     "appointed_on": "2014-05-15", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1970
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -922,13 +1347,6 @@
                            "appointments": "/officers/VbTs1zxgAFr_-w84Nz5W0GdNDbQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-05-07", 
-                     "resigned_on": "2016-08-01", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1930
-                     }, 
                      "address": {
                         "premises": "84 Church Way", 
                         "country": "United Kingdom", 
@@ -936,8 +1354,15 @@
                         "postal_code": "NN3 3BY", 
                         "locality": "Northampton"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-05-07", 
+                     "resigned_on": "2016-08-01", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1930
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -947,13 +1372,6 @@
                            "appointments": "/officers/jduPrpxavPzaGqqKG7386jvmDhM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-05-15", 
-                     "resigned_on": "2016-08-01", 
-                     "date_of_birth": {
-                        "year": 1937, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "84", 
                         "country": "England", 
@@ -961,8 +1379,15 @@
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "Church Way"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-05-15", 
+                     "resigned_on": "2016-08-01", 
+                     "date_of_birth": {
+                        "year": 1937, 
+                        "month": 3
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }
                ], 
@@ -1041,20 +1466,6 @@
                }
             }
          ], 
-         "category_description": "Shareholdings", 
-         "category_gifts": 0, 
-         "month": 10, 
-         "middle": "tyrone", 
-         "category_type": "shareholdings", 
-         "category_wealth": 45, 
-         "category_income": 0, 
-         "raw_items": [
-            "Arnold Estates Ltd. UK property company.", 
-            "Arnold Estates LLC. US property company.", 
-            "MSA Properties Ltd. Property investment company. (Registered 27 May 2014)"
-         ], 
-         "year": 1967, 
-         "category_id": 8, 
          "category_amount": 45, 
          "display": "michael ellis", 
          "category_donations": 0, 
@@ -1062,8 +1473,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "ellis", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 10, 
@@ -1073,13 +1485,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1967, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "michael ellis", 
          "category_donations": 0, 
          "first": "michael"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Barrister (non-practising).", 
+               "Barrister (non-practising).": "Barrister (non-practising)."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Barrister (non-practising).", 
@@ -1095,8 +1515,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -1109,9 +1527,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -1122,9 +1541,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -1255,6 +1675,12 @@
                            "appointments": "/officers/EpOwdQo_2E5CubFw1-y4Fw3krlY/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1997-04-04", 
+                     "date_of_birth": {
+                        "year": 1978, 
+                        "month": 3
+                     }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
                         "region": "Northants", 
@@ -1262,14 +1688,8 @@
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1997-04-04", 
-                     "date_of_birth": {
-                        "year": 1978, 
-                        "month": 3
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Student"
                   }, 
                   {
@@ -1303,6 +1723,8 @@
                            "appointments": "/officers/EpOwdQo_2E5CubFw1-y4Fw3krlY/appointments"
                         }
                      }, 
+                     "appointed_on": "2000-08-16", 
+                     "resigned_on": "2007-01-22", 
                      "address": {
                         "postal_code": "NN3 3BY", 
                         "region": "Northants", 
@@ -1310,10 +1732,8 @@
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
                      }, 
-                     "appointed_on": "2000-08-16", 
-                     "resigned_on": "2007-01-22", 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -1357,18 +1777,18 @@
                            "appointments": "/officers/AAD4YwhfJoxa9S1P5e3-qdqx4iU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "resigned_on": "2000-08-17", 
-                     "date_of_birth": {
-                        "year": 1932, 
-                        "month": 12
-                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "region": "Northamptonshire", 
                         "locality": "Northampton", 
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "84 Church Way"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "2000-08-17", 
+                     "date_of_birth": {
+                        "year": 1932, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1381,18 +1801,18 @@
                            "appointments": "/officers/jduPrpxavPzaGqqKG7386jvmDhM/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2015-04-24", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1937
+                     }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
                         "region": "Northamptonshire", 
                         "address_line_1": "84 Church Way", 
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
-                     }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "2015-04-24", 
-                     "date_of_birth": {
-                        "year": 1937, 
-                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1408,8 +1828,8 @@
                      "appointed_on": "1997-04-04", 
                      "resigned_on": "2000-01-05", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 10
                      }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
@@ -1433,8 +1853,8 @@
                      "appointed_on": "1997-04-04", 
                      "resigned_on": "2015-03-31", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1970
                      }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
@@ -1442,15 +1862,15 @@
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Musician"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/00634680", 
-               "pretty": "michael ellis michael tyrone ellis", 
+               "pretty": "Michael Ellis", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1559,8 +1979,8 @@
                         "year": 1932, 
                         "month": 12
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director Of Companies"
                   }, 
                   {
@@ -1587,13 +2007,6 @@
                            "appointments": "/officers/EpOwdQo_2E5CubFw1-y4Fw3krlY/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "NN3 3BY", 
-                        "region": "Northants", 
-                        "locality": "Northampton", 
-                        "address_line_2": "Weston Favell", 
-                        "address_line_1": "84 Church Way"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1996-07-20", 
                      "resigned_on": "2011-11-30", 
@@ -1601,8 +2014,15 @@
                         "year": 1978, 
                         "month": 3
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "postal_code": "NN3 3BY", 
+                        "region": "Northants", 
+                        "locality": "Northampton", 
+                        "address_line_2": "Weston Favell", 
+                        "address_line_1": "84 Church Way"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Student"
                   }, 
                   {
@@ -1612,18 +2032,18 @@
                            "appointments": "/officers/jduPrpxavPzaGqqKG7386jvmDhM/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "1996-07-20", 
+                     "date_of_birth": {
+                        "year": 1937, 
+                        "month": 3
+                     }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
                         "region": "Northamptonshire", 
                         "locality": "Northampton", 
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
-                     }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "1996-07-20", 
-                     "date_of_birth": {
-                        "year": 1937, 
-                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1646,11 +2066,11 @@
                      "appointed_on": "1996-07-20", 
                      "resigned_on": "2000-01-05", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1967
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1660,18 +2080,18 @@
                            "appointments": "/officers/znW3UBRCUfZ4kpHvUvM0YSAFoKY/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1996-07-20", 
+                     "resigned_on": "2011-11-30", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1970
+                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton", 
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "84 Church Way"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1996-07-20", 
-                     "resigned_on": "2011-11-30", 
-                     "date_of_birth": {
-                        "year": 1970, 
-                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1681,7 +2101,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01018455", 
-               "pretty": "michael ellis michael tyrone ellis", 
+               "pretty": "Michael Ellis", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1748,12 +2168,6 @@
                            "appointments": "/officers/AAD4YwhfJoxa9S1P5e3-qdqx4iU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2001-05-03", 
-                     "date_of_birth": {
-                        "year": 1932, 
-                        "month": 12
-                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "region": "Northamptonshire", 
@@ -1761,8 +2175,14 @@
                         "postal_code": "NN3 3BY", 
                         "locality": "Northampton"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-05-03", 
+                     "date_of_birth": {
+                        "year": 1932, 
+                        "month": 12
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Manager"
                   }, 
                   {
@@ -1812,8 +2232,8 @@
                      "appointed_on": "1999-05-17", 
                      "resigned_on": "2011-10-04", 
                      "date_of_birth": {
-                        "year": 1978, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1978
                      }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
@@ -1822,8 +2242,8 @@
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Student"
                   }, 
                   {
@@ -1860,8 +2280,8 @@
                      "country_of_residence": "England", 
                      "resigned_on": "2011-10-04", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1937
+                        "year": 1937, 
+                        "month": 3
                      }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
@@ -1894,8 +2314,8 @@
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1915,8 +2335,8 @@
                      "appointed_on": "1999-05-17", 
                      "resigned_on": "2011-10-04", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1970
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1926,7 +2346,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01367101", 
-               "pretty": "michael ellis michael tyrone ellis", 
+               "pretty": "Michael Ellis", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2073,8 +2493,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2001-04-03", 
                      "date_of_birth": {
-                        "year": 1932, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1932
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2096,8 +2516,8 @@
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
                      }, 
-                     "nationality": "British", 
-                     "officer_role": "secretary"
+                     "officer_role": "secretary", 
+                     "nationality": "British"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -2154,8 +2574,8 @@
                         "postal_code": "NN3 3BY", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director Of Companies"
                   }, 
                   {
@@ -2199,8 +2619,8 @@
                      "appointed_on": "1997-04-04", 
                      "resigned_on": "2000-01-05", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2226,15 +2646,15 @@
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Musician"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/00634680", 
-               "pretty": "michael ellis michael tyrone ellis", 
+               "pretty": "Michael Ellis", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2326,8 +2746,8 @@
                         "year": 1932, 
                         "month": 12
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Manager"
                   }, 
                   {
@@ -2346,8 +2766,8 @@
                      }, 
                      "appointed_on": "2000-08-16", 
                      "resigned_on": "2011-10-04", 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -2373,19 +2793,19 @@
                            "appointments": "/officers/EpOwdQo_2E5CubFw1-y4Fw3krlY/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Weston Favell", 
-                        "region": "Northants", 
-                        "locality": "Northampton", 
-                        "postal_code": "NN3 3BY", 
-                        "address_line_1": "84 Church Way"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1999-05-17", 
                      "resigned_on": "2011-10-04", 
                      "date_of_birth": {
                         "month": 3, 
                         "year": 1978
+                     }, 
+                     "address": {
+                        "address_line_2": "Weston Favell", 
+                        "region": "Northants", 
+                        "locality": "Northampton", 
+                        "postal_code": "NN3 3BY", 
+                        "address_line_1": "84 Church Way"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2401,8 +2821,8 @@
                      "country_of_residence": "United Kingdom", 
                      "resigned_on": "2000-08-17", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1932
+                        "year": 1932, 
+                        "month": 12
                      }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
@@ -2411,8 +2831,8 @@
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director Of Companies"
                   }, 
                   {
@@ -2425,8 +2845,8 @@
                      "country_of_residence": "England", 
                      "resigned_on": "2011-10-04", 
                      "date_of_birth": {
-                        "year": 1937, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1937
                      }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
@@ -2446,18 +2866,18 @@
                            "appointments": "/officers/_JNynmJhNFCm8AYpbvq71fDTDYg/appointments"
                         }
                      }, 
+                     "appointed_on": "1999-05-17", 
+                     "resigned_on": "2000-01-05", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 10
+                     }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
                         "region": "Northamptonshire", 
                         "locality": "Northampton", 
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
-                     }, 
-                     "appointed_on": "1999-05-17", 
-                     "resigned_on": "2000-01-05", 
-                     "date_of_birth": {
-                        "year": 1967, 
-                        "month": 10
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2483,15 +2903,15 @@
                         "month": 9, 
                         "year": 1970
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Musician"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01367101", 
-               "pretty": "michael ellis michael tyrone ellis", 
+               "pretty": "Michael Ellis", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2563,7 +2983,6 @@
                            "appointments": "/officers/EpOwdQo_2E5CubFw1-y4Fw3krlY/appointments"
                         }
                      }, 
-                     "appointed_on": "2000-08-16", 
                      "address": {
                         "postal_code": "NN3 3BY", 
                         "region": "Northants", 
@@ -2571,8 +2990,9 @@
                         "address_line_2": "Weston Favell", 
                         "locality": "Northampton"
                      }, 
-                     "nationality": "British", 
-                     "officer_role": "secretary"
+                     "appointed_on": "2000-08-16", 
+                     "officer_role": "secretary", 
+                     "nationality": "British"
                   }, 
                   {
                      "name": "ELLIS, Jack", 
@@ -2581,17 +3001,17 @@
                            "appointments": "/officers/AAD4YwhfJoxa9S1P5e3-qdqx4iU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1932
-                     }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
                         "region": "Northamptonshire", 
                         "address_line_1": "84 Church Way", 
                         "postal_code": "NN3 3BY", 
                         "locality": "Northampton"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "year": 1932, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2625,8 +3045,8 @@
                      "appointed_on": "1996-07-20", 
                      "resigned_on": "2011-11-30", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1978
+                        "year": 1978, 
+                        "month": 3
                      }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
@@ -2635,8 +3055,8 @@
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Student"
                   }, 
                   {
@@ -2649,8 +3069,8 @@
                      "country_of_residence": "England", 
                      "resigned_on": "1996-07-20", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1937
+                        "year": 1937, 
+                        "month": 3
                      }, 
                      "address": {
                         "postal_code": "NN3 3BY", 
@@ -2659,8 +3079,8 @@
                         "address_line_2": "Weston Favell", 
                         "address_line_1": "84 Church Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director Of Companies"
                   }, 
                   {
@@ -2680,8 +3100,8 @@
                      "appointed_on": "1996-07-20", 
                      "resigned_on": "2000-01-05", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1967
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2698,8 +3118,8 @@
                      "appointed_on": "1996-07-20", 
                      "resigned_on": "2011-11-30", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1970
+                        "year": 1970, 
+                        "month": 9
                      }, 
                      "address": {
                         "address_line_2": "Weston Favell", 
@@ -2715,7 +3135,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01018455", 
-               "pretty": "michael ellis michael tyrone ellis", 
+               "pretty": "Michael Ellis", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

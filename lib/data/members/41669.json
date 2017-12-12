@@ -213,15 +213,16 @@
    "person_id": "11475", 
    "party": "Conservative", 
    "forname": "Shailesh", 
-   "mp_annual": 90639, 
+   "mp_annual": 89962, 
    "mp_wealth": 200000, 
    "facebook": "", 
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -232,6 +233,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr Anil AgarwalAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Mr Anil Agarwal", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr Anil AgarwalAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 06 July 2017)", 
@@ -239,19 +252,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Mr Anil Agarwal", 
                "address": "private", 
                "item_id": "0001", 
                "donor": "Mr Anil Agarwal", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Anil Agarwal", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -264,9 +284,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -277,28 +298,282 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Asian Media GroupAddress of donor: Garavi Gujarat House, 1-2 Silex Street, London SE1 0DWAmount of donation or nature and value if donation in kind: Two tickets plus hospitality at a football match at Stamford Bridge, total value \u00a3677.04 (\u00a3338.52 per person)Date received: 22 January 2017Date accepted: 22 January 2017Donor status: company, registration 01716184(Registered 16 February 2017)", 
+               "(Registered 16 February 2017)": "(Registered 16 February 2017)", 
+               "Date received": "22 January 2017", 
+               "Amount of donation or nature and value if donation in kind": "Two tickets plus hospitality at a football match at Stamford Bridge, total value \u00a3677.04 (\u00a3338.52 per person)", 
+               "Date accepted": "22 January 2017", 
+               "Name of donor": "Asian Media Group", 
+               "Donor status": "company, registration 01716184", 
+               "Address of donor": "Garavi Gujarat House, 1-2 Silex Street, London SE1 0DW"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Asian Media GroupAddress of donor: Garavi Gujarat House, 1-2 Silex Street, London SE1 0DWAmount of donation or nature and value if donation in kind: Two tickets plus hospitality at a football match at Stamford Bridge, total value \u00a3677.04 (\u00a3338.52 per person)Date received: 22 January 2017Date accepted: 22 January 2017Donor status: company, registration 01716184(Registered 16 February 2017)", 
-               "received": "22 January 2017", 
-               "accepted": "22 January 2017", 
+               "status": "company, registration 01716184", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
+               "raw_data": {
+                  "raw_string": "Name of donor: Asian Media GroupAddress of donor: Garavi Gujarat House, 1-2 Silex Street, London SE1 0DWAmount of donation or nature and value if donation in kind: Two tickets plus hospitality at a football match at Stamford Bridge, total value \u00a3677.04 (\u00a3338.52 per person)Date received: 22 January 2017Date accepted: 22 January 2017Donor status: company, registration 01716184(Registered 16 February 2017)", 
+                  "(Registered 16 February 2017)": "(Registered 16 February 2017)", 
+                  "Date received": "22 January 2017", 
+                  "Amount of donation or nature and value if donation in kind": "Two tickets plus hospitality at a football match at Stamford Bridge, total value \u00a3677.04 (\u00a3338.52 per person)", 
+                  "Date accepted": "22 January 2017", 
+                  "Name of donor": "Asian Media Group", 
+                  "Donor status": "company, registration 01716184", 
+                  "Address of donor": "Garavi Gujarat House, 1-2 Silex Street, London SE1 0DW"
+               }, 
                "registered": "16/02/2017", 
+               "officers": [
+                  {
+                     "officer_role": "secretary", 
+                     "nationality": "British", 
+                     "name": "SOLANKI, Kalpesh Ramniklal", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/WfvnF34uU26ZRgPFnoDKrLi7KgQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "region": "Middlesex", 
+                        "address_line_1": "74 Harrowdene Road", 
+                        "postal_code": "HA0 2JF", 
+                        "locality": "Wembley"
+                     }
+                  }, 
+                  {
+                     "name": "KOUNOUPIAS, Nick", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/cMYmwrI10QiHZw2E_FkKgB5aLbE/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-07-14", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1963
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "SE1 0DW", 
+                        "address_line_1": "1-2 Silex St"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOLANKI, Aditya Kalpesh", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/MfIwvYh4X9bFAy4chZZJnB86G6s/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-07-14", 
+                     "date_of_birth": {
+                        "year": 1988, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "SE1 0DW", 
+                        "address_line_1": "1-2 Silex St"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOLANKI, Kalpesh Ramniklal", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/WfvnF34uU26ZRgPFnoDKrLi7KgQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "region": "Middlesex", 
+                        "address_line_1": "74 Harrowdene Road", 
+                        "postal_code": "HA0 2JF", 
+                        "locality": "Wembley"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1960
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOLANKI, Ramniklal Chaganlal", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/3YhFg8m13fj-t_hgYdNYHrVpMCM/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1931
+                     }, 
+                     "address": {
+                        "region": "Middlesex", 
+                        "locality": "Wembley", 
+                        "postal_code": "HA0 2JF", 
+                        "address_line_1": "74 Harrowdene Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "SOLANKI, Shailesh Ramniklal", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/BNbDWAu9lOzXN9Fz3umDffCwy5Y/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 6
+                     }, 
+                     "address": {
+                        "region": "Middlesex", 
+                        "locality": "Wembley", 
+                        "postal_code": "HA0 2JF", 
+                        "address_line_1": "74 Harrowdene Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "CASHIN, Lionel Morrow", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/k66Ub7IWh_R1GEZTigoU3omUh24/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2002-04-01", 
+                     "resigned_on": "2004-03-25", 
+                     "date_of_birth": {
+                        "year": 1943, 
+                        "month": 7
+                     }, 
+                     "address": {
+                        "region": "Hertfordshire", 
+                        "locality": "Bishops Stortford", 
+                        "postal_code": "CM23 4PP", 
+                        "address_line_1": "1 Chatsworth Close"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director General"
+                  }, 
+                  {
+                     "name": "RICHARDSON, Kevin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/iTJ0JqfbCzZ34J-a8IHjWDVbh_g/appointments"
+                        }
+                     }, 
+                     "resigned_on": "1998-06-01", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 12
+                     }, 
+                     "address": {
+                        "region": "Middlesex", 
+                        "address_line_1": "74 Harrowdene Road", 
+                        "postal_code": "HA0 2JF", 
+                        "locality": "Wembley"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Manager"
+                  }
+               ], 
                "isIncome": false, 
-               "amount": 677, 
-               "status": "company, registration 01716184", 
+               "amount": 0, 
+               "link": "https://beta.companieshouse.gov.uk/company/01716184", 
                "pretty": "Asian Media Group", 
                "address": "Garavi Gujarat House, 1-2 Silex Street, London SE1 0DW", 
                "item_id": "0001", 
                "donor": "Asian Media Group", 
                "category_id": 4, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/01716184/filing-history", 
+                     "charges": "/company/01716184/charges", 
+                     "self": "/company/01716184", 
+                     "officers": "/company/01716184/officers"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "58142"
+                  ], 
+                  "etag": "05395d58eb007c93f53544d03d7271ba9b15bc70", 
+                  "registered_office_address": {
+                     "address_line_2": "London", 
+                     "postal_code": "SE1 0DW", 
+                     "address_line_1": "1-2 Silex St"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-01-14", 
+                     "last_made_up_to": "2016-12-31", 
+                     "next_made_up_to": "2017-12-31", 
+                     "overdue": false
+                  }, 
+                  "company_number": "01716184", 
+                  "last_full_members_list_date": "2015-12-31", 
+                  "date_of_creation": "1983-04-19", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2017-12-31", 
+                     "next_made_up_to": "2017-03-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-04-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-03-31", 
+                        "period_end_on": "2016-03-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2017-12-31", 
+                        "period_start_on": "2016-04-01", 
+                        "period_end_on": "2017-03-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "ASIAN TRADE PUBLICATIONS LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 677, 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [
@@ -306,14 +581,15 @@
          ], 
          "category_description": "Gifts", 
          "category_id": 4, 
-         "category_amount": 677, 
+         "category_amount": 0, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -324,9 +600,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -337,6 +614,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Flat in London: (i) and (ii).", 
+               "Flat in London": "(i) and (ii)."
+            }, 
+            {
+               "raw_string": "Joint owner of farmland in Gujarat, India: (i).", 
+               "Joint owner of farmland in Gujarat, India": "(i)."
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Flat in London: (i) and (ii).", 
@@ -378,8 +667,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 10000, 
          "raw_items": [
@@ -394,8 +681,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "vara", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -405,7 +693,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1960, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr shailesh vara", 
          "category_donations": 0, 
@@ -413,8 +701,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "vara", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -424,13 +713,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1960, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr shailesh vara", 
          "category_donations": 0, 
          "first": "shailesh"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Non-practising solicitor.", 
+               "Non-practising solicitor.": "Non-practising solicitor."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Non-practising solicitor.", 
@@ -446,8 +743,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -460,9 +755,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -473,9 +769,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -541,8 +838,8 @@
                         "ownership-of-shares-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1969
                      }, 
                      "name_elements": {
                         "middle_name": "Albertus", 
@@ -651,8 +948,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2004-11-01", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1970
                      }, 
                      "address": {
                         "premises": "10", 
@@ -672,6 +969,12 @@
                            "appointments": "/officers/3IbOg7k9_KH2Iyx7u8yJ_hSwRpI/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-11-01", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 2
+                     }, 
                      "address": {
                         "premises": "10", 
                         "region": "Fife", 
@@ -679,14 +982,8 @@
                         "postal_code": "KY12 7NZ", 
                         "locality": "Dunfermline"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-11-01", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 2
-                     }, 
-                     "nationality": "Dutch", 
                      "officer_role": "director", 
+                     "nationality": "Dutch", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -696,18 +993,18 @@
                            "appointments": "/officers/DG6l1xZyYOBnZ4yoKi-WCahVg5s/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1997-07-16", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1957
+                     }, 
                      "address": {
                         "premises": "10", 
                         "region": "Fife", 
                         "address_line_1": "Abbey Park Place", 
                         "postal_code": "KY12 7NZ", 
                         "locality": "Dunfermline"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1997-07-16", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1957
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -784,6 +1081,12 @@
                            "appointments": "/officers/cgMXJnVh1UYe4UBUJSoBl-kKuxc/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "Fife", 
+                        "address_line_1": "51 Loughborough Road", 
+                        "postal_code": "KY1 3BZ", 
+                        "locality": "Kirkcaldy"
+                     }, 
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2004-11-01", 
                      "resigned_on": "2006-06-01", 
@@ -791,14 +1094,8 @@
                         "year": 1959, 
                         "month": 5
                      }, 
-                     "address": {
-                        "region": "Fife", 
-                        "address_line_1": "51 Loughborough Road", 
-                        "postal_code": "KY1 3BZ", 
-                        "locality": "Kirkcaldy"
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Marketing Director"
                   }, 
                   {
@@ -808,27 +1105,27 @@
                            "appointments": "/officers/UhqcxG6IiKRbdy4zkgsLlmAlHTY/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "London", 
-                        "address_line_1": "7 Eaton Grove", 
-                        "postal_code": "SE13 5BY", 
-                        "locality": "Lewisham"
-                     }, 
                      "appointed_on": "2001-11-21", 
                      "resigned_on": "2004-10-06", 
                      "date_of_birth": {
                         "year": 1960, 
                         "month": 9
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "London", 
+                        "address_line_1": "7 Eaton Grove", 
+                        "postal_code": "SE13 5BY", 
+                        "locality": "Lewisham"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC177283", 
-               "pretty": "shailesh vara mr shailesh vara shailesh lakhman vara", 
+               "pretty": "Mr Shailesh Vara", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -948,7 +1245,7 @@
    "wrans_subjects": "Departmental Data Protection, Departmental Written Questions, Departmental Art Works, Departmental Reviews, Human Trafficking", 
    "member_id": "41669", 
    "constituency": "North West Cambridgeshire", 
-   "mp_gifts": 677, 
+   "mp_gifts": 0, 
    "commitees": [
       "Finance and Services Committee", 
       "Environment, Food and Rural Affairs Committee", 

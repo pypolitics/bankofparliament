@@ -304,9 +304,10 @@
    "eu_ref_stance": "Leave", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -317,6 +318,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr David BrownlowAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a315,000 towards my general election campaignDonor status: individual(Registered 04 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a315,000 towards my general election campaign", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Mr David Brownlow", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }, 
+            {
+               "raw_string": "Name of donor: Dr M BragagniAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a33,000 towards my general election campaignDonor status: individual(Registered 04 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,000 towards my general election campaign", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Dr M Bragagni", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr David BrownlowAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a315,000 towards my general election campaignDonor status: individual(Registered 04 July 2017)", 
@@ -324,15 +345,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 15000, 
+               "link": null, 
                "pretty": "Mr David Brownlow", 
                "address": "private", 
                "item_id": "0001", 
                "donor": "Mr David Brownlow", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr David Brownlow", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Dr M BragagniAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a33,000 towards my general election campaignDonor status: individual(Registered 04 July 2017)", 
@@ -340,19 +370,243 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3000, 
+               "link": "https://beta.companieshouse.gov.uk/officers/rZkMdCX2xpDHiijVKxj286suxIQ/appointments", 
                "pretty": "Dr M Bragagni", 
                "address": "private", 
                "item_id": "0002", 
                "donor": "Dr M Bragagni", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Dr M Bragagni", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": [
+                  {
+                     "name": "Maurizio BRAGAGNI", 
+                     "links": {
+                        "company": "/company/10016238"
+                     }, 
+                     "company": {
+                        "has_insolvency_history": false, 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "86900"
+                        ], 
+                        "links": {
+                           "filing_history": "/company/10016238/filing-history", 
+                           "self": "/company/10016238", 
+                           "officers": "/company/10016238/officers", 
+                           "persons_with_significant_control": "/company/10016238/persons-with-significant-control"
+                        }, 
+                        "registered_office_address": {
+                           "country": "England", 
+                           "locality": "London", 
+                           "address_line_2": "15-17 Saint Cross Street", 
+                           "postal_code": "EC1N 8UW", 
+                           "address_line_1": "Baird House"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "date_of_creation": "2016-02-19", 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-03-04", 
+                           "last_made_up_to": "2017-02-18", 
+                           "next_made_up_to": "2018-02-18", 
+                           "overdue": false
+                        }, 
+                        "company_number": "10016238", 
+                        "company_status": "active", 
+                        "etag": "f2ebf2e33314436d9c339ef76da3f53aad355538", 
+                        "accounts": {
+                           "next_due": "2018-09-30", 
+                           "next_made_up_to": "2017-12-31", 
+                           "last_accounts": {
+                              "period_start_on": "2016-02-19", 
+                              "type": "micro-entity", 
+                              "made_up_to": "2017-02-28", 
+                              "period_end_on": "2017-02-28"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-09-30", 
+                              "period_start_on": "2017-03-01", 
+                              "period_end_on": "2017-12-31", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "31", 
+                              "month": "12"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "ESHARELIFE LIMITED", 
+                        "registered_office_is_in_dispute": false, 
+                        "has_charges": false, 
+                        "type": "private-limited-guarant-nsc"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "ANCELL, Neil", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/jgeUoQ25WPZ8BadrzAky3drtD34/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2016-02-19", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1952
+                           }, 
+                           "address": {
+                              "premises": "Baird House", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "EC1N 8UW", 
+                              "address_line_1": "15-17 Saint Cross Street"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "BRAGAGNI, Maurizio, Dr", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/rZkMdCX2xpDHiijVKxj286suxIQ/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "Italy", 
+                           "appointed_on": "2016-02-19", 
+                           "date_of_birth": {
+                              "year": 1975, 
+                              "month": 4
+                           }, 
+                           "address": {
+                              "premises": "Baird House", 
+                              "country": "England", 
+                              "address_line_1": "15-17 Saint Cross Street", 
+                              "postal_code": "EC1N 8UW", 
+                              "locality": "London"
+                           }, 
+                           "nationality": "Italian", 
+                           "officer_role": "director", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "LIGHT, John Stephen", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/OUYfCq76K-T0Mo8y0EX2aaLhqpc/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2016-02-19", 
+                           "date_of_birth": {
+                              "month": 11, 
+                              "year": 1958
+                           }, 
+                           "address": {
+                              "premises": "Baird House", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "EC1N 8UW", 
+                              "address_line_1": "15-17 Saint Cross Street"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "SCAMBIA, Enrico", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/w7pAPXDg0fvVmaLPxJWZIZszJXo/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2016-02-19", 
+                           "date_of_birth": {
+                              "month": 2, 
+                              "year": 1972
+                           }, 
+                           "address": {
+                              "premises": "Baird House", 
+                              "country": "England", 
+                              "address_line_1": "15-17 Saint Cross Street", 
+                              "postal_code": "EC1N 8UW", 
+                              "locality": "London"
+                           }, 
+                           "nationality": "Italian", 
+                           "officer_role": "director", 
+                           "occupation": "Director"
+                        }
+                     ], 
+                     "country_of_residence": "Italy", 
+                     "appointed_on": "2016-02-19", 
+                     "name_elements": {
+                        "title": "Dr", 
+                        "surname": "BRAGAGNI", 
+                        "forename": "Maurizio"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_number": "10016238", 
+                        "company_name": "ESHARELIFE LIMITED"
+                     }, 
+                     "address": {
+                        "premises": "Baird House", 
+                        "country": "England", 
+                        "locality": "London", 
+                        "postal_code": "EC1N 8UW", 
+                        "address_line_1": "15-17 Saint Cross Street"
+                     }, 
+                     "nationality": "Italian", 
+                     "officer_role": "director", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mr Maurizio Bragagni", 
+                           "links": {
+                              "self": "/company/10016238/persons-with-significant-control/individual/9GlTBKqxnV6Fm-lID2O5Br96zC0"
+                           }, 
+                           "country_of_residence": "England", 
+                           "natures_of_control": [
+                              "significant-influence-or-control"
+                           ], 
+                           "date_of_birth": {
+                              "year": 1975, 
+                              "month": 4
+                           }, 
+                           "name_elements": {
+                              "title": "Mr", 
+                              "surname": "Bragagni", 
+                              "forename": "Maurizio"
+                           }, 
+                           "notified_on": "2016-04-06", 
+                           "etag": "074b8eef99907dff6d161cd677df7dac6af4380b", 
+                           "address": {
+                              "premises": "Baird House", 
+                              "country": "England", 
+                              "address_line_1": "15-17 Saint Cross Street", 
+                              "postal_code": "EC1N 8UW", 
+                              "locality": "London"
+                           }, 
+                           "nationality": "Italian"
+                        }
+                     ], 
+                     "occupation": "Director"
+                  }
+               ]
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -366,9 +620,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -379,9 +634,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -392,9 +648,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -405,9 +662,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -418,9 +676,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -432,8 +691,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "hayes", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -443,7 +703,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1958, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr john hayes", 
          "category_donations": 0, 
@@ -451,8 +711,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "hayes", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -462,16 +723,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1958, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr john hayes", 
          "category_donations": 0, 
          "first": "john"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -482,6 +744,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my wife, Susan Hayes, as Administrative Manager.", 
+               "I employ my wife, Susan Hayes, as Administrative Manager.": "I employ my wife, Susan Hayes, as Administrative Manager."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my wife, Susan Hayes, as Administrative Manager.", 
@@ -497,8 +767,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -511,9 +779,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -652,8 +921,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2016-09-01", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1975
+                        "year": 1975, 
+                        "month": 2
                      }, 
                      "address": {
                         "premises": "17", 
@@ -673,18 +942,18 @@
                            "appointments": "/officers/nUiWLZTz5gcsH4671lbdZsrQNA4/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-12-21", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1971
+                     }, 
                      "address": {
                         "premises": "17", 
                         "country": "United Kingdom", 
                         "address_line_1": "Rochester Row", 
                         "postal_code": "SW1P 1QT", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-12-21", 
-                     "date_of_birth": {
-                        "year": 1971, 
-                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -764,8 +1033,8 @@
                         "address_line_2": "South Cheam", 
                         "locality": "Sutton"
                      }, 
-                     "officer_role": "secretary", 
                      "nationality": "British", 
+                     "officer_role": "secretary", 
                      "occupation": "Director"
                   }, 
                   {
@@ -828,8 +1097,6 @@
                            "appointments": "/officers/75Y42_BLpEtvFxBumI6g9NUlcAk/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-12-02", 
-                     "resigned_on": "2007-12-24", 
                      "address": {
                         "postal_code": "DE3 0UL", 
                         "region": "Derbyshire", 
@@ -837,6 +1104,8 @@
                         "address_line_2": "Mickleover", 
                         "locality": "Derby"
                      }, 
+                     "appointed_on": "2005-12-02", 
+                     "resigned_on": "2007-12-24", 
                      "officer_role": "secretary", 
                      "nationality": "British", 
                      "occupation": "Director"
@@ -884,20 +1153,20 @@
                            "appointments": "/officers/KNRAFdAY_FHvG5IRmriWJvQ1jaA/appointments"
                         }
                      }, 
-                     "appointed_on": "2000-09-21", 
-                     "resigned_on": "2001-02-12", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 4
-                     }, 
                      "address": {
                         "region": "East Sussex", 
                         "locality": "Seaford", 
                         "postal_code": "BN25 2XW", 
                         "address_line_1": "10 Royal Drive"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2000-09-21", 
+                     "resigned_on": "2001-02-12", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 4
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sales Director"
                   }, 
                   {
@@ -941,8 +1210,8 @@
                      "appointed_on": "2005-12-02", 
                      "resigned_on": "2007-12-31", 
                      "date_of_birth": {
-                        "year": 1973, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1973
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -969,8 +1238,8 @@
                         "address_line_2": "Mapperley Plains", 
                         "address_line_1": "42 Chartwell Grove"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -980,20 +1249,20 @@
                            "appointments": "/officers/axt-usEyZE6zh9wrFSSos87IWoE/appointments"
                         }
                      }, 
+                     "appointed_on": "2008-04-22", 
+                     "resigned_on": "2009-08-14", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1953
+                     }, 
                      "address": {
                         "address_line_2": "Gedling", 
                         "locality": "Nottingham", 
                         "postal_code": "NG4 4BP", 
                         "address_line_1": "The Cottage 35 Waterhouse Lane"
                      }, 
-                     "appointed_on": "2008-04-22", 
-                     "resigned_on": "2009-08-14", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 12
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Accountant"
                   }, 
                   {
@@ -1003,20 +1272,20 @@
                            "appointments": "/officers/Re_lgEnC7eRvUlB9C0RSz9AEvXk/appointments"
                         }
                      }, 
-                     "appointed_on": "2000-01-13", 
-                     "resigned_on": "2001-12-13", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 12
-                     }, 
                      "address": {
                         "postal_code": "WR2 5PF", 
                         "locality": "Worcester", 
                         "address_line_2": "208 Henwick Road", 
                         "address_line_1": "Vantage Point"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2000-01-13", 
+                     "resigned_on": "2001-12-13", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1956
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Group Managing Director"
                   }, 
                   {
@@ -1026,6 +1295,12 @@
                            "appointments": "/officers/5uUjBN7W-M1IH6I_VcDOO_JLsPI/appointments"
                         }
                      }, 
+                     "appointed_on": "2000-11-01", 
+                     "resigned_on": "2001-10-31", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1940
+                     }, 
                      "address": {
                         "address_line_2": "Risley", 
                         "region": "Derbyshire", 
@@ -1033,14 +1308,8 @@
                         "postal_code": "DE72 3SU", 
                         "locality": "Derby"
                      }, 
-                     "appointed_on": "2000-11-01", 
-                     "resigned_on": "2001-10-31", 
-                     "date_of_birth": {
-                        "year": 1940, 
-                        "month": 11
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -1053,8 +1322,8 @@
                      "appointed_on": "2000-09-21", 
                      "resigned_on": "2000-12-14", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 12
                      }, 
                      "address": {
                         "postal_code": "CV36 4NP", 
@@ -1063,8 +1332,8 @@
                         "address_line_2": "Armscote Road, Tredington", 
                         "address_line_1": "Beech House"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1074,18 +1343,18 @@
                            "appointments": "/officers/JDh7bkhSZJy_9T0Wsd4oAbl8Rf0/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-08-22", 
-                     "resigned_on": "2010-03-26", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "region": "Bedfordshire", 
                         "locality": "Bedford", 
                         "postal_code": "MK41 9NS", 
                         "address_line_1": "348 Goldington Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-08-22", 
+                     "resigned_on": "2010-03-26", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 7
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1098,19 +1367,19 @@
                            "appointments": "/officers/9Zicen3EBUK5GF65gOj1Y8q6ZDQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2000-01-13", 
-                     "resigned_on": "2001-05-18", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1944
-                     }, 
                      "address": {
                         "address_line_2": "South Cheam", 
                         "region": "Surrey", 
                         "locality": "Sutton", 
                         "postal_code": "SM2 7EZ", 
                         "address_line_1": "Rivendell 46 Golfside"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2000-01-13", 
+                     "resigned_on": "2001-05-18", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 6
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1132,8 +1401,8 @@
                      }, 
                      "resigned_on": "1999-11-26", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1956
+                        "year": 1956, 
+                        "month": 7
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1150,8 +1419,8 @@
                      "appointed_on": "2002-06-25", 
                      "resigned_on": "2007-09-30", 
                      "date_of_birth": {
-                        "year": 1964, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1964
                      }, 
                      "address": {
                         "address_line_2": "Knightsbridge", 
@@ -1170,6 +1439,13 @@
                            "appointments": "/officers/aQdNDJdM8J4mbxVExzkjJvdVAnA/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-10-11", 
+                     "resigned_on": "2013-06-17", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 2
+                     }, 
                      "address": {
                         "premises": "17", 
                         "country": "United Kingdom", 
@@ -1177,15 +1453,8 @@
                         "postal_code": "SW1P 1QT", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-10-11", 
-                     "resigned_on": "2013-06-17", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1969
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1218,13 +1487,6 @@
                            "appointments": "/officers/nW4LGSFqCE3YuBEMj56l3zjlxiQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Barwick In Elmet", 
-                        "region": "West Yorkshire", 
-                        "address_line_1": "4 Potterton Close", 
-                        "postal_code": "LS15 4DY", 
-                        "locality": "Leeds"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2007-09-30", 
                      "resigned_on": "2009-11-10", 
@@ -1232,8 +1494,15 @@
                         "month": 12, 
                         "year": 1946
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_2": "Barwick In Elmet", 
+                        "region": "West Yorkshire", 
+                        "address_line_1": "4 Potterton Close", 
+                        "postal_code": "LS15 4DY", 
+                        "locality": "Leeds"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1247,8 +1516,8 @@
                      "appointed_on": "2013-06-05", 
                      "resigned_on": "2016-04-30", 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1965
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1258,8 +1527,8 @@
                         "postal_code": "SW1P 1QT", 
                         "address_line_1": "Rochester Row"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1269,6 +1538,12 @@
                            "appointments": "/officers/53rNuv_fqANnpjyAfgeTP7ZeBik/appointments"
                         }
                      }, 
+                     "appointed_on": "2000-09-21", 
+                     "resigned_on": "2001-12-31", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1964
+                     }, 
                      "address": {
                         "postal_code": "DE65 5QS", 
                         "region": "Derbyshire", 
@@ -1276,14 +1551,8 @@
                         "address_line_2": "Hatton", 
                         "locality": "Derby"
                      }, 
-                     "appointed_on": "2000-09-21", 
-                     "resigned_on": "2001-12-31", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 5
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1293,13 +1562,6 @@
                            "appointments": "/officers/75Y42_BLpEtvFxBumI6g9NUlcAk/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2005-01-06", 
-                     "resigned_on": "2007-12-24", 
-                     "date_of_birth": {
-                        "year": 1967, 
-                        "month": 11
-                     }, 
                      "address": {
                         "address_line_2": "Mickleover", 
                         "region": "Derbyshire", 
@@ -1307,8 +1569,15 @@
                         "postal_code": "DE3 0UL", 
                         "address_line_1": "9 Siskin Close"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2005-01-06", 
+                     "resigned_on": "2007-12-24", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 11
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Finance Director"
                   }, 
                   {
@@ -1330,8 +1599,8 @@
                         "year": 1958, 
                         "month": 6
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sales Executive"
                   }, 
                   {
@@ -1341,13 +1610,6 @@
                            "appointments": "/officers/_ogfgt9TQggZ3Gy9_frw2RbKv3Q/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2010-03-26", 
-                     "resigned_on": "2011-06-10", 
-                     "date_of_birth": {
-                        "year": 1965, 
-                        "month": 8
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "17", 
@@ -1356,8 +1618,15 @@
                         "address_line_2": "Westminster", 
                         "address_line_1": "Rochester Row"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-03-26", 
+                     "resigned_on": "2011-06-10", 
+                     "date_of_birth": {
+                        "year": 1965, 
+                        "month": 8
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1370,8 +1639,8 @@
                      "appointed_on": "2008-03-12", 
                      "resigned_on": "2008-11-26", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1967
                      }, 
                      "address": {
                         "region": "Derbyshire", 
@@ -1402,15 +1671,15 @@
                         "postal_code": "NG8 6PF", 
                         "locality": "Nottingham"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Canadian", 
+                     "officer_role": "director", 
                      "occupation": "Financial Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01855936", 
-               "pretty": "john hayes mr john hayes john henry hayes", 
+               "pretty": "Mr John Hayes", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

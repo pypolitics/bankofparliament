@@ -235,9 +235,10 @@
    "eu_ref_stance": "Leave", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -248,6 +249,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Temple Capital Finance LtdAddress of donor: 189 Dartford Rd, DA1 3EWAmount of donation, or nature and value if donation in kind: \u00a32,000Donor status: company, registration 06752658.(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "Temple Capital Finance Ltd", 
+               "Donor status": "company, registration 06752658.", 
+               "Address of donor": "189 Dartford Rd, DA1 3EW"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Temple Capital Finance LtdAddress of donor: 189 Dartford Rd, DA1 3EWAmount of donation, or nature and value if donation in kind: \u00a32,000Donor status: company, registration 06752658.(Registered 07 July 2017)", 
@@ -255,19 +268,137 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Arron Bardoe", 
+                     "links": {
+                        "self": "/company/06752658/persons-with-significant-control/individual/nm8W7n3r4QGL9raNfRQazdGIm4I"
+                     }, 
+                     "notified_on": "2016-11-18", 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors", 
+                        "right-to-appoint-and-remove-directors-as-firm"
+                     ], 
+                     "name_elements": {
+                        "forename": "Arron", 
+                        "surname": "Bardoe", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1972
+                     }, 
+                     "etag": "c3343c965c3da7cf9160818c0d5720f4dbaf15d4", 
+                     "address": {
+                        "premises": "189", 
+                        "region": "Kent", 
+                        "address_line_1": "Dartford Road", 
+                        "postal_code": "DA1 3EW", 
+                        "locality": "Dartford"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "name": "BARDOE, Arron", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AMYMeBSmrhRro1irpbJyXWpWBfk/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-11-18", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 6
+                     }, 
+                     "address": {
+                        "region": "Kent", 
+                        "address_line_1": "189 Dartford Road", 
+                        "postal_code": "DA1 3EW", 
+                        "locality": "Dartford"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Financial Adviser"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": "https://beta.companieshouse.gov.uk/company/06752658", 
                "pretty": "Temple Capital Finance Ltd", 
-               "address": null, 
+               "address": "189 Dartford Rd, DA1 3EW", 
                "item_id": "0001", 
                "donor": "Temple Capital Finance Ltd", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/06752658/filing-history", 
+                     "self": "/company/06752658", 
+                     "officers": "/company/06752658/officers", 
+                     "persons_with_significant_control": "/company/06752658/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "64999"
+                  ], 
+                  "etag": "1fda36b1b1a191748d553991b476720759a8cf48", 
+                  "registered_office_address": {
+                     "region": "Kent", 
+                     "locality": "Dartford", 
+                     "postal_code": "DA1 3EW", 
+                     "address_line_1": "189 Dartford Road"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-12-02", 
+                     "last_made_up_to": "2017-11-18", 
+                     "next_made_up_to": "2018-11-18", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-11-18", 
+                  "company_number": "06752658", 
+                  "date_of_creation": "2008-11-18", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2019-01-05", 
+                     "next_made_up_to": "2018-04-05", 
+                     "last_accounts": {
+                        "period_start_on": "2016-04-06", 
+                        "made_up_to": "2017-04-05", 
+                        "period_end_on": "2017-04-05"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2019-01-05", 
+                        "period_start_on": "2017-04-06", 
+                        "period_end_on": "2018-04-05", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "05", 
+                        "month": "04"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "TEMPLE CAPITAL FINANCE LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -280,9 +411,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -293,9 +425,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -306,9 +439,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -319,9 +453,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -332,9 +467,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -346,8 +482,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "johnson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 10, 
@@ -357,7 +494,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "gareth johnson", 
          "category_donations": 0, 
@@ -365,8 +502,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "johnson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 10, 
@@ -376,16 +514,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "gareth johnson", 
          "category_donations": 0, 
          "first": "gareth"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -396,6 +535,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my wife, Wendy Johnson, as Parliamentary Assistant. (Updated 07 July 2017)", 
+               "I employ my wife, Wendy Johnson, as Parliamentary Assistant. (Updated 07 July 2017)": "I employ my wife, Wendy Johnson, as Parliamentary Assistant. (Updated 07 July 2017)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my wife, Wendy Johnson, as Parliamentary Assistant. (Updated 07 July 2017)", 
@@ -411,8 +558,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -425,9 +570,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -529,8 +675,8 @@
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
-                     "officer_role": "secretary"
+                     "officer_role": "secretary", 
+                     "nationality": "British"
                   }, 
                   {
                      "name": "BONNIFACE, Alan", 
@@ -539,12 +685,6 @@
                            "appointments": "/officers/ns_oHYafemP_71UvLKLM3vPeQPk/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-04-05", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 11
-                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
@@ -552,8 +692,14 @@
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-04-05", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 11
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -576,8 +722,8 @@
                         "postal_code": "SW1H 9HP", 
                         "address_line_1": "Old Queen Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -600,8 +746,8 @@
                         "year": 1972, 
                         "month": 1
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -611,20 +757,20 @@
                            "appointments": "/officers/6ZaqfO_sUTP-7ZS1Ts2TBFRWSpc/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-06-10", 
+                     "date_of_birth": {
+                        "year": 1938, 
+                        "month": 10
+                     }, 
                      "address": {
                         "premises": "24", 
                         "locality": "London", 
                         "postal_code": "SW1H 9HP", 
                         "address_line_1": "Old Queen Street"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-06-10", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1938
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -658,12 +804,6 @@
                            "appointments": "/officers/ut1kol10uKVnr1RnUj8f1V4jArQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1999-06-12", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1939
-                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
@@ -671,8 +811,14 @@
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1999-06-12", 
+                     "date_of_birth": {
+                        "year": 1939, 
+                        "month": 12
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Agent"
                   }, 
                   {
@@ -682,20 +828,20 @@
                            "appointments": "/officers/zBSDh5CG38X2ok0L00dGXf2B0fk/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-06-20", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1969
+                     }, 
                      "address": {
                         "premises": "24", 
                         "locality": "London", 
                         "postal_code": "SW1H 9HP", 
                         "address_line_1": "Old Queen Street"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-06-20", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 10
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -705,12 +851,6 @@
                            "appointments": "/officers/4pMe6oPDjEL4xSRAdVm3ZPx_JXs/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-06-14", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1945
-                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
@@ -718,8 +858,14 @@
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-06-14", 
+                     "date_of_birth": {
+                        "year": 1945, 
+                        "month": 4
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -729,20 +875,20 @@
                            "appointments": "/officers/v8E8efa_LvGmgy19cv463L1UjkI/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-08-18", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1951
+                     }, 
                      "address": {
                         "premises": "24", 
                         "locality": "London", 
                         "postal_code": "SW1H 9HP", 
                         "address_line_1": "Old Queen Street"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-08-18", 
-                     "date_of_birth": {
-                        "year": 1951, 
-                        "month": 7
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -752,18 +898,18 @@
                            "appointments": "/officers/t_zNDCO5zA4tWz_rqDf__d8OkmI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1998-06-20", 
-                     "date_of_birth": {
-                        "year": 1959, 
-                        "month": 7
-                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
                         "address_line_1": "Old Queen Street", 
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1998-06-20", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1959
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -779,8 +925,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2003-06-14", 
                      "date_of_birth": {
-                        "year": 1940, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1940
                      }, 
                      "address": {
                         "premises": "24", 
@@ -789,8 +935,8 @@
                         "postal_code": "SW1H 9HP", 
                         "address_line_1": "Old Queen Street"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -800,17 +946,17 @@
                            "appointments": "/officers/EP6GylaA8WLfPBEQGzJOZp_XQTU/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-06-20", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1945
+                     }, 
                      "address": {
                         "premises": "24", 
                         "address_line_1": "Old Queen Street", 
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-06-20", 
-                     "date_of_birth": {
-                        "year": 1945, 
-                        "month": 7
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -836,8 +982,8 @@
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -847,18 +993,18 @@
                            "appointments": "/officers/rYapOMzNVQjjeYmSiAQoguHI-T8/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-04-05", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
                         "address_line_1": "Old Queen Street", 
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-04-05", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1960
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -871,18 +1017,18 @@
                            "appointments": "/officers/ddTALWwsnhL-AyOrJVQTtDtbaWQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-04-05", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
                         "address_line_1": "Old Queen Street", 
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-04-05", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1956
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -904,11 +1050,11 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2016-06-04", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 8
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Farmer"
                   }, 
                   {
@@ -921,8 +1067,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-06-04", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1942
+                        "year": 1942, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "24", 
@@ -930,8 +1076,8 @@
                         "postal_code": "SW1H 9HP", 
                         "address_line_1": "Old Queen Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -950,11 +1096,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-06-20", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1955
+                        "year": 1955, 
+                        "month": 5
                      }, 
-                     "officer_role": "director", 
                      "nationality": "English", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1022,18 +1168,18 @@
                            "appointments": "/officers/46yiYmoXLO-IRRa9w0kR50gyyx8/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-06-16", 
-                     "resigned_on": "2006-06-17", 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 1
-                     }, 
                      "address": {
                         "address_line_2": "Denbigh Road", 
                         "region": "Dembighshire", 
                         "address_line_1": "Garanic", 
                         "postal_code": "LL15 1PE", 
                         "locality": "Ruthin"
+                     }, 
+                     "appointed_on": "2001-06-16", 
+                     "resigned_on": "2006-06-17", 
+                     "date_of_birth": {
+                        "year": 1928, 
+                        "month": 1
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1057,8 +1203,8 @@
                         "year": 1925, 
                         "month": 8
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1079,8 +1225,8 @@
                      "appointed_on": "2011-06-11", 
                      "resigned_on": "2014-04-05", 
                      "date_of_birth": {
-                        "year": 1938, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1938
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1117,20 +1263,20 @@
                            "appointments": "/officers/JZNVUxylL2Ic-FhmzNrWLYV2Wlc/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-06-16", 
-                     "resigned_on": "2006-06-17", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1952
-                     }, 
                      "address": {
                         "region": "Essex", 
                         "address_line_1": "55 Crowstone Road", 
                         "postal_code": "SS0 8BG", 
                         "locality": "Westcliff On Sea"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2001-06-16", 
+                     "resigned_on": "2006-06-17", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1952
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1143,8 +1289,8 @@
                      "appointed_on": "1996-06-29", 
                      "resigned_on": "1999-06-12", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1952
                      }, 
                      "address": {
                         "region": "Essex", 
@@ -1163,20 +1309,20 @@
                            "appointments": "/officers/l6i55rKT-zxjnFfWb0Xly5df2cE/appointments"
                         }
                      }, 
+                     "appointed_on": "2005-06-11", 
+                     "resigned_on": "2006-06-17", 
+                     "date_of_birth": {
+                        "year": 1945, 
+                        "month": 7
+                     }, 
                      "address": {
                         "region": "Wiltshire", 
                         "locality": "Pewsey", 
                         "postal_code": "SN9 5JU", 
                         "address_line_1": "Fairfield House"
                      }, 
-                     "appointed_on": "2005-06-11", 
-                     "resigned_on": "2006-06-17", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1945
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1195,11 +1341,11 @@
                      "appointed_on": "2008-06-14", 
                      "resigned_on": "2011-06-11", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 6
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1241,8 +1387,8 @@
                      }, 
                      "resigned_on": "2000-06-10", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1923
+                        "year": 1923, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1255,19 +1401,19 @@
                            "appointments": "/officers/mP38WC87DANNFYVasITwZyd9IdE/appointments"
                         }
                      }, 
+                     "resigned_on": "2005-06-11", 
+                     "date_of_birth": {
+                        "year": 1925, 
+                        "month": 6
+                     }, 
                      "address": {
                         "region": "Leicestershire", 
                         "locality": "Leicester", 
                         "postal_code": "LE3 0BB", 
                         "address_line_1": "68 Norman St"
                      }, 
-                     "resigned_on": "2005-06-11", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1925
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Self Employed Electrical/Contr"
                   }, 
                   {
@@ -1277,19 +1423,19 @@
                            "appointments": "/officers/-adkb0kiD7JlIv6D8wdWN8vQ-l8/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-06-14", 
-                     "resigned_on": "2015-06-20", 
-                     "date_of_birth": {
-                        "year": 1942, 
-                        "month": 4
-                     }, 
                      "address": {
                         "premises": "24", 
                         "country": "England", 
                         "address_line_1": "Old Queen Street", 
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-06-14", 
+                     "resigned_on": "2015-06-20", 
+                     "date_of_birth": {
+                        "year": 1942, 
+                        "month": 4
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1306,8 +1452,8 @@
                      "appointed_on": "2002-06-15", 
                      "resigned_on": "2012-05-26", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1938
+                        "year": 1938, 
+                        "month": 9
                      }, 
                      "address": {
                         "premises": "24", 
@@ -1316,15 +1462,15 @@
                         "postal_code": "SW1H 9HP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/00457188", 
-               "pretty": "gareth johnson gareth alan johnson", 
+               "pretty": "Gareth Johnson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1443,6 +1589,12 @@
                            "appointments": "/officers/4EaaV5nekokh4H7GDccXbKVUOgk/appointments"
                         }
                      }, 
+                     "appointed_on": "2000-07-07", 
+                     "resigned_on": "2002-01-06", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1951
+                     }, 
                      "address": {
                         "address_line_2": "College Road", 
                         "region": "Kent", 
@@ -1450,14 +1602,8 @@
                         "postal_code": "BR8 7LT", 
                         "address_line_1": "Hextable Gardens Flat"
                      }, 
-                     "appointed_on": "2000-07-07", 
-                     "resigned_on": "2002-01-06", 
-                     "date_of_birth": {
-                        "year": 1951, 
-                        "month": 1
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Warden"
                   }, 
                   {
@@ -1467,19 +1613,19 @@
                            "appointments": "/officers/Q0_3sECvOs7cgPhZb11T4wJxbYI/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "DA5 1PQ", 
-                        "region": "Kent", 
-                        "locality": "Bexley", 
-                        "address_line_2": "Bourne Road", 
-                        "address_line_1": "Hall Place"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-07-23", 
                      "resigned_on": "2017-09-12", 
                      "date_of_birth": {
                         "year": 1946, 
                         "month": 8
+                     }, 
+                     "address": {
+                        "postal_code": "DA5 1PQ", 
+                        "region": "Kent", 
+                        "locality": "Bexley", 
+                        "address_line_2": "Bourne Road", 
+                        "address_line_1": "Hall Place"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1492,18 +1638,18 @@
                            "appointments": "/officers/BsKEjZHBtDLES_p8UfqbsZH8Kyw/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-05-24", 
+                     "resigned_on": "2015-05-01", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 12
+                     }, 
                      "address": {
                         "region": "Kent", 
                         "address_line_1": "117 Mount Road", 
                         "postal_code": "DA6 8JS", 
                         "locality": "Bexleyheath"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2006-05-24", 
-                     "resigned_on": "2015-05-01", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1961
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1516,13 +1662,6 @@
                            "appointments": "/officers/c6ntbYF3stVLl5IwQ1sbUxtGSqk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-05-17", 
-                     "resigned_on": "2011-07-28", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 6
-                     }, 
                      "address": {
                         "postal_code": "DA5 1PQ", 
                         "region": "Kent", 
@@ -1530,8 +1669,15 @@
                         "address_line_2": "Bourne Road", 
                         "locality": "Bexley"
                      }, 
-                     "nationality": "American", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-05-17", 
+                     "resigned_on": "2011-07-28", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1947
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "American", 
                      "occupation": "College Principal & Ceo"
                   }, 
                   {
@@ -1541,17 +1687,17 @@
                            "appointments": "/officers/mzQcuDngq_IuzPJAtC5abJbuBbE/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Kent", 
-                        "address_line_1": "18 Maple Leaf Drive", 
-                        "postal_code": "DA15 8WA", 
-                        "locality": "Sidcup"
-                     }, 
                      "appointed_on": "2005-05-11", 
                      "resigned_on": "2006-05-24", 
                      "date_of_birth": {
                         "month": 1, 
                         "year": 1963
+                     }, 
+                     "address": {
+                        "region": "Kent", 
+                        "address_line_1": "18 Maple Leaf Drive", 
+                        "postal_code": "DA15 8WA", 
+                        "locality": "Sidcup"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1567,8 +1713,8 @@
                      "appointed_on": "2002-06-10", 
                      "resigned_on": "2004-05-24", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1963
                      }, 
                      "address": {
                         "region": "Kent", 
@@ -1591,8 +1737,8 @@
                      "appointed_on": "2000-07-07", 
                      "resigned_on": "2012-09-17", 
                      "date_of_birth": {
-                        "year": 1941, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1941
                      }, 
                      "address": {
                         "region": "Kent", 
@@ -1600,8 +1746,8 @@
                         "postal_code": "BR2 9AE", 
                         "locality": "Bromley"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired Corporate Planner"
                   }, 
                   {
@@ -1615,8 +1761,8 @@
                      "appointed_on": "2013-07-22", 
                      "resigned_on": "2015-07-01", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1975
+                        "year": 1975, 
+                        "month": 2
                      }, 
                      "address": {
                         "address_line_2": "Bourne Road", 
@@ -1625,8 +1771,8 @@
                         "postal_code": "DA5 1PQ", 
                         "address_line_1": "Hall Place"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -1649,8 +1795,8 @@
                         "address_line_2": "Lesnes Abbey Wood", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Barrister At Law"
                   }, 
                   {
@@ -1683,13 +1829,6 @@
                            "appointments": "/officers/iSYgSiPNRSHwTL6BvmTGSfdhF4A/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-01-20", 
-                     "resigned_on": "2017-09-12", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1972
-                     }, 
                      "address": {
                         "locality": "Bexley", 
                         "premises": "Hall Place", 
@@ -1698,8 +1837,15 @@
                         "postal_code": "DA5 1PQ", 
                         "address_line_1": "Bourne Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-01-20", 
+                     "resigned_on": "2017-09-12", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1972
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Landscape Architect"
                   }, 
                   {
@@ -1709,19 +1855,19 @@
                            "appointments": "/officers/wVDkRsxr9UEDaJbPBArYh4YKsjA/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Bourne Road", 
-                        "region": "Kent", 
-                        "address_line_1": "Hall Place", 
-                        "postal_code": "DA5 1PQ", 
-                        "locality": "Bexley"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2013-11-18", 
                      "resigned_on": "2017-09-12", 
                      "date_of_birth": {
                         "month": 6, 
                         "year": 1968
+                     }, 
+                     "address": {
+                        "address_line_2": "Bourne Road", 
+                        "region": "Kent", 
+                        "address_line_1": "Hall Place", 
+                        "postal_code": "DA5 1PQ", 
+                        "locality": "Bexley"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1767,8 +1913,8 @@
                      "appointed_on": "2001-01-29", 
                      "resigned_on": "2002-06-10", 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1969
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1794,8 +1940,8 @@
                         "postal_code": "N8 8RS", 
                         "address_line_1": "Flat 1"
                      }, 
-                     "nationality": "Usa", 
                      "officer_role": "director", 
+                     "nationality": "Usa", 
                      "occupation": "Museum Offical"
                   }, 
                   {
@@ -1829,13 +1975,6 @@
                            "appointments": "/officers/HzrumtoD2a4dni6UQ3zyNSMtgSI/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "SN7 7PT", 
-                        "region": "Oxfordshire", 
-                        "address_line_1": "Coxes Cottage", 
-                        "address_line_2": "Fernham Road", 
-                        "locality": "Shellingford"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2007-07-16", 
                      "resigned_on": "2009-03-27", 
@@ -1843,8 +1982,15 @@
                         "year": 1955, 
                         "month": 2
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "postal_code": "SN7 7PT", 
+                        "region": "Oxfordshire", 
+                        "address_line_1": "Coxes Cottage", 
+                        "address_line_2": "Fernham Road", 
+                        "locality": "Shellingford"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1858,13 +2004,13 @@
                      "appointed_on": "2001-11-12", 
                      "resigned_on": "2011-09-19", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 11
                      }, 
                      "address": {
-                        "locality": "London", 
+                        "address_line_1": "50 Fawnbrake Avenue", 
                         "postal_code": "SE24 0BY", 
-                        "address_line_1": "50 Fawnbrake Avenue"
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1877,18 +2023,18 @@
                            "appointments": "/officers/1xQ26AvujHa8qwSgFJEJKNvtcsc/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-05-12", 
+                     "resigned_on": "2011-11-21", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1941
+                     }, 
                      "address": {
                         "premises": "4", 
                         "address_line_1": "Orchard Drive", 
                         "postal_code": "SE3 0QP", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-05-12", 
-                     "resigned_on": "2011-11-21", 
-                     "date_of_birth": {
-                        "year": 1941, 
-                        "month": 11
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1914,8 +2060,8 @@
                         "postal_code": "DA16 1DQ", 
                         "locality": "Welling"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -1925,16 +2071,16 @@
                            "appointments": "/officers/E0MRL2QbWB7PBkykOS2V5d59VMI/appointments"
                         }
                      }, 
-                     "appointed_on": "2000-11-27", 
-                     "resigned_on": "2009-11-16", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 11
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "NW5 1UN", 
                         "address_line_1": "90 Burghley Road"
+                     }, 
+                     "appointed_on": "2000-11-27", 
+                     "resigned_on": "2009-11-16", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1968
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1958,11 +2104,11 @@
                      "appointed_on": "2013-11-18", 
                      "resigned_on": "2017-09-12", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 5
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Educational Consultant"
                   }, 
                   {
@@ -1971,13 +2117,6 @@
                         "officer": {
                            "appointments": "/officers/N7AEvAGnb7o8kmvN5s3Aa0LwErc/appointments"
                         }
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-05-17", 
-                     "resigned_on": "2017-09-12", 
-                     "date_of_birth": {
-                        "year": 1952, 
-                        "month": 8
                      }, 
                      "address": {
                         "locality": "Orpington", 
@@ -1988,8 +2127,15 @@
                         "address_line_2": "Locksbottom", 
                         "address_line_1": "Lovibonds Avenue"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-05-17", 
+                     "resigned_on": "2017-09-12", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 8
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -2047,17 +2193,17 @@
                            "appointments": "/officers/3vho06vCqg2HGVSB3eNtSpjrMCU/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "51 Foyle Road", 
-                        "postal_code": "SE3 7RQ", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2001-09-24", 
                      "resigned_on": "2013-11-18", 
                      "date_of_birth": {
-                        "year": 1943, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1943
+                     }, 
+                     "address": {
+                        "address_line_1": "51 Foyle Road", 
+                        "postal_code": "SE3 7RQ", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2082,8 +2228,8 @@
                         "postal_code": "DA8 3AH", 
                         "address_line_1": "123 Wessex Drive"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -2107,8 +2253,8 @@
                         "address_line_2": "Walthamstow", 
                         "address_line_1": "Spruce Hills Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Charity Director"
                   }, 
                   {
@@ -2132,8 +2278,8 @@
                         "address_line_2": "Bourne Road", 
                         "address_line_1": "Hall Place"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -2143,11 +2289,6 @@
                            "appointments": "/officers/CZPFWSIVz_IFweoMQQKmlQIb4rQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "SE24 9HJ", 
-                        "address_line_1": "19 Burbage Road"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2006-04-24", 
                      "resigned_on": "2010-08-06", 
@@ -2155,8 +2296,13 @@
                         "month": 11, 
                         "year": 1956
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SE24 9HJ", 
+                        "address_line_1": "19 Burbage Road"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -2170,8 +2316,8 @@
                      "appointed_on": "2011-03-01", 
                      "resigned_on": "2011-03-01", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1972
+                        "year": 1972, 
+                        "month": 5
                      }, 
                      "address": {
                         "address_line_2": "Bourne Road", 
@@ -2180,15 +2326,15 @@
                         "postal_code": "DA5 1PQ", 
                         "locality": "Bexley"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chief Executive"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/04028804", 
-               "pretty": "gareth johnson gareth alan johnson", 
+               "pretty": "Gareth Johnson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

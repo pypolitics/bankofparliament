@@ -287,15 +287,16 @@
    "person_id": "24715", 
    "party": "Labour", 
    "forname": "Grahame", 
-   "mp_annual": 95628, 
+   "mp_annual": 95283, 
    "mp_wealth": 0, 
    "facebook": "https://facebook.com/grahame.morris", 
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -306,6 +307,34 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a312,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a312,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobald's Road, London WC1X 8TN"
+            }, 
+            {
+               "raw_string": "Name of donor: RMTAddress of donor: 39 Chalton Street, London NW1 1JDAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "RMT", 
+               "Donor status": "trade union", 
+               "Address of donor": "39 Chalton Street, London NW1 1JD"
+            }, 
+            {
+               "raw_string": "Name of donor: Spenmore Property LtdAddress of donor: A1, Marquis Court, Team Valley Trading Estate, Gateshead, NE11 0RUAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: company, registration 07362247(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,000", 
+               "Name of donor": "Spenmore Property Ltd", 
+               "Donor status": "company, registration 07362247", 
+               "Address of donor": "A1, Marquis Court, Team Valley Trading Estate, Gateshead, NE11 0RU"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a312,000Donor status: trade union(Registered 07 July 2017)", 
@@ -313,15 +342,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 12000, 
+               "link": null, 
                "pretty": "Unite the Union", 
                "address": "128 Theobald's Road, London WC1X 8TN", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: RMTAddress of donor: 39 Chalton Street, London NW1 1JDAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
@@ -329,15 +367,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": null, 
                "pretty": "RMT", 
                "address": "39 Chalton Street, London NW1 1JD", 
                "item_id": "0002", 
                "donor": "RMT", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "RMT", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Spenmore Property LtdAddress of donor: A1, Marquis Court, Team Valley Trading Estate, Gateshead, NE11 0RUAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: company, registration 07362247(Registered 07 July 2017)", 
@@ -345,19 +392,268 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Patrick Parkes Duffy", 
+                     "links": {
+                        "self": "/company/07362247/persons-with-significant-control/individual/aGSjW58PuZUpzVZnpI2o-XkM5fw"
+                     }, 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 3
+                     }, 
+                     "name_elements": {
+                        "middle_name": "Parkes", 
+                        "title": "Mr", 
+                        "surname": "Duffy", 
+                        "forename": "Patrick"
+                     }, 
+                     "notified_on": "2016-09-01", 
+                     "etag": "5d8abc83941434a0cff59031cfaeb2dea12d9f24", 
+                     "address": {
+                        "locality": "Gateshead", 
+                        "premises": "A1", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "NE11 0RU", 
+                        "address_line_2": "Team Valley Trading Estate", 
+                        "address_line_1": "Marquis Court"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2010-09-15", 
+                     "officer_role": "secretary", 
+                     "name": "DUFFY, Patrick Parkes", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AQ3YferytfT-q3Rvhw8nEN0tHFE/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Gateshead", 
+                        "premises": "A1", 
+                        "country": "United Kingdom", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "NE11 0RU", 
+                        "address_line_2": "Team Valley Trading Estate", 
+                        "address_line_1": "Marquis Court"
+                     }
+                  }, 
+                  {
+                     "name": "DUFFY, Patrick Parkes", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/BEzBjUMQ-7QaeYb4sZTf3QjDZNY/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-09-15", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 3
+                     }, 
+                     "address": {
+                        "locality": "Gateshead", 
+                        "premises": "A1", 
+                        "country": "United Kingdom", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "NE11 0RU", 
+                        "address_line_2": "Team Valley Trading Estate", 
+                        "address_line_1": "Marquis Court"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Heating Engineer"
+                  }, 
+                  {
+                     "name": "BROWNLESS, Stephen Charles", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/fc9a3D8PHdJddi5Ret2Rgw4H2cY/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Gateshead", 
+                        "premises": "A1", 
+                        "country": "United Kingdom", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "NE11 0RU", 
+                        "address_line_2": "Team Valley Trading Estate", 
+                        "address_line_1": "Marquis Court"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-09-15", 
+                     "resigned_on": "2013-05-10", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 3
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Builder"
+                  }, 
+                  {
+                     "name": "EDE, Stuart", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/b1lpXnbMN2dXwk_0kvdNeAotLfU/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Gateshead", 
+                        "premises": "A1", 
+                        "country": "United Kingdom", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "NE11 0RU", 
+                        "address_line_2": "Team Valley Trading Estate", 
+                        "address_line_1": "Marquis Court"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-09-15", 
+                     "resigned_on": "2011-09-13", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1972
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Contracts Manager"
+                  }, 
+                  {
+                     "name": "JACOBS, Yomtov Eliezer", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/-JtYW-kLHqWM7w2HSipmnls7qyU/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Manchester", 
+                        "premises": "39a", 
+                        "country": "England", 
+                        "postal_code": "M7 4AS", 
+                        "address_line_2": "Salford", 
+                        "address_line_1": "Leicester Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-09-01", 
+                     "resigned_on": "2010-09-12", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 10
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Formation Agent"
+                  }, 
+                  {
+                     "name": "TAYLOR, Peter", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bqPmptFENaqsn8LwUStF_OIIPQ0/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Gateshead", 
+                        "premises": "A1", 
+                        "country": "United Kingdom", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "NE11 0RU", 
+                        "address_line_2": "Team Valley Trading Estate", 
+                        "address_line_1": "Marquis Court"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-09-15", 
+                     "resigned_on": "2016-03-11", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1960
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Heating Engineer"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 3000, 
+               "link": "https://beta.companieshouse.gov.uk/company/07362247", 
                "pretty": "Spenmore Property Ltd", 
                "address": "A1, Marquis Court, Team Valley Trading Estate, Gateshead, NE11 0RU", 
                "item_id": "0003", 
                "donor": "Spenmore Property Ltd", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "status": "active", 
+                  "company_status": "active", 
+                  "links": {
+                     "filing_history": "/company/07362247/filing-history", 
+                     "self": "/company/07362247", 
+                     "officers": "/company/07362247/officers", 
+                     "persons_with_significant_control": "/company/07362247/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "41100"
+                  ], 
+                  "etag": "bff9db4e3b4852a6a5074f32e083e7cd676dc2e3", 
+                  "registered_office_address": {
+                     "address_line_2": "Team Valley Trading Estate", 
+                     "region": "Tyne And Wear", 
+                     "address_line_1": "A1 Marquis Court", 
+                     "postal_code": "NE11 0RU", 
+                     "locality": "Gateshead"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-15", 
+                     "last_made_up_to": "2017-09-01", 
+                     "next_made_up_to": "2018-09-01", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-09-01", 
+                  "company_number": "07362247", 
+                  "date_of_creation": "2010-09-01", 
+                  "has_insolvency_history": false, 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-06-30", 
+                     "next_made_up_to": "2017-09-30", 
+                     "last_accounts": {
+                        "period_start_on": "2015-10-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-09-30", 
+                        "period_end_on": "2016-09-30"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-06-30", 
+                        "period_start_on": "2016-10-01", 
+                        "period_end_on": "2017-09-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "09"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "SPENMORE PROPERTY LTD", 
+                  "registered_office_is_in_dispute": false, 
+                  "has_charges": false, 
+                  "type": "ltd"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -372,9 +668,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -385,28 +682,57 @@
          "category_wealth": 0
       }, 
       {
-         "items": [
+         "raw_data": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation, or nature and value if donation in kind: Hotel accommodation for four nights during the Labour Party Conference at \u00a3345 per night, total value \u00a31,380Date received: 23-27 September 2017Date accepted: 23 September 2017Donor status: trade union(Registered 18 October 2017)", 
-               "received": "23-27 September 2017", 
-               "accepted": "23 September 2017", 
-               "isWealth": false, 
-               "nouns": [], 
-               "isDonation": false, 
-               "registered": "18/10/2017", 
-               "isIncome": false, 
-               "amount": 345, 
-               "status": "trade union", 
-               "pretty": "Unite the Union", 
-               "address": null, 
-               "item_id": "0001", 
-               "donor": "Unite the Union", 
-               "category_id": 4, 
-               "isGift": true
+               "Date received": "23-27 September 2017", 
+               "Donor status": "trade union", 
+               "Date accepted": "23 September 2017", 
+               "(Registered 18 October 2017)": "(Registered 18 October 2017)", 
+               "Name of donor": "Unite the Union", 
+               "Amount of donation, or nature and value if donation in kind": "Hotel accommodation for four nights during the Labour Party Conference at \u00a3345 per night, total value \u00a31,380", 
+               "Address of donor": "128 Theobald's Road, London WC1X 8TN"
             }
          ], 
          "isCurrency": true, 
-         "category_gifts": 345, 
+         "category_gifts": 0, 
+         "items": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation, or nature and value if donation in kind: Hotel accommodation for four nights during the Labour Party Conference at \u00a3345 per night, total value \u00a31,380Date received: 23-27 September 2017Date accepted: 23 September 2017Donor status: trade union(Registered 18 October 2017)", 
+               "status": "trade union", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "persons": [], 
+               "raw_data": {
+                  "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation, or nature and value if donation in kind: Hotel accommodation for four nights during the Labour Party Conference at \u00a3345 per night, total value \u00a31,380Date received: 23-27 September 2017Date accepted: 23 September 2017Donor status: trade union(Registered 18 October 2017)", 
+                  "Date received": "23-27 September 2017", 
+                  "Donor status": "trade union", 
+                  "Date accepted": "23 September 2017", 
+                  "(Registered 18 October 2017)": "(Registered 18 October 2017)", 
+                  "Name of donor": "Unite the Union", 
+                  "Amount of donation, or nature and value if donation in kind": "Hotel accommodation for four nights during the Labour Party Conference at \u00a3345 per night, total value \u00a31,380", 
+                  "Address of donor": "128 Theobald's Road, London WC1X 8TN"
+               }, 
+               "registered": "18/10/2017", 
+               "officers": [], 
+               "isIncome": false, 
+               "amount": 0, 
+               "link": null, 
+               "pretty": "Unite the Union", 
+               "address": "128 Theobald's Road, London WC1X 8TN", 
+               "item_id": "0001", 
+               "donor": "Unite the Union", 
+               "category_id": 4, 
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
+            }
+         ], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [
@@ -414,33 +740,177 @@
          ], 
          "category_description": "Gifts", 
          "category_id": 4, 
-         "category_amount": 345, 
+         "category_amount": 0, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Arab Organisation for Human Rights in the UKAddress of donor: Dephna House, Unit 203, 119 Neasden Lane, London NW10 1PHEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a31,321.29Destination of visit: Doha, QatarDates of visit: 26-30 September 2017Purpose of visit: To carry out an investigation into the human rights implications of the blockade imposed on Qatar.(Registered 20 October 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Travel and accommodation with a value of \u00a31,321.29", 
+               "Purpose of visit": "To carry out an investigation into the human rights implications of the blockade imposed on Qatar.", 
+               "Destination of visit": "Doha, Qatar", 
+               "(Registered 20 October 2017)": "(Registered 20 October 2017)", 
+               "Dates of visit": "26-30 September 2017", 
+               "Name of donor": "Arab Organisation for Human Rights in the UK", 
+               "Address of donor": "Dephna House, Unit 203, 119 Neasden Lane, London NW10 1PH"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 1321, 
          "items": [
             {
                "raw_string": "Name of donor: Arab Organisation for Human Rights in the UKAddress of donor: Dephna House, Unit 203, 119 Neasden Lane, London NW10 1PHEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a31,321.29Destination of visit: Doha, QatarDates of visit: 26-30 September 2017Purpose of visit: To carry out an investigation into the human rights implications of the blockade imposed on Qatar.(Registered 20 October 2017)", 
-               "dates": "26-30 September 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Mohammed Jameel", 
+                     "links": {
+                        "self": "/company/08520304/persons-with-significant-control/individual/SwNaagotQ4wW8sUQ7RgwShuIn9c"
+                     }, 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1972
+                     }, 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "Jameel", 
+                        "forename": "Mohammed"
+                     }, 
+                     "notified_on": "2017-05-02", 
+                     "etag": "0c53093f196656d6b70a85507ac54fbedd249833", 
+                     "address": {
+                        "premises": "Unit 203", 
+                        "address_line_1": "119 Neasden Lane", 
+                        "postal_code": "NW10 1PH", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "20/10/2017", 
                "destination": "Doha, Qatar", 
+               "officers": [
+                  {
+                     "appointed_on": "2013-05-08", 
+                     "officer_role": "secretary", 
+                     "name": "JAMIL, Mohammed", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/96iNTonqljKTFXiCSgPXEPqwFaI/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Unit 203", 
+                        "locality": "London", 
+                        "postal_code": "NW10 1PH", 
+                        "address_line_1": "119 Neasden Lane"
+                     }
+                  }, 
+                  {
+                     "name": "JAMIL, Mohammed", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/UD9reb6u_XWGO6hymhJs3VTaQMo/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-05-08", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 3
+                     }, 
+                     "address": {
+                        "premises": "Unit 203", 
+                        "locality": "London", 
+                        "postal_code": "NW10 1PH", 
+                        "address_line_1": "119 Neasden Lane"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 1321, 
+               "link": "https://beta.companieshouse.gov.uk/company/08520304", 
                "purpose": "To carry out an investigation into the human rights implications of the blockade imposed on Qatar.", 
                "pretty": "Arab Organisation for Human Rights in the UK", 
                "address": "Dephna House, Unit 203, 119 Neasden Lane, London NW10 1PH", 
                "item_id": "0001", 
                "donor": "Arab Organisation for Human Rights in the UK", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "status": "active", 
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/08520304/filing-history", 
+                     "self": "/company/08520304", 
+                     "officers": "/company/08520304/officers", 
+                     "persons_with_significant_control": "/company/08520304/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "74990"
+                  ], 
+                  "etag": "ed231eeeddf6f9ea2940409b4453e25614ab656c", 
+                  "registered_office_address": {
+                     "address_line_1": "Unit 203 119 Neasden Lane", 
+                     "postal_code": "NW10 1PH", 
+                     "locality": "London"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-05-22", 
+                     "last_made_up_to": "2017-05-08", 
+                     "next_made_up_to": "2018-05-08", 
+                     "overdue": false
+                  }, 
+                  "company_number": "08520304", 
+                  "date_of_creation": "2013-05-08", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-02-28", 
+                     "next_made_up_to": "2017-05-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-06-01", 
+                        "type": "total-exemption-small", 
+                        "made_up_to": "2016-05-31", 
+                        "period_end_on": "2016-05-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-02-28", 
+                        "period_start_on": "2016-06-01", 
+                        "period_end_on": "2017-05-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "05"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "ARAB ORGANISATION FOR HUMAN RIGHTS IN UK", 
+                  "company_status": "active", 
+                  "has_charges": false, 
+                  "type": "private-limited-guarant-nsc-limited-exemption", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 1321, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -453,9 +923,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -466,9 +937,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -480,8 +952,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "morris", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -491,7 +964,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1961, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "grahame morris", 
          "category_donations": 0, 
@@ -499,8 +972,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "morris", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -510,16 +984,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1961, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "grahame morris", 
          "category_donations": 0, 
          "first": "grahame"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -530,6 +1005,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my wife, Michelle Morris, as part-time Senior Secretary.", 
+               "I employ my wife, Michelle Morris, as part-time Senior Secretary.": "I employ my wife, Michelle Morris, as part-time Senior Secretary."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my wife, Michelle Morris, as part-time Senior Secretary.", 
@@ -545,8 +1028,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -559,9 +1040,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -654,8 +1136,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-09-09", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1947
                      }, 
                      "address": {
                         "premises": "The Miners' Hall", 
@@ -664,8 +1146,8 @@
                         "postal_code": "DH1 4BE", 
                         "address_line_1": "Flass Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Secretary Of Durham Miners' Association"
                   }, 
                   {
@@ -675,12 +1157,6 @@
                            "appointments": "/officers/UVVzRX2JpEOuesYykbaQzNMqgwo/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-11-06", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1980
-                     }, 
                      "address": {
                         "premises": "The Miners' Hall", 
                         "country": "United Kingdom", 
@@ -688,8 +1164,14 @@
                         "postal_code": "DH1 4BE", 
                         "locality": "Durham"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-11-06", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1980
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Tuc Regional Secretary"
                   }, 
                   {
@@ -699,6 +1181,12 @@
                            "appointments": "/officers/nKJJlX9KOnsCmBCYdbac4r-vj-Y/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-11-06", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 7
+                     }, 
                      "address": {
                         "premises": "The Miners' Hall", 
                         "country": "United Kingdom", 
@@ -706,14 +1194,8 @@
                         "postal_code": "DH1 4BE", 
                         "address_line_1": "Flass Street"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-11-06", 
-                     "date_of_birth": {
-                        "year": 1957, 
-                        "month": 7
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Marketing Executive"
                   }, 
                   {
@@ -736,8 +1218,8 @@
                         "postal_code": "DH1 4BE", 
                         "address_line_1": "Flass Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Union Senior Organiser"
                   }, 
                   {
@@ -747,18 +1229,18 @@
                            "appointments": "/officers/U1vO_uA4f6WylTCBFqm3y-K2TG4/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-11-06", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "The Miners' Hall", 
                         "country": "United Kingdom", 
                         "locality": "Durham", 
                         "postal_code": "DH1 4BE", 
                         "address_line_1": "Flass Street"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-11-06", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1969
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -774,8 +1256,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-01-29", 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1961
                      }, 
                      "address": {
                         "premises": "The Miners' Hall", 
@@ -808,8 +1290,8 @@
                         "month": 1, 
                         "year": 1958
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Union Regional Secretary"
                   }, 
                   {
@@ -832,8 +1314,8 @@
                         "postal_code": "DH1 4BE", 
                         "address_line_1": "Flass Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Press Officer"
                   }, 
                   {
@@ -871,8 +1353,8 @@
                      "appointed_on": "2015-01-21", 
                      "resigned_on": "2016-07-16", 
                      "date_of_birth": {
-                        "year": 1943, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1943
                      }, 
                      "address": {
                         "premises": "The Miners' Hall", 
@@ -892,13 +1374,6 @@
                            "appointments": "/officers/owWXC5cso35vCNB3pNKgGUw-2fY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-01-21", 
-                     "resigned_on": "2015-11-27", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1964
-                     }, 
                      "address": {
                         "premises": "The Miners' Hall", 
                         "country": "United Kingdom", 
@@ -906,15 +1381,22 @@
                         "postal_code": "DH1 4BE", 
                         "address_line_1": "Flass Street"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-01-21", 
+                     "resigned_on": "2015-11-27", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 10
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Legal Secretary"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/09400021", 
-               "pretty": "grahame morris grahame mark morris", 
+               "pretty": "Grahame Morris", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -992,20 +1474,20 @@
                            "appointments": "/officers/NllZXTIqSHJ8pb0NuKcEDrSJE9A/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "County Durham", 
-                        "address_line_1": "6 Hambledon Place", 
-                        "postal_code": "SR8 2LJ", 
-                        "locality": "Peterlee"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2001-05-10", 
                      "date_of_birth": {
                         "year": 1941, 
                         "month": 1
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "County Durham", 
+                        "address_line_1": "6 Hambledon Place", 
+                        "postal_code": "SR8 2LJ", 
+                        "locality": "Peterlee"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1028,8 +1510,8 @@
                         "address_line_2": "Seaview Industrial Estate", 
                         "locality": "Horden, Peterlee"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Bank Manager"
                   }, 
                   {
@@ -1039,12 +1521,6 @@
                            "appointments": "/officers/JsoubdRsx7M024mBg9c6I_wuuxg/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-03-28", 
-                     "date_of_birth": {
-                        "year": 1983, 
-                        "month": 1
-                     }, 
                      "address": {
                         "address_line_2": "Seaview Industrial Estate", 
                         "region": "County Durham", 
@@ -1052,8 +1528,14 @@
                         "postal_code": "SR8 4TQ", 
                         "locality": "Horden, Peterlee"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-03-28", 
+                     "date_of_birth": {
+                        "year": 1983, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Strategic Manager"
                   }, 
                   {
@@ -1206,18 +1688,18 @@
                            "appointments": "/officers/kVeLBQs8PiIc8R8oJjOzqPgTBx0/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1995-05-11", 
-                     "resigned_on": "2003-07-17", 
-                     "date_of_birth": {
-                        "year": 1929, 
-                        "month": 12
-                     }, 
                      "address": {
                         "region": "Durham", 
                         "locality": "Peterlee", 
                         "postal_code": "SR8 5HR", 
                         "address_line_1": "23 Yoden Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1995-05-11", 
+                     "resigned_on": "2003-07-17", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1929
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1239,8 +1721,8 @@
                      "appointed_on": "1995-05-11", 
                      "resigned_on": "2001-05-10", 
                      "date_of_birth": {
-                        "year": 1948, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1948
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1253,19 +1735,19 @@
                            "appointments": "/officers/E_26ruP5KP7wIrHyiwbU0Ee8sEU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-04-23", 
-                     "resigned_on": "2015-03-25", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 5
-                     }, 
                      "address": {
                         "postal_code": "SR8 4TQ", 
                         "region": "County Durham", 
                         "locality": "Horden, Peterlee", 
                         "address_line_2": "Seaview Industrial Estate", 
                         "address_line_1": "1 Kilburn Drive"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-04-23", 
+                     "resigned_on": "2015-03-25", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1954
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1278,13 +1760,6 @@
                            "appointments": "/officers/mluJJTnohiDqvq1F3Tm7WgIEAsg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2005-12-21", 
-                     "resigned_on": "2011-03-24", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 6
-                     }, 
                      "address": {
                         "postal_code": "TS27 4QE", 
                         "region": "Cleveland", 
@@ -1292,8 +1767,15 @@
                         "address_line_2": "High Hesleden", 
                         "locality": "Hartlepool"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2005-12-21", 
+                     "resigned_on": "2011-03-24", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1955
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Sales Director"
                   }, 
                   {
@@ -1303,17 +1785,17 @@
                            "appointments": "/officers/Mwk0l0fozd6UgyyG9Qv_x0_OOus/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-12-21", 
-                     "resigned_on": "2009-03-26", 
-                     "date_of_birth": {
-                        "year": 1987, 
-                        "month": 8
-                     }, 
                      "address": {
                         "region": "County Durham", 
                         "address_line_1": "25 Galloway Road", 
                         "postal_code": "SR8 5QD", 
                         "locality": "Peterlee"
+                     }, 
+                     "appointed_on": "2005-12-21", 
+                     "resigned_on": "2009-03-26", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1987
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1330,8 +1812,8 @@
                      "appointed_on": "1995-05-11", 
                      "resigned_on": "1996-01-11", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 1
                      }, 
                      "address": {
                         "region": "County Durham", 
@@ -1339,8 +1821,8 @@
                         "postal_code": "SR8 1NB", 
                         "address_line_1": "10 Berwick Chase"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Lecturer"
                   }, 
                   {
@@ -1377,20 +1859,20 @@
                            "appointments": "/officers/f1I_BfB8m8JRlO-q-58AqxmooKo/appointments"
                         }
                      }, 
-                     "appointed_on": "1999-03-30", 
-                     "resigned_on": "2000-04-27", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1945
-                     }, 
                      "address": {
                         "region": "County Durham", 
                         "address_line_1": "27 Lambton Court", 
                         "postal_code": "SR8 1NG", 
                         "locality": "Peterlee"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "1999-03-30", 
+                     "resigned_on": "2000-04-27", 
+                     "date_of_birth": {
+                        "year": 1945, 
+                        "month": 9
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired Police Officer"
                   }, 
                   {
@@ -1424,18 +1906,18 @@
                            "appointments": "/officers/RRx7t2uiYkjsp3k5OTrhfdfX-r8/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2003-07-17", 
+                     "resigned_on": "2013-03-27", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1959
+                     }, 
                      "address": {
                         "region": "County Durham", 
                         "address_line_1": "5 Burnside", 
                         "postal_code": "SR8 1BX", 
                         "locality": "Peterlee"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2003-07-17", 
-                     "resigned_on": "2013-03-27", 
-                     "date_of_birth": {
-                        "year": 1959, 
-                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1474,13 +1956,6 @@
                            "appointments": "/officers/r0YmHQ67ukCSHtIyFKx8HKfxARI/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-04-23", 
-                     "resigned_on": "2014-10-10", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1961
-                     }, 
                      "address": {
                         "postal_code": "SR8 4TQ", 
                         "region": "County Durham", 
@@ -1488,8 +1963,15 @@
                         "address_line_2": "Seaview Industrial Estate", 
                         "locality": "Horden, Peterlee"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-04-23", 
+                     "resigned_on": "2014-10-10", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1961
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Sales Manager"
                   }, 
                   {
@@ -1513,8 +1995,8 @@
                         "month": 3, 
                         "year": 1961
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1524,20 +2006,20 @@
                            "appointments": "/officers/dMjf8XRo1S_Nfb6kNmzVA5xiO5o/appointments"
                         }
                      }, 
-                     "appointed_on": "2000-04-27", 
-                     "resigned_on": "2003-07-17", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1934
-                     }, 
                      "address": {
                         "region": "County Durham", 
                         "locality": "Peterlee", 
                         "postal_code": "SR8 1ND", 
                         "address_line_1": "1 Norham Drive"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2000-04-27", 
+                     "resigned_on": "2003-07-17", 
+                     "date_of_birth": {
+                        "year": 1934, 
+                        "month": 5
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Business Consultant"
                   }, 
                   {
@@ -1547,20 +2029,20 @@
                            "appointments": "/officers/tDm2thoqlPLyGYxO0pp490IlsOE/appointments"
                         }
                      }, 
-                     "appointed_on": "2003-07-17", 
-                     "resigned_on": "2005-12-21", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 6
-                     }, 
                      "address": {
                         "region": "Durham", 
                         "locality": "Peterlee", 
                         "postal_code": "SR8 2LL", 
                         "address_line_1": "27 Hambledon Place"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2003-07-17", 
+                     "resigned_on": "2005-12-21", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1955
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -1583,7 +2065,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/03055620", 
-               "pretty": "grahame morris grahame mark morris", 
+               "pretty": "Grahame Morris", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1674,7 +2156,7 @@
    "wrans_subjects": "Radiotherapy, General Practitioners, Offshore Industry, Cancer, A19: Accidents", 
    "member_id": "41618", 
    "constituency": "Easington", 
-   "mp_gifts": 1666, 
+   "mp_gifts": 1321, 
    "commitees": [
       "Health Committee", 
       "Consolidation Bills (Joint Committee)", 

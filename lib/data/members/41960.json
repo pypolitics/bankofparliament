@@ -255,9 +255,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -268,9 +269,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -281,64 +283,557 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: BS Eaton LtdAddress of donor: Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EYAmount of donation or nature and value if donation in kind: \u00a310,000Date received: 12 May 2017Date accepted: 12 May 2017Donor status: company, registration 00653789(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Date received": "12 May 2017", 
+               "Amount of donation or nature and value if donation in kind": "\u00a310,000", 
+               "Date accepted": "12 May 2017", 
+               "Name of donor": "BS Eaton Ltd", 
+               "Donor status": "company, registration 00653789", 
+               "Address of donor": "Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EY"
+            }, 
+            {
+               "raw_string": "Name of donor: BS Eaton LtdAddress of donor: Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EYAmount of donation or nature and value if donation in kind: \u00a35,000Date received: 6 June 2017Date accepted: 6 June 2017Donor status: company, registration 00653789(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Date received": "6 June 2017", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Date accepted": "6 June 2017", 
+               "Name of donor": "BS Eaton Ltd", 
+               "Donor status": "company, registration 00653789", 
+               "Address of donor": "Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EY"
+            }, 
+            {
+               "raw_string": "Name of donor: Timothy EasbyAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a32,500Date received: 6 June 2017Date accepted: 6 June 2017Donor status: individual(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Date received": "6 June 2017", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,500", 
+               "Date accepted": "6 June 2017", 
+               "Name of donor": "Timothy Easby", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: BS Eaton LtdAddress of donor: Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EYAmount of donation or nature and value if donation in kind: \u00a310,000Date received: 12 May 2017Date accepted: 12 May 2017Donor status: company, registration 00653789(Registered 07 July 2017)", 
-               "received": "12 May 2017", 
-               "accepted": "12 May 2017", 
+               "status": "company, registration 00653789", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Stewart Michael Eaton", 
+                     "links": {
+                        "self": "/company/00653789/persons-with-significant-control/individual/DaQmpPxXC4RCC4fjLvBaopNWQxo"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "Great Britain", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent"
+                     ], 
+                     "name_elements": {
+                        "surname": "Eaton", 
+                        "title": "Mr", 
+                        "middle_name": "Michael", 
+                        "forename": "Stewart"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1936, 
+                        "month": 12
+                     }, 
+                     "etag": "a41347b08b6d2cda94d5fd1657aa6119a9c1b2bb", 
+                     "address": {
+                        "postal_code": "WS6 7EY", 
+                        "region": "Staffs", 
+                        "address_line_1": "Coppice Lane", 
+                        "address_line_2": "Cheslyn Hay", 
+                        "locality": "Nr Walsall"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "name": "EATON, Oliver Stewart Charles", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/S7x6_y9bP4OGxnnbVo14ZUBV514/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-10-04", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 6
+                     }, 
+                     "address": {
+                        "address_line_2": "Cheslyn Hay", 
+                        "region": "Staffs", 
+                        "locality": "Nr Walsall", 
+                        "postal_code": "WS6 7EY", 
+                        "address_line_1": "Coppice Lane"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Sales And Marketing"
+                  }, 
+                  {
+                     "name": "EATON, Stewart Michael", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/P0xG6NzBmqSS8nh4xBCHERUk0-I/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "WS6 7EY", 
+                        "region": "Staffs", 
+                        "address_line_1": "Coppice Lane", 
+                        "address_line_2": "Cheslyn Hay", 
+                        "locality": "Nr Walsall"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "year": 1936, 
+                        "month": 12
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Concrete Manufacturer"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "2000-05-23", 
+                     "name": "EATON, Roger Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sAZjhChymTlOp8z99jG3P-8M2XQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Nether Stowey", 
+                        "region": "Somerset", 
+                        "address_line_1": "Global House Castle Street", 
+                        "postal_code": "TA5 1LN", 
+                        "locality": "Bridgwater"
+                     }
+                  }, 
+                  {
+                     "name": "WHITTAKER, William Henry", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/jurprgYLXpe2_N7gaew-2d0vP0I/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2000-05-23", 
+                     "resigned_on": "2009-04-20", 
+                     "address": {
+                        "locality": "Ganarew", 
+                        "premises": "Great Hillshone Cottage", 
+                        "country": "United Kingdom", 
+                        "region": "Herefordshire", 
+                        "postal_code": "NP25 3SS", 
+                        "address_line_1": "Lewstone"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "EATON, Marion", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bHmJGRT-yokWfGNZgKDoDlOlcaU/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Penkridge", 
+                        "region": "Staffordshire", 
+                        "address_line_1": "13 Wiscombe Avenue", 
+                        "postal_code": "ST19 5EH", 
+                        "locality": "Stafford"
+                     }, 
+                     "resigned_on": "1995-08-27", 
+                     "date_of_birth": {
+                        "year": 1906, 
+                        "month": 4
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "EATON, Roger Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sAZjhChymTlOp8z99jG3P-8M2XQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Nether Stowey", 
+                        "region": "Somerset", 
+                        "address_line_1": "Global House Castle Street", 
+                        "postal_code": "TA5 1LN", 
+                        "locality": "Bridgwater"
+                     }, 
+                     "appointed_on": "1992-04-06", 
+                     "resigned_on": "2000-09-30", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1943
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Secretary"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 10000, 
-               "status": "company, registration 00653789", 
+               "link": "https://beta.companieshouse.gov.uk/company/00653789", 
                "pretty": "BS Eaton Ltd", 
                "address": "Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EY", 
                "item_id": "0001", 
                "donor": "BS Eaton Ltd", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/00653789/filing-history", 
+                     "charges": "/company/00653789/charges", 
+                     "self": "/company/00653789", 
+                     "officers": "/company/00653789/officers", 
+                     "persons_with_significant_control": "/company/00653789/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "32990"
+                  ], 
+                  "etag": "7be680035d0ea56f3928d9ddf77b5c77a267b3bb", 
+                  "registered_office_address": {
+                     "postal_code": "WS6 7EY", 
+                     "region": "Staffs", 
+                     "locality": "Nr Walsall", 
+                     "address_line_2": "Cheslyn Hay", 
+                     "address_line_1": "Coppice Lane"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-01-02", 
+                     "last_made_up_to": "2016-12-19", 
+                     "next_made_up_to": "2017-12-19", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-12-19", 
+                  "company_number": "00653789", 
+                  "date_of_creation": "1960-03-24", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "type": "group", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "B S EATON LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: BS Eaton LtdAddress of donor: Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EYAmount of donation or nature and value if donation in kind: \u00a35,000Date received: 6 June 2017Date accepted: 6 June 2017Donor status: company, registration 00653789(Registered 07 July 2017)", 
-               "received": "6 June 2017", 
-               "accepted": "6 June 2017", 
+               "status": "company, registration 00653789", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Stewart Michael Eaton", 
+                     "links": {
+                        "self": "/company/00653789/persons-with-significant-control/individual/DaQmpPxXC4RCC4fjLvBaopNWQxo"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "Great Britain", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent"
+                     ], 
+                     "name_elements": {
+                        "surname": "Eaton", 
+                        "title": "Mr", 
+                        "middle_name": "Michael", 
+                        "forename": "Stewart"
+                     }, 
+                     "date_of_birth": {
+                        "year": 1936, 
+                        "month": 12
+                     }, 
+                     "etag": "a41347b08b6d2cda94d5fd1657aa6119a9c1b2bb", 
+                     "address": {
+                        "postal_code": "WS6 7EY", 
+                        "region": "Staffs", 
+                        "address_line_1": "Coppice Lane", 
+                        "address_line_2": "Cheslyn Hay", 
+                        "locality": "Nr Walsall"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "07/07/2017", 
+               "officers": [
+                  {
+                     "name": "EATON, Oliver Stewart Charles", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/S7x6_y9bP4OGxnnbVo14ZUBV514/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-10-04", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1972
+                     }, 
+                     "address": {
+                        "address_line_2": "Cheslyn Hay", 
+                        "region": "Staffs", 
+                        "locality": "Nr Walsall", 
+                        "postal_code": "WS6 7EY", 
+                        "address_line_1": "Coppice Lane"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Sales And Marketing"
+                  }, 
+                  {
+                     "name": "EATON, Stewart Michael", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/P0xG6NzBmqSS8nh4xBCHERUk0-I/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "WS6 7EY", 
+                        "region": "Staffs", 
+                        "address_line_1": "Coppice Lane", 
+                        "address_line_2": "Cheslyn Hay", 
+                        "locality": "Nr Walsall"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1936
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Concrete Manufacturer"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "2000-05-23", 
+                     "name": "EATON, Roger Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sAZjhChymTlOp8z99jG3P-8M2XQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Nether Stowey", 
+                        "region": "Somerset", 
+                        "address_line_1": "Global House Castle Street", 
+                        "postal_code": "TA5 1LN", 
+                        "locality": "Bridgwater"
+                     }
+                  }, 
+                  {
+                     "name": "WHITTAKER, William Henry", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/jurprgYLXpe2_N7gaew-2d0vP0I/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2000-05-23", 
+                     "resigned_on": "2009-04-20", 
+                     "address": {
+                        "locality": "Ganarew", 
+                        "premises": "Great Hillshone Cottage", 
+                        "country": "United Kingdom", 
+                        "region": "Herefordshire", 
+                        "postal_code": "NP25 3SS", 
+                        "address_line_1": "Lewstone"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "EATON, Marion", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bHmJGRT-yokWfGNZgKDoDlOlcaU/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Penkridge", 
+                        "region": "Staffordshire", 
+                        "address_line_1": "13 Wiscombe Avenue", 
+                        "postal_code": "ST19 5EH", 
+                        "locality": "Stafford"
+                     }, 
+                     "resigned_on": "1995-08-27", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1906
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "EATON, Roger Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sAZjhChymTlOp8z99jG3P-8M2XQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Nether Stowey", 
+                        "region": "Somerset", 
+                        "address_line_1": "Global House Castle Street", 
+                        "postal_code": "TA5 1LN", 
+                        "locality": "Bridgwater"
+                     }, 
+                     "appointed_on": "1992-04-06", 
+                     "resigned_on": "2000-09-30", 
+                     "date_of_birth": {
+                        "year": 1943, 
+                        "month": 1
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Secretary"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 5000, 
-               "status": "company, registration 00653789", 
+               "link": "https://beta.companieshouse.gov.uk/company/00653789", 
                "pretty": "BS Eaton Ltd", 
                "address": "Coppice Lane, Cheslyn Hay, Nr Walsall, Staffordshire WS6 7EY", 
                "item_id": "0002", 
                "donor": "BS Eaton Ltd", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/00653789/filing-history", 
+                     "charges": "/company/00653789/charges", 
+                     "self": "/company/00653789", 
+                     "officers": "/company/00653789/officers", 
+                     "persons_with_significant_control": "/company/00653789/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "32990"
+                  ], 
+                  "etag": "7be680035d0ea56f3928d9ddf77b5c77a267b3bb", 
+                  "registered_office_address": {
+                     "postal_code": "WS6 7EY", 
+                     "region": "Staffs", 
+                     "locality": "Nr Walsall", 
+                     "address_line_2": "Cheslyn Hay", 
+                     "address_line_1": "Coppice Lane"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-01-02", 
+                     "last_made_up_to": "2016-12-19", 
+                     "next_made_up_to": "2017-12-19", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-12-19", 
+                  "company_number": "00653789", 
+                  "date_of_creation": "1960-03-24", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "type": "group", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "B S EATON LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Timothy EasbyAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a32,500Date received: 6 June 2017Date accepted: 6 June 2017Donor status: individual(Registered 07 July 2017)", 
-               "received": "6 June 2017", 
-               "accepted": "6 June 2017", 
+               "status": "individual", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2500, 
-               "status": "individual", 
+               "link": null, 
                "pretty": "Timothy Easby", 
                "address": "private", 
                "item_id": "0003", 
                "donor": "Timothy Easby", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Timothy Easby", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -353,9 +848,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -366,9 +862,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -379,9 +876,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -392,9 +890,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -406,8 +905,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "williamson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -417,7 +917,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1976, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "gavin williamson", 
          "category_donations": 0, 
@@ -425,8 +925,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "williamson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -436,16 +937,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1976, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "gavin williamson", 
          "category_donations": 0, 
          "first": "gavin"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -456,9 +958,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -469,9 +972,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -607,11 +1111,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-07-12", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1972
+                        "year": 1972, 
+                        "month": 3
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -634,8 +1138,8 @@
                         "postal_code": "DH1 4QF", 
                         "address_line_1": "Beechcrest"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -645,12 +1149,6 @@
                            "appointments": "/officers/Ojt73Nl9dlSJXXJc5CXeqC-tjIY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-07-07", 
-                     "date_of_birth": {
-                        "year": 1942, 
-                        "month": 5
-                     }, 
                      "address": {
                         "premises": "House Of Lords", 
                         "country": "United Kingdom", 
@@ -658,8 +1156,14 @@
                         "postal_code": "SW1A 0PW", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-07-07", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1942
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Peer Of The Realm"
                   }, 
                   {
@@ -679,11 +1183,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2016-07-13", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1944
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -693,12 +1197,6 @@
                            "appointments": "/officers/Ojy3SQRovT3p8ASsLBI97xegMw4/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-07-07", 
-                     "date_of_birth": {
-                        "year": 1937, 
-                        "month": 3
-                     }, 
                      "address": {
                         "locality": "Croydon", 
                         "premises": "28", 
@@ -707,8 +1205,14 @@
                         "address_line_2": "25 Frith Road", 
                         "address_line_1": "Citiscape"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-07-07", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1937
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Politician"
                   }, 
                   {
@@ -718,12 +1222,6 @@
                            "appointments": "/officers/HS9gnfKrjjvSP2YR5dsxTl5dFxI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2017-07-12", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "House Of Commons", 
@@ -732,8 +1230,14 @@
                         "address_line_2": "Westminster", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-07-12", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1971
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -746,8 +1250,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-07-14", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "Houses Of Parliament", 
@@ -767,20 +1271,20 @@
                            "appointments": "/officers/Dikn7HF37G-qL4W5NyZcCnIOGXQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2011-10-19", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1942
-                     }, 
                      "address": {
                         "address_line_2": "House Of Commons", 
                         "address_line_1": "Westminster Hall", 
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2011-10-19", 
+                     "date_of_birth": {
+                        "year": 1942, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Parliamentarian"
                   }, 
                   {
@@ -793,8 +1297,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-07-07", 
                      "date_of_birth": {
-                        "year": 1957, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1957
                      }, 
                      "address": {
                         "premises": "House Of Commons", 
@@ -803,8 +1307,8 @@
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -840,16 +1344,16 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-11-07", 
                      "date_of_birth": {
-                        "year": 1933, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1933
                      }, 
                      "address": {
                         "address_line_1": "12 Gilkes Crescent", 
                         "postal_code": "SE21 7BS", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Surgeon"
                   }, 
                   {
@@ -862,8 +1366,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-07-12", 
                      "date_of_birth": {
-                        "year": 1964, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1964
                      }, 
                      "address": {
                         "locality": "London", 
@@ -873,8 +1377,8 @@
                         "address_line_2": "Westminster", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -884,18 +1388,18 @@
                            "appointments": "/officers/kbtbxJ20x5x-7Py3Y3RboQAJ6es/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2015-07-14", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1950
-                     }, 
                      "address": {
                         "premises": "House Of Commons", 
                         "country": "England", 
                         "locality": "London", 
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "Houses Of Parliament"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2015-07-14", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1950
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -921,8 +1425,8 @@
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -935,8 +1439,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-07-07", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 3
                      }, 
                      "address": {
                         "premises": "House Of Commons", 
@@ -963,8 +1467,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-07-12", 
                      "date_of_birth": {
-                        "year": 1956, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1956
                      }, 
                      "address": {
                         "locality": "London", 
@@ -974,8 +1478,8 @@
                         "address_line_2": "Westminster", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -985,6 +1489,12 @@
                            "appointments": "/officers/wF6EhtUh4bCnBIdaGcYAZomV1i0/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-07-14", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1954
+                     }, 
                      "address": {
                         "premises": "Houses Of Commons", 
                         "country": "England", 
@@ -992,14 +1502,8 @@
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-07-14", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 12
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1026,8 +1530,6 @@
                            "appointments": "/officers/0ZcjVAGbC8HCLOwud6Nk3IiyaTM/appointments"
                         }
                      }, 
-                     "appointed_on": "2004-01-01", 
-                     "resigned_on": "2017-09-15", 
                      "address": {
                         "postal_code": "NP25 4JQ", 
                         "region": "Monmouthshire", 
@@ -1035,8 +1537,10 @@
                         "address_line_2": "Craig Y Dorth", 
                         "address_line_1": "Craig Y Dorth House"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2004-01-01", 
+                     "resigned_on": "2017-09-15", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Parliamentary"
                   }, 
                   {
@@ -1050,8 +1554,8 @@
                      "appointed_on": "2006-11-28", 
                      "resigned_on": "2012-06-27", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1939
+                        "year": 1939, 
+                        "month": 6
                      }, 
                      "address": {
                         "postal_code": "W11 3NU", 
@@ -1070,6 +1574,12 @@
                            "appointments": "/officers/17n88EbiayNcP6hTNZz0P250a4U/appointments"
                         }
                      }, 
+                     "address": {
+                        "postal_code": "W11 3NU", 
+                        "locality": "London", 
+                        "address_line_2": "Holland Park", 
+                        "address_line_1": "88 Ladbroke Road"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2002-12-03", 
                      "resigned_on": "2005-05-05", 
@@ -1077,14 +1587,8 @@
                         "month": 6, 
                         "year": 1939
                      }, 
-                     "address": {
-                        "postal_code": "W11 3NU", 
-                        "locality": "London", 
-                        "address_line_2": "Holland Park", 
-                        "address_line_1": "88 Ladbroke Road"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1122,8 +1626,8 @@
                      "appointed_on": "2002-12-03", 
                      "resigned_on": "2010-07-07", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1944
                      }, 
                      "address": {
                         "region": "Kent", 
@@ -1131,8 +1635,8 @@
                         "postal_code": "DA17 6JR", 
                         "address_line_1": "18 Sutherland Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1142,19 +1646,19 @@
                            "appointments": "/officers/xQhWmA87MkVZKky67ycHnmtU-UI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-07-02", 
-                     "resigned_on": "2015-07-14", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1946
-                     }, 
                      "address": {
                         "postal_code": "S66 7LF", 
                         "region": "South Yorkshire", 
                         "locality": "Rotherham", 
                         "address_line_2": "Maltby", 
                         "address_line_1": "73 Blyth Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-07-02", 
+                     "resigned_on": "2015-07-14", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1167,12 +1671,6 @@
                            "appointments": "/officers/wS-Wqgk1O3BDx0HPC-eZN_dEogE/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "North Yorkshire", 
-                        "locality": "York", 
-                        "postal_code": "YO10 4DS", 
-                        "address_line_1": "9 Holly Terrace"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2002-12-03", 
                      "resigned_on": "2015-07-14", 
@@ -1180,8 +1678,14 @@
                         "year": 1952, 
                         "month": 1
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "North Yorkshire", 
+                        "locality": "York", 
+                        "postal_code": "YO10 4DS", 
+                        "address_line_1": "9 Holly Terrace"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1191,13 +1695,6 @@
                            "appointments": "/officers/IGFWckp8gv_ndcRRxeLN1CYYnqQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-07-14", 
-                     "resigned_on": "2016-07-13", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1956
-                     }, 
                      "address": {
                         "premises": "House Of Commons", 
                         "country": "England", 
@@ -1205,8 +1702,15 @@
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-07-14", 
+                     "resigned_on": "2016-07-13", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1956
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1220,8 +1724,8 @@
                      "appointed_on": "2010-07-07", 
                      "resigned_on": "2013-06-26", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1929
+                        "year": 1929, 
+                        "month": 10
                      }, 
                      "address": {
                         "premises": "House Of Lords", 
@@ -1241,11 +1745,6 @@
                            "appointments": "/officers/HMCt_PMqBI6sERjfgenY3F4kLCQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "7 Smith Square", 
-                        "postal_code": "SW1P 3HT", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2005-06-29", 
                      "resigned_on": "2011-10-19", 
@@ -1253,8 +1752,13 @@
                         "year": 1944, 
                         "month": 7
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "address_line_1": "7 Smith Square", 
+                        "postal_code": "SW1P 3HT", 
+                        "locality": "London"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1272,11 +1776,11 @@
                      "appointed_on": "2007-11-07", 
                      "resigned_on": "2008-07-02", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1960
+                        "year": 1960, 
+                        "month": 4
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1286,13 +1790,6 @@
                            "appointments": "/officers/A0L9KJLXMcJv2xt_5LhHsVebToo/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-10-19", 
-                     "resigned_on": "2015-07-14", 
-                     "date_of_birth": {
-                        "year": 1944, 
-                        "month": 11
-                     }, 
                      "address": {
                         "premises": "Westminster", 
                         "country": "United Kingdom", 
@@ -1300,8 +1797,15 @@
                         "care_of": "HOUSE OF COMMONS", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-10-19", 
+                     "resigned_on": "2015-07-14", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 11
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1325,8 +1829,8 @@
                         "postal_code": "AB31 4HJ", 
                         "locality": "Banchory"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1336,19 +1840,19 @@
                            "appointments": "/officers/xBR3IS-pAbjdQIMcXgrpV7O7lY8/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-11-03", 
+                     "resigned_on": "2010-07-07", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1941
+                     }, 
                      "address": {
                         "postal_code": "GU21 4XU", 
                         "region": "Surrey", 
                         "address_line_1": "Little Heath", 
                         "address_line_2": "Littlewick Road", 
                         "locality": "Woking"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-11-03", 
-                     "resigned_on": "2010-07-07", 
-                     "date_of_birth": {
-                        "year": 1941, 
-                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1377,8 +1881,8 @@
                         "address_line_2": "House Of Commons London", 
                         "address_line_1": "St Stephens Tower"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Parliamentarian"
                   }, 
                   {
@@ -1388,17 +1892,17 @@
                            "appointments": "/officers/1umFYH5gW-fCnrewUdpQs8F0wiE/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-06-29", 
-                     "resigned_on": "2009-07-06", 
-                     "date_of_birth": {
-                        "year": 1940, 
-                        "month": 7
-                     }, 
                      "address": {
                         "region": "Wirral", 
                         "locality": "Heswall", 
                         "postal_code": "CH60 8PQ", 
                         "address_line_1": "Lawnwood"
+                     }, 
+                     "appointed_on": "2005-06-29", 
+                     "resigned_on": "2009-07-06", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1940
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1408,7 +1912,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/04606846", 
-               "pretty": "gavin williamson gavin alexander williamson", 
+               "pretty": "Gavin Williamson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1509,8 +2013,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2004-08-04", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 5
                      }, 
                      "address": {
                         "address_line_2": "Sanderson Street", 
@@ -1530,18 +2034,18 @@
                            "appointments": "/officers/LGI4p4yrmYNQVWJp5xcfIULaSdU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-01-27", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1958
+                     }, 
                      "address": {
                         "address_line_2": "16 Central Avenue", 
                         "region": "Norwich Norfolk", 
                         "locality": "St Andrews Business Park", 
                         "postal_code": "NR7 0HR", 
                         "address_line_1": "Lancaster House"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-01-27", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1958
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1554,18 +2058,18 @@
                            "appointments": "/officers/cZvQONQS5AeREIOldK_-7s5UPFw/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-02-10", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1981
-                     }, 
                      "address": {
                         "address_line_2": "16 Central Avenue", 
                         "region": "Norwich Norfolk", 
                         "address_line_1": "Lancaster House", 
                         "postal_code": "NR7 0HR", 
                         "locality": "St Andrews Business Park"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-02-10", 
+                     "date_of_birth": {
+                        "year": 1981, 
+                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1591,8 +2095,8 @@
                         "postal_code": "WN1 1YN", 
                         "locality": "Wigan"
                      }, 
-                     "nationality": "English", 
                      "officer_role": "director", 
+                     "nationality": "English", 
                      "occupation": "Local Goverment Officer"
                   }, 
                   {
@@ -1636,8 +2140,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2004-03-31", 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1965
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1669,6 +2173,13 @@
                            "appointments": "/officers/PksAiWS5uPnBEqwbI4mL_aC31D0/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-10-03", 
+                     "resigned_on": "2015-02-10", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 11
+                     }, 
                      "address": {
                         "premises": "Waterside House", 
                         "country": "England", 
@@ -1676,15 +2187,8 @@
                         "postal_code": "WN3 5AZ", 
                         "address_line_1": "Waterside Drive"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-10-03", 
-                     "resigned_on": "2015-02-10", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1957
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1718,18 +2222,18 @@
                            "appointments": "/officers/1Ja5zRYyXzmZwzy_HJjbhGUMygo/appointments"
                         }
                      }, 
+                     "appointed_on": "2004-01-27", 
+                     "resigned_on": "2009-04-30", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1954
+                     }, 
                      "address": {
                         "postal_code": "L37 7BE", 
                         "region": "Merseyside", 
                         "locality": "Liverpool", 
                         "address_line_2": "Freshfield", 
                         "address_line_1": "16 Massams Lane"
-                     }, 
-                     "appointed_on": "2004-01-27", 
-                     "resigned_on": "2009-04-30", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 6
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1742,19 +2246,19 @@
                            "appointments": "/officers/By9-mwT1WLJs4hsSMVfuQJGSgvA/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "LL12 8LE", 
-                        "region": "Clwyd", 
-                        "locality": "Marford", 
-                        "address_line_2": "Pistyll Hill", 
-                        "address_line_1": "Chantry Meade"
-                     }, 
                      "country_of_residence": "Uk", 
                      "appointed_on": "2007-06-27", 
                      "resigned_on": "2010-12-22", 
                      "date_of_birth": {
                         "month": 10, 
                         "year": 1959
+                     }, 
+                     "address": {
+                        "postal_code": "LL12 8LE", 
+                        "region": "Clwyd", 
+                        "locality": "Marford", 
+                        "address_line_2": "Pistyll Hill", 
+                        "address_line_1": "Chantry Meade"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1803,8 +2307,8 @@
                      "appointed_on": "2004-04-01", 
                      "resigned_on": "2004-08-04", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 7
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1817,13 +2321,6 @@
                            "appointments": "/officers/H6TaHYIsiRzVDLWAkREnu7HTerU/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-05-01", 
-                     "resigned_on": "2010-05-06", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1976
-                     }, 
                      "address": {
                         "locality": "Ashbourne", 
                         "premises": "7", 
@@ -1831,6 +2328,13 @@
                         "postal_code": "DE6 3DP", 
                         "address_line_2": "Brailsford", 
                         "address_line_1": "Sundial Close"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-05-01", 
+                     "resigned_on": "2010-05-06", 
+                     "date_of_birth": {
+                        "year": 1976, 
+                        "month": 6
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1840,7 +2344,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/05026630", 
-               "pretty": "gavin williamson gavin alexander williamson", 
+               "pretty": "Gavin Williamson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1987,8 +2491,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2009-02-06", 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1961
                      }, 
                      "address": {
                         "premises": "39", 
@@ -1997,8 +2501,8 @@
                         "postal_code": "ST4 8AN", 
                         "locality": "Trentham"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -2038,11 +2542,11 @@
                      "appointed_on": "2009-02-06", 
                      "resigned_on": "2009-02-06", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 7
                      }, 
-                     "nationality": "English", 
                      "officer_role": "director", 
+                     "nationality": "English", 
                      "occupation": "Company Director/Solicitor"
                   }, 
                   {
@@ -2075,7 +2579,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/06812058", 
-               "pretty": "gavin williamson gavin alexander williamson", 
+               "pretty": "Gavin Williamson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

@@ -205,9 +205,10 @@
    "eu_ref_stance": "", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -218,9 +219,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -231,9 +233,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -244,9 +247,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -257,9 +261,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -270,9 +275,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -283,9 +289,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -297,7 +304,30 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "little pengelly", 
+         "raw_data": [
+            {
+               "raw_string": "Qubric Ltd (non-trading). (Registered 07 July 2017)", 
+               "Qubric Ltd (non-trading). (Registered 07 July 2017)": "Qubric Ltd (non-trading). (Registered 07 July 2017)"
+            }, 
+            {
+               "raw_string": "CIPCR Ltd (non-trading). (Registered 07 July 2017)", 
+               "CIPCR Ltd (non-trading). (Registered 07 July 2017)": "CIPCR Ltd (non-trading). (Registered 07 July 2017)"
+            }
+         ], 
+         "category_description": "Shareholdings", 
+         "category_gifts": 0, 
+         "month": 12, 
+         "middle": "", 
+         "category_type": "shareholdings", 
+         "category_wealth": 30, 
+         "category_income": 0, 
+         "raw_items": [
+            "Qubric Ltd (non-trading). (Registered 07 July 2017)", 
+            "CIPCR Ltd (non-trading). (Registered 07 July 2017)"
+         ], 
+         "year": 1979, 
          "items": [
             {
                "raw_string": "Qubric Ltd (non-trading). (Registered 07 July 2017)", 
@@ -327,8 +357,8 @@
                         "year": 1979, 
                         "month": 12
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -363,13 +393,6 @@
                            "appointments": "/officers/2xml6Gw_Ry-P397FgmaaZua5XTA/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "64", 
-                        "country": "Northern Ireland", 
-                        "locality": "Belfast", 
-                        "postal_code": "BT5 6ED", 
-                        "address_line_1": "Kirkliston Park"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-08-14", 
                      "resigned_on": "2013-11-14", 
@@ -377,8 +400,15 @@
                         "year": 1972, 
                         "month": 2
                      }, 
-                     "nationality": "United Kingdom", 
+                     "address": {
+                        "premises": "64", 
+                        "country": "Northern Ireland", 
+                        "locality": "Belfast", 
+                        "postal_code": "BT5 6ED", 
+                        "address_line_1": "Kirkliston Park"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "United Kingdom", 
                      "occupation": "Civil Servant"
                   }, 
                   {
@@ -388,6 +418,13 @@
                            "appointments": "/officers/0FeLNvkR49v5Rw9cQLq8DRdQ76s/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-08-14", 
+                     "resigned_on": "2014-06-30", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1966
+                     }, 
                      "address": {
                         "premises": "64", 
                         "country": "Northern Ireland", 
@@ -395,15 +432,8 @@
                         "postal_code": "BT5 6ED", 
                         "locality": "Belfast"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-08-14", 
-                     "resigned_on": "2014-06-30", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 12
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }
                ], 
@@ -502,8 +532,8 @@
                         "year": 1979, 
                         "month": 12
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -513,13 +543,6 @@
                            "appointments": "/officers/VNuADxWt5rbDWmShvSbNA04gNfc/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2011-04-19", 
-                     "resigned_on": "2014-09-01", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 12
-                     }, 
                      "address": {
                         "premises": "64", 
                         "region": "Northern Ireland", 
@@ -527,8 +550,15 @@
                         "postal_code": "BT5 6ED", 
                         "address_line_1": "Kirkliston Park"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2011-04-19", 
+                     "resigned_on": "2014-09-01", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1962
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -538,19 +568,19 @@
                            "appointments": "/officers/2OJzRvQjgrtQXwAuLXX6XCwjkS4/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2011-04-19", 
+                     "resigned_on": "2013-11-11", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1972
+                     }, 
                      "address": {
                         "premises": "64", 
                         "region": "Northern Ireland", 
                         "locality": "Belfast", 
                         "postal_code": "BT5 6ED", 
                         "address_line_1": "Kirkliston Park"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2011-04-19", 
-                     "resigned_on": "2013-11-11", 
-                     "date_of_birth": {
-                        "year": 1972, 
-                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -626,19 +656,6 @@
                }
             }
          ], 
-         "category_description": "Shareholdings", 
-         "category_gifts": 0, 
-         "month": 12, 
-         "middle": "", 
-         "category_type": "shareholdings", 
-         "category_wealth": 30, 
-         "category_income": 0, 
-         "raw_items": [
-            "Qubric Ltd (non-trading). (Registered 07 July 2017)", 
-            "CIPCR Ltd (non-trading). (Registered 07 July 2017)"
-         ], 
-         "year": 1979, 
-         "category_id": 8, 
          "category_amount": 30, 
          "display": "emma little pengelly", 
          "category_donations": 0, 
@@ -646,8 +663,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "little pengelly", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -657,13 +675,25 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1979, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "emma little pengelly", 
          "category_donations": 0, 
          "first": "emma"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Barrister (non-practising). (Registered 07 July 2017)", 
+               "Barrister (non-practising). (Registered 07 July 2017)": "Barrister (non-practising). (Registered 07 July 2017)"
+            }, 
+            {
+               "raw_string": "Director (unpaid) of CIPBCR Ltd, a not for profit company sharing the experience and lessons of peace building and conflict resolution. (Registered 07 July 2017)", 
+               "Director (unpaid) of CIPBCR Ltd, a not for profit company sharing the experience and lessons of peace building and conflict resolution. (Registered 07 July 2017)": "Director (unpaid) of CIPBCR Ltd, a not for profit company sharing the experience and lessons of peace building and conflict resolution. (Registered 07 July 2017)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Barrister (non-practising). (Registered 07 July 2017)", 
@@ -692,8 +722,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -707,9 +735,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -720,9 +749,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

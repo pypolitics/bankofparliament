@@ -385,9 +385,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -398,9 +399,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -411,9 +413,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -424,9 +427,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -437,28 +441,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: British Spanish Tertulias ForumAddress of donor: 66 Warriner Gardens, London SW11 4DUEstimate of the probable value (or amount of any donation): flights, dinners, accommodation and ground transport; total value \u00a3850Destination of visit: Seville, SpainDates of visit: 2-4 December 2016Purpose of visit: to attend the British-Spanish Tertulias Forum, an annual weekend bringing MPs, business people, academics and artists together to discuss topical issues.(Registered 04 January 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "flights, dinners, accommodation and ground transport; total value \u00a3850", 
+               "(Registered 04 January 2017)": "(Registered 04 January 2017)", 
+               "Purpose of visit": "to attend the British-Spanish Tertulias Forum, an annual weekend bringing MPs, business people, academics and artists together to discuss topical issues.", 
+               "Destination of visit": "Seville, Spain", 
+               "Dates of visit": "2-4 December 2016", 
+               "Name of donor": "British Spanish Tertulias Forum", 
+               "Address of donor": "66 Warriner Gardens, London SW11 4DU"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 850, 
          "items": [
             {
                "raw_string": "Name of donor: British Spanish Tertulias ForumAddress of donor: 66 Warriner Gardens, London SW11 4DUEstimate of the probable value (or amount of any donation): flights, dinners, accommodation and ground transport; total value \u00a3850Destination of visit: Seville, SpainDates of visit: 2-4 December 2016Purpose of visit: to attend the British-Spanish Tertulias Forum, an annual weekend bringing MPs, business people, academics and artists together to discuss topical issues.(Registered 04 January 2017)", 
-               "dates": "2-4 December 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "04/01/2017", 
                "destination": "Seville, Spain", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 850, 
+               "link": null, 
                "purpose": "to attend the British-Spanish Tertulias Forum, an annual weekend bringing MPs, business people, academics and artists together to discuss topical issues.", 
                "pretty": "British Spanish Tertulias Forum", 
                "address": "66 Warriner Gardens, London SW11 4DU", 
                "item_id": "0001", 
                "donor": "British Spanish Tertulias Forum", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "British Spanish Tertulias Forum", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 850, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -471,9 +496,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -484,9 +510,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -498,8 +525,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "gibb", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -509,7 +537,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1960, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "nick gibb", 
          "category_donations": 0, 
@@ -517,8 +545,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "gibb", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -528,16 +557,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1960, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "nick gibb", 
          "category_donations": 0, 
          "first": "nicolas"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -548,9 +578,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -561,9 +592,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -645,21 +677,21 @@
                         "self": "/company/06182612/persons-with-significant-control/individual/4gNF1Ve-zmmScmOnpgFVdvw-q_c"
                      }, 
                      "notified_on": "2016-04-06", 
-                     "country_of_residence": "England", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "significant-influence-or-control"
                      ], 
-                     "date_of_birth": {
-                        "year": 1965, 
-                        "month": 7
-                     }, 
                      "name_elements": {
-                        "middle_name": "Peter John", 
-                        "title": "Mr", 
                         "surname": "Ross", 
-                        "forename": "David"
+                        "forename": "David", 
+                        "middle_name": "Peter John", 
+                        "title": "Mr"
                      }, 
-                     "etag": "a3cc42423ac91b45e6255a3ebaf0d8a253c379e9", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1965
+                     }, 
+                     "etag": "9cb1821613a53a328ddb7305afe165f1f3d2a1d9", 
                      "address": {
                         "locality": "Grantham", 
                         "premises": "2", 
@@ -753,18 +785,18 @@
                            "appointments": "/officers/-GBW51q8aSqApFctPiqdOiiPutM/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-01-31", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 2
+                     }, 
                      "address": {
                         "premises": "Peterhouse", 
                         "country": "England", 
                         "locality": "Cambridge", 
                         "postal_code": "CB2 1RD", 
                         "address_line_1": "Peterhouse"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-01-31", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 2
                      }, 
                      "nationality": "Uk", 
                      "officer_role": "director", 
@@ -777,10 +809,60 @@
                            "appointments": "/officers/4ugOA4JMyKXES9VXA9lpVdzpfIo/appointments"
                         }
                      }, 
+                     "address": {
+                        "locality": "Grantham", 
+                        "premises": "2", 
+                        "region": "Lincolnshire", 
+                        "postal_code": "NG31 7XY", 
+                        "address_line_2": "Off Turnpike Close Swingbridge Road", 
+                        "address_line_1": "Hill Court"
+                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2015-02-02", 
                      "date_of_birth": {
                         "year": 1968, 
+                        "month": 8
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Media Consultant"
+                  }, 
+                  {
+                     "name": "FOSTER, Andrew William, Sir", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/3xG6fmnWhcIZip-WPN1BvKhWE00/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-02-12", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1944
+                     }, 
+                     "address": {
+                        "locality": "Grantham", 
+                        "premises": "2", 
+                        "region": "Lincolnshire", 
+                        "postal_code": "NG31 7XY", 
+                        "address_line_2": "Off Turnpike Close Swingbridge Road", 
+                        "address_line_1": "Hill Court"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "HANCOCK, Alan Geoffrey", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/m2XiTsIQSh87kGkgWBnNl5idvKI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-04-22", 
+                     "date_of_birth": {
+                        "year": 1946, 
                         "month": 8
                      }, 
                      "address": {
@@ -791,58 +873,8 @@
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
-                     "occupation": "Media Consultant"
-                  }, 
-                  {
-                     "name": "FOSTER, Andrew William, Sir", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/3xG6fmnWhcIZip-WPN1BvKhWE00/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "locality": "Grantham", 
-                        "premises": "2", 
-                        "region": "Lincolnshire", 
-                        "postal_code": "NG31 7XY", 
-                        "address_line_2": "Off Turnpike Close Swingbridge Road", 
-                        "address_line_1": "Hill Court"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-02-12", 
-                     "date_of_birth": {
-                        "year": 1944, 
-                        "month": 12
-                     }, 
                      "officer_role": "director", 
-                     "nationality": "British", 
-                     "occupation": "Company Director"
-                  }, 
-                  {
-                     "name": "HANCOCK, Alan Geoffrey", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/m2XiTsIQSh87kGkgWBnNl5idvKI/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "locality": "Grantham", 
-                        "premises": "2", 
-                        "region": "Lincolnshire", 
-                        "postal_code": "NG31 7XY", 
-                        "address_line_2": "Off Turnpike Close Swingbridge Road", 
-                        "address_line_1": "Hill Court"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-04-22", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1946
-                     }, 
-                     "officer_role": "director", 
-                     "nationality": "British", 
                      "occupation": "Retired Schoolmaster"
                   }, 
                   {
@@ -855,8 +887,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2009-10-15", 
                      "date_of_birth": {
-                        "year": 1946, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1946
                      }, 
                      "address": {
                         "premises": "12", 
@@ -865,8 +897,8 @@
                         "postal_code": "PE9 1DQ", 
                         "locality": "Stamford"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired Schoolmaster"
                   }, 
                   {
@@ -890,8 +922,8 @@
                         "month": 10, 
                         "year": 1963
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -901,6 +933,12 @@
                            "appointments": "/officers/rmCbuhLcRCe2PqFJTI-LActlpKk/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-02-06", 
+                     "date_of_birth": {
+                        "year": 1965, 
+                        "month": 4
+                     }, 
                      "address": {
                         "locality": "Grantham", 
                         "premises": "2", 
@@ -908,12 +946,6 @@
                         "postal_code": "NG31 7XY", 
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-02-06", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1965
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -940,8 +972,8 @@
                         "month": 6, 
                         "year": 1962
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "The Bishop Of Brixworth"
                   }, 
                   {
@@ -962,11 +994,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-02-12", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 5
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Homemaker"
                   }, 
                   {
@@ -987,11 +1019,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-02-06", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1978
+                        "year": 1978, 
+                        "month": 12
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Educationalist"
                   }, 
                   {
@@ -1010,11 +1042,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-03-26", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1942
+                        "year": 1942, 
+                        "month": 6
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired Solicitor"
                   }, 
                   {
@@ -1024,6 +1056,12 @@
                            "appointments": "/officers/-8lz-1duWx5Vl6wk4k59uR5TqVc/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-09-23", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 12
+                     }, 
                      "address": {
                         "locality": "Grantham", 
                         "premises": "2", 
@@ -1032,12 +1070,6 @@
                         "postal_code": "NG31 7XY", 
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-09-23", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1050,16 +1082,16 @@
                            "appointments": "/officers/gyT_aCUuvreemSHGcnZ7a4cbQVQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "61a\\ Cadogan Square", 
-                        "postal_code": "SW1X 0HZ", 
-                        "locality": "London"
-                     }, 
-                     "country_of_residence": "England", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-05-09", 
                      "date_of_birth": {
                         "year": 1965, 
                         "month": 7
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SW1X 0HZ", 
+                        "address_line_1": "61a\\ Cadogan Square"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1072,6 +1104,12 @@
                            "appointments": "/officers/1XtIqntfsWMWzHZSUQLDw5S4ljU/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-04-22", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1968
+                     }, 
                      "address": {
                         "locality": "Grantham", 
                         "premises": "2", 
@@ -1079,12 +1117,6 @@
                         "postal_code": "NG31 7XY", 
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-04-22", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1100,8 +1132,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-06-13", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 2
                      }, 
                      "address": {
                         "locality": "Grantham", 
@@ -1111,8 +1143,8 @@
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -1174,8 +1206,8 @@
                         "month": 8, 
                         "year": 1952
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Bishop"
                   }, 
                   {
@@ -1189,8 +1221,8 @@
                      "appointed_on": "2015-04-20", 
                      "resigned_on": "2017-01-19", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1947
+                        "year": 1947, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "Grantham", 
@@ -1211,6 +1243,13 @@
                            "appointments": "/officers/bj34M0TX1YzJZ6xC36VxpGc4CpY/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-03-12", 
+                     "resigned_on": "2016-03-11", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1966
+                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "34", 
@@ -1218,13 +1257,6 @@
                         "postal_code": "EC1V 4JQ", 
                         "address_line_2": "5 Brewhouse Yard", 
                         "address_line_1": "Cannon Court"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-03-12", 
-                     "resigned_on": "2016-03-11", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1966
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1237,13 +1269,6 @@
                            "appointments": "/officers/S-rEfTNxs-2xhsbAyqM9sF1pcBE/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "212", 
-                        "country": "England", 
-                        "address_line_1": "Abington Avenue", 
-                        "postal_code": "NN1 4PR", 
-                        "locality": "Northampton"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2011-11-07", 
                      "resigned_on": "2016-04-23", 
@@ -1251,8 +1276,15 @@
                         "year": 1951, 
                         "month": 2
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "premises": "212", 
+                        "country": "England", 
+                        "address_line_1": "Abington Avenue", 
+                        "postal_code": "NN1 4PR", 
+                        "locality": "Northampton"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1262,13 +1294,6 @@
                            "appointments": "/officers/6fvfMmA2C_O_54OWeg4ISurOlIc/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-03-18", 
-                     "resigned_on": "2014-08-01", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1960
-                     }, 
                      "address": {
                         "locality": "Grantham", 
                         "premises": "2", 
@@ -1277,6 +1302,13 @@
                         "postal_code": "NG31 7XY", 
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-18", 
+                     "resigned_on": "2014-08-01", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 9
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1289,6 +1321,13 @@
                            "appointments": "/officers/75OAsK35COdod3qBLj9dEyJsEvw/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-07-09", 
+                     "resigned_on": "2016-09-27", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1965
+                     }, 
                      "address": {
                         "locality": "Spilsby", 
                         "premises": "Wellington House", 
@@ -1296,13 +1335,6 @@
                         "region": "Lincolnshire", 
                         "postal_code": "PE23 5JF", 
                         "address_line_1": "Wellington Yard"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-07-09", 
-                     "resigned_on": "2016-09-27", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1965
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1315,21 +1347,21 @@
                            "appointments": "/officers/SrVeu6GdznAuHjJGCeb2ePhgQQ4/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2007-05-09", 
+                     "resigned_on": "2009-10-14", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1966
+                     }, 
                      "address": {
                         "region": "Norfolk", 
                         "address_line_1": "The Grove", 
                         "postal_code": "NR9 4EL", 
                         "locality": "Hardingham"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2007-05-09", 
-                     "resigned_on": "2009-10-14", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 8
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Bursar"
                   }, 
                   {
@@ -1343,8 +1375,8 @@
                      "appointed_on": "2009-10-15", 
                      "resigned_on": "2013-11-04", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1962
                      }, 
                      "address": {
                         "premises": "The Parsonage", 
@@ -1367,8 +1399,8 @@
                      "appointed_on": "2016-06-13", 
                      "resigned_on": "2017-05-15", 
                      "date_of_birth": {
-                        "year": 1946, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1946
                      }, 
                      "address": {
                         "locality": "Grantham", 
@@ -1393,8 +1425,8 @@
                      "appointed_on": "2013-09-23", 
                      "resigned_on": "2016-04-23", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Grantham", 
@@ -1404,8 +1436,8 @@
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1415,6 +1447,13 @@
                            "appointments": "/officers/17EYdG6IKnhYuGAyZvOUzQZOZ8w/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-06-13", 
+                     "resigned_on": "2017-03-10", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 10
+                     }, 
                      "address": {
                         "locality": "Grantham", 
                         "premises": "2", 
@@ -1422,13 +1461,6 @@
                         "postal_code": "NG31 7XY", 
                         "address_line_2": "Off Turnpike Close Swingbridge Road", 
                         "address_line_1": "Hill Court"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-06-13", 
-                     "resigned_on": "2017-03-10", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1961
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1441,6 +1473,13 @@
                            "appointments": "/officers/etIqs1vR2-wAWs_DuTivfmTqvJE/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-01-31", 
+                     "resigned_on": "2014-11-17", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1949
+                     }, 
                      "address": {
                         "locality": "Grimsby", 
                         "premises": "Havelock Academy", 
@@ -1449,15 +1488,8 @@
                         "postal_code": "DN32 8JH", 
                         "address_line_1": "Holyoake Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-01-31", 
-                     "resigned_on": "2014-11-17", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1949
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Self Employed"
                   }, 
                   {
@@ -1471,8 +1503,8 @@
                      "appointed_on": "2012-03-12", 
                      "resigned_on": "2017-02-08", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "Windsor", 
@@ -1516,7 +1548,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/06182612", 
-               "pretty": "nicolas gibb nick gibb nicolas john gibb", 
+               "pretty": "Nick Gibb", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

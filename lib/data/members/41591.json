@@ -130,12 +130,17 @@
       "Leprosy,", 
       "Universal", 
       "Credit,", 
+      "Prisoners:", 
+      "Females,", 
       "Medicine:", 
       "Research", 
       "Department", 
       "for", 
       "International", 
       "Development,", 
+      "Ministry", 
+      "of", 
+      "Justice,", 
       "Department", 
       "of", 
       "Health,", 
@@ -149,7 +154,7 @@
    ], 
    "mp_income": 75594, 
    "mp_donations": 2000, 
-   "wrans_departments": "Department for International Development, Department of Health, HM Treasury", 
+   "wrans_departments": "Department for International Development, Ministry of Justice, Department of Health, HM Treasury", 
    "person_id": "25638", 
    "party": "Labour", 
    "forname": "Fiona", 
@@ -159,6 +164,14 @@
    "eu_ref_stance": "", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "3 July 2017, received \u00a3632.01 from Dorling Cottrell Law, Grant Hall, Parsons Green, St Ives, Cambridgeshire PE27 4AA, for work completed in my role as Corporate Team Leader. Hours: no hours since election. (Registered 05 July 2017)", 
+               "3 July 2017, received \u00a3632.01 from Dorling Cottrell Law, Grant Hall, Parsons Green, St Ives, Cambridgeshire PE27 4AA, for work completed in my role as Corporate Team Leader. Hours": "no hours since election. (Registered 05 July 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "3 July 2017, received \u00a3632.01 from Dorling Cottrell Law, Grant Hall, Parsons Green, St Ives, Cambridgeshire PE27 4AA, for work completed in my role as Corporate Team Leader. Hours: no hours since election. (Registered 05 July 2017)", 
@@ -174,8 +187,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 632, 
          "raw_items": [
@@ -188,6 +199,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Communication Workers UnionAddress of donor: Eidfrs Industrial Estate, Rodney Way, Chelmsford CM1 3BYAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 05 July 2017)", 
+               "(Registered 05 July 2017)": "(Registered 05 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "Communication Workers Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "Eidfrs Industrial Estate, Rodney Way, Chelmsford CM1 3BY"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Communication Workers UnionAddress of donor: Eidfrs Industrial Estate, Rodney Way, Chelmsford CM1 3BYAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 05 July 2017)", 
@@ -195,19 +218,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "05/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": null, 
                "pretty": "Communication Workers Union", 
                "address": "Eidfrs Industrial Estate, Rodney Way, Chelmsford CM1 3BY", 
                "item_id": "0001", 
                "donor": "Communication Workers Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Communication Workers Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -220,9 +250,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -233,9 +264,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -246,9 +278,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -259,9 +292,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -272,9 +306,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -286,8 +321,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "onasanya", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": null, 
@@ -297,7 +333,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": null, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "fiona onasanya", 
          "category_donations": 0, 
@@ -305,8 +341,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "onasanya", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": null, 
@@ -316,13 +353,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": null, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "fiona onasanya", 
          "category_donations": 0, 
          "first": "fiona"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Trustee of YMCA East Herts. (Registered 05 July 2017)", 
+               "Trustee of YMCA East Herts. (Registered 05 July 2017)": "Trustee of YMCA East Herts. (Registered 05 July 2017)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Trustee of YMCA East Herts. (Registered 05 July 2017)", 
@@ -338,8 +383,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -352,9 +395,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -365,9 +409,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -446,7 +491,7 @@
    "dob": "Unknown Date of Birth", 
    "gender": "F", 
    "country_of_birth": null, 
-   "wrans_subjects": "Developing Countries: Leprosy, Universal Credit, Medicine: Research", 
+   "wrans_subjects": "Developing Countries: Leprosy, Universal Credit, Prisoners: Females, Medicine: Research", 
    "member_id": "41591", 
    "constituency": "Peterborough", 
    "mp_gifts": 0, 

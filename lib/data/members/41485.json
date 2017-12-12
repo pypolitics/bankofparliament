@@ -255,6 +255,18 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "Payments from Ipsos MORI, 3 Thomas More Square, London E1W 1YW:", 
+               "Payments from Ipsos MORI, 3 Thomas More Square, London E1W 1YW:": "Payments from Ipsos MORI, 3 Thomas More Square, London E1W 1YW:"
+            }, 
+            {
+               "raw_string": "3 March 2017, received \u00a3200 for completing a survey in December 2016. Hours: 60 mins. \u00a3120 of fee donated to local charity. (Registered 16 March 2017)", 
+               "3 March 2017, received \u00a3200 for completing a survey in December 2016. Hours": "60 mins. \u00a3120 of fee donated to local charity. (Registered 16 March 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "3 March 2017, received \u00a3200 for completing a survey in December 2016. Hours: 60 mins. \u00a3120 of fee donated to local charity. (Registered 16 March 2017)", 
@@ -270,8 +282,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 200, 
          "raw_items": [
@@ -285,6 +295,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Communication Workers\u2019 Union North East Region,Address of donor: 6 Concept Court, Kettlestring Lane, Clifton Moor, York YO30 4XFAmount of donation, or nature and value if donation in kind: postal franking valued at \u00a32,036Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "postal franking valued at \u00a32,036", 
+               "Name of donor": "Communication Workers\u2019 Union North East Region,", 
+               "Donor status": "trade union", 
+               "Address of donor": "6 Concept Court, Kettlestring Lane, Clifton Moor, York YO30 4XF"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Communication Workers\u2019 Union North East Region,Address of donor: 6 Concept Court, Kettlestring Lane, Clifton Moor, York YO30 4XFAmount of donation, or nature and value if donation in kind: postal franking valued at \u00a32,036Donor status: trade union(Registered 07 July 2017)", 
@@ -292,19 +314,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2036, 
+               "link": null, 
                "pretty": "Communication Workers\u2019 Union North East Region,", 
-               "address": null, 
+               "address": "6 Concept Court, Kettlestring Lane, Clifton Moor, York YO30 4XF", 
                "item_id": "0001", 
                "donor": "Communication Workers\u2019 Union North East Region,", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Communication Workers\u2019 Union North East Region,", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -317,9 +346,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -330,9 +360,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -343,9 +374,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -356,9 +388,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -369,9 +402,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -383,8 +417,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "johnson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -394,7 +429,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1966, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "diana johnson", 
          "category_donations": 0, 
@@ -402,8 +437,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "johnson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -413,16 +449,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1966, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "diana johnson", 
          "category_donations": 0, 
          "first": "diana"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -433,6 +470,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my partner, Kevin Morton, as Research and Communications Manager.", 
+               "I employ my partner, Kevin Morton, as Research and Communications Manager.": "I employ my partner, Kevin Morton, as Research and Communications Manager."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my partner, Kevin Morton, as Research and Communications Manager.", 
@@ -448,8 +493,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -462,9 +505,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -549,6 +593,11 @@
                            "appointments": "/officers/3Ax_fNXBx6HIUlqzC-9f--UlLVQ/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_1": "Egerton House 41 Egerton Drive", 
+                        "postal_code": "SE10 8JR", 
+                        "locality": "London"
+                     }, 
                      "former_names": [
                         {
                            "surname": "CAROLINE MASON"
@@ -560,13 +609,8 @@
                         "year": 1964, 
                         "month": 6
                      }, 
-                     "address": {
-                        "address_line_1": "Egerton House 41 Egerton Drive", 
-                        "postal_code": "SE10 8JR", 
-                        "locality": "London"
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Operations Director"
                   }, 
                   {
@@ -576,18 +620,18 @@
                            "appointments": "/officers/IsMCc4HoVaoNmCT4RtFqjcw9ZRA/appointments"
                         }
                      }, 
-                     "appointed_on": "1997-03-01", 
-                     "date_of_birth": {
-                        "year": 1944, 
-                        "month": 1
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "E1 4AR", 
                         "address_line_1": "59 Cephas Avenue"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "1997-03-01", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1944
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Trade Union Manager"
                   }, 
                   {
@@ -597,17 +641,17 @@
                            "appointments": "/officers/JiUQbG2waHnQNf1-_arhoHpXNdc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2003-10-16", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "postal_code": "SE10 8JR", 
                         "locality": "London", 
                         "address_line_2": "Greenwich", 
                         "address_line_1": "27 Egerton Drive"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2003-10-16", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1962
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -641,16 +685,16 @@
                            "appointments": "/officers/Kpm8ZiexB-upSOSIU6Lz677slhE/appointments"
                         }
                      }, 
-                     "appointed_on": "2002-07-03", 
-                     "date_of_birth": {
-                        "year": 1949, 
-                        "month": 6
-                     }, 
                      "address": {
                         "postal_code": "E9 7HT", 
                         "address_line_1": "2 Vicars Close", 
                         "address_line_2": "Hackney", 
                         "locality": "London"
+                     }, 
+                     "appointed_on": "2002-07-03", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 6
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -663,15 +707,15 @@
                            "appointments": "/officers/X3Q7844m6OdHZPjLRuV2Mod1wEk/appointments"
                         }
                      }, 
-                     "appointed_on": "2004-11-23", 
-                     "date_of_birth": {
-                        "year": 1961, 
-                        "month": 8
-                     }, 
                      "address": {
                         "address_line_1": "6 Moravian Street", 
                         "postal_code": "E2 0NJ", 
                         "locality": "London"
+                     }, 
+                     "appointed_on": "2004-11-23", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 8
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -684,19 +728,19 @@
                            "appointments": "/officers/aJKjziAhPr2PLsYdTm3mFckZn7Q/appointments"
                         }
                      }, 
-                     "appointed_on": "2008-04-01", 
-                     "date_of_birth": {
-                        "year": 1975, 
-                        "month": 2
-                     }, 
                      "address": {
                         "premises": "127", 
                         "address_line_1": "Hamilton Road", 
                         "postal_code": "SE27 9SE", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2008-04-01", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -717,8 +761,8 @@
                         "postal_code": "E1 3JE", 
                         "address_line_1": "14 Cressy Houses"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Artist Teacher"
                   }, 
                   {
@@ -728,18 +772,18 @@
                            "appointments": "/officers/GcLGem1kBjsPoFtj3oxsVfWbCZg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1992-04-30", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1946
-                     }, 
                      "address": {
                         "postal_code": "CM17 0RQ", 
                         "region": "Essex", 
                         "address_line_1": "Watermans End Cottage", 
                         "address_line_2": "Matchinggreen", 
                         "locality": "Harlow"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1992-04-30", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1946
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -752,18 +796,18 @@
                            "appointments": "/officers/E3TsGGg5C0ljr1Z93oNYQcyg87w/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "101 Praed Street", 
-                        "postal_code": "W2 1NT", 
-                        "locality": "London"
-                     }, 
                      "resigned_on": "2001-12-12", 
                      "date_of_birth": {
                         "month": 4, 
                         "year": 1923
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_1": "101 Praed Street", 
+                        "postal_code": "W2 1NT", 
+                        "locality": "London"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Ilea Lecturer"
                   }, 
                   {
@@ -782,11 +826,11 @@
                      "appointed_on": "2001-04-01", 
                      "resigned_on": "2002-03-31", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1962
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Researcher"
                   }, 
                   {
@@ -808,8 +852,8 @@
                         "address_line_2": "Stratford", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Research Fellow"
                   }, 
                   {
@@ -843,20 +887,20 @@
                            "appointments": "/officers/Pcn9krwaHv2oZpUvFAfRjaK2few/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-07-01", 
-                     "resigned_on": "2002-03-31", 
-                     "date_of_birth": {
-                        "year": 1963, 
-                        "month": 5
-                     }, 
                      "address": {
                         "postal_code": "E13 0JX", 
                         "locality": "London", 
                         "address_line_2": "Plaistow", 
                         "address_line_1": "19 Redriffe Road"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2001-07-01", 
+                     "resigned_on": "2002-03-31", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 5
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -866,17 +910,17 @@
                            "appointments": "/officers/hfx0jFeKHwt91lElrlcHXXgmoo4/appointments"
                         }
                      }, 
-                     "appointed_on": "2004-05-18", 
-                     "resigned_on": "2007-12-31", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1973
-                     }, 
                      "address": {
                         "address_line_2": "Coventry Road", 
                         "locality": "London", 
                         "postal_code": "E1 5RX", 
                         "address_line_1": "20 Orion House"
+                     }, 
+                     "appointed_on": "2004-05-18", 
+                     "resigned_on": "2007-12-31", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1973
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -897,11 +941,11 @@
                      }, 
                      "resigned_on": "1991-04-30", 
                      "date_of_birth": {
-                        "year": 1937, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1937
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "College Lecturer"
                   }, 
                   {
@@ -911,15 +955,15 @@
                            "appointments": "/officers/pbdRrDzL0PeP345PBks4hqUMpns/appointments"
                         }
                      }, 
-                     "resigned_on": "1997-03-31", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1941
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "E14 6QN", 
                         "address_line_1": "1 Clutton Street"
+                     }, 
+                     "resigned_on": "1997-03-31", 
+                     "date_of_birth": {
+                        "year": 1941, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -932,19 +976,19 @@
                            "appointments": "/officers/7QRS_RKoGm8_SeqGpJUCCbUrvP0/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "2007-06-16", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 9
+                     }, 
                      "address": {
                         "address_line_1": "43 Beversbrook Road", 
                         "postal_code": "N19 4QQ", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "resigned_on": "2007-06-16", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1946
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Economist/Planner"
                   }, 
                   {
@@ -954,17 +998,17 @@
                            "appointments": "/officers/La5rI8PsuasuFdyiQnDG0wgcbv8/appointments"
                         }
                      }, 
-                     "appointed_on": "1997-04-01", 
-                     "resigned_on": "2003-11-01", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1928
-                     }, 
                      "address": {
                         "address_line_2": "Wapping", 
                         "locality": "London", 
                         "postal_code": "E1W 3QX", 
                         "address_line_1": "38 Rum Close"
+                     }, 
+                     "appointed_on": "1997-04-01", 
+                     "resigned_on": "2003-11-01", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1928
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1022,16 +1066,16 @@
                      "appointed_on": "1992-04-30", 
                      "resigned_on": "1997-03-31", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 3
                      }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "E1 4TS", 
                         "address_line_1": "27 Trinity Green"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1048,8 +1092,8 @@
                      }, 
                      "resigned_on": "1999-11-21", 
                      "date_of_birth": {
-                        "year": 1917, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1917
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1065,16 +1109,16 @@
                      "appointed_on": "2003-10-16", 
                      "resigned_on": "2005-03-08", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1966
                      }, 
                      "address": {
                         "address_line_1": "13 Malam Gardens", 
                         "postal_code": "E14 0TR", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "London Assembly Member"
                   }, 
                   {
@@ -1084,18 +1128,18 @@
                            "appointments": "/officers/pUhZTRLhMZbVH40M8nFv-eC8IMk/appointments"
                         }
                      }, 
-                     "resigned_on": "1992-03-10", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1920
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "E3 5DW", 
                         "address_line_1": "9 Exmoor House"
                      }, 
-                     "nationality": "British", 
+                     "resigned_on": "1992-03-10", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1920
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1164,15 +1208,15 @@
                         "postal_code": "E1 4AT", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Disaster Management Consultant"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01438582", 
-               "pretty": "diana johnson diana ruth johnson", 
+               "pretty": "Diana Johnson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

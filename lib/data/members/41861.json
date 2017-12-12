@@ -278,9 +278,10 @@
    "eu_ref_stance": "Leave", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -291,6 +292,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr Daniel GreenAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 04 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Mr Daniel Green", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }, 
+            {
+               "raw_string": "Name of donor: Mr Andrew ReidAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a3700Donor status: individual(Registered 04 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a3700", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Mr Andrew Reid", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr Daniel GreenAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 04 July 2017)", 
@@ -298,15 +319,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Mr Daniel Green", 
                "address": "private", 
                "item_id": "0001", 
                "donor": "Mr Daniel Green", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Daniel Green", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Mr Andrew ReidAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a3700Donor status: individual(Registered 04 July 2017)", 
@@ -314,19 +344,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 700, 
+               "link": null, 
                "pretty": "Mr Andrew Reid", 
                "address": "private", 
                "item_id": "0002", 
                "donor": "Mr Andrew Reid", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Andrew Reid", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -340,46 +377,488 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Bestway Wholesale LtdAddress of donor: 2 Abbey Road, Park Royal, London NW10 7BWAmount of donation or nature and value if donation in kind: \u00a32,000Date received: 10 May 2017Date accepted: 10 May 2017Donor status: company, registration 01207120(Registered 04 July 2017)", 
+               "Date received": "10 May 2017", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Date accepted": "10 May 2017", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Bestway Wholesale Ltd", 
+               "Donor status": "company, registration 01207120", 
+               "Address of donor": "2 Abbey Road, Park Royal, London NW10 7BW"
+            }, 
+            {
+               "raw_string": "Name of donor: Mr Andrew ReidAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a33,000Date received: 11 May 2017Date accepted: 2 June 2017Donor status: individual(Registered 04 July 2017)", 
+               "Date received": "11 May 2017", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,000", 
+               "Date accepted": "2 June 2017", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Mr Andrew Reid", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Bestway Wholesale LtdAddress of donor: 2 Abbey Road, Park Royal, London NW10 7BWAmount of donation or nature and value if donation in kind: \u00a32,000Date received: 10 May 2017Date accepted: 10 May 2017Donor status: company, registration 01207120(Registered 04 July 2017)", 
-               "received": "10 May 2017", 
-               "accepted": "10 May 2017", 
+               "status": "company, registration 01207120", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [
+                  {
+                     "name": "PERVEZ, Dawood", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/dYSmnOxLr2f_kzZBdYZ_oVxHMEM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "appointed_on": "2004-07-01", 
+                     "officer_role": "secretary", 
+                     "nationality": "British", 
+                     "occupation": "Solicitor"
+                  }, 
+                  {
+                     "name": "CHOUDREY, Zameer Mohammed", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/IRf5HgeKWs6Vef0MTKc8OfnVdqI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 3
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "KHAN, Naser Janjua", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/_Fy8-7Ydz91R1MFSmhrp4AdoBg8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-25", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chartered Accountant"
+                  }, 
+                  {
+                     "name": "PERVEZ, Dawood", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/dYSmnOxLr2f_kzZBdYZ_oVxHMEM/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-07-01", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1975
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Solicitor"
+                  }, 
+                  {
+                     "name": "PERVEZ, Rizwan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/XuQWT5mDTZn6TcefWGv1UHXDA5Y/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2000-01-14", 
+                     "date_of_birth": {
+                        "year": 1968, 
+                        "month": 3
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British Pakistani", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "RACE, Martin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zqFXSQWWSjWLSw-v0s20pGvujQc/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-25", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1957
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "SHEIKH, Mohammed Younus", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AU68pC9szrTL9Q95z6hFV8YLcgs/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 7
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "2004-07-01", 
+                     "name": "SHEIKH, Mohammed Younus", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AU68pC9szrTL9Q95z6hFV8YLcgs/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "SL9 7NJ", 
+                        "region": "Buckinghamshire", 
+                        "address_line_1": "Dukes Mead", 
+                        "address_line_2": "Manor Lane", 
+                        "locality": "Gerrards Cross"
+                     }
+                  }, 
+                  {
+                     "name": "BHATTI, Abdul Khalique", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/9hNk6HJVeDs2MGmDpWVbUzwUR2A/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "2014-04-01", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 5
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "CHAUDHARY, Adalat Khan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/o0fgxb7jMz2LrC-7ooP7as3V-34/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "2014-04-01", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1935
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "CHAUDHARY, Arshad Mehmood", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RDF3oSKoEpSexmBWQU_KbFNBfV0/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1993-05-19", 
+                     "resigned_on": "2016-11-14", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1960
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "GILROY, David Peter", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/qwgz7IPgrlwfV0Z8t1Tz90-snWE/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-03-25", 
+                     "resigned_on": "2014-07-31", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1954
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "HALL, James Richard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/L6YgnGXKh1hZXEKJ_AWLvuqvAtk/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-25", 
+                     "resigned_on": "2016-10-10", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 5
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "HICKEY, Ronald James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/B2E8OPDdgrdUK-T3LuJAdPjpU34/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-04-22", 
+                     "resigned_on": "2016-10-03", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 11
+                     }, 
+                     "address": {
+                        "postal_code": "NW10 7BW", 
+                        "address_line_2": "London", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "Irish", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "PERVEZ, Mohammed Anwar, Sir", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/-Wf0zqD0xaEstCaRFq1wzZ8QOFs/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2014-04-01", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 3
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "YOUSAF, Kaiser Ahmed", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/BfVS5C-JvZQ1iJZ7QqiTdR2hz7Q/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-25", 
+                     "resigned_on": "2014-01-28", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1952
+                     }, 
+                     "address": {
+                        "address_line_2": "London", 
+                        "postal_code": "NW10 7BW", 
+                        "address_line_1": "2 Abbey Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 2000, 
-               "status": "company, registration 01207120", 
+               "link": "https://beta.companieshouse.gov.uk/company/01207120", 
                "pretty": "Bestway Wholesale Ltd", 
                "address": "2 Abbey Road, Park Royal, London NW10 7BW", 
                "item_id": "0001", 
                "donor": "Bestway Wholesale Ltd", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/01207120/filing-history", 
+                     "charges": "/company/01207120/charges", 
+                     "self": "/company/01207120", 
+                     "officers": "/company/01207120/officers"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "46390"
+                  ], 
+                  "etag": "30ace0bf1844175653d9b8abcac5460a4b9e8efd", 
+                  "registered_office_address": {
+                     "address_line_2": "London", 
+                     "postal_code": "NW10 7BW", 
+                     "address_line_1": "2 Abbey Road"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-01-21", 
+                     "last_made_up_to": "2017-01-07", 
+                     "next_made_up_to": "2018-01-07", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2016-01-07", 
+                  "company_number": "01207120", 
+                  "date_of_creation": "1975-04-11", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-03-31", 
+                     "next_made_up_to": "2017-06-30", 
+                     "last_accounts": {
+                        "period_start_on": "2015-07-01", 
+                        "type": "full", 
+                        "made_up_to": "2016-06-30", 
+                        "period_end_on": "2016-06-30"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-03-31", 
+                        "period_start_on": "2016-07-01", 
+                        "period_end_on": "2017-06-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "06"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "BESTWAY WHOLESALE LIMITED", 
+                  "company_status": "active", 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "1975-04-11", 
+                        "ceased_on": "2015-10-15", 
+                        "name": "BESTWAY CASH & CARRY LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Mr Andrew ReidAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a33,000Date received: 11 May 2017Date accepted: 2 June 2017Donor status: individual(Registered 04 July 2017)", 
-               "received": "11 May 2017", 
-               "accepted": "2 June 2017", 
+               "status": "individual", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3000, 
-               "status": "individual", 
+               "link": null, 
                "pretty": "Mr Andrew Reid", 
                "address": "private", 
                "item_id": "0002", 
                "donor": "Mr Andrew Reid", 
                "category_id": 3, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Andrew Reid", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -393,9 +872,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -406,46 +886,86 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: High Commission of the Republic of CyprusAddress of donor: 13 St James' Square, London SW1Y 4LBEstimate of the probable value (or amount of any donation): Accommodation, meals and in-country transport, total value \u00a3451Destination of visit: CyprusDates of visit: 9 November - 12 November 2016Purpose of visit: To lead UK Conservative Friends of Cyprus Parliamentary Delegation to examine the situation in Cyprus.(Registered 08 December 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "Accommodation, meals and in-country transport, total value \u00a3451", 
+               "Purpose of visit": "To lead UK Conservative Friends of Cyprus Parliamentary Delegation to examine the situation in Cyprus.", 
+               "Destination of visit": "Cyprus", 
+               "(Registered 08 December 2016)": "(Registered 08 December 2016)", 
+               "Dates of visit": "9 November - 12 November 2016", 
+               "Name of donor": "High Commission of the Republic of Cyprus", 
+               "Address of donor": "13 St James' Square, London SW1Y 4LB"
+            }, 
+            {
+               "raw_string": "Name of donor: High Commission for PakistanAddress of donor: 34-36 Lowndes Square, London SW1X 9JNEstimate of the probable value (or amount of any donation): Flights \u00a31,875; hotel accommodation \u00a31,470; food \u00a364; internal car hire \u00a3189; total value \u00a33,598Destination of visit: Islamabad, PakistanDates of visit: 1-8 April 2017Purpose of visit: UK Parliamentary Delegation to meet political and parliamentary figures including senior members of the Government and security advisers.(Registered 09 June 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights \u00a31,875; hotel accommodation \u00a31,470; food \u00a364; internal car hire \u00a3189; total value \u00a33,598", 
+               "Purpose of visit": "UK Parliamentary Delegation to meet political and parliamentary figures including senior members of the Government and security advisers.", 
+               "(Registered 09 June 2017)": "(Registered 09 June 2017)", 
+               "Destination of visit": "Islamabad, Pakistan", 
+               "Dates of visit": "1-8 April 2017", 
+               "Name of donor": "High Commission for Pakistan", 
+               "Address of donor": "34-36 Lowndes Square, London SW1X 9JN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 2326, 
          "items": [
             {
                "raw_string": "Name of donor: High Commission of the Republic of CyprusAddress of donor: 13 St James' Square, London SW1Y 4LBEstimate of the probable value (or amount of any donation): Accommodation, meals and in-country transport, total value \u00a3451Destination of visit: CyprusDates of visit: 9 November - 12 November 2016Purpose of visit: To lead UK Conservative Friends of Cyprus Parliamentary Delegation to examine the situation in Cyprus.(Registered 08 December 2016)", 
-               "dates": "9 November - 12 November 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "08/12/2016", 
                "destination": "Cyprus", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 451, 
+               "link": null, 
                "purpose": "To lead UK Conservative Friends of Cyprus Parliamentary Delegation to examine the situation in Cyprus.", 
                "pretty": "High Commission of the Republic of Cyprus", 
                "address": "13 St James' Square, London SW1Y 4LB", 
                "item_id": "0001", 
                "donor": "High Commission of the Republic of Cyprus", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "High Commission of the Republic of Cyprus", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: High Commission for PakistanAddress of donor: 34-36 Lowndes Square, London SW1X 9JNEstimate of the probable value (or amount of any donation): Flights \u00a31,875; hotel accommodation \u00a31,470; food \u00a364; internal car hire \u00a3189; total value \u00a33,598Destination of visit: Islamabad, PakistanDates of visit: 1-8 April 2017Purpose of visit: UK Parliamentary Delegation to meet political and parliamentary figures including senior members of the Government and security advisers.(Registered 09 June 2017)", 
-               "dates": "1-8 April 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "09/06/2017", 
                "destination": "Islamabad, Pakistan", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 1875, 
+               "link": null, 
                "purpose": "UK Parliamentary Delegation to meet political and parliamentary figures including senior members of the Government and security advisers.", 
                "pretty": "High Commission for Pakistan", 
                "address": "34-36 Lowndes Square, London SW1X 9JN", 
                "item_id": "0002", 
                "donor": "High Commission for Pakistan", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "High Commission for Pakistan", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 2326, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -459,9 +979,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -472,9 +993,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -486,8 +1008,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "offord", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -497,7 +1020,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "dr matthew offord", 
          "category_donations": 0, 
@@ -505,8 +1028,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "offord", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -516,16 +1040,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "dr matthew offord", 
          "category_donations": 0, 
          "first": "matthew"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -536,9 +1061,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -549,9 +1075,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

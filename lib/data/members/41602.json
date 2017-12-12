@@ -350,9 +350,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -363,6 +364,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, London WC1X 8TUAmount of donation, or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobalds Road, London WC1X 8TU"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, London WC1X 8TUAmount of donation, or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
@@ -370,19 +383,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": null, 
                "pretty": "Unite the Union", 
-               "address": null, 
+               "address": "128 Theobalds Road, London WC1X 8TU", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -395,9 +415,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -408,9 +429,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -421,28 +443,50 @@
          "category_wealth": 0
       }, 
       {
-         "items": [
+         "raw_data": [
             {
                "raw_string": "Name of donor: Government of GibraltarAddress of donor:No 6 Convent Place, GibraltarEstimate of the probable value (or amount of any donation): for myself and a member of staff, flights costing\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60Destination of visit: GibraltarDates of visit: 26 to 28 April 2017Purpose of visit: Meeting with Government of Gibraltar.(Registered 07 July 2017)", 
-               "dates": "26 to 28 April 2017", 
-               "isWealth": false, 
-               "nouns": [], 
-               "isDonation": false, 
-               "registered": "07/07/2017", 
-               "destination": "Gibraltar", 
-               "isIncome": false, 
-               "amount": 751, 
-               "purpose": "Meeting with Government of Gibraltar.", 
-               "pretty": "Name of donor: Government of GibraltarAddress of donor:No 6 Convent Place, GibraltarEstimate of the probable value (or amount of any donation): for myself and a member of staff, flights costing\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60Destination of visit: GibraltarDates of visit: 26 to 28 April 2017Purpose of visit: Meeting with Government of Gibraltar.(Registered 07 July 2017)", 
-               "address": null, 
-               "item_id": "0001", 
-               "donor": null, 
-               "category_id": 5, 
-               "isGift": true
+               "Estimate of the probable value (or amount of any donation)": "for myself and a member of staff, flights costing", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Purpose of visit": "Meeting with Government of Gibraltar.", 
+               "Destination of visit": "Gibraltar", 
+               "\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60": "\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60", 
+               "Address of donor:No 6 Convent Place, Gibraltar": "Address of donor:No 6 Convent Place, Gibraltar", 
+               "Dates of visit": "26 to 28 April 2017", 
+               "Name of donor": "Government of Gibraltar"
             }
          ], 
          "isCurrency": true, 
          "category_gifts": 751, 
+         "items": [
+            {
+               "raw_string": "Name of donor: Government of GibraltarAddress of donor:No 6 Convent Place, GibraltarEstimate of the probable value (or amount of any donation): for myself and a member of staff, flights costing\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60Destination of visit: GibraltarDates of visit: 26 to 28 April 2017Purpose of visit: Meeting with Government of Gibraltar.(Registered 07 July 2017)", 
+               "status": "visit", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "persons": [], 
+               "registered": "07/07/2017", 
+               "destination": "Gibraltar", 
+               "officers": [], 
+               "isIncome": false, 
+               "amount": 751, 
+               "link": null, 
+               "purpose": "Meeting with Government of Gibraltar.", 
+               "pretty": "Government of Gibraltar", 
+               "address": "Address of donor:No 6 Convent Place, Gibraltar", 
+               "item_id": "0001", 
+               "donor": "Government of Gibraltar", 
+               "category_id": 5, 
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Government of Gibraltar", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
+            }
+         ], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -455,9 +499,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -468,6 +513,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Flat in Guildford, Surrey, jointly owned with my family: (i) and (ii). (Updated 15 May 2015)", 
+               "Flat in Guildford, Surrey, jointly owned with my family": "(i) and (ii). (Updated 15 May 2015)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Flat in Guildford, Surrey, jointly owned with my family: (i) and (ii). (Updated 15 May 2015)", 
@@ -496,8 +549,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 10000, 
          "raw_items": [
@@ -511,8 +562,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "thornberry", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -522,7 +574,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1960, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "emily thornberry", 
          "category_donations": 0, 
@@ -530,8 +582,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "thornberry", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -541,13 +594,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1960, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "emily thornberry", 
          "category_donations": 0, 
          "first": "emily"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Non-practising barrister.", 
+               "Non-practising barrister.": "Non-practising barrister."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Non-practising barrister.", 
@@ -563,8 +624,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -577,9 +636,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -590,9 +650,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -663,6 +724,7 @@
                            "appointments": "/officers/fbGaNmIrYyDzsU2d1SfwHGewebU/appointments"
                         }
                      }, 
+                     "appointed_on": "2004-04-06", 
                      "address": {
                         "address_line_2": "7 Castle Hill", 
                         "region": "Surrey", 
@@ -670,9 +732,8 @@
                         "postal_code": "GU1 3SX", 
                         "locality": "Guildford"
                      }, 
-                     "appointed_on": "2004-04-06", 
-                     "officer_role": "secretary", 
                      "nationality": "British", 
+                     "officer_role": "secretary", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -682,12 +743,6 @@
                            "appointments": "/officers/8ptsvvRZfsSNX27nSKtbjGGJAA0/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-07-31", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "locality": "Guildford", 
                         "premises": "Flat 3,", 
@@ -696,8 +751,14 @@
                         "postal_code": "GU13SX", 
                         "address_line_1": "Clifton House 7 Castle Hill"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-07-31", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -707,18 +768,18 @@
                            "appointments": "/officers/fbGaNmIrYyDzsU2d1SfwHGewebU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-04-06", 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 2
-                     }, 
                      "address": {
                         "address_line_2": "7 Castle Hill", 
                         "region": "Surrey", 
                         "address_line_1": "Flat 2 Clifton House", 
                         "postal_code": "GU1 3SX", 
                         "locality": "Guildford"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-04-06", 
+                     "date_of_birth": {
+                        "year": 1928, 
+                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -756,6 +817,12 @@
                            "appointments": "/officers/xunV0UnnMZKhlKxCf4B6fcs7H-E/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-04-01", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1959
+                     }, 
                      "address": {
                         "premises": "12", 
                         "country": "United Kingdom", 
@@ -763,14 +830,8 @@
                         "postal_code": "N1 0LZ", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-04-01", 
-                     "date_of_birth": {
-                        "year": 1959, 
-                        "month": 1
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -793,8 +854,8 @@
                         "year": 1954, 
                         "month": 3
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Artistic Director"
                   }, 
                   {
@@ -834,8 +895,8 @@
                         "postal_code": "GU1 3SX", 
                         "locality": "Guildford"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Party Organiser"
                   }, 
                   {
@@ -859,8 +920,8 @@
                         "postal_code": "N1 0LZ", 
                         "address_line_1": "Richmond Crescent"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -873,8 +934,8 @@
                      "appointed_on": "2004-04-06", 
                      "resigned_on": "2008-04-09", 
                      "date_of_birth": {
-                        "year": 1936, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1936
                      }, 
                      "address": {
                         "postal_code": "GU1 3SX", 
@@ -926,7 +987,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/05067899", 
-               "pretty": "emily thornberry", 
+               "pretty": "Emily Thornberry", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

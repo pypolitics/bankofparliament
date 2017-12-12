@@ -283,9 +283,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -296,9 +297,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -309,9 +311,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -322,9 +325,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -335,28 +339,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Taipei Representative OfficeAddress of donor: 50 Grosvenor Gardens, London SW1W 0EBEstimate of the probable value (or amount of any donation): for my wife and me, flights costing \u00a33,200; accommodation costing \u00a3900; meals costing \u00a3500; local transport costing \u00a3120; \u00a34,720 in totalDestination of visit: TaiwanDates of visit: 8 - 15 April 2017Purpose of visit: To meet and hold discussions with senior political figures, including the President.(Registered 24 April 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "for my wife and me, flights costing \u00a33,200; accommodation costing \u00a3900; meals costing \u00a3500; local transport costing \u00a3120; \u00a34,720 in total", 
+               "Purpose of visit": "To meet and hold discussions with senior political figures, including the President.", 
+               "Destination of visit": "Taiwan", 
+               "(Registered 24 April 2017)": "(Registered 24 April 2017)", 
+               "Dates of visit": "8 - 15 April 2017", 
+               "Name of donor": "Taipei Representative Office", 
+               "Address of donor": "50 Grosvenor Gardens, London SW1W 0EB"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 3200, 
          "items": [
             {
                "raw_string": "Name of donor: Taipei Representative OfficeAddress of donor: 50 Grosvenor Gardens, London SW1W 0EBEstimate of the probable value (or amount of any donation): for my wife and me, flights costing \u00a33,200; accommodation costing \u00a3900; meals costing \u00a3500; local transport costing \u00a3120; \u00a34,720 in totalDestination of visit: TaiwanDates of visit: 8 - 15 April 2017Purpose of visit: To meet and hold discussions with senior political figures, including the President.(Registered 24 April 2017)", 
-               "dates": "8 - 15 April 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "24/04/2017", 
                "destination": "Taiwan", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3200, 
+               "link": null, 
                "purpose": "To meet and hold discussions with senior political figures, including the President.", 
                "pretty": "Taipei Representative Office", 
                "address": "50 Grosvenor Gardens, London SW1W 0EB", 
                "item_id": "0001", 
                "donor": "Taipei Representative Office", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Taipei Representative Office", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 3200, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -369,9 +394,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -382,9 +408,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -396,8 +423,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "david", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -407,7 +435,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1957, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "wayne david", 
          "category_donations": 0, 
@@ -415,8 +443,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "david", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -426,16 +455,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1957, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "wayne david", 
          "category_donations": 0, 
          "first": "wayne"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -446,9 +476,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -459,9 +490,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -552,8 +584,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-13", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1972
+                        "year": 1972, 
+                        "month": 5
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -574,6 +606,12 @@
                            "appointments": "/officers/Mm8x_TP1UbHwJfJIgINWT1H6-Kw/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-04-10", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1969
+                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "76", 
@@ -582,14 +620,8 @@
                         "postal_code": "CF83 1EN", 
                         "address_line_1": "St. Martins Road"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-04-10", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 2
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "It Consultant"
                   }, 
                   {
@@ -599,6 +631,12 @@
                            "appointments": "/officers/8LLWrPGNozTE3YGaZv29G8PjWVs/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2016-02-06", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 1
+                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "26", 
@@ -606,12 +644,6 @@
                         "region": "Mid Glamorgan", 
                         "postal_code": "CF83 1ET", 
                         "address_line_1": "Bryngwyn"
-                     }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2016-02-06", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 1
                      }, 
                      "officer_role": "director", 
                      "nationality": "Welsh", 
@@ -635,11 +667,11 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2015-04-22", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1948
+                        "year": 1948, 
+                        "month": 6
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of The Welsh Assembly"
                   }, 
                   {
@@ -652,8 +684,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2017-08-17", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1977
+                        "year": 1977, 
+                        "month": 8
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -677,8 +709,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2013-07-31", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 7
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -689,8 +721,8 @@
                         "address_line_2": "Bedwas", 
                         "address_line_1": "Newport Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -711,8 +743,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2016-02-06", 
                      "date_of_birth": {
-                        "year": 1949, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1949
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -739,8 +771,8 @@
                         "year": 1954, 
                         "month": 1
                      }, 
-                     "nationality": "Welsh", 
                      "officer_role": "director", 
+                     "nationality": "Welsh", 
                      "occupation": "Retired Teacher"
                   }, 
                   {
@@ -750,6 +782,12 @@
                            "appointments": "/officers/33pOFjrjufp_W0-b5ORUJFwUXNY/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2017-10-22", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1965
+                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "The Miners", 
@@ -757,12 +795,6 @@
                         "postal_code": "CF83 1DX", 
                         "address_line_2": "Beeches Village", 
                         "address_line_1": "1 Beech Tree View"
-                     }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2017-10-22", 
-                     "date_of_birth": {
-                        "year": 1965, 
-                        "month": 4
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -779,8 +811,8 @@
                      "appointed_on": "2011-08-25", 
                      "resigned_on": "2013-06-06", 
                      "date_of_birth": {
-                        "year": 1953, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1953
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -790,8 +822,8 @@
                         "address_line_2": "Trethomas", 
                         "address_line_1": "20 Navigation Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Elected Member Of Local Authority"
                   }, 
                   {
@@ -816,8 +848,8 @@
                         "year": 1969, 
                         "month": 2
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Music Therapist"
                   }, 
                   {
@@ -831,8 +863,8 @@
                      "appointed_on": "2011-02-18", 
                      "resigned_on": "2013-03-13", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 9
                      }, 
                      "address": {
                         "premises": "26", 
@@ -841,8 +873,8 @@
                         "postal_code": "CF83 1ET", 
                         "locality": "Caerphilly"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Programme Manager"
                   }, 
                   {
@@ -866,8 +898,8 @@
                         "year": 1952, 
                         "month": 7
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Public Appointee - Welsh Assem"
                   }, 
                   {
@@ -888,11 +920,11 @@
                      "appointed_on": "2012-06-27", 
                      "resigned_on": "2013-12-05", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 10
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -917,8 +949,8 @@
                         "address_line_2": "Watford Park", 
                         "address_line_1": "Pen Yr Allt"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -928,13 +960,6 @@
                            "appointments": "/officers/xzpDjoFhLY0Yczz1iL3P9z1kRpg/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2011-08-25", 
-                     "resigned_on": "2013-06-06", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1946
-                     }, 
                      "address": {
                         "premises": "87", 
                         "country": "United Kingdom", 
@@ -942,8 +967,15 @@
                         "postal_code": "CF83 1EH", 
                         "address_line_1": "St Martins Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2011-08-25", 
+                     "resigned_on": "2013-06-06", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1946
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "State Registered Nurse"
                   }, 
                   {
@@ -967,8 +999,8 @@
                         "postal_code": "CF83 1ET", 
                         "address_line_1": "Bryngwyn"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of The National Assembl"
                   }, 
                   {
@@ -978,6 +1010,13 @@
                            "appointments": "/officers/P4u8bvEAqEDwr-hZvriRXYQoP-M/appointments"
                         }
                      }, 
+                     "country_of_residence": "Britain", 
+                     "appointed_on": "2013-07-31", 
+                     "resigned_on": "2014-03-31", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 5
+                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "7", 
@@ -986,15 +1025,8 @@
                         "postal_code": "CF83 2NY", 
                         "address_line_1": "Bryn Owain"
                      }, 
-                     "country_of_residence": "Britain", 
-                     "appointed_on": "2013-07-31", 
-                     "resigned_on": "2014-03-31", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1961
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Bookkeepper"
                   }, 
                   {
@@ -1008,8 +1040,8 @@
                      "appointed_on": "2011-08-25", 
                      "resigned_on": "2014-08-14", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1934
+                        "year": 1934, 
+                        "month": 9
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1018,8 +1050,8 @@
                         "postal_code": "CF83 1LD", 
                         "locality": "Caerphilly"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Welsh", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -1054,6 +1086,13 @@
                            "appointments": "/officers/uhEqJZkx18kKoWZrmStOZAmVhj4/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2014-07-10", 
+                     "resigned_on": "2015-09-10", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 12
+                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "4", 
@@ -1063,15 +1102,8 @@
                         "address_line_2": "Machen", 
                         "address_line_1": "New Row"
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2014-07-10", 
-                     "resigned_on": "2015-09-10", 
-                     "date_of_birth": {
-                        "year": 1950, 
-                        "month": 12
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1096,8 +1128,8 @@
                         "postal_code": "NP12 1GD", 
                         "address_line_1": "Skenfrith Close"
                      }, 
-                     "nationality": "Welsh", 
                      "officer_role": "director", 
+                     "nationality": "Welsh", 
                      "occupation": "Communications Officer"
                   }, 
                   {
@@ -1120,11 +1152,11 @@
                      "appointed_on": "2013-07-31", 
                      "resigned_on": "2015-02-18", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 3
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Nhs Manager"
                   }, 
                   {
@@ -1159,19 +1191,19 @@
                            "appointments": "/officers/zZXJBFcYy8NiO7rgetMGQ8p7ix4/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2011-02-18", 
-                     "resigned_on": "2013-06-06", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1969
-                     }, 
                      "address": {
                         "premises": "26", 
                         "region": "Ccb", 
                         "locality": "Caerphilly", 
                         "postal_code": "CF83 1ET", 
                         "address_line_1": "Bryngwyn"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2011-02-18", 
+                     "resigned_on": "2013-06-06", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1969
                      }, 
                      "officer_role": "director", 
                      "nationality": "Welsh", 
@@ -1188,8 +1220,8 @@
                      "appointed_on": "2013-07-31", 
                      "resigned_on": "2015-02-18", 
                      "date_of_birth": {
-                        "year": 1954, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1954
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -1210,13 +1242,6 @@
                            "appointments": "/officers/7Igbsbmkqx6k3oJAbcSiVt5QSyI/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2013-07-31", 
-                     "resigned_on": "2015-02-10", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 1
-                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "7", 
@@ -1225,8 +1250,15 @@
                         "postal_code": "CF83 1ES", 
                         "address_line_1": "Bryngwyn"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2013-07-31", 
+                     "resigned_on": "2015-02-10", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Development Officer"
                   }, 
                   {
@@ -1240,8 +1272,8 @@
                      "appointed_on": "2013-03-13", 
                      "resigned_on": "2015-09-10", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1975
                      }, 
                      "address": {
                         "premises": "26", 
@@ -1250,8 +1282,8 @@
                         "postal_code": "CF83 1ET", 
                         "locality": "Caerphilly"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Marketing Manager"
                   }, 
                   {
@@ -1265,8 +1297,8 @@
                      "appointed_on": "2012-01-19", 
                      "resigned_on": "2012-12-12", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1944
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -1287,6 +1319,13 @@
                            "appointments": "/officers/PT-YO0k83Bk8yVdrg-ylIriQeNw/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales/United Kingdom", 
+                     "appointed_on": "2012-01-19", 
+                     "resigned_on": "2013-12-05", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 10
+                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "16", 
@@ -1295,15 +1334,8 @@
                         "postal_code": "CF83 1HP", 
                         "address_line_1": "Corbett Crescent"
                      }, 
-                     "country_of_residence": "Wales/United Kingdom", 
-                     "appointed_on": "2012-01-19", 
-                     "resigned_on": "2013-12-05", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 10
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Schools Community Focused Schools Officer"
                   }, 
                   {
@@ -1313,13 +1345,6 @@
                            "appointments": "/officers/kWSosJGQntaZQFz9FhiLtb-yO08/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2016-02-06", 
-                     "resigned_on": "2017-06-25", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 12
-                     }, 
                      "address": {
                         "locality": "Caerphilly", 
                         "premises": "38", 
@@ -1328,8 +1353,15 @@
                         "postal_code": "CF83 1TG", 
                         "address_line_1": "Heol Tyddyn"
                      }, 
-                     "nationality": "Welsh", 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2016-02-06", 
+                     "resigned_on": "2017-06-25", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 12
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "Welsh", 
                      "occupation": "Retired Bank Official"
                   }, 
                   {
@@ -1373,8 +1405,8 @@
                      "appointed_on": "2011-02-18", 
                      "resigned_on": "2015-09-10", 
                      "date_of_birth": {
-                        "year": 1931, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1931
                      }, 
                      "address": {
                         "premises": "26", 
@@ -1398,8 +1430,8 @@
                      "appointed_on": "2014-04-10", 
                      "resigned_on": "2015-09-10", 
                      "date_of_birth": {
-                        "year": 1956, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1956
                      }, 
                      "address": {
                         "locality": "Caerphilly", 
@@ -1410,15 +1442,15 @@
                         "address_line_2": "Energlyn", 
                         "address_line_1": "Cae Marchog"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Tutor"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07535484", 
-               "pretty": "wayne david", 
+               "pretty": "Wayne David", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1516,12 +1548,6 @@
                            "appointments": "/officers/5BL9vuTwqt2tCPyA-Yc-atG-ge8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-04-03", 
-                     "date_of_birth": {
-                        "year": 1950, 
-                        "month": 8
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "Box P0032", 
@@ -1530,8 +1556,14 @@
                         "address_line_2": "Wimbledon", 
                         "address_line_1": "The Long Lodge, 265 - 269 Kingston Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-04-03", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 8
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director Research"
                   }, 
                   {
@@ -1552,11 +1584,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-10-30", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1952
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1725,8 +1757,8 @@
                         "address_line_2": "Scotland Corner Bucklebury", 
                         "address_line_1": "The Pightle"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Chairman"
                   }, 
                   {
@@ -1768,8 +1800,8 @@
                      }, 
                      "resigned_on": "2004-09-11", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1942
+                        "year": 1942, 
+                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1809,8 +1841,8 @@
                      "appointed_on": "2004-09-11", 
                      "resigned_on": "2005-11-18", 
                      "date_of_birth": {
-                        "year": 1977, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1977
                      }, 
                      "address": {
                         "address_line_1": "24 Barringer Square", 
@@ -1828,16 +1860,16 @@
                            "appointments": "/officers/UusqBjDzakFAtIVYkKnxjJ6OTdE/appointments"
                         }
                      }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SW4 6PR", 
+                        "address_line_1": "74 Bromfelde Road"
+                     }, 
                      "appointed_on": "1998-07-20", 
                      "resigned_on": "2001-06-16", 
                      "date_of_birth": {
                         "year": 1977, 
                         "month": 2
-                     }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "SW4 6PR", 
-                        "address_line_1": "74 Bromfelde Road"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1862,8 +1894,8 @@
                         "address_line_2": "Sketty", 
                         "address_line_1": "58 Hendrefoilan Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Professor (Rtd)"
                   }, 
                   {
@@ -1873,19 +1905,19 @@
                            "appointments": "/officers/Juoj0YA89rUlwMCUmswkQ-rKSpk/appointments"
                         }
                      }, 
-                     "appointed_on": "2003-11-15", 
-                     "resigned_on": "2004-09-11", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "W9 1NQ", 
                         "address_line_1": "238 Lauderdale Mansions"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2003-11-15", 
+                     "resigned_on": "2004-09-11", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1895,19 +1927,19 @@
                            "appointments": "/officers/9HUhwfJpnr4hOTREQ87S3qJ1a5w/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-03-10", 
-                     "resigned_on": "2014-09-27", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1956
-                     }, 
                      "address": {
                         "address_line_2": "Oak Road", 
                         "region": "Kent", 
                         "address_line_1": "7 Oak House", 
                         "postal_code": "TN2 3AN", 
                         "locality": "Tunbridge Wells"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-03-10", 
+                     "resigned_on": "2014-09-27", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 7
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1920,6 +1952,11 @@
                            "appointments": "/officers/xxtv7YIXO3s50tO-PPTqTbWX-kc/appointments"
                         }
                      }, 
+                     "resigned_on": "1991-03-23", 
+                     "date_of_birth": {
+                        "year": 1910, 
+                        "month": 12
+                     }, 
                      "address": {
                         "address_line_2": "Gedling", 
                         "region": "Nottinghamshire", 
@@ -1927,13 +1964,8 @@
                         "postal_code": "NG4 3FW", 
                         "address_line_1": "15 Ranmoor Road"
                      }, 
-                     "resigned_on": "1991-03-23", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1910
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1946,8 +1978,8 @@
                      "appointed_on": "2000-06-03", 
                      "resigned_on": "2003-11-15", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1966
                      }, 
                      "address": {
                         "address_line_1": "11 Ilminster Gardens", 
@@ -1989,19 +2021,19 @@
                            "appointments": "/officers/MeUQS0h7wKeAHYT3_m5w1bNLbI0/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-06-16", 
-                     "resigned_on": "2003-11-15", 
-                     "date_of_birth": {
-                        "year": 1974, 
-                        "month": 12
-                     }, 
                      "address": {
                         "address_line_1": "Flat 1 9 Tregothnan Road", 
                         "postal_code": "SW9 9JU", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2001-06-16", 
+                     "resigned_on": "2003-11-15", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1974
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Research Assistant"
                   }, 
                   {
@@ -2011,20 +2043,20 @@
                            "appointments": "/officers/vrC-9rFC5R2XNANpoUQBciKHIjY/appointments"
                         }
                      }, 
-                     "appointed_on": "2003-11-15", 
-                     "resigned_on": "2005-06-18", 
-                     "date_of_birth": {
-                        "year": 1967, 
-                        "month": 1
-                     }, 
                      "address": {
                         "region": "South Yorkshire", 
                         "locality": "Sheffield", 
                         "postal_code": "S11 7EH", 
                         "address_line_1": "85 Nethergreen Road"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2003-11-15", 
+                     "resigned_on": "2005-06-18", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 1
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "M E P"
                   }, 
                   {
@@ -2034,6 +2066,13 @@
                            "appointments": "/officers/Uba0EtQbJg5q-1DAfRKrXia1gPw/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-01-24", 
+                     "resigned_on": "2015-11-07", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1968
+                     }, 
                      "address": {
                         "premises": "Box 0032", 
                         "country": "England", 
@@ -2041,15 +2080,8 @@
                         "postal_code": "SW19 3NW", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-01-24", 
-                     "resigned_on": "2015-11-07", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 9
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Deputy Managing Director, Low Associates"
                   }, 
                   {
@@ -2081,20 +2113,20 @@
                            "appointments": "/officers/uhgHyER5BeNNVX1d0LmUnAAHXEI/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-07-22", 
-                     "resigned_on": "2002-05-25", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1977
-                     }, 
                      "address": {
                         "region": "Renfrewshire", 
                         "locality": "Paisley", 
                         "postal_code": "PA3 2LU", 
                         "address_line_1": "47a Mossvale Street"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2001-07-22", 
+                     "resigned_on": "2002-05-25", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1977
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Unemployed"
                   }, 
                   {
@@ -2130,18 +2162,18 @@
                            "appointments": "/officers/KS0JfPuNRaOF7uTNhjFiaLNWsDc/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-06-18", 
-                     "resigned_on": "2009-04-03", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1938
-                     }, 
                      "address": {
                         "postal_code": "TA5 1AR", 
                         "region": "Somerset", 
                         "locality": "Spaxton", 
                         "address_line_2": "Aisholt", 
                         "address_line_1": "The Old School House"
+                     }, 
+                     "appointed_on": "2005-06-18", 
+                     "resigned_on": "2009-04-03", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1938
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2154,12 +2186,6 @@
                            "appointments": "/officers/KS0JfPuNRaOF7uTNhjFiaLNWsDc/appointments"
                         }
                      }, 
-                     "appointed_on": "2000-06-03", 
-                     "resigned_on": "2004-09-11", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1938
-                     }, 
                      "address": {
                         "address_line_2": "Aisholt", 
                         "region": "Somerset", 
@@ -2167,8 +2193,14 @@
                         "postal_code": "TA5 1AR", 
                         "locality": "Spaxton"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2000-06-03", 
+                     "resigned_on": "2004-09-11", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1938
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "European Public Affairs Consul"
                   }, 
                   {
@@ -2178,12 +2210,6 @@
                            "appointments": "/officers/hPWQAbQk62oQLfNz53u0fLstlzo/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Mid Glamorgan", 
-                        "locality": "Caerphilly", 
-                        "postal_code": "CF83 2UA", 
-                        "address_line_1": "18 Golwg Y Coed"
-                     }, 
                      "country_of_residence": "Wales", 
                      "appointed_on": "2002-05-25", 
                      "resigned_on": "2007-02-21", 
@@ -2191,8 +2217,14 @@
                         "year": 1957, 
                         "month": 7
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "Mid Glamorgan", 
+                        "locality": "Caerphilly", 
+                        "postal_code": "CF83 2UA", 
+                        "address_line_1": "18 Golwg Y Coed"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "M P"
                   }, 
                   {
@@ -2214,8 +2246,8 @@
                         "postal_code": "OX4 1ST", 
                         "address_line_1": "27 Argyle Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Teacher"
                   }, 
                   {
@@ -2229,8 +2261,8 @@
                      "appointed_on": "2011-10-24", 
                      "resigned_on": "2014-01-24", 
                      "date_of_birth": {
-                        "year": 1981, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1981
                      }, 
                      "address": {
                         "locality": "London", 
@@ -2240,8 +2272,8 @@
                         "address_line_2": "Rosendale Road", 
                         "address_line_1": "Burrow Walk"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Teacher"
                   }, 
                   {
@@ -2255,8 +2287,8 @@
                      "appointed_on": "2000-06-03", 
                      "resigned_on": "2002-05-25", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 7
                      }, 
                      "address": {
                         "region": "Tyne & Wear", 
@@ -2272,7 +2304,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/00551817", 
-               "pretty": "wayne david", 
+               "pretty": "Wayne David", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

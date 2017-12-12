@@ -349,9 +349,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -362,6 +363,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: USDAW UnionAddress of donor: Congress House, Great Russell Street, London WC1B 3LSAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "USDAW Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "Congress House, Great Russell Street, London WC1B 3LS"
+            }, 
+            {
+               "raw_string": "Name of donor: Unite UnionAddress of donor: 128 Theobald's Rd, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Unite Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobald's Rd, London WC1X 8TN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: USDAW UnionAddress of donor: Congress House, Great Russell Street, London WC1B 3LSAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
@@ -369,15 +390,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": null, 
                "pretty": "USDAW Union", 
                "address": "Congress House, Great Russell Street, London WC1B 3LS", 
                "item_id": "0001", 
                "donor": "USDAW Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "USDAW Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Unite UnionAddress of donor: 128 Theobald's Rd, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 07 July 2017)", 
@@ -385,19 +415,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Unite Union", 
                "address": "128 Theobald's Rd, London WC1X 8TN", 
                "item_id": "0002", 
                "donor": "Unite Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -411,28 +448,201 @@
          "category_wealth": 0
       }, 
       {
-         "items": [
+         "raw_data": [
             {
                "raw_string": "Name of donor: Jack ThorneAddress of donor: privateAmount of donation, or nature and value if donation in kind: \u00a32,000Date received: 4 May 2017Date accepted: 4 May 2017Donor status: individual(Registered 07 July 2017)", 
-               "received": "4 May 2017", 
-               "accepted": "4 May 2017", 
-               "isWealth": false, 
-               "nouns": [], 
-               "isDonation": true, 
-               "registered": "07/07/2017", 
-               "isIncome": false, 
-               "amount": 2000, 
-               "status": "individual", 
-               "pretty": "Jack Thorne", 
-               "address": null, 
-               "item_id": "0001", 
-               "donor": "Jack Thorne", 
-               "category_id": 3, 
-               "isGift": false
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Date received": "4 May 2017", 
+               "Donor status": "individual", 
+               "Date accepted": "4 May 2017", 
+               "Name of donor": "Jack Thorne", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a32,000", 
+               "Address of donor": "private"
             }
          ], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [
+            {
+               "raw_string": "Name of donor: Jack ThorneAddress of donor: privateAmount of donation, or nature and value if donation in kind: \u00a32,000Date received: 4 May 2017Date accepted: 4 May 2017Donor status: individual(Registered 07 July 2017)", 
+               "status": "individual", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": true, 
+               "persons": [], 
+               "registered": "07/07/2017", 
+               "officers": [], 
+               "isIncome": false, 
+               "amount": 2000, 
+               "link": "https://beta.companieshouse.gov.uk/officers/zagJJZhGXaPO1pQWOWXhvtjQvO0/appointments", 
+               "pretty": "Jack Thorne", 
+               "address": "private", 
+               "item_id": "0001", 
+               "donor": "Jack Thorne", 
+               "category_id": 3, 
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Jack Thorne", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": [
+                  {
+                     "name": "Jack THORNE", 
+                     "links": {
+                        "company": "/company/11100927"
+                     }, 
+                     "company": {
+                        "company_status": "active", 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "90030"
+                        ], 
+                        "links": {
+                           "filing_history": "/company/11100927/filing-history", 
+                           "self": "/company/11100927", 
+                           "officers": "/company/11100927/officers"
+                        }, 
+                        "registered_office_address": {
+                           "country": "United Kingdom", 
+                           "address_line_1": "27 Mortimer Street", 
+                           "postal_code": "W1T 3BL", 
+                           "locality": "London"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-12-20", 
+                           "next_made_up_to": "2018-12-06", 
+                           "overdue": false
+                        }, 
+                        "company_number": "11100927", 
+                        "date_of_creation": "2017-12-07", 
+                        "has_insolvency_history": false, 
+                        "etag": "22bd213a2b7b7c3c534a1ec74224f51de7aee39e", 
+                        "accounts": {
+                           "next_due": "2019-09-07", 
+                           "next_made_up_to": "2018-12-31", 
+                           "last_accounts": {
+                              "type": "null"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2019-09-07", 
+                              "period_start_on": "2017-12-07", 
+                              "period_end_on": "2018-12-31", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "31", 
+                              "month": "12"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "ONE SHOE FILMS LIMITED", 
+                        "registered_office_is_in_dispute": false, 
+                        "has_charges": false, 
+                        "type": "ltd"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "BLG REGISTRARS LIMITED", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/iZmuX6EAMibS6MFL2jK9sBGsDkA/appointments"
+                              }
+                           }, 
+                           "appointed_on": "2017-12-07", 
+                           "identification": {
+                              "identification_type": "eea", 
+                              "place_registered": "ENGLAND & WALES", 
+                              "registration_number": "03720149"
+                           }, 
+                           "address": {
+                              "premises": "27", 
+                              "country": "United Kingdom", 
+                              "locality": "London", 
+                              "postal_code": "W1T 3BL", 
+                              "address_line_1": "Mortimer Street"
+                           }, 
+                           "officer_role": "corporate-secretary"
+                        }, 
+                        {
+                           "name": "MASON, Rachel", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/noZz9W7AverHSgTjb9Kb8QbwxdY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "27", 
+                              "country": "United Kingdom", 
+                              "locality": "London", 
+                              "postal_code": "W1T 3BL", 
+                              "address_line_1": "Mortimer Street"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2017-12-07", 
+                           "date_of_birth": {
+                              "year": 1972, 
+                              "month": 5
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Comedy Agent"
+                        }, 
+                        {
+                           "name": "THORNE, Jack", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/zagJJZhGXaPO1pQWOWXhvtjQvO0/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2017-12-07", 
+                           "date_of_birth": {
+                              "year": 1978, 
+                              "month": 12
+                           }, 
+                           "address": {
+                              "premises": "27", 
+                              "country": "United Kingdom", 
+                              "address_line_1": "Mortimer Street", 
+                              "postal_code": "W1T 3BL", 
+                              "locality": "London"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Screenwriter"
+                        }
+                     ], 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-12-07", 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "THORNE", 
+                        "forename": "Jack"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_name": "ONE SHOE FILMS LIMITED", 
+                        "company_number": "11100927"
+                     }, 
+                     "address": {
+                        "premises": "27", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Mortimer Street", 
+                        "postal_code": "W1T 3BL", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "persons_with_significant_control": [], 
+                     "occupation": "Screenwriter"
+                  }
+               ]
+            }
+         ], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -445,9 +655,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -458,9 +669,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -471,9 +683,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -484,6 +697,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Smallholding in Carmarthenshire: (i).", 
+               "Smallholding in Carmarthenshire": "(i)."
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Smallholding in Carmarthenshire: (i).", 
@@ -499,8 +720,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [
@@ -514,8 +733,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "griffith", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -525,7 +745,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1956, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "nia griffith", 
          "category_donations": 0, 
@@ -533,8 +753,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "griffith", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -544,16 +765,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1956, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "nia griffith", 
          "category_donations": 0, 
          "first": "nia"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -564,9 +786,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -577,6 +800,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "My brother in law, Philip Brady, is a freelance public relations consultant. (Registered 02 June 2015)", 
+               "My brother in law, Philip Brady, is a freelance public relations consultant. (Registered 02 June 2015)": "My brother in law, Philip Brady, is a freelance public relations consultant. (Registered 02 June 2015)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "My brother in law, Philip Brady, is a freelance public relations consultant. (Registered 02 June 2015)", 
@@ -592,8 +823,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [
@@ -690,6 +919,12 @@
                            "appointments": "/officers/rIh4aUCxfD8Juq7VB5KuVhycZIs/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2011-03-30", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 12
+                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "6", 
@@ -697,12 +932,6 @@
                         "region": "Carmarthenshire", 
                         "postal_code": "SA15 2TL", 
                         "address_line_1": "Queen Victoria Road"
-                     }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2011-03-30", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1956
                      }, 
                      "officer_role": "director", 
                      "nationality": "Uk Citizen", 
@@ -744,8 +973,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "year": 1948, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1948
                      }, 
                      "address": {
                         "locality": "Llanelli", 
@@ -766,12 +995,6 @@
                            "appointments": "/officers/74E3lHA5cnOmF1znd9HEmzlZ3vI/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2012-11-23", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1950
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "2", 
@@ -780,8 +1003,14 @@
                         "postal_code": "SA15 3LL", 
                         "address_line_1": "Gerddi Glasfryn Gardens"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2012-11-23", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 6
+                     }, 
                      "nationality": "Uk", 
+                     "officer_role": "director", 
                      "occupation": "Hospital Chaplain"
                   }, 
                   {
@@ -802,8 +1031,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "year": 1949, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1949
                      }, 
                      "officer_role": "director", 
                      "nationality": "Welsh", 
@@ -816,18 +1045,18 @@
                            "appointments": "/officers/TcO_mBCw0WotH5ZZYBvKsUiTlBQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2017-02-24", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 9
-                     }, 
                      "address": {
                         "premises": "24", 
                         "region": "Carmarthenshire", 
                         "locality": "Llanelli", 
                         "postal_code": "SA15 3LF", 
                         "address_line_1": "Harries Avenue"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2017-02-24", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1954
                      }, 
                      "officer_role": "director", 
                      "nationality": "Welsh", 
@@ -840,12 +1069,6 @@
                            "appointments": "/officers/Cd51fzyqbMMcnxrQ7n_qgnm9mkI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-03-30", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 6
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "24", 
@@ -853,6 +1076,12 @@
                         "region": "Carmarthenshire", 
                         "postal_code": "SA15 3LF", 
                         "address_line_1": "Harries Avenue"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-03-30", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 6
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -865,6 +1094,12 @@
                            "appointments": "/officers/sfEckuF-FR_a6CDqR9RSTlhGivE/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2013-01-11", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1941
+                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "45", 
@@ -872,12 +1107,6 @@
                         "region": "Dyfed", 
                         "postal_code": "SA15 2AB", 
                         "address_line_1": "Trinity Road"
-                     }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2013-01-11", 
-                     "date_of_birth": {
-                        "year": 1941, 
-                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -887,7 +1116,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07583629", 
-               "pretty": "nia griffith nia rhiannon griffith", 
+               "pretty": "Nia Griffith", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -904,12 +1133,12 @@
                   "sic_codes": [
                      "91030"
                   ], 
-                  "etag": "a3a5c42689b405774124987f26c14bbc0bc5e8eb", 
+                  "etag": "7fba6c71615109d1d85d23b61b9a1bbe692e4257", 
                   "registered_office_address": {
                      "region": "Carmarthenshire", 
-                     "locality": "Llanelli", 
+                     "address_line_1": "24 Harries Avenue", 
                      "postal_code": "SA15 3LF", 
-                     "address_line_1": "24 Harries Avenue"
+                     "locality": "Llanelli"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 

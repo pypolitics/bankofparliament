@@ -116,9 +116,9 @@
                "Fax": null, 
                "@Type_Id": "4", 
                "Address1": "Office of Stephen Morgan MP", 
-               "Address2": "72 Albert Road, Southsea,", 
-               "Address3": "Hampshire", 
-               "Address4": null, 
+               "Address2": "72 Albert Road", 
+               "Address3": "Southsea", 
+               "Address4": "Hampshire", 
                "Address5": null, 
                "Note": null, 
                "Phone": "023 9229 1088", 
@@ -204,14 +204,17 @@
       "Foreign", 
       "and", 
       "Commonwealth", 
-      "Office", 
+      "Office,", 
+      "Department", 
+      "for", 
+      "Education", 
       "Public", 
       "Accounts", 
       "Committee"
    ], 
    "mp_income": 76390, 
    "mp_donations": 2000, 
-   "wrans_departments": "Department for Business, Energy and Industrial Strategy, Department for Transport, Department for Communities and Local Government, Foreign and Commonwealth Office", 
+   "wrans_departments": "Department for Business, Energy and Industrial Strategy, Department for Transport, Department for Communities and Local Government, Foreign and Commonwealth Office, Department for Education", 
    "person_id": "25658", 
    "party": "Labour", 
    "forname": "Stephen", 
@@ -221,6 +224,18 @@
    "eu_ref_stance": "", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "21 June 2017, received \u00a3354.67 as Chief Executive of Basingstoke Voluntary Action, The Orchard, White Hart Lane, Basingstoke RG21 4AF. Hours: none since my election. I stood down from this role on 9 June 2017. (Registered 06 July 2017)", 
+               "21 June 2017, received \u00a3354.67 as Chief Executive of Basingstoke Voluntary Action, The Orchard, White Hart Lane, Basingstoke RG21 4AF. Hours": "none since my election. I stood down from this role on 9 June 2017. (Registered 06 July 2017)"
+            }, 
+            {
+               "raw_string": "30 June 2017, received \u00a31,074 allowance as Councillor and Labour Group Leader from Portsmouth City Council, Civic Offices, Guildhall Walk, Portsmouth PO1 2AL. Hours: approx. 30 hrs since my election as an MP (5-10 hrs a week). Allowance to be paid to local community initiatives. (Registered 06 July 2017)", 
+               "30 June 2017, received \u00a31,074 allowance as Councillor and Labour Group Leader from Portsmouth City Council, Civic Offices, Guildhall Walk, Portsmouth PO1 2AL. Hours": "approx. 30 hrs since my election as an MP (5-10 hrs a week). Allowance to be paid to local community initiatives. (Registered 06 July 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "21 June 2017, received \u00a3354.67 as Chief Executive of Basingstoke Voluntary Action, The Orchard, White Hart Lane, Basingstoke RG21 4AF. Hours: none since my election. I stood down from this role on 9 June 2017. (Registered 06 July 2017)", 
@@ -249,8 +264,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 1428, 
          "raw_items": [
@@ -264,6 +277,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobald's Road, London WC1X 8TN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 06 July 2017)", 
@@ -271,19 +296,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": null, 
                "pretty": "Unite the Union", 
                "address": "128 Theobald's Road, London WC1X 8TN", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -296,9 +328,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -309,9 +342,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -322,9 +356,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -335,9 +370,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -348,9 +384,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -362,8 +399,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "morgan", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 1, 
@@ -373,7 +411,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1981, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "stephen morgan", 
          "category_donations": 0, 
@@ -381,8 +419,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "morgan", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 1, 
@@ -392,16 +431,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1981, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "stephen morgan", 
          "category_donations": 0, 
          "first": "stephen"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -412,9 +452,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -425,9 +466,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -509,8 +551,8 @@
                         "forename": "Stephen"
                      }, 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1959
+                        "year": 1959, 
+                        "month": 4
                      }, 
                      "etag": "7fc23cb216809277e6de8fe84badc7b3d6648928", 
                      "address": {
@@ -554,7 +596,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/09626716", 
-               "pretty": "stephen morgan stephen james morgan", 
+               "pretty": "Stephen Morgan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -642,8 +684,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1982
+                        "year": 1982, 
+                        "month": 3
                      }, 
                      "etag": "e421693d755228f2da05bd6a708fc5fc6d4b629a", 
                      "address": {
@@ -682,12 +724,6 @@
                            "appointments": "/officers/E8YJmi78rI0BoYbZDyvJP4OvS6o/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2005-07-28", 
-                     "date_of_birth": {
-                        "year": 1986, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "New Bungalow", 
                         "postal_code": "BT35 7DZ", 
@@ -695,8 +731,14 @@
                         "address_line_2": "Bessbrook", 
                         "address_line_1": "95 High Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2005-07-28", 
+                     "date_of_birth": {
+                        "year": 1986, 
+                        "month": 3
+                     }, 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Secretary"
                   }, 
                   {
@@ -716,11 +758,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2005-07-28", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1982
+                        "year": 1982, 
+                        "month": 3
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Northern Irish", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -776,6 +818,12 @@
                            "appointments": "/officers/Y2bAH2TyjA4nujs0GOeW0Opgh9w/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_2": "Warrenpoint", 
+                        "locality": "Newry", 
+                        "postal_code": "BT35 6JF", 
+                        "address_line_1": "1 Elmfield Avenue"
+                     }, 
                      "former_names": [
                         {
                            "surname": "HARTE"
@@ -788,12 +836,6 @@
                         "month": 12, 
                         "year": 1958
                      }, 
-                     "address": {
-                        "address_line_2": "Warrenpoint", 
-                        "locality": "Newry", 
-                        "postal_code": "BT35 6JF", 
-                        "address_line_1": "1 Elmfield Avenue"
-                     }, 
                      "nationality": "Irish", 
                      "officer_role": "director", 
                      "occupation": "Company Director"
@@ -802,7 +844,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/NI055940", 
-               "pretty": "stephen morgan stephen james morgan", 
+               "pretty": "Stephen Morgan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -914,15 +956,15 @@
                         "address_line_2": "Morley", 
                         "address_line_1": "Norton Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/09843032", 
-               "pretty": "stephen morgan stephen james morgan", 
+               "pretty": "Stephen Morgan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1078,7 +1120,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/04109767", 
-               "pretty": "stephen morgan stephen james morgan", 
+               "pretty": "Stephen Morgan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1173,11 +1215,11 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "1996-11-20", 
                      "date_of_birth": {
-                        "year": 1949, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1949
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1187,20 +1229,20 @@
                            "appointments": "/officers/M5-NoH19HD609Yqezo0LQzwmAHo/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "16-18 Kingston Road Portsmouth", 
-                        "address_line_1": "The Bradbury Centre", 
-                        "postal_code": "PO1 5RZ", 
-                        "locality": "Hampshire"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-03-31", 
                      "date_of_birth": {
                         "year": 1980, 
                         "month": 11
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_2": "16-18 Kingston Road Portsmouth", 
+                        "address_line_1": "The Bradbury Centre", 
+                        "postal_code": "PO1 5RZ", 
+                        "locality": "Hampshire"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1210,17 +1252,17 @@
                            "appointments": "/officers/W7xrdzBd_bu9unXipKbPzx8Fqhs/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-07-10", 
-                     "date_of_birth": {
-                        "year": 1952, 
-                        "month": 9
-                     }, 
                      "address": {
                         "address_line_2": "16-18 Kingston Road Portsmouth", 
                         "locality": "Hampshire", 
                         "postal_code": "PO1 5RZ", 
                         "address_line_1": "The Bradbury Centre"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-07-10", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 9
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1256,20 +1298,20 @@
                            "appointments": "/officers/_EuM87Yoe8sm30W41KS5XrtFnGs/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-10-20", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1946
-                     }, 
                      "address": {
                         "postal_code": "PO1 5RZ", 
                         "address_line_1": "The Bradbury Centre", 
                         "address_line_2": "16-18 Kingston Road Portsmouth", 
                         "locality": "Hampshire"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-10-20", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 4
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1282,8 +1324,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2008-09-04", 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1961
                      }, 
                      "address": {
                         "postal_code": "PO1 5PA", 
@@ -1341,8 +1383,8 @@
                      "appointed_on": "2004-11-02", 
                      "resigned_on": "2015-10-14", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1944
                      }, 
                      "address": {
                         "region": "Hampshire", 
@@ -1364,8 +1406,8 @@
                      "appointed_on": "1999-03-31", 
                      "resigned_on": "2003-09-01", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1935
+                        "year": 1935, 
+                        "month": 6
                      }, 
                      "address": {
                         "region": "Hampshire", 
@@ -1373,8 +1415,8 @@
                         "postal_code": "PO6 4JL", 
                         "locality": "Portsmouth"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1418,8 +1460,8 @@
                      "appointed_on": "2008-09-04", 
                      "resigned_on": "2009-10-05", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1962
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1468,8 +1510,8 @@
                         "year": 1920, 
                         "month": 12
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1488,8 +1530,8 @@
                      "appointed_on": "1996-11-20", 
                      "resigned_on": "1997-09-25", 
                      "date_of_birth": {
-                        "year": 1924, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1924
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1502,6 +1544,12 @@
                            "appointments": "/officers/0cuHERXpKLgiMqzUNCcQ2gEeZPw/appointments"
                         }
                      }, 
+                     "address": {
+                        "postal_code": "PO1 5RZ", 
+                        "locality": "Hampshire", 
+                        "address_line_2": "16-18 Kingston Road Portsmouth", 
+                        "address_line_1": "The Bradbury Centre"
+                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2015-03-11", 
                      "resigned_on": "2016-05-20", 
@@ -1509,14 +1557,8 @@
                         "year": 1981, 
                         "month": 1
                      }, 
-                     "address": {
-                        "postal_code": "PO1 5RZ", 
-                        "locality": "Hampshire", 
-                        "address_line_2": "16-18 Kingston Road Portsmouth", 
-                        "address_line_1": "The Bradbury Centre"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Head Of Community Engagement"
                   }, 
                   {
@@ -1526,20 +1568,20 @@
                            "appointments": "/officers/cVm52vykwld3fCoJ-YTtSvh22uI/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "PO2 8EX", 
-                        "address_line_1": "95 Lower Derby Road", 
-                        "address_line_2": "Stamshaw", 
-                        "locality": "Portsmouth"
-                     }, 
                      "appointed_on": "1996-11-20", 
                      "resigned_on": "2004-03-01", 
                      "date_of_birth": {
                         "month": 5, 
                         "year": 1925
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "postal_code": "PO2 8EX", 
+                        "address_line_1": "95 Lower Derby Road", 
+                        "address_line_2": "Stamshaw", 
+                        "locality": "Portsmouth"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1549,12 +1591,6 @@
                            "appointments": "/officers/0l1MzyhloeDL2qo1nG1ZrcTz02Y/appointments"
                         }
                      }, 
-                     "appointed_on": "1996-11-20", 
-                     "resigned_on": "2000-04-01", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1925
-                     }, 
                      "address": {
                         "postal_code": "PO5 4DS", 
                         "region": "Hampshire", 
@@ -1562,8 +1598,14 @@
                         "address_line_2": "Southsea", 
                         "address_line_1": "22 Norfolk Street"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "1996-11-20", 
+                     "resigned_on": "2000-04-01", 
+                     "date_of_birth": {
+                        "year": 1925, 
+                        "month": 12
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Doctor"
                   }, 
                   {
@@ -1610,8 +1652,8 @@
                         "address_line_2": "Cosham", 
                         "locality": "Portsmouth"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1621,6 +1663,13 @@
                            "appointments": "/officers/R1mq9bsosKoKgJeEQwFW-ptc684/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1996-11-20", 
+                     "resigned_on": "2013-06-01", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1927
+                     }, 
                      "address": {
                         "postal_code": "PO6 2DR", 
                         "region": "Hampshire", 
@@ -1628,15 +1677,8 @@
                         "address_line_2": "30 St Johns Road Cosham", 
                         "address_line_1": "Two Ways"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1996-11-20", 
-                     "resigned_on": "2013-06-01", 
-                     "date_of_birth": {
-                        "year": 1927, 
-                        "month": 8
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Doctor"
                   }, 
                   {
@@ -1669,7 +1711,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/03281047", 
-               "pretty": "stephen morgan stephen james morgan", 
+               "pretty": "Stephen Morgan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

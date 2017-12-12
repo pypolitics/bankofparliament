@@ -298,9 +298,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -311,6 +312,42 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: St Philips Care Caledonia LtdAddress of donor: 17 Lichfield Street, Stone, Staffordshire ST15 8NAAmount of donation or nature and value if donation in kind: \u00a33,333Donor status: company, registration 07013330(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,333", 
+               "Name of donor": "St Philips Care Caledonia Ltd", 
+               "Donor status": "company, registration 07013330", 
+               "Address of donor": "17 Lichfield Street, Stone, Staffordshire ST15 8NA"
+            }, 
+            {
+               "raw_string": "Name of donor: BM Creative Management LtdAddress of donor: 4th Floor, York House, 23 Kingsway, London WC2B 6UJAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: company, registration 05635995(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,000", 
+               "Name of donor": "BM Creative Management Ltd", 
+               "Donor status": "company, registration 05635995", 
+               "Address of donor": "4th Floor, York House, 23 Kingsway, London WC2B 6UJ"
+            }, 
+            {
+               "raw_string": "Name of donor: GMB Birmingham and West MidlandsAddress of donor: Will Thorne House, 2 Birmingham Road, Halesowen B63 3HPAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "GMB Birmingham and West Midlands", 
+               "Donor status": "trade union", 
+               "Address of donor": "Will Thorne House, 2 Birmingham Road, Halesowen B63 3HP"
+            }, 
+            {
+               "raw_string": "Name of donor: Daniel BeardAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Daniel Beard", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: St Philips Care Caledonia LtdAddress of donor: 17 Lichfield Street, Stone, Staffordshire ST15 8NAAmount of donation or nature and value if donation in kind: \u00a33,333Donor status: company, registration 07013330(Registered 06 July 2017)", 
@@ -318,15 +355,223 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Gary Mitchell Hartland", 
+                     "links": {
+                        "self": "/company/07013330/persons-with-significant-control/individual/pN8IBUhv2h79ZvW4H_npW-UVbAk"
+                     }, 
+                     "notified_on": "2016-09-09", 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "significant-influence-or-control"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 2
+                     }, 
+                     "name_elements": {
+                        "surname": "Hartland", 
+                        "forename": "Gary", 
+                        "middle_name": "Mitchell", 
+                        "title": "Mr"
+                     }, 
+                     "etag": "6679b1a029366aa15ac9a44fe7f515d62eebc50b", 
+                     "address": {
+                        "locality": "Stone", 
+                        "premises": "17", 
+                        "region": "Staffordshire", 
+                        "care_of": "PLANT & CO LTD", 
+                        "postal_code": "ST15 8NA", 
+                        "address_line_1": "Lichfield Street"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "06/07/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2009-09-09", 
+                     "officer_role": "secretary", 
+                     "name": "HARTLAND, Andrew John, Dr", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/BDTHjsULcWw0tyohl_WySmRVCmw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Stone", 
+                        "premises": "17", 
+                        "country": "United Kingdom", 
+                        "region": "Staffordshire", 
+                        "care_of": "PLANT & CO LTD", 
+                        "postal_code": "ST15 8NA", 
+                        "address_line_1": "Lichfield Street"
+                     }
+                  }, 
+                  {
+                     "name": "HARTLAND, Gary Mitchell", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/LWnp4sY-EWFVnDSZiVGWQDxSASw/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-09-09", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 2
+                     }, 
+                     "address": {
+                        "locality": "Stone", 
+                        "premises": "17", 
+                        "country": "United Kingdom", 
+                        "region": "Staffordshire", 
+                        "care_of": "PLANT & CO LTD", 
+                        "postal_code": "ST15 8NA", 
+                        "address_line_1": "Lichfield Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "HARTLAND, Karen Ann", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bSuKyYsmWyPmWcRofhDdOrKt5hw/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-04-03", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1970
+                     }, 
+                     "address": {
+                        "locality": "Stone", 
+                        "premises": "17", 
+                        "country": "United Kingdom", 
+                        "region": "Staffordshire", 
+                        "care_of": "PLANT & CO LTD", 
+                        "postal_code": "ST15 8NA", 
+                        "address_line_1": "Lichfield Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Accountant"
+                  }, 
+                  {
+                     "name": "HARTLAND, Karen Ann", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/HzEr5RkJ2mqxPIFAIf_s5GIaX14/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2009-09-09", 
+                     "resigned_on": "2010-08-31", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1970
+                     }, 
+                     "address": {
+                        "address_line_2": "31 Bilbrook Road Bilbrook", 
+                        "region": "West Midlands", 
+                        "locality": "Wolverhampton", 
+                        "postal_code": "WV8 1EU", 
+                        "address_line_1": "Manor Cottages"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 3333, 
+               "link": "https://beta.companieshouse.gov.uk/company/07013330", 
                "pretty": "St Philips Care Caledonia Ltd", 
                "address": "17 Lichfield Street, Stone, Staffordshire ST15 8NA", 
                "item_id": "0001", 
                "donor": "St Philips Care Caledonia Ltd", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "links": {
+                     "filing_history": "/company/07013330/filing-history", 
+                     "charges": "/company/07013330/charges", 
+                     "self": "/company/07013330", 
+                     "officers": "/company/07013330/officers", 
+                     "persons_with_significant_control": "/company/07013330/persons-with-significant-control"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "can_file": true, 
+                  "company_number": "07013330", 
+                  "date_of_creation": "2009-09-09", 
+                  "confirmation_statement": {
+                     "next_due": "2018-09-23", 
+                     "last_made_up_to": "2017-09-09", 
+                     "next_made_up_to": "2018-09-09", 
+                     "overdue": false
+                  }, 
+                  "accounts": {
+                     "next_due": "2017-12-31", 
+                     "next_made_up_to": "2017-03-31", 
+                     "last_accounts": {
+                        "period_start_on": "2015-04-01", 
+                        "type": "medium", 
+                        "made_up_to": "2016-03-31", 
+                        "period_end_on": "2016-03-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2017-12-31", 
+                        "period_start_on": "2016-04-01", 
+                        "period_end_on": "2017-03-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "03"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_status": "active", 
+                  "registered_office_address": {
+                     "region": "Staffordshire", 
+                     "address_line_1": "17 Lichfield Street", 
+                     "postal_code": "ST15 8NA", 
+                     "care_of": "PLANT & CO LTD", 
+                     "locality": "Stone"
+                  }, 
+                  "etag": "e519ef9f90a80895b6b0cb74ccefcbfa605155b0", 
+                  "company_name": "ST PHILIPS CARE CALEDONIA LIMITED", 
+                  "type": "ltd", 
+                  "status": "active", 
+                  "jurisdiction": "england-wales", 
+                  "sic_codes": [
+                     "87100", 
+                     "87300"
+                  ], 
+                  "has_been_liquidated": false, 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "2013-03-27", 
+                        "ceased_on": "2013-04-18", 
+                        "name": "CALEDONIA CARE LIMITED"
+                     }, 
+                     {
+                        "effective_from": "2009-09-09", 
+                        "ceased_on": "2013-03-27", 
+                        "name": "GUARDIAN CARE HOMES (CALEDONIA) LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "items": [], 
+                  "last_full_members_list_date": "2015-09-09", 
+                  "has_insolvency_history": false, 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: BM Creative Management LtdAddress of donor: 4th Floor, York House, 23 Kingsway, London WC2B 6UJAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: company, registration 05635995(Registered 06 July 2017)", 
@@ -334,15 +579,330 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Lord  Waheed Alli", 
+                     "links": {
+                        "self": "/company/05635995/persons-with-significant-control/individual/aF2_GruiWTkHcm5Ehc6JkitOg68"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 11
+                     }, 
+                     "name_elements": {
+                        "title": "Lord ", 
+                        "surname": "Alli", 
+                        "forename": "Waheed"
+                     }, 
+                     "notified_on": "2017-08-25", 
+                     "etag": "128130c0d3573cad4749b94045acb2e2bea08501", 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "Fourth Floor", 
+                        "country": "United Kingdom", 
+                        "postal_code": "WC2B 6UJ", 
+                        "address_line_2": "23 Kingsway", 
+                        "address_line_1": "York House"
+                     }, 
+                     "nationality": "British"
+                  }, 
+                  {
+                     "kind": "corporate-entity-person-with-significant-control", 
+                     "ceased_on": "2017-08-25", 
+                     "name": "Silvergate Investments Limited", 
+                     "links": {
+                        "self": "/company/05635995/persons-with-significant-control/corporate-entity/Gz5J65dvFr77e-Cb2IyTD60i1WY"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "etag": "3f57b246ddfad34b5094b4fc5d8d73d72395f701", 
+                     "identification": {
+                        "place_registered": "Companies House", 
+                        "country_registered": "England And Wales", 
+                        "legal_form": "Limited By Shares", 
+                        "legal_authority": "United Kingdom (England And Wales)", 
+                        "registration_number": "05982870"
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "Fourth Floor", 
+                        "country": "England", 
+                        "postal_code": "WC2B 6UJ", 
+                        "address_line_2": "23 Kingsway", 
+                        "address_line_1": "York House"
+                     }
+                  }
+               ], 
                "registered": "06/07/2017", 
+               "officers": [
+                  {
+                     "name": "FOOT ANSTEY SECRETARIAL LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/0sLfYS7CnSzMPbybEmBhwTuflFM/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2012-10-03", 
+                     "identification": {
+                        "identification_type": "eea", 
+                        "place_registered": "UNITED KINGDOM", 
+                        "registration_number": "03485060"
+                     }, 
+                     "address": {
+                        "premises": "Senate House", 
+                        "country": "England", 
+                        "locality": "Exeter", 
+                        "postal_code": "EX1 1NT", 
+                        "address_line_1": "Southernhay Gardens"
+                     }, 
+                     "officer_role": "corporate-secretary"
+                  }, 
+                  {
+                     "name": "ALLI, Waheed, Lord ", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/mX-D4eeAGqOxCdDx3CVqhn2XoVw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "Fourth Floor", 
+                        "country": "United Kingdom", 
+                        "postal_code": "WC2B 6UJ", 
+                        "address_line_2": "23 Kingsway", 
+                        "address_line_1": "York House"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-01-09", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 11
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Chairman"
+                  }, 
+                  {
+                     "name": "MARSHRONS, Joan Helen", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sxd8qZ9R0ZSHhboHNVhV_VjUbDE/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "Fourth Floor", 
+                        "country": "United Kingdom", 
+                        "postal_code": "WC2B 6UJ", 
+                        "address_line_2": "23 Kingsway", 
+                        "address_line_1": "York House"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2006-01-26", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1953
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "WEBB, Ruth Zita, Mrs ", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/TBjK6LQvDJz2B2WI6A-FNZ8fmYk/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-01-31", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1973
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "Fourth Floor", 
+                        "country": "United Kingdom", 
+                        "postal_code": "WC2B 6UJ", 
+                        "address_line_2": "23 Kingsway", 
+                        "address_line_1": "York House"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chartered Accountant"
+                  }, 
+                  {
+                     "name": "OLSWANG COSEC LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zhW1Y6MvmbkuN0AtkvLPACebzkg/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2005-11-25", 
+                     "resigned_on": "2012-10-03", 
+                     "identification": {
+                        "identification_type": "eea", 
+                        "place_registered": "UNITED KINGDOM", 
+                        "registration_number": "04051235"
+                     }, 
+                     "address": {
+                        "premises": "Seventh Floor", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "WC1V 6XX", 
+                        "address_line_1": "90 High Holborn"
+                     }, 
+                     "officer_role": "corporate-secretary"
+                  }, 
+                  {
+                     "name": "COLE, David Douglas", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/QQlquxS9_XM0Je9vXBk_aOGWAvU/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-01-26", 
+                     "resigned_on": "2014-01-31", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 5
+                     }, 
+                     "address": {
+                        "region": "Hertfordshire", 
+                        "locality": "St. Albans", 
+                        "postal_code": "AL4 0AG", 
+                        "address_line_1": "10 Manston Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Finance Director"
+                  }, 
+                  {
+                     "name": "OLSWANG DIRECTORS 1 LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/mJbPCxEhdO8CHLV4ScJP3jNUQPo/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2005-11-25", 
+                     "resigned_on": "2006-01-09", 
+                     "address": {
+                        "postal_code": "WC1V 6XX", 
+                        "locality": "London", 
+                        "address_line_2": "90 High Holborn", 
+                        "address_line_1": "Seventh Floor"
+                     }, 
+                     "officer_role": "corporate-nominee-director"
+                  }, 
+                  {
+                     "name": "OLSWANG DIRECTORS 2 LIMITED", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/vPmioaWQfU5uJVYEUtQmMXPDZSo/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2005-11-25", 
+                     "resigned_on": "2006-01-09", 
+                     "address": {
+                        "premises": "Seventh Floor", 
+                        "locality": "London", 
+                        "postal_code": "WC1V 6XX", 
+                        "address_line_1": "90 High Holborn"
+                     }, 
+                     "officer_role": "corporate-nominee-director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 3000, 
+               "link": "https://beta.companieshouse.gov.uk/company/05635995", 
                "pretty": "BM Creative Management Ltd", 
                "address": "4th Floor, York House, 23 Kingsway, London WC2B 6UJ", 
                "item_id": "0002", 
                "donor": "BM Creative Management Ltd", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "links": {
+                     "filing_history": "/company/05635995/filing-history", 
+                     "charges": "/company/05635995/charges", 
+                     "self": "/company/05635995", 
+                     "officers": "/company/05635995/officers", 
+                     "persons_with_significant_control": "/company/05635995/persons-with-significant-control"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "can_file": true, 
+                  "last_full_members_list_date": "2015-11-25", 
+                  "date_of_creation": "2005-11-25", 
+                  "confirmation_statement": {
+                     "next_due": "2018-12-09", 
+                     "last_made_up_to": "2017-11-25", 
+                     "next_made_up_to": "2018-11-25", 
+                     "overdue": false
+                  }, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_status": "active", 
+                  "registered_office_address": {
+                     "address_line_1": "Fourth Floor York House", 
+                     "postal_code": "WC2B 6UJ", 
+                     "country": "United Kingdom", 
+                     "address_line_2": "23 Kingsway", 
+                     "locality": "London"
+                  }, 
+                  "etag": "119980d20f7d0c1a04997f8902f70f29bd4a2b86", 
+                  "company_name": "BM CREATIVE MANAGEMENT LIMITED", 
+                  "type": "ltd", 
+                  "status": "active", 
+                  "jurisdiction": "england-wales", 
+                  "sic_codes": [
+                     "82990"
+                  ], 
+                  "has_been_liquidated": false, 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "2005-11-25", 
+                        "ceased_on": "2006-01-12", 
+                        "name": "NEWINCCO 493 LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "items": [], 
+                  "company_number": "05635995", 
+                  "has_insolvency_history": false, 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: GMB Birmingham and West MidlandsAddress of donor: Will Thorne House, 2 Birmingham Road, Halesowen B63 3HPAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 06 July 2017)", 
@@ -350,15 +910,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": null, 
                "pretty": "GMB Birmingham and West Midlands", 
                "address": "Will Thorne House, 2 Birmingham Road, Halesowen B63 3HP", 
                "item_id": "0003", 
                "donor": "GMB Birmingham and West Midlands", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "GMB Birmingham and West Midlands", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Daniel BeardAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 06 July 2017)", 
@@ -366,19 +935,689 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": "https://beta.companieshouse.gov.uk/officers/Qj37N24fBOhgHIUIkOq4eprDuCQ/appointments", 
                "pretty": "Daniel Beard", 
                "address": "private", 
                "item_id": "0004", 
                "donor": "Daniel Beard", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Daniel Beard", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": [
+                  {
+                     "name": "Daniel BEARD", 
+                     "links": {
+                        "company": "/company/08636507"
+                     }, 
+                     "company": {
+                        "has_insolvency_history": false, 
+                        "can_file": false, 
+                        "date_of_cessation": "2014-12-30", 
+                        "links": {
+                           "filing_history": "/company/08636507/filing-history", 
+                           "self": "/company/08636507", 
+                           "officers": "/company/08636507/officers"
+                        }, 
+                        "registered_office_address": {
+                           "locality": "Rugby", 
+                           "country": "England", 
+                           "region": "Warwickshire", 
+                           "postal_code": "CV23 8DH", 
+                           "address_line_2": "Grandborough", 
+                           "address_line_1": "Orchard Cottage Church Road"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "date_of_creation": "2013-08-05", 
+                        "jurisdiction": "england-wales", 
+                        "company_number": "08636507", 
+                        "company_status": "dissolved", 
+                        "etag": "6d975c85f019876fa1a7c3c170516669880e9611", 
+                        "accounts": {
+                           "last_accounts": {
+                              "type": "null"
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "31", 
+                              "month": "08"
+                           }
+                        }, 
+                        "company_name": "DANIEL BEARD CONSULTANCY LIMITED", 
+                        "has_charges": false, 
+                        "type": "ltd"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "BEARD, Daniel", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/bta3EPPaxdgc9f7hZiwrLSu2uzY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Rugby", 
+                              "premises": "Orchard Cottage", 
+                              "country": "England", 
+                              "region": "Warwickshire", 
+                              "postal_code": "CV23 8DH", 
+                              "address_line_2": "Grandborough", 
+                              "address_line_1": "Church Road"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2013-08-05", 
+                           "date_of_birth": {
+                              "month": 2, 
+                              "year": 1982
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Salesman"
+                        }
+                     ], 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-08-05", 
+                     "name_elements": {
+                        "forename": "Daniel", 
+                        "surname": "BEARD", 
+                        "title": "Mr"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "dissolved", 
+                        "company_name": "DANIEL BEARD CONSULTANCY LIMITED", 
+                        "company_number": "08636507"
+                     }, 
+                     "address": {
+                        "locality": "Rugby", 
+                        "premises": "Orchard Cottage", 
+                        "country": "England", 
+                        "region": "Warwickshire", 
+                        "postal_code": "CV23 8DH", 
+                        "address_line_2": "Grandborough", 
+                        "address_line_1": "Church Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [], 
+                     "occupation": "Salesman"
+                  }, 
+                  {
+                     "name": "Daniel BEARD", 
+                     "links": {
+                        "company": "/company/08929572"
+                     }, 
+                     "company": {
+                        "status": "active", 
+                        "company_status": "dissolved", 
+                        "can_file": false, 
+                        "links": {
+                           "filing_history": "/company/08929572/filing-history", 
+                           "self": "/company/08929572", 
+                           "officers": "/company/08929572/officers"
+                        }, 
+                        "etag": "0f0b03a227dda7178672ba2e6e700fd9abba085d", 
+                        "registered_office_address": {
+                           "locality": "Skegness", 
+                           "country": "England", 
+                           "region": "Lincolnshire", 
+                           "postal_code": "PE24 4DA", 
+                           "address_line_2": "Wainfleet", 
+                           "address_line_1": "63 High Street"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "company_number": "08929572", 
+                        "date_of_creation": "2014-03-10", 
+                        "has_insolvency_history": false, 
+                        "has_been_liquidated": false, 
+                        "accounts": {
+                           "last_accounts": {
+                              "type": "null"
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "31", 
+                              "month": "03"
+                           }
+                        }, 
+                        "company_name": "D.B GAMES LIMITED", 
+                        "has_charges": false, 
+                        "type": "ltd", 
+                        "date_of_cessation": "2015-10-27"
+                     }, 
+                     "address": {
+                        "locality": "Skegness", 
+                        "premises": "63", 
+                        "country": "England", 
+                        "region": "Lincolnshire", 
+                        "postal_code": "PE24 4DA", 
+                        "address_line_2": "Wainfleet", 
+                        "address_line_1": "High Street"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "BEARD, Daniel", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/aGBrXoBB8eqxclMvIG5h0K1gFKY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Skegness", 
+                              "premises": "63", 
+                              "country": "England", 
+                              "region": "Lincolnshire", 
+                              "postal_code": "PE24 4DA", 
+                              "address_line_2": "Wainfleet", 
+                              "address_line_1": "High Street"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2014-03-10", 
+                           "date_of_birth": {
+                              "year": 1994, 
+                              "month": 10
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Ceo"
+                        }, 
+                        {
+                           "name": "BEARD, Kevin", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/V22XB_dDJ_fHBEV_RjBg4-iyjqY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Skegness", 
+                              "premises": "63", 
+                              "country": "England", 
+                              "region": "Lincolnshire", 
+                              "postal_code": "PE24 4DA", 
+                              "address_line_2": "Wainfleet", 
+                              "address_line_1": "High Street"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2014-03-10", 
+                           "date_of_birth": {
+                              "year": 1965, 
+                              "month": 9
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Chairman"
+                        }
+                     ], 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-03-10", 
+                     "name_elements": {
+                        "forename": "Daniel", 
+                        "surname": "BEARD", 
+                        "title": "Mr"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "dissolved", 
+                        "company_name": "D.B GAMES LIMITED", 
+                        "company_number": "08929572"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [], 
+                     "occupation": "Ceo"
+                  }, 
+                  {
+                     "name": "Daniel BEARD", 
+                     "links": {
+                        "company": "/company/08575918"
+                     }, 
+                     "company": {
+                        "status": "active", 
+                        "has_insolvency_history": false, 
+                        "links": {
+                           "filing_history": "/company/08575918/filing-history", 
+                           "self": "/company/08575918", 
+                           "officers": "/company/08575918/officers"
+                        }, 
+                        "can_file": false, 
+                        "sic_codes": [
+                           "25110"
+                        ], 
+                        "etag": "991269b36eec44750abfb3fa4e71edbaec3b44ba", 
+                        "annual_return": {
+                           "last_made_up_to": "2015-06-19"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "company_number": "08575918", 
+                        "last_full_members_list_date": "2015-06-19", 
+                        "date_of_creation": "2013-06-19", 
+                        "has_been_liquidated": false, 
+                        "accounts": {
+                           "last_accounts": {
+                              "type": "total-exemption-small", 
+                              "made_up_to": "2015-06-30"
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "30", 
+                              "month": "06"
+                           }
+                        }, 
+                        "company_name": "D BEARD ENGINEERING CO LIMITED", 
+                        "company_status": "dissolved", 
+                        "has_charges": false, 
+                        "registered_office_address": {
+                           "address_line_2": "Westbury-On-Trym", 
+                           "address_line_1": "38a High Street", 
+                           "postal_code": "BS9 3DZ", 
+                           "locality": "Bristol"
+                        }, 
+                        "type": "ltd", 
+                        "date_of_cessation": "2016-04-12"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "BEARD, Daniel", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/Iy919YXrdCS7y3xyIAii2QRK4aY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Bristol", 
+                              "premises": "14", 
+                              "country": "England", 
+                              "postal_code": "BS10 7TN", 
+                              "address_line_2": "Almondsbury", 
+                              "address_line_1": "New Charlton Way"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2013-06-19", 
+                           "date_of_birth": {
+                              "year": 1988, 
+                              "month": 10
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Manager"
+                        }, 
+                        {
+                           "name": "MARSHALL, Charlotte", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/hmcy-AGAWPTW2wAY94qh04akgSs/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2013-06-19", 
+                           "resigned_on": "2013-06-19", 
+                           "date_of_birth": {
+                              "year": 1963, 
+                              "month": 1
+                           }, 
+                           "address": {
+                              "locality": "Bristol", 
+                              "premises": "25", 
+                              "country": "England", 
+                              "postal_code": "BS16 6BB", 
+                              "address_line_2": "Downend", 
+                              "address_line_1": "Badminton Road"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Manager"
+                        }
+                     ], 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-06-19", 
+                     "name_elements": {
+                        "title": "Mr", 
+                        "surname": "BEARD", 
+                        "forename": "Daniel"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "dissolved", 
+                        "company_name": "D BEARD ENGINEERING CO LIMITED", 
+                        "company_number": "08575918"
+                     }, 
+                     "address": {
+                        "locality": "Bristol", 
+                        "premises": "14", 
+                        "country": "England", 
+                        "postal_code": "BS10 7TN", 
+                        "address_line_2": "Almondsbury", 
+                        "address_line_1": "New Charlton Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [], 
+                     "occupation": "Manager"
+                  }, 
+                  {
+                     "name": "Daniel BEARD", 
+                     "links": {
+                        "company": "/company/10016557"
+                     }, 
+                     "company": {
+                        "date_of_creation": "2016-02-20", 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "70229"
+                        ], 
+                        "links": {
+                           "filing_history": "/company/10016557/filing-history", 
+                           "self": "/company/10016557", 
+                           "officers": "/company/10016557/officers", 
+                           "persons_with_significant_control": "/company/10016557/persons-with-significant-control"
+                        }, 
+                        "registered_office_address": {
+                           "country": "England", 
+                           "locality": "Bedford", 
+                           "postal_code": "MK40 2NR", 
+                           "address_line_1": "40 Kimbolton Road"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-03-05", 
+                           "last_made_up_to": "2017-02-19", 
+                           "next_made_up_to": "2018-02-19", 
+                           "overdue": false
+                        }, 
+                        "company_number": "10016557", 
+                        "company_status": "active", 
+                        "has_insolvency_history": false, 
+                        "etag": "93200e0070abac62ddc9c36e8b2989c092167253", 
+                        "accounts": {
+                           "next_due": "2018-11-30", 
+                           "next_made_up_to": "2018-02-28", 
+                           "last_accounts": {
+                              "period_start_on": "2016-02-20", 
+                              "made_up_to": "2017-02-28", 
+                              "period_end_on": "2017-02-28"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-11-30", 
+                              "period_start_on": "2017-03-01", 
+                              "period_end_on": "2018-02-28", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "29", 
+                              "month": "02"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "MOONACHIE ASSOCIATES LTD", 
+                        "registered_office_is_in_dispute": false, 
+                        "has_charges": false, 
+                        "type": "ltd"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "BEARD, Daniel", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/0gqY2yn6FZjghKggtcMg96utOr8/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "40", 
+                              "country": "England", 
+                              "locality": "Bedford", 
+                              "postal_code": "MK40 2NR", 
+                              "address_line_1": "Kimbolton Road"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2016-02-20", 
+                           "date_of_birth": {
+                              "month": 2, 
+                              "year": 1982
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Consultancy"
+                        }
+                     ], 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-02-20", 
+                     "name_elements": {
+                        "forename": "Daniel", 
+                        "surname": "BEARD", 
+                        "title": "Mr"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_number": "10016557", 
+                        "company_name": "MOONACHIE ASSOCIATES LTD"
+                     }, 
+                     "address": {
+                        "premises": "40", 
+                        "country": "England", 
+                        "locality": "Bedford", 
+                        "postal_code": "MK40 2NR", 
+                        "address_line_1": "Kimbolton Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mr Daniel Beard", 
+                           "links": {
+                              "self": "/company/10016557/persons-with-significant-control/individual/Rv2T8oFDqhTIwnjifVAPrGr2vmQ"
+                           }, 
+                           "notified_on": "2016-04-06", 
+                           "country_of_residence": "England", 
+                           "natures_of_control": [
+                              "ownership-of-shares-75-to-100-percent", 
+                              "voting-rights-75-to-100-percent", 
+                              "right-to-appoint-and-remove-directors"
+                           ], 
+                           "date_of_birth": {
+                              "month": 2, 
+                              "year": 1982
+                           }, 
+                           "name_elements": {
+                              "title": "Mr", 
+                              "surname": "Beard", 
+                              "forename": "Daniel"
+                           }, 
+                           "etag": "c24fe84b18e0a325d81e474a3b1b1df36eb06b10", 
+                           "address": {
+                              "premises": "40", 
+                              "country": "England", 
+                              "address_line_1": "Kimbolton Road", 
+                              "postal_code": "MK40 2NR", 
+                              "locality": "Bedford"
+                           }, 
+                           "nationality": "British"
+                        }
+                     ], 
+                     "occupation": "Consultancy"
+                  }, 
+                  {
+                     "name": "Daniel BEARD", 
+                     "links": {
+                        "company": "/company/10899771"
+                     }, 
+                     "company": {
+                        "company_status": "active", 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "41202"
+                        ], 
+                        "links": {
+                           "filing_history": "/company/10899771/filing-history", 
+                           "self": "/company/10899771", 
+                           "officers": "/company/10899771/officers", 
+                           "persons_with_significant_control": "/company/10899771/persons-with-significant-control"
+                        }, 
+                        "registered_office_address": {
+                           "country": "England", 
+                           "postal_code": "DE22 1DZ", 
+                           "address_line_1": "12 Darley Abbey Mills", 
+                           "address_line_2": "Darley Abbey", 
+                           "locality": "Derby"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-08-17", 
+                           "next_made_up_to": "2018-08-03", 
+                           "overdue": false
+                        }, 
+                        "company_number": "10899771", 
+                        "date_of_creation": "2017-08-04", 
+                        "has_insolvency_history": false, 
+                        "etag": "656720edcf1760a397c491c7b01f826a1b98c395", 
+                        "accounts": {
+                           "next_due": "2019-05-04", 
+                           "next_made_up_to": "2018-08-31", 
+                           "last_accounts": {
+                              "type": "null"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2019-05-04", 
+                              "period_start_on": "2017-08-04", 
+                              "period_end_on": "2018-08-31", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "31", 
+                              "month": "08"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "ACORN BUILDING SERVICES (MIDLANDS) LIMITED", 
+                        "registered_office_is_in_dispute": false, 
+                        "has_charges": false, 
+                        "type": "ltd"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "BEARD, Daniel", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/Qj37N24fBOhgHIUIkOq4eprDuCQ/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2017-08-04", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1982
+                           }, 
+                           "address": {
+                              "premises": "12 Darley Abbey Mills", 
+                              "country": "England", 
+                              "locality": "Derby", 
+                              "postal_code": "DE22 1DZ", 
+                              "address_line_1": "Darley Abbey"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Builder"
+                        }
+                     ], 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-08-04", 
+                     "name_elements": {
+                        "forename": "Daniel", 
+                        "surname": "BEARD", 
+                        "title": "Mr"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_name": "ACORN BUILDING SERVICES (MIDLANDS) LIMITED", 
+                        "company_number": "10899771"
+                     }, 
+                     "address": {
+                        "premises": "12 Darley Abbey Mills", 
+                        "country": "England", 
+                        "address_line_1": "Darley Abbey", 
+                        "postal_code": "DE22 1DZ", 
+                        "locality": "Derby"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mr Daniel Beard", 
+                           "links": {
+                              "self": "/company/10899771/persons-with-significant-control/individual/aVSWegld_lD1Wr5X6-9NS7fzp7s"
+                           }, 
+                           "notified_on": "2017-08-04", 
+                           "country_of_residence": "England", 
+                           "natures_of_control": [
+                              "significant-influence-or-control"
+                           ], 
+                           "name_elements": {
+                              "title": "Mr", 
+                              "surname": "Beard", 
+                              "forename": "Daniel"
+                           }, 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1982
+                           }, 
+                           "etag": "b53b6af62cfa62f787e3493c8c238cf1085e8073", 
+                           "address": {
+                              "premises": "12 Darley Abbey Mills", 
+                              "country": "England", 
+                              "locality": "Derby", 
+                              "postal_code": "DE22 1DZ", 
+                              "address_line_1": "Darley Abbey"
+                           }, 
+                           "nationality": "British"
+                        }, 
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mrs Colleen Cooper-Beard", 
+                           "links": {
+                              "self": "/company/10899771/persons-with-significant-control/individual/Mt3cfMtNBd3rRaNm8iH9g5b-aTc"
+                           }, 
+                           "country_of_residence": "England", 
+                           "natures_of_control": [
+                              "significant-influence-or-control"
+                           ], 
+                           "date_of_birth": {
+                              "year": 1984, 
+                              "month": 7
+                           }, 
+                           "name_elements": {
+                              "forename": "Colleen", 
+                              "surname": "Cooper-Beard", 
+                              "title": "Mrs"
+                           }, 
+                           "notified_on": "2017-08-04", 
+                           "etag": "f7bef5e77c88cb62b7828f4e80b363745da7d424", 
+                           "address": {
+                              "premises": "12 Darley Abbey Mills", 
+                              "country": "England", 
+                              "locality": "Derby", 
+                              "postal_code": "DE22 1DZ", 
+                              "address_line_1": "Darley Abbey"
+                           }, 
+                           "nationality": "British"
+                        }
+                     ], 
+                     "occupation": "Builder"
+                  }
+               ]
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -394,9 +1633,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -407,9 +1647,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -420,28 +1661,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: (1) Policy Network (2) Les GracquesAddress of donor: (1) 3rd Floor, 11 Tufton Street, London SW1P 3QB (2) 31 rue d'Anjou, 75008 Paris FranceEstimate of the probable value (or amount of any donation): (1) flights \u00a3255.39 (2) hotel \u00a3207.02Destination of visit: Lyon, FranceDates of visit: 23-25 September 2016Purpose of visit: To attend a conference of European politicians and think thanks to discuss the UK Referendum and related matters.(Registered 01 November 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "(1) flights \u00a3255.39 (2) hotel \u00a3207.02", 
+               "Purpose of visit": "To attend a conference of European politicians and think thanks to discuss the UK Referendum and related matters.", 
+               "Destination of visit": "Lyon, France", 
+               "Dates of visit": "23-25 September 2016", 
+               "(Registered 01 November 2016)": "(Registered 01 November 2016)", 
+               "Name of donor": "(1) Policy Network (2) Les Gracques", 
+               "Address of donor": "(1) 3rd Floor, 11 Tufton Street, London SW1P 3QB (2) 31 rue d'Anjou, 75008 Paris France"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 255, 
          "items": [
             {
                "raw_string": "Name of donor: (1) Policy Network (2) Les GracquesAddress of donor: (1) 3rd Floor, 11 Tufton Street, London SW1P 3QB (2) 31 rue d'Anjou, 75008 Paris FranceEstimate of the probable value (or amount of any donation): (1) flights \u00a3255.39 (2) hotel \u00a3207.02Destination of visit: Lyon, FranceDates of visit: 23-25 September 2016Purpose of visit: To attend a conference of European politicians and think thanks to discuss the UK Referendum and related matters.(Registered 01 November 2016)", 
-               "dates": "23-25 September 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "01/11/2016", 
                "destination": "Lyon, France", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 255, 
+               "link": null, 
                "purpose": "To attend a conference of European politicians and think thanks to discuss the UK Referendum and related matters.", 
                "pretty": "(1) Policy Network (2) Les Gracques", 
                "address": "(1) 3rd Floor, 11 Tufton Street, London SW1P 3QB (2) 31 rue d'Anjou, 75008 Paris France", 
                "item_id": "0001", 
                "donor": "(1) Policy Network (2) Les Gracques", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "(1) Policy Network (2) Les Gracques", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 255, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -454,9 +1716,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -467,9 +1730,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -481,8 +1745,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "reynolds", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 11, 
@@ -492,7 +1757,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1977, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "emma reynolds", 
          "category_donations": 0, 
@@ -500,8 +1765,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "reynolds", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 11, 
@@ -511,16 +1777,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1977, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "emma reynolds", 
          "category_donations": 0, 
          "first": "emma"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -531,9 +1798,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -544,9 +1812,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

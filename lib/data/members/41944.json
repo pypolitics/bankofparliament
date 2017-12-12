@@ -280,9 +280,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -293,6 +294,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr Eddie PowellAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a310,000Donor status: individual(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a310,000", 
+               "Name of donor": "Mr Eddie Powell", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr Eddie PowellAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a310,000Donor status: individual(Registered 06 July 2017)", 
@@ -300,19 +313,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 10000, 
+               "link": null, 
                "pretty": "Mr Eddie Powell", 
                "address": "private", 
                "item_id": "0001", 
                "donor": "Mr Eddie Powell", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Eddie Powell", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -325,9 +345,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -338,9 +359,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -351,28 +373,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Sultanate of Oman Ministry of Foreign AffairsAddress of donor: Muscat, OmanEstimate of the probable value (or amount of any donation): One night\u2019s accommodation and flights to and from Muscat, estimated total value \u00a31,400Destination of visit: OmanDates of visit: 7-8 January 2017Purpose of visit: to attend strategic seminar with the Government of Oman.(Registered 17 January 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "One night\u2019s accommodation and flights to and from Muscat, estimated total value \u00a31,400", 
+               "(Registered 17 January 2017)": "(Registered 17 January 2017)", 
+               "Purpose of visit": "to attend strategic seminar with the Government of Oman.", 
+               "Destination of visit": "Oman", 
+               "Dates of visit": "7-8 January 2017", 
+               "Name of donor": "Sultanate of Oman Ministry of Foreign Affairs", 
+               "Address of donor": "Muscat, Oman"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 1400, 
          "items": [
             {
                "raw_string": "Name of donor: Sultanate of Oman Ministry of Foreign AffairsAddress of donor: Muscat, OmanEstimate of the probable value (or amount of any donation): One night\u2019s accommodation and flights to and from Muscat, estimated total value \u00a31,400Destination of visit: OmanDates of visit: 7-8 January 2017Purpose of visit: to attend strategic seminar with the Government of Oman.(Registered 17 January 2017)", 
-               "dates": "7-8 January 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "17/01/2017", 
                "destination": "Oman", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 1400, 
+               "link": null, 
                "purpose": "to attend strategic seminar with the Government of Oman.", 
                "pretty": "Sultanate of Oman Ministry of Foreign Affairs", 
                "address": "Muscat, Oman", 
                "item_id": "0001", 
                "donor": "Sultanate of Oman Ministry of Foreign Affairs", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Sultanate of Oman Ministry of Foreign Affairs", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 1400, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -385,9 +428,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -398,6 +442,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Residential property in London: (i) and (ii).", 
+               "Residential property in London": "(i) and (ii)."
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Residential property in London: (i) and (ii).", 
@@ -426,8 +478,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 10000, 
          "raw_items": [
@@ -441,8 +491,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "duncan", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -452,7 +503,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1957, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "sir alan duncan", 
          "category_donations": 0, 
@@ -460,8 +511,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "duncan", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -471,13 +523,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1957, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "sir alan duncan", 
          "category_donations": 0, 
          "first": "alan"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "From 1 May 2016, Trustee and Director of Uppingham School, High Street West, Uppingham, Rutland, LE15 9QD, a registered charity and company limited by guarantee. Uppingham School is a co-educational boarding school for pupils aged 13 to 18. (Registered 10 May 2016)", 
+               "From 1 May 2016, Trustee and Director of Uppingham School, High Street West, Uppingham, Rutland, LE15 9QD, a registered charity and company limited by guarantee. Uppingham School is a co-educational boarding school for pupils aged 13 to 18. (Registered 10 May 2016)": "From 1 May 2016, Trustee and Director of Uppingham School, High Street West, Uppingham, Rutland, LE15 9QD, a registered charity and company limited by guarantee. Uppingham School is a co-educational boarding school for pupils aged 13 to 18. (Registered 10 May 2016)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "From 1 May 2016, Trustee and Director of Uppingham School, High Street West, Uppingham, Rutland, LE15 9QD, a registered charity and company limited by guarantee. Uppingham School is a co-educational boarding school for pupils aged 13 to 18. (Registered 10 May 2016)", 
@@ -493,8 +553,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -507,9 +565,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -520,9 +579,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -606,6 +666,12 @@
                            "appointments": "/officers/vumxBrWxVVd3U4skN7x7JSHwrrA/appointments"
                         }
                      }, 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2017-01-31", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1978
+                     }, 
                      "address": {
                         "premises": "28", 
                         "country": "Scotland", 
@@ -613,21 +679,15 @@
                         "postal_code": "G62 8HN", 
                         "address_line_1": "Lynn Drive"
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2017-01-31", 
-                     "date_of_birth": {
-                        "year": 1978, 
-                        "month": 12
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC556071", 
-               "pretty": "alan duncan sir alan duncan alan james carter duncan", 
+               "pretty": "Sir Alan Duncan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -771,7 +831,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC411472", 
-               "pretty": "alan duncan sir alan duncan alan james carter duncan", 
+               "pretty": "Sir Alan Duncan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -852,8 +912,8 @@
                         "voting-rights-75-to-100-percent"
                      ], 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1986
+                        "year": 1986, 
+                        "month": 11
                      }, 
                      "name_elements": {
                         "middle_name": "Jane", 
@@ -882,18 +942,18 @@
                            "appointments": "/officers/UQXwIbL2atQWDxH10NxvJyjxAOU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-06-23", 
-                     "date_of_birth": {
-                        "year": 1984, 
-                        "month": 2
-                     }, 
                      "address": {
                         "premises": "90 Gardiner Drive", 
                         "country": "United Kingdom", 
                         "address_line_1": "Kincorth", 
                         "postal_code": "AB12 5SD", 
                         "locality": "Aberdeen"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-06-23", 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 2
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -909,8 +969,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2016-11-22", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1986
+                        "year": 1986, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "90", 
@@ -919,15 +979,15 @@
                         "postal_code": "AB12 5SD", 
                         "address_line_1": "Gardner Drive"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC509098", 
-               "pretty": "alan duncan sir alan duncan alan james carter duncan", 
+               "pretty": "Sir Alan Duncan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1034,8 +1094,8 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Bishop Of Peterbrough"
                   }, 
                   {
@@ -1048,8 +1108,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-03-22", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1939
+                        "year": 1939, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "Uppingham School", 
@@ -1069,18 +1129,18 @@
                            "appointments": "/officers/LpJ6ffeDb_XTxF8VPDuNxJfScYg/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-09-01", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 11
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "locality": "Uppingham", 
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-09-01", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 11
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1093,18 +1153,18 @@
                            "appointments": "/officers/Ipajq2yAmwugu8-SQw10I7pVL48/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-06-25", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1957
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "address_line_1": "High Street West", 
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-06-25", 
-                     "date_of_birth": {
-                        "year": 1957, 
-                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1120,8 +1180,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-06-17", 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1961
                      }, 
                      "address": {
                         "premises": "Uppingham School", 
@@ -1144,8 +1204,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-03-18", 
                      "date_of_birth": {
-                        "year": 1964, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1964
                      }, 
                      "address": {
                         "premises": "Uppingham School", 
@@ -1154,8 +1214,8 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1189,6 +1249,12 @@
                            "appointments": "/officers/9dcASYuLGtpuYqqbvBeyERuNiH0/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-09-01", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1943
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
@@ -1196,14 +1262,8 @@
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-09-01", 
-                     "date_of_birth": {
-                        "year": 1943, 
-                        "month": 3
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -1213,18 +1273,18 @@
                            "appointments": "/officers/PSFGnF2WRiWTtkwcC9EjuxwL0to/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-06-25", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 1
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "address_line_1": "High Street West", 
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-06-25", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1959
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1250,8 +1310,8 @@
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1261,6 +1321,12 @@
                            "appointments": "/officers/Oe9DCDRtgH7y8eHEAJqvcolHtms/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-11-30", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1979
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
@@ -1268,14 +1334,8 @@
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-11-30", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1979
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Commercial Director"
                   }, 
                   {
@@ -1285,18 +1345,18 @@
                            "appointments": "/officers/eaW6eL0Z98_ajQU4tn_hET9eblM/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-12-06", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 10
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "address_line_1": "High Street West", 
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-12-06", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 10
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1312,8 +1372,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-09-01", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "Uppingham School", 
@@ -1322,8 +1382,8 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -1333,18 +1393,18 @@
                            "appointments": "/officers/ml53TeajblF-xC9OUiInWQI4fV0/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-06-21", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 1
-                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "locality": "Uppingham", 
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-06-21", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 1
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1357,18 +1417,18 @@
                            "appointments": "/officers/gyT_aCUuvreemSHGcnZ7a4cbQVQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-09-01", 
-                     "date_of_birth": {
-                        "year": 1965, 
-                        "month": 7
-                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
-                        "locality": "Uppingham", 
+                        "address_line_1": "High Street West", 
                         "postal_code": "LE15 9QD", 
-                        "address_line_1": "High Street West"
+                        "locality": "Uppingham"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-09-01", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1965
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1381,12 +1441,6 @@
                            "appointments": "/officers/iDRxBUwusfPIFkyB8KLOCiVghqo/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-12-05", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1961
-                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
@@ -1394,8 +1448,14 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-12-05", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1961
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Museum Curator"
                   }, 
                   {
@@ -1418,8 +1478,8 @@
                         "year": 1964, 
                         "month": 9
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1429,13 +1489,6 @@
                            "appointments": "/officers/6INI0jHv1WMGtfYXYEjrK4_Ec_Q/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Uppingham School", 
-                        "region": "Rutland", 
-                        "address_line_1": "High Street West", 
-                        "postal_code": "LE15 9QD", 
-                        "locality": "Uppingham"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-09-01", 
                      "resigned_on": "2015-03-21", 
@@ -1443,8 +1496,15 @@
                         "month": 4, 
                         "year": 1956
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "Uppingham School", 
+                        "region": "Rutland", 
+                        "address_line_1": "High Street West", 
+                        "postal_code": "LE15 9QD", 
+                        "locality": "Uppingham"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1463,8 +1523,8 @@
                      "appointed_on": "2012-12-01", 
                      "resigned_on": "2017-06-17", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1947
                      }, 
                      "address": {
                         "premises": "Uppingham School", 
@@ -1484,13 +1544,6 @@
                            "appointments": "/officers/M_FKDks_7v2J1EXIa1--zx3UN28/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-03-30", 
-                     "resigned_on": "2017-06-17", 
-                     "date_of_birth": {
-                        "year": 1952, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
@@ -1498,8 +1551,15 @@
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-03-30", 
+                     "resigned_on": "2017-06-17", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1952
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -1523,8 +1583,8 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director Solictor"
                   }, 
                   {
@@ -1559,19 +1619,19 @@
                            "appointments": "/officers/EkMF6HdCBU_x3D8cPD2RHu7UUFU/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Uppingham School", 
-                        "region": "Rutland", 
-                        "locality": "Uppingham", 
-                        "postal_code": "LE15 9QD", 
-                        "address_line_1": "High Street West"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-09-01", 
                      "resigned_on": "2016-12-03", 
                      "date_of_birth": {
                         "year": 1946, 
                         "month": 8
+                     }, 
+                     "address": {
+                        "premises": "Uppingham School", 
+                        "region": "Rutland", 
+                        "locality": "Uppingham", 
+                        "postal_code": "LE15 9QD", 
+                        "address_line_1": "High Street West"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1584,13 +1644,6 @@
                            "appointments": "/officers/m9gQtEWdBfNmsBuGqyuRmdHs0T4/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Uppingham School", 
-                        "region": "Rutland", 
-                        "address_line_1": "High Street West", 
-                        "postal_code": "LE15 9QD", 
-                        "locality": "Uppingham"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-09-01", 
                      "resigned_on": "2017-06-17", 
@@ -1598,8 +1651,15 @@
                         "month": 1, 
                         "year": 1962
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "premises": "Uppingham School", 
+                        "region": "Rutland", 
+                        "address_line_1": "High Street West", 
+                        "postal_code": "LE15 9QD", 
+                        "locality": "Uppingham"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Private Equity Fund Manager"
                   }, 
                   {
@@ -1609,19 +1669,19 @@
                            "appointments": "/officers/kmVFf0Mcf3FNXvutyZuzACVS3xg/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Uppingham School", 
-                        "region": "Rutland", 
-                        "locality": "Uppingham", 
-                        "postal_code": "LE15 9QD", 
-                        "address_line_1": "High Street West"
-                     }, 
                      "country_of_residence": "Uk", 
                      "appointed_on": "2012-09-01", 
                      "resigned_on": "2017-06-17", 
                      "date_of_birth": {
                         "year": 1957, 
                         "month": 5
+                     }, 
+                     "address": {
+                        "premises": "Uppingham School", 
+                        "region": "Rutland", 
+                        "locality": "Uppingham", 
+                        "postal_code": "LE15 9QD", 
+                        "address_line_1": "High Street West"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1634,13 +1694,6 @@
                            "appointments": "/officers/m1ubLvybIJtnPJA9ardQ7PLpsVY/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Uppingham School", 
-                        "region": "Rutland", 
-                        "locality": "Uppingham", 
-                        "postal_code": "LE15 9QD", 
-                        "address_line_1": "High Street West"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-09-01", 
                      "resigned_on": "2012-12-01", 
@@ -1648,8 +1701,15 @@
                         "year": 1949, 
                         "month": 5
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "Uppingham School", 
+                        "region": "Rutland", 
+                        "locality": "Uppingham", 
+                        "postal_code": "LE15 9QD", 
+                        "address_line_1": "High Street West"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Education Advisor"
                   }, 
                   {
@@ -1659,19 +1719,19 @@
                            "appointments": "/officers/3bIWJFH8Sk9nbJ64KhC7jM6ICEM/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-09-01", 
-                     "resigned_on": "2017-03-18", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1961
-                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "address_line_1": "High Street West", 
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-09-01", 
+                     "resigned_on": "2017-03-18", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 1
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1683,6 +1743,13 @@
                         "officer": {
                            "appointments": "/officers/KfsoPdnuumGkT9OHFx6L5dLpe9U/appointments"
                         }
+                     }, 
+                     "address": {
+                        "premises": "Uppingham School", 
+                        "region": "Rutland", 
+                        "locality": "Uppingham", 
+                        "postal_code": "LE15 9QD", 
+                        "address_line_1": "High Street West"
                      }, 
                      "former_names": [
                         {
@@ -1696,13 +1763,6 @@
                      "date_of_birth": {
                         "month": 1, 
                         "year": 1956
-                     }, 
-                     "address": {
-                        "premises": "Uppingham School", 
-                        "region": "Rutland", 
-                        "locality": "Uppingham", 
-                        "postal_code": "LE15 9QD", 
-                        "address_line_1": "High Street West"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1729,8 +1789,8 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Scientist"
                   }, 
                   {
@@ -1740,13 +1800,6 @@
                            "appointments": "/officers/I5SCG3C5MHYCUvbJKxBlPR2vM5Q/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2012-09-01", 
-                     "resigned_on": "2013-06-22", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
@@ -1754,8 +1807,15 @@
                         "postal_code": "LE15 9QD", 
                         "address_line_1": "High Street West"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2012-09-01", 
+                     "resigned_on": "2013-06-22", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1948
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -1776,11 +1836,11 @@
                      "appointed_on": "2013-11-30", 
                      "resigned_on": "2016-12-03", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1967
                      }, 
-                     "nationality": "English", 
                      "officer_role": "director", 
+                     "nationality": "English", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1790,19 +1850,19 @@
                            "appointments": "/officers/uMjCcKrDC07rKIG6alaEp9M1ORM/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-09-01", 
+                     "resigned_on": "2016-10-02", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1953
+                     }, 
                      "address": {
                         "premises": "Uppingham School", 
                         "region": "Rutland", 
                         "address_line_1": "High Street West", 
                         "postal_code": "LE15 9QD", 
                         "locality": "Uppingham"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-09-01", 
-                     "resigned_on": "2016-10-02", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1826,8 +1886,8 @@
                      "appointed_on": "2012-03-30", 
                      "resigned_on": "2015-10-30", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1854,15 +1914,15 @@
                         "year": 1958, 
                         "month": 10
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Barrister Queens Counsel"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/08013826", 
-               "pretty": "alan duncan sir alan duncan alan james carter duncan", 
+               "pretty": "Sir Alan Duncan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1989,15 +2049,15 @@
                         "postal_code": "SW7 4AG", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/09506306", 
-               "pretty": "alan duncan sir alan duncan alan james carter duncan", 
+               "pretty": "Sir Alan Duncan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2032,7 +2092,7 @@
                   "company_number": "09506306", 
                   "last_full_members_list_date": "2016-03-24", 
                   "company_status": "active", 
-                  "etag": "7d4f04f88f50e8c7fa02edf8b1caaa7a460442e5", 
+                  "etag": "b117360323eb1d63f843c5d700e843c9bccc3b09", 
                   "accounts": {
                      "next_due": "2017-12-31", 
                      "next_made_up_to": "2017-03-31", 
@@ -2085,8 +2145,8 @@
                         "address_line_2": "Madingley", 
                         "address_line_1": "Church Lane"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -2096,17 +2156,17 @@
                            "appointments": "/officers/CvVclbGIiaF3YLhORHh1Aaxua1w/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2006-10-02", 
-                     "date_of_birth": {
-                        "year": 1951, 
-                        "month": 1
-                     }, 
                      "address": {
                         "postal_code": "CB3 8AG", 
                         "locality": "Cambridge", 
                         "address_line_2": "Madingley", 
                         "address_line_1": "Highfield Court Church Lane"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-10-02", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1951
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2119,20 +2179,20 @@
                            "appointments": "/officers/x2Vnh77VyvU8QuasOsXE1cWNnRY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2006-10-02", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1955
-                     }, 
                      "address": {
                         "postal_code": "CB3 8AG", 
                         "address_line_1": "Highfield Court Church Lane", 
                         "address_line_2": "Madingley", 
                         "locality": "Cambridge"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-10-02", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 4
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -2227,18 +2287,18 @@
                            "appointments": "/officers/6lVHig7S8YEeJfIMrYUY19FdLRY/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "Cambridgeshire", 
+                        "address_line_1": "19 Sedley Taylor Road", 
+                        "postal_code": "CB2 8PW", 
+                        "locality": "Cambridge"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1998-11-18", 
                      "resigned_on": "2002-02-01", 
                      "date_of_birth": {
                         "year": 1940, 
                         "month": 7
-                     }, 
-                     "address": {
-                        "region": "Cambridgeshire", 
-                        "address_line_1": "19 Sedley Taylor Road", 
-                        "postal_code": "CB2 8PW", 
-                        "locality": "Cambridge"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2251,17 +2311,17 @@
                            "appointments": "/officers/cW5fdsEaT7s8xOOGPQW2rgVhRIQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "15 Trumpington Road", 
-                        "postal_code": "CB2 2AJ", 
-                        "locality": "Cambridge"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2005-11-18", 
                      "resigned_on": "2006-10-02", 
                      "date_of_birth": {
                         "month": 4, 
                         "year": 1949
+                     }, 
+                     "address": {
+                        "address_line_1": "15 Trumpington Road", 
+                        "postal_code": "CB2 2AJ", 
+                        "locality": "Cambridge"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2274,20 +2334,20 @@
                            "appointments": "/officers/DdAlL1ulFjuR5W5v6jx7NTauQ94/appointments"
                         }
                      }, 
+                     "appointed_on": "2002-05-01", 
+                     "resigned_on": "2006-10-02", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 5
+                     }, 
                      "address": {
                         "region": "Suffolk", 
                         "locality": "Newmarket", 
                         "postal_code": "CB8 9XG", 
                         "address_line_1": "The Old Mission Hall Dullingham Ley"
                      }, 
-                     "appointed_on": "2002-05-01", 
-                     "resigned_on": "2006-10-02", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1957
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Venture Capital"
                   }, 
                   {
@@ -2307,11 +2367,11 @@
                      "appointed_on": "1998-07-21", 
                      "resigned_on": "2006-10-02", 
                      "date_of_birth": {
-                        "year": 1945, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1945
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chairman"
                   }, 
                   {
@@ -2325,8 +2385,8 @@
                      "appointed_on": "1998-11-18", 
                      "resigned_on": "2001-02-26", 
                      "date_of_birth": {
-                        "year": 1945, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1945
                      }, 
                      "address": {
                         "postal_code": "KT22 9DB", 
@@ -2335,8 +2395,8 @@
                         "address_line_2": "Fetcham", 
                         "address_line_1": "Varykino 9 Ridgelands"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director/Chartered Acc"
                   }, 
                   {
@@ -2350,8 +2410,8 @@
                      "appointed_on": "2005-11-18", 
                      "resigned_on": "2006-10-02", 
                      "date_of_birth": {
-                        "year": 1949, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1949
                      }, 
                      "address": {
                         "address_line_2": "Abingdon Villas", 
@@ -2370,17 +2430,17 @@
                            "appointments": "/officers/Ipajq2yAmwugu8-SQw10I7pVL48/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_1": "18 Gayfere Street", 
+                        "postal_code": "SW1P 3HP", 
+                        "locality": "London"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1998-11-18", 
                      "resigned_on": "2001-02-26", 
                      "date_of_birth": {
                         "year": 1957, 
                         "month": 3
-                     }, 
-                     "address": {
-                        "address_line_1": "18 Gayfere Street", 
-                        "postal_code": "SW1P 3HP", 
-                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2405,8 +2465,8 @@
                         "year": 1953, 
                         "month": 5
                      }, 
-                     "nationality": "U S A", 
                      "officer_role": "director", 
+                     "nationality": "U S A", 
                      "occupation": "Venture Capital"
                   }, 
                   {
@@ -2428,8 +2488,8 @@
                         "postal_code": "NR34 0EY", 
                         "address_line_1": "The Grange Maypole Green"
                      }, 
-                     "nationality": "American", 
                      "officer_role": "director", 
+                     "nationality": "American", 
                      "occupation": "Investment Banker"
                   }, 
                   {
@@ -2452,8 +2512,8 @@
                         "postal_code": "CB3 9HP", 
                         "address_line_1": "6 Millington Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Investment Manager"
                   }, 
                   {
@@ -2486,20 +2546,20 @@
                            "appointments": "/officers/wZPkEGsaDJ431Fym9KdMXxtxZuY/appointments"
                         }
                      }, 
-                     "appointed_on": "1998-11-18", 
-                     "resigned_on": "2001-02-26", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "country": "Belgium", 
                         "address_line_1": "Haachstraat 136a", 
                         "postal_code": "3020", 
                         "locality": "Veltem-Beisem"
                      }, 
-                     "nationality": "Belgian", 
+                     "appointed_on": "1998-11-18", 
+                     "resigned_on": "2001-02-26", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 1
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "Belgian", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -2509,6 +2569,12 @@
                            "appointments": "/officers/zloZ-mFZpZ6mRHHAm6Wncz1H8DA/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "Cambridgeshire", 
+                        "address_line_1": "80 Chesterton Road", 
+                        "postal_code": "CB4 1ER", 
+                        "locality": "Cambridge"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1998-11-18", 
                      "resigned_on": "2005-06-13", 
@@ -2516,14 +2582,8 @@
                         "month": 4, 
                         "year": 1943
                      }, 
-                     "address": {
-                        "region": "Cambridgeshire", 
-                        "address_line_1": "80 Chesterton Road", 
-                        "postal_code": "CB4 1ER", 
-                        "locality": "Cambridge"
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Investment Manager"
                   }, 
                   {
@@ -2533,13 +2593,6 @@
                            "appointments": "/officers/TdP5Y51-2oahKsuLpVP1bJImiRw/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Malting End Wickhambrook", 
-                        "region": "Suffolk", 
-                        "address_line_1": "Crows Farm", 
-                        "postal_code": "CB8 8QA", 
-                        "locality": "Newmarket"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2002-05-01", 
                      "resigned_on": "2005-08-08", 
@@ -2547,8 +2600,15 @@
                         "month": 7, 
                         "year": 1965
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_2": "Malting End Wickhambrook", 
+                        "region": "Suffolk", 
+                        "address_line_1": "Crows Farm", 
+                        "postal_code": "CB8 8QA", 
+                        "locality": "Newmarket"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Venture Capital"
                   }, 
                   {
@@ -2558,19 +2618,19 @@
                            "appointments": "/officers/ykJYu-h6HNax4g4qgcORJ6dooeg/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2005-11-18", 
+                     "resigned_on": "2006-10-02", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 6
+                     }, 
                      "address": {
                         "address_line_2": "High Woods Lane", 
                         "region": "Kent", 
                         "locality": "Tunbridge Wells", 
                         "postal_code": "TN3 9AB", 
                         "address_line_1": "Dodhurst Farm Cottage"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2005-11-18", 
-                     "resigned_on": "2006-10-02", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1949
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2596,7 +2656,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/03601596", 
-               "pretty": "alan duncan sir alan duncan alan james carter duncan", 
+               "pretty": "Sir Alan Duncan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

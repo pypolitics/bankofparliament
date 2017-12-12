@@ -261,9 +261,12 @@
       "Theft,", 
       "North", 
       "Tyneside", 
-      "LEA,", 
-      "Speech", 
-      "Therapy", 
+      "Clinical", 
+      "Commissioning", 
+      "Group,", 
+      "North", 
+      "Tyneside", 
+      "LEA", 
       "Education", 
       "and", 
       "Skills,", 
@@ -277,9 +280,9 @@
       "and", 
       "Industrial", 
       "Strategy,", 
-      "Deputy", 
-      "Prime", 
-      "Minister", 
+      "Department", 
+      "of", 
+      "Health", 
       "Crime", 
       "and", 
       "policing,", 
@@ -324,7 +327,7 @@
       "Columbia, Falkland Islands"
    ], 
    "mp_donations": 7000, 
-   "wrans_departments": "Education and Skills, Home Department, Health, Department for Business, Energy and Industrial Strategy, Deputy Prime Minister", 
+   "wrans_departments": "Education and Skills, Home Department, Health, Department for Business, Energy and Industrial Strategy, Department of Health", 
    "person_id": "10086", 
    "party": "Labour", 
    "forname": "Alan", 
@@ -334,6 +337,14 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "1 September 2017, received \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for a survey completed on 14 August 2017. Hours: 1 hr. (Registered 22 September 2017)", 
+               "1 September 2017, received \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for a survey completed on 14 August 2017. Hours": "1 hr. (Registered 22 September 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "1 September 2017, received \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for a survey completed on 14 August 2017. Hours: 1 hr. (Registered 22 September 2017)", 
@@ -349,8 +360,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 200, 
          "raw_items": [
@@ -363,6 +372,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: USDAWAddress of donor: 188 Wilmslow Road, Manchester M14 6LJAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "USDAW", 
+               "Donor status": "trade union", 
+               "Address of donor": "188 Wilmslow Road, Manchester M14 6LJ"
+            }, 
+            {
+               "raw_string": "Name of donor: GMBAddress of donor: 1 Mosley Street, Newcastle Upon Tyne NE1 1YEAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "GMB", 
+               "Donor status": "trade union", 
+               "Address of donor": "1 Mosley Street, Newcastle Upon Tyne NE1 1YE"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: USDAWAddress of donor: 188 Wilmslow Road, Manchester M14 6LJAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 06 July 2017)", 
@@ -370,15 +399,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": null, 
                "pretty": "USDAW", 
                "address": "188 Wilmslow Road, Manchester M14 6LJ", 
                "item_id": "0001", 
                "donor": "USDAW", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "USDAW", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: GMBAddress of donor: 1 Mosley Street, Newcastle Upon Tyne NE1 1YEAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 06 July 2017)", 
@@ -386,19 +424,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "GMB", 
                "address": "1 Mosley Street, Newcastle Upon Tyne NE1 1YE", 
                "item_id": "0002", 
                "donor": "GMB", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "GMB", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -412,9 +457,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -425,9 +471,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -438,9 +485,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -451,9 +499,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -464,9 +513,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -478,8 +528,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "campbell", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -489,7 +540,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1957, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr alan campbell", 
          "category_donations": 0, 
@@ -497,8 +548,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "campbell", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -508,16 +560,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1957, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr alan campbell", 
          "category_donations": 0, 
          "first": "alan"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -528,6 +581,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Between January and March 2017, I employed my daughter, Emily Campbell, as a part time Administrative Assistant. (Registered 06 July 2017)", 
+               "Between January and March 2017, I employed my daughter, Emily Campbell, as a part time Administrative Assistant. (Registered 06 July 2017)": "Between January and March 2017, I employed my daughter, Emily Campbell, as a part time Administrative Assistant. (Registered 06 July 2017)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Between January and March 2017, I employed my daughter, Emily Campbell, as a part time Administrative Assistant. (Registered 06 July 2017)", 
@@ -543,8 +604,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -557,9 +616,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -687,8 +747,8 @@
                         "forename": "Sharon"
                      }, 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1965
                      }, 
                      "etag": "1d988d9c81e4ab1c1e4ac67dc1a9ec1e8f9bf4a0", 
                      "address": {
@@ -710,6 +770,12 @@
                            "appointments": "/officers/EgV3uhzf6Lk5l6L1kDJftUZ3zBQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-10-03", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 12
+                     }, 
                      "address": {
                         "locality": "Preston", 
                         "premises": "8", 
@@ -718,14 +784,8 @@
                         "address_line_2": "Lostock Hall", 
                         "address_line_1": "Hern Avenue"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-10-03", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1955
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Carpet Retailer"
                   }, 
                   {
@@ -757,7 +817,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/08717349", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -838,8 +898,8 @@
                         "ownership-of-shares-75-to-100-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1970
                      }, 
                      "name_elements": {
                         "middle_name": "Gordon", 
@@ -880,8 +940,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2006-10-18", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1970
+                        "year": 1970, 
+                        "month": 11
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -927,7 +987,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/05971190", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1017,8 +1077,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1946
+                        "year": 1946, 
+                        "month": 12
                      }, 
                      "etag": "3f2d3d323a3595ef9005a6ed56f8a5c7d33b5b54", 
                      "address": {
@@ -1067,15 +1127,15 @@
                         "month": 12, 
                         "year": 1946
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC355963", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1179,8 +1239,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1961
                      }, 
                      "etag": "92d637ea19107abe4975d21f934bfa7e14add079", 
                      "address": {
@@ -1213,8 +1273,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2014-11-27", 
                      "date_of_birth": {
-                        "year": 1959, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1959
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1224,7 +1284,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/SC492117", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1321,12 +1381,6 @@
                            "appointments": "/officers/EIw8dzW2OEo9xeXuDrd_2gzNBWc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-10-02", 
-                     "date_of_birth": {
-                        "year": 1940, 
-                        "month": 10
-                     }, 
                      "address": {
                         "locality": "Cheltenham", 
                         "premises": "15", 
@@ -1335,8 +1389,14 @@
                         "postal_code": "GL50 2QU", 
                         "address_line_1": "Park Place"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-10-02", 
+                     "date_of_birth": {
+                        "year": 1940, 
+                        "month": 10
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -1371,20 +1431,20 @@
                            "appointments": "/officers/e-AMwH_zzSgW9unpTT5t97BohKA/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2007-10-02", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 12
+                     }, 
                      "address": {
                         "region": "County Londonderry", 
                         "locality": "Coleraine", 
                         "postal_code": "BT52 1JR", 
                         "address_line_1": "4 Castlewood Avenue"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2007-10-02", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1950
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired Electrical Engineer"
                   }, 
                   {
@@ -1464,7 +1524,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/06387253", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1528,12 +1588,6 @@
                            "appointments": "/officers/pfVVLnmwubcJyZ3zmbkgcy_-c-Y/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-01-17", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 4
-                     }, 
                      "address": {
                         "locality": "Sheffield", 
                         "premises": "5", 
@@ -1542,15 +1596,21 @@
                         "address_line_2": "Dinnington", 
                         "address_line_1": "Limelands Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-01-17", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1968
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/08363844", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1653,8 +1713,8 @@
                      "appointed_on": "2011-11-02", 
                      "resigned_on": "2012-02-22", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1970
                      }, 
                      "address": {
                         "premises": "55", 
@@ -1669,7 +1729,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/OC369434", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1723,15 +1783,15 @@
                            "appointments": "/officers/ARnL4pdUSdHM-W-i-2iRZ6R2A1Y/appointments"
                         }
                      }, 
+                     "appointed_on": "2008-07-25", 
                      "address": {
                         "premises": "3rd Floor Temple Point", 
                         "address_line_1": "1 Temple Row", 
                         "postal_code": "B2 5LG", 
                         "locality": "Birmingham"
                      }, 
-                     "appointed_on": "2008-07-25", 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "DONALDSON, Craig George", 
@@ -1752,8 +1812,8 @@
                         "postal_code": "B2 5LG", 
                         "address_line_1": "1 Temple Row"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Secretary"
                   }, 
                   {
@@ -1763,20 +1823,20 @@
                            "appointments": "/officers/XySBXn6sLfwl3jFLz9R2Pia-gV4/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-07-29", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 8
-                     }, 
                      "address": {
                         "premises": "3rd Floor Temple Point", 
                         "locality": "Birmingham", 
                         "postal_code": "B2 5LG", 
                         "address_line_1": "1 Temple Row"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-07-29", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1964
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -1804,6 +1864,12 @@
                            "appointments": "/officers/MN50dSJI7mVRJKerJiZv_GPYL70/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2010-03-31", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 4
+                     }, 
                      "address": {
                         "premises": "Point 3", 
                         "region": "Warwickshire", 
@@ -1811,14 +1877,8 @@
                         "postal_code": "CV34 5AH", 
                         "address_line_1": "Haywood Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "2010-03-31", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 4
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Engineer"
                   }, 
                   {
@@ -1828,6 +1888,11 @@
                            "appointments": "/officers/XOteDcU11PJFPPbd7ezq9tWdPeo/appointments"
                         }
                      }, 
+                     "resigned_on": "2008-07-25", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 6
+                     }, 
                      "address": {
                         "address_line_2": "Warwick Road, Black Hill", 
                         "region": "Warwickshire", 
@@ -1835,13 +1900,8 @@
                         "postal_code": "CV37 0PE", 
                         "address_line_1": "Maddoncroft"
                      }, 
-                     "resigned_on": "2008-07-25", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 6
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sales Administrator"
                   }, 
                   {
@@ -1851,13 +1911,6 @@
                            "appointments": "/officers/bBpPhGqyQL2PPTqDDu-BAsOSoAM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2008-07-25", 
-                     "resigned_on": "2009-02-02", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 8
-                     }, 
                      "address": {
                         "address_line_2": "Wychwood Park Weston", 
                         "region": "Cheshire", 
@@ -1865,8 +1918,15 @@
                         "postal_code": "CW2 5GJ", 
                         "locality": "Crewe"
                      }, 
-                     "nationality": "Brittish", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-07-25", 
+                     "resigned_on": "2009-02-02", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 8
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "Brittish", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1876,13 +1936,6 @@
                            "appointments": "/officers/hRyVTd_i54n-LsUZZyLMqItz6uo/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-07-25", 
-                     "resigned_on": "2010-01-27", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "premises": "Point 3", 
                         "region": "Warwickshire", 
@@ -1890,8 +1943,15 @@
                         "postal_code": "CV34 5AH", 
                         "address_line_1": "Haywood Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-07-25", 
+                     "resigned_on": "2010-01-27", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1971
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1912,8 +1972,8 @@
                      "appointed_on": "2008-07-25", 
                      "resigned_on": "2010-03-31", 
                      "date_of_birth": {
-                        "year": 1959, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1959
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1930,8 +1990,8 @@
                      "appointed_on": "2010-03-31", 
                      "resigned_on": "2011-07-29", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 7
                      }, 
                      "address": {
                         "premises": "Point 3", 
@@ -1948,7 +2008,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01373442", 
-               "pretty": "alan campbell mr alan campbell", 
+               "pretty": "Mr Alan Campbell", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2033,7 +2093,7 @@
    "dob": "July 1957", 
    "gender": "M", 
    "country_of_birth": "England", 
-   "wrans_subjects": "North East, Energy: Housing, Metal Theft, North Tyneside LEA, Speech Therapy", 
+   "wrans_subjects": "North East, Energy: Housing, Metal Theft, North Tyneside Clinical Commissioning Group, North Tyneside LEA", 
    "member_id": "41421", 
    "constituency": "Tynemouth", 
    "mp_gifts": 0, 

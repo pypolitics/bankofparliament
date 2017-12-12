@@ -237,9 +237,10 @@
    "eu_ref_stance": "Leave", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -250,6 +251,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: International Motor LtdAddress of donor: I M House, South Drive, Coleshill B46 1DFAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: company, registration 01269717(Registered 27 June 2017)", 
+               "(Registered 27 June 2017)": "(Registered 27 June 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "International Motor Ltd", 
+               "Donor status": "company, registration 01269717", 
+               "Address of donor": "I M House, South Drive, Coleshill B46 1DF"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: International Motor LtdAddress of donor: I M House, South Drive, Coleshill B46 1DFAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: company, registration 01269717(Registered 27 June 2017)", 
@@ -257,19 +270,311 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "corporate-entity-person-with-significant-control", 
+                     "name": "I. M. Group (1991) Limited", 
+                     "links": {
+                        "self": "/company/01269717/persons-with-significant-control/corporate-entity/3wW1Pqtwy5f6hpeCP1Ctdnu-Dg4"
+                     }, 
+                     "natures_of_control": [
+                        "voting-rights-75-to-100-percent"
+                     ], 
+                     "notified_on": "2016-04-06", 
+                     "identification": {
+                        "registration_number": "02626921", 
+                        "country_registered": "United Kingdom", 
+                        "place_registered": "Companies House", 
+                        "legal_form": "Limited By Shares", 
+                        "legal_authority": "United Kingdom"
+                     }, 
+                     "etag": "807764b13f6097ed765b4e59168c8ea5bae4d282", 
+                     "address": {
+                        "locality": "Coleshill", 
+                        "premises": "I M House", 
+                        "country": "United Kingdom", 
+                        "region": "Warwickshire", 
+                        "postal_code": "B46 1DF", 
+                        "address_line_1": "South Drive"
+                     }
+                  }
+               ], 
                "registered": "27/06/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2013-05-03", 
+                     "officer_role": "secretary", 
+                     "name": "CLARKE, Adrian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/iyxrmQiU_qrAbcdQ7_LVFIjYuQw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "B46 1DF", 
+                        "region": "Warwickshire", 
+                        "locality": "Coleshill", 
+                        "address_line_2": "South Drive", 
+                        "address_line_1": "I M House"
+                     }
+                  }, 
+                  {
+                     "name": "EDMISTON, Andrew Martin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/FOSe1q6tMY0X8v0Ce1Za5kTcV2A/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-08-21", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 7
+                     }, 
+                     "address": {
+                        "postal_code": "B46 1DF", 
+                        "region": "Warwickshire", 
+                        "locality": "Coleshill", 
+                        "address_line_2": "South Drive", 
+                        "address_line_1": "I M House"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "EDMISTON, Robert Norman, Lord", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sySgfwTu_utZ9SA-xveBFGgOjeQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Chapel Lane", 
+                        "region": "Warwickshire", 
+                        "address_line_1": "The Haven", 
+                        "postal_code": "B94 6EU", 
+                        "locality": "Lapworth"
+                     }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 10
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "HUTTON, Gary Ernest", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/--9sRn1cxUd69CilGLhwA0q5pIk/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "South Drive", 
+                        "region": "Warwickshire", 
+                        "address_line_1": "I M House", 
+                        "postal_code": "B46 1DF", 
+                        "locality": "Coleshill"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-11-04", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 9
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chartered Accountant"
+                  }, 
+                  {
+                     "name": "NAPIER, David Leslie John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/04HYVSaPDwJxCs_92oYvYam8OBs/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1996-01-31", 
+                     "resigned_on": "2010-01-08", 
+                     "address": {
+                        "postal_code": "B46 3FD", 
+                        "locality": "Birmingham", 
+                        "address_line_2": "Coleshill", 
+                        "address_line_1": "4 Victoria Way"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "1996-01-31", 
+                     "name": "WEBB, Harry Wulstan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AVDV99j1w5RdaDhC0ym5_U5JdOA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Pattingham", 
+                        "region": "West Midlands", 
+                        "locality": "Wolverhampton", 
+                        "postal_code": "WV6 7AQ", 
+                        "address_line_1": "Longnor House Westbeech Road"
+                     }
+                  }, 
+                  {
+                     "name": "WHEATLEY, David John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/f2O8KbVxCS5P9iUBmzvJVW8Vu9s/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2010-01-08", 
+                     "resigned_on": "2013-05-03", 
+                     "address": {
+                        "postal_code": "B46 1DF", 
+                        "region": "Warwickshire", 
+                        "locality": "Coleshill", 
+                        "address_line_2": "South Drive", 
+                        "address_line_1": "I M House"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "BROWNING, Robert John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/5EgBG80CxGELOn0aa7SNbdsCD-I/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Aston Eyre Morville", 
+                        "region": "Salop", 
+                        "address_line_1": "Ouseley Barns", 
+                        "postal_code": "WV16 6XD", 
+                        "locality": "Bridgnorth"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-04-13", 
+                     "resigned_on": "2007-12-24", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 6
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "WEBB, Harry Wulstan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AVDV99j1w5RdaDhC0ym5_U5JdOA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "WV6 7AQ", 
+                        "region": "West Midlands", 
+                        "locality": "Wolverhampton", 
+                        "address_line_2": "Pattingham", 
+                        "address_line_1": "Longnor House Westbeech Road"
+                     }, 
+                     "resigned_on": "1996-01-31", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 1
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Secretary"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": "https://beta.companieshouse.gov.uk/company/01269717", 
                "pretty": "International Motor Ltd", 
                "address": "I M House, South Drive, Coleshill B46 1DF", 
                "item_id": "0001", 
                "donor": "International Motor Ltd", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "active", 
+                  "links": {
+                     "filing_history": "/company/01269717/filing-history", 
+                     "charges": "/company/01269717/charges", 
+                     "self": "/company/01269717", 
+                     "officers": "/company/01269717/officers", 
+                     "persons_with_significant_control": "/company/01269717/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "70100"
+                  ], 
+                  "etag": "9a4059516f35be5f291631aed58f188144be4b4a", 
+                  "registered_office_address": {
+                     "postal_code": "B46 1DF", 
+                     "region": "Warwickshire", 
+                     "address_line_1": "I M House", 
+                     "address_line_2": "South Drive", 
+                     "locality": "Coleshill"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-05-22", 
+                     "last_made_up_to": "2017-05-08", 
+                     "next_made_up_to": "2018-05-08", 
+                     "overdue": false
+                  }, 
+                  "company_number": "01269717", 
+                  "last_full_members_list_date": "2016-05-01", 
+                  "date_of_creation": "1976-07-21", 
+                  "has_insolvency_history": false, 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "type": "full", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "INTERNATIONAL MOTORS LIMITED", 
+                  "registered_office_is_in_dispute": false, 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "1977-12-31", 
+                        "ceased_on": "1980-12-31", 
+                        "name": "JENSEN SUBARU (HOLDINGS) LIMITED"
+                     }, 
+                     {
+                        "effective_from": "1976-07-21", 
+                        "ceased_on": "1977-12-31", 
+                        "name": "FEROBARN LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "type": "ltd"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -282,9 +587,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -295,9 +601,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -308,28 +615,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Government of the Island of GuernseyAddress of donor: Sir Charles Frossard House, La Charroterie, St Peter Port, Guernsey GY1 1FHEstimate of the probable value (or amount of any donation): flights costing \u00a3266.37; hotel accommodation costing \u00a3262; taxi costing \u00a3246; \u00a3774.37 in totalDestination of visit: GuernseyDates of visit: 2 to 4 April 2017Purpose of visit: To explore areas where the UK and Guernsey can work more closely together post Brexit.(Registered 27 April 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "flights costing \u00a3266.37; hotel accommodation costing \u00a3262; taxi costing \u00a3246; \u00a3774.37 in total", 
+               "Purpose of visit": "To explore areas where the UK and Guernsey can work more closely together post Brexit.", 
+               "Destination of visit": "Guernsey", 
+               "(Registered 27 April 2017)": "(Registered 27 April 2017)", 
+               "Dates of visit": "2 to 4 April 2017", 
+               "Name of donor": "Government of the Island of Guernsey", 
+               "Address of donor": "Sir Charles Frossard House, La Charroterie, St Peter Port, Guernsey GY1 1FH"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 266, 
          "items": [
             {
                "raw_string": "Name of donor: Government of the Island of GuernseyAddress of donor: Sir Charles Frossard House, La Charroterie, St Peter Port, Guernsey GY1 1FHEstimate of the probable value (or amount of any donation): flights costing \u00a3266.37; hotel accommodation costing \u00a3262; taxi costing \u00a3246; \u00a3774.37 in totalDestination of visit: GuernseyDates of visit: 2 to 4 April 2017Purpose of visit: To explore areas where the UK and Guernsey can work more closely together post Brexit.(Registered 27 April 2017)", 
-               "dates": "2 to 4 April 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "27/04/2017", 
                "destination": "Guernsey", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 266, 
+               "link": null, 
                "purpose": "To explore areas where the UK and Guernsey can work more closely together post Brexit.", 
                "pretty": "Government of the Island of Guernsey", 
                "address": "Sir Charles Frossard House, La Charroterie, St Peter Port, Guernsey GY1 1FH", 
                "item_id": "0001", 
                "donor": "Government of the Island of Guernsey", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Government of the Island of Guernsey", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 266, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -342,9 +670,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -355,9 +684,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -369,7 +699,25 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "tracey", 
+         "raw_data": [
+            {
+               "raw_string": "Dunelm Business Consultants; business consultancy. (Registered 26 May 2015)", 
+               "Dunelm Business Consultants; business consultancy. (Registered 26 May 2015)": "Dunelm Business Consultants; business consultancy. (Registered 26 May 2015)"
+            }
+         ], 
+         "category_description": "Shareholdings", 
+         "category_gifts": 0, 
+         "month": 8, 
+         "middle": "paul", 
+         "category_type": "shareholdings", 
+         "category_wealth": 15, 
+         "category_income": 0, 
+         "raw_items": [
+            "Dunelm Business Consultants; business consultancy. (Registered 26 May 2015)"
+         ], 
+         "year": 1974, 
          "items": [
             {
                "raw_string": "Dunelm Business Consultants; business consultancy. (Registered 26 May 2015)", 
@@ -421,6 +769,12 @@
                            "appointments": "/officers/UTulO7W8wabrq17m-nRomiYzHGk/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-05-28", 
+                     "date_of_birth": {
+                        "year": 1974, 
+                        "month": 8
+                     }, 
                      "address": {
                         "locality": "Lichfield", 
                         "premises": "31", 
@@ -428,12 +782,6 @@
                         "region": "Staffordshire", 
                         "postal_code": "WS13 6QA", 
                         "address_line_1": "Sandford Street"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-05-28", 
-                     "date_of_birth": {
-                        "year": 1974, 
-                        "month": 8
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -446,6 +794,12 @@
                            "appointments": "/officers/xy86kNPUvH_Q1hpQeZPfvfbIHRw/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-05-28", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1966
+                     }, 
                      "address": {
                         "locality": "Lichfield", 
                         "premises": "31", 
@@ -454,14 +808,8 @@
                         "postal_code": "WS13 6QA", 
                         "address_line_1": "Sandford Street"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-05-28", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1966
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Executive Coach"
                   }
                ], 
@@ -533,18 +881,6 @@
                }
             }
          ], 
-         "category_description": "Shareholdings", 
-         "category_gifts": 0, 
-         "month": 8, 
-         "middle": "paul", 
-         "category_type": "shareholdings", 
-         "category_wealth": 15, 
-         "category_income": 0, 
-         "raw_items": [
-            "Dunelm Business Consultants; business consultancy. (Registered 26 May 2015)"
-         ], 
-         "year": 1974, 
-         "category_id": 8, 
          "category_amount": 15, 
          "display": "craig tracey", 
          "category_donations": 0, 
@@ -552,8 +888,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "tracey", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -563,16 +900,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1974, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "craig tracey", 
          "category_donations": 0, 
          "first": "craig"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -583,9 +921,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -596,9 +935,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -708,8 +1048,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-05-28", 
                      "date_of_birth": {
-                        "year": 1974, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1974
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -725,8 +1065,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-05-28", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1966
+                        "year": 1966, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "Lichfield", 
@@ -744,7 +1084,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/09059817", 
-               "pretty": "craig tracey craig paul tracey", 
+               "pretty": "Craig Tracey", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -825,8 +1165,8 @@
                         "significant-influence-or-control"
                      ], 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1968
+                        "year": 1968, 
+                        "month": 2
                      }, 
                      "name_elements": {
                         "middle_name": "Michelle", 
@@ -855,12 +1195,6 @@
                            "appointments": "/officers/68rs9PjGkwjpYX1NvW9OofOiPW8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-09-05", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -868,8 +1202,14 @@
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-09-05", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1948
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Finance Director/Ceo"
                   }, 
                   {
@@ -879,18 +1219,18 @@
                            "appointments": "/officers/KmT6eHnk1mwKUGJ_cgKyNWYms4s/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-10-07", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 2
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
                         "locality": "Lichfield", 
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-10-07", 
+                     "date_of_birth": {
+                        "year": 1968, 
+                        "month": 2
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -916,8 +1256,8 @@
                         "year": 1962, 
                         "month": 5
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Surveyor"
                   }, 
                   {
@@ -927,6 +1267,13 @@
                            "appointments": "/officers/QMytKrQsjx4SE1M8qHe4VbA5CjM/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-09-05", 
+                     "resigned_on": "2015-05-31", 
+                     "date_of_birth": {
+                        "year": 1965, 
+                        "month": 7
+                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -934,15 +1281,8 @@
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-09-05", 
-                     "resigned_on": "2015-05-31", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1965
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Orchestral Conducter And Artis"
                   }, 
                   {
@@ -952,19 +1292,19 @@
                            "appointments": "/officers/e94Jz5nOHxQFFtUGez5zKdrTp2E/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Lichfield Garrick", 
-                        "region": "Staffordshire", 
-                        "locality": "Lichfield", 
-                        "postal_code": "WS13 6HR", 
-                        "address_line_1": "Castle Dyke"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2012-09-05", 
                      "resigned_on": "2012-12-01", 
                      "date_of_birth": {
                         "year": 1940, 
                         "month": 1
+                     }, 
+                     "address": {
+                        "premises": "Lichfield Garrick", 
+                        "region": "Staffordshire", 
+                        "locality": "Lichfield", 
+                        "postal_code": "WS13 6HR", 
+                        "address_line_1": "Castle Dyke"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -977,6 +1317,13 @@
                            "appointments": "/officers/CxyEi8RVGGCR0ax5G5Q5GUZlLAU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-09-05", 
+                     "resigned_on": "2017-08-31", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 7
+                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -984,15 +1331,8 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-09-05", 
-                     "resigned_on": "2017-08-31", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1956
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Secretary"
                   }, 
                   {
@@ -1024,7 +1364,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/08203302", 
-               "pretty": "craig tracey craig paul tracey", 
+               "pretty": "Craig Tracey", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1104,12 +1444,6 @@
                            "appointments": "/officers/kGANUeTqwDkCJ-4rR2E66zihVrg/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-07-27", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 12
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1117,8 +1451,14 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-07-27", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 12
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Market Research Consultant"
                   }, 
                   {
@@ -1128,12 +1468,6 @@
                            "appointments": "/officers/68rs9PjGkwjpYX1NvW9OofOiPW8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-03-01", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 10
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1141,8 +1475,14 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-03-01", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 10
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Finance Director/Ceo"
                   }, 
                   {
@@ -1152,12 +1492,6 @@
                            "appointments": "/officers/00tLJkpR06Ndo0Zsqd7yGAgLH68/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-07-27", 
-                     "date_of_birth": {
-                        "year": 1979, 
-                        "month": 9
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1165,8 +1499,14 @@
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-07-27", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1979
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Senior Manager"
                   }, 
                   {
@@ -1213,8 +1553,8 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Surveyor"
                   }, 
                   {
@@ -1224,12 +1564,6 @@
                            "appointments": "/officers/6osARfAuBEUTvb-eC1K8unlQGrk/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-07-27", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1955
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1237,8 +1571,14 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-07-27", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1955
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Sales Representative"
                   }, 
                   {
@@ -1248,18 +1588,18 @@
                            "appointments": "/officers/G0579oGrNaNGXIcS5BVpf0axnjM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-03-01", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 8
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
                         "locality": "Lichfield", 
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-03-01", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1272,18 +1612,18 @@
                            "appointments": "/officers/xy86kNPUvH_Q1hpQeZPfvfbIHRw/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-04-28", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 6
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
                         "locality": "Lichfield", 
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-04-28", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 6
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1314,13 +1654,6 @@
                            "appointments": "/officers/GAcmYjktMTZ4pTh_Mf5C2H3hMus/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-03-28", 
-                     "resigned_on": "2017-08-31", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1965
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1328,8 +1661,15 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-28", 
+                     "resigned_on": "2017-08-31", 
+                     "date_of_birth": {
+                        "year": 1965, 
+                        "month": 5
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -1339,19 +1679,19 @@
                            "appointments": "/officers/MBPR1bbmUcI9P4My5vXOkMB69Tg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-03-01", 
-                     "resigned_on": "2013-07-18", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
                         "locality": "Lichfield", 
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-03-01", 
+                     "resigned_on": "2013-07-18", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1948
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1368,8 +1708,8 @@
                      "appointed_on": "2012-03-01", 
                      "resigned_on": "2012-11-15", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1940
+                        "year": 1940, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
@@ -1389,13 +1729,6 @@
                            "appointments": "/officers/TLP0EMIKdjNSeJnOJ42zfyBtfoE/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-01-30", 
-                     "resigned_on": "2017-05-16", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1953
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1403,8 +1736,15 @@
                         "postal_code": "WS13 6HR", 
                         "address_line_1": "Castle Dyke"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-01-30", 
+                     "resigned_on": "2017-05-16", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 4
+                     }, 
                      "nationality": "English", 
+                     "officer_role": "director", 
                      "occupation": "Engineer\u2019S Merchant"
                   }, 
                   {
@@ -1443,8 +1783,8 @@
                      "appointed_on": "2012-03-01", 
                      "resigned_on": "2015-02-26", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
@@ -1464,13 +1804,6 @@
                            "appointments": "/officers/tyLh7j-9dxkXkRAJuJXw0sTi9yg/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Lichfield Garrick", 
-                        "region": "Staffordshire", 
-                        "locality": "Lichfield", 
-                        "postal_code": "WS13 6HR", 
-                        "address_line_1": "Castle Dyke"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-03-01", 
                      "resigned_on": "2017-08-31", 
@@ -1478,8 +1811,15 @@
                         "year": 1956, 
                         "month": 7
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "premises": "Lichfield Garrick", 
+                        "region": "Staffordshire", 
+                        "locality": "Lichfield", 
+                        "postal_code": "WS13 6HR", 
+                        "address_line_1": "Castle Dyke"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Secretary"
                   }, 
                   {
@@ -1488,13 +1828,6 @@
                         "officer": {
                            "appointments": "/officers/mewd6UUHEDt-VXvEub6QWT_n64s/appointments"
                         }
-                     }, 
-                     "address": {
-                        "premises": "Lichfield Garrick", 
-                        "region": "Staffordshire", 
-                        "address_line_1": "Castle Dyke", 
-                        "postal_code": "WS13 6HR", 
-                        "locality": "Lichfield"
                      }, 
                      "former_names": [
                         {
@@ -1506,8 +1839,15 @@
                      "appointed_on": "2012-03-01", 
                      "resigned_on": "2017-07-27", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 4
+                     }, 
+                     "address": {
+                        "premises": "Lichfield Garrick", 
+                        "region": "Staffordshire", 
+                        "address_line_1": "Castle Dyke", 
+                        "postal_code": "WS13 6HR", 
+                        "locality": "Lichfield"
                      }, 
                      "officer_role": "director", 
                      "nationality": "English", 
@@ -1520,13 +1860,6 @@
                            "appointments": "/officers/UTulO7W8wabrq17m-nRomiYzHGk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-03-01", 
-                     "resigned_on": "2016-01-28", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1974
-                     }, 
                      "address": {
                         "premises": "Lichfield Garrick", 
                         "region": "Staffordshire", 
@@ -1534,8 +1867,15 @@
                         "postal_code": "WS13 6HR", 
                         "locality": "Lichfield"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-03-01", 
+                     "resigned_on": "2016-01-28", 
+                     "date_of_birth": {
+                        "year": 1974, 
+                        "month": 8
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Insurance Broker"
                   }, 
                   {
@@ -1556,8 +1896,8 @@
                      "appointed_on": "2012-03-01", 
                      "resigned_on": "2017-05-16", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1959
+                        "year": 1959, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1592,7 +1932,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07972082", 
-               "pretty": "craig tracey craig paul tracey", 
+               "pretty": "Craig Tracey", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1686,8 +2026,8 @@
                         "postal_code": "WS13 6QA", 
                         "address_line_1": "Sandford Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Public Affairs Advisor"
                   }, 
                   {
@@ -1697,12 +2037,6 @@
                            "appointments": "/officers/rlJL88OkfTInPz2JXGstwRTYpjU/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-01-17", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1989
-                     }, 
                      "address": {
                         "locality": "Lichfield", 
                         "premises": "31", 
@@ -1711,8 +2045,14 @@
                         "postal_code": "WS13 6QA", 
                         "address_line_1": "Sandford Street"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-01-17", 
+                     "date_of_birth": {
+                        "year": 1989, 
+                        "month": 5
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Public Affairs Advisor"
                   }, 
                   {
@@ -1745,7 +2085,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/08849803", 
-               "pretty": "craig tracey craig paul tracey", 
+               "pretty": "Craig Tracey", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

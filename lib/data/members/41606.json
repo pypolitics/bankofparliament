@@ -187,15 +187,16 @@
    "person_id": "25368", 
    "party": "Labour", 
    "forname": "Rebecca", 
-   "mp_annual": 88597, 
+   "mp_annual": 87562, 
    "mp_wealth": 0, 
    "facebook": "https://facebook.com/Rebecca4salford", 
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -206,6 +207,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London Wc1X 8TNAmount of donation or nature and value if donation in kind: \u00a38,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a38,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobald's Road, London Wc1X 8TN"
+            }, 
+            {
+               "raw_string": "Name of donor: RMTAddress of donor: 39 Chalton Street, London NW1 1JDAmount of donation or nature and value if donation in kind: \u00a34,600Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,600", 
+               "Name of donor": "RMT", 
+               "Donor status": "trade union", 
+               "Address of donor": "39 Chalton Street, London NW1 1JD"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London Wc1X 8TNAmount of donation or nature and value if donation in kind: \u00a38,000Donor status: trade union(Registered 07 July 2017)", 
@@ -213,15 +234,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 8000, 
+               "link": null, 
                "pretty": "Unite the Union", 
                "address": "128 Theobald's Road, London Wc1X 8TN", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: RMTAddress of donor: 39 Chalton Street, London NW1 1JDAmount of donation or nature and value if donation in kind: \u00a34,600Donor status: trade union(Registered 07 July 2017)", 
@@ -229,19 +259,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4600, 
+               "link": null, 
                "pretty": "RMT", 
                "address": "39 Chalton Street, London NW1 1JD", 
                "item_id": "0002", 
                "donor": "RMT", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "RMT", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -255,9 +292,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -268,28 +306,57 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor:  Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: Three nights\u2019 hotel accommodation at Labour Party conference including breakfast, total value \u00a31,035Date received: 24 \u2013 26 September 2017Date accepted: 24 September 2017Donor status: trade union(Registered 23 October 2017)", 
+               "(Registered 23 October 2017)": "(Registered 23 October 2017)", 
+               "Date received": "24 \u2013 26 September 2017", 
+               "Amount of donation or nature and value if donation in kind": "Three nights\u2019 hotel accommodation at Labour Party conference including breakfast, total value \u00a31,035", 
+               "Date accepted": "24 September 2017", 
+               "Name of donor": " Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobald's Road, London WC1X 8TN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor:  Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: Three nights\u2019 hotel accommodation at Labour Party conference including breakfast, total value \u00a31,035Date received: 24 \u2013 26 September 2017Date accepted: 24 September 2017Donor status: trade union(Registered 23 October 2017)", 
-               "received": "24 \u2013 26 September 2017", 
-               "accepted": "24 September 2017", 
+               "status": "trade union", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
+               "raw_data": {
+                  "raw_string": "Name of donor:  Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: Three nights\u2019 hotel accommodation at Labour Party conference including breakfast, total value \u00a31,035Date received: 24 \u2013 26 September 2017Date accepted: 24 September 2017Donor status: trade union(Registered 23 October 2017)", 
+                  "(Registered 23 October 2017)": "(Registered 23 October 2017)", 
+                  "Date received": "24 \u2013 26 September 2017", 
+                  "Amount of donation or nature and value if donation in kind": "Three nights\u2019 hotel accommodation at Labour Party conference including breakfast, total value \u00a31,035", 
+                  "Date accepted": "24 September 2017", 
+                  "Name of donor": " Unite the Union", 
+                  "Donor status": "trade union", 
+                  "Address of donor": "128 Theobald's Road, London WC1X 8TN"
+               }, 
                "registered": "23/10/2017", 
+               "officers": [], 
                "isIncome": false, 
-               "amount": 1035, 
-               "status": "trade union", 
+               "amount": 0, 
+               "link": null, 
                "pretty": " Unite the Union", 
                "address": "128 Theobald's Road, London WC1X 8TN", 
                "item_id": "0001", 
                "donor": " Unite the Union", 
                "category_id": 4, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": " Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 1035, 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [
@@ -297,14 +364,15 @@
          ], 
          "category_description": "Gifts", 
          "category_id": 4, 
-         "category_amount": 1035, 
+         "category_amount": 0, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -315,9 +383,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -328,9 +397,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -342,8 +412,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "long-bailey", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -353,7 +424,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1979, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "rebecca long bailey", 
          "category_donations": 0, 
@@ -361,8 +432,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "long-bailey", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -372,16 +444,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1979, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "rebecca long bailey", 
          "category_donations": 0, 
          "first": "rebecca"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -392,9 +465,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -405,9 +479,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -489,5 +564,5 @@
    "wrans_subjects": "Welfare Tax Credits, Wholesale Trade: Alcoholic Drinks, Blood: Contamination, Business: Pay, Nuclear Decommissioning Authority: Contracts", 
    "member_id": "41606", 
    "constituency": "Salford and Eccles", 
-   "mp_gifts": 1035
+   "mp_gifts": 0
 }

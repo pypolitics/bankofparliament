@@ -206,9 +206,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -219,9 +220,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -232,9 +234,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -245,9 +248,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -258,46 +262,86 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Armed Forces Parliamentary TrustAddress of donor: House of Commons, London SW1A 0AAEstimate of the probable value (or amount of any donation): Flights and meals with a value of \u00a3710.64Destination of visit: British Army Training Unit Suffield, CanadaDates of visit: 25-28 August 2016Purpose of visit: Insight liaison visit.(Registered 10 November 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights and meals with a value of \u00a3710.64", 
+               "Purpose of visit": "Insight liaison visit.", 
+               "Destination of visit": "British Army Training Unit Suffield, Canada", 
+               "Dates of visit": "25-28 August 2016", 
+               "Name of donor": "Armed Forces Parliamentary Trust", 
+               "(Registered 10 November 2016)": "(Registered 10 November 2016)", 
+               "Address of donor": "House of Commons, London SW1A 0AA"
+            }, 
+            {
+               "raw_string": "Name of donor: Ministry of Foreign Affairs, QatarAddress of donor: Qatar Embassy, 1 South Audley St, London W1K 1NBAmount of donation (or estimate of the probable value): Air travel, food and accommodation with a value of \u00a35,100Destination of visit: QatarDate of visit: 14-17 February 2017Purpose of visit: British-Qatar APPG visit to meet Ministers, officials, visit world cup sites and discuss issues of bilateral relations and regional crises.(Registered 09 March 2017)", 
+               "Purpose of visit": "British-Qatar APPG visit to meet Ministers, officials, visit world cup sites and discuss issues of bilateral relations and regional crises.", 
+               "(Registered 09 March 2017)": "(Registered 09 March 2017)", 
+               "Destination of visit": "Qatar", 
+               "Name of donor": "Ministry of Foreign Affairs, Qatar", 
+               "Date of visit": "14-17 February 2017", 
+               "Amount of donation (or estimate of the probable value)": "Air travel, food and accommodation with a value of \u00a35,100", 
+               "Address of donor": "Qatar Embassy, 1 South Audley St, London W1K 1NB"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 5810, 
          "items": [
             {
                "raw_string": "Name of donor: Armed Forces Parliamentary TrustAddress of donor: House of Commons, London SW1A 0AAEstimate of the probable value (or amount of any donation): Flights and meals with a value of \u00a3710.64Destination of visit: British Army Training Unit Suffield, CanadaDates of visit: 25-28 August 2016Purpose of visit: Insight liaison visit.(Registered 10 November 2016)", 
-               "dates": "25-28 August 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "10/11/2016", 
                "destination": "British Army Training Unit Suffield, Canada", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 710, 
+               "link": null, 
                "purpose": "Insight liaison visit.", 
                "pretty": "Armed Forces Parliamentary Trust", 
                "address": "House of Commons, London SW1A 0AA", 
                "item_id": "0001", 
                "donor": "Armed Forces Parliamentary Trust", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Armed Forces Parliamentary Trust", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Ministry of Foreign Affairs, QatarAddress of donor: Qatar Embassy, 1 South Audley St, London W1K 1NBAmount of donation (or estimate of the probable value): Air travel, food and accommodation with a value of \u00a35,100Destination of visit: QatarDate of visit: 14-17 February 2017Purpose of visit: British-Qatar APPG visit to meet Ministers, officials, visit world cup sites and discuss issues of bilateral relations and regional crises.(Registered 09 March 2017)", 
-               "dates": "14-17 February 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "09/03/2017", 
                "destination": "Qatar", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5100, 
+               "link": null, 
                "purpose": "British-Qatar APPG visit to meet Ministers, officials, visit world cup sites and discuss issues of bilateral relations and regional crises.", 
                "pretty": "Ministry of Foreign Affairs, Qatar", 
                "address": "Qatar Embassy, 1 South Audley St, London W1K 1NB", 
                "item_id": "0002", 
                "donor": "Ministry of Foreign Affairs, Qatar", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Ministry of Foreign Affairs, Qatar", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 5810, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -311,9 +355,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -324,6 +369,22 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "House in Grantham, owned jointly with my husband: (i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)", 
+               "House in Grantham, owned jointly with my husband": "(i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)"
+            }, 
+            {
+               "raw_string": "Three flats in Grantham, owned jointly with my husband: (i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)", 
+               "Three flats in Grantham, owned jointly with my husband": "(i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)"
+            }, 
+            {
+               "raw_string": "House in Newark, owned jointly with my husband: (i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)", 
+               "House in Newark, owned jointly with my husband": "(i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "House in Grantham, owned jointly with my husband: (i) and since 7 May 2015 (ii). (Registered 4 June 2015; updated 18 January 2016)", 
@@ -404,8 +465,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 50000, 
          "raw_items": [
@@ -421,7 +480,25 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "churchill", 
+         "raw_data": [
+            {
+               "raw_string": "South Lincolnshire Scaffolding Ltd. (Registered 04 June 2015)", 
+               "South Lincolnshire Scaffolding Ltd. (Registered 04 June 2015)": "South Lincolnshire Scaffolding Ltd. (Registered 04 June 2015)"
+            }
+         ], 
+         "category_description": "Shareholdings", 
+         "category_gifts": 0, 
+         "month": 3, 
+         "middle": "peta", 
+         "category_type": "shareholdings", 
+         "category_wealth": 15, 
+         "category_income": 0, 
+         "raw_items": [
+            "South Lincolnshire Scaffolding Ltd. (Registered 04 June 2015)"
+         ], 
+         "year": 1964, 
          "items": [
             {
                "raw_string": "South Lincolnshire Scaffolding Ltd. (Registered 04 June 2015)", 
@@ -441,8 +518,8 @@
                         "voting-rights-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1958
+                        "year": 1958, 
+                        "month": 3
                      }, 
                      "name_elements": {
                         "surname": "Churchill", 
@@ -509,8 +586,8 @@
                         "year": 1970, 
                         "month": 12
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Scaffolder"
                   }, 
                   {
@@ -529,8 +606,8 @@
                      }, 
                      "appointed_on": "1998-03-03", 
                      "resigned_on": "2014-11-13", 
-                     "officer_role": "secretary", 
                      "nationality": "British", 
+                     "officer_role": "secretary", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -557,13 +634,6 @@
                            "appointments": "/officers/_ZOwyi9M05onv8eh0a7cb1uCoGs/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Gelston Road", 
-                        "region": "Lincolnshire", 
-                        "locality": "Hough On The Hill", 
-                        "postal_code": "NG32 2BH", 
-                        "address_line_1": "Sallow Holt"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1998-03-03", 
                      "resigned_on": "2014-11-13", 
@@ -571,8 +641,15 @@
                         "year": 1964, 
                         "month": 3
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_2": "Gelston Road", 
+                        "region": "Lincolnshire", 
+                        "locality": "Hough On The Hill", 
+                        "postal_code": "NG32 2BH", 
+                        "address_line_1": "Sallow Holt"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -677,18 +754,6 @@
                }
             }
          ], 
-         "category_description": "Shareholdings", 
-         "category_gifts": 0, 
-         "month": 3, 
-         "middle": "peta", 
-         "category_type": "shareholdings", 
-         "category_wealth": 15, 
-         "category_income": 0, 
-         "raw_items": [
-            "South Lincolnshire Scaffolding Ltd. (Registered 04 June 2015)"
-         ], 
-         "year": 1964, 
-         "category_id": 8, 
          "category_amount": 15, 
          "display": "jo churchill", 
          "category_donations": 0, 
@@ -696,8 +761,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "churchill", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 3, 
@@ -707,13 +773,25 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1964, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "jo churchill", 
          "category_donations": 0, 
          "first": "johanna"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Trustee of SLS Pension Fund. (Registered 04 June 2015)", 
+               "Trustee of SLS Pension Fund. (Registered 04 June 2015)": "Trustee of SLS Pension Fund. (Registered 04 June 2015)"
+            }, 
+            {
+               "raw_string": "Directorship 50% of SLS Ltd (non-functioning). (Registered 04 June 2015)", 
+               "Directorship 50% of SLS Ltd (non-functioning). (Registered 04 June 2015)": "Directorship 50% of SLS Ltd (non-functioning). (Registered 04 June 2015)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Trustee of SLS Pension Fund. (Registered 04 June 2015)", 
@@ -742,8 +820,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -757,9 +833,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -770,9 +847,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -844,8 +922,8 @@
                      "country_of_residence": "Gb-Eng", 
                      "appointed_on": "2011-01-14", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1964
+                        "year": 1964, 
+                        "month": 3
                      }, 
                      "address": {
                         "premises": "Hall Farm House", 
@@ -868,8 +946,8 @@
                      "country_of_residence": "Gbr", 
                      "appointed_on": "2011-01-14", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1958
                      }, 
                      "address": {
                         "premises": "Hall Farm House", 
@@ -878,15 +956,15 @@
                         "postal_code": "IP30 0ES", 
                         "locality": "Rushbrooke"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Scaffolder"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07493438", 
-               "pretty": "johanna churchill jo churchill johanna peta churchill", 
+               "pretty": "Jo Churchill", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -987,8 +1065,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2011-11-01", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1938
+                        "year": 1938, 
+                        "month": 8
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1012,8 +1090,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-10-10", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1970
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1023,8 +1101,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Garage General Manager"
                   }, 
                   {
@@ -1048,8 +1126,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Events Co-Ordinator"
                   }, 
                   {
@@ -1070,11 +1148,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-02-03", 
                      "date_of_birth": {
-                        "year": 1973, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1973
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -1084,6 +1162,12 @@
                            "appointments": "/officers/yjJekP5iqV_Ushu7VrKBZO3F-kI/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-10-10", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 11
+                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1091,12 +1175,6 @@
                         "region": "Lincolnshire", 
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-10-10", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1962
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1147,6 +1225,13 @@
                            "appointments": "/officers/KyeI4YJyN8MLDpcRoHxpPty6wCo/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-01-01", 
+                     "resigned_on": "2015-08-31", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 11
+                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1155,15 +1240,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-01-01", 
-                     "resigned_on": "2015-08-31", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 11
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1177,8 +1255,8 @@
                      "appointed_on": "2011-11-01", 
                      "resigned_on": "2015-08-31", 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1965
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1199,13 +1277,6 @@
                            "appointments": "/officers/_ZOwyi9M05onv8eh0a7cb1uCoGs/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-01-01", 
-                     "resigned_on": "2014-11-25", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1964
-                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1213,6 +1284,13 @@
                         "region": "Lincolnshire", 
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-01-01", 
+                     "resigned_on": "2014-11-25", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1229,8 +1307,8 @@
                      "appointed_on": "2011-11-01", 
                      "resigned_on": "2012-09-06", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1976
+                        "year": 1976, 
+                        "month": 12
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1251,13 +1329,6 @@
                            "appointments": "/officers/jQaWAngfoJomyri21cfYnWWvA7o/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Kesteven And Sleaford High School", 
-                        "region": "Lincolnshire", 
-                        "locality": "Sleaford", 
-                        "postal_code": "NG34 7RS", 
-                        "address_line_1": "Jermyn Street"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2014-11-10", 
                      "resigned_on": "2015-08-31", 
@@ -1265,8 +1336,15 @@
                         "year": 1971, 
                         "month": 12
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "premises": "Kesteven And Sleaford High School", 
+                        "region": "Lincolnshire", 
+                        "locality": "Sleaford", 
+                        "postal_code": "NG34 7RS", 
+                        "address_line_1": "Jermyn Street"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Structures Leader"
                   }, 
                   {
@@ -1317,8 +1395,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1332,8 +1410,8 @@
                      "appointed_on": "2011-11-01", 
                      "resigned_on": "2012-02-16", 
                      "date_of_birth": {
-                        "year": 1942, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1942
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1354,13 +1432,6 @@
                            "appointments": "/officers/p2k7N_yspvN8W7fW8XsJJIwGC2g/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-01-21", 
-                     "resigned_on": "2015-08-31", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1958
-                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1368,6 +1439,13 @@
                         "region": "Lincolnshire", 
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-01-21", 
+                     "resigned_on": "2015-08-31", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1958
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1395,8 +1473,8 @@
                         "month": 4, 
                         "year": 1953
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Governor"
                   }, 
                   {
@@ -1406,6 +1484,13 @@
                            "appointments": "/officers/H_xAebrTU-OS4VOSfY2IIX_GO9U/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-10-25", 
+                     "resigned_on": "2014-03-31", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1966
+                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1414,15 +1499,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-10-25", 
-                     "resigned_on": "2014-03-31", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1966
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Adult Education"
                   }, 
                   {
@@ -1432,13 +1510,6 @@
                            "appointments": "/officers/64wJWUKjmG73DlH4vPrL5UXltMw/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-11-01", 
-                     "resigned_on": "2012-01-28", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1960
-                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1447,8 +1518,15 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-11-01", 
+                     "resigned_on": "2012-01-28", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 3
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1458,13 +1536,6 @@
                            "appointments": "/officers/47bSnffThgMQkydGjXGuYlcIVK4/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-01-01", 
-                     "resigned_on": "2015-08-31", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1968
-                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1472,6 +1543,13 @@
                         "region": "Lincolnshire", 
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-01-01", 
+                     "resigned_on": "2015-08-31", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1968
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1488,8 +1566,8 @@
                      "appointed_on": "2013-08-05", 
                      "resigned_on": "2015-08-31", 
                      "date_of_birth": {
-                        "year": 1965, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1965
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1500,8 +1578,8 @@
                         "address_line_2": "Silk Willoughby", 
                         "address_line_1": "School Lane"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Partner Of Design Consultancy Llp"
                   }, 
                   {
@@ -1511,6 +1589,13 @@
                            "appointments": "/officers/QWKWr3t8ofLL_YoEoSsAEQuB3Rk/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-11-01", 
+                     "resigned_on": "2015-08-31", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1968
+                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1519,15 +1604,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-11-01", 
-                     "resigned_on": "2015-08-31", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 2
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Teacher"
                   }, 
                   {
@@ -1552,8 +1630,8 @@
                         "year": 1972, 
                         "month": 12
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -1563,6 +1641,13 @@
                            "appointments": "/officers/xft40Hda2P8lAAUudybTytcMByc/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-11-20", 
+                     "resigned_on": "2015-08-31", 
+                     "date_of_birth": {
+                        "year": 1987, 
+                        "month": 6
+                     }, 
                      "address": {
                         "locality": "Sleaford", 
                         "premises": "Kesteven And Sleaford High School", 
@@ -1571,15 +1656,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-11-20", 
-                     "resigned_on": "2015-08-31", 
-                     "date_of_birth": {
-                        "year": 1987, 
-                        "month": 6
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Teacher"
                   }, 
                   {
@@ -1593,8 +1671,8 @@
                      "appointed_on": "2011-11-01", 
                      "resigned_on": "2011-12-31", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1958
                      }, 
                      "address": {
                         "locality": "Sleaford", 
@@ -1619,8 +1697,8 @@
                      "appointed_on": "2014-11-28", 
                      "resigned_on": "2015-08-31", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1966
                      }, 
                      "address": {
                         "premises": "Kesteven And Sleaford High School", 
@@ -1629,8 +1707,8 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Student"
                   }, 
                   {
@@ -1655,8 +1733,8 @@
                         "year": 1965, 
                         "month": 6
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Governor"
                   }, 
                   {
@@ -1665,6 +1743,14 @@
                         "officer": {
                            "appointments": "/officers/XP9NZzOUi6Dkexo5CCIp0HkAOAQ/appointments"
                         }
+                     }, 
+                     "address": {
+                        "locality": "Sleaford", 
+                        "premises": "Kesteven And Sleaford High School", 
+                        "country": "United Kingdom", 
+                        "region": "Lincolnshire", 
+                        "postal_code": "NG34 7RS", 
+                        "address_line_1": "Jermyn Street"
                      }, 
                      "former_names": [
                         {
@@ -1675,19 +1761,11 @@
                      "appointed_on": "2012-10-25", 
                      "resigned_on": "2014-04-28", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1967
                      }, 
-                     "address": {
-                        "locality": "Sleaford", 
-                        "premises": "Kesteven And Sleaford High School", 
-                        "country": "United Kingdom", 
-                        "region": "Lincolnshire", 
-                        "postal_code": "NG34 7RS", 
-                        "address_line_1": "Jermyn Street"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Consultant Pathologist"
                   }, 
                   {
@@ -1697,13 +1775,6 @@
                            "appointments": "/officers/mgVmQuxjrbY143Tf2gvfi6oJK2A/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2014-11-10", 
-                     "resigned_on": "2015-08-31", 
-                     "date_of_birth": {
-                        "year": 1952, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "Kesteven And Sleaford High School", 
                         "region": "Lincolnshire", 
@@ -1711,15 +1782,22 @@
                         "postal_code": "NG34 7RS", 
                         "address_line_1": "Jermyn Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2014-11-10", 
+                     "resigned_on": "2015-08-31", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 3
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Cpd Manager"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07804308", 
-               "pretty": "johanna churchill jo churchill johanna peta churchill", 
+               "pretty": "Jo Churchill", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1854,8 +1932,8 @@
                         "address_line_2": "36 School Lane, Butterwick", 
                         "locality": "Boston"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Scaffolder"
                   }, 
                   {
@@ -1874,8 +1952,8 @@
                      }, 
                      "appointed_on": "1998-03-03", 
                      "resigned_on": "2014-11-13", 
-                     "nationality": "British", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -1916,8 +1994,8 @@
                         "postal_code": "NG32 2BH", 
                         "address_line_1": "Sallow Holt"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -1941,7 +2019,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/03520516", 
-               "pretty": "johanna churchill jo churchill johanna peta churchill", 
+               "pretty": "Jo Churchill", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2039,8 +2117,8 @@
                         "voting-rights-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1958
                      }, 
                      "name_elements": {
                         "surname": "Churchill", 
@@ -2084,8 +2162,8 @@
                         "postal_code": "IP30 0ES", 
                         "locality": "Rushbrooke"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Scaffolder"
                   }, 
                   {
@@ -2155,6 +2233,13 @@
                            "appointments": "/officers/_ZOwyi9M05onv8eh0a7cb1uCoGs/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1998-03-03", 
+                     "resigned_on": "2014-11-13", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1964
+                     }, 
                      "address": {
                         "address_line_2": "Gelston Road", 
                         "region": "Lincolnshire", 
@@ -2162,15 +2247,8 @@
                         "postal_code": "NG32 2BH", 
                         "address_line_1": "Sallow Holt"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1998-03-03", 
-                     "resigned_on": "2014-11-13", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 3
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -2194,7 +2272,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/03520516", 
-               "pretty": "johanna churchill jo churchill johanna peta churchill", 
+               "pretty": "Jo Churchill", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

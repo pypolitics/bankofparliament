@@ -337,9 +337,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -350,6 +351,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, Holborn, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 05 July 2017)", 
+               "(Registered 05 July 2017)": "(Registered 05 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobalds Road, Holborn, London WC1X 8TN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, Holborn, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 05 July 2017)", 
@@ -357,19 +370,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "05/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": null, 
                "pretty": "Unite the Union", 
                "address": "128 Theobalds Road, Holborn, London WC1X 8TN", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -382,9 +402,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -395,9 +416,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -408,82 +430,160 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: Gibraltar House, 150 Strand, London WC2R 1JAEstimate of the probable value (or amount of any donation): Flight, hotel and accommodation with an estimated value of \u00a31,296Destination of visit: GibraltarDates of visit: 8-10 September 2016Purpose of visit: Invited by HM Government of Gibraltar for National Day celebrations.(Registered 23 November 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "Flight, hotel and accommodation with an estimated value of \u00a31,296", 
+               "Purpose of visit": "Invited by HM Government of Gibraltar for National Day celebrations.", 
+               "Destination of visit": "Gibraltar", 
+               "(Registered 23 November 2016)": "(Registered 23 November 2016)", 
+               "Dates of visit": "8-10 September 2016", 
+               "Name of donor": "HM Government of Gibraltar", 
+               "Address of donor": "Gibraltar House, 150 Strand, London WC2R 1JA"
+            }, 
+            {
+               "raw_string": "Name of donor: (1) Kar Group (2) Kurdistan Regional GovernmentAddress of donor: (1) Apartment 8, 1st Floor, Building J, Naz City, Erbil, Iraq (2) KRG UK Representation, 23 Buckingham Gate, London SW1E 6LBEstimate of the probable value (or amount of any donation): (1) Flights and hotel with a value of \u00a33,400 (2) Internal security and transport with a value of \u00a3516Destination of visit: Erbil, Slemani and Mosul, Kurdistan Region of IraqDates of visit: 3-9 November 2016Purpose of visit: to meet senior political leaders including the Prime Minister, Ministers, the UK acting Consul-General, also the Iraqi Army and the Peshmerga, and to visit camps for internally displaced people.(Registered 23 November 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "(1) Flights and hotel with a value of \u00a33,400 (2) Internal security and transport with a value of \u00a3516", 
+               "Purpose of visit": "to meet senior political leaders including the Prime Minister, Ministers, the UK acting Consul-General, also the Iraqi Army and the Peshmerga, and to visit camps for internally displaced people.", 
+               "Destination of visit": "Erbil, Slemani and Mosul, Kurdistan Region of Iraq", 
+               "(Registered 23 November 2016)": "(Registered 23 November 2016)", 
+               "Dates of visit": "3-9 November 2016", 
+               "Name of donor": "(1) Kar Group (2) Kurdistan Regional Government", 
+               "Address of donor": "(1) Apartment 8, 1st Floor, Building J, Naz City, Erbil, Iraq (2) KRG UK Representation, 23 Buckingham Gate, London SW1E 6LB"
+            }, 
+            {
+               "raw_string": "Name of donor: (1) Labour Friends of Israel (2) Israeli Ministry of Foreign AffairsAddress of donor: (1) BM LFI, London WC1N 3XX (2) 9 Yitzhak Rabin Blvd., Kiryat Ben-Gurion, Jerusalem 9103001Estimate of the probable value (or amount of any donation): (1) Travel and accommodation with a value of \u00a31,500 (2) Hospitality with a value of \u00a3125.Destination of visit: Israel and the Palestinian TerritoriesDates of visit: 14-17 November 2016Purpose of visit: Fact finding visit. Meeting with Israeli and Palestinian co-existence campaigners, politicians, academics, journalists and diplomats.(Registered 28 November 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "(1) Travel and accommodation with a value of \u00a31,500 (2) Hospitality with a value of \u00a3125.", 
+               "(Registered 28 November 2016)": "(Registered 28 November 2016)", 
+               "Purpose of visit": "Fact finding visit. Meeting with Israeli and Palestinian co-existence campaigners, politicians, academics, journalists and diplomats.", 
+               "Destination of visit": "Israel and the Palestinian Territories", 
+               "Dates of visit": "14-17 November 2016", 
+               "Name of donor": "(1) Labour Friends of Israel (2) Israeli Ministry of Foreign Affairs", 
+               "Address of donor": "(1) BM LFI, London WC1N 3XX (2) 9 Yitzhak Rabin Blvd., Kiryat Ben-Gurion, Jerusalem 9103001"
+            }, 
+            {
+               "raw_string": "Name of donor: Labour Friends of BangladeshAddress of donor: 349 Cambridge Heath Road, London E2 9RAEstimate of the probable value (or amount of any donation): Flights, hotels and internal transport with an estimated value of \u00a32,500Destination of visit: Dhaka and Sylhet, BangladeshDate of visit: 11 to 17 February 2017Purpose of visit: Meetings with representatives of Bangladesh government and opposition leaders, meetings at Bangladesh Parliament, meetings with charitable organisations and British/Bangladeshi business organisations(Registered 24 February 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights, hotels and internal transport with an estimated value of \u00a32,500", 
+               "Purpose of visit": "Meetings with representatives of Bangladesh government and opposition leaders, meetings at Bangladesh Parliament, meetings with charitable organisations and British/Bangladeshi business organisations", 
+               "Destination of visit": "Dhaka and Sylhet, Bangladesh", 
+               "Date of visit": "11 to 17 February 2017", 
+               "(Registered 24 February 2017)": "(Registered 24 February 2017)", 
+               "Name of donor": "Labour Friends of Bangladesh", 
+               "Address of donor": "349 Cambridge Heath Road, London E2 9RA"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 8696, 
          "items": [
             {
                "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: Gibraltar House, 150 Strand, London WC2R 1JAEstimate of the probable value (or amount of any donation): Flight, hotel and accommodation with an estimated value of \u00a31,296Destination of visit: GibraltarDates of visit: 8-10 September 2016Purpose of visit: Invited by HM Government of Gibraltar for National Day celebrations.(Registered 23 November 2016)", 
-               "dates": "8-10 September 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "23/11/2016", 
                "destination": "Gibraltar", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 1296, 
+               "link": null, 
                "purpose": "Invited by HM Government of Gibraltar for National Day celebrations.", 
                "pretty": "HM Government of Gibraltar", 
                "address": "Gibraltar House, 150 Strand, London WC2R 1JA", 
                "item_id": "0001", 
                "donor": "HM Government of Gibraltar", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "HM Government of Gibraltar", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: (1) Kar Group (2) Kurdistan Regional GovernmentAddress of donor: (1) Apartment 8, 1st Floor, Building J, Naz City, Erbil, Iraq (2) KRG UK Representation, 23 Buckingham Gate, London SW1E 6LBEstimate of the probable value (or amount of any donation): (1) Flights and hotel with a value of \u00a33,400 (2) Internal security and transport with a value of \u00a3516Destination of visit: Erbil, Slemani and Mosul, Kurdistan Region of IraqDates of visit: 3-9 November 2016Purpose of visit: to meet senior political leaders including the Prime Minister, Ministers, the UK acting Consul-General, also the Iraqi Army and the Peshmerga, and to visit camps for internally displaced people.(Registered 23 November 2016)", 
-               "dates": "3-9 November 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "23/11/2016", 
                "destination": "Erbil, Slemani and Mosul, Kurdistan Region of Iraq", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3400, 
+               "link": null, 
                "purpose": "to meet senior political leaders including the Prime Minister, Ministers, the UK acting Consul-General, also the Iraqi Army and the Peshmerga, and to visit camps for internally displaced people.", 
                "pretty": "(1) Kar Group (2) Kurdistan Regional Government", 
                "address": "(1) Apartment 8, 1st Floor, Building J, Naz City, Erbil, Iraq (2) KRG UK Representation, 23 Buckingham Gate, London SW1E 6LB", 
                "item_id": "0002", 
                "donor": "(1) Kar Group (2) Kurdistan Regional Government", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "(1) Kar Group (2) Kurdistan Regional Government", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: (1) Labour Friends of Israel (2) Israeli Ministry of Foreign AffairsAddress of donor: (1) BM LFI, London WC1N 3XX (2) 9 Yitzhak Rabin Blvd., Kiryat Ben-Gurion, Jerusalem 9103001Estimate of the probable value (or amount of any donation): (1) Travel and accommodation with a value of \u00a31,500 (2) Hospitality with a value of \u00a3125.Destination of visit: Israel and the Palestinian TerritoriesDates of visit: 14-17 November 2016Purpose of visit: Fact finding visit. Meeting with Israeli and Palestinian co-existence campaigners, politicians, academics, journalists and diplomats.(Registered 28 November 2016)", 
-               "dates": "14-17 November 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "28/11/2016", 
                "destination": "Israel and the Palestinian Territories", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 1500, 
+               "link": null, 
                "purpose": "Fact finding visit. Meeting with Israeli and Palestinian co-existence campaigners, politicians, academics, journalists and diplomats.", 
                "pretty": "(1) Labour Friends of Israel (2) Israeli Ministry of Foreign Affairs", 
                "address": "(1) BM LFI, London WC1N 3XX (2) 9 Yitzhak Rabin Blvd., Kiryat Ben-Gurion, Jerusalem 9103001", 
                "item_id": "0003", 
                "donor": "(1) Labour Friends of Israel (2) Israeli Ministry of Foreign Affairs", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "(1) Labour Friends of Israel (2) Israeli Ministry of Foreign Affairs", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Labour Friends of BangladeshAddress of donor: 349 Cambridge Heath Road, London E2 9RAEstimate of the probable value (or amount of any donation): Flights, hotels and internal transport with an estimated value of \u00a32,500Destination of visit: Dhaka and Sylhet, BangladeshDate of visit: 11 to 17 February 2017Purpose of visit: Meetings with representatives of Bangladesh government and opposition leaders, meetings at Bangladesh Parliament, meetings with charitable organisations and British/Bangladeshi business organisations(Registered 24 February 2017)", 
-               "dates": "11 to 17 February 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "24/02/2017", 
                "destination": "Dhaka and Sylhet, Bangladesh", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2500, 
+               "link": null, 
                "purpose": "Meetings with representatives of Bangladesh government and opposition leaders, meetings at Bangladesh Parliament, meetings with charitable organisations and British/Bangladeshi business organisations", 
                "pretty": "Labour Friends of Bangladesh", 
                "address": "349 Cambridge Heath Road, London E2 9RA", 
                "item_id": "0004", 
                "donor": "Labour Friends of Bangladesh", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Labour Friends of Bangladesh", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 8696, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -499,9 +599,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -512,9 +613,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -526,8 +628,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "winterton", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -537,7 +640,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1958, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "dame rosie winterton", 
          "category_donations": 0, 
@@ -545,8 +648,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "winterton", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -556,16 +660,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1958, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "dame rosie winterton", 
          "category_donations": 0, 
          "first": "rosalie"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -576,9 +681,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -589,9 +695,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

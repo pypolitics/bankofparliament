@@ -205,9 +205,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -218,9 +219,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -231,9 +233,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -244,9 +247,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -257,46 +261,86 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Healthcare DenmarkAddress of donor: Forskerparken 10H, 5230 Odense, DenmarkEstimate of the probable value (or amount of any donation): Flights and accommodation with a value of \u00a3946.14, plus reimbursement of expenses \u00a323.49, total \u00a3969.63.Destination of visit: DenmarkDates of visit: 5-7 October 2016Purpose of visit: Healthcare Denmark ambassador summit.(Registered 14 October 2016; updated 07 December 2016)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights and accommodation with a value of \u00a3946.14, plus reimbursement of expenses \u00a323.49, total \u00a3969.63.", 
+               "Purpose of visit": "Healthcare Denmark ambassador summit.", 
+               "Destination of visit": "Denmark", 
+               "(Registered 14 October 2016; updated 07 December 2016)": "(Registered 14 October 2016; updated 07 December 2016)", 
+               "Dates of visit": "5-7 October 2016", 
+               "Name of donor": "Healthcare Denmark", 
+               "Address of donor": "Forskerparken 10H, 5230 Odense, Denmark"
+            }, 
+            {
+               "raw_string": "Name of donor: Falkland Islands GovernmentAddress of donor: The Secretariat, Stanley, Falkland Islands FIQQ 1ZZEstimate of the probable value (or amount of any donation): Flights, accommodation, meals and transport with a value of \u00a33,124.55Destination of visit: Falkland IslandsDates of visit: 16-22 February 2017Purpose of visit: Familiarisation.(Registered 15 March 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights, accommodation, meals and transport with a value of \u00a33,124.55", 
+               "Purpose of visit": "Familiarisation.", 
+               "Destination of visit": "Falkland Islands", 
+               "Dates of visit": "16-22 February 2017", 
+               "(Registered 15 March 2017)": "(Registered 15 March 2017)", 
+               "Name of donor": "Falkland Islands Government", 
+               "Address of donor": "The Secretariat, Stanley, Falkland Islands FIQQ 1ZZ"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 4070, 
          "items": [
             {
                "raw_string": "Name of donor: Healthcare DenmarkAddress of donor: Forskerparken 10H, 5230 Odense, DenmarkEstimate of the probable value (or amount of any donation): Flights and accommodation with a value of \u00a3946.14, plus reimbursement of expenses \u00a323.49, total \u00a3969.63.Destination of visit: DenmarkDates of visit: 5-7 October 2016Purpose of visit: Healthcare Denmark ambassador summit.(Registered 14 October 2016; updated 07 December 2016)", 
-               "dates": "5-7 October 2016", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "14/10/2016", 
                "destination": "Denmark", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 946, 
+               "link": null, 
                "purpose": "Healthcare Denmark ambassador summit.", 
                "pretty": "Healthcare Denmark", 
                "address": "Forskerparken 10H, 5230 Odense, Denmark", 
                "item_id": "0001", 
                "donor": "Healthcare Denmark", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Healthcare Denmark", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Falkland Islands GovernmentAddress of donor: The Secretariat, Stanley, Falkland Islands FIQQ 1ZZEstimate of the probable value (or amount of any donation): Flights, accommodation, meals and transport with a value of \u00a33,124.55Destination of visit: Falkland IslandsDates of visit: 16-22 February 2017Purpose of visit: Familiarisation.(Registered 15 March 2017)", 
-               "dates": "16-22 February 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "15/03/2017", 
                "destination": "Falkland Islands", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3124, 
+               "link": null, 
                "purpose": "Familiarisation.", 
                "pretty": "Falkland Islands Government", 
                "address": "The Secretariat, Stanley, Falkland Islands FIQQ 1ZZ", 
                "item_id": "0002", 
                "donor": "Falkland Islands Government", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Falkland Islands Government", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 4070, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -310,9 +354,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -323,9 +368,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -337,8 +383,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "smyth", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -348,7 +395,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1964, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "karin smyth", 
          "category_donations": 0, 
@@ -356,8 +403,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "smyth", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -367,13 +415,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1964, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "karin smyth", 
          "category_donations": 0, 
          "first": "karin"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "From October 2016, Ambassador (unremunerated) for Healthcare Denmark, a body established by the Danish Government in partnership with public and private providers. (Registered 21 October 2016)", 
+               "From October 2016, Ambassador (unremunerated) for Healthcare Denmark, a body established by the Danish Government in partnership with public and private providers. (Registered 21 October 2016)": "From October 2016, Ambassador (unremunerated) for Healthcare Denmark, a body established by the Danish Government in partnership with public and private providers. (Registered 21 October 2016)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "From October 2016, Ambassador (unremunerated) for Healthcare Denmark, a body established by the Danish Government in partnership with public and private providers. (Registered 21 October 2016)", 
@@ -389,8 +445,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -403,9 +457,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -416,9 +471,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -513,15 +569,15 @@
                            "appointments": "/officers/bNzdCETr61cMBCjG2tXs678hTPg/appointments"
                         }
                      }, 
+                     "appointed_on": "2008-08-19", 
                      "address": {
                         "address_line_2": "Cotham", 
                         "address_line_1": "13 Sydenham Hill", 
                         "postal_code": "BS6 5SL", 
                         "locality": "Bristol"
                      }, 
-                     "appointed_on": "2008-08-19", 
-                     "nationality": "British", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Software Developer"
                   }, 
                   {
@@ -534,8 +590,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2008-08-19", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1964
+                        "year": 1964, 
+                        "month": 10
                      }, 
                      "address": {
                         "address_line_2": "Cotham", 
@@ -543,8 +599,8 @@
                         "postal_code": "BS6 5SL", 
                         "locality": "Bristol"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Software Developer"
                   }, 
                   {
@@ -588,17 +644,17 @@
                            "appointments": "/officers/UpQ96PRmqJukC7HPJrIokcQmdMQ/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_1": "13 Sydenham Hill", 
+                        "postal_code": "BS6 5SL", 
+                        "locality": "Bristol"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2008-08-19", 
                      "resigned_on": "2013-09-01", 
                      "date_of_birth": {
                         "year": 1964, 
                         "month": 9
-                     }, 
-                     "address": {
-                        "address_line_1": "13 Sydenham Hill", 
-                        "postal_code": "BS6 5SL", 
-                        "locality": "Bristol"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -608,7 +664,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/06676755", 
-               "pretty": "karin smyth karin marguerite smyth", 
+               "pretty": "Karin Smyth", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

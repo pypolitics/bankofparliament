@@ -322,9 +322,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -335,6 +336,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Iridium ConsultancyAddress of donor: Suite 10, 9211 Gunnery House, Royal Arsenal, Greenwich SE18 6SWAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: company, registration 05581274(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "Iridium Consultancy", 
+               "Donor status": "company, registration 05581274", 
+               "Address of donor": "Suite 10, 9211 Gunnery House, Royal Arsenal, Greenwich SE18 6SW"
+            }, 
+            {
+               "raw_string": "Name of donor: Communication Workers Union York and District BranchAddress of donor: 6 Concept Court, Kettlestring Lane, York YO30 4XFAmount of donation or nature and value if donation in kind: \u00a33,056.24Donor status: trade union(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,056.24", 
+               "Name of donor": "Communication Workers Union York and District Branch", 
+               "Donor status": "trade union", 
+               "Address of donor": "6 Concept Court, Kettlestring Lane, York YO30 4XF"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Iridium ConsultancyAddress of donor: Suite 10, 9211 Gunnery House, Royal Arsenal, Greenwich SE18 6SWAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: company, registration 05581274(Registered 06 July 2017)", 
@@ -342,15 +363,180 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Reg Walker", 
+                     "links": {
+                        "self": "/company/05581274/persons-with-significant-control/individual/bklbBn9W2SlE7NHjlleY1EVl8fA"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 10
+                     }, 
+                     "name_elements": {
+                        "forename": "Reg", 
+                        "surname": "Walker", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "b2c2b9725c88cb17edd88878ccd06bcc0c0142ad", 
+                     "address": {
+                        "premises": "Office 2, Tweed House", 
+                        "country": "England", 
+                        "locality": "Swanley", 
+                        "postal_code": "BR8 8DT", 
+                        "address_line_1": "Park Lane"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "06/07/2017", 
+               "officers": [
+                  {
+                     "name": "NICHOLLS, James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/IFXbv4uODIrvFbP4sZdJOcsxefU/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Office 2, Tweed House", 
+                        "country": "England", 
+                        "locality": "Swanley", 
+                        "postal_code": "BR8 8DT", 
+                        "address_line_1": "Park Lane"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-10-13", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1979
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Security Director"
+                  }, 
+                  {
+                     "name": "WRIGHT, Philip Rene William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/-Ok6_dT-HZjeuL3I-kouGmy2e0M/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2005-10-03", 
+                     "resigned_on": "2017-09-01", 
+                     "address": {
+                        "premises": "Office 2, Tweed House", 
+                        "country": "England", 
+                        "locality": "Swanley", 
+                        "postal_code": "BR8 8DT", 
+                        "address_line_1": "Park Lane"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "RAINES, John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SuasVVLzrF9So7SY6QZY9L6gNoQ/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2005-10-03", 
+                     "resigned_on": "2015-10-13", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 6
+                     }, 
+                     "address": {
+                        "region": "Essex", 
+                        "locality": "Ingatestone", 
+                        "postal_code": "CM4 0AL", 
+                        "address_line_1": "123 The Furlongs"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Regional Manager"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": "https://beta.companieshouse.gov.uk/company/05581274", 
                "pretty": "Iridium Consultancy", 
                "address": "Suite 10, 9211 Gunnery House, Royal Arsenal, Greenwich SE18 6SW", 
                "item_id": "0001", 
                "donor": "Iridium Consultancy", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "status": "active", 
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/05581274/filing-history", 
+                     "charges": "/company/05581274/charges", 
+                     "self": "/company/05581274", 
+                     "officers": "/company/05581274/officers", 
+                     "persons_with_significant_control": "/company/05581274/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "80100"
+                  ], 
+                  "etag": "e3512f6dcb5f6f7e7a54037534d259f519cea399", 
+                  "registered_office_address": {
+                     "country": "England", 
+                     "address_line_1": "Office 2, Tweed House", 
+                     "address_line_2": "Park Lane", 
+                     "postal_code": "BR8 8DT", 
+                     "locality": "Swanley"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-10-27", 
+                     "last_made_up_to": "2017-10-13", 
+                     "next_made_up_to": "2018-10-13", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2015-10-13", 
+                  "company_number": "05581274", 
+                  "date_of_creation": "2005-10-03", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-08-04", 
+                     "next_made_up_to": "2017-11-04", 
+                     "last_accounts": {
+                        "period_start_on": "2015-11-05", 
+                        "type": "micro-entity", 
+                        "made_up_to": "2016-11-04", 
+                        "period_end_on": "2016-11-04"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-08-04", 
+                        "period_start_on": "2016-11-05", 
+                        "period_end_on": "2017-11-04", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "04", 
+                        "month": "11"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "IRIDIUM 2005 LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Communication Workers Union York and District BranchAddress of donor: 6 Concept Court, Kettlestring Lane, York YO30 4XFAmount of donation or nature and value if donation in kind: \u00a33,056.24Donor status: trade union(Registered 06 July 2017)", 
@@ -358,19 +544,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3056, 
+               "link": null, 
                "pretty": "Communication Workers Union York and District Branch", 
                "address": "6 Concept Court, Kettlestring Lane, York YO30 4XF", 
                "item_id": "0002", 
                "donor": "Communication Workers Union York and District Branch", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Communication Workers Union York and District Branch", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -384,9 +577,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -397,9 +591,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -410,28 +605,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: All-Party Parliamentary China Group (with sponsorship from John Swire & Sons, HSBC, City of London, Cambridge Assessment, Arup, and EDF Energy)Address of donor: House of Commons, London SW1A 0AAEstimate of the probable value (or amount of any donation): Flights \u00a3908.56; accommodation \u00a3540.62; food and drink \u00a367.12; meeting and hospitality expenses (inc. interpretation, venue hire) \u00a3110.84; total \u00a31,627.14Destination of visit: China (Guangdong and Guangxi)Dates of visit: 6 \u2013 10 November 2017Purpose of visit: To strengthen relations between the UK Parliament and the National People\u2019s Congress of China; to promote British businesses operating in China; and to deepen the understanding of parliamentarians of China.(Registered 15 November 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights \u00a3908.56; accommodation \u00a3540.62; food and drink \u00a367.12; meeting and hospitality expenses (inc. interpretation, venue hire) \u00a3110.84; total \u00a31,627.14", 
+               "Purpose of visit": "To strengthen relations between the UK Parliament and the National People\u2019s Congress of China; to promote British businesses operating in China; and to deepen the understanding of parliamentarians of China.", 
+               "Destination of visit": "China (Guangdong and Guangxi)", 
+               "(Registered 15 November 2017)": "(Registered 15 November 2017)", 
+               "Dates of visit": "6 \u2013 10 November 2017", 
+               "Name of donor": "All-Party Parliamentary China Group (with sponsorship from John Swire & Sons, HSBC, City of London, Cambridge Assessment, Arup, and EDF Energy)", 
+               "Address of donor": "House of Commons, London SW1A 0AA"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 908, 
          "items": [
             {
                "raw_string": "Name of donor: All-Party Parliamentary China Group (with sponsorship from John Swire & Sons, HSBC, City of London, Cambridge Assessment, Arup, and EDF Energy)Address of donor: House of Commons, London SW1A 0AAEstimate of the probable value (or amount of any donation): Flights \u00a3908.56; accommodation \u00a3540.62; food and drink \u00a367.12; meeting and hospitality expenses (inc. interpretation, venue hire) \u00a3110.84; total \u00a31,627.14Destination of visit: China (Guangdong and Guangxi)Dates of visit: 6 \u2013 10 November 2017Purpose of visit: To strengthen relations between the UK Parliament and the National People\u2019s Congress of China; to promote British businesses operating in China; and to deepen the understanding of parliamentarians of China.(Registered 15 November 2017)", 
-               "dates": "6 \u2013 10 November 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "15/11/2017", 
                "destination": "China (Guangdong and Guangxi)", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 908, 
+               "link": null, 
                "purpose": "To strengthen relations between the UK Parliament and the National People\u2019s Congress of China; to promote British businesses operating in China; and to deepen the understanding of parliamentarians of China.", 
                "pretty": "All-Party Parliamentary China Group (with sponsorship from John Swire & Sons, HSBC, City of London, Cambridge Assessment, Arup, and EDF Energy)", 
                "address": "House of Commons, London SW1A 0AA", 
                "item_id": "0001", 
                "donor": "All-Party Parliamentary China Group (with sponsorship from John Swire & Sons, HSBC, City of London, Cambridge Assessment, Arup, and EDF Energy)", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "All-Party Parliamentary China Group (with sponsorship from John Swire & Sons, HSBC, City of London, Cambridge Assessment, Arup, and EDF Energy)", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 908, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -444,9 +660,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -457,9 +674,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -471,8 +689,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "hodgson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 4, 
@@ -482,7 +701,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1966, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mrs sharon hodgson", 
          "category_donations": 0, 
@@ -490,8 +709,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "hodgson", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 4, 
@@ -501,16 +721,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1966, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mrs sharon hodgson", 
          "category_donations": 0, 
          "first": "sharon"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -521,6 +742,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my husband, Alan Hodgson, as Office Manager.", 
+               "I employ my husband, Alan Hodgson, as Office Manager.": "I employ my husband, Alan Hodgson, as Office Manager."
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my husband, Alan Hodgson, as Office Manager.", 
@@ -536,8 +765,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -550,9 +777,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -644,8 +872,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-07-05", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 5
                      }, 
                      "address": {
                         "premises": "Northumbria University Ellison Building", 
@@ -665,12 +893,6 @@
                            "appointments": "/officers/inhaZp5CMRkL9gGwYjj8KV2RYUo/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-02-02", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1938
-                     }, 
                      "address": {
                         "locality": "Sheffield", 
                         "premises": "225 The Wheel", 
@@ -679,8 +901,14 @@
                         "address_line_2": "Ecclesfield", 
                         "address_line_1": "The Wheel"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-02-02", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1938
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -690,12 +918,6 @@
                            "appointments": "/officers/53NWV5A9qKG-r9tUwr2CdUoz5wk/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-10-01", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1960
-                     }, 
                      "address": {
                         "locality": "Bedford", 
                         "premises": "25", 
@@ -703,6 +925,12 @@
                         "postal_code": "MK43 8RE", 
                         "address_line_2": "Bromham", 
                         "address_line_1": "Brett Drive"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-10-01", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -733,8 +961,8 @@
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "Westminister"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -758,8 +986,8 @@
                         "postal_code": "HP1 1TP", 
                         "address_line_1": "Parkhill Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -769,12 +997,6 @@
                            "appointments": "/officers/cYoeXjTnyQtSsr2cQHE7IIypUaE/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-07-05", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1958
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "40", 
@@ -783,8 +1005,14 @@
                         "address_line_2": "Bernard Street", 
                         "address_line_1": "2nd Floor British Basketball"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-07-05", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1958
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -794,12 +1022,6 @@
                            "appointments": "/officers/e-oq-q-6IVnNl8jWwOUGwyuuKOs/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-07-05", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1966
-                     }, 
                      "address": {
                         "locality": "Worthing", 
                         "premises": "22", 
@@ -808,8 +1030,14 @@
                         "postal_code": "BN11 2AD", 
                         "address_line_1": "Chesswood Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-07-05", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1966
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Ceo"
                   }, 
                   {
@@ -843,12 +1071,6 @@
                            "appointments": "/officers/V_GvPTcJjzM-1D1MOTgJr2g_VFo/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-07-05", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 9
-                     }, 
                      "address": {
                         "locality": "Loughborough", 
                         "premises": "17", 
@@ -857,6 +1079,12 @@
                         "postal_code": "LE12 8BH", 
                         "address_line_2": "Quorn", 
                         "address_line_1": "Nursery Lane"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-07-05", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1964
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -880,8 +1108,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-06-02", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1951
+                        "year": 1951, 
+                        "month": 7
                      }, 
                      "officer_role": "director", 
                      "nationality": "Canadian", 
@@ -894,12 +1122,6 @@
                            "appointments": "/officers/SgZ5kTYbwh0Oy4y49Gdd6AZe8pM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-04-14", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "London Borough Of Lewisham", 
@@ -907,6 +1129,12 @@
                         "postal_code": "SE6 4RU", 
                         "address_line_2": "1 Catford Road", 
                         "address_line_1": "Laurence House"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-04-14", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1962
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -919,12 +1147,6 @@
                            "appointments": "/officers/kod7z08cBy5yvNW5hDamHI6NuZE/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-11-01", 
-                     "date_of_birth": {
-                        "year": 1971, 
-                        "month": 9
-                     }, 
                      "address": {
                         "locality": "Milton Keynes", 
                         "premises": "10", 
@@ -932,6 +1154,12 @@
                         "postal_code": "MK17 8DN", 
                         "address_line_2": "Aspley Guise", 
                         "address_line_1": "West Hill"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-11-01", 
+                     "date_of_birth": {
+                        "year": 1971, 
+                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "Italian", 
@@ -968,13 +1196,6 @@
                            "appointments": "/officers/ZzwdxBUOEQlG7yWnGtKn-J9grSw/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-08-23", 
-                     "resigned_on": "2015-01-28", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1973
-                     }, 
                      "address": {
                         "locality": "Sevenoaks", 
                         "premises": "Tophill Oak Lane", 
@@ -982,6 +1203,13 @@
                         "region": "Kent", 
                         "postal_code": "TN13 1TB", 
                         "address_line_1": "Oak Lane"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-08-23", 
+                     "resigned_on": "2015-01-28", 
+                     "date_of_birth": {
+                        "year": 1973, 
+                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "Dutch", 
@@ -1032,8 +1260,8 @@
                      "appointed_on": "2011-06-02", 
                      "resigned_on": "2013-08-23", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1967
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1046,19 +1274,19 @@
                            "appointments": "/officers/VdnRud82cFDEkgS5SPSxhawJRjg/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-07-05", 
-                     "resigned_on": "2016-07-11", 
-                     "date_of_birth": {
-                        "year": 1949, 
-                        "month": 6
-                     }, 
                      "address": {
                         "premises": "House Of Commons", 
                         "country": "United Kingdom", 
                         "address_line_1": "Westminister", 
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-07-05", 
+                     "resigned_on": "2016-07-11", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1949
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1075,8 +1303,8 @@
                      "appointed_on": "2011-09-01", 
                      "resigned_on": "2011-10-16", 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1969
                      }, 
                      "address": {
                         "locality": "Taunton", 
@@ -1101,8 +1329,8 @@
                      "appointed_on": "2011-07-05", 
                      "resigned_on": "2011-10-12", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1969
+                        "year": 1969, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1112,8 +1340,8 @@
                         "address_line_2": "Southampton Row", 
                         "address_line_1": "3rd Fl"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Ngb Relationship Manager"
                   }, 
                   {
@@ -1127,8 +1355,8 @@
                      "appointed_on": "2011-07-05", 
                      "resigned_on": "2015-06-01", 
                      "date_of_birth": {
-                        "year": 1972, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1972
                      }, 
                      "address": {
                         "premises": "House Of Commons", 
@@ -1137,8 +1365,8 @@
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1147,6 +1375,13 @@
                         "officer": {
                            "appointments": "/officers/crPP5eowPZexkIJyvlpcndrd1tE/appointments"
                         }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-08-31", 
+                     "resigned_on": "2015-06-25", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Wokingham", 
@@ -1157,13 +1392,6 @@
                         "address_line_2": "Barkham", 
                         "address_line_1": "Barkham Road"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-08-31", 
-                     "resigned_on": "2015-06-25", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1946
-                     }, 
                      "officer_role": "director", 
                      "nationality": "British", 
                      "occupation": "Consultant"
@@ -1172,7 +1400,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07656095", 
-               "pretty": "sharon hodgson mrs sharon hodgson", 
+               "pretty": "Mrs Sharon Hodgson", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

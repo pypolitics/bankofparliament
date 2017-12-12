@@ -241,9 +241,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -254,6 +255,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: United and Cecil ClubAddress of donor: New Penderel House, 283-287 High Holborn, London WC1A 7HFAmount of donation or nature and value if donation in kind: \u00a32,500Donor status: members' association(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,500", 
+               "Name of donor": "United and Cecil Club", 
+               "Donor status": "members' association", 
+               "Address of donor": "New Penderel House, 283-287 High Holborn, London WC1A 7HF"
+            }, 
+            {
+               "raw_string": "Name of donor: Kingsley Healthcare LtdAddress of donor: Kingsley House, Clapham Road, South Lowestoft NR32 1QSAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: company, registration 06499955(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "Kingsley Healthcare Ltd", 
+               "Donor status": "company, registration 06499955", 
+               "Address of donor": "Kingsley House, Clapham Road, South Lowestoft NR32 1QS"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: United and Cecil ClubAddress of donor: New Penderel House, 283-287 High Holborn, London WC1A 7HFAmount of donation or nature and value if donation in kind: \u00a32,500Donor status: members' association(Registered 06 July 2017)", 
@@ -261,15 +282,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2500, 
+               "link": null, 
                "pretty": "United and Cecil Club", 
                "address": "New Penderel House, 283-287 High Holborn, London WC1A 7HF", 
                "item_id": "0001", 
                "donor": "United and Cecil Club", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "United and Cecil Club", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Kingsley Healthcare LtdAddress of donor: Kingsley House, Clapham Road, South Lowestoft NR32 1QSAmount of donation or nature and value if donation in kind: \u00a32,000Donor status: company, registration 06499955(Registered 06 July 2017)", 
@@ -277,19 +307,626 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mrs Sumithra Chandrakanthi Thayanandarajah", 
+                     "links": {
+                        "self": "/company/06499955/persons-with-significant-control/individual/W7rSleYax9iQEVzGBh4I21V3fJk"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "England", 
+                     "natures_of_control": [
+                        "significant-influence-or-control"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Chandrakanthi", 
+                        "forename": "Sumithra", 
+                        "surname": "Thayanandarajah", 
+                        "title": "Mrs"
+                     }, 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1959
+                     }, 
+                     "etag": "c651c8e4957388a4a701e59f6a809c2a91a8e4a5", 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "nationality": "Sri Lankan"
+                  }, 
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Velummayilum Thayanandarajah", 
+                     "links": {
+                        "self": "/company/06499955/persons-with-significant-control/individual/XmS8JqLFkSF36RTa_hxbHUkylDM"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "natures_of_control": [
+                        "significant-influence-or-control"
+                     ], 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 2
+                     }, 
+                     "name_elements": {
+                        "forename": "Velummayilum", 
+                        "surname": "Thayanandarajah", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "3822b88691b459d91472b1aea9965f911feea67a", 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
                "registered": "06/07/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2014-09-27", 
+                     "officer_role": "secretary", 
+                     "name": "THAYANANDARAJAH, Velummayilum", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/G9kdLq94cq7IEF9H-XXIc5HZLvA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }
+                  }, 
+                  {
+                     "name": "DARSHANA, Wasantha", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/VTyAY7_LRnJC31sMVrZncDy00wo/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-12-12", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1978
+                     }, 
+                     "nationality": "Sri Lankan", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "EDWARDS, Deborah Ann", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sjAfyLvRC5II3b-zU1gYe3FYAgo/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-12-12", 
+                     "date_of_birth": {
+                        "year": 1974, 
+                        "month": 9
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "FERGUSON, Sarah Louise", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/v75QNrpea37Q3q0VJD_uaNerqb8/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-12-12", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 4
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "JARVIS, Ian Stuart", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zZupCEcfFSFOPcX7JxgSwWhAFn4/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-12-12", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 9
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "THAYAN, Cameron Dyer", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/GM-AR_NYpZFkhIwlOJQAcxCjE4k/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-12-12", 
+                     "date_of_birth": {
+                        "year": 1995, 
+                        "month": 3
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "THAYAN, Ewan Dyer", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RtosuDZ7GJ5_JuatODvB1xns6Ss/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-07-07", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1997
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Trainee Accountant"
+                  }, 
+                  {
+                     "name": "THAYANANDARAJAH, Sumithra Chandrakanthi", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/4tG6DIKBwc_sx04hNRgn9teentw/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-05-13", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1959
+                     }, 
+                     "address": {
+                        "region": "Buckinghamshire", 
+                        "locality": "Gerrards Cross", 
+                        "postal_code": "SL9 7HN", 
+                        "address_line_1": "14 Howards Wood Drive"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Sri Lankan", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "THAYANANDARAJAH, Velummayilum", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/81359xdZluV9yjntlvEaiWSgb8w/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-02-11", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 2
+                     }, 
+                     "address": {
+                        "region": "Buckinghamshire", 
+                        "address_line_1": "14 Howards Wood Drive", 
+                        "postal_code": "SL9 7HN", 
+                        "locality": "Gerrards Cross"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Executive"
+                  }, 
+                  {
+                     "name": "CHONG, Jason", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/_58YrtWKAhZAf8xa64yOAfv-pEM/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2008-02-11", 
+                     "resigned_on": "2011-07-21", 
+                     "address": {
+                        "region": "Suffolk", 
+                        "locality": "Lowestoft", 
+                        "postal_code": "NR32 4QT", 
+                        "address_line_1": "169 Oulton Road"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "JARVIS, Ian", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/kNvoqmBDV5fGzLqMaQ_1sXq4D6g/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2011-07-21", 
+                     "resigned_on": "2014-09-27", 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Silk Cutter House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR33 9NA", 
+                        "address_line_1": "School Road"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "CHERRY, Nicholas Jon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zConkwIpoM8OG7825rADcj2YHbg/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Kingsley House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR32 1QS", 
+                        "address_line_1": "Clapham Road South"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-12-12", 
+                     "resigned_on": "2017-11-02", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1947
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "CHERRY, Nicholas Jon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zConkwIpoM8OG7825rADcj2YHbg/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-05-14", 
+                     "resigned_on": "2014-09-27", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1947
+                     }, 
+                     "address": {
+                        "postal_code": "NR32 4QF", 
+                        "region": "Suffolk", 
+                        "address_line_1": "St Martins", 
+                        "address_line_2": "Station Road", 
+                        "locality": "Lowestoft"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Solicitor"
+                  }, 
+                  {
+                     "name": "CHONG, Jason", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/_58YrtWKAhZAf8xa64yOAfv-pEM/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-03-18", 
+                     "resigned_on": "2011-07-21", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1980
+                     }, 
+                     "address": {
+                        "region": "Suffolk", 
+                        "address_line_1": "169 Oulton Road", 
+                        "postal_code": "NR32 4QT", 
+                        "locality": "Lowestoft"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "JARVIS, Ian Stuart", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zZupCEcfFSFOPcX7JxgSwWhAFn4/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Silk Cutter House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR33 9NA", 
+                        "address_line_1": "School Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-11-05", 
+                     "resigned_on": "2014-09-27", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 9
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "MASTERS, Mandy Jayne", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/J9bHC0OXfF-Zp7JqWts0e0rEmQc/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-03-18", 
+                     "resigned_on": "2014-05-13", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1968
+                     }, 
+                     "address": {
+                        "locality": "Great Yarmouth", 
+                        "premises": "Rhencullen", 
+                        "region": "Norfolk", 
+                        "postal_code": "NR31 9HQ", 
+                        "address_line_2": "St. Olaves", 
+                        "address_line_1": "Priory Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "THAYAN, Cameron Dyer", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/GM-AR_NYpZFkhIwlOJQAcxCjE4k/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Silk Cutter House", 
+                        "region": "Suffolk", 
+                        "address_line_1": "School Road", 
+                        "postal_code": "NR33 9NA", 
+                        "locality": "Lowestoft"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-07-14", 
+                     "resigned_on": "2014-09-27", 
+                     "date_of_birth": {
+                        "year": 1995, 
+                        "month": 3
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Trainee Accountant"
+                  }, 
+                  {
+                     "name": "WEBB, Jeremy Graham", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/N00EnJdP1YEQOpdyqIPAWSRxZhg/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-12-12", 
+                     "resigned_on": "2015-11-13", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Silk Cutters House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR33 9NA", 
+                        "address_line_1": "School Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "WEBB, Jeremy Graham", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/vUJtSUUCvSImrhivM8UPHxXJ9AA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Kensington House", 
+                        "address_line_1": "3 Kirkley Park Road", 
+                        "postal_code": "NR33 0LQ", 
+                        "locality": "Lowestoft"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-03-11", 
+                     "resigned_on": "2011-03-11", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1980
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Business Executive"
+                  }, 
+                  {
+                     "name": "WEBB, Jeremy Graham", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/N00EnJdP1YEQOpdyqIPAWSRxZhg/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Lowestoft", 
+                        "premises": "Silk Cutter House", 
+                        "country": "England", 
+                        "region": "Suffolk", 
+                        "postal_code": "NR33 9NA", 
+                        "address_line_1": "School Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-03-11", 
+                     "resigned_on": "2014-09-27", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 10
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Business Executive"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": "https://beta.companieshouse.gov.uk/company/06499955", 
                "pretty": "Kingsley Healthcare Ltd", 
                "address": "Kingsley House, Clapham Road, South Lowestoft NR32 1QS", 
                "item_id": "0002", 
                "donor": "Kingsley Healthcare Ltd", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/06499955/filing-history", 
+                     "charges": "/company/06499955/charges", 
+                     "self": "/company/06499955", 
+                     "officers": "/company/06499955/officers", 
+                     "persons_with_significant_control": "/company/06499955/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "87300"
+                  ], 
+                  "etag": "8e707dc2e407602e3220b6b3bb0546846570ddac", 
+                  "registered_office_address": {
+                     "locality": "Lowestoft", 
+                     "country": "England", 
+                     "region": "Suffolk", 
+                     "postal_code": "NR32 1QS", 
+                     "address_line_2": "Clapham Road South", 
+                     "address_line_1": "Kingsley House"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2017-12-20", 
+                     "last_made_up_to": "2016-12-06", 
+                     "next_made_up_to": "2017-12-06", 
+                     "overdue": false
+                  }, 
+                  "company_number": "06499955", 
+                  "last_full_members_list_date": "2015-12-06", 
+                  "date_of_creation": "2008-02-11", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-06-30", 
+                     "next_made_up_to": "2017-09-30", 
+                     "last_accounts": {
+                        "period_start_on": "2015-10-01", 
+                        "type": "small", 
+                        "made_up_to": "2016-09-30", 
+                        "period_end_on": "2016-09-30"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-06-30", 
+                        "period_start_on": "2016-10-01", 
+                        "period_end_on": "2017-09-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "09"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "KINGSLEY HEALTHCARE LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -303,9 +940,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -316,9 +954,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -329,9 +968,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -342,9 +982,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -355,6 +996,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Partner in a family farm in Halesworth, Suffolk: (i) and (ii).", 
+               "Partner in a family farm in Halesworth, Suffolk": "(i) and (ii)."
+            }, 
+            {
+               "raw_string": "Interest in a farm near Ipswich, Suffolk: (i) and (ii). (Updated 12 July 2017)", 
+               "Interest in a farm near Ipswich, Suffolk": "(i) and (ii). (Updated 12 July 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Partner in a family farm in Halesworth, Suffolk: (i) and (ii).", 
@@ -409,8 +1062,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 20000, 
          "raw_items": [
@@ -425,8 +1076,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "aldous", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -436,7 +1088,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1961, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "peter aldous", 
          "category_donations": 0, 
@@ -444,8 +1096,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "aldous", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 8, 
@@ -455,16 +1108,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1961, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "peter aldous", 
          "category_donations": 0, 
          "first": "peter"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -475,9 +1129,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -488,9 +1143,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -554,12 +1210,6 @@
                            "appointments": "/officers/0NfGU1O9kD9DQwbA_HmC3gbC8b0/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-06-04", 
-                     "date_of_birth": {
-                        "year": 1961, 
-                        "month": 8
-                     }, 
                      "address": {
                         "locality": "Halesworth", 
                         "premises": "Bonners Farm", 
@@ -568,8 +1218,14 @@
                         "address_line_2": "Wissett", 
                         "address_line_1": "Mill Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-06-04", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1961
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -579,20 +1235,20 @@
                            "appointments": "/officers/SsQOrnQ75CpA-AQ2Id1PJnrQmvY/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "57 Lorne Park Road", 
-                        "country": "United Kingdom", 
-                        "postal_code": "NR33 0RB", 
-                        "locality": "Lowestoft"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2015-06-04", 
                      "date_of_birth": {
                         "year": 1951, 
                         "month": 6
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "57 Lorne Park Road", 
+                        "country": "United Kingdom", 
+                        "postal_code": "NR33 0RB", 
+                        "locality": "Lowestoft"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -626,17 +1282,17 @@
                            "appointments": "/officers/HDYUo9dANS2_dkmJ05XbPoWa9sE/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-06-04", 
-                     "date_of_birth": {
-                        "year": 1982, 
-                        "month": 9
-                     }, 
                      "address": {
                         "premises": "3 Velda Close", 
                         "country": "United Kingdom", 
                         "postal_code": "NR33 9JH", 
                         "locality": "Lowestoft"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-06-04", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1982
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -646,7 +1302,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/09624351", 
-               "pretty": "peter aldous peter james guy aldous", 
+               "pretty": "Peter Aldous", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

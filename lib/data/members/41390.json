@@ -60,7 +60,22 @@
          "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
          "@xsi:nil": "true"
       }, 
-      "Committees": null, 
+      "Committees": {
+         "Committee": {
+            "StartDate": "2017-12-04T00:00:00", 
+            "EndDate": {
+               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+               "@xsi:nil": "true"
+            }, 
+            "Name": "Environment, Food and Rural Affairs Committee", 
+            "IsCoOpted": "False", 
+            "EndNote": null, 
+            "ChairDates": null, 
+            "IsAlternate": "False", 
+            "IsExOfficio": "False", 
+            "@Id": "52"
+         }
+      }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
          "DateOfRetirement": {
@@ -147,6 +162,8 @@
       "Hand,", 
       "Apprentices:", 
       "Taxation,", 
+      "Railways:", 
+      "Leigh,", 
       "High", 
       "Speed", 
       "2", 
@@ -156,9 +173,7 @@
       "Railways:", 
       "North", 
       "of", 
-      "England,", 
-      "Railways:", 
-      "Leigh", 
+      "England", 
       "Department", 
       "for", 
       "Transport,", 
@@ -170,21 +185,27 @@
       "Education,", 
       "Department", 
       "for", 
-      "Exiting", 
-      "the", 
-      "European", 
-      "Union,", 
-      "Department", 
-      "for", 
       "Business,", 
       "Energy", 
       "and", 
       "Industrial", 
-      "Strategy"
+      "Strategy,", 
+      "Department", 
+      "for", 
+      "Exiting", 
+      "the", 
+      "European", 
+      "Union", 
+      "Environment,", 
+      "Food", 
+      "and", 
+      "Rural", 
+      "Affairs", 
+      "Committee"
    ], 
    "mp_income": 78173, 
    "mp_donations": 5000, 
-   "wrans_departments": "Department for Transport, Department of Health, Department for Education, Department for Exiting the European Union, Department for Business, Energy and Industrial Strategy", 
+   "wrans_departments": "Department for Transport, Department of Health, Department for Education, Department for Business, Energy and Industrial Strategy, Department for Exiting the European Union", 
    "person_id": "25611", 
    "party": "Labour/Co-operative", 
    "forname": "Jo", 
@@ -194,6 +215,30 @@
    "eu_ref_stance": "", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "Until 4 September 2017, Councillor, Wigan Council, 1 Library Street, Wigan WN1 1NZ. (Updated 05 September 2017)", 
+               "Until 4 September 2017, Councillor, Wigan Council, 1 Library Street, Wigan WN1 1NZ. (Updated 05 September 2017)": "Until 4 September 2017, Councillor, Wigan Council, 1 Library Street, Wigan WN1 1NZ. (Updated 05 September 2017)"
+            }, 
+            {
+               "raw_string": "20 June 2017, received \u00a31,025.08. Hours: approx. 45 hrs since my election. (Registered 06 July 2017)", 
+               "20 June 2017, received \u00a31,025.08. Hours": "approx. 45 hrs since my election. (Registered 06 July 2017)"
+            }, 
+            {
+               "raw_string": "20 July 2017, received \u00a31,025.08. Hours: 45 hrs. (Registered 01 August 2017)", 
+               "20 July 2017, received \u00a31,025.08. Hours": "45 hrs. (Registered 01 August 2017)"
+            }, 
+            {
+               "raw_string": "20 August 2017, received \u00a31,025.08. Hours: 45 hrs. (Registered 05 September 2017)", 
+               "20 August 2017, received \u00a31,025.08. Hours": "45 hrs. (Registered 05 September 2017)"
+            }, 
+            {
+               "raw_string": "20 September 2017, received \u00a3136.68. Hours: 10 hrs. (Registered 06 October 2017)", 
+               "20 September 2017, received \u00a3136.68. Hours": "10 hrs. (Registered 06 October 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "20 June 2017, received \u00a31,025.08. Hours: approx. 45 hrs since my election. (Registered 06 July 2017)", 
@@ -248,8 +293,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 3211, 
          "raw_items": [
@@ -266,6 +309,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobalds Road, London WC1X 8TN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: trade union(Registered 06 July 2017)", 
@@ -273,19 +328,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Unite the Union", 
                "address": "128 Theobalds Road, London WC1X 8TN", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -298,9 +360,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -311,9 +374,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -324,9 +388,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -337,9 +402,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -350,9 +416,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -364,8 +431,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "platt", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -375,7 +443,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1973, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "jo platt", 
          "category_donations": 0, 
@@ -383,8 +451,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "platt", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -394,16 +463,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1973, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "jo platt", 
          "category_donations": 0, 
          "first": "joanne"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -414,9 +484,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -427,9 +498,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -463,7 +535,14 @@
          "category_gifts": 0, 
          "category_type": "salary", 
          "category_wealth": 0, 
-         "offices": null, 
+         "offices": [
+            {
+               "dept": "Environment, Food and Rural Affairs Committee", 
+               "from_date": "2017-12-04", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
+            }
+         ], 
          "chair_salary": 15025, 
          "panel_of_chairs_salary": 15025, 
          "entries": [], 
@@ -497,8 +576,8 @@
                         "voting-rights-50-to-75-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1963
                      }, 
                      "name_elements": {
                         "title": "Mrs", 
@@ -578,6 +657,12 @@
                            "appointments": "/officers/kr9ymOWTJbv3k47ea_LiOnJnlFU/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-05-19", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 2
+                     }, 
                      "address": {
                         "locality": "Bury", 
                         "premises": "Higher Sedger Hey Farm", 
@@ -586,14 +671,8 @@
                         "address_line_2": "Nangreaves", 
                         "address_line_1": "Bury Old Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-05-19", 
-                     "date_of_birth": {
-                        "year": 1963, 
-                        "month": 2
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Interim Manager"
                   }, 
                   {
@@ -616,8 +695,8 @@
                         "postal_code": "BL9 6SY", 
                         "address_line_1": "Higher Sedger Hey Farm"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Senior Consultant"
                   }, 
                   {
@@ -642,7 +721,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/06909922", 
-               "pretty": "joanne platt jo platt joanne marie platt", 
+               "pretty": "Jo Platt", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -733,8 +812,11 @@
    "dob": "June 1973", 
    "gender": "F", 
    "country_of_birth": "England", 
-   "wrans_subjects": "GP at Hand, Apprentices: Taxation, High Speed 2 Railway Line: Leigh, Railways: North of England, Railways: Leigh", 
+   "wrans_subjects": "GP at Hand, Apprentices: Taxation, Railways: Leigh, High Speed 2 Railway Line: Leigh, Railways: North of England", 
    "member_id": "41390", 
    "constituency": "Leigh", 
-   "mp_gifts": 0
+   "mp_gifts": 0, 
+   "commitees": [
+      "Environment, Food and Rural Affairs Committee"
+   ]
 }

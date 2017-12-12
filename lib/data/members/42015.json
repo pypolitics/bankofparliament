@@ -224,9 +224,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -237,6 +238,42 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, London WC1X 8TUAmount of donation, or nature and value if donation in kind: \u00a310,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a310,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128 Theobalds Road, London WC1X 8TU"
+            }, 
+            {
+               "raw_string": "Name of donor: GMB Yorkshire and North Derbyshire RegionAddress of donor: Grove Hall, 60 College Grove Road, Wakefield WF1 3RNAmount of donation, or nature and value if donation in kind: \u00a33,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a33,000", 
+               "Name of donor": "GMB Yorkshire and North Derbyshire Region", 
+               "Donor status": "trade union", 
+               "Address of donor": "Grove Hall, 60 College Grove Road, Wakefield WF1 3RN"
+            }, 
+            {
+               "raw_string": "Name of donor: Fire Brigades UnionAddress of donor: Bradley House, 68 Coombe Rd, Kingston-upon-Thames, Surrey KT2 7AEAmount of donation, or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a32,000", 
+               "Name of donor": "Fire Brigades Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "Bradley House, 68 Coombe Rd, Kingston-upon-Thames, Surrey KT2 7AE"
+            }, 
+            {
+               "raw_string": "Name of donor: Richard HewisonAddress of donor: privateAmount of donation, or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Richard Hewison", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobalds Road, London WC1X 8TUAmount of donation, or nature and value if donation in kind: \u00a310,000Donor status: trade union(Registered 07 July 2017)", 
@@ -244,15 +281,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 10000, 
+               "link": null, 
                "pretty": "Unite the Union", 
-               "address": null, 
+               "address": "128 Theobalds Road, London WC1X 8TU", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: GMB Yorkshire and North Derbyshire RegionAddress of donor: Grove Hall, 60 College Grove Road, Wakefield WF1 3RNAmount of donation, or nature and value if donation in kind: \u00a33,000Donor status: trade union(Registered 07 July 2017)", 
@@ -260,15 +306,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3000, 
+               "link": null, 
                "pretty": "GMB Yorkshire and North Derbyshire Region", 
-               "address": null, 
+               "address": "Grove Hall, 60 College Grove Road, Wakefield WF1 3RN", 
                "item_id": "0002", 
                "donor": "GMB Yorkshire and North Derbyshire Region", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "GMB Yorkshire and North Derbyshire Region", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Fire Brigades UnionAddress of donor: Bradley House, 68 Coombe Rd, Kingston-upon-Thames, Surrey KT2 7AEAmount of donation, or nature and value if donation in kind: \u00a32,000Donor status: trade union(Registered 07 July 2017)", 
@@ -276,15 +331,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2000, 
+               "link": null, 
                "pretty": "Fire Brigades Union", 
-               "address": null, 
+               "address": "Bradley House, 68 Coombe Rd, Kingston-upon-Thames, Surrey KT2 7AE", 
                "item_id": "0003", 
                "donor": "Fire Brigades Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Fire Brigades Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Richard HewisonAddress of donor: privateAmount of donation, or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 07 July 2017)", 
@@ -292,19 +356,1906 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": "https://beta.companieshouse.gov.uk/officers/C2vQ48q2b0lHcrlVoOKIN4XQPHQ/appointments", 
                "pretty": "Richard Hewison", 
-               "address": null, 
+               "address": "private", 
                "item_id": "0004", 
                "donor": "Richard Hewison", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Richard Hewison", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": [
+                  {
+                     "name": "Richard HEWISON", 
+                     "links": {
+                        "company": "/company/07541245"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "HINCHLIFFE, Graeme", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/tmtBlzEr02rAguOAbK31armTZDY/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-09-07", 
+                           "date_of_birth": {
+                              "month": 4, 
+                              "year": 1963
+                           }, 
+                           "address": {
+                              "locality": "Saltburn-By-The-Sea", 
+                              "premises": "The Byre Middle Farm", 
+                              "country": "United Kingdom", 
+                              "region": "Cleveland", 
+                              "care_of": "GRAEME HINCHLIFFE", 
+                              "postal_code": "TS13 5LP", 
+                              "address_line_2": "Ellerby", 
+                              "address_line_1": "Ryeland Lane"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "ALLGOOD, Steven", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/zObx330pw8aRlvpQhw2BJ9TCQE0/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Saltburn-By-The-Sea", 
+                              "premises": "The Byre Middle Farm", 
+                              "country": "United Kingdom", 
+                              "region": "Cleveland", 
+                              "care_of": "GRAEME HINCHLIFFE", 
+                              "postal_code": "TS13 5LP", 
+                              "address_line_2": "Ellerby", 
+                              "address_line_1": "Ryeland Lane"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-09-07", 
+                           "resigned_on": "2012-03-19", 
+                           "date_of_birth": {
+                              "month": 11, 
+                              "year": 1959
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "HEWISON, Richard", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/UegzybNDOwPV7-HJEOtsIlUhDK8/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Saltburn-By-The-Sea", 
+                              "premises": "The Byre Middle Farm", 
+                              "country": "United Kingdom", 
+                              "region": "Cleveland", 
+                              "care_of": "GRAEME HINCHLIFFE", 
+                              "postal_code": "TS13 5LP", 
+                              "address_line_2": "Ellerby", 
+                              "address_line_1": "Ryeland Lane"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-09-07", 
+                           "resigned_on": "2012-03-19", 
+                           "date_of_birth": {
+                              "month": 2, 
+                              "year": 1960
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "JACOBS, Yomtov Eliezer", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/-JtYW-kLHqWM7w2HSipmnls7qyU/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-02-24", 
+                           "resigned_on": "2011-02-24", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1970
+                           }, 
+                           "address": {
+                              "locality": "Manchester", 
+                              "premises": "1st", 
+                              "country": "England", 
+                              "postal_code": "M25 9JY", 
+                              "address_line_2": "47 Bury New Road Prestwich", 
+                              "address_line_1": "Floor"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Company Formation Agent"
+                        }, 
+                        {
+                           "name": "NEWSOME, Paul", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/i9BE4btmmPIjrVKRIWyZEr6qdIY/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-09-07", 
+                           "resigned_on": "2012-03-19", 
+                           "date_of_birth": {
+                              "year": 1961, 
+                              "month": 9
+                           }, 
+                           "address": {
+                              "locality": "Saltburn-By-The-Sea", 
+                              "premises": "The Byre Middle Farm", 
+                              "country": "United Kingdom", 
+                              "region": "Cleveland", 
+                              "care_of": "GRAEME HINCHLIFFE", 
+                              "postal_code": "TS13 5LP", 
+                              "address_line_2": "Ellerby", 
+                              "address_line_1": "Ryeland Lane"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Director"
+                        }
+                     ], 
+                     "company": {
+                        "status": "active", 
+                        "has_insolvency_history": false, 
+                        "links": {
+                           "filing_history": "/company/07541245/filing-history", 
+                           "self": "/company/07541245", 
+                           "officers": "/company/07541245/officers", 
+                           "persons_with_significant_control": "/company/07541245/persons-with-significant-control"
+                        }, 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "68320"
+                        ], 
+                        "etag": "72522bde644dfb2a5acbd0690e5c4633342f990f", 
+                        "registered_office_address": {
+                           "locality": "Saltburn-By-The-Sea", 
+                           "region": "Cleveland", 
+                           "care_of": "GRAEME HINCHLIFFE", 
+                           "postal_code": "TS13 5LP", 
+                           "address_line_2": "Ellerby", 
+                           "address_line_1": "The Byre Middle Farm Ryeland Lane"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-03-10", 
+                           "last_made_up_to": "2017-02-24", 
+                           "next_made_up_to": "2018-02-24", 
+                           "overdue": false
+                        }, 
+                        "company_number": "07541245", 
+                        "date_of_creation": "2011-02-24", 
+                        "has_been_liquidated": false, 
+                        "accounts": {
+                           "next_due": "2018-11-30", 
+                           "next_made_up_to": "2018-02-28", 
+                           "last_accounts": {
+                              "period_start_on": "2016-02-29", 
+                              "type": "dormant", 
+                              "made_up_to": "2017-02-28", 
+                              "period_end_on": "2017-02-28"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-11-30", 
+                              "period_start_on": "2017-03-01", 
+                              "period_end_on": "2018-02-28", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "29", 
+                              "month": "02"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "MIDDLE FARM MANAGEMENT (ELLERBY) LIMITED", 
+                        "company_status": "active", 
+                        "has_charges": false, 
+                        "type": "private-limited-guarant-nsc", 
+                        "registered_office_is_in_dispute": false
+                     }, 
+                     "name_elements": {
+                        "surname": "HEWISON", 
+                        "forename": "Richard"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-09-07", 
+                     "resigned_on": "2012-03-19", 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_number": "07541245", 
+                        "company_name": "MIDDLE FARM MANAGEMENT (ELLERBY) LIMITED"
+                     }, 
+                     "address": {
+                        "locality": "Saltburn-By-The-Sea", 
+                        "premises": "The Byre Middle Farm", 
+                        "country": "United Kingdom", 
+                        "region": "Cleveland", 
+                        "care_of": "GRAEME HINCHLIFFE", 
+                        "postal_code": "TS13 5LP", 
+                        "address_line_2": "Ellerby", 
+                        "address_line_1": "Ryeland Lane"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mr Graeme Hinchliffe", 
+                           "links": {
+                              "self": "/company/07541245/persons-with-significant-control/individual/ZQJch7QNBufGpe6eqYeuNuoj0_A"
+                           }, 
+                           "notified_on": "2017-02-23", 
+                           "country_of_residence": "United Kingdom", 
+                           "natures_of_control": [
+                              "ownership-of-shares-75-to-100-percent"
+                           ], 
+                           "date_of_birth": {
+                              "month": 4, 
+                              "year": 1963
+                           }, 
+                           "name_elements": {
+                              "forename": "Graeme", 
+                              "surname": "Hinchliffe", 
+                              "title": "Mr"
+                           }, 
+                           "etag": "334b8c66e77d3283d130ace4db7a77726c7d9879", 
+                           "address": {
+                              "locality": "Saltburn-By-The-Sea", 
+                              "premises": "The Byre Middle Farm", 
+                              "region": "Cleveland", 
+                              "care_of": "GRAEME HINCHLIFFE", 
+                              "postal_code": "TS13 5LP", 
+                              "address_line_2": "Ellerby", 
+                              "address_line_1": "Ryeland Lane"
+                           }, 
+                           "nationality": "British"
+                        }
+                     ], 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "Richard HEWISON", 
+                     "links": {
+                        "company": "/company/02419109"
+                     }, 
+                     "company": {
+                        "company_status": "active", 
+                        "links": {
+                           "filing_history": "/company/02419109/filing-history", 
+                           "self": "/company/02419109", 
+                           "officers": "/company/02419109/officers", 
+                           "persons_with_significant_control": "/company/02419109/persons-with-significant-control"
+                        }, 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "99999"
+                        ], 
+                        "etag": "59c4c42484ac1a86f00f83f5acb18ca62b5d0f81", 
+                        "registered_office_address": {
+                           "address_line_2": "Northampton", 
+                           "locality": "Northamptonshire", 
+                           "postal_code": "NN4 7BF", 
+                           "address_line_1": "Artisans' House, 7 Queensbridge"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-09-15", 
+                           "last_made_up_to": "2017-09-01", 
+                           "next_made_up_to": "2018-09-01", 
+                           "overdue": false
+                        }, 
+                        "company_number": "02419109", 
+                        "last_full_members_list_date": "2015-09-01", 
+                        "date_of_creation": "1989-09-01", 
+                        "has_insolvency_history": false, 
+                        "has_been_liquidated": false, 
+                        "accounts": {
+                           "next_due": "2018-06-30", 
+                           "next_made_up_to": "2017-09-30", 
+                           "last_accounts": {
+                              "period_start_on": "2015-10-01", 
+                              "type": "dormant", 
+                              "made_up_to": "2016-09-30", 
+                              "period_end_on": "2016-09-30"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-06-30", 
+                              "period_start_on": "2016-10-01", 
+                              "period_end_on": "2017-09-30", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "30", 
+                              "month": "09"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "PRIMROSE HILL FLATS MANAGEMENT LIMITED", 
+                        "registered_office_is_in_dispute": false, 
+                        "has_charges": false, 
+                        "type": "ltd"
+                     }, 
+                     "resigned_on": "2010-10-08", 
+                     "officers": [
+                        {
+                           "appointed_on": "2009-02-17", 
+                           "officer_role": "corporate-secretary", 
+                           "name": "ORCHARD BLOCK MANAGEMENT SERVICES LTD", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/z7CfX-Qhbzf47JJCeNtGaRi19yw/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "premises": "Artisans' House", 
+                              "country": "United Kingdom", 
+                              "region": "Northamptonshire", 
+                              "postal_code": "NN4 7BF", 
+                              "address_line_1": "7 Queensbridge"
+                           }
+                        }, 
+                        {
+                           "name": "LEE, Chui Fan", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mJE6peRPhzDrbYtOhK5NPTESQj0/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Northampton", 
+                              "locality": "Northamptonshire", 
+                              "postal_code": "NN4 7BF", 
+                              "address_line_1": "Artisans' House, 7 Queensbridge"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1998-01-19", 
+                           "date_of_birth": {
+                              "year": 1968, 
+                              "month": 5
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Restauranteur"
+                        }, 
+                        {
+                           "name": "LEE, Ming Fai", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qnpTrcPMkgAbWqawhpfSm9fhrO0/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Northampton", 
+                              "address_line_1": "Artisans' House, 7 Queensbridge", 
+                              "postal_code": "NN4 7BF", 
+                              "locality": "Northamptonshire"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1998-01-19", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1968
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Restauranteur"
+                        }, 
+                        {
+                           "name": "SOCHA, John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/FdEMjCi34W2cV-V6F4m25GSO73U/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-10-08", 
+                           "date_of_birth": {
+                              "month": 1, 
+                              "year": 1958
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "premises": "Artisans' House", 
+                              "country": "United Kingdom", 
+                              "region": "Northamptonshire", 
+                              "postal_code": "NN4 7BF", 
+                              "address_line_1": "7 Queensbridge"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "BRADY, Shaun Anthony", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/T_zC6VTTkzOYsCM0U3_K8AoyhyM/appointments"
+                              }
+                           }, 
+                           "appointed_on": "2005-04-19", 
+                           "resigned_on": "2009-08-01", 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "33 Arnold Road"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "CAMPANARO, Domenico", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/I9FIkcqLQapRMPJ_Rbc66CDbUKU/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Agnes Road", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EU", 
+                              "address_line_1": "Flat 3 The Church"
+                           }, 
+                           "resigned_on": "2007-07-03", 
+                           "officer_role": "secretary", 
+                           "nationality": "British"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1992-03-31", 
+                           "name": "COLLINS, David John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/jlwKjjuqikiboU7IzjaxAiMtuQQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN3 3HW", 
+                              "address_line_1": "469 Wellingborough Road"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1997-02-12", 
+                           "name": "HALE, Annette Margaret", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/fV7wEpvrn2mP-qcy_RKsdRrToOg/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN1 3JT", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "The Mounts", 
+                              "address_line_1": "61 St Michaels Road"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1997-02-12", 
+                           "name": "HALE, Kevin Charles", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/TxfPxlCTBJO4DLU0SZgsBR20_L8/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "The Mounts", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN1 3JT", 
+                              "address_line_1": "61 St Michaels Road"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "2007-07-03", 
+                           "name": "HARLEY, Brian Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mffFqHvsGlFO6Hq5M_ntuRNHeAs/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Moulton", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "4 The Nurseries", 
+                              "postal_code": "NN3 7SA", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "HEWISON, Gladys Dorothy", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/cmZWxUcohfFZBSzytDA55MPlZVQ/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "29 Arnold Road"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "HEWISON, Richard", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/C2vQ48q2b0lHcrlVoOKIN4XQPHQ/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_1": "29 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "2005-04-19", 
+                           "name": "HUBBARD, Gary", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/bW1ZUNmcjOdXcWrXrVPAjW2z_oc/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN6 7ET", 
+                              "address_line_1": "Tilda 53 Old Forge Drive", 
+                              "address_line_2": "West Haddon", 
+                              "locality": "Northamptonshire"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1992-03-31", 
+                           "name": "INGHAM, Richard Malcolm", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/NcJYujcxdeOfw9Av_5O49HS4Jsg/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "LS19 6HN", 
+                              "region": "West Yorkshire", 
+                              "address_line_1": "2 New Road Side", 
+                              "address_line_2": "Rawdon", 
+                              "locality": "Leeds"
+                           }
+                        }, 
+                        {
+                           "name": "LEE, Chui Fan", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mJE6peRPhzDrbYtOhK5NPTESQj0/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1998-01-19", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_1": "32 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "LEE, Ming Fai", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qnpTrcPMkgAbWqawhpfSm9fhrO0/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1998-01-19", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_1": "32 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1995-09-01", 
+                           "name": "MORRIS, Angela Betty", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mF4f66p-nCc3acvNvxfR7KV-Rlk/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN2 6EY", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "30 Arnold Road", 
+                              "address_line_2": "Primrose Hill", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1996-02-12", 
+                           "name": "RICHARDS, Keith Nicholas", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/YXMF8dgWRwzITX6k7qbJ-v2gKek/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN3 7SA", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "3 The Nurseries", 
+                              "address_line_2": "Moulton", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "SERENO, Tina", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/vPaUTyMSJy6zUf5LzMccrj9TNzM/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1997-02-12", 
+                           "resigned_on": "1997-10-10", 
+                           "address": {
+                              "postal_code": "NN2 6EY", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "Primrose Hill", 
+                              "address_line_1": "29 Arnold Road"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1998-01-19", 
+                           "name": "SMITH, Jayne Edith", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/kHUNdDt-iczoOCxdyfe6ZoByL1Y/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Long Buckby", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN6 7RL", 
+                              "address_line_1": "1 Knutsford Lane"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1998-01-19", 
+                           "name": "SMITH, Simon Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qKnIUPrWBNJTYSizQSXa7nHXyBY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Long Buckby", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "1 Knutsford Lane", 
+                              "postal_code": "NN6 7RL", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "SOCHA, John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/FdEMjCi34W2cV-V6F4m25GSO73U/appointments"
+                              }
+                           }, 
+                           "appointed_on": "2007-07-03", 
+                           "resigned_on": "2009-03-17", 
+                           "address": {
+                              "address_line_2": "Moulton", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN3 7TR", 
+                              "address_line_1": "36 Thorpeville"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "2006-07-26", 
+                           "name": "TILLEY, Peter Alfred", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/d2gS1YsgTknx0PlVkGK9X0V33LI/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "30 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "BRADY, Shaun Anthony", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/T_zC6VTTkzOYsCM0U3_K8AoyhyM/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "33 Arnold Road"
+                           }, 
+                           "appointed_on": "2005-04-19", 
+                           "resigned_on": "2009-01-22", 
+                           "date_of_birth": {
+                              "year": 1978, 
+                              "month": 7
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Furniture Maker"
+                        }, 
+                        {
+                           "name": "CAMPANARO, Domenico", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/I9FIkcqLQapRMPJ_Rbc66CDbUKU/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Agnes Road", 
+                              "address_line_1": "Flat 3 The Church", 
+                              "postal_code": "NN2 6EU", 
+                              "locality": "Northampton"
+                           }, 
+                           "country_of_residence": "England", 
+                           "resigned_on": "2011-08-01", 
+                           "date_of_birth": {
+                              "year": 1957, 
+                              "month": 9
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Carpet Fitter"
+                        }, 
+                        {
+                           "name": "COLLINS, David John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/jlwKjjuqikiboU7IzjaxAiMtuQQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "region": "Northamptonshire", 
+                              "address_line_1": "469 Wellingborough Road", 
+                              "postal_code": "NN3 3HW", 
+                              "locality": "Northampton"
+                           }, 
+                           "resigned_on": "1992-03-31", 
+                           "date_of_birth": {
+                              "year": 1938, 
+                              "month": 6
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "HALE, Annette Margaret", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/fV7wEpvrn2mP-qcy_RKsdRrToOg/appointments"
+                              }
+                           }, 
+                           "resigned_on": "1997-02-12", 
+                           "date_of_birth": {
+                              "year": 1967, 
+                              "month": 3
+                           }, 
+                           "address": {
+                              "postal_code": "NN1 3JT", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "The Mounts", 
+                              "address_line_1": "61 St Michaels Road"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Registered General Nurse"
+                        }, 
+                        {
+                           "name": "HALE, Kevin Charles", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/TxfPxlCTBJO4DLU0SZgsBR20_L8/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN1 3JT", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "61 St Michaels Road", 
+                              "address_line_2": "The Mounts", 
+                              "locality": "Northampton"
+                           }, 
+                           "resigned_on": "1997-02-12", 
+                           "date_of_birth": {
+                              "year": 1970, 
+                              "month": 4
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Warehouse Assistant"
+                        }, 
+                        {
+                           "name": "HARLEY, Brian Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mffFqHvsGlFO6Hq5M_ntuRNHeAs/appointments"
+                              }
+                           }, 
+                           "resigned_on": "2009-01-22", 
+                           "date_of_birth": {
+                              "year": 1967, 
+                              "month": 7
+                           }, 
+                           "address": {
+                              "postal_code": "NN3 7SA", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "Moulton", 
+                              "address_line_1": "4 The Nurseries"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Area Manager"
+                        }, 
+                        {
+                           "name": "HEWISON, Gladys Dorothy", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/cmZWxUcohfFZBSzytDA55MPlZVQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Northampton", 
+                              "address_line_1": "Artisans' House, 7 Queensbridge", 
+                              "postal_code": "NN4 7BF", 
+                              "locality": "Northamptonshire"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2010-09-02", 
+                           "date_of_birth": {
+                              "year": 1924, 
+                              "month": 4
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Retired"
+                        }, 
+                        {
+                           "name": "HEWISON, Richard", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/C2vQ48q2b0lHcrlVoOKIN4XQPHQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "29 Arnold Road"
+                           }, 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2010-10-08", 
+                           "date_of_birth": {
+                              "month": 9, 
+                              "year": 1925
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Retired"
+                        }, 
+                        {
+                           "name": "HOLTON, Robert", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/J1soGSWtyWqSyfvYNtR9VQT8P5I/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "premises": "33", 
+                              "country": "England", 
+                              "region": "Northamptonshire", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "Arnold Road"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-04-15", 
+                           "resigned_on": "2010-09-02", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1978
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Electronics Engineer"
+                        }, 
+                        {
+                           "name": "HUBBARD, Gary", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/bW1ZUNmcjOdXcWrXrVPAjW2z_oc/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN6 7ET", 
+                              "address_line_1": "Tilda 53 Old Forge Drive", 
+                              "address_line_2": "West Haddon", 
+                              "locality": "Northamptonshire"
+                           }, 
+                           "resigned_on": "2005-04-19", 
+                           "date_of_birth": {
+                              "month": 5, 
+                              "year": 1969
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Clerical Assistant"
+                        }, 
+                        {
+                           "name": "INGHAM, Richard Malcolm", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/NcJYujcxdeOfw9Av_5O49HS4Jsg/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "LS19 6HN", 
+                              "region": "West Yorkshire", 
+                              "locality": "Leeds", 
+                              "address_line_2": "Rawdon", 
+                              "address_line_1": "2 New Road Side"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "resigned_on": "1992-03-31", 
+                           "date_of_birth": {
+                              "month": 12, 
+                              "year": 1950
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Legal Executive"
+                        }, 
+                        {
+                           "name": "MORRIS, Angela Betty", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mF4f66p-nCc3acvNvxfR7KV-Rlk/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "30 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "resigned_on": "1995-11-22", 
+                           "date_of_birth": {
+                              "year": 1970, 
+                              "month": 6
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Caterer"
+                        }
+                     ], 
+                     "appointed_on": "1997-10-10", 
+                     "name_elements": {
+                        "surname": "HEWISON", 
+                        "forename": "Richard"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_number": "02419109", 
+                        "company_name": "PRIMROSE HILL FLATS MANAGEMENT LIMITED"
+                     }, 
+                     "address": {
+                        "address_line_1": "29 Arnold Road", 
+                        "postal_code": "NN2 6EY", 
+                        "locality": "Northampton"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mr Domenico Campanaro", 
+                           "links": {
+                              "self": "/company/02419109/persons-with-significant-control/individual/9g5p8EC1KasxHciK4OUFuQp7kB4"
+                           }, 
+                           "notified_on": "2016-04-06", 
+                           "country_of_residence": "England", 
+                           "natures_of_control": [
+                              "ownership-of-shares-25-to-50-percent", 
+                              "voting-rights-25-to-50-percent", 
+                              "right-to-appoint-and-remove-directors"
+                           ], 
+                           "name_elements": {
+                              "forename": "Domenico", 
+                              "surname": "Campanaro", 
+                              "title": "Mr"
+                           }, 
+                           "date_of_birth": {
+                              "year": 1957, 
+                              "month": 9
+                           }, 
+                           "etag": "80314aed98b097b77ebc3ae01e30ad25cc1c797b", 
+                           "address": {
+                              "premises": "Flat 3 The Church", 
+                              "country": "England", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EU", 
+                              "address_line_1": "Agnes Road"
+                           }, 
+                           "nationality": "British"
+                        }
+                     ], 
+                     "occupation": "Retired"
+                  }, 
+                  {
+                     "name": "Richard HEWISON", 
+                     "links": {
+                        "company": "/company/02419109"
+                     }, 
+                     "company": {
+                        "company_status": "active", 
+                        "links": {
+                           "filing_history": "/company/02419109/filing-history", 
+                           "self": "/company/02419109", 
+                           "officers": "/company/02419109/officers", 
+                           "persons_with_significant_control": "/company/02419109/persons-with-significant-control"
+                        }, 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "99999"
+                        ], 
+                        "etag": "59c4c42484ac1a86f00f83f5acb18ca62b5d0f81", 
+                        "registered_office_address": {
+                           "address_line_2": "Northampton", 
+                           "locality": "Northamptonshire", 
+                           "postal_code": "NN4 7BF", 
+                           "address_line_1": "Artisans' House, 7 Queensbridge"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2018-09-15", 
+                           "last_made_up_to": "2017-09-01", 
+                           "next_made_up_to": "2018-09-01", 
+                           "overdue": false
+                        }, 
+                        "company_number": "02419109", 
+                        "last_full_members_list_date": "2015-09-01", 
+                        "date_of_creation": "1989-09-01", 
+                        "has_insolvency_history": false, 
+                        "has_been_liquidated": false, 
+                        "accounts": {
+                           "next_due": "2018-06-30", 
+                           "next_made_up_to": "2017-09-30", 
+                           "last_accounts": {
+                              "period_start_on": "2015-10-01", 
+                              "type": "dormant", 
+                              "made_up_to": "2016-09-30", 
+                              "period_end_on": "2016-09-30"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-06-30", 
+                              "period_start_on": "2016-10-01", 
+                              "period_end_on": "2017-09-30", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "30", 
+                              "month": "09"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "PRIMROSE HILL FLATS MANAGEMENT LIMITED", 
+                        "registered_office_is_in_dispute": false, 
+                        "has_charges": false, 
+                        "type": "ltd"
+                     }, 
+                     "resigned_on": "2007-07-03", 
+                     "officers": [
+                        {
+                           "appointed_on": "2009-02-17", 
+                           "officer_role": "corporate-secretary", 
+                           "name": "ORCHARD BLOCK MANAGEMENT SERVICES LTD", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/z7CfX-Qhbzf47JJCeNtGaRi19yw/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "premises": "Artisans' House", 
+                              "country": "United Kingdom", 
+                              "region": "Northamptonshire", 
+                              "postal_code": "NN4 7BF", 
+                              "address_line_1": "7 Queensbridge"
+                           }
+                        }, 
+                        {
+                           "name": "LEE, Chui Fan", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mJE6peRPhzDrbYtOhK5NPTESQj0/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Northampton", 
+                              "locality": "Northamptonshire", 
+                              "postal_code": "NN4 7BF", 
+                              "address_line_1": "Artisans' House, 7 Queensbridge"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1998-01-19", 
+                           "date_of_birth": {
+                              "year": 1968, 
+                              "month": 5
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Restauranteur"
+                        }, 
+                        {
+                           "name": "LEE, Ming Fai", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qnpTrcPMkgAbWqawhpfSm9fhrO0/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1998-01-19", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1968
+                           }, 
+                           "address": {
+                              "address_line_2": "Northampton", 
+                              "address_line_1": "Artisans' House, 7 Queensbridge", 
+                              "postal_code": "NN4 7BF", 
+                              "locality": "Northamptonshire"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Restauranteur"
+                        }, 
+                        {
+                           "name": "SOCHA, John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/FdEMjCi34W2cV-V6F4m25GSO73U/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-10-08", 
+                           "date_of_birth": {
+                              "month": 1, 
+                              "year": 1958
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "premises": "Artisans' House", 
+                              "country": "United Kingdom", 
+                              "region": "Northamptonshire", 
+                              "postal_code": "NN4 7BF", 
+                              "address_line_1": "7 Queensbridge"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "BRADY, Shaun Anthony", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/T_zC6VTTkzOYsCM0U3_K8AoyhyM/appointments"
+                              }
+                           }, 
+                           "appointed_on": "2005-04-19", 
+                           "resigned_on": "2009-08-01", 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "33 Arnold Road"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "CAMPANARO, Domenico", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/I9FIkcqLQapRMPJ_Rbc66CDbUKU/appointments"
+                              }
+                           }, 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_2": "Agnes Road", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EU", 
+                              "address_line_1": "Flat 3 The Church"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1992-03-31", 
+                           "name": "COLLINS, David John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/jlwKjjuqikiboU7IzjaxAiMtuQQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN3 3HW", 
+                              "address_line_1": "469 Wellingborough Road"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1997-02-12", 
+                           "name": "HALE, Annette Margaret", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/fV7wEpvrn2mP-qcy_RKsdRrToOg/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN1 3JT", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "The Mounts", 
+                              "address_line_1": "61 St Michaels Road"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1997-02-12", 
+                           "name": "HALE, Kevin Charles", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/TxfPxlCTBJO4DLU0SZgsBR20_L8/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "The Mounts", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN1 3JT", 
+                              "address_line_1": "61 St Michaels Road"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "2007-07-03", 
+                           "name": "HARLEY, Brian Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mffFqHvsGlFO6Hq5M_ntuRNHeAs/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Moulton", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "4 The Nurseries", 
+                              "postal_code": "NN3 7SA", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "HEWISON, Gladys Dorothy", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/cmZWxUcohfFZBSzytDA55MPlZVQ/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "29 Arnold Road"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "HEWISON, Richard", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/C2vQ48q2b0lHcrlVoOKIN4XQPHQ/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_1": "29 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "2005-04-19", 
+                           "name": "HUBBARD, Gary", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/bW1ZUNmcjOdXcWrXrVPAjW2z_oc/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN6 7ET", 
+                              "address_line_1": "Tilda 53 Old Forge Drive", 
+                              "address_line_2": "West Haddon", 
+                              "locality": "Northamptonshire"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1992-03-31", 
+                           "name": "INGHAM, Richard Malcolm", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/NcJYujcxdeOfw9Av_5O49HS4Jsg/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "LS19 6HN", 
+                              "region": "West Yorkshire", 
+                              "address_line_1": "2 New Road Side", 
+                              "address_line_2": "Rawdon", 
+                              "locality": "Leeds"
+                           }
+                        }, 
+                        {
+                           "name": "LEE, Chui Fan", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mJE6peRPhzDrbYtOhK5NPTESQj0/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1998-01-19", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_1": "32 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "LEE, Ming Fai", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qnpTrcPMkgAbWqawhpfSm9fhrO0/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1998-01-19", 
+                           "resigned_on": "2007-07-03", 
+                           "address": {
+                              "address_line_1": "32 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1995-09-01", 
+                           "name": "MORRIS, Angela Betty", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mF4f66p-nCc3acvNvxfR7KV-Rlk/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN2 6EY", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "30 Arnold Road", 
+                              "address_line_2": "Primrose Hill", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1996-02-12", 
+                           "name": "RICHARDS, Keith Nicholas", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/YXMF8dgWRwzITX6k7qbJ-v2gKek/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN3 7SA", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "3 The Nurseries", 
+                              "address_line_2": "Moulton", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "SERENO, Tina", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/vPaUTyMSJy6zUf5LzMccrj9TNzM/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1997-02-12", 
+                           "resigned_on": "1997-10-10", 
+                           "address": {
+                              "postal_code": "NN2 6EY", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "Primrose Hill", 
+                              "address_line_1": "29 Arnold Road"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1998-01-19", 
+                           "name": "SMITH, Jayne Edith", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/kHUNdDt-iczoOCxdyfe6ZoByL1Y/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Long Buckby", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN6 7RL", 
+                              "address_line_1": "1 Knutsford Lane"
+                           }
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "1998-01-19", 
+                           "name": "SMITH, Simon Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qKnIUPrWBNJTYSizQSXa7nHXyBY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Long Buckby", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "1 Knutsford Lane", 
+                              "postal_code": "NN6 7RL", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "SOCHA, John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/FdEMjCi34W2cV-V6F4m25GSO73U/appointments"
+                              }
+                           }, 
+                           "appointed_on": "2007-07-03", 
+                           "resigned_on": "2009-03-17", 
+                           "address": {
+                              "address_line_2": "Moulton", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN3 7TR", 
+                              "address_line_1": "36 Thorpeville"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "officer_role": "secretary", 
+                           "resigned_on": "2006-07-26", 
+                           "name": "TILLEY, Peter Alfred", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/d2gS1YsgTknx0PlVkGK9X0V33LI/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "30 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }
+                        }, 
+                        {
+                           "name": "BRADY, Shaun Anthony", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/T_zC6VTTkzOYsCM0U3_K8AoyhyM/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "33 Arnold Road"
+                           }, 
+                           "appointed_on": "2005-04-19", 
+                           "resigned_on": "2009-01-22", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1978
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Furniture Maker"
+                        }, 
+                        {
+                           "name": "CAMPANARO, Domenico", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/I9FIkcqLQapRMPJ_Rbc66CDbUKU/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "resigned_on": "2011-08-01", 
+                           "date_of_birth": {
+                              "month": 9, 
+                              "year": 1957
+                           }, 
+                           "address": {
+                              "address_line_2": "Agnes Road", 
+                              "address_line_1": "Flat 3 The Church", 
+                              "postal_code": "NN2 6EU", 
+                              "locality": "Northampton"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Carpet Fitter"
+                        }, 
+                        {
+                           "name": "COLLINS, David John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/jlwKjjuqikiboU7IzjaxAiMtuQQ/appointments"
+                              }
+                           }, 
+                           "resigned_on": "1992-03-31", 
+                           "date_of_birth": {
+                              "month": 6, 
+                              "year": 1938
+                           }, 
+                           "address": {
+                              "region": "Northamptonshire", 
+                              "address_line_1": "469 Wellingborough Road", 
+                              "postal_code": "NN3 3HW", 
+                              "locality": "Northampton"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "HALE, Annette Margaret", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/fV7wEpvrn2mP-qcy_RKsdRrToOg/appointments"
+                              }
+                           }, 
+                           "resigned_on": "1997-02-12", 
+                           "date_of_birth": {
+                              "year": 1967, 
+                              "month": 3
+                           }, 
+                           "address": {
+                              "postal_code": "NN1 3JT", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "The Mounts", 
+                              "address_line_1": "61 St Michaels Road"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Registered General Nurse"
+                        }, 
+                        {
+                           "name": "HALE, Kevin Charles", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/TxfPxlCTBJO4DLU0SZgsBR20_L8/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN1 3JT", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "61 St Michaels Road", 
+                              "address_line_2": "The Mounts", 
+                              "locality": "Northampton"
+                           }, 
+                           "resigned_on": "1997-02-12", 
+                           "date_of_birth": {
+                              "month": 4, 
+                              "year": 1970
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Warehouse Assistant"
+                        }, 
+                        {
+                           "name": "HARLEY, Brian Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mffFqHvsGlFO6Hq5M_ntuRNHeAs/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "NN3 7SA", 
+                              "region": "Northamptonshire", 
+                              "locality": "Northampton", 
+                              "address_line_2": "Moulton", 
+                              "address_line_1": "4 The Nurseries"
+                           }, 
+                           "resigned_on": "2009-01-22", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1967
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Area Manager"
+                        }, 
+                        {
+                           "name": "HEWISON, Gladys Dorothy", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/cmZWxUcohfFZBSzytDA55MPlZVQ/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2010-09-02", 
+                           "date_of_birth": {
+                              "year": 1924, 
+                              "month": 4
+                           }, 
+                           "address": {
+                              "address_line_2": "Northampton", 
+                              "address_line_1": "Artisans' House, 7 Queensbridge", 
+                              "postal_code": "NN4 7BF", 
+                              "locality": "Northamptonshire"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Retired"
+                        }, 
+                        {
+                           "name": "HEWISON, Richard", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/C2vQ48q2b0lHcrlVoOKIN4XQPHQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "29 Arnold Road"
+                           }, 
+                           "appointed_on": "1997-10-10", 
+                           "resigned_on": "2010-10-08", 
+                           "date_of_birth": {
+                              "year": 1925, 
+                              "month": 9
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Retired"
+                        }, 
+                        {
+                           "name": "HOLTON, Robert", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/J1soGSWtyWqSyfvYNtR9VQT8P5I/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-04-15", 
+                           "resigned_on": "2010-09-02", 
+                           "date_of_birth": {
+                              "year": 1978, 
+                              "month": 7
+                           }, 
+                           "address": {
+                              "locality": "Northampton", 
+                              "premises": "33", 
+                              "country": "England", 
+                              "region": "Northamptonshire", 
+                              "postal_code": "NN2 6EY", 
+                              "address_line_1": "Arnold Road"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Electronics Engineer"
+                        }, 
+                        {
+                           "name": "HUBBARD, Gary", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/bW1ZUNmcjOdXcWrXrVPAjW2z_oc/appointments"
+                              }
+                           }, 
+                           "resigned_on": "2005-04-19", 
+                           "date_of_birth": {
+                              "year": 1969, 
+                              "month": 5
+                           }, 
+                           "address": {
+                              "postal_code": "NN6 7ET", 
+                              "address_line_1": "Tilda 53 Old Forge Drive", 
+                              "address_line_2": "West Haddon", 
+                              "locality": "Northamptonshire"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Clerical Assistant"
+                        }, 
+                        {
+                           "name": "INGHAM, Richard Malcolm", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/NcJYujcxdeOfw9Av_5O49HS4Jsg/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "postal_code": "LS19 6HN", 
+                              "region": "West Yorkshire", 
+                              "locality": "Leeds", 
+                              "address_line_2": "Rawdon", 
+                              "address_line_1": "2 New Road Side"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "resigned_on": "1992-03-31", 
+                           "date_of_birth": {
+                              "month": 12, 
+                              "year": 1950
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Legal Executive"
+                        }, 
+                        {
+                           "name": "MORRIS, Angela Betty", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mF4f66p-nCc3acvNvxfR7KV-Rlk/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "Primrose Hill", 
+                              "region": "Northamptonshire", 
+                              "address_line_1": "30 Arnold Road", 
+                              "postal_code": "NN2 6EY", 
+                              "locality": "Northampton"
+                           }, 
+                           "resigned_on": "1995-11-22", 
+                           "date_of_birth": {
+                              "year": 1970, 
+                              "month": 6
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Caterer"
+                        }
+                     ], 
+                     "appointed_on": "1997-10-10", 
+                     "name_elements": {
+                        "surname": "HEWISON", 
+                        "forename": "Richard"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_name": "PRIMROSE HILL FLATS MANAGEMENT LIMITED", 
+                        "company_number": "02419109"
+                     }, 
+                     "address": {
+                        "locality": "Northampton", 
+                        "postal_code": "NN2 6EY", 
+                        "address_line_1": "29 Arnold Road"
+                     }, 
+                     "officer_role": "secretary", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Mr Domenico Campanaro", 
+                           "links": {
+                              "self": "/company/02419109/persons-with-significant-control/individual/9g5p8EC1KasxHciK4OUFuQp7kB4"
+                           }, 
+                           "notified_on": "2016-04-06", 
+                           "country_of_residence": "England", 
+                           "natures_of_control": [
+                              "ownership-of-shares-25-to-50-percent", 
+                              "voting-rights-25-to-50-percent", 
+                              "right-to-appoint-and-remove-directors"
+                           ], 
+                           "name_elements": {
+                              "forename": "Domenico", 
+                              "surname": "Campanaro", 
+                              "title": "Mr"
+                           }, 
+                           "date_of_birth": {
+                              "month": 9, 
+                              "year": 1957
+                           }, 
+                           "etag": "80314aed98b097b77ebc3ae01e30ad25cc1c797b", 
+                           "address": {
+                              "premises": "Flat 3 The Church", 
+                              "country": "England", 
+                              "locality": "Northampton", 
+                              "postal_code": "NN2 6EU", 
+                              "address_line_1": "Agnes Road"
+                           }, 
+                           "nationality": "British"
+                        }
+                     ]
+                  }
+               ]
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -320,9 +2271,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -333,9 +2285,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -346,9 +2299,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -359,9 +2313,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -372,6 +2327,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Shared ownership with family in a flat in the London Borough of Lewisham. I have a minority share: (i). (Registered 05 June 2015)", 
+               "Shared ownership with family in a flat in the London Borough of Lewisham. I have a minority share": "(i). (Registered 05 June 2015)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Shared ownership with family in a flat in the London Borough of Lewisham. I have a minority share: (i). (Registered 05 June 2015)", 
@@ -387,8 +2350,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [
@@ -402,8 +2363,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "maskell", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -413,7 +2375,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1972, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "rachael maskell", 
          "category_donations": 0, 
@@ -421,8 +2383,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "maskell", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 7, 
@@ -432,16 +2395,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1972, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "rachael maskell", 
          "category_donations": 0, 
          "first": "rachael"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -452,9 +2416,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -465,9 +2430,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

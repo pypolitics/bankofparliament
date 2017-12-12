@@ -315,15 +315,16 @@
    "person_id": "24965", 
    "party": "Conservative", 
    "forname": "Nigel", 
-   "mp_annual": 86862, 
+   "mp_annual": 86462, 
    "mp_wealth": 100000, 
    "facebook": "https://facebook.com/nigelmillsmp", 
    "eu_ref_stance": "Leave", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -334,6 +335,34 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr Robert KirklandAddress of donor: privateAmount of donation, or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 09 June 2017)", 
+               "(Registered 09 June 2017)": "(Registered 09 June 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a35,000", 
+               "Name of donor": "Mr Robert Kirkland", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }, 
+            {
+               "raw_string": "Name of donor: J.C. Bamford Excavators Limited,Address of donor: Rocester, Staffordshire ST14 5JPAmount of donation, or nature and value if donation in kind: \u00a34,000Donor status: company, registration 00561597(Registered 13 June 2017)", 
+               "(Registered 13 June 2017)": "(Registered 13 June 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "J.C. Bamford Excavators Limited,", 
+               "Donor status": "company, registration 00561597", 
+               "Address of donor": "Rocester, Staffordshire ST14 5JP"
+            }, 
+            {
+               "raw_string": "Name of donor: United and Cecil ClubAddress of donor: New Penderel House 283-287, High Holborn, London WC1V 7HFAmount of donation, or nature and value if donation in kind: \u00a32,500Donor status: members' association(Registered 13 June 2017)", 
+               "(Registered 13 June 2017)": "(Registered 13 June 2017)", 
+               "Amount of donation, or nature and value if donation in kind": "\u00a32,500", 
+               "Name of donor": "United and Cecil Club", 
+               "Donor status": "members' association", 
+               "Address of donor": "New Penderel House 283-287, High Holborn, London WC1V 7HF"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr Robert KirklandAddress of donor: privateAmount of donation, or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 09 June 2017)", 
@@ -341,15 +370,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "09/06/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Mr Robert Kirkland", 
-               "address": null, 
+               "address": "private", 
                "item_id": "0001", 
                "donor": "Mr Robert Kirkland", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Robert Kirkland", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: J.C. Bamford Excavators Limited,Address of donor: Rocester, Staffordshire ST14 5JPAmount of donation, or nature and value if donation in kind: \u00a34,000Donor status: company, registration 00561597(Registered 13 June 2017)", 
@@ -357,15 +395,462 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Patrick Albert Micha\u00ebl Fischer", 
+                     "links": {
+                        "self": "/company/00561597/persons-with-significant-control/individual/LyAKDXV8mZ0P5-pw0rXoLYL5nJQ"
+                     }, 
+                     "country_of_residence": "Switzerland", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent-as-trust", 
+                        "voting-rights-75-to-100-percent-as-trust", 
+                        "right-to-appoint-and-remove-directors-as-trust"
+                     ], 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1954
+                     }, 
+                     "name_elements": {
+                        "surname": "Fischer", 
+                        "forename": "Patrick", 
+                        "middle_name": "Albert Micha\u00ebl", 
+                        "title": "Mr"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "etag": "91cecc82f5d7d0d22ba25c15fb400f506cc3a025", 
+                     "address": {
+                        "premises": "Boodle Hatfield Llp", 
+                        "country": "England", 
+                        "address_line_1": "240 Blackfriars Road", 
+                        "postal_code": "SE1 8NW", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "Swiss"
+                  }, 
+                  {
+                     "kind": "corporate-entity-person-with-significant-control", 
+                     "name": "Jcb Service", 
+                     "links": {
+                        "self": "/company/00561597/persons-with-significant-control/corporate-entity/alqEaAJXGf8gSrToD0HEPVU_5gE"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "etag": "e3e552021e5215fde3e50d1c66be37910b17d170", 
+                     "identification": {
+                        "legal_authority": "United Kingdom (England And Wales)", 
+                        "country_registered": "United Kingdom", 
+                        "place_registered": "United Kingdom (England And Wales)", 
+                        "registration_number": "0564955", 
+                        "legal_form": "Unlimited With Shares"
+                     }, 
+                     "address": {
+                        "premises": "Lakeside Works", 
+                        "country": "England", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Rocester"
+                     }
+                  }
+               ], 
                "registered": "13/06/2017", 
+               "officers": [
+                  {
+                     "officer_role": "secretary", 
+                     "nationality": "British", 
+                     "name": "OVENS, Steven Ernest Robert", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ngaypPMSS3BqM652_iviamNx5uY/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Rocester", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Lakeside Works"
+                     }
+                  }, 
+                  {
+                     "name": "BAMFORD, Carole Gray, Lady", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/F-PxZ4PhVgFoy94JYV9zyK9yqiw/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1946
+                     }, 
+                     "address": {
+                        "postal_code": "ST14 5JP", 
+                        "locality": "Uttoxeter", 
+                        "address_line_2": "Rocester", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BAMFORD, Mark Joseph Cyril", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/KnNrLId-yMJFygKbB3em-iE5FRc/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "year": 1951, 
+                        "month": 6
+                     }, 
+                     "address": {
+                        "address_line_2": "Rocester", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BAMFORD DL, The Lord", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/KwkjxuswE9qwWKLU0ndEaau9cq0/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "year": 1945, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "postal_code": "ST14 5JP", 
+                        "locality": "Uttoxeter", 
+                        "address_line_2": "Rocester", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "MACDONALD, Graeme Angus", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/7itBZp3LxIYvM5q13ByZBYWLZy0/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "ST14 5JP", 
+                        "locality": "Uttoxeter", 
+                        "address_line_2": "Rocester", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-01-02", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1967
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "TURNER, Mark William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/hG6Hn-UN-qoUlyJSak08iZwLCpU/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-01-01", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 8
+                     }, 
+                     "address": {
+                        "address_line_2": "Rocester", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BAMFORD, Joseph Cyril Edward", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/uYCCnisxth6q3EHzy_KNigDkyI8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2006-05-15", 
+                     "resigned_on": "2016-11-11", 
+                     "date_of_birth": {
+                        "year": 1977, 
+                        "month": 12
+                     }, 
+                     "address": {
+                        "address_line_2": "Rocester", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BAMFORD, Marjorie", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/UjDkM9Dr2l7BXXsGZ4uUP0wEaPU/appointments"
+                        }
+                     }, 
+                     "resigned_on": "2003-12-25", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1918
+                     }, 
+                     "address": {
+                        "region": "Derbyshire", 
+                        "address_line_1": "Wootton Grange", 
+                        "address_line_2": "Waste Lane Ellastone", 
+                        "locality": "Ashbourne"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BLAKE, Alan Russell", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/cZTwtsqLtDcucC1DRsjdX7jI0KA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Rocester", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Lakeside Works"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-01-01", 
+                     "resigned_on": "2014-01-15", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1949
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "COYNE, Martin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sN22DUQDOthPBYExZIuzIyHA00Y/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "ST14 8BE", 
+                        "region": "Staffordshire", 
+                        "locality": "Uttoxeter", 
+                        "address_line_2": "Wood Lane", 
+                        "address_line_1": "Woodside"
+                     }, 
+                     "appointed_on": "1994-02-22", 
+                     "resigned_on": "1998-02-09", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1940
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "JOHNSTON, Gilbert", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AZ_YjrevuwVdw7_qdrnGQ5vcIcg/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "1993-10-31", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1932
+                     }, 
+                     "address": {
+                        "address_line_2": "Rolleston On Dove", 
+                        "region": "Staffordshire", 
+                        "address_line_1": "26 Church Road", 
+                        "postal_code": "DE13 9BE", 
+                        "locality": "Burton On Trent"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "LEADBEATER, Edward Timothy David", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/__EsP7059Pf95QEzK5DBLE0ZB-Y/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2006-03-31", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1944
+                     }, 
+                     "address": {
+                        "postal_code": "DE13 8NT", 
+                        "region": "Staffordshire", 
+                        "locality": "Yoxall", 
+                        "address_line_2": "Longcroft Lane", 
+                        "address_line_1": "Sales Farm"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Solicitor"
+                  }, 
+                  {
+                     "name": "PATTERSON, John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/XfUdY68tQlClb9pawjYZIE-b2ow/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "ST10 3BQ", 
+                        "region": "Staffordshire", 
+                        "locality": "Oakamoor", 
+                        "address_line_2": "Farley", 
+                        "address_line_1": "Farley Lodge"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1998-03-13", 
+                     "resigned_on": "2010-03-01", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 10
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "TAYLOR, Matthew Gordon Robert", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/pEv5tBwl90jy1u_91wD6C4geFog/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "CB23 1JW", 
+                        "region": "Cambridgeshire", 
+                        "locality": "Cambridge", 
+                        "address_line_2": "Haslingfield", 
+                        "address_line_1": "20 High Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-01-02", 
+                     "resigned_on": "2009-11-04", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 4
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }
+               ], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": "https://beta.companieshouse.gov.uk/company/00561597", 
                "pretty": "J.C. Bamford Excavators Limited,", 
-               "address": null, 
+               "address": "Rocester, Staffordshire ST14 5JP", 
                "item_id": "0002", 
                "donor": "J.C. Bamford Excavators Limited,", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/00561597/filing-history", 
+                     "charges": "/company/00561597/charges", 
+                     "self": "/company/00561597", 
+                     "officers": "/company/00561597/officers", 
+                     "persons_with_significant_control": "/company/00561597/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "28922"
+                  ], 
+                  "etag": "b22bae83a7966fe72489d068d9c1bb09f63030bb", 
+                  "registered_office_address": {
+                     "postal_code": "ST14 5JP", 
+                     "address_line_1": "Lakeside Works", 
+                     "address_line_2": "Rocester", 
+                     "locality": "Uttoxeter"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-11-15", 
+                     "last_made_up_to": "2017-11-01", 
+                     "next_made_up_to": "2018-11-01", 
+                     "overdue": false
+                  }, 
+                  "company_number": "00561597", 
+                  "last_full_members_list_date": "2015-11-01", 
+                  "date_of_creation": "1956-02-20", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-09-30", 
+                     "next_made_up_to": "2017-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2016-01-01", 
+                        "type": "full", 
+                        "made_up_to": "2016-12-31", 
+                        "period_end_on": "2016-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-09-30", 
+                        "period_start_on": "2017-01-01", 
+                        "period_end_on": "2017-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "J.C. BAMFORD EXCAVATORS LIMITED", 
+                  "company_status": "active", 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: United and Cecil ClubAddress of donor: New Penderel House 283-287, High Holborn, London WC1V 7HFAmount of donation, or nature and value if donation in kind: \u00a32,500Donor status: members' association(Registered 13 June 2017)", 
@@ -373,19 +858,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "13/06/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2500, 
+               "link": null, 
                "pretty": "United and Cecil Club", 
-               "address": null, 
+               "address": "New Penderel House 283-287, High Holborn, London WC1V 7HF", 
                "item_id": "0003", 
                "donor": "United and Cecil Club", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "United and Cecil Club", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -400,9 +892,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -413,28 +906,950 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Sky plcAddress of donor: Grant Way, Isleworth, Middlesex TW7 5QDAmount of donation or nature and value if donation in kind: Two tickets to test match at Trent Bridge including hospitality, value \u00a3400Date received: 14 July 2017Date accepted: 14 July 2017Donor status: company, registration 2247735(Registered 04 August 2017)", 
+               "(Registered 04 August 2017)": "(Registered 04 August 2017)", 
+               "Date received": "14 July 2017", 
+               "Amount of donation or nature and value if donation in kind": "Two tickets to test match at Trent Bridge including hospitality, value \u00a3400", 
+               "Date accepted": "14 July 2017", 
+               "Name of donor": "Sky plc", 
+               "Donor status": "company, registration 2247735", 
+               "Address of donor": "Grant Way, Isleworth, Middlesex TW7 5QD"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Sky plcAddress of donor: Grant Way, Isleworth, Middlesex TW7 5QDAmount of donation or nature and value if donation in kind: Two tickets to test match at Trent Bridge including hospitality, value \u00a3400Date received: 14 July 2017Date accepted: 14 July 2017Donor status: company, registration 2247735(Registered 04 August 2017)", 
-               "received": "14 July 2017", 
-               "accepted": "14 July 2017", 
+               "status": "company, registration 2247735", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
+               "raw_data": {
+                  "raw_string": "Name of donor: Sky plcAddress of donor: Grant Way, Isleworth, Middlesex TW7 5QDAmount of donation or nature and value if donation in kind: Two tickets to test match at Trent Bridge including hospitality, value \u00a3400Date received: 14 July 2017Date accepted: 14 July 2017Donor status: company, registration 2247735(Registered 04 August 2017)", 
+                  "(Registered 04 August 2017)": "(Registered 04 August 2017)", 
+                  "Date received": "14 July 2017", 
+                  "Amount of donation or nature and value if donation in kind": "Two tickets to test match at Trent Bridge including hospitality, value \u00a3400", 
+                  "Date accepted": "14 July 2017", 
+                  "Name of donor": "Sky plc", 
+                  "Donor status": "company, registration 2247735", 
+                  "Address of donor": "Grant Way, Isleworth, Middlesex TW7 5QD"
+               }, 
                "registered": "04/08/2017", 
+               "officers": [
+                  {
+                     "appointed_on": "2012-11-01", 
+                     "officer_role": "secretary", 
+                     "name": "TAYLOR, Christopher Jon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bd6p4szvPO1jE1almc1D0yozRP8/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }
+                  }, 
+                  {
+                     "name": "AXEN, Adine Grate", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/pVvBqAiTjTxMNjhjhzx7OS-DAK8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Sweden", 
+                     "appointed_on": "2013-07-17", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 4
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Swedish", 
+                     "occupation": "Director "
+                  }, 
+                  {
+                     "name": "CAREY, Charles Gordon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ZaynI0vCtEzIJL-L7BBtkfa9n70/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United States", 
+                     "appointed_on": "2013-01-30", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1953
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "American", 
+                     "occupation": "President And Ceo"
+                  }, 
+                  {
+                     "name": "CLARKE, Tracy Jayne", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/dX9lXnUJXfsOwHnvrA_YI-E4PYw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-06-11", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 2
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Bank Executive"
+                  }, 
+                  {
+                     "name": "DARROCH, David Jeremy", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/q5hnVdNUNL_h5njedAuenGQTZGI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2004-08-16", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1962
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chief Executive Officer"
+                  }, 
+                  {
+                     "name": "GILBERT, Martin James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/c5A9CTUZ-lV5awY1Kyq-jVy0oyY/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-11-29", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 7
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chief Executive Officer"
+                  }, 
+                  {
+                     "name": "GRIFFITH, Andrew John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ygVE7gnktAH6QnkZGHqd4F4g-ic/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-04-07", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1971
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chief Financial Officer"
+                  }, 
+                  {
+                     "name": "MURDOCH, James Rupert", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/RiR9rBCpY8EphY57LcskZxo5NoU/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2003-02-13", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 12
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chairman"
+                  }, 
+                  {
+                     "name": "NALLEN, John Patrick", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/oAry6GJPy2q6TLBPBJi9yaxp-NA/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United States Of America", 
+                     "appointed_on": "2015-11-04", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 5
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "American", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "PIGASSE, Matthieu", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/xPbSsiIgteQB8nSYkx8t8NhgHDE/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "France", 
+                     "appointed_on": "2011-11-29", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1968
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "nationality": "French", 
+                     "officer_role": "director", 
+                     "occupation": "Managing Director"
+                  }, 
+                  {
+                     "name": "SUKAWATY, Andrew John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/2_2XyFxmDA7j1qwpHsJb90klRE8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-06-01", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 5
+                     }, 
+                     "address": {
+                        "locality": "Middlesex", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_2": "Isleworth", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "American", 
+                     "occupation": "Manager"
+                  }, 
+                  {
+                     "name": "WEHR-SEITER, Katrin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/jKNdDgeJppiuzxJFvgK5dxIQTI0/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Germany", 
+                     "appointed_on": "2016-10-13", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 1
+                     }, 
+                     "address": {
+                        "locality": "Isleworth", 
+                        "premises": "Sky Plc", 
+                        "country": "United Kingdom", 
+                        "region": "Middlesex", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "German", 
+                     "occupation": "Managing Director"
+                  }, 
+                  {
+                     "name": "BROOKE, Richard James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Vg1S0uEMf3hZZfk0zulAuEcaEMw/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1991-11-19", 
+                     "resigned_on": "1995-02-02", 
+                     "address": {
+                        "address_line_2": "Chiswick", 
+                        "locality": "London", 
+                        "postal_code": "W4 4NR", 
+                        "address_line_1": "12 Wavendon Avenue"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "GORMLEY, David Joseph", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/7q4-kaOADkQemCMViKG5yL64bqg/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1997-11-11", 
+                     "resigned_on": "2012-11-01", 
+                     "address": {
+                        "region": "Middlesex", 
+                        "locality": "Isleworth", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_1": "Grant Way"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "MACKENZIE, Christopher Kenneth", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/sgNdROIwwVwOPEpVRyfocZRD03Y/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1995-02-02", 
+                     "resigned_on": "1997-08-29", 
+                     "address": {
+                        "region": "Surrey", 
+                        "address_line_1": "98a Richmond Hill", 
+                        "postal_code": "TW10 6RJ", 
+                        "locality": "Richmond"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "BALL, Anthony Frank Elliott", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/xQIrz0NJwabzVThBJw-UiuH_mSM/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1999-06-02", 
+                     "resigned_on": "2003-11-04", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1955
+                     }, 
+                     "address": {
+                        "postal_code": "TW10 5AP", 
+                        "region": "Surrey", 
+                        "address_line_1": "6 Buckingham House", 
+                        "address_line_2": "Courtlands Sheen Road", 
+                        "locality": "Richmond"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chief Executive Officer"
+                  }, 
+                  {
+                     "name": "BARLOW, Frank", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/d0aVBPiZAuz4k-ooJlE3sqAhBoY/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1995-06-29", 
+                     "resigned_on": "1995-09-20", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1930
+                     }, 
+                     "address": {
+                        "region": "Buckinghamshire", 
+                        "locality": "Gerrards Cross", 
+                        "postal_code": "SL9 8AW", 
+                        "address_line_1": "Tremarne Marsham Way"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Md Chief Operating Officer"
+                  }, 
+                  {
+                     "name": "BARLOW, Frank", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/d0aVBPiZAuz4k-ooJlE3sqAhBoY/appointments"
+                        }
+                     }, 
+                     "resigned_on": "1995-02-02", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1930
+                     }, 
+                     "address": {
+                        "region": "Buckinghamshire", 
+                        "address_line_1": "Tremarne Marsham Way", 
+                        "postal_code": "SL9 8AW", 
+                        "locality": "Gerrards Cross"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BARRACLOUGH, Stephen Thomas", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/rmIyEUMLyJmcDqlT6EBEX8mxtVE/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "35 Kensington High Street", 
+                        "locality": "London", 
+                        "postal_code": "W8 5EB", 
+                        "address_line_1": "Flat 1 Brasenose House"
+                     }, 
+                     "appointed_on": "1992-04-11", 
+                     "resigned_on": "1994-11-10", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 5
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Finance Director"
+                  }, 
+                  {
+                     "name": "BIBLE, Geoffrey Cyril", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/dsZXMokfBjRcV7Jep9HB15IsI2k/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1994-12-15", 
+                     "resigned_on": "1997-10-02", 
+                     "date_of_birth": {
+                        "year": 1937, 
+                        "month": 8
+                     }, 
+                     "address": {
+                        "country": "Usa", 
+                        "address_line_1": "120 Park Avenue", 
+                        "postal_code": "10017", 
+                        "locality": "New York"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Usa Australian", 
+                     "occupation": "President & Ceo"
+                  }, 
+                  {
+                     "name": "BOOTH, Mark William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/8tP1ltPqG0vxG9nEx9V81ls8yHk/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1997-11-12", 
+                     "resigned_on": "1999-05-31", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1956
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SW1X 8HT", 
+                        "address_line_1": "4 Belgrave Mews West"
+                     }, 
+                     "nationality": "Usa", 
+                     "officer_role": "director", 
+                     "occupation": "Chief Executive"
+                  }, 
+                  {
+                     "name": "BOWMAN, Philip", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/AuLKHkLLyA6o3UDJZjJ0YvyMfz0/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Allied Domecq Plc The Pavilions", 
+                        "region": "Bristol", 
+                        "locality": "Bridgwater Road Bedminster Down", 
+                        "postal_code": "BS13 8AR", 
+                        "address_line_1": "The Secretariat Department"
+                     }, 
+                     "appointed_on": "1994-12-15", 
+                     "resigned_on": "2003-11-14", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 12
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Australian", 
+                     "occupation": "Chairman And Chief Executive"
+                  }, 
+                  {
+                     "name": "BRICHETTO ARBABOLDI MORATTI, Letizia Maria", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/LYv_bmBDD7d3Aw6heHemF2gryEs/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "country": "Italy", 
+                        "address_line_1": "Galleria De Cristoforis 7", 
+                        "address_line_2": "210121", 
+                        "locality": "Milano"
+                     }, 
+                     "appointed_on": "1999-05-06", 
+                     "resigned_on": "1999-09-28", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1949
+                     }, 
+                     "nationality": "Italian", 
+                     "officer_role": "director", 
+                     "occupation": "Chairman Of News Corp Europe"
+                  }, 
+                  {
+                     "name": "BROOKE, Richard James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Vg1S0uEMf3hZZfk0zulAuEcaEMw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "W4 4NR", 
+                        "locality": "London", 
+                        "address_line_2": "Chiswick", 
+                        "address_line_1": "12 Wavendon Avenue"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1994-12-15", 
+                     "resigned_on": "1997-11-28", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 5
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Group Fiannce Director"
+                  }, 
+                  {
+                     "name": "BURRELL, Mark William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/pN3raEPbBElfFgduEm6CF5yjT9s/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1991-06-27", 
+                     "resigned_on": "1993-03-18", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1937
+                     }, 
+                     "address": {
+                        "address_line_2": "South Audley Street", 
+                        "locality": "London", 
+                        "postal_code": "W1Y 3PA", 
+                        "address_line_1": "43a Reeves Mews"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "BURRELL, Mark William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/pN3raEPbBElfFgduEm6CF5yjT9s/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "South Audley Street", 
+                        "address_line_1": "43a Reeves Mews", 
+                        "postal_code": "W1Y 3PA", 
+                        "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "1993-03-18", 
+                     "date_of_birth": {
+                        "year": 1937, 
+                        "month": 4
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "CAREY, Charles Gordon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ZaynI0vCtEzIJL-L7BBtkfa9n70/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United States", 
+                     "appointed_on": "2003-02-13", 
+                     "resigned_on": "2009-02-10", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 11
+                     }, 
+                     "address": {
+                        "address_line_2": "Grant Way", 
+                        "region": "Middlesex", 
+                        "locality": "Isleworth", 
+                        "postal_code": "TW7 5QD", 
+                        "address_line_1": "British Sky Broadcasting Group Plc"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "American", 
+                     "occupation": "President And Ceo"
+                  }, 
+                  {
+                     "name": "CARRINGTON, Nicholas John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/UEGa1Q0RdiMTvg2aWEWKIW1XD_Q/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1996-07-17", 
+                     "resigned_on": "1998-01-29", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 9
+                     }, 
+                     "address": {
+                        "region": "Berkshire", 
+                        "locality": "Windsor", 
+                        "postal_code": "SL4 5AX", 
+                        "address_line_1": "35 Clarence Road"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chief Financial Officer"
+                  }, 
+                  {
+                     "name": "CHANCE, David Christopher", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ieyUS2JsQ_LpOvelFxRmpDqmNnQ/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1994-12-15", 
+                     "resigned_on": "1999-08-09", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1957
+                     }, 
+                     "address": {
+                        "address_line_2": "Barge Walk", 
+                        "region": "Surrey", 
+                        "address_line_1": "\"Parkfield\"", 
+                        "postal_code": "KT1 4AB", 
+                        "locality": "Hampton Wick"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "CHISHOLM, Samuel Hewlings", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/f8bZV5GVBpT5wVLXPSJEwhHWFyM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "W2", 
+                        "address_line_1": "Flat 7 21 Hyde Park Square"
+                     }, 
+                     "resigned_on": "1999-05-05", 
+                     "date_of_birth": {
+                        "year": 1939, 
+                        "month": 10
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "New Zealander", 
+                     "occupation": "Chief Executive"
+                  }, 
+                  {
+                     "name": "COLERIDGE, Peter Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/-m0Zuv3CAYkAVkkCrSTNgdkgFRY/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Colne Park Road", 
+                        "region": "Essex", 
+                        "address_line_1": "Grove House", 
+                        "postal_code": "CO6 2HU", 
+                        "locality": "Colne Engaine"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1992-11-13", 
+                     "resigned_on": "1994-03-08", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 7
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Treasurer"
+                  }, 
+                  {
+                     "name": "COLLINS, John Alexander, Sir", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/y7Dqw3baqQD8rqCspmABizo6O8k/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1994-12-15", 
+                     "resigned_on": "1997-11-12", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1941
+                     }, 
+                     "address": {
+                        "postal_code": "SW1P 4RW", 
+                        "locality": "London", 
+                        "address_line_2": "63 Millbank Terraces", 
+                        "address_line_1": "Flat 4"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chief Executive"
+                  }, 
+                  {
+                     "name": "CREPON, Michel Claude Andre", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Prqa1J-kkuM3TEuIADLQGcnw1I8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "France", 
+                     "resigned_on": "1999-10-15", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1946
+                     }, 
+                     "address": {
+                        "country": "France", 
+                        "locality": "Le Chesnay", 
+                        "postal_code": "78150", 
+                        "address_line_1": "41 Avenue De Vaucresson"
+                     }, 
+                     "nationality": "French", 
+                     "officer_role": "director", 
+                     "occupation": "Executive Vice President"
+                  }, 
+                  {
+                     "name": "DAVEY, Gary", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/LjKphgTvHXTjZz5dGckuNvIXKWI/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1992-04-11", 
+                     "resigned_on": "1994-03-25", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 1
+                     }, 
+                     "address": {
+                        "address_line_2": "124 Burwood Road", 
+                        "region": "Surrey", 
+                        "locality": "Walton On Thames", 
+                        "postal_code": "KT12 4AS", 
+                        "address_line_1": "The Walled Garden"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Australian", 
+                     "occupation": "Deputy Managing Director"
+                  }, 
+                  {
+                     "name": "DEL TUFO, Charles Anthony", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/NtIb7t4xVVDhWIv_sf2f8NIKEs8/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1995-04-21", 
+                     "resigned_on": "1995-09-20", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1939
+                     }, 
+                     "address": {
+                        "postal_code": "HP6 5NA", 
+                        "region": "Buckinghamshire", 
+                        "locality": "Amersham", 
+                        "address_line_2": "North Road", 
+                        "address_line_1": "Manor Farm Cottage"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Alternate Director"
+                  }
+               ], 
                "isIncome": false, 
-               "amount": 400, 
-               "status": "company, registration 2247735", 
+               "amount": 0, 
+               "link": "https://beta.companieshouse.gov.uk/company/02247735", 
                "pretty": "Sky plc", 
                "address": "Grant Way, Isleworth, Middlesex TW7 5QD", 
                "item_id": "0001", 
                "donor": "Sky plc", 
                "category_id": 4, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "70100"
+                  ], 
+                  "links": {
+                     "filing_history": "/company/02247735/filing-history", 
+                     "charges": "/company/02247735/charges", 
+                     "self": "/company/02247735", 
+                     "officers": "/company/02247735/officers"
+                  }, 
+                  "registered_office_address": {
+                     "postal_code": "TW7 5QD", 
+                     "address_line_1": "Grant Way", 
+                     "address_line_2": "Isleworth", 
+                     "locality": "Middlesex"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-10-06", 
+                     "last_made_up_to": "2017-09-22", 
+                     "next_made_up_to": "2018-09-22", 
+                     "overdue": false
+                  }, 
+                  "last_full_members_list_date": "2011-09-22", 
+                  "company_number": "02247735", 
+                  "date_of_creation": "1988-04-25", 
+                  "etag": "b62887a41a0f70586dfbe5687f2acf9c40cb1cc6", 
+                  "accounts": {
+                     "next_due": "2018-12-31", 
+                     "next_made_up_to": "2018-06-30", 
+                     "last_accounts": {
+                        "period_start_on": "2016-07-01", 
+                        "type": "group", 
+                        "made_up_to": "2017-06-30", 
+                        "period_end_on": "2017-06-30"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-12-31", 
+                        "period_start_on": "2017-07-01", 
+                        "period_end_on": "2018-06-30", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "30", 
+                        "month": "06"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "SKY PLC", 
+                  "company_status": "active", 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "1994-07-01", 
+                        "ceased_on": "2014-11-21", 
+                        "name": "BRITISH SKY BROADCASTING GROUP PLC"
+                     }, 
+                     {
+                        "effective_from": "1990-12-19", 
+                        "ceased_on": "1994-07-01", 
+                        "name": "BRITISH SKY BROADCASTING LIMITED"
+                     }, 
+                     {
+                        "effective_from": "1990-04-01", 
+                        "ceased_on": "1990-12-19", 
+                        "name": "BRITISH SATELLITE BROADCASTING LIMITED"
+                     }, 
+                     {
+                        "effective_from": "1988-08-11", 
+                        "ceased_on": "1990-04-01", 
+                        "name": "BSB LIMITED"
+                     }, 
+                     {
+                        "effective_from": "1988-04-25", 
+                        "ceased_on": "1988-08-11", 
+                        "name": "MITNOTES LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "type": "plc", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 400, 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [
@@ -442,14 +1857,15 @@
          ], 
          "category_description": "Gifts", 
          "category_id": 4, 
-         "category_amount": 400, 
+         "category_amount": 0, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -460,9 +1876,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -473,6 +1890,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Residential property in Nottingham: (i). (Updated 4 June 2015)", 
+               "Residential property in Nottingham": "(i). (Updated 4 June 2015)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Residential property in Nottingham: (i). (Updated 4 June 2015)", 
@@ -488,8 +1913,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [
@@ -503,8 +1926,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "mills", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 10, 
@@ -514,7 +1938,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1974, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "nigel mills", 
          "category_donations": 0, 
@@ -522,8 +1946,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "mills", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 10, 
@@ -533,16 +1958,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1974, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "nigel mills", 
          "category_donations": 0, 
          "first": "nigel"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -553,9 +1979,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -566,9 +1993,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -656,7 +2084,7 @@
    "wrans_subjects": "General Practitioners: Pensions, E. coli, Railways: Electrification, Insolvency, Hospitals: Infectious Diseases", 
    "member_id": "41494", 
    "constituency": "Amber Valley", 
-   "mp_gifts": 400, 
+   "mp_gifts": 0, 
    "commitees": [
       "Work and Pensions Committee", 
       "Public Accounts Committee", 

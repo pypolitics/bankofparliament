@@ -277,9 +277,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -290,6 +291,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr Michael ThurlowAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 04 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a35,000", 
+               "(Registered 04 July 2017)": "(Registered 04 July 2017)", 
+               "Name of donor": "Mr Michael Thurlow", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr Michael ThurlowAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a35,000Donor status: individual(Registered 04 July 2017)", 
@@ -297,19 +310,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "04/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 5000, 
+               "link": null, 
                "pretty": "Mr Michael Thurlow", 
                "address": "private", 
                "item_id": "0001", 
                "donor": "Mr Michael Thurlow", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr Michael Thurlow", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -322,9 +342,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -335,9 +356,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -348,9 +370,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -361,9 +384,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -374,9 +398,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -388,7 +413,25 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "cowan", 
+         "raw_data": [
+            {
+               "raw_string": "Ronnie Cowan Solutions Ltd; an IT consultancy which ceased trading before my election. (Registered 16 March 2017)", 
+               "Ronnie Cowan Solutions Ltd; an IT consultancy which ceased trading before my election. (Registered 16 March 2017)": "Ronnie Cowan Solutions Ltd; an IT consultancy which ceased trading before my election. (Registered 16 March 2017)"
+            }
+         ], 
+         "category_description": "Shareholdings", 
+         "category_gifts": 0, 
+         "month": 9, 
+         "middle": "jack", 
+         "category_type": "shareholdings", 
+         "category_wealth": 15, 
+         "category_income": 0, 
+         "raw_items": [
+            "Ronnie Cowan Solutions Ltd; an IT consultancy which ceased trading before my election. (Registered 16 March 2017)"
+         ], 
+         "year": 1959, 
          "items": [
             {
                "raw_string": "Ronnie Cowan Solutions Ltd; an IT consultancy which ceased trading before my election. (Registered 16 March 2017)", 
@@ -405,12 +448,6 @@
                            "appointments": "/officers/SaWRUFzw8FwIRZyDixDNJsN3_n4/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-04-19", 
-                     "date_of_birth": {
-                        "year": 1959, 
-                        "month": 9
-                     }, 
                      "address": {
                         "locality": "Poole", 
                         "premises": "Unit 4", 
@@ -419,6 +456,12 @@
                         "postal_code": "BH12 1JY", 
                         "address_line_2": "Ingworth Road", 
                         "address_line_1": "Vista Place, Coy Pond Business Park"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-04-19", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1959
                      }, 
                      "nationality": "Scottish", 
                      "officer_role": "director", 
@@ -479,18 +522,6 @@
                }
             }
          ], 
-         "category_description": "Shareholdings", 
-         "category_gifts": 0, 
-         "month": 9, 
-         "middle": "jack", 
-         "category_type": "shareholdings", 
-         "category_wealth": 15, 
-         "category_income": 0, 
-         "raw_items": [
-            "Ronnie Cowan Solutions Ltd; an IT consultancy which ceased trading before my election. (Registered 16 March 2017)"
-         ], 
-         "year": 1959, 
-         "category_id": 8, 
          "category_amount": 15, 
          "display": "ronnie cowan", 
          "category_donations": 0, 
@@ -498,8 +529,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "cowan", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 9, 
@@ -509,16 +541,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1959, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "ronnie cowan", 
          "category_donations": 0, 
          "first": "ronald"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -529,9 +562,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -542,9 +576,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -621,6 +656,12 @@
                            "appointments": "/officers/SaWRUFzw8FwIRZyDixDNJsN3_n4/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-04-19", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 9
+                     }, 
                      "address": {
                         "locality": "Poole", 
                         "premises": "Unit 4", 
@@ -630,21 +671,15 @@
                         "address_line_2": "Ingworth Road", 
                         "address_line_1": "Vista Place, Coy Pond Business Park"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-04-19", 
-                     "date_of_birth": {
-                        "year": 1959, 
-                        "month": 9
-                     }, 
-                     "nationality": "Scottish", 
                      "officer_role": "director", 
+                     "nationality": "Scottish", 
                      "occupation": "I T Consultant"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07609331", 
-               "pretty": "ronald cowan ronnie cowan ronald jack cowan", 
+               "pretty": "Ronnie Cowan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -712,8 +747,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-04-19", 
                      "date_of_birth": {
-                        "year": 1959, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1959
                      }, 
                      "address": {
                         "locality": "Poole", 
@@ -724,15 +759,15 @@
                         "address_line_2": "Ingworth Road", 
                         "address_line_1": "Vista Place, Coy Pond Business Park"
                      }, 
-                     "nationality": "Scottish", 
                      "officer_role": "director", 
+                     "nationality": "Scottish", 
                      "occupation": "I T Consultant"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/07609331", 
-               "pretty": "ronald cowan ronnie cowan ronald jack cowan", 
+               "pretty": "Ronnie Cowan", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

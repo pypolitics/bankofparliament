@@ -209,15 +209,16 @@
    "person_id": "25424", 
    "party": "Conservative", 
    "forname": "Victoria", 
-   "mp_annual": 112529, 
+   "mp_annual": 111409, 
    "mp_wealth": 100000, 
    "facebook": "https://facebook.com/VoteVictoriaAtkins", 
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -228,6 +229,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Mr John LewisAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a32,500Donor status: individual(Registered 06 July 2017)", 
+               "(Registered 06 July 2017)": "(Registered 06 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a32,500", 
+               "Name of donor": "Mr John Lewis", 
+               "Donor status": "individual", 
+               "Address of donor": "private"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Mr John LewisAddress of donor: privateAmount of donation or nature and value if donation in kind: \u00a32,500Donor status: individual(Registered 06 July 2017)", 
@@ -235,19 +248,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "06/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 2500, 
+               "link": null, 
                "pretty": "Mr John Lewis", 
                "address": "private", 
                "item_id": "0001", 
                "donor": "Mr John Lewis", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Mr John Lewis", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -260,9 +280,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -273,28 +294,959 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: British SugarAddress of donor: Sugar Way, Peterborough PE2 9AYAmount of donation or nature and value if donation in kind: four nights' hotel accommodation for myself and my husband during the Conservative Party conference, value \u00a31,120Date received: 4 - 8 October 2017Date accepted: 4 October 2017Donor status: company, registration 315158(Registered 30 October 2017)", 
+               "Date received": "4 - 8 October 2017", 
+               "(Registered 30 October 2017)": "(Registered 30 October 2017)", 
+               "Amount of donation or nature and value if donation in kind": "four nights' hotel accommodation for myself and my husband during the Conservative Party conference, value \u00a31,120", 
+               "Date accepted": "4 October 2017", 
+               "Name of donor": "British Sugar", 
+               "Donor status": "company, registration 315158", 
+               "Address of donor": "Sugar Way, Peterborough PE2 9AY"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: British SugarAddress of donor: Sugar Way, Peterborough PE2 9AYAmount of donation or nature and value if donation in kind: four nights' hotel accommodation for myself and my husband during the Conservative Party conference, value \u00a31,120Date received: 4 - 8 October 2017Date accepted: 4 October 2017Donor status: company, registration 315158(Registered 30 October 2017)", 
-               "received": "4 - 8 October 2017", 
-               "accepted": "4 October 2017", 
+               "status": "company, registration 315158", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "corporate-entity-person-with-significant-control", 
+                     "name": "Abf Investments Plc", 
+                     "links": {
+                        "self": "/company/00315158/persons-with-significant-control/corporate-entity/_ql8fWXneQpCUjlpVTmcH2ATfMc"
+                     }, 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent", 
+                        "right-to-appoint-and-remove-directors"
+                     ], 
+                     "notified_on": "2016-04-06", 
+                     "identification": {
+                        "legal_authority": "United Kingdom (England And Wales)", 
+                        "country_registered": "England And Wales", 
+                        "place_registered": "Companies House", 
+                        "legal_form": "Public Limited Company", 
+                        "registration_number": "00306672"
+                     }, 
+                     "etag": "741ae5ba9adb954e1c22921b53cfcccedb93e752", 
+                     "address": {
+                        "premises": "Weston Centre", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "10 Grosvenor Street", 
+                        "postal_code": "W1K 4QY", 
+                        "locality": "London"
+                     }
+                  }
+               ], 
+               "raw_data": {
+                  "raw_string": "Name of donor: British SugarAddress of donor: Sugar Way, Peterborough PE2 9AYAmount of donation or nature and value if donation in kind: four nights' hotel accommodation for myself and my husband during the Conservative Party conference, value \u00a31,120Date received: 4 - 8 October 2017Date accepted: 4 October 2017Donor status: company, registration 315158(Registered 30 October 2017)", 
+                  "Date received": "4 - 8 October 2017", 
+                  "(Registered 30 October 2017)": "(Registered 30 October 2017)", 
+                  "Amount of donation or nature and value if donation in kind": "four nights' hotel accommodation for myself and my husband during the Conservative Party conference, value \u00a31,120", 
+                  "Date accepted": "4 October 2017", 
+                  "Name of donor": "British Sugar", 
+                  "Donor status": "company, registration 315158", 
+                  "Address of donor": "Sugar Way, Peterborough PE2 9AY"
+               }, 
                "registered": "30/10/2017", 
+               "officers": [
+                  {
+                     "name": "SCHOFIELD, Rosalyn Sharon", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/1N8j8QGuUbi1xQy1pMRTQ4pZj5I/appointments"
+                        }
+                     }, 
+                     "former_names": [
+                        {
+                           "surname": "MENDELSOHN", 
+                           "forenames": "ROSALYN SHARON"
+                        }
+                     ], 
+                     "appointed_on": "2001-08-13", 
+                     "address": {
+                        "premises": "Weston Centre", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
+                        "postal_code": "W1K 4QY", 
+                        "address_line_1": "10 Grosvenor Street"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "CARR, Mark Ian, Dr", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/2qAiPscEI0bt-IefVTHMsQwSnEs/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-03-23", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1962
+                     }, 
+                     "address": {
+                        "premises": "Sugar Way", 
+                        "country": "United Kingdom", 
+                        "postal_code": "PE2 9AY", 
+                        "locality": "Peterborough"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chief Executive"
+                  }, 
+                  {
+                     "name": "HEATH, Quintin Harvey", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/osSAoPEaM6nfFy9tpPkYWrHJYvU/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-10-24", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 9
+                     }, 
+                     "address": {
+                        "locality": "Catthorpe", 
+                        "premises": "Hazelwood", 
+                        "country": "United Kingdom", 
+                        "region": "Leics", 
+                        "postal_code": "LE17 6DD", 
+                        "address_line_1": "Elm Lane"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Hr Director"
+                  }, 
+                  {
+                     "name": "JENSSEN, Deborah Anna", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/gPhGeWudunVHaznyood86ULzjKA/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-11-21", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1971
+                     }, 
+                     "address": {
+                        "locality": "South Scarle", 
+                        "premises": "Chalton House", 
+                        "country": "United Kingdom", 
+                        "region": "Notts", 
+                        "postal_code": "NG23 7JJ", 
+                        "address_line_1": "Amos Lane"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Human Resources Director"
+                  }, 
+                  {
+                     "name": "KENWARD, Paul Robert", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ishOJsqjg3XQO2HhRlKSIAF4pjQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Weston Centre", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "10 Grosvenor Street", 
+                        "postal_code": "W1K 4QY", 
+                        "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-03-11", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1973
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "RYAN, Janet Catherine", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/IWufmRn3w2J1IRWYWWs--cGhcEA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Sugar Way", 
+                        "country": "United Kingdom", 
+                        "postal_code": "PE2 9AY", 
+                        "locality": "Peterborough"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-09-21", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1963
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Finance Director"
+                  }, 
+                  {
+                     "name": "FOSTER, Jessica Sophie", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/NJXD7jnUek8JPRzlqCd2zViBs50/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2000-07-14", 
+                     "resigned_on": "2001-03-07", 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "N7 0AE", 
+                        "address_line_1": "79b Huddleston Road"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "1999-06-11", 
+                     "name": "GORE, Malcolm Raymond", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/pcrvAB5OODg_Y6ClOwctqCXjEwM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "region": "Middlesex", 
+                        "address_line_1": "3 Branksome Way", 
+                        "postal_code": "HA3 9SH", 
+                        "locality": "Harrow"
+                     }
+                  }, 
+                  {
+                     "name": "RICHARDSON, Lyn", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/S6Nojst7TUdYty6kh8usAguInyE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2001-07-24", 
+                     "resigned_on": "2001-08-13", 
+                     "address": {
+                        "postal_code": "DE65 5GQ", 
+                        "region": "Derby", 
+                        "locality": "Hilton", 
+                        "address_line_2": "Hatton Fields, Sutton Lane", 
+                        "address_line_1": "Honey Cottage"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "SMITH, Simon Joseph", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/lwwpNgq8IjmdWQuTCqFHt3w_geE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2006-07-14", 
+                     "resigned_on": "2006-09-29", 
+                     "address": {
+                        "region": "Surrey", 
+                        "address_line_1": "34 Winkworth Road", 
+                        "postal_code": "SM7 2QL", 
+                        "locality": "Banstead"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "SPRINGETT, Catherine Mary", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/nNDhcwfCipwzt722qYh96iZbkpY/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2001-03-07", 
+                     "resigned_on": "2001-07-24", 
+                     "address": {
+                        "postal_code": "W5 5NW", 
+                        "locality": "London", 
+                        "address_line_2": "32 Kerrison Road Ealing", 
+                        "address_line_1": "The Coach House"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "WRIGHT, William Bernard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/DrxLHbRyhH7ir9ZfQL-qJe0iZ6A/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1991-05-01", 
+                     "resigned_on": "2000-07-14", 
+                     "address": {
+                        "postal_code": "WD1 4PP", 
+                        "region": "Hertfordshire", 
+                        "address_line_1": "1a Kingsfield Road", 
+                        "address_line_2": "Oxhey", 
+                        "locality": "Watford"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "BAILEY, Harold William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SrN3Dory47krGR40aOkLjeaDkWM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "TR2 5ES", 
+                        "region": "Cornwall", 
+                        "address_line_1": "Weatheroak", 
+                        "address_line_2": "Percuil Portscatho", 
+                        "locality": "Truro"
+                     }, 
+                     "resigned_on": "2002-12-05", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1935
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BRANCH, Malcolm Frederick, Dr", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/I4BzxmjOop-rO25jKvned0iChRs/appointments"
+                        }
+                     }, 
+                     "resigned_on": "1995-11-01", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1939
+                     }, 
+                     "address": {
+                        "postal_code": "PE6 7LW", 
+                        "region": "Cambridgeshire", 
+                        "locality": "Peterborough", 
+                        "address_line_2": "Glinton", 
+                        "address_line_1": "3 Lincoln Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chemical Engineer"
+                  }, 
+                  {
+                     "name": "BURNS, Malcolm", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/TckgVsxh1rlobFC6RQZUyeJjV2s/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Sugar Way", 
+                        "country": "United Kingdom", 
+                        "postal_code": "PE2 9AY", 
+                        "locality": "Peterborough"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-04-07", 
+                     "resigned_on": "2014-11-14", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1971
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chartered Accountant"
+                  }, 
+                  {
+                     "name": "CARTER, Karl Lewis", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bGPHImdR-JEibFf7UZO0915ZA6A/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "PE16 6XG", 
+                        "region": "Cambridgeshire", 
+                        "locality": "Chatteris", 
+                        "address_line_2": "Horseway", 
+                        "address_line_1": "Grebe House"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2001-11-01", 
+                     "resigned_on": "2011-12-21", 
+                     "date_of_birth": {
+                        "year": 1951, 
+                        "month": 10
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Agriculture & Operations Dir"
+                  }, 
+                  {
+                     "name": "CLAYTON, Marie Louise", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/vbCbIYeXhVfjMOTM6LRZxghfK8g/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "PE6 7JL", 
+                        "region": "Peterborough", 
+                        "locality": "Glinton", 
+                        "address_line_2": "North Fen Road", 
+                        "address_line_1": "Balcony House"
+                     }, 
+                     "appointed_on": "2001-11-01", 
+                     "resigned_on": "2002-10-31", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1960
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "COWPER, Jonathan", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/m3NxrqmkXWmfhw_7M7xQL7qcpU4/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Stamford", 
+                        "premises": "Sunset House", 
+                        "country": "England", 
+                        "region": "England", 
+                        "postal_code": "PE9 4AA", 
+                        "address_line_2": "Great Casterton", 
+                        "address_line_1": "Main Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-03-02", 
+                     "resigned_on": "2017-06-30", 
+                     "date_of_birth": {
+                        "year": 1974, 
+                        "month": 8
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Finance Director"
+                  }, 
+                  {
+                     "name": "DAVENPORT, Harvey John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ZpIltCfP4UxTnRz6d6nXKQ699Rs/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1991-11-14", 
+                     "resigned_on": "2009-05-01", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1949
+                     }, 
+                     "address": {
+                        "region": "Cambridgeshire", 
+                        "address_line_1": "Clovercroft Main Street", 
+                        "postal_code": "PE8 5BE", 
+                        "locality": "Glapthorn"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "DE JAEGHER, Gino Daniel Maurice", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/62rl-s0d7jGeCFBEpnmf2-_5yrQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "48", 
+                        "address_line_1": "Holland Villas Road", 
+                        "postal_code": "W14 8DH", 
+                        "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-05-01", 
+                     "resigned_on": "2012-09-30", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1961
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Belgian", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "DORNAN, Timothy John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Xml6Qo7MIefLmOCBrOXvggFghQc/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-09-30", 
+                     "resigned_on": "2012-06-29", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 1
+                     }, 
+                     "address": {
+                        "premises": "Flat 3", 
+                        "address_line_1": "44a New Cavendish Street", 
+                        "postal_code": "W1G 8TR", 
+                        "locality": "London"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "DORNAN, Timothy John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Xml6Qo7MIefLmOCBrOXvggFghQc/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-05-01", 
+                     "resigned_on": "2010-08-31", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 1
+                     }, 
+                     "address": {
+                        "premises": "Flat 3", 
+                        "locality": "London", 
+                        "postal_code": "W1G 8TR", 
+                        "address_line_1": "44a New Cavendish Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Commercial Director"
+                  }, 
+                  {
+                     "name": "FIELD, Kevin Cyril", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/c0HticKqF_skimSC7VQp012RDaQ/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "postal_code": "PE6 7DX", 
+                        "region": "Cambridgeshire", 
+                        "locality": "Peterborough", 
+                        "address_line_2": "Helpston", 
+                        "address_line_1": "Forge Cottage, 34 West Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1995-12-12", 
+                     "resigned_on": "2004-03-15", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1953
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chief Executive"
+                  }, 
+                  {
+                     "name": "FRAMPTON, Paul", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/JCqzIbVg_8v9ugSBmk5MVyK00tw/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-02-12", 
+                     "resigned_on": "2016-08-12", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "locality": "Stamford", 
+                        "premises": "16", 
+                        "country": "United Kingdom", 
+                        "postal_code": "PE9 3PB", 
+                        "address_line_2": "Collyweston", 
+                        "address_line_1": "Collyns Way"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Accountant"
+                  }, 
+                  {
+                     "name": "FRAMPTON, Paul", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/K4JVT-FzSi6ZmDJUB8wVayEfr80/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-09-30", 
+                     "resigned_on": "2013-04-18", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1970
+                     }, 
+                     "address": {
+                        "locality": "Peterborough", 
+                        "premises": "8", 
+                        "country": "United Kingdom", 
+                        "region": "England And Wales", 
+                        "postal_code": "PE8 5EB", 
+                        "address_line_2": "Woodnewton", 
+                        "address_line_1": "Main Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Accountant"
+                  }, 
+                  {
+                     "name": "FRANCIS, William Clive", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Aoq5-dvLR_6MzPl6J854JccvCRw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "region": "Lincolnshire", 
+                        "locality": "Stamford", 
+                        "postal_code": "PE9 2ZB", 
+                        "address_line_1": "36 Gresley Drive"
+                     }, 
+                     "appointed_on": "1991-11-14", 
+                     "resigned_on": "1999-11-08", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 3
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director/Personnel"
+                  }, 
+                  {
+                     "name": "JACKSON, Peter John", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/6LKCMKdNxemSp577GEmR99ms2Mw/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1987-03-30", 
+                     "resigned_on": "2001-11-01", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1947
+                     }, 
+                     "address": {
+                        "address_line_2": "Southorp", 
+                        "region": "Lincolnshire", 
+                        "address_line_1": "Boundary House", 
+                        "postal_code": "PE9 3BX", 
+                        "locality": "Stamford"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "LANGLANDS, David Robin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/59BJRStQpQHIj4f-uexI1KodJQk/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2003-07-01", 
+                     "resigned_on": "2010-01-08", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1965
+                     }, 
+                     "address": {
+                        "address_line_2": "Elton", 
+                        "address_line_1": "7 School Lane", 
+                        "postal_code": "PE8 6RS", 
+                        "locality": "Peterborough"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Finance Director"
+                  }, 
+                  {
+                     "name": "LEE, Matthew James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/z6Ka1632NU1jVxgYBOW1He-a-tE/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Royston", 
+                        "premises": "Tucks Cottage", 
+                        "country": "United Kingdom", 
+                        "region": "Herts", 
+                        "postal_code": "SG8 0NA", 
+                        "address_line_2": "Steeple Morden", 
+                        "address_line_1": "25 The Green"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-11-21", 
+                     "resigned_on": "2017-01-31", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1976
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Commercial & Supply Chain Director"
+                  }, 
+                  {
+                     "name": "MOON, Stephen Derek", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Dwn1xk9YId9U10-ki1Uas1OSLYk/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Deeside", 
+                        "premises": "Milford House", 
+                        "country": "United Kingdom", 
+                        "postal_code": "CH5 3EH", 
+                        "address_line_2": "Hawarden", 
+                        "address_line_1": "Groomsdale Lane"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-08-31", 
+                     "resigned_on": "2014-04-07", 
+                     "date_of_birth": {
+                        "year": 1968, 
+                        "month": 3
+                     }, 
+                     "nationality": "Scottish", 
+                     "officer_role": "director", 
+                     "occupation": "Director  "
+                  }, 
+                  {
+                     "name": "PIKE, Richard Neil", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/GClacwu4hThgTpN9y0P3wPTVuPA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Sugar Way", 
+                        "country": "United Kingdom", 
+                        "postal_code": "PE2 9AY", 
+                        "locality": "Peterborough"
+                     }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2010-01-08", 
+                     "resigned_on": "2016-03-11", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 9
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Accountant"
+                  }, 
+                  {
+                     "name": "RANKIN, Richard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bJG9psPgYp3qSmZaAxvGGkVClgM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Manor Farm Lane", 
+                        "region": "Lincolnshire", 
+                        "address_line_1": "Broadholme", 
+                        "postal_code": "PE9 4LA", 
+                        "locality": "Essendine"
+                     }, 
+                     "appointed_on": "2006-07-06", 
+                     "resigned_on": "2009-05-01", 
+                     "date_of_birth": {
+                        "year": 1951, 
+                        "month": 6
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "RHODES, Graham Michael", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/zbJSR9JuF4s3Z4QH5kOx3gOGDtA/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Weybridge", 
+                        "premises": "4", 
+                        "country": "United Kingdom", 
+                        "region": "Surrey", 
+                        "postal_code": "KT13 8UU", 
+                        "address_line_1": "Park Drive"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-04-29", 
+                     "resigned_on": "2014-10-31", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1962
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "ROWLANDS, Michele", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/kyylf2sh7XUzTUskEirvmiyCuWw/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2006-02-16", 
+                     "resigned_on": "2014-03-31", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1964
+                     }, 
+                     "address": {
+                        "region": "Lincolnshire", 
+                        "address_line_1": "5 Dickens Close", 
+                        "postal_code": "PE6 9RT", 
+                        "locality": "Langtoft"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Group Hr Director"
+                  }, 
+                  {
+                     "name": "STRAIN, Terence", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SoAuFueaF9gbnnbNoxiBqf6Q4lI/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1999-07-01", 
+                     "resigned_on": "2001-11-01", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 3
+                     }, 
+                     "address": {
+                        "postal_code": "PE7 3UW", 
+                        "region": "Cambridgeshire", 
+                        "locality": "Peterborough", 
+                        "address_line_2": "Alwalton", 
+                        "address_line_1": "2 Millview"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Finance Director"
+                  }
+               ], 
                "isIncome": false, 
-               "amount": 1120, 
-               "status": "company, registration 315158", 
+               "amount": 0, 
+               "link": "https://beta.companieshouse.gov.uk/company/00315158", 
                "pretty": "British Sugar", 
                "address": "Sugar Way, Peterborough PE2 9AY", 
                "item_id": "0001", 
                "donor": "British Sugar", 
                "category_id": 4, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/00315158/filing-history", 
+                     "charges": "/company/00315158/charges", 
+                     "self": "/company/00315158", 
+                     "officers": "/company/00315158/officers", 
+                     "persons_with_significant_control": "/company/00315158/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "10810"
+                  ], 
+                  "etag": "022660a5eba6dcd7a5fa75d9e68841922ab9daeb", 
+                  "registered_office_address": {
+                     "postal_code": "W1K 4QY", 
+                     "address_line_1": "Weston Centre", 
+                     "address_line_2": "10 Grosvenor Street", 
+                     "locality": "London"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2018-02-12", 
+                     "last_made_up_to": "2017-01-29", 
+                     "next_made_up_to": "2018-01-29", 
+                     "overdue": false
+                  }, 
+                  "company_number": "00315158", 
+                  "last_full_members_list_date": "2016-01-29", 
+                  "date_of_creation": "1936-06-12", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2018-03-15", 
+                     "next_made_up_to": "2017-09-15", 
+                     "last_accounts": {
+                        "period_start_on": "2015-09-13", 
+                        "type": "full", 
+                        "made_up_to": "2016-09-17", 
+                        "period_end_on": "2016-09-17"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2018-03-15", 
+                        "period_start_on": "2016-09-18", 
+                        "period_end_on": "2017-09-15", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "15", 
+                        "month": "09"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "BRITISH SUGAR PLC", 
+                  "company_status": "active", 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "1936-06-12", 
+                        "ceased_on": "1982-05-04", 
+                        "name": "BRITISH SUGAR CORPORATION LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "type": "plc", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 1120, 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [
@@ -302,14 +1254,15 @@
          ], 
          "category_description": "Gifts", 
          "category_id": 4, 
-         "category_amount": 1120, 
+         "category_amount": 0, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -320,9 +1273,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -333,6 +1287,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Flat in London: (i) and (ii). (Registered 6 June 2015; updated 22 July 2015)", 
+               "Flat in London": "(i) and (ii). (Registered 6 June 2015; updated 22 July 2015)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Flat in London: (i) and (ii). (Registered 6 June 2015; updated 22 July 2015)", 
@@ -361,8 +1323,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 10000, 
          "raw_items": [
@@ -376,8 +1336,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "atkins", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": null, 
@@ -387,7 +1348,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": null, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "victoria atkins", 
          "category_donations": 0, 
@@ -395,8 +1356,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "atkins", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": null, 
@@ -406,13 +1368,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": null, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "victoria atkins", 
          "category_donations": 0, 
          "first": "victoria"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Barrister, currently not practising. (Registered 06 June 2015)", 
+               "Barrister, currently not practising. (Registered 06 June 2015)": "Barrister, currently not practising. (Registered 06 June 2015)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Barrister, currently not practising. (Registered 06 June 2015)", 
@@ -428,8 +1398,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -442,9 +1410,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -455,6 +1424,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Brother, James Atkins, is Managing Director of Strategy, Business Development and Digital for Europe, the Middle East and Africa, and Deputy Chairman of Public Affairs for Europe, the Middle East and Africa at Burson-Marsteller. (Registered 06 June 2015)", 
+               "Brother, James Atkins, is Managing Director of Strategy, Business Development and Digital for Europe, the Middle East and Africa, and Deputy Chairman of Public Affairs for Europe, the Middle East and Africa at Burson-Marsteller. (Registered 06 June 2015)": "Brother, James Atkins, is Managing Director of Strategy, Business Development and Digital for Europe, the Middle East and Africa, and Deputy Chairman of Public Affairs for Europe, the Middle East and Africa at Burson-Marsteller. (Registered 06 June 2015)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Brother, James Atkins, is Managing Director of Strategy, Business Development and Digital for Europe, the Middle East and Africa, and Deputy Chairman of Public Affairs for Europe, the Middle East and Africa at Burson-Marsteller. (Registered 06 June 2015)", 
@@ -470,8 +1447,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [
@@ -567,7 +1542,7 @@
    "wrans_subjects": "Garages and Petrol Stations: Prices, Mink: Lincolnshire, Borders, Glyphosate: Safety, Schools: Finance", 
    "member_id": "41708", 
    "constituency": "Louth and Horncastle", 
-   "mp_gifts": 1120, 
+   "mp_gifts": 0, 
    "commitees": [
       "Home Affairs Committee", 
       "Draft Investigatory Powers Bill (Joint Committee)"

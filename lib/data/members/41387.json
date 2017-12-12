@@ -273,9 +273,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -286,6 +287,18 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Unite the UnionAddress of donor: 128, Theobalds Road, Holborn, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
+               "(Registered 07 July 2017)": "(Registered 07 July 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a34,000", 
+               "Name of donor": "Unite the Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "128, Theobalds Road, Holborn, London WC1X 8TN"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128, Theobalds Road, Holborn, London WC1X 8TNAmount of donation or nature and value if donation in kind: \u00a34,000Donor status: trade union(Registered 07 July 2017)", 
@@ -293,19 +306,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "07/07/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 4000, 
+               "link": null, 
                "pretty": "Unite the Union", 
                "address": "128, Theobalds Road, Holborn, London WC1X 8TN", 
                "item_id": "0001", 
                "donor": "Unite the Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unite the Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -318,9 +338,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -331,9 +352,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -344,28 +366,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: 150 Strand, London WC2R 1JAEstimate of the probable value (or amount of any donation): Flights \u00a3636; accommodation \u00a3476; total \u00a31,112Destination of visit: GibraltarDates of visit: 7 - 11 September 2017Purpose of visit: Delegation from the All-Party Parliamentary Group for Gibraltar to attend the National Day Celebrations, briefings and visit Parliament.(Registered 10 October 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Flights \u00a3636; accommodation \u00a3476; total \u00a31,112", 
+               "(Registered 10 October 2017)": "(Registered 10 October 2017)", 
+               "Purpose of visit": "Delegation from the All-Party Parliamentary Group for Gibraltar to attend the National Day Celebrations, briefings and visit Parliament.", 
+               "Destination of visit": "Gibraltar", 
+               "Dates of visit": "7 - 11 September 2017", 
+               "Name of donor": "HM Government of Gibraltar", 
+               "Address of donor": "150 Strand, London WC2R 1JA"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 636, 
          "items": [
             {
                "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: 150 Strand, London WC2R 1JAEstimate of the probable value (or amount of any donation): Flights \u00a3636; accommodation \u00a3476; total \u00a31,112Destination of visit: GibraltarDates of visit: 7 - 11 September 2017Purpose of visit: Delegation from the All-Party Parliamentary Group for Gibraltar to attend the National Day Celebrations, briefings and visit Parliament.(Registered 10 October 2017)", 
-               "dates": "7 - 11 September 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "10/10/2017", 
                "destination": "Gibraltar", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 636, 
+               "link": null, 
                "purpose": "Delegation from the All-Party Parliamentary Group for Gibraltar to attend the National Day Celebrations, briefings and visit Parliament.", 
                "pretty": "HM Government of Gibraltar", 
                "address": "150 Strand, London WC2R 1JA", 
                "item_id": "0001", 
                "donor": "HM Government of Gibraltar", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "HM Government of Gibraltar", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 636, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -378,9 +421,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -391,9 +435,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -405,8 +450,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "hepburn", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -416,7 +462,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1959, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr stephen hepburn", 
          "category_donations": 0, 
@@ -424,8 +470,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "hepburn", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 12, 
@@ -435,16 +482,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1959, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr stephen hepburn", 
          "category_donations": 0, 
          "first": "stephen"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -455,9 +503,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -468,9 +517,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -593,11 +643,11 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1954
+                        "year": 1954, 
+                        "month": 10
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "South Tyneside Councillor"
                   }, 
                   {
@@ -618,8 +668,8 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2011-09-22", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1973
+                        "year": 1973, 
+                        "month": 11
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -655,17 +705,17 @@
                            "appointments": "/officers/LQNmN37ZOz0YkvnBEl2HN9sCRU8/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Tyne & Wear", 
-                        "address_line_1": "6 Lyndhurst Grove", 
-                        "postal_code": "NE9 6AU", 
-                        "locality": "Gateshead"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1995-12-04", 
                      "date_of_birth": {
                         "month": 10, 
                         "year": 1958
+                     }, 
+                     "address": {
+                        "region": "Tyne & Wear", 
+                        "address_line_1": "6 Lyndhurst Grove", 
+                        "postal_code": "NE9 6AU", 
+                        "locality": "Gateshead"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -678,18 +728,18 @@
                            "appointments": "/officers/2gxFdOdia885B9fc3iZm7NMk2Cs/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-06-27", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 10
-                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne & Wear", 
                         "address_line_1": "Burdon Road", 
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-06-27", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -705,8 +755,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1999-07-01", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1947
                      }, 
                      "address": {
                         "address_line_2": "Bensham", 
@@ -726,16 +776,16 @@
                            "appointments": "/officers/owZpLWKl7NPQXV1xB5zmFHrUf6Y/appointments"
                         }
                      }, 
-                     "appointed_on": "2003-03-13", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1952
-                     }, 
                      "address": {
                         "region": "Northumberland", 
                         "locality": "Stocksfield", 
                         "postal_code": "NE43 7PQ", 
                         "address_line_1": "42 Apperley Road"
+                     }, 
+                     "appointed_on": "2003-03-13", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1952
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -748,12 +798,6 @@
                            "appointments": "/officers/NmtwZNb-Ep1c2yQfXqAo8Gv2cgo/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "year": 1981, 
-                        "month": 5
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -761,6 +805,12 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
+                     }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1981, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -773,17 +823,17 @@
                            "appointments": "/officers/kyKgnzCh7KKp9Pep6zq7-8g4GGo/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2005-06-23", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1936
-                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "58 Lambley Crescent", 
                         "postal_code": "NE31 2ND", 
                         "locality": "Hebburn"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2005-06-23", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1936
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -796,12 +846,6 @@
                            "appointments": "/officers/Wq3Hf7BxTi-I9ylf6BtvRTtf-QA/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-03-14", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1969
-                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
@@ -809,8 +853,14 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-03-14", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 11
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Local Government Officer"
                   }, 
                   {
@@ -833,8 +883,8 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -844,12 +894,6 @@
                            "appointments": "/officers/0hP99wslOBtKA2vpRVTdn1xXClQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2008-06-19", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1955
-                     }, 
                      "address": {
                         "premises": "59", 
                         "region": "Tyne And Wear", 
@@ -857,8 +901,14 @@
                         "postal_code": "NE34 9DD", 
                         "address_line_1": "Simonside Hall"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2008-06-19", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1955
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Caseworker"
                   }, 
                   {
@@ -868,20 +918,20 @@
                            "appointments": "/officers/KpFVVcS3q3mQAznPz1aVwqkxJLM/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-06-13", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 4
-                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "26 Sullivan Walk", 
                         "postal_code": "NE31 1YN", 
                         "locality": "Hebburn"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-06-13", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 4
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -890,6 +940,14 @@
                         "officer": {
                            "appointments": "/officers/nyGDJR3vyZxgAwabKrIxk-D74XY/appointments"
                         }
+                     }, 
+                     "address": {
+                        "locality": "Sunderland", 
+                        "premises": "Civic Centre", 
+                        "country": "Uk", 
+                        "region": "Tyne & Wear", 
+                        "postal_code": "SR2 7DN", 
+                        "address_line_1": "Burdon Road"
                      }, 
                      "former_names": [
                         {
@@ -901,14 +959,6 @@
                      "date_of_birth": {
                         "year": 1942, 
                         "month": 12
-                     }, 
-                     "address": {
-                        "locality": "Sunderland", 
-                        "premises": "Civic Centre", 
-                        "country": "Uk", 
-                        "region": "Tyne & Wear", 
-                        "postal_code": "SR2 7DN", 
-                        "address_line_1": "Burdon Road"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -924,8 +974,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2009-11-12", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "Civic Centre", 
@@ -945,12 +995,6 @@
                            "appointments": "/officers/e1leRrEl1SjPISdu_zsnYEu8eOw/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1970
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -958,6 +1002,12 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1002,8 +1052,8 @@
                      }, 
                      "appointed_on": "2008-05-21", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1958
+                        "year": 1958, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "St Michaels", 
@@ -1023,12 +1073,6 @@
                            "appointments": "/officers/0D6aR1TwQOD9IizJJuIUT7W0oRc/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2011-06-24", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1953
-                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
@@ -1036,8 +1080,14 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2011-06-24", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1953
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1047,12 +1097,6 @@
                            "appointments": "/officers/gzeyOeH4CylZLyUnuCVZK8V-BBU/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2011-06-24", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 12
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -1060,6 +1104,12 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
+                     }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2011-06-24", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1948
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1075,8 +1125,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2001-07-26", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1954
+                        "year": 1954, 
+                        "month": 3
                      }, 
                      "address": {
                         "address_line_2": "South Hylton", 
@@ -1085,8 +1135,8 @@
                         "postal_code": "SR4 0NW", 
                         "address_line_1": "5 Floral Dene"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Publican"
                   }, 
                   {
@@ -1171,13 +1221,6 @@
                            "appointments": "/officers/cPxogAbCTDPf0BN1iFNUKVYvWQY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-09-09", 
-                     "resigned_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1951
-                     }, 
                      "address": {
                         "address_line_2": "Highfields", 
                         "region": "Tyne & Wear", 
@@ -1185,8 +1228,15 @@
                         "postal_code": "NE12 6QJ", 
                         "locality": "Killingworth"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-09-09", 
+                     "resigned_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1951
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1196,19 +1246,19 @@
                            "appointments": "/officers/b89he1Vke4l3fKB3y6wlnylJfZk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1994-05-18", 
-                     "resigned_on": "2002-06-13", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 6
-                     }, 
                      "address": {
                         "address_line_2": "East End", 
                         "region": "Tyne & Wear", 
                         "address_line_1": "23 Drury Lane", 
                         "postal_code": "SR1 2AW", 
                         "locality": "Sunderland"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1994-05-18", 
+                     "resigned_on": "2002-06-13", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1946
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1221,13 +1271,6 @@
                            "appointments": "/officers/Step-dOu7to6_ky0gdQcEcdS9yY/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2008-06-19", 
-                     "resigned_on": "2011-06-24", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1939
-                     }, 
                      "address": {
                         "premises": "The Willows", 
                         "region": "Tyne And Wear", 
@@ -1235,8 +1278,15 @@
                         "postal_code": "DH5 9JS", 
                         "locality": "Hetton-Le-Hole"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-06-19", 
+                     "resigned_on": "2011-06-24", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1939
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -1250,8 +1300,8 @@
                      "appointed_on": "2004-11-11", 
                      "resigned_on": "2008-06-19", 
                      "date_of_birth": {
-                        "year": 1946, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1946
                      }, 
                      "address": {
                         "region": "Tyne & Wear", 
@@ -1274,8 +1324,8 @@
                      "appointed_on": "2007-06-21", 
                      "resigned_on": "2013-06-21", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 2
                      }, 
                      "address": {
                         "region": "Tyne & Wear", 
@@ -1294,18 +1344,18 @@
                            "appointments": "/officers/i3yBa_QfFwBuLT5SCHKQGv_2z_0/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "Tyne & Wear", 
+                        "locality": "North Shields", 
+                        "postal_code": "NE29 0NR", 
+                        "address_line_1": "6 Campville"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2003-09-18", 
                      "resigned_on": "2005-06-23", 
                      "date_of_birth": {
                         "year": 1952, 
                         "month": 2
-                     }, 
-                     "address": {
-                        "region": "Tyne & Wear", 
-                        "locality": "North Shields", 
-                        "postal_code": "NE29 0NR", 
-                        "address_line_1": "6 Campville"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1332,8 +1382,8 @@
                         "year": 1940, 
                         "month": 11
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1343,12 +1393,6 @@
                            "appointments": "/officers/hSVWWytqMGVOxymR73KrzKfhmf8/appointments"
                         }
                      }, 
-                     "appointed_on": "1996-08-05", 
-                     "resigned_on": "2003-06-12", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1944
-                     }, 
                      "address": {
                         "postal_code": "NE5 5NF", 
                         "region": "Tyne & Wear", 
@@ -1356,15 +1400,21 @@
                         "address_line_2": "Westerhope", 
                         "locality": "Newcastle Upon Tyne"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "1996-08-05", 
+                     "resigned_on": "2003-06-12", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 8
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01992867", 
-               "pretty": "stephen hepburn mr stephen hepburn", 
+               "pretty": "Mr Stephen Hepburn", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1444,6 +1494,12 @@
                            "appointments": "/officers/d8HdQETTRyqgFrQ-dNqEo9GMX-0/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 10
+                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "country": "Uk", 
@@ -1451,14 +1507,8 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 10
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Business Consultant"
                   }, 
                   {
@@ -1477,8 +1527,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-06-21", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1491,6 +1541,11 @@
                            "appointments": "/officers/40tAhpY2Zg0LxF5pgIdH1WA25bM/appointments"
                         }
                      }, 
+                     "appointed_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 1
+                     }, 
                      "address": {
                         "address_line_2": "Wear View", 
                         "region": "Tyne & Wear", 
@@ -1498,13 +1553,8 @@
                         "postal_code": "SR5 5TY", 
                         "address_line_1": "49 Spa Well Drive"
                      }, 
-                     "appointed_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1960
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Joiner"
                   }, 
                   {
@@ -1517,8 +1567,8 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1954
+                        "year": 1954, 
+                        "month": 10
                      }, 
                      "address": {
                         "locality": "Sunderland", 
@@ -1547,11 +1597,11 @@
                      }, 
                      "appointed_on": "2001-07-26", 
                      "date_of_birth": {
-                        "year": 1960, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1960
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Bank Officer"
                   }, 
                   {
@@ -1571,11 +1621,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2004-07-24", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1948
+                        "year": 1948, 
+                        "month": 1
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Business Consultant"
                   }, 
                   {
@@ -1610,20 +1660,20 @@
                            "appointments": "/officers/04wZijvU-exWVfbVFgGYo4lPIn8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2008-06-19", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 7
-                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "27 West Stevenson Street", 
                         "postal_code": "NE33 4AG", 
                         "locality": "South Shields"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-06-19", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1947
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1633,20 +1683,20 @@
                            "appointments": "/officers/LQNmN37ZOz0YkvnBEl2HN9sCRU8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1995-12-04", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1958
-                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "6 Lyndhurst Grove", 
                         "postal_code": "NE9 6AU", 
                         "locality": "Gateshead"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1995-12-04", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1958
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Trade Union Officer"
                   }, 
                   {
@@ -1656,11 +1706,6 @@
                            "appointments": "/officers/G9JathPSHK52jvv4upLvsvBXHic/appointments"
                         }
                      }, 
-                     "appointed_on": "2007-06-21", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 9
-                     }, 
                      "address": {
                         "locality": "Gateshead", 
                         "premises": "74", 
@@ -1669,8 +1714,13 @@
                         "address_line_2": "Leam Lane", 
                         "address_line_1": "Glynfellis"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2007-06-21", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 9
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -1707,8 +1757,8 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2011-06-24", 
                      "date_of_birth": {
-                        "year": 1950, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1950
                      }, 
                      "address": {
                         "address_line_2": "Burdon Road", 
@@ -1717,8 +1767,8 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Councillor With Gateshead Mbc"
                   }, 
                   {
@@ -1728,18 +1778,18 @@
                            "appointments": "/officers/i2466TyAgZTLUwo_kxg5mmX6oSc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1999-07-01", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1947
-                     }, 
                      "address": {
                         "address_line_2": "Bensham", 
                         "region": "Tyne & Wear", 
                         "address_line_1": "7 Woodbine Terrace", 
                         "postal_code": "NE8 1RU", 
                         "locality": "Gateshead"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1999-07-01", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1947
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1763,8 +1813,8 @@
                         "postal_code": "NE43 7PQ", 
                         "address_line_1": "42 Apperley Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1774,6 +1824,12 @@
                            "appointments": "/officers/NmtwZNb-Ep1c2yQfXqAo8Gv2cgo/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1981
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -1781,12 +1837,6 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1981
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1802,8 +1852,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2005-06-23", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1936
+                        "year": 1936, 
+                        "month": 10
                      }, 
                      "address": {
                         "region": "Tyne & Wear", 
@@ -1811,8 +1861,8 @@
                         "postal_code": "NE31 2ND", 
                         "locality": "Hebburn"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -1822,12 +1872,6 @@
                            "appointments": "/officers/qA67VcII11br9uOIWRgGPTYfNBc/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "year": 1952, 
-                        "month": 5
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -1836,8 +1880,14 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1952
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1879,8 +1929,8 @@
                      }, 
                      "appointed_on": "2007-06-21", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1953
+                        "year": 1953, 
+                        "month": 1
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1905,8 +1955,8 @@
                         "postal_code": "NE31 1YN", 
                         "address_line_1": "26 Sullivan Walk"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1916,6 +1966,12 @@
                            "appointments": "/officers/7k9IVF9YThixbjq1fSuM3n_XsO4/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 3
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -1924,14 +1980,8 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1953
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "School Improvement Officer"
                   }, 
                   {
@@ -1951,11 +2001,11 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2009-06-25", 
                      "date_of_birth": {
-                        "year": 1951, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1951
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Cuncillor"
                   }, 
                   {
@@ -1965,6 +2015,14 @@
                            "appointments": "/officers/nyGDJR3vyZxgAwabKrIxk-D74XY/appointments"
                         }
                      }, 
+                     "address": {
+                        "locality": "Sunderland", 
+                        "premises": "Civic Centre", 
+                        "country": "Uk", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "SR2 7DN", 
+                        "address_line_1": "Burdon Road"
+                     }, 
                      "former_names": [
                         {
                            "surname": "WORTHINGTON"
@@ -1973,16 +2031,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1942
-                     }, 
-                     "address": {
-                        "locality": "Sunderland", 
-                        "premises": "Civic Centre", 
-                        "country": "Uk", 
-                        "region": "Tyne And Wear", 
-                        "postal_code": "SR2 7DN", 
-                        "address_line_1": "Burdon Road"
+                        "year": 1942, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1995,18 +2045,18 @@
                            "appointments": "/officers/nVxcEOXkgEUGdvTDOiTmyaQhR7I/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-11-12", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 11
+                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
                         "address_line_1": "Burdon Road", 
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-11-12", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1967
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2019,13 +2069,6 @@
                            "appointments": "/officers/8N4sIVSBU2rBRJ0lVmFRNQh5rVM/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Cleadon Village", 
-                        "region": "Tyne And Wear", 
-                        "address_line_1": "20 Windermere", 
-                        "postal_code": "SR6 7QQ", 
-                        "locality": "Sunderland"
-                     }, 
                      "former_names": [
                         {
                            "surname": "HUMBY NEE SUMNER"
@@ -2034,8 +2077,15 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2004-03-11", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 11
+                     }, 
+                     "address": {
+                        "address_line_2": "Cleadon Village", 
+                        "region": "Tyne And Wear", 
+                        "address_line_1": "20 Windermere", 
+                        "postal_code": "SR6 7QQ", 
+                        "locality": "Sunderland"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2048,18 +2098,18 @@
                            "appointments": "/officers/aYKUvuzNTak31-7esWKJr9irjwo/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-06-24", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
                         "locality": "Sunderland", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2010-06-24", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1935
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2086,8 +2136,8 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -2105,8 +2155,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1963
                      }, 
                      "address": {
                         "locality": "Sunderland", 
@@ -2116,8 +2166,8 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -2127,12 +2177,6 @@
                            "appointments": "/officers/2mgf7At97euI8kmIjeUQvx_pLHw/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1961
-                     }, 
                      "address": {
                         "locality": "Consett", 
                         "premises": "10", 
@@ -2140,6 +2184,12 @@
                         "postal_code": "DH8 0UF", 
                         "address_line_2": "Shotley Br", 
                         "address_line_1": "Goodwood Close"
+                     }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "year": 1961, 
+                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2152,12 +2202,6 @@
                            "appointments": "/officers/nBHoOstqtWgrRq6L9rEJ-Ctdgsc/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 6
-                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "country": "Uk", 
@@ -2165,8 +2209,14 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "nationality": "English", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 6
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "English", 
                      "occupation": "None"
                   }, 
                   {
@@ -2190,8 +2240,8 @@
                         "year": 1944, 
                         "month": 6
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -2227,8 +2277,8 @@
                      }, 
                      "appointed_on": "2008-05-21", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1958
+                        "year": 1958, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "St Michaels", 
@@ -2251,8 +2301,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-06-24", 
                      "date_of_birth": {
-                        "year": 1953, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1953
                      }, 
                      "address": {
                         "locality": "Sunderland", 
@@ -2262,15 +2312,15 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01972656", 
-               "pretty": "stephen hepburn mr stephen hepburn", 
+               "pretty": "Mr Stephen Hepburn", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -2359,8 +2409,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1946
+                        "year": 1946, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2419,6 +2469,12 @@
                            "appointments": "/officers/GlhzFSOmAtqtDjmKgZmk-GF8Ejk/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1954
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -2426,12 +2482,6 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2466,12 +2516,6 @@
                            "appointments": "/officers/GXhmGk1BN-7Ast2MlXK_DVYuK0c/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-07-24", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 1
-                     }, 
                      "address": {
                         "address_line_2": "Gosforth", 
                         "region": "Tyne And Wear", 
@@ -2479,8 +2523,14 @@
                         "postal_code": "NE3 4LW", 
                         "address_line_1": "3 Bloomsbury Court"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-07-24", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 1
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Business Consultant"
                   }, 
                   {
@@ -2490,6 +2540,12 @@
                            "appointments": "/officers/fZyuz-dTyd2qBI-4bbrGbDfYlJQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1973, 
+                        "month": 11
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -2497,12 +2553,6 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1973
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2515,20 +2565,20 @@
                            "appointments": "/officers/04wZijvU-exWVfbVFgGYo4lPIn8/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Tyne & Wear", 
-                        "address_line_1": "27 West Stevenson Street", 
-                        "postal_code": "NE33 4AG", 
-                        "locality": "South Shields"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2008-06-19", 
                      "date_of_birth": {
                         "month": 7, 
                         "year": 1947
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "Tyne & Wear", 
+                        "address_line_1": "27 West Stevenson Street", 
+                        "postal_code": "NE33 4AG", 
+                        "locality": "South Shields"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -2538,20 +2588,20 @@
                            "appointments": "/officers/LQNmN37ZOz0YkvnBEl2HN9sCRU8/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Tyne & Wear", 
-                        "locality": "Gateshead", 
-                        "postal_code": "NE9 6AU", 
-                        "address_line_1": "6 Lyndhurst Grove"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1995-12-04", 
                      "date_of_birth": {
                         "month": 10, 
                         "year": 1958
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "Tyne & Wear", 
+                        "locality": "Gateshead", 
+                        "postal_code": "NE9 6AU", 
+                        "address_line_1": "6 Lyndhurst Grove"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Trade Union Officer"
                   }, 
                   {
@@ -2561,11 +2611,6 @@
                            "appointments": "/officers/G9JathPSHK52jvv4upLvsvBXHic/appointments"
                         }
                      }, 
-                     "appointed_on": "2007-06-21", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1956
-                     }, 
                      "address": {
                         "locality": "Gateshead", 
                         "premises": "74", 
@@ -2573,6 +2618,11 @@
                         "postal_code": "NE10 8RJ", 
                         "address_line_2": "Leam Lane", 
                         "address_line_1": "Glynfellis"
+                     }, 
+                     "appointed_on": "2007-06-21", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1956
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2585,6 +2635,12 @@
                            "appointments": "/officers/NJ-NdSPxYVbNIxYEMxj9SUdTNNA/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "year": 1939, 
+                        "month": 6
+                     }, 
                      "address": {
                         "premises": "45", 
                         "region": "Tyne And Wear", 
@@ -2592,14 +2648,8 @@
                         "postal_code": "NE9 6EN", 
                         "address_line_1": "Coleridge Avenue"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "year": 1939, 
-                        "month": 6
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Councillor Director"
                   }, 
                   {
@@ -2609,6 +2659,12 @@
                            "appointments": "/officers/HhdQZiGhGvvPjTFJ8dpbO_Sjb30/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-06-24", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1950
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "country": "Uk", 
@@ -2617,14 +2673,8 @@
                         "address_line_2": "Burdon Road", 
                         "address_line_1": "Civic Centre"
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-06-24", 
-                     "date_of_birth": {
-                        "year": 1950, 
-                        "month": 10
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Councillor With Gateshead Mbc"
                   }, 
                   {
@@ -2634,18 +2684,18 @@
                            "appointments": "/officers/i2466TyAgZTLUwo_kxg5mmX6oSc/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1999-07-01", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 10
+                     }, 
                      "address": {
                         "address_line_2": "Bensham", 
                         "region": "Tyne & Wear", 
                         "address_line_1": "7 Woodbine Terrace", 
                         "postal_code": "NE8 1RU", 
                         "locality": "Gateshead"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1999-07-01", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 10
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2658,16 +2708,16 @@
                            "appointments": "/officers/owZpLWKl7NPQXV1xB5zmFHrUf6Y/appointments"
                         }
                      }, 
+                     "appointed_on": "2003-03-13", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1952
+                     }, 
                      "address": {
                         "region": "Northumberland", 
                         "address_line_1": "42 Apperley Road", 
                         "postal_code": "NE43 7PQ", 
                         "locality": "Stocksfield"
-                     }, 
-                     "appointed_on": "2003-03-13", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1952
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2680,6 +2730,12 @@
                            "appointments": "/officers/NmtwZNb-Ep1c2yQfXqAo8Gv2cgo/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1981
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -2687,12 +2743,6 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1981
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2705,17 +2755,17 @@
                            "appointments": "/officers/kyKgnzCh7KKp9Pep6zq7-8g4GGo/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Tyne & Wear", 
-                        "locality": "Hebburn", 
-                        "postal_code": "NE31 2ND", 
-                        "address_line_1": "58 Lambley Crescent"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2005-06-23", 
                      "date_of_birth": {
                         "month": 10, 
                         "year": 1936
+                     }, 
+                     "address": {
+                        "region": "Tyne & Wear", 
+                        "locality": "Hebburn", 
+                        "postal_code": "NE31 2ND", 
+                        "address_line_1": "58 Lambley Crescent"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2728,6 +2778,12 @@
                            "appointments": "/officers/qA67VcII11br9uOIWRgGPTYfNBc/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1952
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -2735,12 +2791,6 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1952
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2756,8 +2806,8 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2008-06-19", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1955
+                        "year": 1955, 
+                        "month": 6
                      }, 
                      "address": {
                         "premises": "59", 
@@ -2766,8 +2816,8 @@
                         "postal_code": "NE34 9DD", 
                         "locality": "South Shields"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Careworker"
                   }, 
                   {
@@ -2786,8 +2836,8 @@
                      }, 
                      "appointed_on": "2007-06-21", 
                      "date_of_birth": {
-                        "year": 1953, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1953
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2800,17 +2850,17 @@
                            "appointments": "/officers/KpFVVcS3q3mQAznPz1aVwqkxJLM/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-06-13", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1946
+                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "26 Sullivan Walk", 
                         "postal_code": "NE31 1YN", 
                         "locality": "Hebburn"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-06-13", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 4
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2823,6 +2873,12 @@
                            "appointments": "/officers/7k9IVF9YThixbjq1fSuM3n_XsO4/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 3
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -2831,14 +2887,8 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1953
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "School Improvement Officer"
                   }, 
                   {
@@ -2848,18 +2898,18 @@
                            "appointments": "/officers/CWo38MJUjuA-s26b_YXctmf9W5k/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1951
+                     }, 
                      "address": {
                         "premises": "40", 
                         "region": "Tyne And Wear", 
                         "address_line_1": "Cromer Avenue", 
                         "postal_code": "NE9 6UJ", 
                         "locality": "Low Fell"
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1951
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2888,11 +2938,11 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1942
+                        "year": 1942, 
+                        "month": 12
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -2912,11 +2962,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2009-11-12", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 11
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Executive Director"
                   }, 
                   {
@@ -2944,8 +2994,8 @@
                         "year": 1945, 
                         "month": 11
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Teacher"
                   }, 
                   {
@@ -2955,12 +3005,6 @@
                            "appointments": "/officers/aYKUvuzNTak31-7esWKJr9irjwo/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2010-06-24", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1935
-                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
@@ -2968,8 +3012,14 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-06-24", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 9
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -2992,8 +3042,8 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -3033,6 +3083,12 @@
                            "appointments": "/officers/2mgf7At97euI8kmIjeUQvx_pLHw/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1961
+                     }, 
                      "address": {
                         "locality": "Consett", 
                         "premises": "10", 
@@ -3041,14 +3097,8 @@
                         "address_line_2": "Shotley Br", 
                         "address_line_1": "Goodwood Close"
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "year": 1961, 
-                        "month": 8
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Local Government"
                   }, 
                   {
@@ -3058,6 +3108,12 @@
                            "appointments": "/officers/nBHoOstqtWgrRq6L9rEJ-Ctdgsc/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1946
+                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "country": "Uk", 
@@ -3065,14 +3121,8 @@
                         "postal_code": "SR2 7DN", 
                         "locality": "Sunderland"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 6
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "English", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -3082,12 +3132,6 @@
                            "appointments": "/officers/u_OMCvdtnBqvV61WuDZjyS7qdLg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1944
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -3095,6 +3139,12 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 6
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3110,8 +3160,8 @@
                      "country_of_residence": "Great Britain", 
                      "appointed_on": "2009-06-25", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1937
+                        "year": 1937, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "2", 
@@ -3131,11 +3181,6 @@
                            "appointments": "/officers/Wl7W36Uph0lOlI9nWFjfBwpikX4/appointments"
                         }
                      }, 
-                     "appointed_on": "2008-05-21", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1958
-                     }, 
                      "address": {
                         "premises": "St Michaels", 
                         "region": "Tyne And Wear", 
@@ -3143,8 +3188,13 @@
                         "postal_code": "SR2 8JU", 
                         "locality": "Sunderland"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2008-05-21", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1958
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Acting Chief Ex"
                   }, 
                   {
@@ -3154,6 +3204,12 @@
                            "appointments": "/officers/H7etX6fdVvSYq7ZvyjvjguRlDvI/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-06-24", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1953
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -3162,21 +3218,15 @@
                         "postal_code": "S2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-06-24", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1953
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/01990893", 
-               "pretty": "stephen hepburn mr stephen hepburn", 
+               "pretty": "Mr Stephen Hepburn", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -3279,12 +3329,6 @@
                            "appointments": "/officers/GlhzFSOmAtqtDjmKgZmk-GF8Ejk/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1954
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -3292,6 +3336,12 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
+                     }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 10
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3304,6 +3354,12 @@
                            "appointments": "/officers/fZyuz-dTyd2qBI-4bbrGbDfYlJQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1973, 
+                        "month": 11
+                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -3311,12 +3367,6 @@
                         "region": "Tyne And Wear", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "year": 1973, 
-                        "month": 11
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3329,20 +3379,20 @@
                            "appointments": "/officers/04wZijvU-exWVfbVFgGYo4lPIn8/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2008-06-19", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1947
+                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "27 West Stevenson Street", 
                         "postal_code": "NE33 4AG", 
                         "locality": "South Shields"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2008-06-19", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 7
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -3352,20 +3402,20 @@
                            "appointments": "/officers/LQNmN37ZOz0YkvnBEl2HN9sCRU8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1995-12-04", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 10
-                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "6 Lyndhurst Grove", 
                         "postal_code": "NE9 6AU", 
                         "locality": "Gateshead"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1995-12-04", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1958
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Trade Union Officer"
                   }, 
                   {
@@ -3375,6 +3425,12 @@
                            "appointments": "/officers/2gxFdOdia885B9fc3iZm7NMk2Cs/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-06-27", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 10
+                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne & Wear", 
@@ -3382,14 +3438,8 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-06-27", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1946
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -3431,11 +3481,11 @@
                      }, 
                      "appointed_on": "2003-03-13", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1952
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -3445,12 +3495,6 @@
                            "appointments": "/officers/NmtwZNb-Ep1c2yQfXqAo8Gv2cgo/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "year": 1981, 
-                        "month": 5
-                     }, 
                      "address": {
                         "locality": "Sunderland", 
                         "premises": "Civic Centre", 
@@ -3459,8 +3503,14 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1981, 
+                        "month": 5
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Economist"
                   }, 
                   {
@@ -3470,20 +3520,20 @@
                            "appointments": "/officers/kyKgnzCh7KKp9Pep6zq7-8g4GGo/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2005-06-23", 
+                     "date_of_birth": {
+                        "year": 1936, 
+                        "month": 10
+                     }, 
                      "address": {
                         "region": "Tyne & Wear", 
                         "address_line_1": "58 Lambley Crescent", 
                         "postal_code": "NE31 2ND", 
                         "locality": "Hebburn"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2005-06-23", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1936
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -3493,12 +3543,6 @@
                            "appointments": "/officers/Wq3Hf7BxTi-I9ylf6BtvRTtf-QA/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-03-14", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1969
-                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
@@ -3506,8 +3550,14 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-03-14", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1969
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Local Government Officer"
                   }, 
                   {
@@ -3527,11 +3577,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2013-06-27", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 4
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -3591,8 +3641,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2009-11-12", 
                      "date_of_birth": {
-                        "year": 1967, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1967
                      }, 
                      "address": {
                         "premises": "Civic Centre", 
@@ -3601,8 +3651,8 @@
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Executive Director"
                   }, 
                   {
@@ -3612,18 +3662,18 @@
                            "appointments": "/officers/e1leRrEl1SjPISdu_zsnYEu8eOw/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-06-20", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1970
+                     }, 
                      "address": {
                         "premises": "Civic Centre", 
                         "region": "Tyne And Wear", 
                         "locality": "Sunderland", 
                         "postal_code": "SR2 7DN", 
                         "address_line_1": "Burdon Road"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-06-20", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1970
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3636,14 +3686,6 @@
                            "appointments": "/officers/WF9XOBeGGXGBulVHqzs_iq5pcMY/appointments"
                         }
                      }, 
-                     "address": {
-                        "locality": "Sunderland", 
-                        "premises": "Civic Centre", 
-                        "country": "Uk", 
-                        "region": "Tyne And Wear", 
-                        "postal_code": "SR2 7DN", 
-                        "address_line_1": "Burdon Road"
-                     }, 
                      "former_names": [
                         {
                            "surname": "REID"
@@ -3652,8 +3694,16 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1963
+                     }, 
+                     "address": {
+                        "locality": "Sunderland", 
+                        "premises": "Civic Centre", 
+                        "country": "Uk", 
+                        "region": "Tyne And Wear", 
+                        "postal_code": "SR2 7DN", 
+                        "address_line_1": "Burdon Road"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3666,6 +3716,11 @@
                            "appointments": "/officers/Wl7W36Uph0lOlI9nWFjfBwpikX4/appointments"
                         }
                      }, 
+                     "appointed_on": "2008-05-21", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 11
+                     }, 
                      "address": {
                         "premises": "St Michaels", 
                         "region": "Tyne And Wear", 
@@ -3673,13 +3728,8 @@
                         "postal_code": "SR2 8JU", 
                         "address_line_1": "Gray Road"
                      }, 
-                     "appointed_on": "2008-05-21", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 11
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Acting Chief Ex"
                   }, 
                   {
@@ -3692,8 +3742,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-06-24", 
                      "date_of_birth": {
-                        "year": 1953, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1953
                      }, 
                      "address": {
                         "locality": "Sunderland", 
@@ -3739,18 +3789,18 @@
                            "appointments": "/officers/5iIVLmNToF9yMn4f9zse4k8sopg/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-07-26", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 3
+                     }, 
                      "address": {
                         "postal_code": "SR4 0NW", 
                         "region": "Tyne & Wear", 
                         "address_line_1": "5 Floral Dene", 
                         "address_line_2": "South Hylton", 
                         "locality": "Sunderland"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2001-07-26", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1954
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3779,8 +3829,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-06-20", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1942
+                        "year": 1942, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3854,11 +3904,11 @@
                      "appointed_on": "2005-05-18", 
                      "resigned_on": "2011-06-24", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 8
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -3868,6 +3918,13 @@
                            "appointments": "/officers/cPxogAbCTDPf0BN1iFNUKVYvWQY/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-09-09", 
+                     "resigned_on": "2009-06-25", 
+                     "date_of_birth": {
+                        "year": 1951, 
+                        "month": 3
+                     }, 
                      "address": {
                         "address_line_2": "Highfields", 
                         "region": "Tyne & Wear", 
@@ -3875,15 +3932,8 @@
                         "postal_code": "NE12 6QJ", 
                         "locality": "Killingworth"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-09-09", 
-                     "resigned_on": "2009-06-25", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1951
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -3893,19 +3943,19 @@
                            "appointments": "/officers/b89he1Vke4l3fKB3y6wlnylJfZk/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "East End", 
-                        "region": "Tyne & Wear", 
-                        "address_line_1": "23 Drury Lane", 
-                        "postal_code": "SR1 2AW", 
-                        "locality": "Sunderland"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1994-05-18", 
                      "resigned_on": "2002-06-13", 
                      "date_of_birth": {
                         "month": 6, 
                         "year": 1946
+                     }, 
+                     "address": {
+                        "address_line_2": "East End", 
+                        "region": "Tyne & Wear", 
+                        "address_line_1": "23 Drury Lane", 
+                        "postal_code": "SR1 2AW", 
+                        "locality": "Sunderland"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3953,8 +4003,8 @@
                      "appointed_on": "2004-11-11", 
                      "resigned_on": "2008-06-19", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1946
+                        "year": 1946, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3971,8 +4021,8 @@
                      "appointed_on": "2007-06-21", 
                      "resigned_on": "2013-06-21", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1952
                      }, 
                      "address": {
                         "region": "Tyne & Wear", 
@@ -3995,8 +4045,8 @@
                      "appointed_on": "2003-09-18", 
                      "resigned_on": "2005-06-23", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 2
                      }, 
                      "address": {
                         "region": "Tyne & Wear", 
@@ -4029,8 +4079,8 @@
                         "address_line_2": "Jesmond", 
                         "locality": "Newcastle Upon Tyne"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4061,7 +4111,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/02008551", 
-               "pretty": "stephen hepburn mr stephen hepburn", 
+               "pretty": "Mr Stephen Hepburn", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 

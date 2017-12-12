@@ -321,9 +321,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -334,6 +335,26 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: UnisonAddress of donor: 130 Euston Road, London NW1 2AYAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: trade union(Registered 19 June 2017)", 
+               "(Registered 19 June 2017)": "(Registered 19 June 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,000", 
+               "Name of donor": "Unison", 
+               "Donor status": "trade union", 
+               "Address of donor": "130 Euston Road, London NW1 2AY"
+            }, 
+            {
+               "raw_string": "Name of donor: Communication Workers UnionAddress of donor: 150 The Broadway, Wimbledon, London SW19 1RXAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: trade union(Registered 19 June 2017)", 
+               "(Registered 19 June 2017)": "(Registered 19 June 2017)", 
+               "Amount of donation or nature and value if donation in kind": "\u00a33,000", 
+               "Name of donor": "Communication Workers Union", 
+               "Donor status": "trade union", 
+               "Address of donor": "150 The Broadway, Wimbledon, London SW19 1RX"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Name of donor: UnisonAddress of donor: 130 Euston Road, London NW1 2AYAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: trade union(Registered 19 June 2017)", 
@@ -341,15 +362,24 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "19/06/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3000, 
+               "link": null, 
                "pretty": "Unison", 
                "address": "130 Euston Road, London NW1 2AY", 
                "item_id": "0001", 
                "donor": "Unison", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Unison", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Communication Workers UnionAddress of donor: 150 The Broadway, Wimbledon, London SW19 1RXAmount of donation or nature and value if donation in kind: \u00a33,000Donor status: trade union(Registered 19 June 2017)", 
@@ -357,19 +387,26 @@
                "isWealth": false, 
                "nouns": [], 
                "isDonation": true, 
+               "persons": [], 
                "registered": "19/06/2017", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3000, 
+               "link": null, 
                "pretty": "Communication Workers Union", 
                "address": "150 The Broadway, Wimbledon, London SW19 1RX", 
                "item_id": "0002", 
                "donor": "Communication Workers Union", 
                "category_id": 2, 
-               "isGift": false
+               "isGift": false, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Communication Workers Union", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [
@@ -383,9 +420,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -396,9 +434,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -409,9 +448,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -422,9 +462,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -435,9 +476,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -449,8 +491,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "cunningham", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 2, 
@@ -460,7 +503,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1941, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr jim cunningham", 
          "category_donations": 0, 
@@ -468,8 +511,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "cunningham", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 2, 
@@ -479,16 +523,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1941, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "mr jim cunningham", 
          "category_donations": 0, 
          "first": "james"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -499,9 +544,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -512,9 +558,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

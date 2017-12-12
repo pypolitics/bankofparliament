@@ -398,9 +398,10 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "employment", 
          "category_income": 0, 
          "raw_items": [], 
@@ -411,9 +412,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -424,9 +426,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -437,9 +440,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -450,28 +454,49 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Public Diplomacy Council of CataloniaAddress of donor: Casa de les Punxes, Av. Diagonal, 418, 1r, 2a, 08037 Barcelona, Catalonia, SpainEstimate of the probable value (or amount of any donation): Hotel with an estimated value of \u00a3600; flights with an estimated value of \u00a3100; total \u00a3700Destination of visit: BarcelonaDates of visit: 28 September - 2 October 2017Purpose of visit: Fact finding mission.(Registered 23 October 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Hotel with an estimated value of \u00a3600; flights with an estimated value of \u00a3100; total \u00a3700", 
+               "(Registered 23 October 2017)": "(Registered 23 October 2017)", 
+               "Purpose of visit": "Fact finding mission.", 
+               "Destination of visit": "Barcelona", 
+               "Dates of visit": "28 September - 2 October 2017", 
+               "Name of donor": "Public Diplomacy Council of Catalonia", 
+               "Address of donor": "Casa de les Punxes, Av. Diagonal, 418, 1r, 2a, 08037 Barcelona, Catalonia, Spain"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 600, 
          "items": [
             {
                "raw_string": "Name of donor: Public Diplomacy Council of CataloniaAddress of donor: Casa de les Punxes, Av. Diagonal, 418, 1r, 2a, 08037 Barcelona, Catalonia, SpainEstimate of the probable value (or amount of any donation): Hotel with an estimated value of \u00a3600; flights with an estimated value of \u00a3100; total \u00a3700Destination of visit: BarcelonaDates of visit: 28 September - 2 October 2017Purpose of visit: Fact finding mission.(Registered 23 October 2017)", 
-               "dates": "28 September - 2 October 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "23/10/2017", 
                "destination": "Barcelona", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 600, 
+               "link": null, 
                "purpose": "Fact finding mission.", 
                "pretty": "Public Diplomacy Council of Catalonia", 
                "address": "Casa de les Punxes, Av. Diagonal, 418, 1r, 2a, 08037 Barcelona, Catalonia, Spain", 
                "item_id": "0001", 
                "donor": "Public Diplomacy Council of Catalonia", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Public Diplomacy Council of Catalonia", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 600, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -484,9 +509,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -497,9 +523,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [], 
@@ -511,8 +538,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "williams", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 5, 
@@ -522,7 +550,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1953, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "hywel williams", 
          "category_donations": 0, 
@@ -530,8 +558,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "williams", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 5, 
@@ -541,16 +570,17 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1953, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "hywel williams", 
          "category_donations": 0, 
          "first": "hywel"
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [], 
@@ -561,9 +591,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [], 
@@ -574,9 +605,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 

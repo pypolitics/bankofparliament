@@ -241,6 +241,22 @@
    "eu_ref_stance": "Remain", 
    "categories": [
       {
+         "raw_data": [
+            {
+               "raw_string": "Payment from IPSOS Mori, 3 Thomas More Square, London E1W 1YW:", 
+               "Payment from IPSOS Mori, 3 Thomas More Square, London E1W 1YW:": "Payment from IPSOS Mori, 3 Thomas More Square, London E1W 1YW:"
+            }, 
+            {
+               "raw_string": "27 September 2016, payment of \u00a3200 for completing survey. Hours: 1 hr. Fee paid direct to charity. (Registered 26 April 2017)", 
+               "27 September 2016, payment of \u00a3200 for completing survey. Hours": "1 hr. Fee paid direct to charity. (Registered 26 April 2017)"
+            }, 
+            {
+               "raw_string": "6 March 2017, payment of \u00a3200 for completing survey. Hours: 1 hr. Fee paid direct to charity. (Registered 26 April 2017)", 
+               "6 March 2017, payment of \u00a3200 for completing survey. Hours": "1 hr. Fee paid direct to charity. (Registered 26 April 2017)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "27 September 2016, payment of \u00a3200 for completing survey. Hours: 1 hr. Fee paid direct to charity. (Registered 26 April 2017)", 
@@ -269,8 +285,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "employment", 
          "category_income": 400, 
          "raw_items": [
@@ -285,9 +299,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "indirect_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -298,9 +313,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "direct_donations", 
          "category_income": 0, 
          "raw_items": [], 
@@ -311,9 +327,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts", 
          "category_income": 0, 
          "raw_items": [], 
@@ -324,46 +341,86 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Saudi Arabia Ministry of Foreign AffairsAddress of donor: Ministry of Foreign Affairs, PO Box 55937, Riyadh 11544Estimate of the probable value (or amount of any donation): Accommodation, transport and food with a value of \u00a33,187Destination of visit: Saudi ArabiaDates of visit: 2-5 April 2017Purpose of visit: Parliamentary fact finding.(Registered 11 April 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "Accommodation, transport and food with a value of \u00a33,187", 
+               "Purpose of visit": "Parliamentary fact finding.", 
+               "Destination of visit": "Saudi Arabia", 
+               "(Registered 11 April 2017)": "(Registered 11 April 2017)", 
+               "Dates of visit": "2-5 April 2017", 
+               "Name of donor": "Saudi Arabia Ministry of Foreign Affairs", 
+               "Address of donor": "Ministry of Foreign Affairs, PO Box 55937, Riyadh 11544"
+            }, 
+            {
+               "raw_string": "Name of donor: Kingdom of Saudi Arabia Ministry of Foreign AffairsAddress of donor: Al Washm Street, Namudhajiyah Riyadh 12735, Saudi ArabiaEstimate of the probable value (or amount of any donation): flights, transport, food and accommodation with a value of \u00a37,800Destination of visit: Riyadh and Jeddah, Saudi ArabiaDates of visit: 24-29 September 2017Purpose of visit: to meet with HM King Salman Abdulaziz Ibn Saud, senior government officials and business leaders and the British diplomatic team in order to support and understand the British-Saudi bilateral relationship.(Registered 13 October 2017)", 
+               "Estimate of the probable value (or amount of any donation)": "flights, transport, food and accommodation with a value of \u00a37,800", 
+               "Purpose of visit": "to meet with HM King Salman Abdulaziz Ibn Saud, senior government officials and business leaders and the British diplomatic team in order to support and understand the British-Saudi bilateral relationship.", 
+               "Destination of visit": "Riyadh and Jeddah, Saudi Arabia", 
+               "Dates of visit": "24-29 September 2017", 
+               "(Registered 13 October 2017)": "(Registered 13 October 2017)", 
+               "Name of donor": "Kingdom of Saudi Arabia Ministry of Foreign Affairs", 
+               "Address of donor": "Al Washm Street, Namudhajiyah Riyadh 12735, Saudi Arabia"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 10987, 
          "items": [
             {
                "raw_string": "Name of donor: Saudi Arabia Ministry of Foreign AffairsAddress of donor: Ministry of Foreign Affairs, PO Box 55937, Riyadh 11544Estimate of the probable value (or amount of any donation): Accommodation, transport and food with a value of \u00a33,187Destination of visit: Saudi ArabiaDates of visit: 2-5 April 2017Purpose of visit: Parliamentary fact finding.(Registered 11 April 2017)", 
-               "dates": "2-5 April 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "11/04/2017", 
                "destination": "Saudi Arabia", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 3187, 
+               "link": null, 
                "purpose": "Parliamentary fact finding.", 
                "pretty": "Saudi Arabia Ministry of Foreign Affairs", 
                "address": "Ministry of Foreign Affairs, PO Box 55937, Riyadh 11544", 
                "item_id": "0001", 
                "donor": "Saudi Arabia Ministry of Foreign Affairs", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Saudi Arabia Ministry of Foreign Affairs", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }, 
             {
                "raw_string": "Name of donor: Kingdom of Saudi Arabia Ministry of Foreign AffairsAddress of donor: Al Washm Street, Namudhajiyah Riyadh 12735, Saudi ArabiaEstimate of the probable value (or amount of any donation): flights, transport, food and accommodation with a value of \u00a37,800Destination of visit: Riyadh and Jeddah, Saudi ArabiaDates of visit: 24-29 September 2017Purpose of visit: to meet with HM King Salman Abdulaziz Ibn Saud, senior government officials and business leaders and the British diplomatic team in order to support and understand the British-Saudi bilateral relationship.(Registered 13 October 2017)", 
-               "dates": "24-29 September 2017", 
+               "status": "visit", 
                "isWealth": false, 
                "nouns": [], 
                "isDonation": false, 
+               "persons": [], 
                "registered": "13/10/2017", 
                "destination": "Riyadh and Jeddah, Saudi Arabia", 
+               "officers": [], 
                "isIncome": false, 
                "amount": 7800, 
+               "link": null, 
                "purpose": "to meet with HM King Salman Abdulaziz Ibn Saud, senior government officials and business leaders and the British diplomatic team in order to support and understand the British-Saudi bilateral relationship.", 
                "pretty": "Kingdom of Saudi Arabia Ministry of Foreign Affairs", 
                "address": "Al Washm Street, Namudhajiyah Riyadh 12735, Saudi Arabia", 
                "item_id": "0002", 
                "donor": "Kingdom of Saudi Arabia Ministry of Foreign Affairs", 
                "category_id": 5, 
-               "isGift": true
+               "isGift": true, 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Kingdom of Saudi Arabia Ministry of Foreign Affairs", 
+                  "company_number": "N/A"
+               }, 
+               "appointments": []
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 10987, 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
          "raw_items": [
@@ -377,9 +434,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": true, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "gifts_outside_uk", 
          "category_income": 0, 
          "raw_items": [], 
@@ -390,6 +448,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "House in Oxfordshire: (i). (Registered 21 May 2015)", 
+               "House in Oxfordshire": "(i). (Registered 21 May 2015)"
+            }
+         ], 
+         "isCurrency": true, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "House in Oxfordshire: (i). (Registered 21 May 2015)", 
@@ -405,8 +471,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": true, 
-         "category_gifts": 0, 
          "category_type": "property", 
          "category_income": 0, 
          "raw_items": [
@@ -420,8 +484,9 @@
       }, 
       {
          "isCurrency": false, 
+         "category_id": 8, 
          "last": "hoare", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -431,7 +496,7 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 8, 
+         "items": [], 
          "category_amount": 0, 
          "display": "simon hoare", 
          "category_donations": 0, 
@@ -439,8 +504,9 @@
       }, 
       {
          "isCurrency": true, 
+         "category_id": 9, 
          "last": "hoare", 
-         "items": [], 
+         "raw_data": [], 
          "category_description": "Other Shareholdings", 
          "category_gifts": 0, 
          "month": 6, 
@@ -450,13 +516,21 @@
          "category_income": 0, 
          "raw_items": [], 
          "year": 1969, 
-         "category_id": 9, 
+         "items": [], 
          "category_amount": 0, 
          "display": "simon hoare", 
          "category_donations": 0, 
          "first": "simon"
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "Unremunerated trustee of Bowel and Cancer Research. (Registered 21 August 2015)", 
+               "Unremunerated trustee of Bowel and Cancer Research. (Registered 21 August 2015)": "Unremunerated trustee of Bowel and Cancer Research. (Registered 21 August 2015)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "Unremunerated trustee of Bowel and Cancer Research. (Registered 21 August 2015)", 
@@ -472,8 +546,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "miscellaneous", 
          "category_income": 0, 
          "raw_items": [
@@ -486,6 +558,14 @@
          "category_wealth": 0
       }, 
       {
+         "raw_data": [
+            {
+               "raw_string": "I employ my wife, Kate Hoare, as a part-time constituency caseworker. (Registered 29 February 2016)", 
+               "I employ my wife, Kate Hoare, as a part-time constituency caseworker. (Registered 29 February 2016)": "I employ my wife, Kate Hoare, as a part-time constituency caseworker. (Registered 29 February 2016)"
+            }
+         ], 
+         "isCurrency": false, 
+         "category_gifts": 0, 
          "items": [
             {
                "raw_string": "I employ my wife, Kate Hoare, as a part-time constituency caseworker. (Registered 29 February 2016)", 
@@ -501,8 +581,6 @@
                "isGift": false
             }
          ], 
-         "isCurrency": false, 
-         "category_gifts": 0, 
          "category_type": "family", 
          "category_income": 0, 
          "raw_items": [
@@ -515,9 +593,10 @@
          "category_wealth": 0
       }, 
       {
-         "items": [], 
+         "raw_data": [], 
          "isCurrency": false, 
          "category_gifts": 0, 
+         "items": [], 
          "category_type": "family_lobbyists", 
          "category_income": 0, 
          "raw_items": [], 
@@ -594,12 +673,6 @@
                            "appointments": "/officers/U2xIJ9ddCaAh4b8bLRVVCFjWDo8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "year": 1949, 
-                        "month": 3
-                     }, 
                      "address": {
                         "locality": "Burford", 
                         "premises": "Honeystone Cottage", 
@@ -608,6 +681,12 @@
                         "postal_code": "OX18 4AJ", 
                         "address_line_2": "Shilton", 
                         "address_line_1": "Ladburn Lane"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -656,19 +735,19 @@
                            "appointments": "/officers/LQcXZoghQjqpoeQAlkfHL8kvwuQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-03-08", 
-                     "resigned_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "postal_code": "OX7 3AU", 
                         "region": "Oxfordshire", 
                         "locality": "Ramsden", 
                         "address_line_2": "High Street", 
                         "address_line_1": "Akeman Barn"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-03-08", 
+                     "resigned_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1971
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -681,13 +760,6 @@
                            "appointments": "/officers/GwHFZOsUBMeOcXjCstpPp0ZY5jY/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "OX7 3AU", 
-                        "region": "Oxfordshire", 
-                        "locality": "Ramsden", 
-                        "address_line_2": "High Street", 
-                        "address_line_1": "Akeman Barn"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2002-03-08", 
                      "resigned_on": "2015-02-24", 
@@ -695,8 +767,15 @@
                         "year": 1969, 
                         "month": 6
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "postal_code": "OX7 3AU", 
+                        "region": "Oxfordshire", 
+                        "locality": "Ramsden", 
+                        "address_line_2": "High Street", 
+                        "address_line_1": "Akeman Barn"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -740,7 +819,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/04390537", 
-               "pretty": "simon hoare simon james hoare", 
+               "pretty": "Simon Hoare", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -806,6 +885,12 @@
                            "appointments": "/officers/U2xIJ9ddCaAh4b8bLRVVCFjWDo8/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 3
+                     }, 
                      "address": {
                         "locality": "Burford", 
                         "premises": "Honeystone Cottage", 
@@ -815,14 +900,8 @@
                         "address_line_2": "Shilton", 
                         "address_line_1": "Ladburn Lane"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "year": 1949, 
-                        "month": 3
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Accountant"
                   }, 
                   {
@@ -868,19 +947,19 @@
                            "appointments": "/officers/LQcXZoghQjqpoeQAlkfHL8kvwuQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-03-08", 
-                     "resigned_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "postal_code": "OX7 3AU", 
                         "region": "Oxfordshire", 
                         "locality": "Ramsden", 
                         "address_line_2": "High Street", 
                         "address_line_1": "Akeman Barn"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-03-08", 
+                     "resigned_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1971
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -907,8 +986,8 @@
                         "address_line_2": "High Street", 
                         "address_line_1": "Akeman Barn"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -952,7 +1031,7 @@
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/04390537", 
-               "pretty": "simon hoare simon james hoare", 
+               "pretty": "Simon Hoare", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
@@ -1043,8 +1122,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-09-18", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1964
+                        "year": 1964, 
+                        "month": 7
                      }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
@@ -1074,11 +1153,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2006-09-29", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 2
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1088,20 +1167,20 @@
                            "appointments": "/officers/xOBKshOphfHiB4I0hbeqeQdfef0/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "1st Floor Abernethy Building", 
-                        "address_line_1": "2 Newark Street", 
-                        "postal_code": "E1 2AT", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2015-11-26", 
                      "date_of_birth": {
                         "month": 1, 
                         "year": 1963
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "premises": "1st Floor Abernethy Building", 
+                        "address_line_1": "2 Newark Street", 
+                        "postal_code": "E1 2AT", 
+                        "locality": "London"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Surgeon"
                   }, 
                   {
@@ -1121,11 +1200,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-10-24", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1962
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1135,12 +1214,6 @@
                            "appointments": "/officers/Mrnto-bg8Yu4z5m5wApxqb9GZZc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-01-01", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 2
-                     }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
                         "country": "England", 
@@ -1148,8 +1221,14 @@
                         "postal_code": "E1 2AT", 
                         "address_line_1": "2 Newark Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-01-01", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 2
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1229,17 +1308,17 @@
                            "appointments": "/officers/qAF_GnVwsxC8fmnQd869KkTw83g/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-01-19", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1960
+                     }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
                         "address_line_1": "2 Newark Street", 
                         "postal_code": "E1 2AT", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2017-01-19", 
-                     "date_of_birth": {
-                        "year": 1960, 
-                        "month": 10
                      }, 
                      "nationality": "American And Uk", 
                      "officer_role": "director", 
@@ -1265,8 +1344,8 @@
                         "year": 1965, 
                         "month": 6
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1285,8 +1364,8 @@
                         "postal_code": "RH18 5PA", 
                         "address_line_1": "Swans Ghyll, Priory Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1320,17 +1399,17 @@
                            "appointments": "/officers/iWP5zXCktgEnEbwu4F81Kyydcf8/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-02-07", 
-                     "resigned_on": "2010-04-28", 
-                     "date_of_birth": {
-                        "year": 1931, 
-                        "month": 2
-                     }, 
                      "address": {
                         "address_line_1": "6 Beechworth Close", 
                         "postal_code": "NW3 7UT", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-02-07", 
+                     "resigned_on": "2010-04-28", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1931
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1355,11 +1434,11 @@
                      "appointed_on": "2010-11-01", 
                      "resigned_on": "2014-09-18", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 4
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1369,6 +1448,13 @@
                            "appointments": "/officers/PiZLjM19e558xaC9TUBRNJH2gjM/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-10-01", 
+                     "resigned_on": "2014-04-24", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1939
+                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "3", 
@@ -1377,15 +1463,8 @@
                         "address_line_2": "Manchester Square", 
                         "address_line_1": "Fitzhardinge Street"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2009-10-01", 
-                     "resigned_on": "2014-04-24", 
-                     "date_of_birth": {
-                        "year": 1939, 
-                        "month": 1
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1395,17 +1474,17 @@
                            "appointments": "/officers/jGMQXVRyDce6NxU4FXn9cLXJSZ0/appointments"
                         }
                      }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SW1W 9AA", 
+                        "address_line_1": "118 Eaton Square"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2011-01-31", 
                      "date_of_birth": {
                         "month": 9, 
                         "year": 1942
-                     }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "SW1W 9AA", 
-                        "address_line_1": "118 Eaton Square"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1422,8 +1501,8 @@
                      "appointed_on": "2012-02-01", 
                      "resigned_on": "2015-11-26", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1936
+                        "year": 1936, 
+                        "month": 7
                      }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
@@ -1443,6 +1522,13 @@
                            "appointments": "/officers/GGA0wU0AO5hM_9ep2Mu7D2QWZeE/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-09-29", 
+                     "resigned_on": "2015-06-18", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1945
+                     }, 
                      "address": {
                         "address_line_2": "Lewes Road", 
                         "region": "West Sussex", 
@@ -1450,15 +1536,8 @@
                         "postal_code": "RH19 3TD", 
                         "address_line_1": "Applecross"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2006-09-29", 
-                     "resigned_on": "2015-06-18", 
-                     "date_of_birth": {
-                        "year": 1945, 
-                        "month": 12
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1468,21 +1547,21 @@
                            "appointments": "/officers/pEo15KTT5xFN44GWF89ZeYceU7Y/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-02-07", 
+                     "resigned_on": "2012-02-01", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 9
+                     }, 
                      "address": {
                         "postal_code": "E14 3JZ", 
                         "address_line_1": "32 Friars Road", 
                         "address_line_2": "Isle Of Dogs", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-02-07", 
-                     "resigned_on": "2012-02-01", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1958
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Surgeon"
                   }, 
                   {
@@ -1492,17 +1571,17 @@
                            "appointments": "/officers/7hUOFzBRzsoRFrZw1AiFzl01K1Y/appointments"
                         }
                      }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SE26 6RF", 
+                        "address_line_1": "101 Longton Avenue"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2011-05-31", 
                      "date_of_birth": {
                         "year": 1933, 
                         "month": 6
-                     }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "SE26 6RF", 
-                        "address_line_1": "101 Longton Avenue"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1529,8 +1608,8 @@
                         "month": 10, 
                         "year": 1933
                      }, 
-                     "nationality": "English", 
                      "officer_role": "director", 
+                     "nationality": "English", 
                      "occupation": "Co Director"
                   }, 
                   {
@@ -1551,8 +1630,8 @@
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2011-05-31", 
                      "date_of_birth": {
-                        "year": 1941, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1941
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1578,8 +1657,8 @@
                         "postal_code": "IG8 0EX", 
                         "address_line_1": "77 Monkhams Avenue"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Professor Of Surgery"
                   }, 
                   {
@@ -1589,6 +1668,12 @@
                            "appointments": "/officers/9t8_BpYRTGY-ENQo7WVZqFXPXcY/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "Oxfordshire", 
+                        "locality": "Oxford", 
+                        "postal_code": "OX2 6QB", 
+                        "address_line_1": "10 Norham Gardens"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2015-06-18", 
@@ -1596,21 +1681,15 @@
                         "month": 12, 
                         "year": 1962
                      }, 
-                     "address": {
-                        "region": "Oxfordshire", 
-                        "locality": "Oxford", 
-                        "postal_code": "OX2 6QB", 
-                        "address_line_1": "10 Norham Gardens"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }
                ], 
                "isIncome": false, 
                "amount": 0, 
                "link": "https://beta.companieshouse.gov.uk/company/05951118", 
-               "pretty": "simon hoare simon james hoare", 
+               "pretty": "Simon Hoare", 
                "item_id": "0001", 
                "category_id": 14, 
                "isGift": false, 
