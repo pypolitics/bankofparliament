@@ -290,7 +290,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 		               hovertext = node_hovertext,
 		               hoverlabel = {'bgcolor': node_color},
 		               customdata = node_hyperlink,
-		               textfont=Font(size=16, family="Abel")
+		               textfont=Font(size=12, family="Roboto, sans-serif")
 		               )
 		traces.append(trace2_2d)
 

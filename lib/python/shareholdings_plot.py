@@ -136,7 +136,9 @@ def write_shareholder_plot(mp, plot_file):
                 elif 'shareholding' in category['category_type']:
                     n = 'declared_company'
 
-                label = ''
+
+                wrapped = textwrap.wrap(item['company']['company_name'], 60)
+                label = wrapped[0].title()
 
                 item_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
