@@ -82,6 +82,9 @@ class Item():
 
 			if 'individual' in self.status:
 
+				# for individuals, we store the appointments, then the company, officers etc as children
+				# of the appointment
+
 				if people_links != []:
 
 					for pl in people_links:
@@ -138,77 +141,78 @@ class Item():
 					app['officers'] = getlink(app['company'], 'officers')['items']
 					app['persons_with_significant_control'] = getlink(app['company'], 'persons_with_significant_control')['items']
 
+			# eveything below here, should generate a company / entity
 			elif 'trade' in self.status.lower():
 				pass
 				# found = True
 
-			elif 'visit' in self.status:
+			# elif 'visit' in self.status:
+			# 	pass
+				# found = True
+
+			elif 'charity' in self.status.lower():
 				pass
 				# found = True
 
-			elif 'charity' in self.status:
+			elif 'unincorporated' in self.status.lower():
 				pass
 				# found = True
 
-			elif 'unincorporated' in self.status:
-				pass
-				# found = True
+			# elif 'members' in self.status.lower():
+			# 	pass
+			# 	# found = True
 
-			elif 'members' in self.status:
-				pass
-				# found = True
+			# elif 'other' in self.status.lower():
+			# 	pass
+			# 	# found = True
 
-			elif 'other' in self.status:
-				pass
-				# found = True
+			# elif 'friendly' in self.status.lower():
+			# 	pass
+			# 	# found = True
 
-			elif 'friendly' in self.status:
-				pass
-				# found = True
+			# elif 'limited' in self.status.lower():
+			# 	pass
+			# 	# found = True
 
-			elif 'partnership' in self.status:
-				pass
-				# found = True
-
-			elif 'llp' in self.status:
-				pass
-				# found = True
+			# elif 'llp' in self.status.lower():
+			# 	pass
+			# 	# found = True
 
 			else:
 				pass
-				# # these are the remaining companies
-				# companies = CompaniesHouseCompanySearch([self.donor])
+				# these are the remaining things to search
+				companies = CompaniesHouseCompanySearch([self.donor])
 
-				# for i in companies.data:
+				for i in companies.data:
 
-				# 	# we need the name and address to fuzzy match
+					# we need the name and address to fuzzy match
 
-				# 	name_ratio = fuzz.token_set_ratio(i['title'].lower(), self.donor)
+					name_ratio = fuzz.token_set_ratio(i['title'].lower(), self.donor)
 
-				# 	if name_ratio > 90:
-				# 		if i['address_snippet']:
+					if name_ratio > 90:
+						if i['address_snippet']:
 
-				# 			addr_ratio = fuzz.token_set_ratio(i['address_snippet'].lower(), self.address)
+							addr_ratio = fuzz.token_set_ratio(i['address_snippet'].lower(), self.address)
 
-				# 			# if the address matches enough
-				# 			if addr_ratio > 90:
+							# if the address matches enough
+							if addr_ratio > 90:
 
-				# 				self.link = 'https://beta.companieshouse.gov.uk' + i['links']['self']
-				# 				self.company = getlink(i, 'self')
-				# 				persons = getlink(self.company, 'persons_with_significant_control')
-				# 				self.persons = persons['items']
-				# 				officers = getlink(self.company, 'officers')
-				# 				self.officers = officers['items']
-				# 				# print 'FOUND %s: , %s' % (self.status.upper(), self.company['company_name'])
-				# 				found = True
-				# 				break
+								self.link = 'https://beta.companieshouse.gov.uk' + i['links']['self']
+								self.company = getlink(i, 'self')
+								persons = getlink(self.company, 'persons_with_significant_control')
+								self.persons = persons['items']
+								officers = getlink(self.company, 'officers')
+								self.officers = officers['items']
+								# print 'FOUND %s: , %s' % (self.status.upper(), self.company['company_name'])
+								found = True
+								break
 
 		if found:
 			pass
-			# print '\tFOUND %s: %s' % (self.status.upper(), self.company['company_name'])
+			print '\tFOUND %s: %s' % (self.status.upper(), self.company['company_name'])
 		else:
 			# pass
-			print '\tMISSING %s: %s' % (self.status, self.donor)
+			print '\tMISSING %s: %s' % (self.status.upper(), self.donor)
 
 
 	def _get_nouns(self):
