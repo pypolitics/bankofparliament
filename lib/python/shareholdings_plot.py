@@ -36,45 +36,34 @@ def write_shareholder_plot(mp, plot_file):
     green_darker = '#00ff99'
     green_lighter = '#4dffb8'
 
+    dark_blue = '#9966ff'
+
     data_lines = {
                     'line' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 8, 'name' : None},
                     }
 
     data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 128, 'symbol' : 'circle'},
 
-                    'income_item'        : {'color' : orange_lighter, 'opacity' : 0.8, 'size' : 30},
-                    'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
-                    'income_cat'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 60},
+                    'visit_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'visit_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'circle'},
 
-                    'freebies_item'        : {'color' : yellow_lighter, 'opacity' : 0.8, 'size' : 30},
-                    'freebies_sub'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 40},
-                    'freebies_cat'        : {'color' : yellow_darker, 'opacity' : 1, 'size' : 60},
+                    'gift_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'gift_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'circle'},
 
-                    'wealth_item'        : {'color' : grey_lighter, 'opacity' : 0.8, 'size' : 30},
-                    'wealth_sub'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 40},
-                    'wealth_cat'        : {'color' : grey_darker, 'opacity' : 1, 'size' : 60},
+                    'donor_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'donor_company_resigned'     : {'color' : grey_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'donor_company_dissolved'    : {'color' : grey_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'donor_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 30, 'symbol' : 'circle'},
 
-                    'miscellaneous_item'        : {'color' : pink_lighter, 'opacity' : 0.8, 'size' : 30},
-                    'miscellaneous_sub'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 40},
-                    'miscellaneous_cat'        : {'color' : pink_darker, 'opacity' : 1, 'size' : 60},
-
-                    'expenses_item'        : {'color' : green_lighter, 'opacity' : 0.8, 'size' : 30},
-                    'expenses_sub'        : {'color' : green_darker, 'opacity' : 1, 'size' : 40},
-                    'expenses_cat'        : {'color' : green_darker, 'opacity' : 1, 'size' : 60},
-
-                    'person_item'        : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 25, 'symbol' : 'circle'},
-                    'officer_item'        : {'color' : 'white', 'opacity' : 0.5, 'size' : 15, 'symbol' : 'circle'},
-
-                    'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
-                    'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
-                    'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
-                    'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 40, 'symbol' : 'diamond'},
+                    'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 30, 'symbol' : 'diamond'},
+                    'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 30, 'symbol' : 'diamond'},
 
                     'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
                     'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
-                    'active_officer'           : {'color' : orange_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
-                    'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
-
+                    'active_officer'           : {'color' : orange_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
+                    'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
 
                     }
 
@@ -98,7 +87,9 @@ def write_shareholder_plot(mp, plot_file):
 
     for category in mp['categories']:
 
-        if 'shareholding' in category['category_type'] or 'companies' in category['category_type']:
+        valid_categories = ['shareholding', 'companies', 'visit', 'gift', 'donation']
+
+        if 'shareholding' in category['category_type'] or 'companies' in category['category_type'] or 'visit' in category['category_type'] or 'gift' in category['category_type'] or 'donation' in category['category_type']:
 
             for item in category['items']:
                 url = item['link']
@@ -107,36 +98,44 @@ def write_shareholder_plot(mp, plot_file):
                 pretty = item['pretty']
                 wrapped = textwrap.wrap(pretty, 50)
 
+                # build the tooltip
                 hovertext = ''
                 hovertext += '</br>'
-                if item['company'].has_key('company_name'):
-                    hovertext += '</br><b>Company Name:</b> %s' % item['company']['company_name'].title()
-                if item['company'].has_key('company_number'):
-                    hovertext += '</br><b>Company Number:</b> %s' % item['company']['company_number']
-                if item['company'].has_key('company_status'):
-                    hovertext += '</br><b>Company Status:</b> %s' % item['company']['company_status'].title()
+                if item.has_key('status'):
 
-                # hovertext += '</br></br><b>Register of Interests Raw Entry:</b>'
-                # hovertext += '</br>' + '</br>'.join(wrapped)
-                # hovertext += '</br>'
+                    hovertext += '</br><b>Donor Name:</b> %s' % item['donor'].title()
 
-                # if url:
-                #     hovertext += '</br>Click node to visit Companies House record.'
+                    if item['company'].has_key('company_number'):
+                        if item['company']['company_number'] != 'N/A':
+                            hovertext += '</br><b>Donor Company Number:</b> %s' % item['company']['company_number']
 
-                if not 'companies' in category['category_type']:
-                    # this is given by the register of interests
-                    n = 'declared_company'
                 else:
+                    if item['company'].has_key('company_name'):
+                        hovertext += '</br><b>Company Name:</b> %s' % item['company']['company_name'].title()
+                    if item['company'].has_key('company_number'):
+                        hovertext += '</br><b>Company Number:</b> %s' % item['company']['company_number']
+
+                # find the correct node type, there are lots now...
+                if 'companies' in category['category_type']:
                     if item['company']['company_status'] == 'active':
                         n = 'undeclared_active_company'
                     else:
                         n = 'undeclared_inactive_company'
+                    n = 'declared_company'
+
+                elif 'visit' in category['category_type']:
+                    n = 'visit_company'
+
+                elif 'donation' in category['category_type'] or 'gift' in category['category_type']:
+                    if 'individual' in item['status']:
+                        n = 'donor_person'
+                    else:
+                        n = 'donor_company'
+
+                elif 'shareholding' in category['category_type']:
+                    n = 'declared_company'
 
                 label = ''
-                # label = item['pretty'].title()
-                # if item['company'].has_key('company_name'):
-                #     label = item['company']['company_name'].title()
-
 
                 item_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
@@ -178,7 +177,6 @@ def write_shareholder_plot(mp, plot_file):
 
                         if person.has_key('ceased_on'):
                             n = 'inactive_person'
-                            n = 'active_person'
                         else:
                             n = 'active_person'
 
@@ -191,7 +189,6 @@ def write_shareholder_plot(mp, plot_file):
 
                         if ratio > 90:
                             person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
-                            person_copy['size'] += 40
                             person_copy['opacity'] = 1
 
                             # lets check they dont already exist
@@ -215,9 +212,9 @@ def write_shareholder_plot(mp, plot_file):
                     for person in item['officers']:
 
                         if person.has_key('resigned_on'):
-                            n = 'inactive_officer'
+                            n = 'inactive_person'
                         else:
-                            n = 'active_officer'
+                            n = 'active_person'
 
                         name = clean_name(person['name'])
                         name = reverse_name(name)
@@ -236,15 +233,11 @@ def write_shareholder_plot(mp, plot_file):
 
                         if ratio > 90:
                             person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
-                            person_copy['size'] += 40
                             person_copy['opacity'] = 1
 
-                            # only if the person is not our mp
-
-                            # lets check they dont already exist
+                        # lets check they dont already exist
                         found = person_copy
                         for each in data['nodes']:
-                            # if each['node_type'] != 'mp':
                             if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
                                 found = each
                                 if not each['node_type'] == 'mp':
@@ -258,5 +251,48 @@ def write_shareholder_plot(mp, plot_file):
                         l = copy.copy(link)
                         if l not in data['links']:
                             data['links'].append(l)
+
+                if item.has_key('appointments'):
+                    for appointment in item['appointments']:
+
+                        url = item['link']
+
+                        hovertext = ''
+                        hovertext += '</br>'
+                        if appointment['appointed_to'].has_key('company_name'):
+                            hovertext += '</br><b>Donor Company:</b> %s' % appointment['appointed_to']['company_name'].title()
+
+                        if appointment['appointed_to'].has_key('company_number'):
+                            hovertext += '</br><b>Donor Company Number:</b> %s' % appointment['appointed_to']['company_number']
+
+                        if appointment['appointed_to'].has_key('company_status'):
+                            if appointment['appointed_to']['company_status'].lower() != 'active':
+                                n = 'donor_company_dissolved'
+                            else:
+                                n = 'donor_company'
+
+                        if appointment.has_key('resigned_on'):
+                            n = 'donor_company_dissolved'
+
+                        label = ''
+
+                        app_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+                        app_copy = copy.copy(app_node)
+
+                        found = False
+                        for each in data['nodes']:
+                            if hovertext == each['hovertext']:
+                                app_copy = each
+                                found = True
+
+                        if not found:
+                            data['nodes'].append(app_copy)
+
+                        link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=app_copy)
+                        l = copy.copy(link)
+                        if l not in data['links']:
+                            data['links'].append(l)
+
+
 
     return plot_3d_data_to_file(data, plot_file, mp['member_id'], mp['dods_id'], mp['name'], mp['constituency'], mp['party'], hyperlink)
