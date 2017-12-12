@@ -478,6 +478,7 @@ if __name__ == "__main__":
 	parser = OptionParser()
 	parser.add_option("--json", help="Dump to Json file", action="store_true", default=False)
 	parser.add_option("--missing", help="Run for missing data files only", action="store_true", default=False)
+	parser.add_option("--from_index", help="Carry on from index", action="store", default=0)
 
 	# parse the comand line
 	(options, args) = parser.parse_args()
@@ -512,5 +513,9 @@ if __name__ == "__main__":
 				todo.append(m)
 
 		mps = todo
+
+	if options.from_index:
+		# index the list from a given int
+		mps = mps[int(options.from_index):]
 
 	main(mps, options)

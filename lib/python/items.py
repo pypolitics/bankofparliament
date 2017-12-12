@@ -209,7 +209,7 @@ class Item():
 
 		if found:
 			pass
-			print '\tFOUND %s: %s' % (self.status.upper(), self.company['company_name'])
+			print '\tFOUND %s: %s' % (self.status.upper(), self.donor)
 		else:
 			# pass
 			print '\tMISSING %s: %s' % (self.status.upper(), self.donor)
