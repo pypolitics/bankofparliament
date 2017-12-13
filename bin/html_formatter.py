@@ -270,6 +270,7 @@ def print_mp_panel_into_file(member, plot_file):
     member_id = member['member_id']
     constituency = member['constituency']
     gender = member['gender']
+    eu_ref_stance = member['eu_ref_stance']
 
     party = member['party'].lower()
     if party.lower().startswith('sinn'):
@@ -309,7 +310,7 @@ def print_mp_panel_into_file(member, plot_file):
     total_expenses_f = format_integer(total_expenses)
 
     # write the thumbail into the main front page
-    write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, member_id, name, party, party_dict[party], constituency, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, companies_house_items, twitter, gender)
+    write_thumbnail(html_file, total_expenses, total_expenses_f, family_pretty, member_id, name, party, party_dict[party], constituency, eu_ref_stance, salary_f, private_income_f, rental_income_f, total_income_f, gifts_f, gifts_outside_uk_f, direct_donations_f, indirect_donations_f, visits_outside_uk_f, total_freebies_f, shareholdings_percent, shareholdings_percent_items, shareholding_wealth_f, active_appointments, property_wealth_f, total_wealth_f, salary, private_income, rental_income, total_income, gifts, gifts_outside_uk, property_wealth, total_wealth, direct_donations, indirect_donations, visits_outside_uk, total_freebies, shareholdings, previous_appointments, family, miscellaneous, miscellaneous_f, miscellaneous_items, family_items, family_lobbyists_items, companies_house_items, twitter, gender)
 
 def feeback(mps):
     """"""
