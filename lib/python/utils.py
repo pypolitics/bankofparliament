@@ -3,6 +3,7 @@
 # system libs
 import requests, time, ast, locale, pprint, re, shutil, os, sys, json, copy, csv
 from datetime import datetime, date
+from fuzzywuzzy import fuzz
 reload(sys) 
 sys.setdefaultencoding('utf8')
 
@@ -279,6 +280,25 @@ def read_sic_codes(sic):
         if sic == row[0]:
             return row[-1]
     return ''
+
+def read_unincorporated(name):
+
+    path = '../lib/data/unincorporated_associations.csv'
+    if os.path.isfile(path):
+        pass
+    else:
+        path = '../data/unincorporated_associations.csv'
+
+    in_file = open(path, "rb")
+    reader = csv.reader(in_file)
+    next(reader, None)
+
+    for row in reader:
+        ratio  = fuzz.token_set_ratio(name.lower(), row[0].lower())
+        # print name, row[0].lower(), ratio
+        if ratio > 90:
+            return row[0]
+    return None
 
 def cleanup_raw_string(raw, exclude_extra=[]):
     """Cleanup a raw string from the register of intrests, ready for querying with"""
