@@ -3,7 +3,7 @@
 from categories import Category
 from items import SalaryItem, AdditionalSalaryItem
 from utils import regex_for_registered, regex_for_amount
-from mps_salaries import salaries
+from patches.mps_salaries import salaries
 
 class Salary(Category):
 	def __init__(self, offices, forname, surname, party):
