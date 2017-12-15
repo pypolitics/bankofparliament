@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# http://www.telegraph.co.uk/news/politics/10008978/500-business-leaders-tell-David-Cameron-to-negotiate-a-better-deal-with-Europe.html
+
+
 urls = {}
 urls['D & R Duguid Ltd; management support services and consulting. (Registered 06 July 2017)'] = 'https://beta.companieshouse.gov.uk/company/SC549117'
 urls['Jardine Matheson Holdings; industrial conglomerate. (Registered 29 June 2017)'] = 'https://beta.companieshouse.gov.uk/company/00115332'
@@ -30,6 +33,8 @@ urls['Simpson Millar Solicitors.'] = 'https://beta.companieshouse.gov.uk/company
 urls['Digivan Ltd'] = 'https://beta.companieshouse.gov.uk/company/09793936'
 urls['Falcon and Associates FZ-LLC'] = 'https://beta.companieshouse.gov.uk/company/06832361'
 urls['York Racecourse Knavesmire LLP'] = 'https://beta.companieshouse.gov.uk/company/OC332112'
+urls['Think BDW Ltd'] = 'https://beta.companieshouse.gov.uk/company/02167543'
+urls['James Hay'] = 'https://beta.companieshouse.gov.uk/company/10192992/officers'
 
 # Trust
 # urls['The Essex Research Association'] = ''
@@ -166,6 +171,9 @@ urls['York Racecourse Knavesmire LLP'] = 'https://beta.companieshouse.gov.uk/com
 # urls['Fire Brigades Union'] = ''
 # urls['Fire Brigades Union (FBU)']  = ''
 # urls['Community Trade Union'] = ''
+
+# Selva Pankaj - regent group
+# john fearon  - astro lighting?
 
 people = {}
 people['Peter Cruddas'] = ['https://beta.companieshouse.gov.uk/officers/WtiEW0LL-mMmPaRLrQSCjsWBpXY/appointments', 'https://beta.companieshouse.gov.uk/officers/hjblAJtL-pH8xNz-st-cZBMe85Q/appointments']
@@ -308,7 +316,6 @@ people['Phillip Jeans'] = ['https://beta.companieshouse.gov.uk/officers/kH9_RY6W
 people['Dr B Al-Chalabi'] = ['https://beta.companieshouse.gov.uk/officers/-p26_jhFEpdV5TNimG-yN3neBB4/appointments', 'https://beta.companieshouse.gov.uk/officers/cO1ExA7TTCky78RD_EN5Ha4AKAg/appointments']
 people['David J Coldman'] = ['https://beta.companieshouse.gov.uk/officers/s47EBHl_axYV492PhGj4WdzlsJA/appointments', 'https://beta.companieshouse.gov.uk/officers/QtDlnajSEZnqedsX6tzcTVf77jU/appointments', 'https://beta.companieshouse.gov.uk/officers/ApszKw7TQZAX-HSMEVsTEx2mAZg/appointments']
 people['David John Coldman'] = ['https://beta.companieshouse.gov.uk/officers/s47EBHl_axYV492PhGj4WdzlsJA/appointments', 'https://beta.companieshouse.gov.uk/officers/QtDlnajSEZnqedsX6tzcTVf77jU/appointments', 'https://beta.companieshouse.gov.uk/officers/ApszKw7TQZAX-HSMEVsTEx2mAZg/appointments']
-
 people['Terry Cann'] = ['https://beta.companieshouse.gov.uk/officers/G8Hj3pnio3oDUD2LTLomQCemyXs/appointments']
 people['Adam and Helen Heathfield'] = ['https://beta.companieshouse.gov.uk/officers/j3Xc2LrwEj7OetL939f9dHsGJUA/appointments', 'https://beta.companieshouse.gov.uk/officers/WjD5S7hqPJOqGEYl6PoShz4MB5M/appointments']
 people['John and Elaine Drage'] = ['https://beta.companieshouse.gov.uk/officers/jpFDHQRy9X1auOjJeXewGAWBZZg/appointments', 'https://beta.companieshouse.gov.uk/officers/jNK9ybZ39tgCzecn_JAXbOSdSy4/appointments']
@@ -403,6 +410,7 @@ people['Mr Alan Halsall'] = ['https://beta.companieshouse.gov.uk/officers/fIsnx1
 people['Alan Halsall'] = ['https://beta.companieshouse.gov.uk/officers/fIsnx1F-iBn2a7f45bLGWkh110U/appointments', 'https://beta.companieshouse.gov.uk/officers/dmV_9Xc3aENSw1Ww-aCxV1gKQa0/appointments', 'https://beta.companieshouse.gov.uk/officers/0e84ZztLs0ZDybQJtmANUzb7Qn4/appointments', 'https://beta.companieshouse.gov.uk/officers/P8KrJYk06YbFhmkI7juUVPV1ysc/appointments']
 people['Neil Record'] = ['https://beta.companieshouse.gov.uk/officers/u4SmxcXucFo0st4yVk5kMag4TPU/appointments', 'https://beta.companieshouse.gov.uk/officers/Fek843M8-KxzgRiyJo8NqOfywKY/appointments', 'https://beta.companieshouse.gov.uk/officers/Yqnk3dx5BG6HY0DbGlOoEYXNoe8/appointments', 'https://beta.companieshouse.gov.uk/officers/v2DPzFCdTTutRt2Zs-qLmKzslJM/appointments']
 people['Dinesh Dhamija'] = ['https://beta.companieshouse.gov.uk/officers/jC4KsZJMnwBXd05YhddmVlxuzdQ/appointments', 'https://beta.companieshouse.gov.uk/officers/VvOXXBLLDYAPEnYX08ESkw1nWJY/appointments']
+people['Dinesh Dhamijah'] = ['https://beta.companieshouse.gov.uk/officers/jC4KsZJMnwBXd05YhddmVlxuzdQ/appointments', 'https://beta.companieshouse.gov.uk/officers/VvOXXBLLDYAPEnYX08ESkw1nWJY/appointments']
 people['Keith Moody'] = ['https://beta.companieshouse.gov.uk/officers/o216sFPX_j1rTYTp8S6exdZuP6U/appointments']
 people['Ghill Donald'] = ['https://beta.companieshouse.gov.uk/officers/4EQmsrejLSE4e_9pabYfqOHf6Dk/appointments', 'https://beta.companieshouse.gov.uk/officers/Lz3t7bZaRJyvy_pLvAnhA67p8Gw/appointments', 'https://beta.companieshouse.gov.uk/officers/Km7SFYhlnNeb2OLEeC8XbLC6zMk/appointments', 'https://beta.companieshouse.gov.uk/officers/NN6jdvZWgGLrmMeWwrvhdNt3T3s/appointments']
 people['Mark Petterson'] = ['https://beta.companieshouse.gov.uk/officers/TCfW90fCAv_UF4sK8ZegedmMjdU/appointments', 'https://beta.companieshouse.gov.uk/officers/qi9qH-NM54aUsnJ6pZ8Usb5B5hE/appointments', 'https://beta.companieshouse.gov.uk/officers/IIkXUhRrsw4dNof4_ssuDOcfa5c/appointments']
@@ -411,6 +419,7 @@ people['Paul Farrer'] = ['https://beta.companieshouse.gov.uk/officers/1UZhB1rakF
 people['Christopher Mole'] = ['https://beta.companieshouse.gov.uk/officers/sBwZn1lSUvw3Pic_N-4ROkJBZGU/appointments']
 people['Charles Cottam'] = ['https://beta.companieshouse.gov.uk/officers/iqMCRFL_ktp_ydgn91Pg7BUXuxg/appointments']
 people['Atul Pathak'] = ['https://beta.companieshouse.gov.uk/officers/jZeOw65xRszTYYc9LbjWQveSDY8/appointments', 'https://beta.companieshouse.gov.uk/officers/67sIu-FayqhqZpxs6be1iLYopsU/appointments']
+people['Mr and Mrs A Pathak'] = ['https://beta.companieshouse.gov.uk/officers/jZeOw65xRszTYYc9LbjWQveSDY8/appointments', 'https://beta.companieshouse.gov.uk/officers/67sIu-FayqhqZpxs6be1iLYopsU/appointments']
 people['Anil K Sharma'] = ['https://beta.companieshouse.gov.uk/officers/PbjCTl6laqIJI4jc6D-OZNx2xIw/appointments']
 people['Sue Howes'] = ['https://beta.companieshouse.gov.uk/officers/5lPTOOIaAdadtC2lNMaKys5ZGY0/appointments']
 people['Nigel Adams'] = ['https://beta.companieshouse.gov.uk/officers/dcz3MnJZ1ePeRkjV8xi9ZRV7voo/appointments', 'https://beta.companieshouse.gov.uk/officers/wv7t47ra0PnY4zFqAMjREOotS08/appointments']
@@ -418,12 +427,61 @@ people['Barry Field'] = ['https://beta.companieshouse.gov.uk/officers/9sfacZiSE0
 people['Nigel McNair Scott'] = ['https://beta.companieshouse.gov.uk/officers/NqYlPTS-VTJ8I4oVlMOm0vbYMsI/appointments']
 people['Barbara Yerolemou'] = ['https://beta.companieshouse.gov.uk/officers/YiLfXHG9Q5MfcUdAUp1B8j1z_-c/appointments']
 people['Tony Billingham'] = ['https://beta.companieshouse.gov.uk/officers/s3SvwtzLkRiNR_m1Tl8bxB5juAk/appointments', 'https://beta.companieshouse.gov.uk/officers/13_oDqZfbKF0hp5-MtZylIXeh1o/appointments']
+people['Anthony Langham'] = ['https://beta.companieshouse.gov.uk/officers/mfHo-XBWwbeFfmMBWYBzkXaWdYE/appointments']
+people['Gordon Morrison'] = ['https://beta.companieshouse.gov.uk/officers/7h1mzbdLK8MDunrUVzX4V-mZXvw/appointments']
+people['Mr Michael Spencer'] = ['https://beta.companieshouse.gov.uk/officers/FFpt8gMvp2qw27hoIbuj-JK0IXA/appointments']
+people['Michael Spencer'] = ['https://beta.companieshouse.gov.uk/officers/FFpt8gMvp2qw27hoIbuj-JK0IXA/appointments']
+people['Paul Bailey'] = ['https://beta.companieshouse.gov.uk/officers/5FHPSZav0W7-h9qWgEa5gqJYGrI/appointments']
+people['Mr David Brownlow'] = ['https://beta.companieshouse.gov.uk/officers/g8pcMkh-a1jgUxwZ7ws4RzbL0mk/appointments', 'https://beta.companieshouse.gov.uk/officers/c8KALzQeJ_l1kZNiSmBRYNMAcDI/appointments']
+people['David Brownlow'] = ['https://beta.companieshouse.gov.uk/officers/g8pcMkh-a1jgUxwZ7ws4RzbL0mk/appointments', 'https://beta.companieshouse.gov.uk/officers/c8KALzQeJ_l1kZNiSmBRYNMAcDI/appointments']
+people['Mark Quinn'] = ['https://beta.companieshouse.gov.uk/officers/F6DJmSQo0LoTQ0XNVp9O6wzV9ts/appointments', 'https://beta.companieshouse.gov.uk/officers/LSjPL9fOhBB7dtMcO9T6mwtjNjU/appointments', 'https://beta.companieshouse.gov.uk/officers/El-EVqryw-mPEpZtcOfXS0QDSWs/appointments']
+people['Dinesh Dhanija'] = ['https://beta.companieshouse.gov.uk/officers/jC4KsZJMnwBXd05YhddmVlxuzdQ/appointments', 'https://beta.companieshouse.gov.uk/officers/VvOXXBLLDYAPEnYX08ESkw1nWJY/appointments']
+people['Mr Michael Clare'] = ['https://beta.companieshouse.gov.uk/officers/6464MVHB7AQP9zRAYzje_YrQhTw/appointments']
+people['Richard Needham'] = ['https://beta.companieshouse.gov.uk/officers/zRSBIoVMYQHkj8XKsHzyMMoNWJo/appointments', 'https://beta.companieshouse.gov.uk/officers/gkNbAtNNKg4ii6Z2r5dHlmA7XsY/appointments']
+people['Jane Deighton'] = ['https://beta.companieshouse.gov.uk/officers/tYNzt6mPJFCzgencZTLdmBjkryQ/appointments']
+people['Mr Anil Agarwal'] = ['https://beta.companieshouse.gov.uk/officers/zNjhFvoGtlAUP7mW0nl3Nzy2rLY/appointments', 'https://beta.companieshouse.gov.uk/officers/qf4KcURyhSZaUU3DVyGBtSLaA-I/appointments', 'https://beta.companieshouse.gov.uk/officers/ITPcUo60VXxw5WNeQuwJuQ_fJWc/appointments']
+people['Keith Young'] = ['https://beta.companieshouse.gov.uk/officers/ZJCF2EDfeVkRRaa811dG4GffcP4/appointments']
+people['Paul Myners'] = ['https://beta.companieshouse.gov.uk/officers/nDWi7xo7yQHVDjkwunUZhnJUJjE/appointments', 'https://beta.companieshouse.gov.uk/officers/CrIa2kPnmhBi6aLnqALRi1QdxpE/appointments', 'https://beta.companieshouse.gov.uk/officers/SsrJUZiblxUOPoy2fMOcmdMJ8x4/appointments', 'https://beta.companieshouse.gov.uk/officers/VdQ6vgOf19dCjPs9jcQnqa5Gu1M/appointments', 'https://beta.companieshouse.gov.uk/officers/A80iUrEK7UAT6P1JHU7qO8-VB78/appointments', 'https://beta.companieshouse.gov.uk/officers/aK2o9YKhY5l_TpUEL4GkALfczng/appointments', 'https://beta.companieshouse.gov.uk/officers/5rodiB8xAHl1njThD-hd1kVKGe0/appointments', 'https://beta.companieshouse.gov.uk/officers/OxEnkeQFrfmO02A7b8QpoqMZ1Yo/appointments', 'https://beta.companieshouse.gov.uk/officers/jSFOS5Uof8zQF5liuUL2Q8ARjGg/appointments', 'https://beta.companieshouse.gov.uk/officers/KZ6m83IoLfwS0S2SWZiv7fV9Jxg/appointments', 'https://beta.companieshouse.gov.uk/officers/FGguuATjRsy5B5-lEZly9tKmF4c/appointments']
+people['Peter Harrison'] = ['https://beta.companieshouse.gov.uk/officers/QvJb-hYNL1AQ5Ltu8UDr_W44raQ/appointments', ]
+people['Gerarld Burns'] = ['https://beta.companieshouse.gov.uk/officers/0KQNQkq2roY2XeAJ_Z9QhUc3g8c/appointments']
+people['Gerard Burns'] = ['https://beta.companieshouse.gov.uk/officers/0KQNQkq2roY2XeAJ_Z9QhUc3g8c/appointments']
+people['Simon Jeffs'] = ['https://beta.companieshouse.gov.uk/officers/O5AfNHAW_ahCgsrmJf59nW0x3a4/appointments', 'https://beta.companieshouse.gov.uk/officers/AEbollJ51lGVSNQSzCjmy8pR7pk/appointments', 'https://beta.companieshouse.gov.uk/officers/84eO0t8HzT79gDWIOm1Ym6yhxfM/appointments']
+people['Mr John Lewis'] = ['https://beta.companieshouse.gov.uk/officers/sSxILqbIRVaoNVErjGkQ-CUOeao/appointments', 'https://beta.companieshouse.gov.uk/officers/RMM5xe_79ANhmt5y8GjRwOmGWJA/appointments']
+people['Gary Lydiate'] = ['https://beta.companieshouse.gov.uk/officers/vO0EKzmn8MRsOn8QebVbZ1eu1SM/appointments']
+people['Andrew Heller'] = ['https://beta.companieshouse.gov.uk/officers/dVzFnnHeB3CS1WIwiFxyImJnSJw/appointments']
+people['Shekor Tarat'] = ['https://beta.companieshouse.gov.uk/officers/FSLlgrnKXArkt6cozVxRGUfcc4E/appointments']
+people['Hugh Sloane'] = ['https://beta.companieshouse.gov.uk/officers/zT_FKBx4eufXm9rJLfCLwwTvy54/appointments', 'https://beta.companieshouse.gov.uk/officers/y3q7m1XKdgEcorBPVZzZ5lgk1g4/appointments', 'https://beta.companieshouse.gov.uk/officers/hL5TC2NsccPB7YV1ptfk9Qw5NBI/appointments', 'https://beta.companieshouse.gov.uk/officers/n02rW6fV0pGDVDQnK5HIThKc4X4/appointments']
+people['Mr Robert Kirkland'] = ['https://beta.companieshouse.gov.uk/officers/U2IXskLiGmXvfvyv0mb25tNf-_Q/appointments']
 
-
-
-
-
-
+people['Marc Pennick'] = ['https://beta.companieshouse.gov.uk/officers/CekAEA1AyfQBYgux0JSDWd2sA6E/appointments', 'https://beta.companieshouse.gov.uk/officers/C1i2q6tKSw2tg8r9vcUDLpMCtO4/appointments', 'https://beta.companieshouse.gov.uk/officers/wykjrjsP6uOqFiozIXy2MXAaLls/appointments']
+people['Ian Wright'] = ['https://beta.companieshouse.gov.uk/officers/LmMJTmAd93bgceaLbYm-Bew1SxU/appointments']
+people['Ardeshir Nagshineh'] = ['https://beta.companieshouse.gov.uk/officers/GJIK8OCEemj0LEI_1BPFxrvtknI/appointments']
+people['Clare Barnett-Nagshineh'] = ['https://beta.companieshouse.gov.uk/officers/t6u64UxJHpDm2L6Kv9qR9jBWOfo/appointments']
+people['David Bouchier'] = ['https://beta.companieshouse.gov.uk/officers/Pc1KpbsPei7_EPp9pA-qQERt65w/appointments', 'https://beta.companieshouse.gov.uk/officers/ZCqoNP6uL5hBV8YRd1duf6Ly8a4/appointments']
+people['Michael Farmer'] = ['https://beta.companieshouse.gov.uk/officers/gLj153rXkxrp2d8Hn2WCy_RqYFk/appointments', 'https://beta.companieshouse.gov.uk/officers/EHmi8HZgRLPs_Vd5t3qnzdGbHNE/appointments']
+people['Martin Armstrong'] = ['https://beta.companieshouse.gov.uk/officers/BREwQ4Jwk3DF0nvgJfkfGKXACSI/appointments']
+people['Christine Lee'] = ['https://beta.companieshouse.gov.uk/officers/DJGnx4pJDIOpNZk2tBvxWfVPlLo/appointments']
+people['David Ho'] = ['https://beta.companieshouse.gov.uk/officers/grR60njp8u7Gj8ZbY0ePGeMKJaI/appointments']
+people['John Pemberton'] = ['https://beta.companieshouse.gov.uk/officers/zoYJsPPtjMPfAxigMdhqRetbCT0/appointments']
+people['Michael Keegan'] = ['https://beta.companieshouse.gov.uk/officers/AK9s7JzoCMbDAS68TLmqE0fpQa0/appointments']
+people['Eddie Powell'] = ['https://beta.companieshouse.gov.uk/officers/_Od4RyJYKygADw8Vq_8U8EkGOYw/appointments']
+people['Mr Eddie Powell'] = ['https://beta.companieshouse.gov.uk/officers/_Od4RyJYKygADw8Vq_8U8EkGOYw/appointments']
+people['Mr Gordon Pepper'] = ['https://beta.companieshouse.gov.uk/officers/B2pVdk0KXushKwTcvPFePgG1stI/appointments']
+people['Mrs Gillie Pepper'] = ['https://beta.companieshouse.gov.uk/officers/B2pVdk0KXushKwTcvPFePgG1stI/appointments']
+people['Lady Keswick'] = ['https://beta.companieshouse.gov.uk/officers/dS1nBsgLxPs6VuI9Lr6lUm-if8o/appointments']
+people['James Stewart'] = ['https://beta.companieshouse.gov.uk/officers/EmObC99L_I0-jhU_jTYXzi48LsM/appointments']
+people['Ian Taylor'] = ['https://beta.companieshouse.gov.uk/officers/fRM2O8j2Kj_86JAT1-2MNozYEGk/appointments', 'https://beta.companieshouse.gov.uk/officers/vs3TfuEGClaVoESBXCyuCPpRjfI/appointments']
+people['Peter Hall'] = ['https://beta.companieshouse.gov.uk/officers/V2yCAEGpLhk_ynWEFV6jQNaZEbI/appointments']
+people['Abdul-Majid Jafar'] = ['https://beta.companieshouse.gov.uk/officers/y0Sa8nn8ytb-WLwb8Xia_7Jw3kk/appointments']
+people['Alison Frost'] = ['https://beta.companieshouse.gov.uk/officers/kTKVHaXbzw5bZj6CKXiXfucqmyk/appointments']
+people['Suhail Ahmed Rahuja'] = ['https://beta.companieshouse.gov.uk/officers/td3N6x1oNBKV0QsyqIQcfIie4HE/appointments', 'https://beta.companieshouse.gov.uk/officers/qs5hkvlJegAljb0irXMeyWv003c/appointments', 'https://beta.companieshouse.gov.uk/officers/Kb5C74wsm9yIL1zyCxYoDk7zKqE/appointments']
+people['Rita Skinner'] = ['https://beta.companieshouse.gov.uk/officers/6aUzoA-iCRUaV3_0_eavV_Qtz20/appointments']
+people['Mr Andrew Reid'] = ['https://beta.companieshouse.gov.uk/officers/UlxiAj6F25_58pQOOgqUISL98Vg/appointments', 'https://beta.companieshouse.gov.uk/officers/RH3kHrg1WSTXlUHbcVWKa8KqCu8/appointments', 'https://beta.companieshouse.gov.uk/officers/ePksTBdkobP_wt9TQTHcXASceq4/appointments']
+people['Mr Daniel Green'] = ['https://beta.companieshouse.gov.uk/officers/HPABhvdxwBKP37ddv3WN-197Pm4/appointments', 'https://beta.companieshouse.gov.uk/officers/M5dHOMHig0eyD4asOhip-NDqSuQ/appointments']
+people['Robert Wilson'] = ['https://beta.companieshouse.gov.uk/officers/a9XzvTNhq4K6Oz1rOg-Sw16_afM/appointments']
+people['Diana Sternfeld'] = ['https://beta.companieshouse.gov.uk/officers/ClGwQpA6A7oAcLDJ72CqFd5eWIQ/appointments']
+people['Steve Hart'] = ['https://beta.companieshouse.gov.uk/officers/5D5F8pCCuIz2PJGqzubBNbZWjes/appointments']
+people['Jessica Frankopan'] = ['https://beta.companieshouse.gov.uk/officers/p2y1GJUqJjO3stRhrOY0_FlO3ZQ/appointments', 'https://beta.companieshouse.gov.uk/officers/C7El0maTZmdryfbC_AjdzxWIaKk/appointments']
 
 
 
