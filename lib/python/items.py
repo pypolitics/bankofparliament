@@ -1,13 +1,21 @@
+# -*- coding: utf-8 -*-
 
 # system libs
 import os, re, pprint
 
 # local libs
-from utils import PrettyPrintUnicode, getlink, cleanup_raw_string
+from utils import PrettyPrintUnicode, getlink, cleanup_raw_string, read_unincorporated
 from companies_house_query import CompaniesHouseUserSearch, CompaniesHouseCompanySearch, CompaniesHouseOfficer
 from constants import KEYWORDS
 from fuzzywuzzy import fuzz
-from companies_house_patches import urls, people
+
+# import patches
+from patches.companies_house import urls, people
+from patches.trade_unions import trade_union
+from patches.charities import charities
+from patches.clubs import clubs
+from patches.others import others
+from patches.foreign_governments import foreign_governments
 
 base_url = 'https://beta.companieshouse.gov.uk'
 
@@ -36,26 +44,53 @@ class Item():
 
 	def lookup(self):
 
+		self.donor = str(self.donor)
 		company_number = None
 		people_links = []
 		found = False
 
+
+		# ugly hack corrections
+		if self.donor in ['Tresco Estate', 'James Hay', 'Think BDW Ltd']:
+			self.status = 'company'
+
+		if self.status == 'company, no 10120655':
+			company_number = 10120655
+
+		if 'Armed Forces Parliamentary Trust' == self.donor:
+			self.status = 'other'
+		if u'Buck’s Club 1919' in self.donor:
+			self.donor = "Buck's Club 1919"
+			self.status = 'members'
+		if u'Pratt’s Club' in self.donor:
+			self.donor = "Pratt's Club"
+			self.status = 'members'
+		if 'carlton club' in self.donor.lower():
+			self.donor = 'Carlton Club'
+			self.status = 'members'
+		if 'National Liberal Club' in self.donor:
+			self.donor = 'National Liberal Club'
+			self.status = 'members'
+		if 'The Public Interest Foundation (UK charity)' == self.donor:
+			self.status = 'charity'
+
 		# apply patches
 		if self.donor in urls.keys():
 			company_number = urls[self.donor].split('/')[-1]
+
 		if self.donor in people.keys():
 			people_links = people[self.donor]
 
 		if not company_number:
 			# use the supplied company number from the register of interests
-			if 'company' in self.status:
-				company_number_search = re.search('registration [0-9|a-z|A-Z]+', self.status)
-				if company_number_search:
-					company_number = company_number_search.group().split('registration ')[-1]
+			# if 'company' in self.status:
+			company_number_search = re.search('registration [0-9|a-z|A-Z]+', self.status)
+			if company_number_search:
+				company_number = company_number_search.group().split('registration ')[-1]
 
-					# needs padding to 8 digits, if it starts with an int
-					if re.match('[0-9]', company_number):
-						company_number = '%08d' % (int(company_number))
+				# needs padding to 8 digits, if it starts with an int
+				if re.match('[0-9]', company_number):
+					company_number = '%08d' % (int(company_number))
 
 		self.company = {'company_name' : self.donor, 'company_number' : 'N/A', 'company_status' : 'Active'}
 		self.persons = []
@@ -74,14 +109,15 @@ class Item():
 
 			if not self.company.has_key('errors'):
 				self.link = 'https://beta.companieshouse.gov.uk' + self.company['links']['self']
+				found = True
 			else:
+				self.company = {'company_name' : self.donor, 'company_number' : 'N/A', 'company_status' : 'Active'}
 				self.link = ''
-			found = True
 
 		else:
 
-			if 'individual' in self.status:
-
+			if 'individual' in self.status.lower() or 'private' in self.status.lower():
+				# found = True
 				# for individuals, we store the appointments, then the company, officers etc as children
 				# of the appointment
 
@@ -94,93 +130,78 @@ class Item():
 							if i not in self.appointments:
 								self.appointments.append(i)
 
+					# just take the last one
 					self.link = pl
 					found = True
 
-				else:
-					# individuals have private addresses - only way of identifying is by name
-					officers = CompaniesHouseUserSearch([self.donor])
-
-					dob_month = None
-					dob_year = None
-
-					for officer in officers.data:
-
-						name_ratio = fuzz.token_sort_ratio(officer['title'].lower(), self.donor)
-
-						match = False
-						if name_ratio == 100:
-							match = True
-							if officer.has_key('date_of_birth'):
-								dob_month = officer['date_of_birth']['month']
-								dob_year = officer['date_of_birth']['year']
-
-						elif name_ratio > 70:
-							if officer.has_key('date_of_birth'):
-								month = officer['date_of_birth']['month']
-								year = officer['date_of_birth']['year']
-
-								if month == dob_month and year == dob_year:
-									match = True
-
-						if match:
-							appointments = getlink(officer, 'self')['items']
-							if self.appointments != []:
-								for i in appointments:
-									if i not in self.appointments:
-										self.appointments.append(i)
-							else:
-								self.appointments = appointments
-
-							self.link = 'https://beta.companieshouse.gov.uk' + officer['links']['self']
-							found = True
-
 				for app in self.appointments:
-					# print app['links']
+					# add the company, officers and persons record to appointment record
 					app['company'] = getlink(app, 'company')
 					app['officers'] = getlink(app['company'], 'officers')['items']
 					app['persons_with_significant_control'] = getlink(app['company'], 'persons_with_significant_control')['items']
 
 			# eveything below here, should generate a company / entity
 			elif 'trade' in self.status.lower():
-				pass
-				# found = True
-
-			# elif 'visit' in self.status:
-			# 	pass
-				# found = True
+				self.type = 'union'
+				if self.donor in trade_union.keys():
+					self.donor = trade_union[self.donor]
+					found = True
 
 			elif 'charity' in self.status.lower():
-				pass
-				# found = True
+				self.type = 'charity'
+				if self.donor in charities.keys():
+					self.donor = charities[self.donor]
+					found = True
 
 			elif 'unincorporated' in self.status.lower():
-				pass
-				# found = True
+				self.type = 'club'
+				if self.donor in clubs.keys():
+					self.donor = clubs[self.donor]
+					found = True
 
-			# elif 'members' in self.status.lower():
-			# 	pass
-			# 	# found = True
+			elif 'members' in self.status.lower():
+				self.type = 'club'
+				if self.donor in clubs.keys():
+					self.donor = clubs[self.donor]
+					found = True
 
-			# elif 'other' in self.status.lower():
-			# 	pass
-			# 	# found = True
+			elif 'friendly' in self.status.lower():
+				self.type = 'club'
+				if self.donor in clubs.keys():
+					self.donor = clubs[self.donor]
+					found = True
 
-			# elif 'friendly' in self.status.lower():
-			# 	pass
-			# 	# found = True
+			elif 'other' in self.status.lower():
+				self.type = 'other'
+				if self.donor in others.keys():
+					self.donor = others[self.donor]
+					found = True
 
-			# elif 'limited' in self.status.lower():
-			# 	pass
-			# 	# found = True
+			elif 'trust' in self.status.lower():
+				self.type = 'other'
+				if self.donor in others.keys():
+					self.donor = others[self.donor]
+					found = True
 
-			# elif 'llp' in self.status.lower():
-			# 	pass
-			# 	# found = True
+			elif 'provident' in self.status.lower():
+				self.type = 'company'
+				if self.donor in others.keys():
+					self.donor = others[self.donor]
+					found = True
+
+			elif 'visit' in self.status:
+				# TODO
+				self.type = 'visit'
+
 
 			else:
-				pass
-				# these are the remaining things to search
+				# we dont have a company number, so do a company search
+				if 'llp' in self.status.lower() or 'limited' in self.status.lower():
+					self.type = 'company'
+				else:
+					self.type = 'other'
+
+				# these are the remaining things to search - can only do a company search really
 				companies = CompaniesHouseCompanySearch([self.donor])
 
 				for i in companies.data:
@@ -190,6 +211,7 @@ class Item():
 					name_ratio = fuzz.token_set_ratio(i['title'].lower(), self.donor)
 
 					if name_ratio > 90:
+
 						if i['address_snippet']:
 
 							addr_ratio = fuzz.token_set_ratio(i['address_snippet'].lower(), self.address)
@@ -207,9 +229,15 @@ class Item():
 								found = True
 								break
 
+		# print self.donor, self.address
+		# if 'sw1p 3ql' in self.address.lower():
+		# 	print '*'*100
+		# 	print '55 TUFTON STREET: %s' % self.donor
+		# 	print '*'*100
+
 		if found:
 			pass
-			print '\tFOUND %s: %s' % (self.status.upper(), self.donor)
+			# print '\tFOUND %s: %s' % (self.status.upper(), self.donor)
 		else:
 			# pass
 			print '\tMISSING %s: %s' % (self.status.upper(), self.donor)
@@ -384,6 +412,9 @@ class ShareholdingsItem(Item):
 		officers = getlink(self.company, 'officers')
 		self.officers = officers['items']
 
+		if self.company == {'items' : []}:
+			self.company = {'company_name' : pretty, 'company_number' : 'N/A', 'company_status' : 'N/A'}
+
 		# TODO - check the total results against the number of results returned, may
 		# need to query again for the remainder
 
@@ -403,6 +434,9 @@ class OtherShareholdingsItem(Item):
 		self.persons = persons['items']
 		officers = getlink(self.company, 'officers')
 		self.officers = officers['items']
+
+		if self.company == {'items' : []}:
+			self.company = {'company_name' : pretty, 'company_number' : 'N/A', 'company_status' : 'N/A'}
 
 		# TODO - check the total results against the number of results returned, may
 		# need to query again for the remainder
