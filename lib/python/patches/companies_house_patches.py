@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# http://www.telegraph.co.uk/news/politics/10008978/500-business-leaders-tell-David-Cameron-to-negotiate-a-better-deal-with-Europe.html
-
-
 urls = {}
 urls['D & R Duguid Ltd; management support services and consulting. (Registered 06 July 2017)'] = 'https://beta.companieshouse.gov.uk/company/SC549117'
 urls['Jardine Matheson Holdings; industrial conglomerate. (Registered 29 June 2017)'] = 'https://beta.companieshouse.gov.uk/company/00115332'
@@ -35,6 +32,7 @@ urls['Falcon and Associates FZ-LLC'] = 'https://beta.companieshouse.gov.uk/compa
 urls['York Racecourse Knavesmire LLP'] = 'https://beta.companieshouse.gov.uk/company/OC332112'
 urls['Think BDW Ltd'] = 'https://beta.companieshouse.gov.uk/company/02167543'
 urls['James Hay'] = 'https://beta.companieshouse.gov.uk/company/10192992/officers'
+urls['Tresco Estate'] = 'https://beta.companieshouse.gov.uk/company/02012098/officers'
 
 # Trust
 # urls['The Essex Research Association'] = ''
@@ -80,101 +78,9 @@ urls['James Hay'] = 'https://beta.companieshouse.gov.uk/company/10192992/officer
 # urls['Scottish Unionist Association Trust'] = ''
 # urls['The Tandridge Club'] = ''
 
-# # rmt
-# urls['Rail, Maritime and Transport Workers'] = 'https://beta.companieshouse.gov.uk/company/01008371'
-# urls['RMT Trade Union'] = 'https://beta.companieshouse.gov.uk/company/01008371'
-# urls['RMT NE Region'] = ''
-# urls['RMT Head Office'] = ''
-# urls['RMT Manchester South'] = ''
-
-# # unite
-# urls['Unite the Union'] = 'https://beta.companieshouse.gov.uk/company/00969191'
-# urls['Unite the union'] = 'https://beta.companieshouse.gov.uk/company/00969191'
-# urls['Unite Union'] = 'https://beta.companieshouse.gov.uk/company/00969191'
-# urls['Unite'] = 'https://beta.companieshouse.gov.uk/company/00969191'
-# urls['Unite (Northeast, Yorkshire and Humberside)'] = 'https://beta.companieshouse.gov.uk/company/00969191'
-# urls['Unite the Union Vauxhall Motors'] = ''
-# urls['Unite the Union (Rochdale Branch)'] = ''
-# urls['Vauxhall Motors Unite Shop Stewards Committee'] = ''
-# urls['UNITE'] = ''
-
-# # gmb
-# urls['GMB Northern'] = ''
-# urls['GMB Northern Region'] = ''
-# urls['GMB'] = ''
-# urls['GMB National Office'] = ''
-# urls['GMB Birmingham and West Midlands'] = ''
-# urls['GMB Wales and the South West'] = ''
-# urls['GMB Midland and the East Coast'] = ''
-# urls['GMB Southern Region'] = ''
-# urls['GMB North West & Irish Region'] = ''
-# urls['GMB London Region'] = ''
-# urls['GMB Yorkshire and North Derbyshire'] = ''
-# urls['GMB Yorkshire Region and National'] = ''
-# urls['GMB Midland & East Coast Region'] = ''
-# urls['GMB - Southern Region'] = ''
-# urls['GMB Southern Union'] = ''
-# urls['GMB NW & Irish Region'] = ''
-# urls['GMB Midland and East Coast Region'] = ''
-# urls['GMB Yorkshire and North Derbyshire Region'] = ''
-
-# # cwu
-# urls['CWU'] = ''
-# urls['Communication Workers Union North East Region'] = ''
-# urls['Communication Workers Union York and District Branch'] = ''
-# urls['Communication Workers Union Wales and Marches'] = ''
-# urls['Communication Workers Union'] = ''
-# urls['Communications Workers Union, Wales and Marches Region'] = ''
-# urls['CWU North West'] = ''
-# urls['Communication Workers Union Midlands Region'] = ''
-# urls["Communication Workers' Union"] = ''
-# urls['CWU Gloucester'] = ''
-# urls['CWU Bristol'] = ''
-# urls['Communication Workers Union - Eastern Region'] = ''
-# urls['CWU Midlands Region'] = ''
-
-# # unison
-# urls['UNISON'] = 'https://beta.companieshouse.gov.uk/company/01105991'
-# urls['Unison'] = 'https://beta.companieshouse.gov.uk/company/01105991'
-# urls['UNISON Cymru/Wales'] = 'https://beta.companieshouse.gov.uk/company/01105991'
-# urls['Unison North West'] = 'https://beta.companieshouse.gov.uk/company/01105991'
-# urls['UNISON Labour Link'] = ''
-# urls['UNISON South West'] = ''
-# urls['UNISON Yorkshire & Humber Region'] = ''
-# urls['UNISON East Midlands'] = ''
-# urls['UNISON - East Midlands'] = ''
-# urls['Unison centre'] = ''
-# urls['UNISON SE'] = ''
-
-# # others
-# urls['ASLEF'] = ''
-# urls['USDAW'] = ''
-# urls['USDAW Union'] = ''
-# urls['USDAW Trade Union'] = ''
-# urls['BWTUC'] = ''
-# urls["Transport Salaried Staffs' Association"] = ''
-# urls['Community'] = ''
-# urls['Community Union'] = ''
-# urls['Bakers and Allied Food Workers Union'] = ''
-# urls["Musicians' Union"] = ''
-# urls['Musicians Union'] = ''
-# urls['TSSA 2012'] = ''
-# urls['National Union of Journalists (NUJ)'] = ''
-# urls['Union of Shop, Distributive and Allied Workers'] = ''
-# urls['Public and Commercial Services Union'] = ''
-# urls['The Prison Officers Association'] = ''
-# urls['NAPO - the Probation and Family Courts Union'] = ''
-# urls['FBU'] = ''
-# urls['TSSA'] = ''
-# urls['TSSA Union'] = ''
-# urls['Public and Commercial Services Union (PCS)'] = ''
-# urls['Fire Brigades Union'] = ''
-# urls['Fire Brigades Union (FBU)']  = ''
-# urls['Community Trade Union'] = ''
 
 # Selva Pankaj - regent group
 # john fearon  - astro lighting?
-
 people = {}
 people['Peter Cruddas'] = ['https://beta.companieshouse.gov.uk/officers/WtiEW0LL-mMmPaRLrQSCjsWBpXY/appointments', 'https://beta.companieshouse.gov.uk/officers/hjblAJtL-pH8xNz-st-cZBMe85Q/appointments']
 people['Mr Peter Cruddas'] = ['https://beta.companieshouse.gov.uk/officers/WtiEW0LL-mMmPaRLrQSCjsWBpXY/appointments', 'https://beta.companieshouse.gov.uk/officers/hjblAJtL-pH8xNz-st-cZBMe85Q/appointments']
@@ -191,6 +97,7 @@ people['Simon Waxley'] = ['https://beta.companieshouse.gov.uk/officers/bfKyCTiBt
 people['Mr Jeremy Hand'] = ['https://beta.companieshouse.gov.uk/officers/Lu02xZ4fBJ8uxDsXLcSXWZ3iFOQ/appointments']
 people['Sir Mike Davis'] = ['https://beta.companieshouse.gov.uk/officers/6UITUSZQsNbEaNtxNfctbsM2SvA/appointments']
 people['Sir Mick Davis'] = ['https://beta.companieshouse.gov.uk/officers/6UITUSZQsNbEaNtxNfctbsM2SvA/appointments']
+people['Michael Davis'] = ['https://beta.companieshouse.gov.uk/officers/6UITUSZQsNbEaNtxNfctbsM2SvA/appointments']
 people['Amjad Bseisu'] = ['https://beta.companieshouse.gov.uk/officers/qKL9CAusnxk1WknLjJ-AagTF0Nc/appointments', 'https://beta.companieshouse.gov.uk/officers/rVCyWcNWyQnwEiTTv-o8-VyQPAo/appointments', 'https://beta.companieshouse.gov.uk/officers/V6yfZY1M9qItETMd6yXZefTmkuA/appointments']
 people['Alison P De Haan'] = ['https://beta.companieshouse.gov.uk/officers/nl7iSG9ifmmTm9VWgSF_Rdk6hmg/appointments']
 people['Mr L Collinson'] = ['https://beta.companieshouse.gov.uk/officers/rU6lBVY9Z1i9wp-gk58IrSF6OZk/appointments']
@@ -452,7 +359,6 @@ people['Andrew Heller'] = ['https://beta.companieshouse.gov.uk/officers/dVzFnnHe
 people['Shekor Tarat'] = ['https://beta.companieshouse.gov.uk/officers/FSLlgrnKXArkt6cozVxRGUfcc4E/appointments']
 people['Hugh Sloane'] = ['https://beta.companieshouse.gov.uk/officers/zT_FKBx4eufXm9rJLfCLwwTvy54/appointments', 'https://beta.companieshouse.gov.uk/officers/y3q7m1XKdgEcorBPVZzZ5lgk1g4/appointments', 'https://beta.companieshouse.gov.uk/officers/hL5TC2NsccPB7YV1ptfk9Qw5NBI/appointments', 'https://beta.companieshouse.gov.uk/officers/n02rW6fV0pGDVDQnK5HIThKc4X4/appointments']
 people['Mr Robert Kirkland'] = ['https://beta.companieshouse.gov.uk/officers/U2IXskLiGmXvfvyv0mb25tNf-_Q/appointments']
-
 people['Marc Pennick'] = ['https://beta.companieshouse.gov.uk/officers/CekAEA1AyfQBYgux0JSDWd2sA6E/appointments', 'https://beta.companieshouse.gov.uk/officers/C1i2q6tKSw2tg8r9vcUDLpMCtO4/appointments', 'https://beta.companieshouse.gov.uk/officers/wykjrjsP6uOqFiozIXy2MXAaLls/appointments']
 people['Ian Wright'] = ['https://beta.companieshouse.gov.uk/officers/LmMJTmAd93bgceaLbYm-Bew1SxU/appointments']
 people['Ardeshir Nagshineh'] = ['https://beta.companieshouse.gov.uk/officers/GJIK8OCEemj0LEI_1BPFxrvtknI/appointments']
@@ -482,12 +388,14 @@ people['Robert Wilson'] = ['https://beta.companieshouse.gov.uk/officers/a9XzvTNh
 people['Diana Sternfeld'] = ['https://beta.companieshouse.gov.uk/officers/ClGwQpA6A7oAcLDJ72CqFd5eWIQ/appointments']
 people['Steve Hart'] = ['https://beta.companieshouse.gov.uk/officers/5D5F8pCCuIz2PJGqzubBNbZWjes/appointments']
 people['Jessica Frankopan'] = ['https://beta.companieshouse.gov.uk/officers/p2y1GJUqJjO3stRhrOY0_FlO3ZQ/appointments', 'https://beta.companieshouse.gov.uk/officers/C7El0maTZmdryfbC_AjdzxWIaKk/appointments']
-
-
-
-
-
-
-
-
-
+people['Brian Griffiths'] = ['https://beta.companieshouse.gov.uk/officers/050FPZG7dv-yAddfp0KWp9_maxk/appointments', 'https://beta.companieshouse.gov.uk/officers/0e8Wj4zVn0G-lENVLjhAelGd0TQ/appointments', 'https://beta.companieshouse.gov.uk/officers/vcbcyr6VTL4bxLuCTt-0D2OR_Z4/appointments', 'https://beta.companieshouse.gov.uk/officers/VSGPpbFyqZ9XzMNsIygz1HaOstc/appointments']
+people['David Craigen'] = ['https://beta.companieshouse.gov.uk/officers/g17orU4T4nPYKVb6dt5KjUEq-w0/appointments']
+people['Peter Meagher'] = ['https://beta.companieshouse.gov.uk/officers/zbrd6_IkDgY1udZJw1aVGj3Hy3I/appointments']
+people['Matthew Ingle'] = ['https://beta.companieshouse.gov.uk/officers/QLSYHEanpfMbhg36RGOGMZ3HX8Q/appointments']
+people['Chhaterpal Singh Jundu'] = ['https://beta.companieshouse.gov.uk/officers/mtYx0H4QhTYcHMi4wL_-ZYKOSZk/appointments', 'https://beta.companieshouse.gov.uk/officers/suy0B-Iy8dlICjLlFmnUjZCGRUw/appointments']
+people['Tim Sanderson'] = ['https://beta.companieshouse.gov.uk/officers/mHTIm8cFBgJF3l6FZ5QgD8r5chE/appointments']
+people['Ravi Kailas'] = ['https://beta.companieshouse.gov.uk/officers/DFt_k-QhHCbLLD-0eoWh2MhVM1A/appointments']
+people['Mr Peter Warner'] = ['https://beta.companieshouse.gov.uk/officers/pISA52hUmBPKjsq-yyg-tykQgE4/appointments', 'https://beta.companieshouse.gov.uk/officers/p-T87nm-3Xbyo9ycHrk0XcYj2wg/appointments']
+people['Mr Paul Blanchard'] = ['https://beta.companieshouse.gov.uk/officers/qbovriLOF227x87k_I4gQMyPPjs/appointments', 'https://beta.companieshouse.gov.uk/officers/mOndeS_agdkxSfu4gRZQBrCC-28/appointments']
+people['Phillip Gibbs'] = ['https://beta.companieshouse.gov.uk/officers/aukd4unZYq0wrVYix-WxBSVmXHU/appointments', 'https://beta.companieshouse.gov.uk/officers/CVARxln5kGhgjAhcy9bq6GjkYZs/appointments', 'https://beta.companieshouse.gov.uk/officers/GSd8inRK55iehjspNDPfw7gDT18/appointments']
+people['Mr Tim Williams'] = ['https://beta.companieshouse.gov.uk/officers/zb3kDTiJQHy8QaE8qWB58E6QC5I/appointments']
