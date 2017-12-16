@@ -73,7 +73,7 @@ trade_union['Communications Workers Union, Wales and the Marches'] = 'CWU'
 trade_union['Communication Workers Union Northern Region'] = 'CWU'
 trade_union[' CWU'] = 'CWU'
 trade_union['Communication Workers Union North West'] = 'CWU'
-trade_union[u'Communication Workers’ Union North East Region,'] = 'CWU'
+trade_union['Communication Workers’ Union North East Region,'] = 'CWU'
 trade_union['Communications Workers Union (CWU)'] = 'CWU'
 
 # unison

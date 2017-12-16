@@ -34,51 +34,6 @@ urls['Think BDW Ltd'] = 'https://beta.companieshouse.gov.uk/company/02167543'
 urls['James Hay'] = 'https://beta.companieshouse.gov.uk/company/10192992/officers'
 urls['Tresco Estate'] = 'https://beta.companieshouse.gov.uk/company/02012098/officers'
 
-# Trust
-# urls['The Essex Research Association'] = ''
-
-# charities
-# urls['Catholic Bishops’ Conference of England and Wales'] = ''
-# urls['The Public Interest Foundation (UK charity)'] = ''
-
-# members assoc
-# urls['The United & Cecil Club'] = ''
-# urls['United and Cecil'] = ''
-# urls['The United and Cecil Club'] = ''
-# urls['United and Cecil Club'] = ''
-# urls['The United and Cecil Club'] = ''
-# urls['97 Dining Club'] = ''
-# urls['1912 Club'] = ''
-# urls['1900 Club'] = ''
-# urls['Biddulph Conservative and Unionist Club'] = ''
-# urls['Looe Conservative Ladies Luncheon Club'] = ''
-
-# unincorporated assoc
-# urls['Stop The Tory Landslide Fund'] = ''
-# urls['Ruskin Hall Trustees'] = ''
-# urls['Magna Carta Club'] = ''
-# urls['Strangers Gallery Dining Club'] = 'https://beta.companieshouse.gov.uk/company/00220292'
-# urls['Esher and Walton Connect (business club)'] = ''
-# urls['Gloucester Business Club'] = ''
-# urls['Warrington North Parliamentary Association'] = ''
-# urls['Trevelyan Campaign Fund'] = ''
-# urls['The Chelwood Club'] = ''
-# urls['Association of Tennis Professionals'] = ''
-# urls['Cambourne and Redruth Business Club'] = ''
-# urls['Landsker Business Club'] = ''
-# urls['1900 Club'] = ''
-# urls['Hazel Grove Conservative Ladies Supper Club'] = ''
-# urls['Westminster Dining Club'] = ''
-# urls['The Portcullis Club'] = ''
-# urls['Biggleswade Conservative Club'] = ''
-
-# friendly soc
-# urls['North Cumbria Conservatives Patrons Club'] = ''
-# urls['The Knole Club'] = ''
-# urls['Scottish Unionist Association Trust'] = ''
-# urls['The Tandridge Club'] = ''
-
-
 # Selva Pankaj - regent group
 # john fearon  - astro lighting?
 people = {}
