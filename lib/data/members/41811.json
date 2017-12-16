@@ -387,6 +387,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -395,7 +396,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobalds Road, Holborn, London WC1X 8TN", 
                "item_id": "0001", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -412,6 +413,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -437,6 +439,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -445,7 +448,7 @@
                "pretty": "UNISON - East Midlands", 
                "address": "Vivian Avenue, Nottingham NG5 1AF", 
                "item_id": "0003", 
-               "donor": "UNISON - East Midlands", 
+               "donor": "UNISON", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -736,8 +739,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2011-09-05", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1962
                      }, 
                      "address": {
                         "locality": "Haywards Heath", 
@@ -747,8 +750,8 @@
                         "postal_code": "RH16 1QZ", 
                         "address_line_1": "Summerhill Close"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -789,11 +792,11 @@
                      }, 
                      "country_of_residence": "United Kingdom", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1940
+                        "year": 1940, 
+                        "month": 12
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -823,8 +826,8 @@
                      "appointed_on": "1991-07-17", 
                      "resigned_on": "1994-01-26", 
                      "date_of_birth": {
-                        "year": 1919, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1919
                      }, 
                      "address": {
                         "locality": "London", 
@@ -842,17 +845,17 @@
                            "appointments": "/officers/JZNVUxylL2Ic-FhmzNrWLYV2Wlc/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Essex", 
-                        "locality": "Westcliff On Sea", 
-                        "postal_code": "SS0 8BG", 
-                        "address_line_1": "55 Crowstone Road"
-                     }, 
                      "appointed_on": "1997-07-14", 
                      "resigned_on": "1999-02-15", 
                      "date_of_birth": {
                         "month": 3, 
                         "year": 1952
+                     }, 
+                     "address": {
+                        "region": "Essex", 
+                        "locality": "Westcliff On Sea", 
+                        "postal_code": "SS0 8BG", 
+                        "address_line_1": "55 Crowstone Road"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -865,17 +868,17 @@
                            "appointments": "/officers/xNdbRpLjv_VigsjsVN35e979mB4/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "64 Stamford Brook Road", 
-                        "postal_code": "W6 0XL", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "1998-01-26", 
                      "resigned_on": "2004-04-15", 
                      "date_of_birth": {
                         "month": 5, 
                         "year": 1958
+                     }, 
+                     "address": {
+                        "address_line_1": "64 Stamford Brook Road", 
+                        "postal_code": "W6 0XL", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -888,18 +891,18 @@
                            "appointments": "/officers/G7XVd3iPYRFlvY7vTrOPWLKK-rU/appointments"
                         }
                      }, 
-                     "appointed_on": "1994-10-12", 
-                     "resigned_on": "1995-01-31", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1938
-                     }, 
                      "address": {
                         "address_line_2": "Filleigh", 
                         "region": "Devon", 
                         "address_line_1": "Castle Hill", 
                         "postal_code": "EX32 0RQ", 
                         "locality": "Barnstaple"
+                     }, 
+                     "appointed_on": "1994-10-12", 
+                     "resigned_on": "1995-01-31", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1938
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -915,8 +918,8 @@
                      "appointed_on": "1993-08-20", 
                      "resigned_on": "1997-02-21", 
                      "date_of_birth": {
-                        "year": 1949, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1949
                      }, 
                      "address": {
                         "postal_code": "W13 OLG", 
@@ -935,13 +938,6 @@
                            "appointments": "/officers/-C-jywP8IeNkQ3BBXwd_buEajbc/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Woodlands", 
-                        "region": "Hertfordshire", 
-                        "address_line_1": "5 Brackenhill", 
-                        "postal_code": "HP4 2PU", 
-                        "locality": "Berkhamsted"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-04-16", 
                      "resigned_on": "2011-08-31", 
@@ -949,8 +945,15 @@
                         "year": 1958, 
                         "month": 5
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "Woodlands", 
+                        "region": "Hertfordshire", 
+                        "address_line_1": "5 Brackenhill", 
+                        "postal_code": "HP4 2PU", 
+                        "locality": "Berkhamsted"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Bbc Senior Manager"
                   }, 
                   {
@@ -960,17 +963,17 @@
                            "appointments": "/officers/aZU2ZNedy7It0M_ECsNf3WLD7xI/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "East Sussex", 
-                        "address_line_1": "204 1/2 High Street", 
-                        "postal_code": "BN7 2AD", 
-                        "locality": "Lewes"
-                     }, 
                      "appointed_on": "2001-01-31", 
                      "resigned_on": "2002-01-09", 
                      "date_of_birth": {
                         "year": 1957, 
                         "month": 7
+                     }, 
+                     "address": {
+                        "region": "East Sussex", 
+                        "address_line_1": "204 1/2 High Street", 
+                        "postal_code": "BN7 2AD", 
+                        "locality": "Lewes"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -996,8 +999,8 @@
                         "month": 4, 
                         "year": 1951
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1019,8 +1022,8 @@
                         "address_line_2": "102 Village Street", 
                         "locality": "Derby"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1030,15 +1033,15 @@
                            "appointments": "/officers/RH_6-RAvJTMJY2Pr67MBrsNxF-I/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "28 Castle Terrace", 
-                        "postal_code": "TD15 1NZ", 
-                        "locality": "Berwick-Upon-Tweed"
-                     }, 
                      "resigned_on": "1991-07-17", 
                      "date_of_birth": {
                         "month": 4, 
                         "year": 1934
+                     }, 
+                     "address": {
+                        "address_line_1": "28 Castle Terrace", 
+                        "postal_code": "TD15 1NZ", 
+                        "locality": "Berwick-Upon-Tweed"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1055,8 +1058,8 @@
                      "appointed_on": "1996-02-23", 
                      "resigned_on": "1997-01-17", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1950
+                        "year": 1950, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1086,8 +1089,8 @@
                         "month": 11, 
                         "year": 1950
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Television Executive"
                   }, 
                   {
@@ -1097,19 +1100,19 @@
                            "appointments": "/officers/rAvss2s9ZwWpk8gaz33i1zgq6sI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-10-29", 
-                     "resigned_on": "2011-12-13", 
-                     "date_of_birth": {
-                        "year": 1957, 
-                        "month": 10
-                     }, 
                      "address": {
                         "premises": "Spring Cottage", 
                         "region": "Wiltshire", 
                         "address_line_1": "Swallowcliffe", 
                         "postal_code": "SP3 5PA", 
                         "locality": "Nr Tisbury"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-10-29", 
+                     "resigned_on": "2011-12-13", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 10
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1122,19 +1125,19 @@
                            "appointments": "/officers/fldH8sL-dX2MFSaeGL_K4xKz4-A/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "resigned_on": "1994-11-30", 
-                     "date_of_birth": {
-                        "year": 1934, 
-                        "month": 11
-                     }, 
                      "address": {
                         "address_line_1": "5 North View", 
                         "postal_code": "SW19 4UJ", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "resigned_on": "1994-11-30", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1934
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Television Executive"
                   }, 
                   {
@@ -1167,16 +1170,16 @@
                            "appointments": "/officers/Hqc8P869GQPP2W4RI9rL9qK0rak/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "25 Woodbourne Avenue", 
-                        "postal_code": "SW16 1UP", 
-                        "locality": "London"
-                     }, 
                      "appointed_on": "1997-01-17", 
                      "resigned_on": "1997-12-10", 
                      "date_of_birth": {
                         "year": 1951, 
                         "month": 5
+                     }, 
+                     "address": {
+                        "address_line_1": "25 Woodbourne Avenue", 
+                        "postal_code": "SW16 1UP", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1212,18 +1215,18 @@
                            "appointments": "/officers/woN3EQHlFQCW3s7AZHpfpyZp7Hc/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "Tyne And Wear", 
+                        "address_line_1": "46 The Cloisters", 
+                        "postal_code": "NE7 7LS", 
+                        "locality": "Newcastle Upon Tyne"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1994-03-31", 
                      "resigned_on": "1995-02-06", 
                      "date_of_birth": {
                         "month": 6, 
                         "year": 1950
-                     }, 
-                     "address": {
-                        "region": "Tyne And Wear", 
-                        "address_line_1": "46 The Cloisters", 
-                        "postal_code": "NE7 7LS", 
-                        "locality": "Newcastle Upon Tyne"
                      }, 
                      "nationality": "United Kingdom", 
                      "officer_role": "director", 
@@ -1247,11 +1250,11 @@
                      "appointed_on": "2005-06-30", 
                      "resigned_on": "2011-11-30", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 11
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1261,17 +1264,17 @@
                            "appointments": "/officers/SgL141P1q04wxHeJlEnwX7JbJ20/appointments"
                         }
                      }, 
-                     "appointed_on": "1998-07-09", 
-                     "resigned_on": "2005-01-01", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1931
-                     }, 
                      "address": {
                         "region": "Buckinghamshire", 
                         "address_line_1": "Woodlands Farm", 
                         "postal_code": "HP9 2SF", 
                         "locality": "Beaconsfield"
+                     }, 
+                     "appointed_on": "1998-07-09", 
+                     "resigned_on": "2005-01-01", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1931
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1297,8 +1300,8 @@
                         "address_line_2": "Preston Candover", 
                         "locality": "Basingstoke"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Peer"
                   }, 
                   {
@@ -1343,8 +1346,8 @@
                         "postal_code": "E14 3UY", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Technology Manager"
                   }, 
                   {
@@ -1365,8 +1368,8 @@
                      "appointed_on": "2005-06-30", 
                      "resigned_on": "2011-11-29", 
                      "date_of_birth": {
-                        "year": 1937, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1937
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1382,8 +1385,8 @@
                      "appointed_on": "1995-03-20", 
                      "resigned_on": "1997-01-22", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1946
+                        "year": 1946, 
+                        "month": 6
                      }, 
                      "address": {
                         "address_line_1": "37 Ennismore Gardens Mews", 
@@ -1401,16 +1404,16 @@
                            "appointments": "/officers/XgtfYyN8ri3w-cQyAF5dXdAoVx4/appointments"
                         }
                      }, 
-                     "appointed_on": "2002-01-09", 
-                     "resigned_on": "2003-04-14", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1946
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "SW1Y 5AA", 
                         "address_line_1": "1 Carlton Gardens"
+                     }, 
+                     "appointed_on": "2002-01-09", 
+                     "resigned_on": "2003-04-14", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 2
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1426,16 +1429,16 @@
                      "appointed_on": "1996-02-23", 
                      "resigned_on": "1997-12-10", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1950
+                        "year": 1950, 
+                        "month": 12
                      }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "W1P 1FP", 
                         "address_line_1": "6 Phillips House 52 Goodge Street"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Controller Factual Progs Itv N"
                   }, 
                   {
@@ -1482,8 +1485,8 @@
                         "year": 1939, 
                         "month": 8
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1493,17 +1496,17 @@
                            "appointments": "/officers/7Fku4ubZOpGsZ2CFYBI-oNxzjmk/appointments"
                         }
                      }, 
-                     "appointed_on": "1991-07-17", 
-                     "resigned_on": "1998-08-27", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 11
-                     }, 
                      "address": {
                         "address_line_2": "Barnes Waterside", 
                         "address_line_1": "12 Devereux Lane", 
                         "postal_code": "SW13 8DA", 
                         "locality": "London"
+                     }, 
+                     "appointed_on": "1991-07-17", 
+                     "resigned_on": "1998-08-27", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1955
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 

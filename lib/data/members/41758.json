@@ -425,6 +425,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "06/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -450,6 +451,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "06/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -475,6 +477,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "06/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -483,7 +486,7 @@
                "pretty": "Communication Workers Union North West", 
                "address": "150, the Broadway, Wimbledon, London SW19 1RX", 
                "item_id": "0003", 
-               "donor": "Communication Workers Union North West", 
+               "donor": "CWU", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -500,6 +503,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "06/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -508,7 +512,7 @@
                "pretty": " CWU", 
                "address": "150 The Broadway, Wimbledon, London SW19 1RX", 
                "item_id": "0004", 
-               "donor": " CWU", 
+               "donor": "CWU", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -525,6 +529,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "06/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -533,7 +538,7 @@
                "pretty": " CWU", 
                "address": "150 The Broadway, Wimbledon, London SW19 1RX", 
                "item_id": "0005", 
-               "donor": " CWU", 
+               "donor": "CWU", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -837,17 +842,17 @@
                            "appointments": "/officers/Ksv3GwLnNY9a2IYJt5Fv0X8zwMM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-07-25", 
-                     "date_of_birth": {
-                        "year": 1961, 
-                        "month": 6
-                     }, 
                      "address": {
                         "premises": "2nd Floor, 9", 
                         "address_line_1": "Staple Inn", 
                         "postal_code": "WC1V 7QH", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-07-25", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1961
                      }, 
                      "officer_role": "director", 
                      "nationality": "Irish", 
@@ -863,8 +868,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-10-31", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1963
+                        "year": 1963, 
+                        "month": 2
                      }, 
                      "address": {
                         "premises": "2nd Floor, 9", 
@@ -887,8 +892,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-07-25", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1969
+                        "year": 1969, 
+                        "month": 10
                      }, 
                      "address": {
                         "premises": "2nd Floor, 9", 
@@ -896,8 +901,8 @@
                         "postal_code": "WC1V 7QH", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Business Consultant"
                   }, 
                   {
@@ -941,13 +946,6 @@
                            "appointments": "/officers/eO8obys3u3IvAFd_cGiAh787muQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "2nd Floor, 9", 
-                        "country": "England", 
-                        "address_line_1": "Staple Inn", 
-                        "postal_code": "WC1V 7QH", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2013-12-03", 
                      "resigned_on": "2017-04-07", 
@@ -955,8 +953,15 @@
                         "year": 1965, 
                         "month": 7
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "2nd Floor, 9", 
+                        "country": "England", 
+                        "address_line_1": "Staple Inn", 
+                        "postal_code": "WC1V 7QH", 
+                        "locality": "London"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -976,11 +981,11 @@
                      "appointed_on": "2011-03-29", 
                      "resigned_on": "2014-05-27", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 6
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Writer And Broadcaster"
                   }, 
                   {
@@ -990,18 +995,18 @@
                            "appointments": "/officers/Cb4v4Wj8icxFsqIyq4K87asoqcI/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "25", 
-                        "address_line_1": "Bedford Avenue", 
-                        "postal_code": "WC1B 3AT", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2013-03-19", 
                      "resigned_on": "2014-03-18", 
                      "date_of_birth": {
                         "year": 1960, 
                         "month": 6
+                     }, 
+                     "address": {
+                        "premises": "25", 
+                        "address_line_1": "Bedford Avenue", 
+                        "postal_code": "WC1B 3AT", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1014,18 +1019,18 @@
                            "appointments": "/officers/Cb4v4Wj8icxFsqIyq4K87asoqcI/appointments"
                         }
                      }, 
+                     "address": {
+                        "premises": "25", 
+                        "address_line_1": "Bedford Avenue", 
+                        "postal_code": "WC1B 3AT", 
+                        "locality": "London"
+                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2011-03-29", 
                      "resigned_on": "2013-03-21", 
                      "date_of_birth": {
                         "year": 1960, 
                         "month": 6
-                     }, 
-                     "address": {
-                        "premises": "25", 
-                        "address_line_1": "Bedford Avenue", 
-                        "postal_code": "WC1B 3AT", 
-                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1038,17 +1043,17 @@
                            "appointments": "/officers/z58LbRgLXYrnoVmwf_dRNsGMOLQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "2014-05-27", 
-                     "date_of_birth": {
-                        "year": 1929, 
-                        "month": 5
-                     }, 
                      "address": {
                         "premises": "25", 
                         "locality": "London", 
                         "postal_code": "WC1B 3AT", 
                         "address_line_1": "Bedford Avenue"
+                     }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2014-05-27", 
+                     "date_of_birth": {
+                        "year": 1929, 
+                        "month": 5
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1074,8 +1079,8 @@
                         "postal_code": "WC1B 3AT", 
                         "address_line_1": "Bedford Avenue"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Entrepreneur"
                   }, 
                   {
@@ -1107,15 +1112,15 @@
                            "appointments": "/officers/V0b7x7lCPEOe70f323RqcgOv9Rc/appointments"
                         }
                      }, 
-                     "resigned_on": "1997-04-04", 
-                     "date_of_birth": {
-                        "year": 1939, 
-                        "month": 11
-                     }, 
                      "address": {
                         "address_line_1": "5 Mercer Street", 
                         "postal_code": "WC2E 9QJ", 
                         "locality": "London"
+                     }, 
+                     "resigned_on": "1997-04-04", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1939
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1132,8 +1137,8 @@
                      "appointed_on": "2011-03-29", 
                      "resigned_on": "2014-10-30", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1953
+                        "year": 1953, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "2nd Floor, 9", 
@@ -1153,19 +1158,19 @@
                            "appointments": "/officers/GMIQazgWw0zEaNwQux7rOSaWXR4/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "2nd Floor, 9", 
-                        "country": "England", 
-                        "address_line_1": "Staple Inn", 
-                        "postal_code": "WC1V 7QH", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2014-08-12", 
                      "resigned_on": "2014-10-23", 
                      "date_of_birth": {
                         "year": 1957, 
                         "month": 2
+                     }, 
+                     "address": {
+                        "premises": "2nd Floor, 9", 
+                        "country": "England", 
+                        "address_line_1": "Staple Inn", 
+                        "postal_code": "WC1V 7QH", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1206,8 +1211,8 @@
                      "country_of_residence": "England", 
                      "resigned_on": "2014-05-27", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1938
+                        "year": 1938, 
+                        "month": 7
                      }, 
                      "address": {
                         "locality": "Brighton", 
@@ -1358,12 +1363,6 @@
                            "appointments": "/officers/ZrUtK79bDfjFvngE4uXpOA48jtM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-09-10", 
-                     "date_of_birth": {
-                        "year": 1944, 
-                        "month": 8
-                     }, 
                      "address": {
                         "premises": "2nd Floor", 
                         "country": "England", 
@@ -1371,8 +1370,14 @@
                         "postal_code": "WC1V 7QH", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-09-10", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1944
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Lecturer"
                   }, 
                   {
@@ -1382,12 +1387,6 @@
                            "appointments": "/officers/lkeIpssB2HnIBtUcCFGe9mY7dYk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-05-12", 
-                     "date_of_birth": {
-                        "year": 1943, 
-                        "month": 6
-                     }, 
                      "address": {
                         "premises": "2nd Floor", 
                         "country": "England", 
@@ -1395,8 +1394,14 @@
                         "postal_code": "WC1V 7QH", 
                         "address_line_1": "9 Staple Inn"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-05-12", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1943
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Writer And Broadcaster"
                   }, 
                   {
@@ -1418,8 +1423,8 @@
                         "year": 1972, 
                         "month": 7
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "University Lecturer"
                   }, 
                   {
@@ -1439,11 +1444,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-05-12", 
                      "date_of_birth": {
-                        "year": 1929, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1929
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1453,12 +1458,6 @@
                            "appointments": "/officers/F-xI-QhJlgoZRxr_0J-XpQ_IJ4w/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-05-12", 
-                     "date_of_birth": {
-                        "year": 1931, 
-                        "month": 12
-                     }, 
                      "address": {
                         "premises": "2nd Floor", 
                         "country": "England", 
@@ -1466,8 +1465,14 @@
                         "postal_code": "WC1V 7QH", 
                         "address_line_1": "9 Staple Inn"
                      }, 
-                     "nationality": "American", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-05-12", 
+                     "date_of_birth": {
+                        "year": 1931, 
+                        "month": 12
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "American", 
                      "occupation": "Film Maker"
                   }, 
                   {
@@ -1501,18 +1506,18 @@
                            "appointments": "/officers/Jv3gHcNuGoQK1AsBfy_SjMPzpgM/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-05-12", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1938
-                     }, 
                      "address": {
                         "premises": "2nd Floor", 
                         "country": "England", 
                         "address_line_1": "9 Staple Inn", 
                         "postal_code": "WC1V 7QH", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-05-12", 
+                     "date_of_birth": {
+                        "year": 1938, 
+                        "month": 7
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1529,8 +1534,8 @@
                      "appointed_on": "2014-05-12", 
                      "resigned_on": "2014-05-27", 
                      "date_of_birth": {
-                        "year": 1953, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1953
                      }, 
                      "address": {
                         "premises": "25 Bedford Avenue", 

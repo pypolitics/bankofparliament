@@ -280,6 +280,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "05/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -288,7 +289,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobald's Road, London WC1X 8TN", 
                "item_id": "0001", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -344,6 +345,7 @@
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation, or nature and value if donation in kind: Four nights' accommodation during the Labour Party Conference with a total value of \u00a31,380 (\u00a3345 per night)Date received: 23-27 September 2017Date accepted: 23 September 2017Donor status: trade union(Registered 23 October 2017)", 
                "status": "trade union", 
                "isWealth": false, 
+               "type": "union", 
                "nouns": [], 
                "isDonation": false, 
                "persons": [], 
@@ -365,7 +367,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobald's Road, London WC1X 8TN", 
                "item_id": "0001", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 4, 
                "isGift": true, 
                "company": {
@@ -404,31 +406,32 @@
          "category_gifts": 8500, 
          "items": [
             {
-               "raw_string": "Name of donor: Hong Kong GovernmentAddress of donor: c/o Hong Kong Economic and Trade Office, 18 Bedford Square, London WC1B 3JAEstimate of the probable value (or amount of any donation): Flights approx. \u00a38,500; accommodation approx. \u00a3413 per night; transport and hospitality approx. \u00a3207; total value \u00a310,359Destination of visit: Hong KongDates of visit: 9-13 January 2017Purpose of visit: APPG on China delegation to maintain bilateral ties; support British businesses operating in Hong Kong; and deepen the knowledge of parliamentarians of Hong Kong\u2019s political, social and economic development.(Registered 10 February 2017)", 
                "status": "visit", 
-               "isWealth": false, 
-               "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
-               "registered": "10/02/2017", 
+               "isGift": true, 
                "destination": "Hong Kong", 
                "officers": [], 
                "isIncome": false, 
-               "amount": 8500, 
-               "link": null, 
-               "purpose": "APPG on China delegation to maintain bilateral ties; support British businesses operating in Hong Kong; and deepen the knowledge of parliamentarians of Hong Kong\u2019s political, social and economic development.", 
                "pretty": "Hong Kong Government", 
-               "address": "c/o Hong Kong Economic and Trade Office, 18 Bedford Square, London WC1B 3JA", 
-               "item_id": "0001", 
                "donor": "Hong Kong Government", 
-               "category_id": 5, 
-               "isGift": true, 
+               "type": "visit", 
                "company": {
                   "company_status": "Active", 
                   "company_name": "Hong Kong Government", 
                   "company_number": "N/A"
                }, 
-               "appointments": []
+               "raw_string": "Name of donor: Hong Kong GovernmentAddress of donor: c/o Hong Kong Economic and Trade Office, 18 Bedford Square, London WC1B 3JAEstimate of the probable value (or amount of any donation): Flights approx. \u00a38,500; accommodation approx. \u00a3413 per night; transport and hospitality approx. \u00a3207; total value \u00a310,359Destination of visit: Hong KongDates of visit: 9-13 January 2017Purpose of visit: APPG on China delegation to maintain bilateral ties; support British businesses operating in Hong Kong; and deepen the knowledge of parliamentarians of Hong Kong\u2019s political, social and economic development.(Registered 10 February 2017)", 
+               "isWealth": false, 
+               "registered": "10/02/2017", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "APPG on China delegation to maintain bilateral ties; support British businesses operating in Hong Kong; and deepen the knowledge of parliamentarians of Hong Kong\u2019s political, social and economic development.", 
+               "nouns": [], 
+               "address": "c/o Hong Kong Economic and Trade Office, 18 Bedford Square, London WC1B 3JA", 
+               "item_id": "0001", 
+               "amount": 8500, 
+               "category_id": 5
             }
          ], 
          "category_type": "visits_outside_uk", 
@@ -711,8 +714,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-05-10", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1974
+                        "year": 1974, 
+                        "month": 5
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -725,6 +728,12 @@
                            "appointments": "/officers/IGWGs4KBQvRxPa4Sl38PXrpANno/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-05-10", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 7
+                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "country": "England", 
@@ -732,14 +741,8 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-05-10", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 7
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director (Grocery Multiple)"
                   }, 
                   {
@@ -749,18 +752,18 @@
                            "appointments": "/officers/ySess8UrUN0uxG2Ch3vGXfEBKMw/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-03-07", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 6
+                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "country": "England", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-03-07", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1955
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -773,12 +776,6 @@
                            "appointments": "/officers/OSlDjA7lrWO9l-CVmmlQIK9FbrM/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-05-10", 
-                     "date_of_birth": {
-                        "year": 1959, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "country": "England", 
@@ -786,8 +783,14 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-05-10", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1959
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -797,17 +800,17 @@
                            "appointments": "/officers/DI7-y7tdujBXcgcLc66A15RIh-U/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-11-29", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-11-29", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 2
                      }, 
                      "nationality": "English", 
                      "officer_role": "director", 
@@ -823,8 +826,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-06-01", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1944
                      }, 
                      "address": {
                         "premises": "County Hall", 
@@ -832,9 +835,32 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
+                  }, 
+                  {
+                     "name": "FINNIGAN, Liam Martin", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/tPWD6qVmbtnSrEi76VQqAsxBF_w/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-12-11", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1978
+                     }, 
+                     "address": {
+                        "premises": "County Hall", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chartered Accountant"
                   }, 
                   {
                      "name": "GORNALL, Michael Robert", 
@@ -843,17 +869,17 @@
                            "appointments": "/officers/8gvrDF4Dd2NuWTVyzNzGD1SFMNI/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
                      "country_of_residence": "Uk", 
                      "appointed_on": "2016-11-29", 
                      "date_of_birth": {
                         "month": 8, 
                         "year": 1964
+                     }, 
+                     "address": {
+                        "premises": "County Hall", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -866,17 +892,17 @@
                            "appointments": "/officers/QXTSMFBMmg0YVwRPXi_qFdz401g/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-11-19", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1967
-                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-11-19", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1967
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -889,18 +915,18 @@
                            "appointments": "/officers/WqZxKxDBkRQhho9Lvgi49CgQt78/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-05-11", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1954
-                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "country": "England", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-05-11", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 8
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -936,17 +962,17 @@
                            "appointments": "/officers/vDeuIxY57MpTN72MIFdfdGDwTYY/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-11-10", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1964
-                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-11-10", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 9
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -985,8 +1011,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-11-29", 
                      "date_of_birth": {
-                        "year": 1974, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1974
                      }, 
                      "address": {
                         "premises": "County Hall", 
@@ -1005,17 +1031,17 @@
                            "appointments": "/officers/NhtZLn1OVP1dfA4UuxHy7I9EBdI/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-03-17", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 3
+                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-03-17", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1963
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1051,17 +1077,17 @@
                            "appointments": "/officers/QvC1GiYqRnHPRRmHYgCid5dXVfY/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-07-14", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 11
-                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-07-14", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1962
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1086,8 +1112,8 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Finance Director"
                   }, 
                   {
@@ -1129,8 +1155,8 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1140,18 +1166,18 @@
                            "appointments": "/officers/2BbR02BxUodHlzjWHFxUf5MUjDQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2014-09-04", 
                      "resigned_on": "2015-05-20", 
                      "date_of_birth": {
                         "month": 3, 
                         "year": 1949
+                     }, 
+                     "address": {
+                        "premises": "County Hall", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1164,19 +1190,19 @@
                            "appointments": "/officers/cRXgSiF9gEsEJ-I2JnFzbWJMqcs/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2011-05-10", 
+                     "resigned_on": "2014-09-01", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 1
+                     }, 
                      "address": {
                         "premises": "County Hall", 
                         "country": "England", 
                         "region": "Lancashire", 
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
-                     }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2011-05-10", 
-                     "resigned_on": "2014-09-01", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1956
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1198,8 +1224,8 @@
                      "appointed_on": "2012-09-25", 
                      "resigned_on": "2014-07-14", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1960
+                        "year": 1960, 
+                        "month": 6
                      }, 
                      "address": {
                         "premises": "County Hall", 
@@ -1219,19 +1245,19 @@
                            "appointments": "/officers/5MGQuJpfAbnCrGQ8Rn1GwPy70P8/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "country": "England", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2011-05-10", 
                      "resigned_on": "2017-04-15", 
                      "date_of_birth": {
                         "month": 4, 
                         "year": 1951
+                     }, 
+                     "address": {
+                        "premises": "County Hall", 
+                        "country": "England", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1248,8 +1274,8 @@
                      "appointed_on": "2011-05-10", 
                      "resigned_on": "2013-05-26", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1944
                      }, 
                      "address": {
                         "premises": "County Hall", 
@@ -1273,8 +1299,8 @@
                      "appointed_on": "2014-11-18", 
                      "resigned_on": "2017-12-01", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1963
                      }, 
                      "address": {
                         "premises": "County Hall", 
@@ -1282,8 +1308,8 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -1307,8 +1333,8 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "County Secretary And Solicitor"
                   }, 
                   {
@@ -1318,19 +1344,19 @@
                            "appointments": "/officers/aZS7Y1m02edX1-vQRgG1udR-TLY/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "country": "England", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-05-10", 
                      "resigned_on": "2011-10-03", 
                      "date_of_birth": {
                         "year": 1958, 
                         "month": 12
+                     }, 
+                     "address": {
+                        "premises": "County Hall", 
+                        "country": "England", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1357,8 +1383,8 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1368,13 +1394,6 @@
                            "appointments": "/officers/z_nsAeRfVGW5X-b7GdgReyGH2uM/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "country": "England", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-05-10", 
                      "resigned_on": "2012-04-25", 
@@ -1382,8 +1401,15 @@
                         "year": 1948, 
                         "month": 11
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "County Hall", 
+                        "country": "England", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1393,18 +1419,18 @@
                            "appointments": "/officers/RfhcHGdU_NHaGl7j-pA4ZyfeTCY/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-07-14", 
                      "resigned_on": "2017-04-27", 
                      "date_of_birth": {
                         "year": 1957, 
                         "month": 6
+                     }, 
+                     "address": {
+                        "premises": "County Hall", 
+                        "region": "Lancashire", 
+                        "postal_code": "PR1 8XJ", 
+                        "locality": "Preston"
                      }, 
                      "nationality": "Uk", 
                      "officer_role": "director", 
@@ -1428,8 +1454,8 @@
                      "appointed_on": "2011-05-10", 
                      "resigned_on": "2014-09-04", 
                      "date_of_birth": {
-                        "year": 1955, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1955
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1456,34 +1482,9 @@
                         "postal_code": "PR1 8XJ", 
                         "locality": "Preston"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director And Businessman"
-                  }, 
-                  {
-                     "name": "MCVICAR, Malcolm Thomas, Dr", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/inM7rPHIfUDS4AyUKRq2fCtMcS4/appointments"
-                        }
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-05-10", 
-                     "resigned_on": "2017-09-15", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1946
-                     }, 
-                     "address": {
-                        "premises": "County Hall", 
-                        "country": "England", 
-                        "region": "Lancashire", 
-                        "postal_code": "PR1 8XJ", 
-                        "locality": "Preston"
-                     }, 
-                     "nationality": "British", 
-                     "officer_role": "director", 
-                     "occupation": "University Vice-Chancellor"
                   }
                ], 
                "isIncome": false, 

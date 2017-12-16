@@ -384,6 +384,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -392,7 +393,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobalds Road, London WC1X 8TU", 
                "item_id": "0001", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -460,31 +461,32 @@
          "category_gifts": 751, 
          "items": [
             {
-               "raw_string": "Name of donor: Government of GibraltarAddress of donor:No 6 Convent Place, GibraltarEstimate of the probable value (or amount of any donation): for myself and a member of staff, flights costing\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60Destination of visit: GibraltarDates of visit: 26 to 28 April 2017Purpose of visit: Meeting with Government of Gibraltar.(Registered 07 July 2017)", 
                "status": "visit", 
-               "isWealth": false, 
-               "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
-               "registered": "07/07/2017", 
+               "isGift": true, 
                "destination": "Gibraltar", 
                "officers": [], 
                "isIncome": false, 
-               "amount": 751, 
-               "link": null, 
-               "purpose": "Meeting with Government of Gibraltar.", 
                "pretty": "Government of Gibraltar", 
-               "address": "Address of donor:No 6 Convent Place, Gibraltar", 
-               "item_id": "0001", 
                "donor": "Government of Gibraltar", 
-               "category_id": 5, 
-               "isGift": true, 
+               "type": "visit", 
                "company": {
                   "company_status": "Active", 
                   "company_name": "Government of Gibraltar", 
                   "company_number": "N/A"
                }, 
-               "appointments": []
+               "raw_string": "Name of donor: Government of GibraltarAddress of donor:No 6 Convent Place, GibraltarEstimate of the probable value (or amount of any donation): for myself and a member of staff, flights costing\u00a3751 and accommodation costing \u00a3520.60, total \u00a31,271.60Destination of visit: GibraltarDates of visit: 26 to 28 April 2017Purpose of visit: Meeting with Government of Gibraltar.(Registered 07 July 2017)", 
+               "isWealth": false, 
+               "registered": "07/07/2017", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "Meeting with Government of Gibraltar.", 
+               "nouns": [], 
+               "address": "Address of donor:No 6 Convent Place, Gibraltar", 
+               "item_id": "0001", 
+               "amount": 751, 
+               "category_id": 5
             }
          ], 
          "category_type": "visits_outside_uk", 
@@ -724,7 +726,6 @@
                            "appointments": "/officers/fbGaNmIrYyDzsU2d1SfwHGewebU/appointments"
                         }
                      }, 
-                     "appointed_on": "2004-04-06", 
                      "address": {
                         "address_line_2": "7 Castle Hill", 
                         "region": "Surrey", 
@@ -732,8 +733,9 @@
                         "postal_code": "GU1 3SX", 
                         "locality": "Guildford"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2004-04-06", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -754,11 +756,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-07-31", 
                      "date_of_birth": {
-                        "year": 1948, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1948
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -768,6 +770,12 @@
                            "appointments": "/officers/fbGaNmIrYyDzsU2d1SfwHGewebU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2004-04-06", 
+                     "date_of_birth": {
+                        "year": 1928, 
+                        "month": 2
+                     }, 
                      "address": {
                         "address_line_2": "7 Castle Hill", 
                         "region": "Surrey", 
@@ -775,14 +783,8 @@
                         "postal_code": "GU1 3SX", 
                         "locality": "Guildford"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2004-04-06", 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 2
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -792,12 +794,6 @@
                            "appointments": "/officers/YnOTw6PgGd67DtWXs70Tbz2xKAo/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2005-06-23", 
-                     "date_of_birth": {
-                        "year": 1972, 
-                        "month": 8
-                     }, 
                      "address": {
                         "locality": "Guildford", 
                         "premises": "1", 
@@ -805,6 +801,12 @@
                         "region": "Surrey", 
                         "postal_code": "GU1 3TB", 
                         "address_line_1": "Fort Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2005-06-23", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -820,8 +822,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-04-01", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1959
+                        "year": 1959, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "12", 
@@ -841,18 +843,18 @@
                            "appointments": "/officers/V4DOO0nCylSFsYv1MfDyJRoJPpM/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2005-06-23", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 3
+                     }, 
                      "address": {
                         "postal_code": "GU8 4QA", 
                         "region": "Surrey", 
                         "address_line_1": "1 Lilian Place", 
                         "address_line_2": "Coxcombe Lane", 
                         "locality": "Chiddingfold"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2005-06-23", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -882,12 +884,6 @@
                            "appointments": "/officers/aeQGOkT40JBYTnLa22NeBDsnpNQ/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-06-23", 
-                     "resigned_on": "2007-07-31", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1972
-                     }, 
                      "address": {
                         "address_line_2": "7 Castle Hill", 
                         "region": "Surrey", 
@@ -895,8 +891,14 @@
                         "postal_code": "GU1 3SX", 
                         "locality": "Guildford"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2005-06-23", 
+                     "resigned_on": "2007-07-31", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 3
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Party Organiser"
                   }, 
                   {
@@ -906,19 +908,19 @@
                            "appointments": "/officers/ibowWQOs7IR_XzeXLlCj1Hl10zA/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-04-09", 
-                     "resigned_on": "2010-04-01", 
-                     "date_of_birth": {
-                        "year": 1960, 
-                        "month": 7
-                     }, 
                      "address": {
                         "premises": "12", 
                         "country": "United Kingdom", 
                         "locality": "London", 
                         "postal_code": "N1 0LZ", 
                         "address_line_1": "Richmond Crescent"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-04-09", 
+                     "resigned_on": "2010-04-01", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 7
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -931,12 +933,6 @@
                            "appointments": "/officers/onEjFK5JmcmKzqCVmykGvxXn4Ik/appointments"
                         }
                      }, 
-                     "appointed_on": "2004-04-06", 
-                     "resigned_on": "2008-04-09", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1936
-                     }, 
                      "address": {
                         "postal_code": "GU1 3SX", 
                         "region": "Surrey", 
@@ -944,8 +940,14 @@
                         "address_line_2": "7 Castle Hill", 
                         "locality": "Guildford"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2004-04-06", 
+                     "resigned_on": "2008-04-09", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1936
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {

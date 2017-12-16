@@ -459,31 +459,32 @@
          "category_gifts": 1177, 
          "items": [
             {
-               "raw_string": "Name of donor: Konrad-Adenauer-StiftungAddress of donor: 63D Eccleston Square, London SW1V 1PHEstimate of the probable value (or amount of any donation): Air travel, food and accommodation with an approximate value of \u00a31,177Destination of visit: Berlin, GermanyDates of visit: 31 March \u2013 2 April 2017Purpose of visit: Conference to discuss British-German relations.(Registered 24 April 2017)", 
                "status": "visit", 
-               "isWealth": false, 
-               "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
-               "registered": "24/04/2017", 
+               "isGift": true, 
                "destination": "Berlin, Germany", 
                "officers": [], 
                "isIncome": false, 
-               "amount": 1177, 
-               "link": null, 
-               "purpose": "Conference to discuss British-German relations.", 
                "pretty": "Konrad-Adenauer-Stiftung", 
-               "address": "63D Eccleston Square, London SW1V 1PH", 
-               "item_id": "0001", 
                "donor": "Konrad-Adenauer-Stiftung", 
-               "category_id": 5, 
-               "isGift": true, 
+               "type": "visit", 
                "company": {
                   "company_status": "Active", 
                   "company_name": "Konrad-Adenauer-Stiftung", 
                   "company_number": "N/A"
                }, 
-               "appointments": []
+               "raw_string": "Name of donor: Konrad-Adenauer-StiftungAddress of donor: 63D Eccleston Square, London SW1V 1PHEstimate of the probable value (or amount of any donation): Air travel, food and accommodation with an approximate value of \u00a31,177Destination of visit: Berlin, GermanyDates of visit: 31 March \u2013 2 April 2017Purpose of visit: Conference to discuss British-German relations.(Registered 24 April 2017)", 
+               "isWealth": false, 
+               "registered": "24/04/2017", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "Conference to discuss British-German relations.", 
+               "nouns": [], 
+               "address": "63D Eccleston Square, London SW1V 1PH", 
+               "item_id": "0001", 
+               "amount": 1177, 
+               "category_id": 5
             }
          ], 
          "category_type": "visits_outside_uk", 
@@ -517,6 +518,7 @@
                "raw_string": "Name of donor: Swiss ParliamentAddress of donor: CH - 3003 BerneAmount of donation or nature and value if donation in kind: as part of the British-Swiss APPG's Parliamentary Ski Week, two ski passes with a value of \u00a3240; \u00a3480 in totalDate received: 2-8 January 2017Date accepted: 2 January 2017Donor status: other(Registered 25 January 2017)", 
                "status": "other", 
                "isWealth": false, 
+               "type": "other", 
                "nouns": [], 
                "isDonation": false, 
                "persons": [], 
@@ -773,8 +775,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-06-19", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1942
+                        "year": 1942, 
+                        "month": 3
                      }, 
                      "address": {
                         "locality": "High Wycombe", 
@@ -785,8 +787,8 @@
                         "address_line_2": "Wooburn Green", 
                         "address_line_1": "Brookbank"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -810,8 +812,8 @@
                         "postal_code": "SL9 7BD", 
                         "address_line_1": "Heusden Way"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -824,8 +826,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2014-06-19", 
                      "date_of_birth": {
-                        "year": 1960, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1960
                      }, 
                      "address": {
                         "locality": "Iver", 
@@ -835,8 +837,8 @@
                         "postal_code": "SL0 0PD", 
                         "address_line_1": "Seven Hills Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -906,8 +908,8 @@
                         "postal_code": "SL7 1QB", 
                         "address_line_1": "Mill Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -917,13 +919,6 @@
                            "appointments": "/officers/xUycdEPU-4UaQoJHE8WOMRHrTRk/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "12 Aylesbury End", 
-                        "region": "Buckinghamshire", 
-                        "address_line_1": "Disraeli House", 
-                        "postal_code": "HP9 1LW", 
-                        "locality": "Beaconsfield"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-06-20", 
                      "resigned_on": "2014-06-19", 
@@ -931,8 +926,15 @@
                         "month": 9, 
                         "year": 1947
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "address_line_2": "12 Aylesbury End", 
+                        "region": "Buckinghamshire", 
+                        "address_line_1": "Disraeli House", 
+                        "postal_code": "HP9 1LW", 
+                        "locality": "Beaconsfield"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -946,8 +948,8 @@
                      "appointed_on": "2014-06-19", 
                      "resigned_on": "2015-07-06", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1970
+                        "year": 1970, 
+                        "month": 5
                      }, 
                      "address": {
                         "locality": "Iver", 
@@ -957,8 +959,8 @@
                         "postal_code": "SL0 0PD", 
                         "address_line_1": "Seven Hills Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Finance Director"
                   }, 
                   {
@@ -970,8 +972,8 @@
                      }, 
                      "resigned_on": "1993-06-18", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1920
+                        "year": 1920, 
+                        "month": 10
                      }, 
                      "address": {
                         "region": "Buckinghamshire", 
@@ -979,8 +981,8 @@
                         "postal_code": "HP9 2SG", 
                         "address_line_1": "Hall Barn"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Landowner Army Officer Retireder Retired"
                   }, 
                   {
@@ -993,8 +995,8 @@
                      "appointed_on": "1995-11-13", 
                      "resigned_on": "1999-06-17", 
                      "date_of_birth": {
-                        "year": 1943, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1943
                      }, 
                      "address": {
                         "postal_code": "SL1 8EA", 
@@ -1014,19 +1016,19 @@
                            "appointments": "/officers/Q2N812me8YlxSyeBc2hDt3ccto0/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-10-21", 
-                     "resigned_on": "2007-07-24", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 4
-                     }, 
                      "address": {
                         "address_line_2": "West Common", 
                         "region": "Buckinghamshire", 
                         "locality": "Gerrards Cross", 
                         "postal_code": "SL9 7RG", 
                         "address_line_1": "Devon Cottages"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-10-21", 
+                     "resigned_on": "2007-07-24", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 4
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1068,8 +1070,8 @@
                      "appointed_on": "2007-07-24", 
                      "resigned_on": "2011-03-25", 
                      "date_of_birth": {
-                        "year": 1937, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1937
                      }, 
                      "address": {
                         "address_line_2": "18 Orchehill Avenue", 
@@ -1078,8 +1080,8 @@
                         "postal_code": "SL9 8QF", 
                         "locality": "Gerrards Cross"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1089,18 +1091,18 @@
                            "appointments": "/officers/k2yFgX31ed-03Kl2CKG6rOBSI-o/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "1995-11-13", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 10
+                     }, 
                      "address": {
                         "address_line_2": "Park View", 
                         "region": "Bucks", 
                         "address_line_1": "Wakefield", 
                         "postal_code": "HP10 9BE", 
                         "locality": "Flackwell Heath"
-                     }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "1995-11-13", 
-                     "date_of_birth": {
-                        "year": 1948, 
-                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1113,6 +1115,11 @@
                            "appointments": "/officers/HAGGmG5kmxC_Zmuwbpwt41O8JhA/appointments"
                         }
                      }, 
+                     "resigned_on": "1996-06-17", 
+                     "date_of_birth": {
+                        "year": 1942, 
+                        "month": 6
+                     }, 
                      "address": {
                         "address_line_2": "2 Eghams Wood Road", 
                         "region": "Buckinghamshire", 
@@ -1120,13 +1127,8 @@
                         "postal_code": "HP9 1JP", 
                         "address_line_1": "Tanglewood Cottage"
                      }, 
-                     "resigned_on": "1996-06-17", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1942
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -1140,8 +1142,8 @@
                      "appointed_on": "2008-07-28", 
                      "resigned_on": "2009-10-19", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 1
                      }, 
                      "address": {
                         "address_line_2": "Forty Green Road", 
@@ -1150,8 +1152,8 @@
                         "postal_code": "HP9 1XL", 
                         "address_line_1": "Magnolia Cottage"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1164,8 +1166,8 @@
                      "appointed_on": "2006-07-20", 
                      "resigned_on": "2008-01-31", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1970
                      }, 
                      "address": {
                         "address_line_2": "Temple", 
@@ -1185,17 +1187,17 @@
                            "appointments": "/officers/1S-msrrzjJouZV7OBaGSmrp3qow/appointments"
                         }
                      }, 
+                     "resigned_on": "1999-01-14", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1918
+                     }, 
                      "address": {
                         "postal_code": "SL9 8PL", 
                         "region": "Buckinghamshire", 
                         "address_line_1": "The Red Cottage", 
                         "address_line_2": "Ethorpe Close", 
                         "locality": "Gerrards Cross"
-                     }, 
-                     "resigned_on": "1999-01-14", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1918
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1208,13 +1210,6 @@
                            "appointments": "/officers/-Cli8l7sQ75cT87UZIq4HuMVLac/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "HP9 1LW", 
-                        "region": "Buckinghamshire", 
-                        "locality": "Beaconsfield", 
-                        "address_line_2": "12 Aylesbury End", 
-                        "address_line_1": "Disraeli House"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2009-10-19", 
                      "resigned_on": "2014-06-19", 
@@ -1222,8 +1217,15 @@
                         "year": 1964, 
                         "month": 7
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "postal_code": "HP9 1LW", 
+                        "region": "Buckinghamshire", 
+                        "locality": "Beaconsfield", 
+                        "address_line_2": "12 Aylesbury End", 
+                        "address_line_1": "Disraeli House"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -1233,13 +1235,6 @@
                            "appointments": "/officers/KXwzt2MjOrWkqoq9JbDaNgSF2lU/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "12 Aylesbury End", 
-                        "region": "Buckinghamshire", 
-                        "address_line_1": "Disraeli House", 
-                        "postal_code": "HP9 1LW", 
-                        "locality": "Beaconsfield"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-06-20", 
                      "resigned_on": "2014-06-19", 
@@ -1247,8 +1242,15 @@
                         "month": 8, 
                         "year": 1945
                      }, 
-                     "nationality": "New Zealander", 
+                     "address": {
+                        "address_line_2": "12 Aylesbury End", 
+                        "region": "Buckinghamshire", 
+                        "address_line_1": "Disraeli House", 
+                        "postal_code": "HP9 1LW", 
+                        "locality": "Beaconsfield"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "New Zealander", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -1258,18 +1260,18 @@
                            "appointments": "/officers/KXwzt2MjOrWkqoq9JbDaNgSF2lU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-04-09", 
+                     "resigned_on": "2006-04-09", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1945
+                     }, 
                      "address": {
                         "region": "Buckinghamshire", 
                         "locality": "Beaconsfield", 
                         "postal_code": "HP9 1TU", 
                         "address_line_1": "21 Walkwood Rise"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2001-04-09", 
-                     "resigned_on": "2006-04-09", 
-                     "date_of_birth": {
-                        "year": 1945, 
-                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "New Zealander", 
@@ -1282,12 +1284,6 @@
                            "appointments": "/officers/heNca6NXqJyckXxooyGCLRbTD24/appointments"
                         }
                      }, 
-                     "appointed_on": "1999-06-17", 
-                     "resigned_on": "2002-07-20", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1943
-                     }, 
                      "address": {
                         "postal_code": "SL6 0EP", 
                         "region": "Buckinghamshire", 
@@ -1295,8 +1291,14 @@
                         "address_line_2": "Cliveden Road", 
                         "locality": "Taplow"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "1999-06-17", 
+                     "resigned_on": "2002-07-20", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1943
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retierd"
                   }, 
                   {
@@ -1306,11 +1308,6 @@
                            "appointments": "/officers/2j_AUo1Og_vtyIgJerYBGNnIDfI/appointments"
                         }
                      }, 
-                     "resigned_on": "1993-01-09", 
-                     "date_of_birth": {
-                        "year": 1935, 
-                        "month": 9
-                     }, 
                      "address": {
                         "postal_code": "SL2 3LB", 
                         "region": "Berkshire", 
@@ -1318,8 +1315,13 @@
                         "address_line_2": "Farnham Common", 
                         "address_line_1": "Moorside Stewarts Drive"
                      }, 
-                     "officer_role": "director", 
+                     "resigned_on": "1993-01-09", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 9
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Management Consultant"
                   }, 
                   {
@@ -1411,8 +1413,8 @@
                         "year": 1925, 
                         "month": 5
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Married Woman"
                   }
                ], 

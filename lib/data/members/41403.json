@@ -495,31 +495,32 @@
          "category_gifts": 415, 
          "items": [
             {
-               "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: 150 Strand, London WC2R 1JAEstimate of the probable value (or amount of any donation): Flights \u00a3415; accommodation \u00a3476; total value \u00a3891Destination of visit: GibraltarDates of visit: 8 \u2013 11 September 2017Purpose of visit: APPG on Gibraltar visit for National Day celebrations.(Registered 13 September 2017)", 
                "status": "visit", 
-               "isWealth": false, 
-               "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
-               "registered": "13/09/2017", 
+               "isGift": true, 
                "destination": "Gibraltar", 
                "officers": [], 
                "isIncome": false, 
-               "amount": 415, 
-               "link": null, 
-               "purpose": "APPG on Gibraltar visit for National Day celebrations.", 
                "pretty": "HM Government of Gibraltar", 
-               "address": "150 Strand, London WC2R 1JA", 
-               "item_id": "0001", 
                "donor": "HM Government of Gibraltar", 
-               "category_id": 5, 
-               "isGift": true, 
+               "type": "visit", 
                "company": {
                   "company_status": "Active", 
                   "company_name": "HM Government of Gibraltar", 
                   "company_number": "N/A"
                }, 
-               "appointments": []
+               "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: 150 Strand, London WC2R 1JAEstimate of the probable value (or amount of any donation): Flights \u00a3415; accommodation \u00a3476; total value \u00a3891Destination of visit: GibraltarDates of visit: 8 \u2013 11 September 2017Purpose of visit: APPG on Gibraltar visit for National Day celebrations.(Registered 13 September 2017)", 
+               "isWealth": false, 
+               "registered": "13/09/2017", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "APPG on Gibraltar visit for National Day celebrations.", 
+               "nouns": [], 
+               "address": "150 Strand, London WC2R 1JA", 
+               "item_id": "0001", 
+               "amount": 415, 
+               "category_id": 5
             }
          ], 
          "category_type": "visits_outside_uk", 
@@ -812,6 +813,7 @@
                            "appointments": "/officers/vuUyT1l7_SVizyne-KVxd7NM1do/appointments"
                         }
                      }, 
+                     "appointed_on": "2008-01-10", 
                      "address": {
                         "postal_code": "AL5 3PD", 
                         "region": "Hertfordshire", 
@@ -819,9 +821,8 @@
                         "address_line_2": "Kinsbourne Green", 
                         "address_line_1": "Little Stones The Common"
                      }, 
-                     "appointed_on": "2008-01-10", 
-                     "nationality": "British", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -831,12 +832,6 @@
                            "appointments": "/officers/_0bn7qWQISlbJZLQ4B_wEBgvrUA/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-01-30", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1975
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "House", 
@@ -845,8 +840,14 @@
                         "address_line_2": "London", 
                         "address_line_1": "Of Commons"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-01-30", 
+                     "date_of_birth": {
+                        "year": 1975, 
+                        "month": 3
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -870,8 +871,8 @@
                         "address_line_2": "Westminster", 
                         "address_line_1": "S Of Parliament"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -891,8 +892,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2015-07-06", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -905,6 +906,12 @@
                            "appointments": "/officers/Xosa71WDr_KDgCL2MFrZvab5WX4/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-08-25", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "Houses Of Parliament", 
                         "country": "England", 
@@ -912,14 +919,8 @@
                         "postal_code": "SW1A 0AA", 
                         "address_line_1": "Parliament Square"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-08-25", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1944
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -932,8 +933,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-04-24", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1975
                      }, 
                      "address": {
                         "premises": "Article 19, Free World Centre", 
@@ -956,18 +957,18 @@
                      "address": {
                         "premises": "10", 
                         "country": "England", 
-                        "locality": "London", 
+                        "address_line_1": "Percival Road", 
                         "postal_code": "SW14 7QE", 
-                        "address_line_1": "Percival Road"
+                        "locality": "London"
                      }, 
-                     "country_of_residence": "United Kingdom", 
+                     "country_of_residence": "England", 
                      "appointed_on": "2017-04-25", 
                      "date_of_birth": {
                         "year": 1953, 
                         "month": 8
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -989,8 +990,8 @@
                         "postal_code": "SW1P 1RT", 
                         "address_line_1": "8th Floor Artillery House"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1000,18 +1001,18 @@
                            "appointments": "/officers/d_6xa227YqdVBLicPogHFgjsC3U/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-08-18", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 3
+                     }, 
                      "address": {
                         "premises": "Houses Of Parliament", 
                         "country": "England", 
                         "address_line_1": "House Of Commons", 
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-08-18", 
-                     "date_of_birth": {
-                        "year": 1966, 
-                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1027,8 +1028,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-06-24", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1958
                      }, 
                      "address": {
                         "postal_code": "SW1P 1RT", 
@@ -1047,12 +1048,6 @@
                            "appointments": "/officers/bC92Zr4AWohPXuMJRygK7ELz5SQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-12-07", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 5
-                     }, 
                      "address": {
                         "premises": "86", 
                         "country": "England", 
@@ -1060,8 +1055,14 @@
                         "postal_code": "W6 7BD", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-12-07", 
+                     "date_of_birth": {
+                        "year": 1953, 
+                        "month": 5
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director General"
                   }, 
                   {
@@ -1170,14 +1171,14 @@
                            "appointments": "/officers/-IWDimLHe2DwgPVv9qIBtV3ClkM/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-05-24", 
-                     "resigned_on": "2008-01-10", 
                      "address": {
                         "region": "Middlesex", 
                         "address_line_1": "62 Michelham Gardens", 
                         "postal_code": "TW1 4SB", 
                         "locality": "Twickenham"
                      }, 
+                     "appointed_on": "2005-05-24", 
+                     "resigned_on": "2008-01-10", 
                      "nationality": "British", 
                      "officer_role": "secretary"
                   }, 
@@ -1188,6 +1189,13 @@
                            "appointments": "/officers/p2FZXpAPzAeGcTuGEQit15JVEWE/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-10-19", 
+                     "resigned_on": "2007-10-18", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1947
+                     }, 
                      "address": {
                         "postal_code": "GU3 2EB", 
                         "region": "Surrey", 
@@ -1195,15 +1203,8 @@
                         "address_line_2": "Normandy", 
                         "address_line_1": "Dingley Dell Glaziers Lane"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2001-10-19", 
-                     "resigned_on": "2007-10-18", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 9
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director General"
                   }, 
                   {
@@ -1213,16 +1214,16 @@
                            "appointments": "/officers/ScrVtUXqWOdf5kvsGvURPvbIeuo/appointments"
                         }
                      }, 
+                     "appointed_on": "1996-06-25", 
+                     "resigned_on": "1997-01-27", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1945
+                     }, 
                      "address": {
                         "address_line_1": "46 Portland Place", 
                         "postal_code": "W1N 3DG", 
                         "locality": "London"
-                     }, 
-                     "appointed_on": "1996-06-25", 
-                     "resigned_on": "1997-01-27", 
-                     "date_of_birth": {
-                        "year": 1945, 
-                        "month": 11
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1239,8 +1240,8 @@
                      "appointed_on": "2016-10-14", 
                      "resigned_on": "2017-06-28", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1970
+                        "year": 1970, 
+                        "month": 10
                      }, 
                      "address": {
                         "premises": "Houses Of Parliament", 
@@ -1271,8 +1272,8 @@
                      "appointed_on": "2007-10-17", 
                      "resigned_on": "2010-10-16", 
                      "date_of_birth": {
-                        "year": 1969, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1969
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1301,16 +1302,16 @@
                            "appointments": "/officers/VxjXjiVsW2AW64Dfinr_n9odmHU/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_1": "58 Ifield Road", 
+                        "postal_code": "SW10 9AD", 
+                        "locality": "London"
+                     }, 
                      "appointed_on": "2004-05-03", 
                      "resigned_on": "2005-08-12", 
                      "date_of_birth": {
                         "month": 8, 
                         "year": 1952
-                     }, 
-                     "address": {
-                        "address_line_1": "58 Ifield Road", 
-                        "postal_code": "SW10 9AD", 
-                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1327,8 +1328,8 @@
                      "appointed_on": "2009-04-21", 
                      "resigned_on": "2012-04-21", 
                      "date_of_birth": {
-                        "year": 1945, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1945
                      }, 
                      "address": {
                         "premises": "50", 
@@ -1348,18 +1349,18 @@
                            "appointments": "/officers/veehiCGtw1cyBONgUx-r8n0dq0U/appointments"
                         }
                      }, 
+                     "appointed_on": "1998-05-22", 
+                     "resigned_on": "2007-05-21", 
+                     "date_of_birth": {
+                        "year": 1942, 
+                        "month": 12
+                     }, 
                      "address": {
                         "address_line_2": "Chiddingfold", 
                         "region": "Surrey", 
                         "locality": "Godalming", 
                         "postal_code": "GU8 4TY", 
                         "address_line_1": "The Old Forge Cottage Petworth Road"
-                     }, 
-                     "appointed_on": "1998-05-22", 
-                     "resigned_on": "2007-05-21", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1942
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1376,8 +1377,8 @@
                      "appointed_on": "2005-10-14", 
                      "resigned_on": "2009-02-27", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 1
                      }, 
                      "address": {
                         "region": "North Yorkshire", 
@@ -1385,8 +1386,8 @@
                         "postal_code": "YO10 4DS", 
                         "address_line_1": "9 Holly Terrace"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -1396,17 +1397,17 @@
                            "appointments": "/officers/ZA9JcVnyU0nLocmmcKy8A4tv1To/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "113 Redston Road", 
-                        "postal_code": "N8 7HG", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2003-11-18", 
                      "resigned_on": "2012-11-18", 
                      "date_of_birth": {
                         "month": 5, 
                         "year": 1952
+                     }, 
+                     "address": {
+                        "address_line_1": "113 Redston Road", 
+                        "postal_code": "N8 7HG", 
+                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1419,13 +1420,6 @@
                            "appointments": "/officers/wQBQTSTXZYnExAypAC5Ir6bRJ60/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-07-02", 
-                     "resigned_on": "2010-07-09", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1967
-                     }, 
                      "address": {
                         "premises": "1", 
                         "region": "Cheshire", 
@@ -1433,8 +1427,15 @@
                         "postal_code": "WA14 2AE", 
                         "address_line_1": "The Narrows"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-07-02", 
+                     "resigned_on": "2010-07-09", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1967
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1444,17 +1445,17 @@
                            "appointments": "/officers/AdoYP7BFgB1TvdG9mySeP9_qLfA/appointments"
                         }
                      }, 
-                     "appointed_on": "2006-04-25", 
-                     "resigned_on": "2008-12-09", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "region": "Surrey", 
                         "address_line_1": "109 Blenheim Gardens", 
                         "postal_code": "SM6 9PU", 
                         "locality": "Wallington"
+                     }, 
+                     "appointed_on": "2006-04-25", 
+                     "resigned_on": "2008-12-09", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1467,13 +1468,6 @@
                            "appointments": "/officers/93lzMcEf44lx9RVN_pS98ME4gwk/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-07-17", 
-                     "resigned_on": "2017-04-24", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1955
-                     }, 
                      "address": {
                         "locality": "Betchworth", 
                         "premises": "Glebe Cottage", 
@@ -1483,8 +1477,15 @@
                         "address_line_2": "Buckland", 
                         "address_line_1": "Rectory Lane"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-07-17", 
+                     "resigned_on": "2017-04-24", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1955
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Charity Consultancy"
                   }, 
                   {
@@ -1531,8 +1532,8 @@
                         "address_line_2": "Park Street", 
                         "address_line_1": "83 Orchard Drive"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Trade Union Officer"
                   }, 
                   {
@@ -1546,8 +1547,8 @@
                      "appointed_on": "1999-12-29", 
                      "resigned_on": "2007-09-27", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 4
                      }, 
                      "address": {
                         "postal_code": "OX7 6RU", 
@@ -1577,8 +1578,8 @@
                      "appointed_on": "2000-07-03", 
                      "resigned_on": "2003-07-02", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1954
+                        "year": 1954, 
+                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1686,18 +1687,18 @@
                            "appointments": "/officers/puJ09Hd688fJ-4lq2klK1TYn8dU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-03-21", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1955
+                     }, 
                      "address": {
                         "premises": "55", 
                         "country": "Northern Ireland", 
                         "address_line_1": "Knock Road", 
                         "postal_code": "BT5 6LB", 
                         "locality": "Belfast"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-03-21", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 3
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1713,8 +1714,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2014-03-21", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 12
                      }, 
                      "address": {
                         "locality": "Dromore", 
@@ -1735,12 +1736,6 @@
                            "appointments": "/officers/id7WL1YXG2UWyQ30zx4C1JzyXl8/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2016-03-15", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 2
-                     }, 
                      "address": {
                         "premises": "37", 
                         "country": "Northern Ireland", 
@@ -1748,8 +1743,14 @@
                         "postal_code": "BT48 7PG", 
                         "address_line_1": "Aberfoyle Crescent"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2016-03-15", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1968
+                     }, 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Lecturer"
                   }, 
                   {
@@ -1768,8 +1769,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2016-03-15", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1946
+                        "year": 1946, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1881,6 +1882,12 @@
                            "appointments": "/officers/sW0Gyzj-32rxK3hKertdruwc-5U/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-02-08", 
+                     "date_of_birth": {
+                        "year": 1979, 
+                        "month": 12
+                     }, 
                      "address": {
                         "premises": "64", 
                         "region": "Down", 
@@ -1888,14 +1895,8 @@
                         "postal_code": "BT5 6ED", 
                         "locality": "Belfast"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-02-08", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1979
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -1905,19 +1906,19 @@
                            "appointments": "/officers/VNuADxWt5rbDWmShvSbNA04gNfc/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-02-08", 
+                     "resigned_on": "2016-01-26", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 12
+                     }, 
                      "address": {
                         "premises": "64", 
                         "region": "Down", 
                         "address_line_1": "Kirkliston Park", 
                         "postal_code": "BT5 6ED", 
                         "locality": "Belfast"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-02-08", 
-                     "resigned_on": "2016-01-26", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1962
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2034,8 +2035,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2011-04-19", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1979
+                        "year": 1979, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "64", 
@@ -2080,13 +2081,6 @@
                            "appointments": "/officers/2OJzRvQjgrtQXwAuLXX6XCwjkS4/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2011-04-19", 
-                     "resigned_on": "2013-11-11", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1972
-                     }, 
                      "address": {
                         "premises": "64", 
                         "region": "Northern Ireland", 
@@ -2094,8 +2088,15 @@
                         "postal_code": "BT5 6ED", 
                         "address_line_1": "Kirkliston Park"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2011-04-19", 
+                     "resigned_on": "2013-11-11", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 2
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "N/A"
                   }
                ], 
@@ -2227,8 +2228,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-07-12", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1972
+                        "year": 1972, 
+                        "month": 3
                      }, 
                      "address": {
                         "premises": "House Of Lords", 
@@ -2237,8 +2238,8 @@
                         "postal_code": "SW1A 0PW", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -2248,18 +2249,18 @@
                            "appointments": "/officers/dT_Afb6n2pTKeSMJo0Rc7vdS1xc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-07-02", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1957
-                     }, 
                      "address": {
                         "premises": "Bede Rest", 
                         "region": "County Durham", 
                         "locality": "Durham", 
                         "postal_code": "DH1 4QF", 
                         "address_line_1": "Beechcrest"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-07-02", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2275,8 +2276,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-07-07", 
                      "date_of_birth": {
-                        "year": 1942, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1942
                      }, 
                      "address": {
                         "premises": "House Of Lords", 
@@ -2285,8 +2286,8 @@
                         "postal_code": "SW1A 0PW", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Peer Of The Realm"
                   }, 
                   {
@@ -2334,8 +2335,8 @@
                         "address_line_2": "25 Frith Road", 
                         "address_line_1": "Citiscape"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Politician"
                   }, 
                   {
@@ -2345,12 +2346,6 @@
                            "appointments": "/officers/HS9gnfKrjjvSP2YR5dsxTl5dFxI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2017-07-12", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "House Of Commons", 
@@ -2359,8 +2354,14 @@
                         "address_line_2": "Westminster", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-07-12", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1971
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -2383,8 +2384,8 @@
                         "month": 11, 
                         "year": 1957
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -2397,8 +2398,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2011-10-19", 
                      "date_of_birth": {
-                        "year": 1942, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1942
                      }, 
                      "address": {
                         "address_line_2": "House Of Commons", 
@@ -2417,18 +2418,18 @@
                            "appointments": "/officers/n5JiBZ7a5FfuObTiiK2oB4BeTJU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-07-07", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1957
+                     }, 
                      "address": {
                         "premises": "House Of Commons", 
                         "country": "United Kingdom", 
                         "address_line_1": "Houses Of Parliament", 
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-07-07", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1957
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2450,11 +2451,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-07-07", 
                      "date_of_birth": {
-                        "year": 1959, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1959
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -2464,16 +2465,16 @@
                            "appointments": "/officers/gwAxa6VvuHhcc48DQdi8rMVYr8w/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_1": "12 Gilkes Crescent", 
+                        "postal_code": "SE21 7BS", 
+                        "locality": "London"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-11-07", 
                      "date_of_birth": {
                         "year": 1933, 
                         "month": 1
-                     }, 
-                     "address": {
-                        "address_line_1": "12 Gilkes Crescent", 
-                        "postal_code": "SE21 7BS", 
-                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2497,8 +2498,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-07-12", 
                      "date_of_birth": {
-                        "year": 1964, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1964
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2521,11 +2522,11 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2015-07-14", 
                      "date_of_birth": {
-                        "year": 1950, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1950
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -2559,17 +2560,17 @@
                            "appointments": "/officers/d_6xa227YqdVBLicPogHFgjsC3U/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "House Of Commons", 
-                        "address_line_1": "Houses Of Parliament", 
-                        "postal_code": "SW1 0AA", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-07-07", 
                      "date_of_birth": {
                         "month": 3, 
                         "year": 1966
+                     }, 
+                     "address": {
+                        "premises": "House Of Commons", 
+                        "address_line_1": "Houses Of Parliament", 
+                        "postal_code": "SW1 0AA", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2590,8 +2591,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-07-12", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1956
+                        "year": 1956, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "London", 
@@ -2615,8 +2616,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-07-14", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1954
+                        "year": 1954, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "Houses Of Commons", 
@@ -2625,8 +2626,8 @@
                         "postal_code": "SW1A 0AA", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -2662,8 +2663,8 @@
                         "address_line_2": "Craig Y Dorth", 
                         "address_line_1": "Craig Y Dorth House"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Parliamentary"
                   }, 
                   {
@@ -2721,12 +2722,6 @@
                            "appointments": "/officers/EdPbY8CO-CqjjpOy7DEVuITniBM/appointments"
                         }
                      }, 
-                     "appointed_on": "2002-12-03", 
-                     "resigned_on": "2003-11-05", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1943
-                     }, 
                      "address": {
                         "postal_code": "NE48 3HL", 
                         "region": "Northumberland", 
@@ -2734,8 +2729,14 @@
                         "address_line_2": "Birtley", 
                         "locality": "Hexham"
                      }, 
-                     "officer_role": "director", 
+                     "appointed_on": "2002-12-03", 
+                     "resigned_on": "2003-11-05", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1943
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -2749,8 +2750,8 @@
                      "appointed_on": "2002-12-03", 
                      "resigned_on": "2010-07-07", 
                      "date_of_birth": {
-                        "year": 1944, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1944
                      }, 
                      "address": {
                         "region": "Kent", 
@@ -2758,8 +2759,8 @@
                         "postal_code": "DA17 6JR", 
                         "address_line_1": "18 Sutherland Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -2769,13 +2770,6 @@
                            "appointments": "/officers/xQhWmA87MkVZKky67ycHnmtU-UI/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-07-02", 
-                     "resigned_on": "2015-07-14", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1946
-                     }, 
                      "address": {
                         "postal_code": "S66 7LF", 
                         "region": "South Yorkshire", 
@@ -2783,8 +2777,15 @@
                         "address_line_2": "Maltby", 
                         "address_line_1": "73 Blyth Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-07-02", 
+                     "resigned_on": "2015-07-14", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1946
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -2798,8 +2799,8 @@
                      "appointed_on": "2002-12-03", 
                      "resigned_on": "2015-07-14", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1952
                      }, 
                      "address": {
                         "region": "North Yorkshire", 
@@ -2807,8 +2808,8 @@
                         "postal_code": "YO10 4DS", 
                         "address_line_1": "9 Holly Terrace"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -2857,8 +2858,8 @@
                         "postal_code": "SW1A 0PW", 
                         "address_line_1": "Houses Of Parliament"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Peer Of The Realm"
                   }, 
                   {
@@ -2868,17 +2869,17 @@
                            "appointments": "/officers/HMCt_PMqBI6sERjfgenY3F4kLCQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "7 Smith Square", 
-                        "postal_code": "SW1P 3HT", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2005-06-29", 
                      "resigned_on": "2011-10-19", 
                      "date_of_birth": {
                         "month": 7, 
                         "year": 1944
+                     }, 
+                     "address": {
+                        "address_line_1": "7 Smith Square", 
+                        "postal_code": "SW1P 3HT", 
+                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2913,13 +2914,6 @@
                            "appointments": "/officers/A0L9KJLXMcJv2xt_5LhHsVebToo/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Westminster", 
-                        "country": "United Kingdom", 
-                        "postal_code": "SW1A 0AA", 
-                        "care_of": "HOUSE OF COMMONS", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-10-19", 
                      "resigned_on": "2015-07-14", 
@@ -2927,8 +2921,15 @@
                         "month": 11, 
                         "year": 1944
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "Westminster", 
+                        "country": "United Kingdom", 
+                        "postal_code": "SW1A 0AA", 
+                        "care_of": "HOUSE OF COMMONS", 
+                        "locality": "London"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -2938,19 +2939,19 @@
                            "appointments": "/officers/A0L9KJLXMcJv2xt_5LhHsVebToo/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-07-02", 
+                     "resigned_on": "2009-07-06", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 11
+                     }, 
                      "address": {
                         "address_line_2": "Torphins", 
                         "region": "Kincardineshire", 
                         "address_line_1": "Grove Cottage 7 Grove Terrace", 
                         "postal_code": "AB31 4HJ", 
                         "locality": "Banchory"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-07-02", 
-                     "resigned_on": "2009-07-06", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1944
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2992,8 +2993,8 @@
                      "appointed_on": "2011-10-19", 
                      "resigned_on": "2015-07-14", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1970
                      }, 
                      "address": {
                         "locality": "Wales", 
@@ -3004,8 +3005,8 @@
                         "address_line_2": "House Of Commons London", 
                         "address_line_1": "St Stephens Tower"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Parliamentarian"
                   }, 
                   {
@@ -3018,8 +3019,8 @@
                      "appointed_on": "2005-06-29", 
                      "resigned_on": "2009-07-06", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1940
+                        "year": 1940, 
+                        "month": 7
                      }, 
                      "address": {
                         "region": "Wirral", 
@@ -3027,8 +3028,8 @@
                         "postal_code": "CH60 8PQ", 
                         "address_line_1": "Lawnwood"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }
                ], 
@@ -3129,18 +3130,18 @@
                            "appointments": "/officers/K2Lq0hx9Q4JbpHqJowp3kpp9K0c/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-08-25", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1956
+                     }, 
                      "address": {
                         "premises": "Pst", 
                         "country": "Northern Ireland", 
                         "locality": "Belfast", 
                         "postal_code": "BT8 8NA", 
                         "address_line_1": "Hospital Road"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-08-25", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3153,18 +3154,18 @@
                            "appointments": "/officers/uQWQbzvvzFfHsrrUD63ha826xv8/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-09-28", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1939
+                     }, 
                      "address": {
                         "address_line_2": "Hydebank Wood", 
                         "region": "Belfast", 
                         "locality": "Hospital Road, Purdysburn", 
                         "postal_code": "BT8 8NA", 
                         "address_line_1": "Prison Service Trust"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-09-28", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1939
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3177,18 +3178,18 @@
                            "appointments": "/officers/WbkObvkyk8Kbm4ZNgjHSF3bDgRo/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-11-30", 
-                     "date_of_birth": {
-                        "year": 1961, 
-                        "month": 5
-                     }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
                         "region": "Belfast", 
                         "address_line_1": "Prison Service Trust", 
                         "address_line_2": "Hydebank Wood", 
                         "locality": "Hospital Road, Purdysburn"
+                     }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-11-30", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1961
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3201,18 +3202,18 @@
                            "appointments": "/officers/tTjUn31Rq74fPAJCTj6P-tklKRA/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2002-10-24", 
-                     "date_of_birth": {
-                        "month": 8, 
-                        "year": 1947
-                     }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
                         "region": "Belfast", 
                         "locality": "Hydebank Wood", 
                         "address_line_2": "Hospital Road", 
                         "address_line_1": "Prison Services Trust"
+                     }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2002-10-24", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1947
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3225,6 +3226,12 @@
                            "appointments": "/officers/FGxIQd_MAZkbkeRWlRwn3ckMKkM/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2013-11-29", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1966
+                     }, 
                      "address": {
                         "address_line_2": "Hydebank Wood", 
                         "region": "Belfast", 
@@ -3232,14 +3239,8 @@
                         "postal_code": "BT8 8NA", 
                         "locality": "Hospital Road, Purdysburn"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2013-11-29", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1966
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Public Servant"
                   }, 
                   {
@@ -3252,8 +3253,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2006-04-28", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 12
                      }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
@@ -3262,8 +3263,8 @@
                         "address_line_2": "Hydebank Wood", 
                         "locality": "Hospital Road, Purdysburn"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Civil Servant"
                   }, 
                   {
@@ -3273,18 +3274,18 @@
                            "appointments": "/officers/ZBYr6Wesy_Bbkdr8XlAFqD4bx_s/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2006-04-28", 
-                     "date_of_birth": {
-                        "year": 1960, 
-                        "month": 3
-                     }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
                         "region": "Belfast", 
                         "address_line_1": "Prison Service Trust", 
                         "address_line_2": "Hydebank Wood", 
                         "locality": "Hospital Road, Purdysburn"
+                     }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2006-04-28", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3310,8 +3311,8 @@
                         "postal_code": "BT8 8NA", 
                         "address_line_1": "Prison Service Trust"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -3334,8 +3335,8 @@
                         "month": 8, 
                         "year": 1969
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Public Servant"
                   }, 
                   {
@@ -3345,18 +3346,18 @@
                            "appointments": "/officers/FMFj1WxKrHav3RR4ZX3Eo_EKewY/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2002-10-11", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 6
+                     }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
                         "region": "Belfast", 
                         "locality": "Hydebank Wood, Purdysburn", 
                         "address_line_2": "Hospital Road", 
                         "address_line_1": "Prison Service Trust"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2002-10-11", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1962
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3372,8 +3373,8 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2012-09-28", 
                      "date_of_birth": {
-                        "year": 1951, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1951
                      }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
@@ -3382,8 +3383,8 @@
                         "address_line_2": "Hydebank Wood", 
                         "locality": "Hospital Road, Purdysburn"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -3393,6 +3394,12 @@
                            "appointments": "/officers/H97f7Zc5Xcy9MdVL4DJ4pgGK0Rs/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2002-05-28", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1946
+                     }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
                         "region": "Belfast", 
@@ -3400,14 +3407,8 @@
                         "address_line_2": "Hospital Road", 
                         "address_line_1": "Prison Services Trust"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2002-05-28", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 4
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Civil Servant"
                   }, 
                   {
@@ -3421,8 +3422,8 @@
                      "appointed_on": "2003-04-25", 
                      "resigned_on": "2010-03-19", 
                      "date_of_birth": {
-                        "year": 1935, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1935
                      }, 
                      "address": {
                         "address_line_2": "Hospital Road", 
@@ -3430,8 +3431,8 @@
                         "postal_code": "BT8 8NA", 
                         "locality": "Hydebank"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -3470,8 +3471,8 @@
                      "appointed_on": "2007-08-31", 
                      "resigned_on": "2013-05-24", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 12
                      }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
@@ -3480,8 +3481,8 @@
                         "address_line_2": "Hydebank Wood", 
                         "address_line_1": "Prison Service Trust"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -3491,19 +3492,19 @@
                            "appointments": "/officers/LqxQMgFztjZDIA9Hjz5B3QpjKi0/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2006-05-19", 
-                     "resigned_on": "2012-09-28", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1954
-                     }, 
                      "address": {
                         "postal_code": "BT8 8NA", 
                         "region": "Belfast", 
                         "locality": "Hospital Road, Purdysburn", 
                         "address_line_2": "Hydebank Wood", 
                         "address_line_1": "Prison Service Trust"
+                     }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2006-05-19", 
+                     "resigned_on": "2012-09-28", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 7
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3516,6 +3517,13 @@
                            "appointments": "/officers/IlcHfTqDF5WNvIoWPbvcRFNsSZk/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-07-09", 
+                     "resigned_on": "2015-06-26", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1933
+                     }, 
                      "address": {
                         "locality": "Belfast", 
                         "premises": "Pst", 
@@ -3525,15 +3533,8 @@
                         "address_line_2": "Hospital Road, Hydebank", 
                         "address_line_1": "Pst"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-07-09", 
-                     "resigned_on": "2015-06-26", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1933
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -3543,21 +3544,21 @@
                            "appointments": "/officers/s6T5cv6zqh5hGVmw0OdcRXHYGV8/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2006-04-28", 
-                     "resigned_on": "2012-05-25", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1964
-                     }, 
                      "address": {
                         "postal_code": "BT22 2NQ", 
                         "locality": "Co Down", 
                         "address_line_2": "Greyabbey", 
                         "address_line_1": "16 Church St"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2006-04-28", 
+                     "resigned_on": "2012-05-25", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 3
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Civil Servant"
                   }, 
                   {
@@ -3571,8 +3572,8 @@
                      "appointed_on": "2002-10-24", 
                      "resigned_on": "2011-05-28", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1952
                      }, 
                      "address": {
                         "address_line_2": "Hospital Road", 
@@ -3581,8 +3582,8 @@
                         "postal_code": "BT8 8NA", 
                         "address_line_1": "Prison Services Trust"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Deceased"
                   }, 
                   {
@@ -3592,6 +3593,13 @@
                            "appointments": "/officers/8Ac4jm8gLkKFLoiYoMBKXuoedaU/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2010-07-09", 
+                     "resigned_on": "2011-08-22", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 8
+                     }, 
                      "address": {
                         "locality": "Bangor", 
                         "premises": "17a", 
@@ -3600,15 +3608,8 @@
                         "postal_code": "BT20 4LF", 
                         "address_line_1": "Hamilton Road"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2010-07-09", 
-                     "resigned_on": "2011-08-22", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 8
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -3633,8 +3634,8 @@
                         "postal_code": "BT17 1HE", 
                         "address_line_1": "University Street"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Mla"
                   }, 
                   {
@@ -3655,11 +3656,11 @@
                      "appointed_on": "2006-04-28", 
                      "resigned_on": "2017-07-28", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 11
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Civil Servant"
                   }, 
                   {
@@ -3669,6 +3670,13 @@
                            "appointments": "/officers/a1ySdQ3BLsfHwt_HIm8WiDhoxMI/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2002-10-14", 
+                     "resigned_on": "2011-05-28", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 7
+                     }, 
                      "address": {
                         "address_line_2": "Hospital Road", 
                         "region": "Belfast", 
@@ -3676,15 +3684,8 @@
                         "postal_code": "BT8 8NA", 
                         "address_line_1": "Prison Services Trust"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2002-10-14", 
-                     "resigned_on": "2011-05-28", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1950
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Barrister / M.L.A"
                   }, 
                   {
@@ -3698,8 +3699,8 @@
                      "appointed_on": "2002-10-24", 
                      "resigned_on": "2011-05-28", 
                      "date_of_birth": {
-                        "year": 1938, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1938
                      }, 
                      "address": {
                         "address_line_2": "Hydebank Wood", 
@@ -3723,8 +3724,8 @@
                      "appointed_on": "2011-10-28", 
                      "resigned_on": "2013-02-22", 
                      "date_of_birth": {
-                        "year": 1950, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1950
                      }, 
                      "address": {
                         "address_line_2": "Hydebank Wood", 
@@ -3744,18 +3745,18 @@
                            "appointments": "/officers/VdBl-qdio52pKqN04opj-Vi70JM/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2002-10-18", 
+                     "resigned_on": "2008-07-25", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1967
+                     }, 
                      "address": {
                         "postal_code": "BT39 9QH", 
                         "address_line_1": "84 Castle Road", 
                         "address_line_2": "Ballynure", 
                         "locality": "Ballyclare"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2002-10-18", 
-                     "resigned_on": "2008-07-25", 
-                     "date_of_birth": {
-                        "year": 1967, 
-                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3791,18 +3792,18 @@
                            "appointments": "/officers/bonTHpv0hyFHGw39qZHJ97shsQU/appointments"
                         }
                      }, 
+                     "appointed_on": "2002-10-17", 
+                     "resigned_on": "2008-07-25", 
+                     "date_of_birth": {
+                        "year": 1944, 
+                        "month": 4
+                     }, 
                      "address": {
                         "address_line_2": "Hospital Road", 
                         "region": "Belfast", 
                         "locality": "Hydebank Wood", 
                         "postal_code": "BT8 8NA", 
                         "address_line_1": "Prison Services Trust"
-                     }, 
-                     "appointed_on": "2002-10-17", 
-                     "resigned_on": "2008-07-25", 
-                     "date_of_birth": {
-                        "year": 1944, 
-                        "month": 4
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3815,19 +3816,19 @@
                            "appointments": "/officers/5gbzlULXvkUDE8sI88hmMbKCe3M/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2002-10-24", 
+                     "resigned_on": "2011-02-22", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1938
+                     }, 
                      "address": {
                         "address_line_2": "Hospital Road", 
                         "region": "Belfast", 
                         "address_line_1": "Prison Services Trust", 
                         "postal_code": "BT8 8NA", 
                         "locality": "Hydebank Wood"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2002-10-24", 
-                     "resigned_on": "2011-02-22", 
-                     "date_of_birth": {
-                        "year": 1938, 
-                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3942,12 +3943,6 @@
                            "appointments": "/officers/8KRNywzYy74ahGp2QD64IB5tGF4/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-09-10", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1947
-                     }, 
                      "address": {
                         "address_line_2": "Ballygowan", 
                         "region": "Co Down", 
@@ -3955,8 +3950,14 @@
                         "postal_code": "BT23 6NL", 
                         "locality": "Newtownards"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-09-10", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 1
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired/Local Councillor"
                   }, 
                   {
@@ -3966,20 +3967,20 @@
                            "appointments": "/officers/Pyr1sB6NKh_288l1k5vQ106RS00/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-08-25", 
-                     "date_of_birth": {
-                        "year": 1944, 
-                        "month": 6
-                     }, 
                      "address": {
                         "address_line_2": "Lurgan", 
                         "address_line_1": "57 Banbridge Road", 
                         "postal_code": "BT66 7HG", 
                         "locality": "Craigavon"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-08-25", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1944
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired Headmaster"
                   }, 
                   {
@@ -3989,6 +3990,12 @@
                            "appointments": "/officers/eRHT4xeolrYXolL2sdDtQVD5ZzU/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-12-02", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1943
+                     }, 
                      "address": {
                         "locality": "Newtownards", 
                         "premises": "10", 
@@ -3997,12 +4004,6 @@
                         "postal_code": "BT22 1AT", 
                         "address_line_2": "Kircubbin", 
                         "address_line_1": "Rubane Road"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-12-02", 
-                     "date_of_birth": {
-                        "year": 1943, 
-                        "month": 11
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4015,6 +4016,12 @@
                            "appointments": "/officers/6Pwla-3SXh8xDHYFcyyrA4Bz4HE/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2016-04-01", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1963
+                     }, 
                      "address": {
                         "locality": "Bangor", 
                         "premises": "19", 
@@ -4022,12 +4029,6 @@
                         "postal_code": "BT20 5JY", 
                         "address_line_2": "Baylands", 
                         "address_line_1": "Fourth Avenue"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2016-04-01", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1963
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4040,16 +4041,16 @@
                            "appointments": "/officers/o2JtNVh_QhXwZ_YM7oWT14SO7kk/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_2": "Ballylenaghan", 
+                        "postal_code": "BT8 7JA", 
+                        "address_line_1": "8 Lenaghan Park"
+                     }, 
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2009-08-25", 
                      "date_of_birth": {
                         "month": 10, 
                         "year": 1944
-                     }, 
-                     "address": {
-                        "address_line_2": "Ballylenaghan", 
-                        "postal_code": "BT8 7JA", 
-                        "address_line_1": "8 Lenaghan Park"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4062,16 +4063,16 @@
                            "appointments": "/officers/5u3qnSVYQtFgaAGl2A0IifVztrQ/appointments"
                         }
                      }, 
+                     "address": {
+                        "address_line_2": "Belfast", 
+                        "postal_code": "BT6 ODY", 
+                        "address_line_1": "12 Rosetta Park"
+                     }, 
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2009-08-25", 
                      "date_of_birth": {
                         "year": 1946, 
                         "month": 2
-                     }, 
-                     "address": {
-                        "address_line_2": "Belfast", 
-                        "postal_code": "BT6 ODY", 
-                        "address_line_1": "12 Rosetta Park"
                      }, 
                      "officer_role": "director", 
                      "nationality": "Uk", 
@@ -4099,8 +4100,8 @@
                         "address_line_2": "Derryadd", 
                         "address_line_1": "Lennys Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Chartered Quantity Surveyor"
                   }, 
                   {
@@ -4110,18 +4111,18 @@
                            "appointments": "/officers/Qf0byNqwSpiEhRcwFezxpVwDriA/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-04-01", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 11
-                     }, 
                      "address": {
                         "premises": "Navigation House", 
                         "region": "County Antrim", 
                         "locality": "Lisburn", 
                         "postal_code": "BT27 5QY", 
                         "address_line_1": "148 Hillsborough Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-04-01", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1954
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4134,14 +4135,6 @@
                            "appointments": "/officers/0Bm3o20wf08g_kYKpSnEgTU5ZDc/appointments"
                         }
                      }, 
-                     "address": {
-                        "locality": "Lisburn", 
-                        "premises": "Navigation House", 
-                        "country": "Northern Ireland", 
-                        "region": "County Antrim", 
-                        "postal_code": "BT27 5QY", 
-                        "address_line_1": "148 Hillsborough Road"
-                     }, 
                      "former_names": [
                         {
                            "surname": "JOE"
@@ -4153,8 +4146,16 @@
                         "year": 1953, 
                         "month": 8
                      }, 
-                     "nationality": "Irish", 
+                     "address": {
+                        "locality": "Lisburn", 
+                        "premises": "Navigation House", 
+                        "country": "Northern Ireland", 
+                        "region": "County Antrim", 
+                        "postal_code": "BT27 5QY", 
+                        "address_line_1": "148 Hillsborough Road"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "Irish", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -4164,12 +4165,6 @@
                            "appointments": "/officers/KiaWR6nqM54zTer74gBt-tyZnwQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2016-04-01", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 7
-                     }, 
                      "address": {
                         "premises": "32", 
                         "country": "United Kingdom", 
@@ -4177,8 +4172,14 @@
                         "postal_code": "BT27 4QU", 
                         "locality": "Lisburn"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2016-04-01", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1953
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "N/A"
                   }, 
                   {
@@ -4213,12 +4214,6 @@
                            "appointments": "/officers/oN0MPyf3FBaw-QsT21f3rVUCXOg/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2013-06-19", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 3
-                     }, 
                      "address": {
                         "locality": "Lisburn", 
                         "premises": "Navigation House", 
@@ -4227,8 +4222,14 @@
                         "postal_code": "BT27 5QY", 
                         "address_line_1": "148 Hillsborough Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2013-06-19", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1947
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4281,20 +4282,20 @@
                            "appointments": "/officers/Puk0hg_Pwj7fZEYuNYwduQWFh2s/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-08-25", 
-                     "resigned_on": "2010-09-01", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "address_line_2": "Belfast", 
                         "postal_code": "BT13 2LS", 
                         "address_line_1": "8 Devenish Court"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-08-25", 
+                     "resigned_on": "2010-09-01", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 4
+                     }, 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Belfast City Councillor"
                   }, 
                   {
@@ -4304,13 +4305,6 @@
                            "appointments": "/officers/AJRO5EDh20EVfZRAA0kNl5z7Ol0/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2011-06-01", 
-                     "resigned_on": "2015-03-31", 
-                     "date_of_birth": {
-                        "year": 1954, 
-                        "month": 11
-                     }, 
                      "address": {
                         "locality": "Lisburn", 
                         "premises": "1a", 
@@ -4319,8 +4313,15 @@
                         "postal_code": "BT27 4QU", 
                         "address_line_1": "Richmond Court"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2011-06-01", 
+                     "resigned_on": "2015-03-31", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 11
+                     }, 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Retired Publican"
                   }, 
                   {
@@ -4334,16 +4335,16 @@
                      "appointed_on": "2009-08-25", 
                      "resigned_on": "2010-08-27", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1962
                      }, 
                      "address": {
                         "postal_code": "BT25 1SY", 
                         "address_line_2": "Dromore", 
                         "address_line_1": "42 Dublinhill Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -4365,8 +4366,8 @@
                      "appointed_on": "2009-12-02", 
                      "resigned_on": "2012-11-07", 
                      "date_of_birth": {
-                        "year": 1972, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1972
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4394,8 +4395,8 @@
                         "postal_code": "BT8 6HS", 
                         "address_line_1": "Glendale Park"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Civil Engineer"
                   }, 
                   {
@@ -4404,13 +4405,6 @@
                         "officer": {
                            "appointments": "/officers/LFeBLeuzjV5z8lhZ5cyXrFoAf5c/appointments"
                         }
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-11-07", 
-                     "resigned_on": "2016-03-31", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1960
                      }, 
                      "address": {
                         "locality": "Ballymena", 
@@ -4421,8 +4415,15 @@
                         "address_line_2": "Kells", 
                         "address_line_1": "Barnish Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-11-07", 
+                     "resigned_on": "2016-03-31", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 2
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4432,6 +4433,12 @@
                            "appointments": "/officers/FNa-pcGeviYvg397WV69fhtB6YQ/appointments"
                         }
                      }, 
+                     "address": {
+                        "postal_code": "BT28 2PD", 
+                        "locality": "Lisburn", 
+                        "address_line_2": "Upper Ballinderry", 
+                        "address_line_1": "8 Temple Road"
+                     }, 
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2009-08-25", 
                      "resigned_on": "2016-03-31", 
@@ -4439,14 +4446,8 @@
                         "year": 1941, 
                         "month": 1
                      }, 
-                     "address": {
-                        "postal_code": "BT28 2PD", 
-                        "locality": "Lisburn", 
-                        "address_line_2": "Upper Ballinderry", 
-                        "address_line_1": "8 Temple Road"
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4466,8 +4467,8 @@
                      "appointed_on": "2009-08-25", 
                      "resigned_on": "2010-09-07", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1967
+                        "year": 1967, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4480,6 +4481,13 @@
                            "appointments": "/officers/8JfCbVTlfWBE2qXC15xt3D566bA/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-12-02", 
+                     "resigned_on": "2011-08-01", 
+                     "date_of_birth": {
+                        "year": 1966, 
+                        "month": 3
+                     }, 
                      "address": {
                         "locality": "Ballymena", 
                         "premises": "38", 
@@ -4488,13 +4496,6 @@
                         "postal_code": "BT42 3LL", 
                         "address_line_2": "Kells", 
                         "address_line_1": "Fernisky Park"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-12-02", 
-                     "resigned_on": "2011-08-01", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1966
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4525,11 +4526,11 @@
                      "appointed_on": "2011-01-01", 
                      "resigned_on": "2012-11-07", 
                      "date_of_birth": {
-                        "year": 1955, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1955
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4543,8 +4544,8 @@
                      "appointed_on": "2012-08-25", 
                      "resigned_on": "2013-06-19", 
                      "date_of_birth": {
-                        "year": 1959, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1959
                      }, 
                      "address": {
                         "locality": "Belfast", 
@@ -4554,8 +4555,8 @@
                         "address_line_2": "Hannahstown", 
                         "address_line_1": "Hannahstown Hill"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Irish", 
+                     "officer_role": "director", 
                      "occupation": "Councillor"
                   }, 
                   {
@@ -4575,8 +4576,8 @@
                      "appointed_on": "2009-09-10", 
                      "resigned_on": "2014-03-31", 
                      "date_of_birth": {
-                        "year": 1959, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1959
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4593,8 +4594,8 @@
                      "appointed_on": "2012-10-07", 
                      "resigned_on": "2014-01-29", 
                      "date_of_birth": {
-                        "year": 1978, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1978
                      }, 
                      "address": {
                         "locality": "Larne", 
@@ -4627,11 +4628,11 @@
                      "appointed_on": "2009-12-02", 
                      "resigned_on": "2011-01-10", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 3
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4641,19 +4642,19 @@
                            "appointments": "/officers/v9Mpj1yudcuF1R43zloOijOjzZA/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-09-10", 
+                     "resigned_on": "2014-01-31", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1941
+                     }, 
                      "address": {
                         "postal_code": "BT66 7NR", 
                         "region": "Co Armagh", 
                         "address_line_1": "Watties Hill", 
                         "address_line_2": "147 Dromore Road", 
                         "locality": "Donacloney, Craigavon"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-09-10", 
-                     "resigned_on": "2014-01-31", 
-                     "date_of_birth": {
-                        "year": 1941, 
-                        "month": 11
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4670,8 +4671,8 @@
                      "appointed_on": "2012-08-25", 
                      "resigned_on": "2013-06-19", 
                      "date_of_birth": {
-                        "year": 1983, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1983
                      }, 
                      "address": {
                         "premises": "Belfast City Hall", 
@@ -4691,13 +4692,6 @@
                            "appointments": "/officers/FDEJof5A7sxr7foMMenR_eT98dI/appointments"
                         }
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2012-11-07", 
-                     "resigned_on": "2016-03-31", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1938
-                     }, 
                      "address": {
                         "locality": "Craigavon", 
                         "premises": "16", 
@@ -4706,6 +4700,13 @@
                         "postal_code": "BT63 5JE", 
                         "address_line_2": "Portadown", 
                         "address_line_1": "Upper Church Lane"
+                     }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2012-11-07", 
+                     "resigned_on": "2016-03-31", 
+                     "date_of_birth": {
+                        "year": 1938, 
+                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4718,20 +4719,20 @@
                            "appointments": "/officers/r1I2QXNwROys7spKLWRHGe7iLew/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "2009-08-25", 
+                     "resigned_on": "2011-09-22", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 4
+                     }, 
                      "address": {
                         "address_line_2": "Lisburn", 
                         "postal_code": "BT27 5XA", 
                         "address_line_1": "21 Drumbeg Mews"
                      }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "2009-08-25", 
-                     "resigned_on": "2011-09-22", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1972
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Medical Doctor"
                   }
                ], 

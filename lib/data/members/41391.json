@@ -391,6 +391,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -399,7 +400,7 @@
                "pretty": "USDAW Union", 
                "address": "Congress House, Great Russell Street, London WC1B 3LS", 
                "item_id": "0001", 
-               "donor": "USDAW Union", 
+               "donor": "USDAW", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -416,6 +417,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -424,7 +426,7 @@
                "pretty": "Unite Union", 
                "address": "128 Theobald's Rd, London WC1X 8TN", 
                "item_id": "0002", 
-               "donor": "Unite Union", 
+               "donor": "UNITE", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -587,8 +589,8 @@
                               "year": 1972, 
                               "month": 5
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Comedy Agent"
                         }, 
                         {
@@ -601,8 +603,8 @@
                            "country_of_residence": "United Kingdom", 
                            "appointed_on": "2017-12-07", 
                            "date_of_birth": {
-                              "year": 1978, 
-                              "month": 12
+                              "month": 12, 
+                              "year": 1978
                            }, 
                            "address": {
                               "premises": "27", 
@@ -619,9 +621,9 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-12-07", 
                      "name_elements": {
-                        "title": "Mr", 
+                        "forename": "Jack", 
                         "surname": "THORNE", 
-                        "forename": "Jack"
+                        "title": "Mr"
                      }, 
                      "appointed_to": {
                         "company_status": "active", 
@@ -631,9 +633,9 @@
                      "address": {
                         "premises": "27", 
                         "country": "United Kingdom", 
-                        "address_line_1": "Mortimer Street", 
+                        "locality": "London", 
                         "postal_code": "W1T 3BL", 
-                        "locality": "London"
+                        "address_line_1": "Mortimer Street"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -898,8 +900,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1955
+                        "year": 1955, 
+                        "month": 10
                      }, 
                      "address": {
                         "premises": "16", 
@@ -908,8 +910,8 @@
                         "postal_code": "CF23 9AR", 
                         "locality": "Cardiff"
                      }, 
-                     "nationality": "Welsh", 
                      "officer_role": "director", 
+                     "nationality": "Welsh", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -922,8 +924,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "year": 1956, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1956
                      }, 
                      "address": {
                         "locality": "Llanelli", 
@@ -933,8 +935,8 @@
                         "postal_code": "SA15 2TL", 
                         "address_line_1": "Queen Victoria Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Uk Citizen", 
+                     "officer_role": "director", 
                      "occupation": "Mp"
                   }, 
                   {
@@ -944,12 +946,6 @@
                            "appointments": "/officers/hu8vS_pFez-0UB2tg5CPC1jfYVo/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-03-30", 
-                     "date_of_birth": {
-                        "year": 1942, 
-                        "month": 9
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "60", 
@@ -958,6 +954,12 @@
                         "postal_code": "SA15 1JS", 
                         "address_line_2": "Coedcae", 
                         "address_line_1": "Ridgewood Park"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-03-30", 
+                     "date_of_birth": {
+                        "year": 1942, 
+                        "month": 9
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -970,12 +972,6 @@
                            "appointments": "/officers/Z_U24BlGHOqQm95gt4cPlbywRKk/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-03-30", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1948
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "Parker Plant Hire Ltd", 
@@ -984,8 +980,14 @@
                         "postal_code": "SA15 1HQ", 
                         "address_line_1": "Halfway"
                      }, 
-                     "nationality": "Welsh", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-03-30", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1948
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "Welsh", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1009,8 +1011,8 @@
                         "year": 1950, 
                         "month": 6
                      }, 
-                     "nationality": "Uk", 
                      "officer_role": "director", 
+                     "nationality": "Uk", 
                      "occupation": "Hospital Chaplain"
                   }, 
                   {
@@ -1031,8 +1033,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 1
                      }, 
                      "officer_role": "director", 
                      "nationality": "Welsh", 
@@ -1045,6 +1047,12 @@
                            "appointments": "/officers/TcO_mBCw0WotH5ZZYBvKsUiTlBQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2017-02-24", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1954
+                     }, 
                      "address": {
                         "premises": "24", 
                         "region": "Carmarthenshire", 
@@ -1052,14 +1060,8 @@
                         "postal_code": "SA15 3LF", 
                         "address_line_1": "Harries Avenue"
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2017-02-24", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1954
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "Welsh", 
+                     "officer_role": "director", 
                      "occupation": "Self Employed - Training And Consultancy"
                   }, 
                   {
@@ -1080,8 +1082,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1947
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 

@@ -351,6 +351,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "29/06/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -359,7 +360,7 @@
                "pretty": "UNISON Cymru/Wales", 
                "address": "UNISON House, Custom House Street, Cardiff CF10  1AP", 
                "item_id": "0001", 
-               "donor": "UNISON Cymru/Wales", 
+               "donor": "UNISON", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -478,31 +479,32 @@
          "category_gifts": 732, 
          "items": [
             {
-               "raw_string": "Name of donor: Aarhus UniversityAddress of donor: Danish Center for Mindfulness, Department of Clinical Medicine, Aarhus University, Nordre, Ringgade 4, 8000 AarhusEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a3732Destination of visit: Aarhus, DenmarkDates of visit: 21-24 September 2017Purpose of visit: Guest speaker at a mental health conference at Aarhus University.(Registered 18 October 2017)", 
                "status": "visit", 
-               "isWealth": false, 
-               "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
-               "registered": "18/10/2017", 
+               "isGift": true, 
                "destination": "Aarhus, Denmark", 
                "officers": [], 
                "isIncome": false, 
-               "amount": 732, 
-               "link": null, 
-               "purpose": "Guest speaker at a mental health conference at Aarhus University.", 
                "pretty": "Aarhus University", 
-               "address": "Danish Center for Mindfulness, Department of Clinical Medicine, Aarhus University, Nordre, Ringgade 4, 8000 Aarhus", 
-               "item_id": "0001", 
                "donor": "Aarhus University", 
-               "category_id": 5, 
-               "isGift": true, 
+               "type": "visit", 
                "company": {
                   "company_status": "Active", 
                   "company_name": "Aarhus University", 
                   "company_number": "N/A"
                }, 
-               "appointments": []
+               "raw_string": "Name of donor: Aarhus UniversityAddress of donor: Danish Center for Mindfulness, Department of Clinical Medicine, Aarhus University, Nordre, Ringgade 4, 8000 AarhusEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a3732Destination of visit: Aarhus, DenmarkDates of visit: 21-24 September 2017Purpose of visit: Guest speaker at a mental health conference at Aarhus University.(Registered 18 October 2017)", 
+               "isWealth": false, 
+               "registered": "18/10/2017", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "Guest speaker at a mental health conference at Aarhus University.", 
+               "nouns": [], 
+               "address": "Danish Center for Mindfulness, Department of Clinical Medicine, Aarhus University, Nordre, Ringgade 4, 8000 Aarhus", 
+               "item_id": "0001", 
+               "amount": 732, 
+               "category_id": 5
             }
          ], 
          "category_type": "visits_outside_uk", 
@@ -702,23 +704,6 @@
                "registered": "", 
                "officers": [
                   {
-                     "appointed_on": "2016-06-30", 
-                     "officer_role": "secretary", 
-                     "name": "BLAND, Annette Alice", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/VCs_4oszw9TKFhVDGTI2c2z8KJ8/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "Kellogg College", 
-                        "country": "England", 
-                        "address_line_1": "62 Banbury Road", 
-                        "postal_code": "OX2 6PN", 
-                        "locality": "Oxford"
-                     }
-                  }, 
-                  {
                      "name": "BOUGHTON, Timothy Frederick", 
                      "links": {
                         "officer": {
@@ -773,18 +758,18 @@
                            "appointments": "/officers/OsCHXfHjA4A_K__kEmN-V4TPalw/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-10-22", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 6
+                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
                         "locality": "Oxford", 
                         "postal_code": "OX2 6PN", 
                         "address_line_1": "62 Banbury Road"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-10-22", 
-                     "date_of_birth": {
-                        "year": 1956, 
-                        "month": 6
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -797,6 +782,12 @@
                            "appointments": "/officers/WlGfRP7rvfAjW3d-SuJ51wY1N7I/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-12-11", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 6
+                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
@@ -804,14 +795,8 @@
                         "postal_code": "OX2 6PN", 
                         "locality": "Oxford"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-12-11", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 6
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -821,18 +806,18 @@
                            "appointments": "/officers/BU30hvRCU6ZmNqSjhLwymVklefA/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-10-22", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 3
+                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
                         "address_line_1": "62 Banbury Road", 
                         "postal_code": "OX2 6PN", 
                         "locality": "Oxford"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-10-22", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1963
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -845,18 +830,18 @@
                            "appointments": "/officers/b2hPb4SBRP3hz-IdS8sdgm59UZY/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-10-22", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1967
+                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
                         "address_line_1": "62 Banbury Road", 
                         "postal_code": "OX2 6PN", 
                         "locality": "Oxford"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-10-22", 
-                     "date_of_birth": {
-                        "year": 1967, 
-                        "month": 4
                      }, 
                      "officer_role": "director", 
                      "nationality": "American", 
@@ -872,8 +857,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-03-07", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 8
                      }, 
                      "address": {
                         "address_line_2": "Hollywood", 
@@ -881,8 +866,8 @@
                         "postal_code": "B47 5BP", 
                         "address_line_1": "8 Alfreda Avenue"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Lecturer"
                   }, 
                   {
@@ -892,12 +877,6 @@
                            "appointments": "/officers/bcJGS7Xh-roK4AAcILLCOq9PFT0/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-10-22", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 1
-                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
@@ -905,8 +884,14 @@
                         "postal_code": "OX2 6PN", 
                         "address_line_1": "62 Banbury Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-10-22", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 1
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -919,8 +904,8 @@
                      "country_of_residence": "Wales", 
                      "appointed_on": "2015-10-22", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1958
                      }, 
                      "address": {
                         "premises": "Kellogg College", 
@@ -940,12 +925,6 @@
                            "appointments": "/officers/qOpTR8jnpoIQFEYVS4aHbh1D7Xk/appointments"
                         }
                      }, 
-                     "country_of_residence": "Spain", 
-                     "appointed_on": "2015-10-22", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1974
-                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
@@ -953,8 +932,14 @@
                         "postal_code": "OX2 6PN", 
                         "locality": "Oxford"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "Spain", 
+                     "appointed_on": "2015-10-22", 
+                     "date_of_birth": {
+                        "year": 1974, 
+                        "month": 6
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -964,18 +949,18 @@
                            "appointments": "/officers/UT1R-nPJmtgYCRhfdE1ufW5auu8/appointments"
                         }
                      }, 
+                     "country_of_residence": "Germany", 
+                     "appointed_on": "2016-06-30", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1970
+                     }, 
                      "address": {
                         "premises": "Kellogg College", 
                         "country": "England", 
                         "address_line_1": "62 Banbury Road", 
                         "postal_code": "OX2 6PN", 
                         "locality": "Oxford"
-                     }, 
-                     "country_of_residence": "Germany", 
-                     "appointed_on": "2016-06-30", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1970
                      }, 
                      "nationality": "Austrian", 
                      "officer_role": "director", 
@@ -991,8 +976,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-10-22", 
                      "date_of_birth": {
-                        "year": 1950, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1950
                      }, 
                      "address": {
                         "premises": "Kellogg College", 
@@ -1022,16 +1007,29 @@
                      "officer_role": "secretary"
                   }, 
                   {
+                     "name": "BLAND, Annette Alice", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/VCs_4oszw9TKFhVDGTI2c2z8KJ8/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2016-06-30", 
+                     "resigned_on": "2017-12-02", 
+                     "address": {
+                        "premises": "Kellogg College", 
+                        "country": "England", 
+                        "locality": "Oxford", 
+                        "postal_code": "OX2 6PN", 
+                        "address_line_1": "62 Banbury Road"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
                      "name": "BAMFORD, Geoffrey Michael", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/b_1j0ysqqOOnbzGU6Om9_iYYEQQ/appointments"
                         }
-                     }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "W11 1JE", 
-                        "address_line_1": "6 Clydesdale Road"
                      }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-03-07", 
@@ -1039,6 +1037,11 @@
                      "date_of_birth": {
                         "year": 1947, 
                         "month": 12
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "W11 1JE", 
+                        "address_line_1": "6 Clydesdale Road"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1051,6 +1054,13 @@
                            "appointments": "/officers/g_Vq-9vKqADzRv66S1dt4fmMl_M/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-06-14", 
+                     "resigned_on": "2013-01-31", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1960
+                     }, 
                      "address": {
                         "locality": "Oxford", 
                         "premises": "Powic Building", 
@@ -1060,15 +1070,8 @@
                         "address_line_2": "Warneford Hospital", 
                         "address_line_1": "Oxford University Department Of Psychiatry"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-06-14", 
-                     "resigned_on": "2013-01-31", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1960
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Occupational Psychologist"
                   }, 
                   {
@@ -1078,13 +1081,6 @@
                            "appointments": "/officers/wYqOdNM5WREfHeBMOZjQ1zjxnxc/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-03-07", 
-                     "resigned_on": "2011-08-31", 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 11
-                     }, 
                      "address": {
                         "locality": "Oxford", 
                         "premises": "356-358", 
@@ -1093,8 +1089,15 @@
                         "postal_code": "OX1 4TQ", 
                         "address_line_1": "Abingdon Road"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-03-07", 
+                     "resigned_on": "2011-08-31", 
+                     "date_of_birth": {
+                        "year": 1964, 
+                        "month": 11
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Buddhist Monk"
                   }, 
                   {
@@ -1119,8 +1122,8 @@
                         "month": 9, 
                         "year": 1950
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Psychiatrist"
                   }, 
                   {
@@ -1130,20 +1133,20 @@
                            "appointments": "/officers/V3-A8_quaC7fHbykpOWqydAWGzg/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2009-04-01", 
-                     "resigned_on": "2017-02-23", 
-                     "date_of_birth": {
-                        "year": 1935, 
-                        "month": 4
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "N1 1JJ", 
                         "address_line_1": "1 Mountfort Terrace"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-04-01", 
+                     "resigned_on": "2017-02-23", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1935
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Academic"
                   }, 
                   {
@@ -1182,8 +1185,8 @@
                      "appointed_on": "2011-06-14", 
                      "resigned_on": "2015-03-31", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1947
+                        "year": 1947, 
+                        "month": 2
                      }, 
                      "address": {
                         "locality": "Oxford", 
@@ -1194,8 +1197,8 @@
                         "address_line_2": "Warneford Hospital", 
                         "address_line_1": "Oxford University Department Of Psychiatry"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "English", 
+                     "officer_role": "director", 
                      "occupation": "Management Training Consltant"
                   }, 
                   {
@@ -1246,8 +1249,8 @@
                         "month": 10, 
                         "year": 1962
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Doctor"
                   }, 
                   {
@@ -1257,6 +1260,13 @@
                            "appointments": "/officers/dtYJxGjWTwGiFhnFDw0WUdlzKG4/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-04-01", 
+                     "resigned_on": "2015-10-22", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 7
+                     }, 
                      "address": {
                         "locality": "Wheatley", 
                         "premises": "17", 
@@ -1264,13 +1274,6 @@
                         "region": "Oxon", 
                         "postal_code": "OX331XY", 
                         "address_line_1": "Bell Lane"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2009-04-01", 
-                     "resigned_on": "2015-10-22", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1952
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1298,13 +1301,13 @@
                      "72200", 
                      "85590"
                   ], 
-                  "etag": "25791633572978c65e7ef064d67e367b147f3a5a", 
+                  "etag": "fbef6ef3c237782c18407c26029fabaa34d2837d", 
                   "registered_office_address": {
-                     "address_line_2": "62 Banbury Road", 
-                     "country": "England", 
+                     "address_line_1": "Kellogg College", 
                      "postal_code": "OX2 6PN", 
                      "locality": "Oxford", 
-                     "address_line_1": "Kellogg College"
+                     "address_line_2": "62 Banbury Road", 
+                     "country": "England"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
@@ -1319,18 +1322,18 @@
                   "date_of_creation": "2007-03-07", 
                   "has_been_liquidated": false, 
                   "accounts": {
-                     "next_due": "2017-12-31", 
-                     "next_made_up_to": "2017-03-31", 
+                     "next_due": "2018-12-31", 
+                     "next_made_up_to": "2018-03-31", 
                      "last_accounts": {
-                        "period_start_on": "2015-04-01", 
+                        "period_start_on": "2016-04-01", 
                         "type": "full", 
-                        "made_up_to": "2016-03-31", 
-                        "period_end_on": "2016-03-31"
+                        "made_up_to": "2017-03-31", 
+                        "period_end_on": "2017-03-31"
                      }, 
                      "next_accounts": {
-                        "due_on": "2017-12-31", 
-                        "period_start_on": "2016-04-01", 
-                        "period_end_on": "2017-03-31", 
+                        "due_on": "2018-12-31", 
+                        "period_start_on": "2017-04-01", 
+                        "period_end_on": "2018-03-31", 
                         "overdue": false
                      }, 
                      "accounting_reference_date": {
@@ -1371,8 +1374,8 @@
                         "significant-influence-or-control"
                      ], 
                      "date_of_birth": {
-                        "year": 1955, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1955
                      }, 
                      "name_elements": {
                         "surname": "Ferdinando", 
@@ -1442,18 +1445,18 @@
                            "appointments": "/officers/BG25764lahtjZb2hRdMRss0wwhc/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "1997-09-26", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1955
-                     }, 
                      "address": {
                         "country": "Wales", 
                         "region": "Clwyd", 
                         "locality": "Colwyn Bay", 
                         "postal_code": "LL28 5YQ", 
                         "address_line_1": "Coed Uchel Pen Y Mynydd"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "1997-09-26", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 3
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1475,11 +1478,11 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1997-07-04", 
                      "date_of_birth": {
-                        "year": 1942, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1942
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Cashier Bookeeper"
                   }, 
                   {
@@ -1499,8 +1502,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2008-12-04", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1955
+                        "year": 1955, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1513,17 +1516,17 @@
                            "appointments": "/officers/p2T-N-qZOcYRCjkx_4SQIvOVgaQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "1997-07-04", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 9
+                     }, 
                      "address": {
                         "premises": "1", 
                         "locality": "Prestatyn", 
                         "postal_code": "LL19 8YQ", 
                         "address_line_1": "Crud Yr Arwel"
-                     }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "1997-07-04", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1963
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1547,8 +1550,8 @@
                      "country_of_residence": "Uk / Wales", 
                      "appointed_on": "2016-07-14", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1975
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1615,8 +1618,8 @@
                      "appointed_on": "1997-07-04", 
                      "resigned_on": "2000-04-07", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 9
                      }, 
                      "address": {
                         "postal_code": "CH43 5UP", 
@@ -1625,8 +1628,8 @@
                         "address_line_2": "Prenton", 
                         "address_line_1": "10 South Bank"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Architect"
                   }, 
                   {
@@ -1645,11 +1648,11 @@
                      "appointed_on": "1997-07-04", 
                      "resigned_on": "2001-11-09", 
                      "date_of_birth": {
-                        "year": 1952, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1952
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1684,18 +1687,18 @@
                            "appointments": "/officers/Zja-7AMwOmFKqF7-v276VOaRmOY/appointments"
                         }
                      }, 
-                     "appointed_on": "2004-07-30", 
-                     "resigned_on": "2008-11-06", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 10
-                     }, 
                      "address": {
                         "address_line_2": "Meliden", 
                         "region": "Clwyd", 
                         "address_line_1": "10 Bryn Llys", 
                         "postal_code": "LL19 8PP", 
                         "locality": "Prestatyn"
+                     }, 
+                     "appointed_on": "2004-07-30", 
+                     "resigned_on": "2008-11-06", 
+                     "date_of_birth": {
+                        "year": 1947, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1721,8 +1724,8 @@
                         "year": 1947, 
                         "month": 10
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Head Of Renewal Services"
                   }, 
                   {
@@ -1732,12 +1735,6 @@
                            "appointments": "/officers/XHn2jIxtCS74Xhht12c-vEtl-UY/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Clwyd", 
-                        "locality": "Ruthin", 
-                        "postal_code": "LL15 1BY", 
-                        "address_line_1": "Bryniau Llanfair Road"
-                     }, 
                      "country_of_residence": "Wales", 
                      "appointed_on": "1999-05-21", 
                      "resigned_on": "2010-09-02", 
@@ -1745,8 +1742,14 @@
                         "month": 8, 
                         "year": 1950
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "Clwyd", 
+                        "locality": "Ruthin", 
+                        "postal_code": "LL15 1BY", 
+                        "address_line_1": "Bryniau Llanfair Road"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -1786,12 +1789,6 @@
                            "appointments": "/officers/VnIEczequUTN9ezLLRjhXH3_vA8/appointments"
                         }
                      }, 
-                     "appointed_on": "2003-05-30", 
-                     "resigned_on": "2006-04-06", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1967
-                     }, 
                      "address": {
                         "address_line_2": "Mount Road", 
                         "region": "Denbighshire", 
@@ -1799,8 +1796,14 @@
                         "postal_code": "LL17 0DE", 
                         "locality": "St. Asaph"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2003-05-30", 
+                     "resigned_on": "2006-04-06", 
+                     "date_of_birth": {
+                        "year": 1967, 
+                        "month": 5
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Managing Director"
                   }, 
                   {
@@ -1810,20 +1813,20 @@
                            "appointments": "/officers/jsHRZcq1lj5Myz7GKXBP2mvtzp4/appointments"
                         }
                      }, 
-                     "appointed_on": "1997-12-16", 
-                     "resigned_on": "2001-05-18", 
-                     "date_of_birth": {
-                        "year": 1946, 
-                        "month": 8
-                     }, 
                      "address": {
                         "region": "Cheshire", 
                         "address_line_1": "11 Sadlers Wells", 
                         "postal_code": "CW6 9NU", 
                         "locality": "Bunbury"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "1997-12-16", 
+                     "resigned_on": "2001-05-18", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 8
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Manager"
                   }, 
                   {
@@ -1833,19 +1836,19 @@
                            "appointments": "/officers/qwWzMqS03WMbAzs_a-Fc4JkF_0M/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "LL18 6EF", 
-                        "region": "Flintshire", 
-                        "locality": "Rhyl", 
-                        "address_line_2": "Trelawnyd", 
-                        "address_line_1": "Tyr Felin Cwm Road"
-                     }, 
                      "country_of_residence": "Wales", 
                      "appointed_on": "2009-01-08", 
                      "resigned_on": "2014-03-06", 
                      "date_of_birth": {
                         "month": 6, 
                         "year": 1955
+                     }, 
+                     "address": {
+                        "postal_code": "LL18 6EF", 
+                        "region": "Flintshire", 
+                        "locality": "Rhyl", 
+                        "address_line_2": "Trelawnyd", 
+                        "address_line_1": "Tyr Felin Cwm Road"
                      }, 
                      "nationality": "Uk", 
                      "officer_role": "director", 
@@ -1884,18 +1887,18 @@
                            "appointments": "/officers/AMbVbGYMLf0nQlZmTJ5X2B0gg-U/appointments"
                         }
                      }, 
+                     "appointed_on": "1997-07-04", 
+                     "resigned_on": "1997-11-12", 
+                     "date_of_birth": {
+                        "year": 1955, 
+                        "month": 8
+                     }, 
                      "address": {
                         "postal_code": "L43 0RB", 
                         "region": "Merseyside", 
                         "address_line_1": "43 Glenavon Road", 
                         "address_line_2": "Prenton", 
                         "locality": "Wirral"
-                     }, 
-                     "appointed_on": "1997-07-04", 
-                     "resigned_on": "1997-11-12", 
-                     "date_of_birth": {
-                        "year": 1955, 
-                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1911,8 +1914,8 @@
                      "appointed_on": "1997-07-04", 
                      "resigned_on": "2003-11-28", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 11
                      }, 
                      "address": {
                         "region": "Denbighshire", 
@@ -1931,6 +1934,13 @@
                            "appointments": "/officers/DRapVvz-15cDFIQ1SbNsiwVXg5o/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1997-07-04", 
+                     "resigned_on": "1999-12-15", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1953
+                     }, 
                      "address": {
                         "postal_code": "CH1 6NW", 
                         "region": "Cheshire", 
@@ -1938,15 +1948,8 @@
                         "address_line_2": "Mollington", 
                         "locality": "Chester"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1997-07-04", 
-                     "resigned_on": "1999-12-15", 
-                     "date_of_birth": {
-                        "year": 1953, 
-                        "month": 7
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Chief Executive"
                   }, 
                   {

@@ -251,6 +251,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "04/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -259,7 +260,7 @@
                "pretty": "RMT Trade Union", 
                "address": "39 Chalton Street, Kings Cross, London, NW1 1DU", 
                "item_id": "0001", 
-               "donor": "RMT Trade Union", 
+               "donor": "RMT", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -276,6 +277,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "07/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -284,7 +286,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobalds Road, Holborn, London WC1X 8TN", 
                "item_id": "0002", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -330,6 +332,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "25/08/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -380,6 +383,7 @@
                "raw_string": "Name of donor: Unite the UnionAddress of donor: 128 Theobald's Road, London WC1X 8TNAmount of donation, or nature and value if donation in kind: Hotel accommodation during the Labour Party Conference, total value \u00a31,380Date received: 23-27 September 2017Date accepted: 23 September 2017Donor status: trade union(Registered 18 October 2017)", 
                "status": "trade union", 
                "isWealth": false, 
+               "type": "union", 
                "nouns": [], 
                "isDonation": false, 
                "persons": [], 
@@ -401,7 +405,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobald's Road, London WC1X 8TN", 
                "item_id": "0001", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 4, 
                "isGift": true, 
                "company": {
@@ -672,6 +676,12 @@
                            "appointments": "/officers/ArBXss9hshrXf_Vd8ygZrXWaZbI/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2017-02-13", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 9
+                     }, 
                      "address": {
                         "locality": "Middlesbrough", 
                         "premises": "The Old Smithy 1", 
@@ -680,14 +690,8 @@
                         "address_line_2": "Stokesley", 
                         "address_line_1": "North Road"
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2017-02-13", 
-                     "date_of_birth": {
-                        "year": 1970, 
-                        "month": 9
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Business Manager"
                   }, 
                   {
@@ -697,12 +701,6 @@
                            "appointments": "/officers/Lcu5-KJZo0Oylll2-7Nr2WKjBpE/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2017-02-13", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1985
-                     }, 
                      "address": {
                         "locality": "Middlesbrough", 
                         "premises": "The Old Smithy 1", 
@@ -711,8 +709,14 @@
                         "address_line_2": "Stokesley", 
                         "address_line_1": "North Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2017-02-13", 
+                     "date_of_birth": {
+                        "year": 1985, 
+                        "month": 4
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }, 
                   {
@@ -733,8 +737,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2009-05-07", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1973
+                        "year": 1973, 
+                        "month": 5
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -747,19 +751,19 @@
                            "appointments": "/officers/fojmSYjqMatVr7IfVmQh2S2B3U8/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "23", 
-                        "region": "Tyne And Wear", 
-                        "locality": "Rowlands Gill", 
-                        "postal_code": "NE39 1DY", 
-                        "address_line_1": "Dene Avenue"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2009-05-07", 
                      "resigned_on": "2017-02-13", 
                      "date_of_birth": {
                         "year": 1961, 
                         "month": 2
+                     }, 
+                     "address": {
+                        "premises": "23", 
+                        "region": "Tyne And Wear", 
+                        "locality": "Rowlands Gill", 
+                        "postal_code": "NE39 1DY", 
+                        "address_line_1": "Dene Avenue"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -786,8 +790,8 @@
                         "address_line_2": "Linthorpe", 
                         "address_line_1": "20 Orchard Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -797,19 +801,19 @@
                            "appointments": "/officers/6NLv7IimEvmvGPHLTYg7KiEyiZ0/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-05-07", 
-                     "resigned_on": "2013-06-06", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 5
-                     }, 
                      "address": {
                         "premises": "The Wheel House", 
                         "postal_code": "TS13 4UG", 
                         "address_line_1": "Holywell Farm", 
                         "address_line_2": "Loftus", 
                         "locality": "Saltburn-By-The-Sea"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-05-07", 
+                     "resigned_on": "2013-06-06", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1958
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -993,8 +997,8 @@
                         "significant-influence-or-control-as-firm-limited-liability-partnership"
                      ], 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1977
+                        "year": 1977, 
+                        "month": 6
                      }, 
                      "name_elements": {
                         "middle_name": "Ellen", 
@@ -1141,8 +1145,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 3
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1162,8 +1166,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 7
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1183,8 +1187,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-05-01", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 7
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1225,8 +1229,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2013-05-01", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1973
+                        "year": 1973, 
+                        "month": 5
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1246,8 +1250,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1970
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1288,8 +1292,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 3
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1330,8 +1334,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 6
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1372,8 +1376,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-05-01", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1962
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1393,8 +1397,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1963
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1456,8 +1460,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-05-01", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 10
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1498,8 +1502,8 @@
                      "country_of_residence": "Uk", 
                      "appointed_on": "2011-05-01", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1962
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1520,8 +1524,8 @@
                      "appointed_on": "2010-07-15", 
                      "resigned_on": "2015-02-28", 
                      "date_of_birth": {
-                        "year": 1955, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1955
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1542,8 +1546,8 @@
                      "appointed_on": "2011-05-01", 
                      "resigned_on": "2013-04-01", 
                      "date_of_birth": {
-                        "year": 1957, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1957
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1564,8 +1568,8 @@
                      "appointed_on": "2012-05-01", 
                      "resigned_on": "2013-04-01", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1975
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1608,8 +1612,8 @@
                      "appointed_on": "2011-05-01", 
                      "resigned_on": "2016-04-30", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1959
+                        "year": 1959, 
+                        "month": 2
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1674,8 +1678,8 @@
                      "appointed_on": "2012-05-01", 
                      "resigned_on": "2013-04-01", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1975
+                        "year": 1975, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "Congress House", 
@@ -1762,8 +1766,8 @@
                      "appointed_on": "2011-05-01", 
                      "resigned_on": "2013-04-01", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1957
+                        "year": 1957, 
+                        "month": 4
                      }, 
                      "address": {
                         "premises": "Congress House", 

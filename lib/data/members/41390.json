@@ -61,20 +61,33 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2017-12-04T00:00:00", 
-            "EndDate": {
-               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-               "@xsi:nil": "true"
+         "Committee": [
+            {
+               "StartDate": "2017-12-04T00:00:00", 
+               "EndDate": "2017-12-11T00:00:00", 
+               "Name": "Environment, Food and Rural Affairs Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "52"
             }, 
-            "Name": "Environment, Food and Rural Affairs Committee", 
-            "IsCoOpted": "False", 
-            "EndNote": null, 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "52"
-         }
+            {
+               "StartDate": "2017-12-11T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Communities and Local Government Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "17"
+            }
+         ]
       }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
@@ -201,6 +214,11 @@
       "and", 
       "Rural", 
       "Affairs", 
+      "Committee", 
+      "Communities", 
+      "and", 
+      "Local", 
+      "Government", 
       "Committee"
    ], 
    "mp_income": 78173, 
@@ -329,6 +347,7 @@
                "nouns": [], 
                "isDonation": true, 
                "persons": [], 
+               "type": "union", 
                "registered": "06/07/2017", 
                "officers": [], 
                "isIncome": false, 
@@ -337,7 +356,7 @@
                "pretty": "Unite the Union", 
                "address": "128 Theobalds Road, London WC1X 8TN", 
                "item_id": "0001", 
-               "donor": "Unite the Union", 
+               "donor": "UNITE", 
                "category_id": 2, 
                "isGift": false, 
                "company": {
@@ -607,8 +626,8 @@
                         "voting-rights-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1956
+                        "year": 1956, 
+                        "month": 2
                      }, 
                      "name_elements": {
                         "middle_name": "Gordon", 
@@ -657,12 +676,6 @@
                            "appointments": "/officers/kr9ymOWTJbv3k47ea_LiOnJnlFU/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-05-19", 
-                     "date_of_birth": {
-                        "year": 1963, 
-                        "month": 2
-                     }, 
                      "address": {
                         "locality": "Bury", 
                         "premises": "Higher Sedger Hey Farm", 
@@ -670,6 +683,12 @@
                         "postal_code": "BL9 6SY", 
                         "address_line_2": "Nangreaves", 
                         "address_line_1": "Bury Old Road"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-05-19", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1963
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -685,8 +704,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2009-05-19", 
                      "date_of_birth": {
-                        "year": 1956, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1956
                      }, 
                      "address": {
                         "address_line_2": "Nangreaves", 
@@ -695,8 +714,8 @@
                         "postal_code": "BL9 6SY", 
                         "address_line_1": "Higher Sedger Hey Farm"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Senior Consultant"
                   }, 
                   {
@@ -817,6 +836,7 @@
    "constituency": "Leigh", 
    "mp_gifts": 0, 
    "commitees": [
-      "Environment, Food and Rural Affairs Committee"
+      "Environment, Food and Rural Affairs Committee", 
+      "Communities and Local Government Committee"
    ]
 }

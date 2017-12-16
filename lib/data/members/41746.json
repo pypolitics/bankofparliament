@@ -367,31 +367,32 @@
          "category_gifts": 1126, 
          "items": [
             {
-               "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: 150 Strand, London WC2E 1JAEstimate of the probable value (or amount of any donation): for myself and my partner, travel and accommodation with a total value of \u00a31,126Destination of visit: GibraltarDates of visit: 7-11 September 2017Purpose of visit: Gibraltar APPG delegation as Secretary for Gibraltar National Day Celebrations.(Registered 14 September 2017)", 
                "status": "visit", 
-               "isWealth": false, 
-               "nouns": [], 
                "isDonation": false, 
-               "persons": [], 
-               "registered": "14/09/2017", 
+               "isGift": true, 
                "destination": "Gibraltar", 
                "officers": [], 
                "isIncome": false, 
-               "amount": 1126, 
-               "link": null, 
-               "purpose": "Gibraltar APPG delegation as Secretary for Gibraltar National Day Celebrations.", 
                "pretty": "HM Government of Gibraltar", 
-               "address": "150 Strand, London WC2E 1JA", 
-               "item_id": "0001", 
                "donor": "HM Government of Gibraltar", 
-               "category_id": 5, 
-               "isGift": true, 
+               "type": "visit", 
                "company": {
                   "company_status": "Active", 
                   "company_name": "HM Government of Gibraltar", 
                   "company_number": "N/A"
                }, 
-               "appointments": []
+               "raw_string": "Name of donor: HM Government of GibraltarAddress of donor: 150 Strand, London WC2E 1JAEstimate of the probable value (or amount of any donation): for myself and my partner, travel and accommodation with a total value of \u00a31,126Destination of visit: GibraltarDates of visit: 7-11 September 2017Purpose of visit: Gibraltar APPG delegation as Secretary for Gibraltar National Day Celebrations.(Registered 14 September 2017)", 
+               "isWealth": false, 
+               "registered": "14/09/2017", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "Gibraltar APPG delegation as Secretary for Gibraltar National Day Celebrations.", 
+               "nouns": [], 
+               "address": "150 Strand, London WC2E 1JA", 
+               "item_id": "0001", 
+               "amount": 1126, 
+               "category_id": 5
             }
          ], 
          "category_type": "visits_outside_uk", 
@@ -615,12 +616,6 @@
                            "appointments": "/officers/LQpm0yeaxvtMCqLuJnyIR3WnYso/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2012-06-26", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1981
-                     }, 
                      "address": {
                         "locality": "Ellon", 
                         "premises": "38", 
@@ -628,6 +623,12 @@
                         "region": "Aberdeenshire", 
                         "postal_code": "AB41 9DD", 
                         "address_line_1": "Brent Field Circle"
+                     }, 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2012-06-26", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1981
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -674,18 +675,18 @@
                            "appointments": "/officers/MRT766qQpv5i3rxNzLfwVSWymkY/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2002-05-17", 
-                     "resigned_on": "2012-06-26", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1960
-                     }, 
                      "address": {
                         "region": "Aberdeenshire", 
                         "locality": "Ellon", 
                         "postal_code": "AB41 8BB", 
                         "address_line_1": "2 Turnishaw Hill"
+                     }, 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2002-05-17", 
+                     "resigned_on": "2012-06-26", 
+                     "date_of_birth": {
+                        "year": 1960, 
+                        "month": 12
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -825,8 +826,8 @@
                         "ownership-of-shares-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1976
+                        "year": 1976, 
+                        "month": 4
                      }, 
                      "name_elements": {
                         "surname": "Stewart", 
@@ -876,8 +877,8 @@
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2015-05-27", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1977
+                        "year": 1977, 
+                        "month": 8
                      }, 
                      "address": {
                         "locality": "Kilmarnock", 
@@ -1150,12 +1151,6 @@
                            "appointments": "/officers/_WQcmGvPHv51nA1t2JIb0Umw_co/appointments"
                         }
                      }, 
-                     "country_of_residence": "Scotland", 
-                     "appointed_on": "2016-02-24", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1956
-                     }, 
                      "address": {
                         "premises": "Brackley Cottage", 
                         "country": "United Kingdom", 
@@ -1163,8 +1158,14 @@
                         "postal_code": "PA23 7UN", 
                         "address_line_1": "Toward"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "Scotland", 
+                     "appointed_on": "2016-02-24", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1956
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Administrator"
                   }, 
                   {
@@ -1202,8 +1203,8 @@
                      "appointed_on": "2014-04-14", 
                      "resigned_on": "2014-05-20", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 7
+                        "month": 7, 
+                        "year": 1966
                      }, 
                      "address": {
                         "locality": "Edinburgh", 
@@ -1224,19 +1225,19 @@
                            "appointments": "/officers/KIn4khtXu8HvI9spFyHMloC3XK8/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "16 Melville Terrace", 
-                        "country": "United Kingdom", 
-                        "region": "Central", 
-                        "postal_code": "FK8 2NE", 
-                        "locality": "Stirling"
-                     }, 
                      "country_of_residence": "Scotland", 
                      "appointed_on": "2014-05-20", 
                      "resigned_on": "2016-02-24", 
                      "date_of_birth": {
                         "year": 1929, 
                         "month": 5
+                     }, 
+                     "address": {
+                        "premises": "16 Melville Terrace", 
+                        "country": "United Kingdom", 
+                        "region": "Central", 
+                        "postal_code": "FK8 2NE", 
+                        "locality": "Stirling"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1346,8 +1347,8 @@
                         "significant-influence-or-control"
                      ], 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1978
+                        "year": 1978, 
+                        "month": 8
                      }, 
                      "name_elements": {
                         "title": "Mrs", 
@@ -1411,6 +1412,12 @@
                            "appointments": "/officers/l382DTco-xcaJq9FstrwOQElR_4/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-07-08", 
+                     "date_of_birth": {
+                        "year": 1978, 
+                        "month": 8
+                     }, 
                      "address": {
                         "locality": "Barnsley", 
                         "premises": "50", 
@@ -1419,14 +1426,8 @@
                         "address_line_2": "Hoyland Common", 
                         "address_line_1": "Hoyland Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-07-08", 
-                     "date_of_birth": {
-                        "year": 1978, 
-                        "month": 8
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1439,8 +1440,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-07-08", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1970
+                        "year": 1970, 
+                        "month": 5
                      }, 
                      "address": {
                         "locality": "Barnsley", 
@@ -1568,6 +1569,12 @@
                            "appointments": "/officers/LZQRgPVfnJSBT1brSh9FhDWRRfQ/appointments"
                         }
                      }, 
+                     "country_of_residence": "Jamaica", 
+                     "appointed_on": "2017-09-06", 
+                     "date_of_birth": {
+                        "year": 1995, 
+                        "month": 10
+                     }, 
                      "address": {
                         "locality": "Towcester", 
                         "premises": "Vo Rm No. 500", 
@@ -1577,14 +1584,8 @@
                         "address_line_2": "Caswell", 
                         "address_line_1": "Caswell Science & Technology Park"
                      }, 
-                     "country_of_residence": "Jamaica", 
-                     "appointed_on": "2017-09-06", 
-                     "date_of_birth": {
-                        "year": 1995, 
-                        "month": 10
-                     }, 
-                     "nationality": "Jamaican", 
                      "officer_role": "director", 
+                     "nationality": "Jamaican", 
                      "occupation": "Farmer"
                   }, 
                   {
@@ -1607,8 +1608,8 @@
                      "appointed_on": "2017-09-06", 
                      "resigned_on": "2017-09-18", 
                      "date_of_birth": {
-                        "year": 1964, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1964
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1700,8 +1701,8 @@
                         "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 8
                      }, 
                      "etag": "7871568879f38dd822276aa5ce2f07d2db8dd8d6", 
                      "address": {
@@ -1738,17 +1739,17 @@
                            "appointments": "/officers/JlEkq1ED8nxcOHuELETwYZG73_A/appointments"
                         }
                      }, 
+                     "country_of_residence": "Northern Ireland", 
+                     "appointed_on": "1996-09-12", 
+                     "date_of_birth": {
+                        "year": 1949, 
+                        "month": 3
+                     }, 
                      "address": {
                         "address_line_2": "Whitehead", 
                         "locality": "Carrickfergus", 
                         "postal_code": "BT389LT", 
                         "address_line_1": "12 Donegall Drive"
-                     }, 
-                     "country_of_residence": "Northern Ireland", 
-                     "appointed_on": "1996-09-12", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1949
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1775,11 +1776,11 @@
                      "country_of_residence": "Northern Ireland", 
                      "appointed_on": "2011-10-01", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1974
+                        "year": 1974, 
+                        "month": 5
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1802,8 +1803,8 @@
                         "postal_code": "BT389LT", 
                         "locality": "Carrickfergus"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Electrical Engineer"
                   }
                ], 
@@ -1942,8 +1943,8 @@
                         "postal_code": "W1J 7NP", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }
                ], 
@@ -2035,8 +2036,8 @@
                         "forename": "Jeremy"
                      }, 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1963
+                        "year": 1963, 
+                        "month": 10
                      }, 
                      "etag": "ec22e72e91639eb5820f78426b4b5f7b13219648", 
                      "address": {
@@ -2091,8 +2092,8 @@
                         "significant-influence-or-control"
                      ], 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 12
                      }, 
                      "name_elements": {
                         "title": "Mrs", 
@@ -2257,8 +2258,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2016-12-13", 
                      "date_of_birth": {
-                        "year": 1966, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1966
                      }, 
                      "address": {
                         "premises": "Royal Mews", 
@@ -2267,8 +2268,8 @@
                         "postal_code": "KT8 9BW", 
                         "address_line_1": "Hampton Court Road"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Partner"
                   }, 
                   {
@@ -2278,6 +2279,12 @@
                            "appointments": "/officers/Kl1qXiNdvMKAZz9Y3C699rdEVoY/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-11-12", 
+                     "date_of_birth": {
+                        "month": 8, 
+                        "year": 1965
+                     }, 
                      "address": {
                         "locality": "Esher", 
                         "premises": "20", 
@@ -2285,12 +2292,6 @@
                         "region": "Surrey", 
                         "postal_code": "KT10 8JG", 
                         "address_line_1": "Elm Tree Avenue"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2010-11-12", 
-                     "date_of_birth": {
-                        "year": 1965, 
-                        "month": 8
                      }, 
                      "officer_role": "director", 
                      "nationality": "Irish", 
@@ -2306,8 +2307,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2016-12-13", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "Royal Mews", 
@@ -2316,8 +2317,8 @@
                         "postal_code": "KT8 9BW", 
                         "address_line_1": "Hampton Court Road"
                      }, 
-                     "nationality": "Australian", 
                      "officer_role": "director", 
+                     "nationality": "Australian", 
                      "occupation": "Auditor"
                   }, 
                   {
@@ -2327,6 +2328,12 @@
                            "appointments": "/officers/xtka16CH-S2Kiewm3pKolO6h-zU/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2011-04-19", 
+                     "date_of_birth": {
+                        "year": 1981, 
+                        "month": 1
+                     }, 
                      "address": {
                         "premises": "Royal Mews", 
                         "region": "Surrey", 
@@ -2334,14 +2341,8 @@
                         "postal_code": "KT8 9BW", 
                         "locality": "East Molesey"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2011-04-19", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1981
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Accountant"
                   }, 
                   {
@@ -2351,12 +2352,6 @@
                            "appointments": "/officers/jbXdbZ32LSWEzCXNublY9XMUTr0/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2006-10-25", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1963
-                     }, 
                      "address": {
                         "locality": "East Molesey", 
                         "premises": "Flat 6,", 
@@ -2365,6 +2360,12 @@
                         "postal_code": "KT8 9BW", 
                         "address_line_2": "Hampton Court Road", 
                         "address_line_1": "Royal Mews"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2006-10-25", 
+                     "date_of_birth": {
+                        "year": 1963, 
+                        "month": 10
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2395,16 +2396,16 @@
                            "appointments": "/officers/KDjvLMhDv8yLD-t2ZnsSq_6zw7o/appointments"
                         }
                      }, 
-                     "appointed_on": "2005-04-07", 
-                     "resigned_on": "2008-05-30", 
                      "address": {
                         "address_line_2": "Islington", 
                         "address_line_1": "72 Lawford Road", 
                         "postal_code": "N1 5BL", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2005-04-07", 
+                     "resigned_on": "2008-05-30", 
                      "officer_role": "secretary", 
+                     "nationality": "British", 
                      "occupation": "Lawyer"
                   }, 
                   {
@@ -2450,6 +2451,13 @@
                            "appointments": "/officers/eMQbVSZiIsy8TrIY8Cz5YnJiu8o/appointments"
                         }
                      }, 
+                     "country_of_residence": "Great Britain", 
+                     "appointed_on": "2016-02-16", 
+                     "resigned_on": "2016-08-12", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1960
+                     }, 
                      "address": {
                         "premises": "Royal Mews", 
                         "region": "Surrey", 
@@ -2457,15 +2465,8 @@
                         "postal_code": "KT8 9BW", 
                         "locality": "East Molesey"
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2016-02-16", 
-                     "resigned_on": "2016-08-12", 
-                     "date_of_birth": {
-                        "year": 1960, 
-                        "month": 6
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Charity Worker"
                   }, 
                   {
@@ -2489,8 +2490,8 @@
                         "postal_code": "GU10 3HF", 
                         "locality": "Farnham"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -2504,8 +2505,8 @@
                      "appointed_on": "2005-11-16", 
                      "resigned_on": "2016-02-01", 
                      "date_of_birth": {
-                        "year": 1962, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1962
                      }, 
                      "address": {
                         "premises": "Royal Mews", 
@@ -2514,8 +2515,8 @@
                         "postal_code": "KT8 9BW", 
                         "locality": "East Molesey"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Chartered Accountant"
                   }, 
                   {
@@ -2525,21 +2526,21 @@
                            "appointments": "/officers/gjRYgsZ0Wmh5wdt1sGZ0qIVvRDU/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2003-03-26", 
-                     "resigned_on": "2003-08-28", 
-                     "date_of_birth": {
-                        "year": 1952, 
-                        "month": 4
-                     }, 
                      "address": {
                         "region": "Surrey", 
                         "address_line_1": "11 Geneva Road", 
                         "postal_code": "KT1 2TW", 
                         "locality": "Kingston Upon Thames"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2003-03-26", 
+                     "resigned_on": "2003-08-28", 
+                     "date_of_birth": {
+                        "month": 4, 
+                        "year": 1952
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Self Employed Business Advisor"
                   }, 
                   {
@@ -2549,12 +2550,6 @@
                            "appointments": "/officers/9Qzxno-aqgTfwFjO12RVx4RkvJ4/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Surrey", 
-                        "locality": "Camberley", 
-                        "postal_code": "GU15 1DH", 
-                        "address_line_1": "20 Goldney Road"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2006-10-25", 
                      "resigned_on": "2007-06-20", 
@@ -2562,8 +2557,14 @@
                         "month": 9, 
                         "year": 1942
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "region": "Surrey", 
+                        "locality": "Camberley", 
+                        "postal_code": "GU15 1DH", 
+                        "address_line_1": "20 Goldney Road"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -2572,13 +2573,6 @@
                         "officer": {
                            "appointments": "/officers/r9n5nxxmjwku-Ctdd0otNNe0IP8/appointments"
                         }
-                     }, 
-                     "address": {
-                        "premises": "12", 
-                        "country": "England", 
-                        "address_line_1": "Hetley Road", 
-                        "postal_code": "W12 8BB", 
-                        "locality": "London"
                      }, 
                      "former_names": [
                         {
@@ -2592,6 +2586,13 @@
                      "date_of_birth": {
                         "year": 1962, 
                         "month": 12
+                     }, 
+                     "address": {
+                        "premises": "12", 
+                        "country": "England", 
+                        "address_line_1": "Hetley Road", 
+                        "postal_code": "W12 8BB", 
+                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2644,8 +2645,8 @@
                         "postal_code": "N1 5BL", 
                         "address_line_1": "72 Lawford Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Lawyer"
                   }, 
                   {
@@ -2669,8 +2670,8 @@
                         "postal_code": "KT8 9BW", 
                         "address_line_1": "Hampton Court Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Human Resources Manager"
                   }, 
                   {
@@ -2680,13 +2681,6 @@
                            "appointments": "/officers/5XwLBbrke83rXRVNF6yBGpKPoG0/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-08-01", 
-                     "resigned_on": "2016-10-01", 
-                     "date_of_birth": {
-                        "month": 7, 
-                        "year": 1965
-                     }, 
                      "address": {
                         "premises": "Royal Mews", 
                         "region": "Surrey", 
@@ -2694,8 +2688,15 @@
                         "postal_code": "KT8 9BW", 
                         "locality": "East Molesey"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-08-01", 
+                     "resigned_on": "2016-10-01", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1965
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Hr Consultant"
                   }, 
                   {
@@ -2705,6 +2706,13 @@
                            "appointments": "/officers/YIh16R52Q2AZ7jZen4hOntqOq7U/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-05-31", 
+                     "resigned_on": "2012-06-30", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1943
+                     }, 
                      "address": {
                         "address_line_2": "Hamm Court", 
                         "region": "Surrey", 
@@ -2712,15 +2720,8 @@
                         "postal_code": "KT13 8YG", 
                         "address_line_1": "Yonderberry"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2008-05-31", 
-                     "resigned_on": "2012-06-30", 
-                     "date_of_birth": {
-                        "year": 1943, 
-                        "month": 11
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -2730,18 +2731,18 @@
                            "appointments": "/officers/T6i0I5sALwhogPjs3RRYJNnU6Vg/appointments"
                         }
                      }, 
-                     "appointed_on": "2008-10-16", 
-                     "resigned_on": "2010-02-15", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1970
-                     }, 
                      "address": {
                         "premises": "28", 
                         "region": "Surrey", 
                         "address_line_1": "Windsor Road", 
                         "postal_code": "GU24 8LA", 
                         "locality": "Chobham"
+                     }, 
+                     "appointed_on": "2008-10-16", 
+                     "resigned_on": "2010-02-15", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1970
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -2757,8 +2758,8 @@
                      "appointed_on": "2003-03-26", 
                      "resigned_on": "2006-09-20", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1947
                      }, 
                      "address": {
                         "address_line_2": "Whitton", 
@@ -2767,8 +2768,8 @@
                         "postal_code": "TW2 7JG", 
                         "locality": "Twickenham"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Tailors Cutter"
                   }, 
                   {
@@ -2778,13 +2779,6 @@
                            "appointments": "/officers/16IXvXytT1MTWrGMFxmwzsp4EEk/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "Royal Mews", 
-                        "region": "Surrey", 
-                        "locality": "East Molesey", 
-                        "postal_code": "KT8 9BW", 
-                        "address_line_1": "Hampton Court Road"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2013-07-17", 
                      "resigned_on": "2016-08-23", 
@@ -2792,8 +2786,15 @@
                         "year": 1969, 
                         "month": 9
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "Royal Mews", 
+                        "region": "Surrey", 
+                        "locality": "East Molesey", 
+                        "postal_code": "KT8 9BW", 
+                        "address_line_1": "Hampton Court Road"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Lawyer"
                   }, 
                   {
@@ -2855,8 +2856,8 @@
                      "appointed_on": "2004-09-23", 
                      "resigned_on": "2005-11-16", 
                      "date_of_birth": {
-                        "month": 7, 
-                        "year": 1949
+                        "year": 1949, 
+                        "month": 7
                      }, 
                      "address": {
                         "region": "Surrey", 
@@ -2887,8 +2888,8 @@
                         "month": 6, 
                         "year": 1950
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Executive Editor Bbc"
                   }
                ], 
