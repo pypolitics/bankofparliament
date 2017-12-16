@@ -6,7 +6,7 @@ from companies_house_query import CompaniesHouseCompanySearch
 from pprint import pprint
 import re
 from datetime import datetime, date
-from companies_house_patches import urls
+from patches.companies_house import urls
 
 class Shareholdings(Category):
 	def __init__(self, extended, keywords, month, year, first, middle, last, display):

@@ -1,4 +1,5 @@
 # local libs
+import re
 
 from categories import Category
 from items import VisitsOutsideUKItem
@@ -39,7 +40,17 @@ class VisitsOutsideUK(Category):
 		purpose = ''
 		status = 'visit'
 
+		indiv = re.search('\([0-9]+\)', donor)
+
 		for key in raw_data:
+
+			if 'purpose' in key.lower():
+				purpose = raw_data[key]
+			elif 'destination' in key.lower():
+				destination = raw_data[key]
+
+		for key in raw_data:
+
 			if 'name of donor' in key.lower():
 				# name of donor might be: (1) Policy Network (2) Les Gracques
 				# split to list
@@ -49,12 +60,6 @@ class VisitsOutsideUK(Category):
 
 			elif 'address' in key.lower():
 				address = raw_data[key]
-				# address may be like name
-
-			elif 'purpose' in key.lower():
-				purpose = raw_data[key]
-			elif 'destination' in key.lower():
-				destination = raw_data[key]
 
 		item = VisitsOutsideUKItem(item_id, self.category_id, raw_string, pretty, registered, amount)
 		item.donor = donor

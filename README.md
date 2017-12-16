@@ -28,8 +28,12 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* add a back button to shareholding plot
+* sylvia hermin missing border
+* dominic grieve strange formatting of shareholdings
+* Add match results to tooltip on 3d plot
 * about page
+* add a legend for shareholding plot
+* get batches of results for get officers / persons calls in the item class - only 35 come in at a time
 
 * companies house lookup on miscellaneous, family lobbyists - find a company to make an item
 * find companies for donors

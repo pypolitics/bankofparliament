@@ -61,10 +61,10 @@ def write_shareholder_plot(mp, plot_file):
                     'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 40, 'symbol' : 'diamond'},
                     'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 40, 'symbol' : 'diamond'},
 
-                    'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
-                    'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
-                    'active_officer'           : {'color' : orange_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
-                    'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 20, 'symbol' : 'circle'},
+                    'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
+                    'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
+                    'active_officer'           : {'color' : orange_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
+                    'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'circle'},
 
                     }
 
@@ -136,9 +136,9 @@ def write_shareholder_plot(mp, plot_file):
                 elif 'shareholding' in category['category_type']:
                     n = 'declared_company'
 
-
                 wrapped = textwrap.wrap(item['company']['company_name'], 60)
-                label = wrapped[0].title()
+                # label = wrapped[0].title()
+                label = ''
 
                 item_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
                 item_copy = copy.copy(item_node)
@@ -200,7 +200,7 @@ def write_shareholder_plot(mp, plot_file):
                             if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
                                 found = each
                                 if not each['node_type'] == 'mp':
-                                    each['size'] += 5
+                                    each['size'] += 3
 
                         if found == person_copy:
                             data['nodes'].append(found)
@@ -244,7 +244,7 @@ def write_shareholder_plot(mp, plot_file):
                             if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
                                 found = each
                                 if not each['node_type'] == 'mp':
-                                    each['size'] += 5
+                                    each['size'] += 3
 
                         # found hasnt changed - so, no match was make, add the node
                         if found == person_copy:
