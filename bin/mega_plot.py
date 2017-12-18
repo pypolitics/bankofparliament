@@ -9,9 +9,13 @@ from plotly.graph_objs import *
 from optparse import OptionParser
 import os, sys, json
 import operator, copy
+from fuzzywuzzy import fuzz
+import textwrap
 
 sys.path.append('../lib/python')
 from constants import PARTY_COLOURS
+from plotting import plot_3d_data_to_file
+from plot_utils import clean_name, make_node, make_link
 
 orange_darker = '#f7a55d'
 orange_lighter = '#fac99e'
@@ -24,17 +28,50 @@ pink_lighter = 'rgb(255, 235, 251)'
 
 grey_darker = '#b8bab8'
 grey_lighter = '#d8dad8'
+grey_lighter_white = '#e5e6e5'
 
 green_darker = '#00ff99'
 green_lighter = '#4dffb8'
 
-data_lines = {  'major' : {'color' : 'white', 'opacity' : 1, 'size' : 4, 'name' : None},
+dark_blue = '#9966ff'
+
+data_lines = {
+				'line' : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 8, 'name' : None},
 				}
 
-data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 30},
-				'item'              : {'color' : grey_lighter, 'opacity' : 1, 'size' : 10},
+data_nodes = {  'mp'                : {'color' : 'black', 'opacity' : 1, 'size' : 20, 'symbol' : 'circle'},
 
-                }
+				'visit_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'visit_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 10, 'symbol' : 'circle'},
+
+				'gift_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'gift_person'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 10, 'symbol' : 'circle'},
+
+				'donor_company'              : {'color' : dark_blue, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'donor_company_resigned'     : {'color' : grey_darker, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'donor_company_dissolved'    : {'color' : grey_darker, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'donor_person'               : {'color' : dark_blue, 'opacity' : 1, 'size' : 10, 'symbol' : 'circle'},
+				'donor_company_officer'      : {'color' : grey_darker, 'opacity' : 0.2, 'size' : 10, 'symbol' : 'circle'},
+
+				'declared_company'              : {'color' : green_darker, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'undeclared_company'            : {'color' : orange_darker, 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'undeclared_active_company'     : {'color' : 'red', 'opacity' : 1, 'size' : 10, 'symbol' : 'diamond'},
+				'undeclared_inactive_company'   : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 10, 'symbol' : 'diamond'},
+
+				'active_person'           : {'color' : yellow_darker, 'opacity' : 0.5, 'size' : 5, 'symbol' : 'circle'},
+				'inactive_person'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 5, 'symbol' : 'circle'},
+				'active_officer'           : {'color' : orange_darker, 'opacity' : 0.5, 'size' : 5, 'symbol' : 'circle'},
+				'inactive_officer'           : {'color' : grey_darker, 'opacity' : 0.5, 'size' : 5, 'symbol' : 'circle'},
+
+				}
+
+def reverse_name(name):
+
+	if ', ' in name:
+		spl = name.split(', ')
+		return '%s %s' % (spl[1], spl[0])
+	else:
+		return name
 
 def main(mps):
 	"""
@@ -42,344 +79,422 @@ def main(mps):
 
 	data = {'nodes' : [], 'links' : []}
 
-	node_main = make_node(data_nodes['mp'], name='House of Commons', hovertext="House of Commons", node_type='mp')
-	main_copy = copy.copy(node_main)
-	main_copy['color'] = 'white'
-	# data['nodes'].append(main_copy)
-
-	print 'Make nodes'
 	for mp in mps:
-		# print '\n%s' % mp['name']
-		# main_copy['size'] +=0.1
+		print '\nProcessing Plot : %s' % mp['name']
+		person_id = mp['person_id']
+		
+		hyperlink = 'https://www.theyworkforyou.com/mp/%s#register' % person_id
+
+		# get main node
 		splits = mp['name'].split(' ')
 		first = splits[0]
 		last = ' '.join(splits[1:])
-		label = '<b>%s<br>%s' % (first, last)
-		label = mp['name']
 
-		node_mp = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp')
-		node_copy = copy.copy(node_mp)
-		node_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
-		data['nodes'].append(node_copy)
+		# for some reason, cant do html formatting for 3d scatter plots
+		label = '%s %s' % (first, last)
+		label = ''
 
-		link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_copy, amount=0, party=mp['party'])
-		l = copy.copy(link)
-		data['links'].append(l)
+		node_main = make_node(data_nodes['mp'], name=label, hovertext='<b>%s</b>' % mp['name'], node_type='mp', hyperlink=None)
+		node_main_copy = copy.copy(node_main)
+		node_main_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+		data['nodes'].append(node_main_copy)
 
-		for cat in mp['categories']:
+		for category in mp['categories']:
 
-			# if cat['category_description'] in ['Indirect Donations', 'Direct Donations', 'Gifts', 'Vists Outside UK', 'Gifts Outside UK', 'Shareholdings', 'Other Shareholdings']:
-			if cat['category_description'] in ['Indirect Donations', 'Direct Donations', 'Gifts', 'Vists Outside UK', 'Gifts Outside UK']:
+			valid_categories = ['shareholding', 'companies', 'visit', 'gift', 'donation']
 
-				for item in cat['items']:
-					# WE NEED THESE AS ENTITIES IN THIER OWN RIGHT - need to json plotly plot them
-					node_item = make_node(data_nodes['item'], name=item['pretty'], hovertext=item['pretty'], node_type='mp')
-					node_item_copy = copy.copy(node_item)
+			# if 'shareholding' in category['category_type'] or 'companies' in category['category_type'] or 'visit' in category['category_type'] or 'gift' in category['category_type'] or 'donation' in category['category_type']:
+			if 'shareholding' in category['category_type'] or 'visit' in category['category_type'] or 'gift' in category['category_type'] or 'donation' in category['category_type']:
 
-					if node_item_copy not in data['nodes']:
-						# print '\t\tNot in nodes : %s' % item['pretty']
-						# node_item_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
-						data['nodes'].append(node_item_copy)
-					# else:
-						# print '\t\tMatched a node : %s' % item['pretty']
+				for item in category['items']:
+					url = item['link']
 
-					link = make_link(data_lines['major'], nodes = data['nodes'], source=node_copy, target=node_item_copy, amount=item['amount'], party=mp['party'])
+					# textwrap the hovertext
+					pretty = item['pretty']
+					wrapped = textwrap.wrap(pretty, 50)
+
+					# build the tooltip
+					hovertext = ''
+					hovertext += '</br>'
+					if item.has_key('status'):
+
+						hovertext += '</br><b>Donor Name:</b> %s' % item['donor'].title()
+
+						if item['company'].has_key('company_number'):
+							if item['company']['company_number'] != 'N/A':
+								hovertext += '</br><b>Donor Company Number:</b> %s' % item['company']['company_number']
+
+					else:
+						if item['company'].has_key('company_name'):
+							hovertext += '</br><b>Company Name:</b> %s' % item['company']['company_name'].title()
+						if item['company'].has_key('company_number'):
+							hovertext += '</br><b>Company Number:</b> %s' % item['company']['company_number']
+
+					# find the correct node type, there are lots now...
+					if 'companies' in category['category_type']:
+						if item['company']['company_status'] == 'active':
+							n = 'undeclared_active_company'
+						else:
+							n = 'undeclared_inactive_company'
+						n = 'declared_company'
+
+					elif 'visit' in category['category_type']:
+						n = 'visit_company'
+
+					elif 'donation' in category['category_type'] or 'gift' in category['category_type']:
+						if 'individual' in item['status']:
+							n = 'donor_person'
+						else:
+							n = 'donor_company'
+
+					elif 'shareholding' in category['category_type']:
+						n = 'declared_company'
+
+					wrapped = textwrap.wrap(item['company']['company_name'], 60)
+					label = wrapped[0].title()
+					label = ''
+
+					item_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+					item_copy = copy.copy(item_node)
+					item_copy['amount'] = item['amount']
+
+					# hyperlinked node - add a border
+					if url != 'https://beta.companieshouse.gov.uk':
+						item_copy['border_style'] = {'color' : 'gray', 'size' : 2}
+
+					found = False
+					for each in data['nodes']:
+						if hovertext == each['hovertext']:
+							item_copy = each
+							item_copy['size'] += 1
+							found = True
+
+					if not found:
+						data['nodes'].append(item_copy)
+
+					link = make_link(data_lines['line'], nodes = data['nodes'], source=node_main_copy, target=item_copy)
 					l = copy.copy(link)
-					data['links'].append(l)
+					if l not in data['links']:
+						data['links'].append(l)
 
-	print 'Find sizes'
-	# find the total node amounts
-	names = [str(i['name']) for i in mps]
+					# ################################################################################################################
+					# # COMPANIES HOUSE STUFF ONLY
+					# # significant persons
+					# if item.has_key('persons'):
 
-	# print names
-	amounts = []
-	for node in data['nodes']:
-		node['amount'] = 0
+					# 	for person in item['persons']:
 
-		if node['name'] != 'House of Commons':
+					# 		name = clean_name(person['name'])
+					# 		name = reverse_name(name)
+					# 		hovertext = '%s' % name.title()
+					# 		label = name.title()
+					# 		label = ''
 
-			for link in data['links']:
-				# if the links target is the node, add to amount and store that amount in list
-				if link['target'] == data['nodes'].index(node):
+					# 		if url:
+					# 			url = item['link'] + '/persons-with-significant-control/'
 
-					node['amount'] += link['amount']
-					amounts.append(link['amount'])
+					# 		if person.has_key('ceased_on'):
+					# 			n = 'inactive_person'
+					# 		else:
+					# 			n = 'active_person'
 
-					node['color'] = PARTY_COLOURS[link['party'].lower()]
+					# 		person_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+					# 		person_copy = copy.copy(person_node)
 
+					# 		# fuzzy logic a cleaned name for match with mp
+					# 		# set our threshold at 90%
+					# 		ratio = fuzz.token_set_ratio(name, mp['name'])
 
-	# scale the nodes, by their amounts
-	current_min = min(amounts)
-	current_max = max(amounts)
-	new_min = 10
-	new_max = 100
+					# 		if ratio > 90:
+					# 			person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+					# 			person_copy['opacity'] = 1
 
-	for n in data['nodes']:
-		size_value = int(translate(int(n['amount']), current_min, current_max, new_min, new_max))
-		n['size'] = size_value
-		if n['name'] not in names:
-			n['name'] = n['name'] + u' £' + "{:,}".format(n['amount'])
+					# 			# lets check they dont already exist
+					# 		found = person_copy
+					# 		for each in data['nodes']:
+					# 			if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+					# 				found = each
+					# 				if not each['node_type'] == 'mp':
+					# 					each['size'] += 3
 
-	plot(data)
+					# 		if found == person_copy:
+					# 			data['nodes'].append(found)
 
-def plot(data, dot_width=0.5):
-	"""
-	"""
-	color = 'rgb(4, 13, 35)'
-	print 'Start plot'
-	# number of nodes
-	N = len(data['nodes'])
+					# 		link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=found)
+					# 		l = copy.copy(link)
+					# 		if l not in data['links']:
+					# 			data['links'].append(l)
 
-	# number of links
-	L = len(data['links'])
+					# if item.has_key('officers'):
 
-	print N
-	print L
+					# 	for person in item['officers']:
 
-	if L > 0:
-		# for every link, create a tuple of source and target (ids, of nodes)
-		Edges = [(data['links'][k]['source'], data['links'][k]['target']) for k in range(L)]
+					# 		if person.has_key('resigned_on'):
+					# 			n = 'inactive_person'
+					# 		else:
+					# 			n = 'active_person'
 
+					# 		name = clean_name(person['name'])
+					# 		name = reverse_name(name)
+					# 		hovertext = '%s' % name.title()
+					# 		label = ''
 
+					# 		if url:
+					# 			url = 'https://beta.companieshouse.gov.uk/' + person['links']['officer']['appointments']
 
-		# create graph of lines
-		G = ig.Graph(Edges, directed=False)
+					# 		person_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+					# 		person_copy = copy.copy(person_node)
 
-		labels=[]
-		group=[]
-		sizes = []
-		opacity = []
+					# 		# fuzzy logic a cleaned name for match with mp
+					# 		# set our threshold at 90%
+					# 		ratio = fuzz.token_set_ratio(name, mp['name'])
 
-		# LINE
-		# 'minor' : {'color' : colors[light_grey], 'opacity' : 0.5, 'size' : 4, 'name' : None, 'size_scaler' : 0},
-		line_color = []
-		line_opacity = []
-		line_size = []
+					# 		if ratio > 90:
+					# 			person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+					# 			person_copy['opacity'] = 1
 
-		# NODE
-		# 'reg_donor_company' : {'color' : colors[light_orange], 'opacity' : 1, 'size' : 40, 'name' : None, 'size_scaler' : 0},
-		node_color = []
-		node_opacity = []
-		node_size = []
-		node_name = []
-		node_amount = []
-		node_hyperlink = []
-		node_customdata = []
+					# 		# lets check they dont already exist
+					# 		found = person_copy
+					# 		for each in data['nodes']:
+					# 			if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+					# 				found = each
+					# 				if not each['node_type'] == 'mp':
+					# 					each['size'] += 3
 
-		for lin in data['links']:
-			line_color.append(lin['color'])
-			line_opacity.append(lin['opacity'])
-			line_size.append(lin['size'])
+					# 		# found hasnt changed - so, no match was make, add the node
+					# 		if found == person_copy:
+					# 			data['nodes'].append(found)
 
-		for node in data['nodes']:
-			node_name.append(node['name'])
-			node_color.append(node['color'])
-			node_opacity.append(node['opacity'])
-			node_size.append(node['size'])
-			node_amount.append(node['amount'])
-			node_hyperlink.append(node['hyperlink'])
-			node_customdata.append(node['customdata'])
+					# 		link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=found)
+					# 		l = copy.copy(link)
+					# 		if l not in data['links']:
+					# 			data['links'].append(l)
 
-		# print node_customdata
+					# if item.has_key('appointments'):
+					# 	for appointment in item['appointments']:
 
-		# create a Kamada-Kawai layout
-		layt = G.layout('kk', dim=3)
-		# layt_2d = G.layout('kk', dim=2)
+					# 		url = item['link']
 
-		# node co-ordinates
-		Xn = [layt[k][0] for k in range(N)]# x-coordinates of nodes
-		Yn = [layt[k][1] for k in range(N)]# y-coordinates
-		Zn = [layt[k][2] for k in range(N)]# z-coordinates
+					# 		hovertext = ''
+					# 		hovertext += '</br>'
+					# 		if appointment['appointed_to'].has_key('company_name'):
+					# 			hovertext += '</br><b>Donor Company:</b> %s' % appointment['appointed_to']['company_name'].title()
 
-		Xe = []
-		Ye = []
-		Ze = []
+					# 		if appointment['appointed_to'].has_key('company_number'):
+					# 			hovertext += '</br><b>Donor Company Number:</b> %s' % appointment['appointed_to']['company_number']
 
-		for e in Edges:
-		    Xe += [layt[e[0]][0],layt[e[1]][0], None]# x-coordinates of edge ends
-		    Ye += [layt[e[0]][1],layt[e[1]][1], None]
-		    Ze += [layt[e[0]][2],layt[e[1]][2], None]
+					# 		if appointment['appointed_to'].has_key('company_status'):
+					# 			if appointment['appointed_to']['company_status'].lower() != 'active':
+					# 				n = 'donor_company_dissolved'
+					# 			else:
+					# 				n = 'donor_company'
 
-		# lines
-		trace1 = Scatter3d(x = Xe,
-		               y = Ye,
-		               z = Ze,
-		               mode = 'lines',
-		               line = Line(color = 'white', width = 1),
-		               hoverinfo = 'none'
-		               )
+					# 		if appointment.has_key('resigned_on'):
+					# 			n = 'donor_company_dissolved'
 
-		# nodes
-		trace2 = Scatter3d(x = Xn,
-		               y = Yn,
-		               z = Zn,
-		               mode = 'markers',
-		               name = 'actors',
-		               marker = Marker(symbol = 'dot',
-		                             size = node_size,
-		                             color = node_color,
-		                             # color = node_amount,
-		                             opacity = node_opacity,
-		                             # colorscale = 'Portland',
-		                             line = Line(color = 'rgb(50,50,50)', width = dot_width)),
-		               text = node_name,
-		               hoverinfo = 'text',
-		               customdata = node_customdata,
-		               )
+					# 		label = ''
+
+					# 		app_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+					# 		app_copy = copy.copy(app_node)
+
+					# 		found = False
+					# 		for each in data['nodes']:
+					# 			if hovertext == each['hovertext']:
+					# 				app_copy = each
+					# 				found = True
+
+					# 		if not found:
+					# 			data['nodes'].append(app_copy)
+
+					# 		link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=app_copy)
+					# 		l = copy.copy(link)
+					# 		if l not in data['links']:
+					# 			data['links'].append(l)
 
 
-		axis = dict(showbackground=False,
-		          showline=False,
-		          zeroline=False,
-		          showgrid=False,
-		          showticklabels=False,
-		          title=''
-		          )
+					# 		# OFFICERS OF APPOINTMENT
+					# 		for person in appointment['officers']:
 
-		layout = Layout(
-			# title=title,
-			autosize=True,
-			# width=1300,
-			# height=800,
-			showlegend=False,
-			# plot_bgcolor='rgba(0,0,0,0)',
-			# paper_bgcolor='rgba(0,0,0,0)',
-			plot_bgcolor=color,
-			paper_bgcolor=color,
-			# plot_bgcolor='black',
-			# paper_bgcolor='black',
-			scene=Scene(
-				xaxis=XAxis(axis),
-				yaxis=YAxis(axis),
-				zaxis=ZAxis(axis)),
-			margin=Margin(t=1),
-			hovermode='closest',
-			)
+					# 			if person.has_key('resigned_on'):
+					# 				n = 'inactive_person'
+					# 			else:
+					# 				n = 'active_person'
 
-		data = Data([trace1, trace2])
-		fig = Figure(data=data, layout=layout)
+					# 			name = clean_name(person['name'])
+					# 			name = reverse_name(name)
+					# 			hovertext = '%s' % name.title()
+					# 			label = ''
 
-		# save data and layout to json
-		json_data = {'data' : data, 'layout' : layout}
-		with open('../lib/data/plots/mega_plot.json', "w") as f:
-			json.dump(json_data, f)
+					# 			if url:
+					# 				url = 'https://beta.companieshouse.gov.uk/' + person['links']['officer']['appointments']
 
-		print 'Now Plot'
-		html = offline.plot(fig, auto_open=True)
+					# 			person_node = make_node(data_nodes['donor_company_officer'], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+					# 			person_copy = copy.copy(person_node)
 
-node_id = 0
-def make_node(node, name, hovertext, node_type, hyperlink=None, unique=False):
-    """"""
-    if unique:
-        global node_id
-        node_id += 1
-        node['id'] = node_id
+					# 			# fuzzy logic a cleaned name for match with mp
+					# 			# set our threshold at 90%
+					# 			ratio = fuzz.token_set_ratio(name, mp['name'])
 
-    node['name'] = name
-    node['hovertext'] = hovertext
-    node['node_type'] = node_type
-    node['hyperlink'] = hyperlink
-    node['customdata'] = {'name' : name, 'plotfile' : '12345.json'}
-    node['border_style'] = {'color' : 'rgb(50,50,50)', 'size' : 0.5}
-    return node
+					# 			if ratio > 90:
+					# 				person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+					# 				person_copy['opacity'] = 1
 
-def make_link(link, nodes, source, target, amount, party):
-    """"""
+					# 			# lets check they dont already exist
+					# 			found = person_copy
+					# 			for each in data['nodes']:
+					# 				if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+					# 					found = each
+					# 					if not each['node_type'] == 'mp':
+					# 						each['size'] += 2
 
-    link['source'] = nodes.index(source)
-    link['target'] = nodes.index(target)
-    link['amount'] = amount
-    link['party'] = party
-    # print link
-    return link
+					# 			# found hasnt changed - so, no match was make, add the node
+					# 			if found == person_copy:
+					# 				data['nodes'].append(found)
+
+					# 			link = make_link(data_lines['line'], nodes = data['nodes'], source=app_copy, target=found)
+					# 			l = copy.copy(link)
+					# 			if l not in data['links']:
+					# 				data['links'].append(l)
+
+					# 		for person in appointment['persons_with_significant_control']:
+
+					# 			name = clean_name(person['name'])
+					# 			name = reverse_name(name)
+					# 			hovertext = '%s' % name.title()
+					# 			label = name.title()
+					# 			label = ''
+
+					# 			if url:
+					# 				url = item['link'] + '/persons-with-significant-control/'
+
+					# 			if person.has_key('ceased_on'):
+					# 				n = 'inactive_person'
+					# 			else:
+					# 				n = 'active_person'
+
+					# 			person_node = make_node(data_nodes[n], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+					# 			person_copy = copy.copy(person_node)
+
+					# 			# fuzzy logic a cleaned name for match with mp
+					# 			# set our threshold at 90%
+					# 			ratio = fuzz.token_set_ratio(name, mp['name'])
+
+					# 			if ratio > 90:
+					# 				person_copy['color'] = PARTY_COLOURS[mp['party'].lower()]
+					# 				person_copy['opacity'] = 1
+
+					# 				# lets check they dont already exist
+					# 			found = person_copy
+					# 			for each in data['nodes']:
+					# 				if fuzz.token_set_ratio(hovertext, each['hovertext']) >= 90:
+					# 					found = each
+					# 					if not each['node_type'] == 'mp':
+					# 						each['size'] += 2
+
+					# 			if found == person_copy:
+					# 				data['nodes'].append(found)
+
+					# 			link = make_link(data_lines['line'], nodes = data['nodes'], source=item_copy, target=found)
+					# 			l = copy.copy(link)
+					# 			if l not in data['links']:
+					# 				data['links'].append(l)
+
+
+	plot_3d_data_to_file(data, '','', '', 'All MPs', 'All Constituencies', 'All Parties', '')
 
 def translate(value, leftMin, leftMax, rightMin, rightMax):
-    # Figure out how 'wide' each range is
-    leftSpan = leftMax - leftMin
-    rightSpan = rightMax - rightMin
+	# Figure out how 'wide' each range is
+	leftSpan = leftMax - leftMin
+	rightSpan = rightMax - rightMin
 
-    # Convert the left range into a 0-1 range (float)
-    valueScaled = float(value - leftMin) / float(leftSpan)
+	# Convert the left range into a 0-1 range (float)
+	valueScaled = float(value - leftMin) / float(leftSpan)
 
-    # Convert the 0-1 range into a value in the right range.
-    return rightMin + (valueScaled * rightSpan)
+	# Convert the 0-1 range into a value in the right range.
+	return rightMin + (valueScaled * rightSpan)
 
 def sort_by_options(mps, options):
-    """
-    Sort by options
-    """
+	"""
+	Sort by options
+	"""
 
-    # sort by options specified on commandline
-    if options.sortby == 'name':
-        mps = sorted(mps, key=operator.itemgetter('name'))
+	# sort by options specified on commandline
+	if options.sortby == 'name':
+		mps = sorted(mps, key=operator.itemgetter('name'))
 
-    elif options.sortby == 'wealth':
-        mps = sorted(mps, key=operator.itemgetter('mp_wealth'), reverse=True)
+	elif options.sortby == 'wealth':
+		mps = sorted(mps, key=operator.itemgetter('mp_wealth'), reverse=True)
 
-    elif options.sortby == 'income':
-        mps = sorted(mps, key=operator.itemgetter('mp_income'), reverse=True)
+	elif options.sortby == 'income':
+		mps = sorted(mps, key=operator.itemgetter('mp_income'), reverse=True)
 
-    elif options.sortby == 'gifts':
-        mps = sorted(mps, key=operator.itemgetter('mp_gifts'), reverse=True)
+	elif options.sortby == 'gifts':
+		mps = sorted(mps, key=operator.itemgetter('mp_gifts'), reverse=True)
 
-    elif options.sortby == 'donations':
-        mps = sorted(mps, key=operator.itemgetter(
-            'mp_donations'), reverse=True)
+	elif options.sortby == 'donations':
+		mps = sorted(mps, key=operator.itemgetter(
+			'mp_donations'), reverse=True)
 
-    elif options.sortby == 'annual':
-        mps = sorted(mps, key=operator.itemgetter('mp_annual'), reverse=True)
+	elif options.sortby == 'annual':
+		mps = sorted(mps, key=operator.itemgetter('mp_annual'), reverse=True)
 
-    else:
-        mps = sorted(mps, key=operator.itemgetter(
-            '%s' % options.sortby))
+	else:
+		mps = sorted(mps, key=operator.itemgetter(
+			'%s' % options.sortby))
 
-    return mps
+	return mps
 
 def read_json_file():
-    """
-    Read file from json_dump_location
-    """
-    json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members')
-    data = []
-    for mp in os.listdir(json_dump_location):
-        f = os.path.join(json_dump_location, mp)
-        with open(f) as json_data:
-            data.append(json.load(json_data))
+	"""
+	Read file from json_dump_location
+	"""
+	json_dump_location = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'data', 'members')
+	data = []
+	for mp in os.listdir(json_dump_location):
+		f = os.path.join(json_dump_location, mp)
+		with open(f) as json_data:
+			data.append(json.load(json_data))
 
-    return data
+	return data
 
 def run():
-    """"""
-    mps = read_json_file()
-    mps = sorted(mps, key=operator.itemgetter('name'))
-    main(mps)
+	""""""
+	mps = read_json_file()
+	mps = sorted(mps, key=operator.itemgetter('name'))
+	main(mps)
 
 if __name__ == "__main__":
-    """
-    Commandline run
-    """
-    parser = OptionParser()
-    parser.add_option("--sortby", help="Sort By", action="store", default='surname')
+	"""
+	Commandline run
+	"""
+	parser = OptionParser()
+	parser.add_option("--sortby", help="Sort By", action="store", default='surname')
+	parser.add_option("--from_index", help="Carry on from index", action="store", default=0)
 
-    # parse the comand line
-    (options, args) = parser.parse_args()
 
-    # return a list (of dicts) of mps
-    mps = read_json_file()
-    searched = []
+	# parse the comand line
+	(options, args) = parser.parse_args()
 
-    # TODO: fix this crude arg porser
-    if args:
-        for member in args:
-            for i in mps:
-                if member.lower() in i['name'].lower():
-                    searched.append(i)
-                if member.lower() in i['party'].lower():
-                    searched.append(i)
-                if member.lower() in i['constituency'].lower():
-                    searched.append(i)
+	# return a list (of dicts) of mps
+	mps = read_json_file()
+	searched = []
 
-        mps = searched
+	# TODO: fix this crude arg porser
+	if args:
+		for member in args:
+			for i in mps:
+				if member.lower() in i['name'].lower():
+					searched.append(i)
+				if member.lower() in i['party'].lower():
+					searched.append(i)
+				if member.lower() in i['constituency'].lower():
+					searched.append(i)
 
-    mps = sort_by_options(mps, options)
-    main(mps)
+		mps = searched
+	mps = sort_by_options(mps, options)
+
+	if options.from_index:
+		# index the list from a given int
+		mps = mps[int(options.from_index):]
+
+	main(mps)
