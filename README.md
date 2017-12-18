@@ -28,7 +28,8 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 
 ## Todo
 
-* sylvia hermin missing border
+* do a better job of matching node names - ian roper taylor should match ian taylor
+* manually create records for other people such as banks, hannan, farage, legatum, vote leave
 * dominic grieve strange formatting of shareholdings
 * Add match results to tooltip on 3d plot
 * about page
@@ -36,15 +37,12 @@ Now that a functioning webpage is up, I intend on cleaning up the data and check
 * get batches of results for get officers / persons calls in the item class - only 35 come in at a time
 
 * companies house lookup on miscellaneous, family lobbyists - find a company to make an item
-* find companies for donors
 * find companies for private employment
 * if there is a shareholder of a company that is also a company they have shares, link with dotted line (example, andrew bridgen)
 
 * Firefox, Chrome etc compatibility
-* Use flexbox for grid layout
 * Show companies house nodes on separate graph layer
 * Mobile / Tablet compatibility
-* Add panama and paradise leaks to companies / people linked to mp
 
 * Ability to show web of connections, between other MP's (and thier companies), the members of those other companies. Web to show the entirety of parliament (or selected mps) or single web of one person, that can be travelled.
 * Add another record when a company has had previous names.
