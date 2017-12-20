@@ -81,6 +81,7 @@ def write_shareholder_plot(mp, plot_file):
 
     # for some reason, cant do html formatting for 3d scatter plots
     label = '%s %s' % (first, last)
+    label = 'People & Companies'
 
     node_main = make_node(data_nodes['mp'], name=label, hovertext='<b>%s</b>' % mp['name'], node_type='mp', hyperlink=None)
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
