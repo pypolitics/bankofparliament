@@ -44,6 +44,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		node_hyperlink = []
 		node_border_color = []
 		node_border_size = []
+		node_text_size = []
+		node_text_color = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -61,6 +63,8 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 			node_size.append(node['size'])
 			node_hovertext.append(node['hovertext'])
 			node_hyperlink.append(node['hyperlink'])
+			node_text_size.append(node['node_text_size'])
+			node_text_color.append(node['node_text_color'])
 
 			node_border_size.append(node['border_style']['size'])
 			node_border_color.append(node['border_style']['color'])
@@ -106,7 +110,7 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 		               hoverinfo = 'text',
 		               hovertext = node_hovertext,
 		               customdata = node_hyperlink,
-		               textfont=Font(size=12, color="#444", family="Abel")
+		               textfont=Font(size=node_text_size, color=node_text_color, family="Abel")
 		               )
 		traces.append(trace2_2d)
 
@@ -172,6 +176,17 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 					y=1,
 					font=Font(
 						size=18, color="#444", family="Abel")
+					),
+				Annotation(
+					showarrow=False,
+					text='<a style="color:red">►</a>',
+					xref='paper',
+					yref='paper',
+					x=1,
+					y=0.97,
+					captureevents=True,
+					font=Font(
+						size=34, color="red", family="Abel")
 				)
 			]),
 			images=images
@@ -290,7 +305,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 		               hovertext = node_hovertext,
 		               hoverlabel = {'bgcolor': node_color},
 		               customdata = node_hyperlink,
-		               textfont=Font(size=12, family="Roboto, sans-serif")
+		               textfont=Font(size=18, family="Abel")
 		               )
 		traces.append(trace2_2d)
 
@@ -336,7 +351,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s">theyworkforyou</a>,  <a href="%s">data.parliament.uk</a>,  <a href="%s%s">beta.companieshouse.gov.uk</a>' % (hyperlink, parliament_hyperlink, companieshouse, title.replace(' ', '+')), 
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s%s">beta.companieshouse.gov.uk</a>' % (companieshouse, title.replace(' ', '+')), 
 					xref='paper',
 					yref='paper',
 					x=0,
@@ -356,14 +371,14 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 				),
 				Annotation(
 					showarrow=False,
-					text='<a style="color:red">⬅</a>',
+					text='<a style="color:red">◀</a>',
 					xref='paper',
 					yref='paper',
 					x=0,
-					y=1,
+					y=0.97,
 					captureevents=True,
 					font=Font(
-						size=28, color="red", family="Abel")
+						size=34, color="red", family="Abel")
 				)
 			]),
 			images=images

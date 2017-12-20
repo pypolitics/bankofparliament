@@ -1,7 +1,7 @@
 from constants import NAME_TITLES
 
 node_id = 0
-def make_node(node, name, hovertext, node_type, hyperlink=None, unique=True):
+def make_node(node, name, hovertext, node_type, hyperlink=None, unique=True, node_text_size=13, node_text_color='#444'):
     """"""
     if unique:
         global node_id
@@ -12,6 +12,8 @@ def make_node(node, name, hovertext, node_type, hyperlink=None, unique=True):
     node['hovertext'] = hovertext
     node['node_type'] = node_type
     node['hyperlink'] = hyperlink
+    node['node_text_size'] = node_text_size
+    node['node_text_color'] = node_text_color
     node['border_style'] = {'color' : 'rgb(50,50,50)', 'size' : 0.5}
     return node
 

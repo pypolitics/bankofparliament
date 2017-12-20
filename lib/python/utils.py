@@ -407,6 +407,7 @@ def read_expenses(expenses_data):
                             item = {}
                             item['amount'] = amount
                             item['pretty'] = head
+                            item['category_id'] = 13
 
                             data['items'].append(item)
 
@@ -426,4 +427,4 @@ def match_expenses(mp, year, expenses_dictionary):
             return [ex]
 
     print 'Unmatched : ', mp['name']
-    return {'items' : [], 'category_amount' : 0, 'category_description' : year, 'isCurrency' : True, 'name' : mp['name']}
+    return {'items' : [], 'category_amount' : 0, 'category_description' : year, 'category_id' : 12, 'isCurrency' : True, 'name' : mp['name']}

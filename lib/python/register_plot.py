@@ -39,7 +39,7 @@ def write_register_plot(mp, plot_file):
 
                     }
 
-    data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 120},
+    data_nodes = {  'mp'                : {'color' : grey_lighter, 'opacity' : 1, 'size' : 100},
 
                     'income_item'        : {'color' : orange_lighter, 'opacity' : 0.8, 'size' : 30},
                     'income_sub'        : {'color' : orange_darker, 'opacity' : 1, 'size' : 40},
@@ -73,28 +73,51 @@ def write_register_plot(mp, plot_file):
     hyperlink = 'https://www.theyworkforyou.com/mp/%s#register' % person_id
 
     # get main node
-    splits = mp['name'].split(' ')
-    first = splits[0]
-    last = ' '.join(splits[1:])
-    label = '<b>%s<br>%s' % (first, last)
+    label = '<b>£</b>'
 
-    # url = '%s' % mp['member_id']
     url = None
-    node_main = make_node(data_nodes['mp'], name=label, hovertext='%s' % mp['name'], node_type='mp', hyperlink=url)
+    node_main = make_node(data_nodes['mp'], name=label, hovertext=mp['name'].title(), node_type='mp', hyperlink=url, node_text_size=70)
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
 
     categories = {'income' : [], 'freebies' : [], 'wealth' : [], 'miscellaneous' : [], 'expenses' : []}
+
+    # we need to combine some sub categories, reads better in a graph
+    other_cat_items = []
+    for cat in mp['categories']:
+        if cat['category_description'] == 'Other Shareholdings':
+            for item in cat['items']:
+                other_cat_items.append(item)
+
+    indirect_cat_items = []
+    for cat in mp['categories']:
+        if cat['category_description'] == 'Indirect Donations':
+            for item in cat['items']:
+                indirect_cat_items.append(item)
+
+    outside_cat_items = []
+    for cat in mp['categories']:
+        if cat['category_description'] == 'Gifts Outside UK':
+            for item in cat['items']:
+                outside_cat_items.append(item)
+
     for each in mp['categories']:
         category_type = each['category_type']
+        category_description = each['category_description']
 
         if category_type in ['salary', 'employment']:
             categories['income'].append(each)
         elif category_type in ['family', 'family_lobbyists', 'miscellaneous']:
             categories['miscellaneous'].append(each)
-        elif category_type in ['shareholdings']:
+        elif category_description in ['Shareholdings']:
+            each['items'].extend(other_cat_items)
             categories['wealth'].append(each)
-        elif category_type in ['gifts', 'gifts_outside_uk', 'indirect_donations', 'direct_donations', 'visits_outside_uk']:
+        elif category_type in ['direct_donations']:
+            each['items'].extend(indirect_cat_items)
+            categories['freebies'].append(each)
+
+
+        elif category_type in ['gifts', 'visits_outside_uk']:
             categories['freebies'].append(each)
 
         if category_type == 'property':
@@ -141,9 +164,10 @@ def write_register_plot(mp, plot_file):
         amount = 0
         for s in categories[category]:
 
-            if not s['category_description'] == 'Shareholdings':
-                for i in s['items']:
-                    if i['amount']:
+            # if not s['category_description'] == 'Shareholdings':
+            for i in s['items']:
+                if i['amount']:
+                    if not i['category_id'] == 8:
                         amount += i['amount']
 
         amount = "{:,}".format(amount)
@@ -155,6 +179,7 @@ def write_register_plot(mp, plot_file):
             hovertext = '<b>%s</b></br></br>£%s' % (category.title(), str(amount))
 
         label = '<b>%s</b>' % category.title()
+
         cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category)
         cat_copy = copy.copy(cat_node)
         cat_copy['amount'] = 0
@@ -169,7 +194,8 @@ def write_register_plot(mp, plot_file):
             amount = 0
             for i in sub['items']:
                 if i['amount']:
-                    amount += i['amount']
+                    if not i['category_id'] == 8:
+                        amount += i['amount']
             amount = "{:,}".format(amount)
 
             spl = sub['category_description'].split(' ')
@@ -178,32 +204,49 @@ def write_register_plot(mp, plot_file):
                 s += '%s<br>' % i
 
             if not category == 'expenses':
-                if sub['category_description'] in ['Other Shareholdings', 'Property', 'Rental Income']:
+                if sub['category_description'] in ['Shareholdings', 'Property', 'Rental Income']:
                     hovertext = '<b>%s</b>£%s (Min)' % (s, amount)
 
-                elif sub['category_description'] == 'Shareholdings':
-                    hovertext = '<b>Shareholdings</b>'
+                # elif sub['category_description'] == 'Shareholdings':
+                #     hovertext = '<b>Shareholdings</b>'
                 else:
                     hovertext = '<b>%s</b>£%s' % (s, amount)
             else:
                 hovertext = '<b>%s</br></br></b>£%s' % (sub['category_description'], amount)
 
             url = None
-            if 'shareholdings' in sub['category_description'].lower():
-                url = '%s' % mp['member_id']
-                # spoof a hyperlink - no a tag, no cursor
-                label = '<span style="color: #477cd8;">%s</span>' % sub['category_description']
+
+
+
+            # if 'shareholdings' in sub['category_description'].lower():
+            #     url = '%s' % mp['member_id']
+            #     # spoof a hyperlink - no a tag, no cursor
+            #     label = '<span style="color: #477cd8;">%s</span>' % sub['category_description']
+            # else:
+
+            if sub['category_description'] == 'Rental Income':
+                label = 'Rental'
+            elif sub['category_description'] == 'Public Employment':
+                label = 'Public'
+            elif sub['category_description'] == 'Private Employment':
+                label = 'Private'
+            elif sub['category_description'] == 'Direct Donations':
+                label = 'Donations'
+            elif sub['category_description'] == 'Visits Outside UK':
+                label = 'Overseas Trips'
             else:
                 label = '%s' % sub['category_description']
 
-            sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
-            sub_copy = copy.copy(sub_node)
-            sub_copy['amount'] = 0
-            data['nodes'].append(sub_copy)
+            if not category.lower() == 'miscellaneous':
 
-            link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=cat_copy, target=sub_copy)
-            l = copy.copy(link)
-            data['links'].append(l)
+                sub_node = make_node(data_nodes['%s_sub' % category], name=label, hovertext=hovertext, node_type=category, hyperlink=url)
+                sub_copy = copy.copy(sub_node)
+                sub_copy['amount'] = 0
+                data['nodes'].append(sub_copy)
+
+                link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=cat_copy, target=sub_copy)
+                l = copy.copy(link)
+                data['links'].append(l)
 
             for item in sub['items']:
 
@@ -225,9 +268,7 @@ def write_register_plot(mp, plot_file):
                         if url == None:
                             label = '%sk+' % str(item['amount'])[:2]
                         else:
-                            # label = '<a href="%s">%sk+</a>' % (url, str(item['amount'])[:2])
                             label = '<span style="color: #477cd8;">%sk+</span>' % (str(item['amount'])[:2])
-
 
                 # its not currency
                 elif sub['category_description'] == 'Shareholdings':
@@ -235,10 +276,25 @@ def write_register_plot(mp, plot_file):
                     if url == None:
                         label += '+'
                     else:
-                        # label = '<a href="%s">%s+</a>' % (url, label)
                         label = '<span style="color: #477cd8;">%s+</span>' % label
                 else:
                     label = ''
+
+                if item['category_id'] == 8:
+                    # percentage
+                    label = '%s' % item['amount'] + r'%'
+                    if url == None:
+                        label += '+'
+                    else:
+                        label = '<span style="color: #477cd8;">%s+</span>' % label
+
+                if item['category_id'] == 9:
+                    # money
+                    label = "£" + "{:,}".format(item['amount'])
+                    if url == None:
+                        label += '+'
+                    else:
+                        label = '<span style="color: #477cd8;">%s+</span>' % label
 
                 # textwrap the hovertext
                 pretty = item['pretty']
@@ -280,7 +336,11 @@ def write_register_plot(mp, plot_file):
 
                 data['nodes'].append(item_copy)
 
-                link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=sub_copy, target=item_copy)
+                if not category.lower() == 'miscellaneous':
+                    link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=sub_copy, target=item_copy)
+                else:
+                    link = make_link(data_lines['%s_line' % category], nodes = data['nodes'], source=cat_copy, target=item_copy)
+
                 l = copy.copy(link)
                 data['links'].append(l)
 
