@@ -76,7 +76,7 @@ def write_register_plot(mp, plot_file):
     label = '<b>£</b>'
 
     url = None
-    node_main = make_node(data_nodes['mp'], name=label, hovertext=mp['name'].title(), node_type='mp', hyperlink=url, node_text_size=70)
+    node_main = make_node(data_nodes['mp'], name=label, hovertext=mp['name'].title(), node_type='mp', hyperlink=url, node_text_size=60)
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
 
@@ -180,7 +180,7 @@ def write_register_plot(mp, plot_file):
 
         label = '<b>%s</b>' % category.title()
 
-        cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category)
+        cat_node = make_node(data_nodes['%s_cat' % category], name=label, hovertext=hovertext, node_type=category, node_text_size=15)
         cat_copy = copy.copy(cat_node)
         cat_copy['amount'] = 0
         data['nodes'].append(cat_copy)

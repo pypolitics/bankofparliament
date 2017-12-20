@@ -10,6 +10,7 @@ from plotly.graph_objs import *
 
 parliament = 'http://data.parliament.uk/membersdataplatform/services/mnis/members/query/refDods='
 companieshouse = 'https://beta.companieshouse.gov.uk/search?q='
+theipsa = 'http://www.theipsa.org.uk/mp-costs/other-published-data/'
 
 def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, party, hyperlink=None):
 	"""
@@ -159,13 +160,23 @@ def plot_data_to_file(data, plot_file, member_id, dods_id, title, constituency, 
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s">theyworkforyou</a>,  <a href="%s">data.parliament.uk</a>,  <a href="%s%s">beta.companieshouse.gov.uk</a>' % (hyperlink, parliament_hyperlink, companieshouse, title.replace(' ', '+')), 
+					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s">theyworkforyou.com</a>,  <a href="%s">data.parliament.uk</a>,  <a href="%s%s">beta.companieshouse.gov.uk</a>,  <a href="%s">theipsa.org.uk</a>' % (hyperlink, parliament_hyperlink, companieshouse, title.replace(' ', '+'), theipsa), 
 					xref='paper',
 					yref='paper',
 					x=0,
 					y=0,
 					font=Font(
 						size=12, family="Abel")
+					),
+				Annotation(
+					showarrow=False,
+					text='<a style="color: black; font-weight: 200;">Registered financial interests and expenses</a>',
+					xref='paper',
+					yref='paper',
+					x=0.5,
+					y=0.96,
+					font=Font(
+						size=14, color="#444", family="Abel")
 					),
 				Annotation(
 					showarrow=False,
