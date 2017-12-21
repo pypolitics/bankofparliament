@@ -247,6 +247,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 		node_border_color = []
 		node_border_size = []
 		node_symbol = []
+		node_id = []
 
 		for lin in data['links']:
 			line_color.append(lin['color'])
@@ -254,6 +255,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 			line_size.append(lin['size'])
 
 		for node in data['nodes']:
+			node_id.append(node['id'])
 			# clean up category nodes
 			nn = node['name']
 			nn = nn.replace('_', ' ')
@@ -294,7 +296,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 		               visible = True,
 		               line = Line(color = 'gray', width = 3),
 		               hoverinfo = 'none',
-		               opacity = 0.2,
+		               opacity = 0.4,
 		               name = 'lines'
 		               )
 		traces.append(trace1_2d)
@@ -307,6 +309,7 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 		               marker = Marker(symbol = node_symbol,
 		                             size = node_size,
 		                             color = node_color,
+		                             # colorscale='Viridis',
 		                             opacity = node_opacity,
 		                             line = Line(color = node_border_color, width = node_border_size),
 		                             ),
@@ -362,24 +365,34 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 			annotations=Annotations([
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s%s">beta.companieshouse.gov.uk</a>' % (companieshouse, title.replace(' ', '+')), 
+					text='<a style="color: rgb(250, 250, 250); font-weight: 100; font-size: 12px;">Data sources: </a><a href="%s%s">beta.companieshouse.gov.uk</a>' % (companieshouse, title.replace(' ', '+')), 
 					xref='paper',
 					yref='paper',
 					x=0,
 					y=0,
 					font=Font(
-						size=12, family="Abel")
+						size=12, family="Abel", color='white')
 					),
 				Annotation(
 					showarrow=False,
-					text='<a style="color: black; font-weight: 200;"><b>%s,</b> %s, %s</a>' %(title.title(), constituency.title(), party.title()),
+					text='<a style="color: rgb(250, 250, 250); font-weight: 200;">Political and financial Links</a>',
+					xref='paper',
+					yref='paper',
+					x=0.5,
+					y=0.96,
+					font=Font(
+						size=14, family="Abel", color='white')
+					),
+				Annotation(
+					showarrow=False,
+					text='<a style="color: rgb(250, 250, 250); font-weight: 200;"><b>%s,</b> %s, %s</a>' %(title.title(), constituency.title(), party.title()),
 					xref='paper',
 					yref='paper',
 					x=0.5,
 					y=1,
 					font=Font(
-						size=18, color="#444", family="Abel")
-				),
+						size=18, color="white", family="Abel")
+					),
 				Annotation(
 					showarrow=False,
 					text='<a style="color:red">◀</a>',
