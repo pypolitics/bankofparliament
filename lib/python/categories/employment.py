@@ -49,6 +49,8 @@ class Employment(Category):
 				amount = amount * 12
 			elif 'a quarter' in raw_string.lower():
 				amount = amount * 4
+			elif 'per quarter' in raw_string.lower():
+				amount = amount * 4
 			elif 'paid quarterly' in raw_string.lower():
 				amount = amount
 			elif 'quarterly' in raw_string.lower():

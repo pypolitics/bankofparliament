@@ -25,13 +25,13 @@ class Gifts(Category):
 		Method performing the logic of parsing raw data into dictionary
 		"""
 
-		amount = 0
 		next_id = len(self.items) + 1
 		item_id = '%04d' % next_id
 
 		# not much we can really split on
 		pretty = raw_string
 		registered = regex_for_registered(raw_string)
+		amount = regex_for_amount(raw_string)
 
 		donor = raw_data['raw_string']
 		address = ''
@@ -75,13 +75,13 @@ class GiftsOutsideUK(Category):
 		"""
 		Method performing the logic of parsing raw data into dictionary
 		"""
-		amount = 0
 		next_id = len(self.items) + 1
 		item_id = '%04d' % next_id
 
 		# not much we can really split on
 		pretty = raw_string.split(' (Registered')[0]
 		registered = regex_for_registered(raw_string)
+		amount = regex_for_amount(raw_string)
 
 		donor = raw_data['raw_string']
 		address = ''
