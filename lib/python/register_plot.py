@@ -74,13 +74,10 @@ def write_register_plot(mp, plot_file):
 
     # get main node
     label = '<b>£</b>'
-
     url = None
     node_main = make_node(data_nodes['mp'], name=label, hovertext=mp['name'].title(), node_type='mp', hyperlink=url, node_text_size=60)
     node_main['color'] = PARTY_COLOURS[mp['party'].lower()]
     data['nodes'].append(node_main)
-
-    categories = {'income' : [], 'freebies' : [], 'wealth' : [], 'miscellaneous' : [], 'expenses' : []}
 
     # we need to combine some sub categories, reads better in a graph
     other_cat_items = []
@@ -101,25 +98,40 @@ def write_register_plot(mp, plot_file):
             for item in cat['items']:
                 outside_cat_items.append(item)
 
+    # shuffle each sub category into main categories, income, miscellaneous, wealth, freebies
+    categories = {'income' : [], 'freebies' : [], 'wealth' : [], 'miscellaneous' : [], 'expenses' : []}
+
     for each in mp['categories']:
         category_type = each['category_type']
         category_description = each['category_description']
 
+        # income categories
         if category_type in ['salary', 'employment']:
             categories['income'].append(each)
+
+        # misc categories
         elif category_type in ['family', 'family_lobbyists', 'miscellaneous']:
             categories['miscellaneous'].append(each)
+
+        # wealth categories
         elif category_description in ['Shareholdings']:
+            # extend the shareholdings with the other shareholdings
             each['items'].extend(other_cat_items)
             categories['wealth'].append(each)
+
+        # freebies categories
         elif category_type in ['direct_donations']:
+            # extend the direct_donations with the indirect donations
             each['items'].extend(indirect_cat_items)
             categories['freebies'].append(each)
 
-
-        elif category_type in ['gifts', 'visits_outside_uk']:
+        # more freebies categories
+        elif category_type in ['gifts']:
+            # extend the gifts with the gifts outside
+            each['items'].extend(outside_cat_items)
             categories['freebies'].append(each)
 
+        # property
         if category_type == 'property':
             incomes = copy.copy(each)
             wealths = copy.copy(each)
@@ -135,12 +147,14 @@ def write_register_plot(mp, plot_file):
                 else:
                     wealths['items'].append(item)
 
+            # split income and wealth categories
             categories['income'].append(incomes)
             categories['wealth'].append(wealths)
 
     # now expenses
     categories['expenses'] = mp['expenses']
 
+    # sum all the item amounts
     main_range = []
     for c in categories.keys():
         if not c == 'wealth':
@@ -163,8 +177,6 @@ def write_register_plot(mp, plot_file):
         # total category amount
         amount = 0
         for s in categories[category]:
-
-            # if not s['category_description'] == 'Shareholdings':
             for i in s['items']:
                 if i['amount']:
                     if not i['category_id'] == 8:
@@ -207,22 +219,12 @@ def write_register_plot(mp, plot_file):
                 if sub['category_description'] in ['Shareholdings', 'Property', 'Rental Income']:
                     hovertext = '<b>%s</b>£%s (Min)' % (s, amount)
 
-                # elif sub['category_description'] == 'Shareholdings':
-                #     hovertext = '<b>Shareholdings</b>'
                 else:
                     hovertext = '<b>%s</b>£%s' % (s, amount)
             else:
                 hovertext = '<b>%s</br></br></b>£%s' % (sub['category_description'], amount)
 
             url = None
-
-
-
-            # if 'shareholdings' in sub['category_description'].lower():
-            #     url = '%s' % mp['member_id']
-            #     # spoof a hyperlink - no a tag, no cursor
-            #     label = '<span style="color: #477cd8;">%s</span>' % sub['category_description']
-            # else:
 
             if sub['category_description'] == 'Rental Income':
                 label = 'Rental'

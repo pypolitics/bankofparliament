@@ -198,7 +198,6 @@ class MemberOfParliament():
 		y = {}
 
 		for lin in soup:
-			# print lin
 			if not str(type(lin)) == "<class 'bs4.element.NavigableString'>":
 				if lin.attrs['class'] == ['regmemcategory']:
 					y[lin.text] = []
