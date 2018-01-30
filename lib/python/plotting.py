@@ -358,8 +358,10 @@ def plot_3d_data_to_file(data, plot_file, member_id, dods_id, title, constituenc
 				pad=4
 			),
 			hovermode='closest',
-			plot_bgcolor='rgba(0,0,0,0)',
-			paper_bgcolor='rgba(0,0,0,0)',
+			# plot_bgcolor='rgba(0,0,0,0)',
+			# paper_bgcolor='rgba(0,0,0,0)',
+			plot_bgcolor='#000033',
+			paper_bgcolor='#000033',
 			hidesources=True,
 			font=Font(size=14, color="#444", family="Abel"),
 			annotations=Annotations([
