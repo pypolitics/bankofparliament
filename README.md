@@ -1,4 +1,4 @@
-# Notpolitics
+# Bank of Parliament
 
 ## About
 
@@ -12,7 +12,7 @@ Source of data:
 
 It is then parsed for data relating to financial interests and presented in a webpage:
 
-https://pypolitics.github.io/notpolitics/
+https://pypolitics.github.io/bankofparliament/
 
 The MP's can searched for and sorted by financial categories such as private income, property, shareholdings.
 
