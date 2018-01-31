@@ -44,20 +44,36 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2017-09-11T00:00:00", 
-            "EndDate": {
-               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-               "@xsi:nil": "true"
+         "Committee": [
+            {
+               "StartDate": "2018-01-08T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Welsh Affairs Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "162"
             }, 
-            "Name": "Education Committee", 
-            "IsCoOpted": "False", 
-            "EndNote": null, 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "203"
-         }
+            {
+               "StartDate": "2017-09-11T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Education Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "203"
+            }
+         ]
       }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
@@ -114,23 +130,6 @@
             }, 
             {
                "Fax": null, 
-               "@Type_Id": "13", 
-               "Address1": "Constituency office opening times:  9:00am-16:00pm Monday to Thursday (appointments only)", 
-               "Address2": null, 
-               "Address3": null, 
-               "Address4": null, 
-               "Address5": null, 
-               "Note": null, 
-               "Phone": null, 
-               "OtherAddress": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "True", 
-               "Type": "Additional details", 
-               "Email": null, 
-               "Postcode": null
-            }, 
-            {
-               "Fax": null, 
                "@Type_Id": "4", 
                "Address1": "Civic Hall", 
                "Address2": "15A New Street", 
@@ -145,6 +144,23 @@
                "Type": "Constituency", 
                "Email": null, 
                "Postcode": "HD7 5AB"
+            }, 
+            {
+               "Fax": null, 
+               "@Type_Id": "13", 
+               "Address1": "Constituency office opening times:  9:00am-16:00pm Monday to Thursday (appointments only)", 
+               "Address2": null, 
+               "Address3": null, 
+               "Address4": null, 
+               "Address5": null, 
+               "Note": null, 
+               "Phone": null, 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Additional details", 
+               "Email": null, 
+               "Postcode": null
             }
          ]
       }, 
@@ -166,25 +182,23 @@
       "Colne Valley", 
       "Labour", 
       "", 
+      "Defibrillators:", 
+      "VAT,", 
       "Fibromyalgia,", 
       "Children:", 
       "Protection,", 
       "Life", 
       "Insurance,", 
-      "Accident", 
-      "and", 
-      "Emergency", 
-      "Departments,", 
       "Doctors:", 
       "Recruitment", 
       "Department", 
       "of", 
       "Health,", 
-      "Home", 
-      "Office,", 
       "Department", 
       "for", 
       "Education,", 
+      "Home", 
+      "Office,", 
       "Department", 
       "for", 
       "Environment,", 
@@ -198,12 +212,15 @@
       "and", 
       "Local", 
       "Government", 
+      "Welsh", 
+      "Affairs", 
+      "Committee", 
       "Education", 
       "Committee"
    ], 
    "mp_income": 74962, 
    "mp_donations": 0, 
-   "wrans_departments": "Department of Health, Home Office, Department for Education, Department for Environment, Food and Rural Affairs, Department for Communities and Local Government", 
+   "wrans_departments": "Department of Health, Department for Education, Home Office, Department for Environment, Food and Rural Affairs, Department for Communities and Local Government", 
    "person_id": "25671", 
    "party": "Labour", 
    "forname": "Thelma", 
@@ -443,6 +460,12 @@
                "from_date": "2017-09-11", 
                "to_date": "9999-12-31", 
                "position": "Member"
+            }, 
+            {
+               "dept": "Welsh Affairs Committee", 
+               "from_date": "2018-01-08", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
             }
          ], 
          "chair_salary": 15025, 
@@ -489,8 +512,8 @@
                         "address_line_2": "Claremount", 
                         "address_line_1": "Horley Green Road"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }
                ], 
@@ -574,11 +597,43 @@
                      }
                   }, 
                   {
+                     "name": "BEBB, Janet Mary Ann", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/KdRVv5OmNnNKqNFzkzFByTpUMTs/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2018-01-22", 
+                     "date_of_birth": {
+                        "month": 7, 
+                        "year": 1960
+                     }, 
+                     "address": {
+                        "locality": "Holmfirth", 
+                        "premises": "Two Hoots Barn", 
+                        "country": "England", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "HD9 5RS", 
+                        "address_line_2": "Meltham", 
+                        "address_line_1": "Crosland Edge"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Businesswoman"
+                  }, 
+                  {
                      "name": "BEBB, Sophie", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/KGyLdIJJWX1k-U_oX2URTBOpnG8/appointments"
                         }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-04-03", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1989
                      }, 
                      "address": {
                         "locality": "Holmfirth", 
@@ -588,14 +643,8 @@
                         "postal_code": "HD9 2PR", 
                         "address_line_1": "Woodhead Road"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-04-03", 
-                     "date_of_birth": {
-                        "year": 1989, 
-                        "month": 1
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "None"
                   }, 
                   {
@@ -604,6 +653,14 @@
                         "officer": {
                            "appointments": "/officers/XNeEuGAtiBXVRwfXiZu4if4uX84/appointments"
                         }
+                     }, 
+                     "address": {
+                        "locality": "Holmfirth", 
+                        "premises": "82b", 
+                        "country": "England", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "HD9 2PR", 
+                        "address_line_1": "Woodhead Road"
                      }, 
                      "former_names": [
                         {
@@ -616,17 +673,34 @@
                         "year": 1978, 
                         "month": 1
                      }, 
-                     "address": {
-                        "locality": "Holmfirth", 
-                        "premises": "82b", 
-                        "country": "England", 
-                        "region": "West Yorkshire", 
-                        "postal_code": "HD9 2PR", 
-                        "address_line_1": "Woodhead Road"
-                     }, 
                      "officer_role": "director", 
                      "nationality": "British", 
                      "occupation": "Business Manager"
+                  }, 
+                  {
+                     "name": "CONDO, Rosemary Jean", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/HtDXu-lOfri4DOWZu3zudIGlHlU/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Huddersfield", 
+                        "premises": "Flat 6", 
+                        "country": "United Kingdom", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "HD1 5NE", 
+                        "address_line_1": "70 New North Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2018-01-25", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1977
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "Canadian", 
+                     "occupation": "Freelance Artist"
                   }, 
                   {
                      "name": "KILSHAW, Anna Lee", 
@@ -634,14 +708,6 @@
                         "officer": {
                            "appointments": "/officers/qj4iW3Ci83mC4jDQaGH9oS6iFAg/appointments"
                         }
-                     }, 
-                     "address": {
-                        "locality": "Holmfirth", 
-                        "premises": "82b", 
-                        "country": "England", 
-                        "region": "West Yorkshire", 
-                        "postal_code": "HD9 2PR", 
-                        "address_line_1": "Woodhead Road"
                      }, 
                      "former_names": [
                         {
@@ -654,6 +720,14 @@
                         "year": 1973, 
                         "month": 10
                      }, 
+                     "address": {
+                        "locality": "Holmfirth", 
+                        "premises": "82b", 
+                        "country": "England", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "HD9 2PR", 
+                        "address_line_1": "Woodhead Road"
+                     }, 
                      "officer_role": "director", 
                      "nationality": "British", 
                      "occupation": "Information + Advocacy Officer"
@@ -665,14 +739,6 @@
                            "appointments": "/officers/QSqZUPSgaCRztAcVeGH2RXPyM18/appointments"
                         }
                      }, 
-                     "address": {
-                        "locality": "Holmfirth", 
-                        "premises": "82b", 
-                        "country": "England", 
-                        "region": "West Yorkshire", 
-                        "postal_code": "HD9 2PR", 
-                        "address_line_1": "Woodhead Road"
-                     }, 
                      "former_names": [
                         {
                            "surname": "BEETLESTONE"
@@ -681,19 +747,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-04-03", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1974
-                     }, 
-                     "officer_role": "director", 
-                     "nationality": "British", 
-                     "occupation": "None"
-                  }, 
-                  {
-                     "name": "BEST, Jonathan Lindsay", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/I-kyS-iVzzQl0sZ2nXFx_npsVI8/appointments"
-                        }
+                        "year": 1974, 
+                        "month": 11
                      }, 
                      "address": {
                         "locality": "Holmfirth", 
@@ -703,6 +758,69 @@
                         "postal_code": "HD9 2PR", 
                         "address_line_1": "Woodhead Road"
                      }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "None"
+                  }, 
+                  {
+                     "name": "TOMBLING, Hannah Louise", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/PlWA4M3vXHUxOP3v3YkI6FPAmjo/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Dewsbury", 
+                        "premises": "27", 
+                        "country": "United Kingdom", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "WF12 0RB", 
+                        "address_line_2": "Thornhill", 
+                        "address_line_1": "The Town"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2018-01-26", 
+                     "date_of_birth": {
+                        "year": 1981, 
+                        "month": 3
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Teacher"
+                  }, 
+                  {
+                     "name": "TWEEDALE, Julie Marie", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/vROjg-zcJ5ng2mpOd49bzk5KCRY/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Huddersfield", 
+                        "premises": "62", 
+                        "country": "United Kingdom", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "HD7 5HL", 
+                        "address_line_2": "Slaithwaite", 
+                        "address_line_1": "Varley Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2018-01-25", 
+                     "date_of_birth": {
+                        "year": 1970, 
+                        "month": 7
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Self Employed"
+                  }, 
+                  {
+                     "name": "BEST, Jonathan Lindsay", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/I-kyS-iVzzQl0sZ2nXFx_npsVI8/appointments"
+                        }
+                     }, 
                      "country_of_residence": "Uk", 
                      "appointed_on": "2012-04-03", 
                      "resigned_on": "2014-11-12", 
@@ -710,8 +828,16 @@
                         "year": 1970, 
                         "month": 3
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "locality": "Holmfirth", 
+                        "premises": "82b", 
+                        "country": "England", 
+                        "region": "West Yorkshire", 
+                        "postal_code": "HD9 2PR", 
+                        "address_line_1": "Woodhead Road"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Arts & Culture"
                   }, 
                   {
@@ -721,13 +847,6 @@
                            "appointments": "/officers/4dmfnt12tTVJHuvboSfWwjDZ8qA/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2014-11-12", 
-                     "resigned_on": "2017-01-10", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1971
-                     }, 
                      "address": {
                         "premises": "82b", 
                         "region": "West Yorkshire", 
@@ -735,8 +854,15 @@
                         "postal_code": "HD9 2PR", 
                         "locality": "Holmfirth"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-11-12", 
+                     "resigned_on": "2017-01-10", 
+                     "date_of_birth": {
+                        "year": 1971, 
+                        "month": 12
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Teacher"
                   }, 
                   {
@@ -750,8 +876,8 @@
                      "appointed_on": "2017-04-25", 
                      "resigned_on": "2017-09-15", 
                      "date_of_birth": {
-                        "year": 1957, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1957
                      }, 
                      "address": {
                         "locality": "Huddersfield", 
@@ -814,12 +940,12 @@
                   "company_status": "active", 
                   "registered_office_address": {
                      "region": "West Yorkshire", 
-                     "locality": "Holmfirth", 
+                     "address_line_1": "82b Woodhead Road", 
                      "postal_code": "HD9 2PR", 
-                     "address_line_1": "82b Woodhead Road"
+                     "locality": "Holmfirth"
                   }, 
                   "is_community_interest_company": true, 
-                  "etag": "22da1616b18d7c9f2779b058c786d3db933024a2", 
+                  "etag": "a91925ed75a70db8084908a0c04f5d71c7b23e5b", 
                   "company_name": "FAIRANDFUNKY CIC", 
                   "type": "private-limited-guarant-nsc", 
                   "status": "active", 
@@ -861,11 +987,12 @@
    "dob": "April 1957", 
    "gender": "F", 
    "country_of_birth": null, 
-   "wrans_subjects": "Fibromyalgia, Children: Protection, Life Insurance, Accident and Emergency Departments, Doctors: Recruitment", 
+   "wrans_subjects": "Defibrillators: VAT, Fibromyalgia, Children: Protection, Life Insurance, Doctors: Recruitment", 
    "member_id": "41799", 
    "constituency": "Colne Valley", 
    "mp_gifts": 0, 
    "commitees": [
+      "Welsh Affairs Committee", 
       "Education Committee"
    ]
 }

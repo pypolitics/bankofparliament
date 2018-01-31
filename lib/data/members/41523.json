@@ -44,20 +44,36 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2017-10-16T00:00:00", 
-            "EndDate": {
-               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-               "@xsi:nil": "true"
+         "Committee": [
+            {
+               "StartDate": "2018-01-22T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Science and Technology Committee (Commons)", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "135"
             }, 
-            "Name": "Petitions Committee", 
-            "IsCoOpted": "False", 
-            "EndNote": null, 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "326"
-         }
+            {
+               "StartDate": "2017-10-16T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Petitions Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "326"
+            }
+         ]
       }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
@@ -88,6 +104,22 @@
       "Addresses": {
          "Address": [
             {
+               "@Type_Id": "6", 
+               "Address1": "https://www.damienmoore.org.uk/", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Website"
+            }, 
+            {
+               "@Type_Id": "8", 
+               "Address1": "https://www.facebook.com/southportconservatives/", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Facebook"
+            }, 
+            {
                "Fax": null, 
                "@Type_Id": "1", 
                "Address1": "House of Commons", 
@@ -111,22 +143,6 @@
                "IsPreferred": "False", 
                "IsPhysical": "False", 
                "Type": "Twitter"
-            }, 
-            {
-               "@Type_Id": "6", 
-               "Address1": "https://www.damienmoore.org.uk/", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Website"
-            }, 
-            {
-               "@Type_Id": "8", 
-               "Address1": "https://www.facebook.com/southportconservatives/", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Facebook"
             }
          ]
       }, 
@@ -152,6 +168,10 @@
       "Mental", 
       "Health", 
       "Services,", 
+      "Sixth", 
+      "Form", 
+      "Education:", 
+      "Finance,", 
       "Department", 
       "for", 
       "Exiting", 
@@ -160,37 +180,42 @@
       "Union:", 
       "Migrant", 
       "Workers,", 
-      "Intelligence", 
-      "Services,", 
       "Employment:", 
       "Autism,", 
-      "Acids", 
+      "Suicide:", 
+      "Accident", 
       "and", 
-      "Chemicals:", 
-      "Sales", 
-      "Home", 
+      "Emergency", 
+      "Departments", 
+      "Foreign", 
+      "and", 
+      "Commonwealth", 
       "Office,", 
       "Department", 
-      "for", 
-      "International", 
-      "Trade,", 
-      "Ministry", 
       "of", 
-      "Defence,", 
+      "Health,", 
       "Department", 
       "for", 
-      "Exiting", 
-      "the", 
-      "European", 
-      "Union,", 
-      "HM", 
-      "Treasury", 
+      "Communities", 
+      "and", 
+      "Local", 
+      "Government,", 
+      "Department", 
+      "for", 
+      "Education,", 
+      "Home", 
+      "Office", 
+      "Science", 
+      "and", 
+      "Technology", 
+      "Committee", 
+      "(Commons)", 
       "Petitions", 
       "Committee"
    ], 
    "mp_income": 77304, 
    "mp_donations": 0, 
-   "wrans_departments": "Home Office, Department for International Trade, Ministry of Defence, Department for Exiting the European Union, HM Treasury", 
+   "wrans_departments": "Foreign and Commonwealth Office, Department of Health, Department for Communities and Local Government, Department for Education, Home Office", 
    "person_id": "25630", 
    "party": "Conservative", 
    "forname": "Damien", 
@@ -490,6 +515,12 @@
                "from_date": "2017-10-16", 
                "to_date": "9999-12-31", 
                "position": "Member"
+            }, 
+            {
+               "dept": "Science and Technology Committee (Commons)", 
+               "from_date": "2018-01-22", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
             }
          ], 
          "chair_salary": 15025, 
@@ -528,11 +559,12 @@
    "dob": "April 1980", 
    "gender": "M", 
    "country_of_birth": "England", 
-   "wrans_subjects": "Suicide: Mental Health Services, Department for Exiting the European Union: Migrant Workers, Intelligence Services, Employment: Autism, Acids and Chemicals: Sales", 
+   "wrans_subjects": "Suicide: Mental Health Services, Sixth Form Education: Finance, Department for Exiting the European Union: Migrant Workers, Employment: Autism, Suicide: Accident and Emergency Departments", 
    "member_id": "41523", 
    "constituency": "Southport", 
    "mp_gifts": 5000, 
    "commitees": [
+      "Science and Technology Committee (Commons)", 
       "Petitions Committee"
    ]
 }

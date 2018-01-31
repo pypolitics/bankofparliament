@@ -71,6 +71,20 @@
                "@Id": "301"
             }, 
             {
+               "StartDate": "2017-12-12T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Speaker's Advisory Committee on Works of Art", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "301"
+            }, 
+            {
                "StartDate": "2015-10-12T00:00:00", 
                "EndDate": "2017-05-03T00:00:00", 
                "Name": "Regulatory Reform", 
@@ -212,12 +226,18 @@
       "and", 
       "Commonwealth", 
       "Office,", 
-      "Department", 
-      "for", 
-      "Education", 
+      "HM", 
+      "Treasury", 
       "Welsh", 
       "Affairs", 
       "Committee", 
+      "Speaker's", 
+      "Advisory", 
+      "Committee", 
+      "on", 
+      "Works", 
+      "of", 
+      "Art", 
       "Speaker's", 
       "Advisory", 
       "Committee", 
@@ -232,13 +252,13 @@
       "Procedure", 
       "Committee"
    ], 
-   "mp_income": 75362, 
+   "mp_income": 85362, 
    "mp_donations": 0, 
-   "wrans_departments": "Department of Health, Department for Business, Energy and Industrial Strategy, Department for Transport, Foreign and Commonwealth Office, Department for Education", 
+   "wrans_departments": "Department of Health, Department for Business, Energy and Industrial Strategy, Department for Transport, Foreign and Commonwealth Office, HM Treasury", 
    "person_id": "25427", 
    "party": "Conservative", 
    "forname": "Simon", 
-   "mp_annual": 86349, 
+   "mp_annual": 96349, 
    "mp_wealth": 100000, 
    "facebook": "https://facebook.com/simonhoarenorthdorset", 
    "eu_ref_stance": "Remain", 
@@ -455,35 +475,48 @@
       {
          "raw_data": [
             {
-               "raw_string": "House in Oxfordshire: (i). (Registered 21 May 2015)", 
-               "House in Oxfordshire": "(i). (Registered 21 May 2015)"
+               "raw_string": "House in Oxfordshire, owned jointly with my wife: (i) and, since September 2015, (ii). (Registered 21 May 2015; updated 8 January 2018.)", 
+               "House in Oxfordshire, owned jointly with my wife": "(i) and, since September 2015, (ii). (Registered 21 May 2015; updated 8 January 2018.)"
             }
          ], 
          "isCurrency": true, 
          "category_gifts": 0, 
          "items": [
             {
-               "raw_string": "House in Oxfordshire: (i). (Registered 21 May 2015)", 
+               "raw_string": "House in Oxfordshire, owned jointly with my wife: (i) and, since September 2015, (ii). (Registered 21 May 2015; updated 8 January 2018.)", 
                "isWealth": true, 
                "nouns": [], 
                "isDonation": false, 
-               "registered": null, 
+               "registered": "21/05/2015", 
                "isIncome": false, 
                "amount": 100000, 
-               "pretty": "House in Oxfordshire", 
+               "pretty": "House in Oxfordshire, owned jointly with my wife", 
                "item_id": "0001", 
+               "category_id": 7, 
+               "isGift": false
+            }, 
+            {
+               "raw_string": "House in Oxfordshire, owned jointly with my wife: (i) and, since September 2015, (ii). (Registered 21 May 2015; updated 8 January 2018.)", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "registered": "21/05/2015", 
+               "isIncome": true, 
+               "amount": 10000, 
+               "pretty": "House in Oxfordshire, owned jointly with my wife", 
+               "item_id": "0002", 
                "category_id": 7, 
                "isGift": false
             }
          ], 
          "category_type": "property", 
-         "category_income": 0, 
+         "category_income": 10000, 
          "raw_items": [
-            "House in Oxfordshire: (i). (Registered 21 May 2015)"
+            "House in Oxfordshire, owned jointly with my wife: (i) and, since September 2015, (ii). (Registered 21 May 2015; updated 8 January 2018.)"
          ], 
          "category_description": "Property", 
          "category_id": 7, 
-         "category_amount": 100000, 
+         "category_amount": 110000, 
          "category_donations": 0, 
          "category_wealth": 100000
       }, 
@@ -647,6 +680,12 @@
                "from_date": "2017-11-06", 
                "to_date": "9999-12-31", 
                "position": "Member"
+            }, 
+            {
+               "dept": "Speaker's Advisory Committee on Works of Art", 
+               "from_date": "2017-12-12", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
             }
          ], 
          "chair_salary": 15025, 
@@ -678,6 +717,12 @@
                            "appointments": "/officers/U2xIJ9ddCaAh4b8bLRVVCFjWDo8/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1949
+                     }, 
                      "address": {
                         "locality": "Burford", 
                         "premises": "Honeystone Cottage", 
@@ -687,14 +732,8 @@
                         "address_line_2": "Shilton", 
                         "address_line_1": "Ladburn Lane"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1949
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Accountant"
                   }, 
                   {
@@ -751,11 +790,11 @@
                      "appointed_on": "2002-03-08", 
                      "resigned_on": "2015-02-24", 
                      "date_of_birth": {
-                        "year": 1971, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1971
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -765,13 +804,6 @@
                            "appointments": "/officers/GwHFZOsUBMeOcXjCstpPp0ZY5jY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-03-08", 
-                     "resigned_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1969
-                     }, 
                      "address": {
                         "postal_code": "OX7 3AU", 
                         "region": "Oxfordshire", 
@@ -779,8 +811,15 @@
                         "address_line_2": "High Street", 
                         "address_line_1": "Akeman Barn"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-03-08", 
+                     "resigned_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 6
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -890,12 +929,6 @@
                            "appointments": "/officers/U2xIJ9ddCaAh4b8bLRVVCFjWDo8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "year": 1949, 
-                        "month": 3
-                     }, 
                      "address": {
                         "locality": "Burford", 
                         "premises": "Honeystone Cottage", 
@@ -905,8 +938,14 @@
                         "address_line_2": "Shilton", 
                         "address_line_1": "Ladburn Lane"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1949
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Accountant"
                   }, 
                   {
@@ -977,19 +1016,19 @@
                            "appointments": "/officers/GwHFZOsUBMeOcXjCstpPp0ZY5jY/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2002-03-08", 
-                     "resigned_on": "2015-02-24", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 6
-                     }, 
                      "address": {
                         "postal_code": "OX7 3AU", 
                         "region": "Oxfordshire", 
                         "locality": "Ramsden", 
                         "address_line_2": "High Street", 
                         "address_line_1": "Akeman Barn"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2002-03-08", 
+                     "resigned_on": "2015-02-24", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1969
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1119,12 +1158,7 @@
                            "appointments": "/officers/_ZaJIImrUOfvVpd-nLoxfWfUqIk/appointments"
                         }
                      }, 
-                     "former_names": [
-                        {
-                           "surname": "CHARLES MESQUITA"
-                        }
-                     ], 
-                     "country_of_residence": "England", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2014-09-18", 
                      "date_of_birth": {
                         "month": 7, 
@@ -1133,12 +1167,12 @@
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
                         "country": "England", 
-                        "locality": "London", 
+                        "address_line_1": "2 Newark Street", 
                         "postal_code": "E1 2AT", 
-                        "address_line_1": "2 Newark Street"
+                        "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Investment Banking"
                   }, 
                   {
@@ -1158,8 +1192,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2006-09-29", 
                      "date_of_birth": {
-                        "year": 1943, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1943
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1175,8 +1209,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-11-26", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1963
+                        "year": 1963, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
@@ -1184,8 +1218,8 @@
                         "postal_code": "E1 2AT", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Surgeon"
                   }, 
                   {
@@ -1195,12 +1229,6 @@
                            "appointments": "/officers/FoJ5jP--mzIYVGaTGY6mPX8FPHA/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-10-24", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1962
-                     }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
                         "country": "England", 
@@ -1208,8 +1236,14 @@
                         "postal_code": "E1 2AT", 
                         "address_line_1": "2 Newark Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-10-24", 
+                     "date_of_birth": {
+                        "year": 1962, 
+                        "month": 9
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1222,8 +1256,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2010-01-01", 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1954
+                        "year": 1954, 
+                        "month": 2
                      }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
@@ -1243,20 +1277,20 @@
                            "appointments": "/officers/BUF2UrMF3OfASMZchpVNwwrKRnY/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "1st Floor Abernethy Building", 
-                        "locality": "London", 
-                        "postal_code": "E1 2AT", 
-                        "address_line_1": "2 Newark Street"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2015-11-26", 
                      "date_of_birth": {
                         "year": 1969, 
                         "month": 6
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "1st Floor Abernethy Building", 
+                        "locality": "London", 
+                        "postal_code": "E1 2AT", 
+                        "address_line_1": "2 Newark Street"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Member Of Parliament"
                   }, 
                   {
@@ -1293,8 +1327,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2015-11-26", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1962
+                        "year": 1962, 
+                        "month": 11
                      }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
@@ -1316,8 +1350,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2017-01-19", 
                      "date_of_birth": {
-                        "year": 1960, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1960
                      }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
@@ -1325,8 +1359,8 @@
                         "postal_code": "E1 2AT", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "American And Uk", 
+                     "officer_role": "director", 
                      "occupation": "Marketing Director"
                   }, 
                   {
@@ -1336,12 +1370,6 @@
                            "appointments": "/officers/M5JaCtvrgImO477V8VTuLPYk24k/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2010-10-08", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1965
-                     }, 
                      "address": {
                         "premises": "1st Floor Abernethy Building", 
                         "country": "England", 
@@ -1349,8 +1377,14 @@
                         "postal_code": "E1 2AT", 
                         "address_line_1": "2 Newark Street"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-10-08", 
+                     "date_of_birth": {
+                        "year": 1965, 
+                        "month": 6
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1393,8 +1427,8 @@
                         "postal_code": "AL7 2QH", 
                         "address_line_1": "21 Halifax Way"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Professor"
                   }, 
                   {
@@ -1404,17 +1438,17 @@
                            "appointments": "/officers/iWP5zXCktgEnEbwu4F81Kyydcf8/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "6 Beechworth Close", 
-                        "postal_code": "NW3 7UT", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2010-04-28", 
                      "date_of_birth": {
                         "year": 1931, 
                         "month": 2
+                     }, 
+                     "address": {
+                        "address_line_1": "6 Beechworth Close", 
+                        "postal_code": "NW3 7UT", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1453,13 +1487,6 @@
                            "appointments": "/officers/PiZLjM19e558xaC9TUBRNJH2gjM/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2009-10-01", 
-                     "resigned_on": "2014-04-24", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1939
-                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "3", 
@@ -1467,6 +1494,13 @@
                         "postal_code": "W1H 6EF", 
                         "address_line_2": "Manchester Square", 
                         "address_line_1": "Fitzhardinge Street"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-10-01", 
+                     "resigned_on": "2014-04-24", 
+                     "date_of_birth": {
+                        "year": 1939, 
+                        "month": 1
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1479,17 +1513,17 @@
                            "appointments": "/officers/jGMQXVRyDce6NxU4FXn9cLXJSZ0/appointments"
                         }
                      }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "SW1W 9AA", 
-                        "address_line_1": "118 Eaton Square"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2011-01-31", 
                      "date_of_birth": {
                         "month": 9, 
                         "year": 1942
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "SW1W 9AA", 
+                        "address_line_1": "118 Eaton Square"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -1538,8 +1572,8 @@
                      "appointed_on": "2006-09-29", 
                      "resigned_on": "2015-06-18", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1945
+                        "year": 1945, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1562,11 +1596,11 @@
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2012-02-01", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1958
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Surgeon"
                   }, 
                   {
@@ -1576,17 +1610,17 @@
                            "appointments": "/officers/7hUOFzBRzsoRFrZw1AiFzl01K1Y/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2007-02-07", 
-                     "resigned_on": "2011-05-31", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1933
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "SE26 6RF", 
                         "address_line_1": "101 Longton Avenue"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2007-02-07", 
+                     "resigned_on": "2011-05-31", 
+                     "date_of_birth": {
+                        "year": 1933, 
+                        "month": 6
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1610,11 +1644,11 @@
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2011-01-31", 
                      "date_of_birth": {
-                        "year": 1933, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1933
                      }, 
-                     "officer_role": "director", 
                      "nationality": "English", 
+                     "officer_role": "director", 
                      "occupation": "Co Director"
                   }, 
                   {
@@ -1624,19 +1658,19 @@
                            "appointments": "/officers/j77E5JHisH4oQWyCgBQGAJn8n5E/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "NN29 7SL", 
-                        "region": "Northamptonshire", 
-                        "locality": "Wellingborough", 
-                        "address_line_2": "Wollaston", 
-                        "address_line_1": "The Priory 1 Hickmire"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2011-05-31", 
                      "date_of_birth": {
                         "month": 8, 
                         "year": 1941
+                     }, 
+                     "address": {
+                        "postal_code": "NN29 7SL", 
+                        "region": "Northamptonshire", 
+                        "locality": "Wellingborough", 
+                        "address_line_2": "Wollaston", 
+                        "address_line_1": "The Priory 1 Hickmire"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1673,12 +1707,6 @@
                            "appointments": "/officers/9t8_BpYRTGY-ENQo7WVZqFXPXcY/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "Oxfordshire", 
-                        "locality": "Oxford", 
-                        "postal_code": "OX2 6QB", 
-                        "address_line_1": "10 Norham Gardens"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-02-07", 
                      "resigned_on": "2015-06-18", 
@@ -1686,8 +1714,14 @@
                         "month": 12, 
                         "year": 1962
                      }, 
-                     "officer_role": "director", 
+                     "address": {
+                        "region": "Oxfordshire", 
+                        "locality": "Oxford", 
+                        "postal_code": "OX2 6QB", 
+                        "address_line_1": "10 Norham Gardens"
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "None"
                   }
                ], 
@@ -1795,6 +1829,7 @@
    "mp_gifts": 10987, 
    "commitees": [
       "Welsh Affairs Committee", 
+      "Speaker's Advisory Committee on Works of Art", 
       "Speaker's Advisory Committee on Works of Art", 
       "Regulatory Reform", 
       "Regulatory Reform", 
