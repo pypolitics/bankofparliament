@@ -119,10 +119,11 @@ def write_shareholder_plot(mp, plot_file):
 
                 # find the correct node type, there are lots now...
                 if 'companies' in category['category_type']:
-                    if item['company']['company_status'] == 'active':
-                        n = 'undeclared_active_company'
-                    else:
-                        n = 'undeclared_inactive_company'
+                    if item['company'].has_key('company_status'):
+                        if item['company']['company_status'] == 'active':
+                            n = 'undeclared_active_company'
+                        else:
+                            n = 'undeclared_inactive_company'
                     n = 'declared_company'
 
                 elif 'visit' in category['category_type']:
