@@ -44,20 +44,33 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2017-09-11T00:00:00", 
-            "EndDate": {
-               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-               "@xsi:nil": "true"
+         "Committee": [
+            {
+               "StartDate": "2018-06-04T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Work and Pensions Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "164"
             }, 
-            "Name": "Women and Equalities Committee", 
-            "IsCoOpted": "False", 
-            "EndNote": null, 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "328"
-         }
+            {
+               "StartDate": "2017-09-11T00:00:00", 
+               "EndDate": "2018-06-04T00:00:00", 
+               "Name": "Women and Equalities Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "328"
+            }
+         ]
       }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
@@ -84,17 +97,10 @@
       "Gender": "F", 
       "DisplayAs": "Rosie Duffield", 
       "HouseStartDate": "2017-06-08T00:00:00", 
+      "@Clerks_Id": "1464", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
-            {
-               "@Type_Id": "7", 
-               "Address1": "https://twitter.com/RosieDuffield1", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Twitter"
-            }, 
             {
                "Fax": null, 
                "@Type_Id": "1", 
@@ -111,6 +117,14 @@
                "Type": "Parliamentary", 
                "Email": "rosie.duffield.mp@parliament.uk", 
                "Postcode": "SW1A 0AA"
+            }, 
+            {
+               "@Type_Id": "7", 
+               "Address1": "https://twitter.com/RosieDuffield1", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Twitter"
             }, 
             {
                "@Type_Id": "6", 
@@ -140,43 +154,40 @@
       "Canterbury", 
       "Labour", 
       "", 
-      "Ministry", 
-      "of", 
-      "Defence:", 
-      "Hunting,", 
-      "Special", 
-      "Educational", 
-      "Needs:", 
-      "British", 
-      "Nationals", 
-      "Abroad,", 
-      "Special", 
-      "Educational", 
-      "Needs,", 
-      "HIV", 
-      "Infection:", 
-      "Drugs,", 
-      "Multiple", 
-      "Occupation:", 
-      "Licensing", 
-      "Department", 
-      "for", 
-      "Education,", 
-      "Department", 
-      "for", 
-      "Communities", 
-      "and", 
-      "Local", 
-      "Government,", 
-      "Ministry", 
-      "of", 
-      "Defence,", 
-      "Ministry", 
-      "of", 
-      "Justice,", 
+      "Dental", 
+      "Services,", 
+      "Compulsorily", 
+      "Detained", 
+      "Psychiatric", 
+      "Patients,", 
+      "Gaza:", 
+      "Israel,", 
+      "Psychiatry:", 
+      "Migrant", 
+      "Workers,", 
+      "Counter-terrorism", 
       "Department", 
       "of", 
       "Health", 
+      "and", 
+      "Social", 
+      "Care,", 
+      "Home", 
+      "Office,", 
+      "Department", 
+      "for", 
+      "Education,", 
+      "Foreign", 
+      "and", 
+      "Commonwealth", 
+      "Office,", 
+      "Ministry", 
+      "of", 
+      "Defence", 
+      "Work", 
+      "and", 
+      "Pensions", 
+      "Committee", 
       "Women", 
       "and", 
       "Equalities", 
@@ -184,7 +195,7 @@
    ], 
    "mp_income": 75662, 
    "mp_donations": 0, 
-   "wrans_departments": "Department for Education, Department for Communities and Local Government, Ministry of Defence, Ministry of Justice, Department of Health", 
+   "wrans_departments": "Department of Health and Social Care, Home Office, Department for Education, Foreign and Commonwealth Office, Ministry of Defence", 
    "person_id": "25656", 
    "party": "Labour", 
    "forname": "Rosie", 
@@ -443,8 +454,8 @@
          "category_wealth": 0, 
          "offices": [
             {
-               "dept": "Women and Equalities Committee", 
-               "from_date": "2017-09-11", 
+               "dept": "Work and Pensions Committee", 
+               "from_date": "2018-06-04", 
                "to_date": "9999-12-31", 
                "position": "Member"
             }
@@ -487,11 +498,12 @@
    "dob": "July 1971", 
    "gender": "F", 
    "country_of_birth": "England", 
-   "wrans_subjects": "Ministry of Defence: Hunting, Special Educational Needs: British Nationals Abroad, Special Educational Needs, HIV Infection: Drugs, Multiple Occupation: Licensing", 
+   "wrans_subjects": "Dental Services, Compulsorily Detained Psychiatric Patients, Gaza: Israel, Psychiatry: Migrant Workers, Counter-terrorism", 
    "member_id": "41703", 
    "constituency": "Canterbury", 
    "mp_gifts": 0, 
    "commitees": [
+      "Work and Pensions Committee", 
       "Women and Equalities Committee"
    ]
 }

@@ -184,24 +184,17 @@
       "Gender": "F", 
       "DisplayAs": "Nia Griffith", 
       "HouseStartDate": "2005-05-05T00:00:00", 
+      "@Clerks_Id": "862", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
             {
-               "@Type_Id": "7", 
-               "Address1": "https://twitter.com/NiaGriffithMP", 
+               "@Type_Id": "6", 
+               "Address1": "http://niagriffith.org.uk/", 
                "Note": null, 
                "IsPreferred": "False", 
                "IsPhysical": "False", 
-               "Type": "Twitter"
-            }, 
-            {
-               "@Type_Id": "8", 
-               "Address1": "https://www.facebook.com/pages/Nia-Griffith-MP/154165864657660", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Facebook"
+               "Type": "Website"
             }, 
             {
                "Fax": null, 
@@ -238,12 +231,20 @@
                "Postcode": "SA15 2TL"
             }, 
             {
-               "@Type_Id": "6", 
-               "Address1": "http://niagriffith.org.uk/", 
+               "@Type_Id": "7", 
+               "Address1": "https://twitter.com/NiaGriffithMP", 
                "Note": null, 
                "IsPreferred": "False", 
                "IsPhysical": "False", 
-               "Type": "Website"
+               "Type": "Twitter"
+            }, 
+            {
+               "@Type_Id": "8", 
+               "Address1": "https://www.facebook.com/pages/Nia-Griffith-MP/154165864657660", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Facebook"
             }
          ]
       }, 
@@ -265,21 +266,19 @@
       "Llanelli", 
       "Labour", 
       "Remain", 
+      "Armed", 
+      "Forces:", 
+      "Housing,", 
       "Departmental", 
       "Telephone", 
       "Services,", 
+      "Defence:", 
+      "Modernisation,", 
+      "Military", 
+      "Aircraft,", 
       "Post", 
       "Offices:", 
-      "Finance,", 
-      "Armed", 
-      "Forces:", 
-      "Body", 
-      "Armour,", 
-      "Transition", 
-      "Fund,", 
-      "Armed", 
-      "Forces:", 
-      "Housing", 
+      "Finance", 
       "Ministry", 
       "of", 
       "Defence,", 
@@ -290,7 +289,8 @@
       "Justice,", 
       "Home", 
       "Department,", 
-      "Wales", 
+      "Cabinet", 
+      "Office", 
       "Environment,", 
       "Europe,", 
       "community", 
@@ -342,11 +342,11 @@
       "France, Italy, Spain"
    ], 
    "mp_donations": 11000, 
-   "wrans_departments": "Ministry of Defence, Business, Innovation and Skills, Justice, Home Department, Wales", 
+   "wrans_departments": "Ministry of Defence, Business, Innovation and Skills, Justice, Home Department, Cabinet Office", 
    "person_id": "11692", 
    "party": "Labour", 
    "forname": "Nia", 
-   "mp_annual": 85962, 
+   "mp_annual": 87851, 
    "mp_wealth": 100000, 
    "facebook": "https://facebook.com/Nia-Griffith-MP-154165864657660", 
    "eu_ref_stance": "Remain", 
@@ -549,6 +549,13 @@
                         "has_charges": false, 
                         "type": "ltd"
                      }, 
+                     "address": {
+                        "premises": "27", 
+                        "country": "United Kingdom", 
+                        "address_line_1": "Mortimer Street", 
+                        "postal_code": "W1T 3BL", 
+                        "locality": "London"
+                     }, 
                      "officers": [
                         {
                            "name": "BLG REGISTRARS LIMITED", 
@@ -606,8 +613,8 @@
                            "country_of_residence": "United Kingdom", 
                            "appointed_on": "2017-12-07", 
                            "date_of_birth": {
-                              "year": 1978, 
-                              "month": 12
+                              "month": 12, 
+                              "year": 1978
                            }, 
                            "address": {
                               "premises": "27", 
@@ -616,8 +623,8 @@
                               "postal_code": "W1T 3BL", 
                               "locality": "London"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Screenwriter"
                         }
                      ], 
@@ -630,18 +637,11 @@
                      }, 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_name": "ONE SHOE FILMS LIMITED", 
-                        "company_number": "11100927"
+                        "company_number": "11100927", 
+                        "company_name": "ONE SHOE FILMS LIMITED"
                      }, 
-                     "address": {
-                        "premises": "27", 
-                        "country": "United Kingdom", 
-                        "locality": "London", 
-                        "postal_code": "W1T 3BL", 
-                        "address_line_1": "Mortimer Street"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "persons_with_significant_control": [], 
                      "occupation": "Screenwriter"
                   }
@@ -660,30 +660,481 @@
          "category_wealth": 0
       }, 
       {
-         "raw_data": [], 
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: BCB InternationalAddress of donor: Clydesmuir Rd Ind Est, Cardiff CF24 2QSAmount of donation, or nature and value if donation in kind: Ticket and hospitality to attend Wales v France rugby match, estimated value \u00a3400Date received: 17 March 2018Date accepted: 17 March 2018Donor status: company, registration 01442485(Registered 26 April 2018)", 
+               "Date received": "17 March 2018", 
+               "Donor status": "company, registration 01442485", 
+               "Date accepted": "17 March 2018", 
+               "(Registered 26 April 2018)": "(Registered 26 April 2018)", 
+               "Name of donor": "BCB International", 
+               "Amount of donation, or nature and value if donation in kind": "Ticket and hospitality to attend Wales v France rugby match, estimated value \u00a3400", 
+               "Address of donor": "Clydesmuir Rd Ind Est, Cardiff CF24 2QS"
+            }
+         ], 
          "isCurrency": true, 
-         "category_gifts": 0, 
-         "items": [], 
+         "category_gifts": 400, 
+         "items": [
+            {
+               "raw_string": "Name of donor: BCB InternationalAddress of donor: Clydesmuir Rd Ind Est, Cardiff CF24 2QSAmount of donation, or nature and value if donation in kind: Ticket and hospitality to attend Wales v France rugby match, estimated value \u00a3400Date received: 17 March 2018Date accepted: 17 March 2018Donor status: company, registration 01442485(Registered 26 April 2018)", 
+               "status": "company, registration 01442485", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "persons": [
+                  {
+                     "kind": "individual-person-with-significant-control", 
+                     "name": "Mr Andrew Rhys Howell", 
+                     "links": {
+                        "self": "/company/01442485/persons-with-significant-control/individual/4Bn8DKu_yr7G4rjViJLXgDztIhQ"
+                     }, 
+                     "notified_on": "2016-04-06", 
+                     "country_of_residence": "Wales", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent"
+                     ], 
+                     "name_elements": {
+                        "middle_name": "Rhys", 
+                        "forename": "Andrew", 
+                        "surname": "Howell", 
+                        "title": "Mr"
+                     }, 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1958
+                     }, 
+                     "etag": "e5cee9865bc07ae2da71b056f05540f32d73c42a", 
+                     "address": {
+                        "premises": "Lamby Industrial Park", 
+                        "country": "Wales", 
+                        "address_line_1": "Wentloog Avenue", 
+                        "postal_code": "CF3 2EX", 
+                        "locality": "Cardiff"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
+               "raw_data": {
+                  "raw_string": "Name of donor: BCB InternationalAddress of donor: Clydesmuir Rd Ind Est, Cardiff CF24 2QSAmount of donation, or nature and value if donation in kind: Ticket and hospitality to attend Wales v France rugby match, estimated value \u00a3400Date received: 17 March 2018Date accepted: 17 March 2018Donor status: company, registration 01442485(Registered 26 April 2018)", 
+                  "Date received": "17 March 2018", 
+                  "Donor status": "company, registration 01442485", 
+                  "Date accepted": "17 March 2018", 
+                  "(Registered 26 April 2018)": "(Registered 26 April 2018)", 
+                  "Name of donor": "BCB International", 
+                  "Amount of donation, or nature and value if donation in kind": "Ticket and hospitality to attend Wales v France rugby match, estimated value \u00a3400", 
+                  "Address of donor": "Clydesmuir Rd Ind Est, Cardiff CF24 2QS"
+               }, 
+               "registered": "26/04/2018", 
+               "officers": [
+                  {
+                     "appointed_on": "2009-12-09", 
+                     "officer_role": "secretary", 
+                     "name": "HOWELL, Andrew Rhys", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/srpQTY8D73v5wQRYcNHKwreebcw/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Bcb International Ltd", 
+                        "region": "Glamorgan", 
+                        "address_line_1": "Clydesmuir Road Ind Est", 
+                        "postal_code": "CF24 2QS", 
+                        "locality": "Cardiff"
+                     }
+                  }, 
+                  {
+                     "name": "HOWELL, Andrew Rhys", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/0XHvxz5G1Y_PzIK_eCCoyvt9lIM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Began Road", 
+                        "address_line_1": "Brook House", 
+                        "postal_code": "CF3 6XJ", 
+                        "locality": "Cardiff"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1958
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "HOWELL, Janey Elizabeth", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/gHNnoFIoo10HuO2k5tWruk3sOnE/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2004-12-23", 
+                     "date_of_birth": {
+                        "year": 1959, 
+                        "month": 8
+                     }, 
+                     "address": {
+                        "address_line_2": "Began Road", 
+                        "region": "South Glamorgan", 
+                        "locality": "Cardiff", 
+                        "postal_code": "CF3 6XJ", 
+                        "address_line_1": "Brook House"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "officer_role": "secretary", 
+                     "resigned_on": "2000-07-31", 
+                     "name": "FIELD, Hugh William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bCUnW_p0fkLW42EBUO-yja9uzek/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "address_line_2": "Crossways", 
+                        "region": "Vale Of Glamorgan", 
+                        "address_line_1": "Pen Y Bryn", 
+                        "postal_code": "CF71 7LJ", 
+                        "locality": "Cowbridge"
+                     }
+                  }, 
+                  {
+                     "name": "HOWELL, Jane Elizabeth", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/gHNnoFIoo10HuO2k5tWruk3sOnE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2000-08-01", 
+                     "resigned_on": "2005-05-20", 
+                     "address": {
+                        "address_line_2": "Began Road", 
+                        "region": "South Glamorgan", 
+                        "address_line_1": "Brook House", 
+                        "postal_code": "CF3 6XJ", 
+                        "locality": "Cardiff"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "THOMAS, Keith", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/woHdbyDawymeCjSBqAZOetRrEck/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2005-05-20", 
+                     "resigned_on": "2009-12-09", 
+                     "address": {
+                        "address_line_2": "Cyncoed", 
+                        "region": "South Glamorgan", 
+                        "address_line_1": "101 Cyncoed Road", 
+                        "postal_code": "CF23 6AE", 
+                        "locality": "Cardiff"
+                     }, 
+                     "officer_role": "secretary"
+                  }, 
+                  {
+                     "name": "FIELD, Hugh William", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/bCUnW_p0fkLW42EBUO-yja9uzek/appointments"
+                        }
+                     }, 
+                     "resigned_on": "2000-07-31", 
+                     "date_of_birth": {
+                        "year": 1943, 
+                        "month": 11
+                     }, 
+                     "address": {
+                        "address_line_2": "Crossways", 
+                        "region": "Vale Of Glamorgan", 
+                        "address_line_1": "Pen Y Bryn", 
+                        "postal_code": "CF71 7LJ", 
+                        "locality": "Cowbridge"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "HOWELL, Emily-Jane Myfanwy Calypso", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SWZLrrQ9yEAlPYwWbprBoea2stI/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Cardiff", 
+                        "premises": "Brook House", 
+                        "country": "Wales", 
+                        "postal_code": "CF3 6XJ", 
+                        "address_line_2": "Old St. Mellons", 
+                        "address_line_1": "Began Road"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2014-04-01", 
+                     "resigned_on": "2015-03-31", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1993
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "HOWELL, Emily-Jane Myfanwy Calypso", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/SWZLrrQ9yEAlPYwWbprBoea2stI/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2011-10-06", 
+                     "resigned_on": "2013-08-07", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1993
+                     }, 
+                     "address": {
+                        "address_line_2": "Industrial Estate", 
+                        "region": "Cardiff ", 
+                        "locality": "Tremorfa", 
+                        "postal_code": "CF24 2QS", 
+                        "address_line_1": "Units 7&8,Clydesmuir Road"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
+                  }, 
+                  {
+                     "name": "THOMAS, Keith", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/woHdbyDawymeCjSBqAZOetRrEck/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2006-10-05", 
+                     "resigned_on": "2009-03-02", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 8
+                     }, 
+                     "address": {
+                        "address_line_2": "Cyncoed", 
+                        "region": "South Glamorgan", 
+                        "address_line_1": "101 Cyncoed Road", 
+                        "postal_code": "CF23 6AE", 
+                        "locality": "Cardiff"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Chartered Accountant"
+                  }, 
+                  {
+                     "name": "TINKLER, Richard", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/V83_rEZ7Fa5L0TP0Uzms19O9URA/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "1995-01-10", 
+                     "resigned_on": "2005-02-11", 
+                     "date_of_birth": {
+                        "year": 1957, 
+                        "month": 6
+                     }, 
+                     "address": {
+                        "postal_code": "CF71 7RQ", 
+                        "region": "Vale Of Glamorgan", 
+                        "locality": "Cowbridge", 
+                        "address_line_2": "Pennlyne", 
+                        "address_line_1": "Swallows Lodge"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "WARWICK, Timothy James", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/Ad0QAeQJ9nOyfS1Z0Rmzkf5wFQI/appointments"
+                        }
+                     }, 
+                     "appointed_on": "1994-08-09", 
+                     "resigned_on": "1994-09-12", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1950
+                     }, 
+                     "address": {
+                        "country": "Wales", 
+                        "address_line_1": "Plas Y Coed 3 Cwrt Y Cadno", 
+                        "postal_code": "CF5 4PJ", 
+                        "address_line_2": "St Fagans", 
+                        "locality": "Cardiff"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Chartered Secretary"
+                  }
+               ], 
+               "isIncome": false, 
+               "amount": 400, 
+               "link": "https://beta.companieshouse.gov.uk/company/01442485", 
+               "pretty": "BCB International", 
+               "address": "Clydesmuir Rd Ind Est, Cardiff CF24 2QS", 
+               "item_id": "0001", 
+               "donor": "BCB International", 
+               "category_id": 4, 
+               "isGift": true, 
+               "company": {
+                  "has_insolvency_history": false, 
+                  "links": {
+                     "filing_history": "/company/01442485/filing-history", 
+                     "charges": "/company/01442485/charges", 
+                     "self": "/company/01442485", 
+                     "officers": "/company/01442485/officers", 
+                     "persons_with_significant_control": "/company/01442485/persons-with-significant-control"
+                  }, 
+                  "can_file": true, 
+                  "sic_codes": [
+                     "32990"
+                  ], 
+                  "etag": "012fbaec435c581096774f673935cfe8aaa5e51b", 
+                  "registered_office_address": {
+                     "country": "Wales", 
+                     "postal_code": "CF3 2EX", 
+                     "locality": "Cardiff", 
+                     "address_line_2": "Wentloog Avenue", 
+                     "address_line_1": "Lamby Industrial Park"
+                  }, 
+                  "undeliverable_registered_office_address": false, 
+                  "items": [], 
+                  "jurisdiction": "england-wales", 
+                  "confirmation_statement": {
+                     "next_due": "2019-01-14", 
+                     "last_made_up_to": "2017-12-31", 
+                     "next_made_up_to": "2018-12-31", 
+                     "overdue": false
+                  }, 
+                  "company_number": "01442485", 
+                  "last_full_members_list_date": "2015-12-31", 
+                  "date_of_creation": "1979-08-08", 
+                  "has_been_liquidated": false, 
+                  "accounts": {
+                     "next_due": "2019-09-30", 
+                     "next_made_up_to": "2018-12-31", 
+                     "last_accounts": {
+                        "period_start_on": "2017-01-01", 
+                        "type": "group", 
+                        "made_up_to": "2017-12-31", 
+                        "period_end_on": "2017-12-31"
+                     }, 
+                     "next_accounts": {
+                        "due_on": "2019-09-30", 
+                        "period_start_on": "2018-01-01", 
+                        "period_end_on": "2018-12-31", 
+                        "overdue": false
+                     }, 
+                     "accounting_reference_date": {
+                        "day": "31", 
+                        "month": "12"
+                     }, 
+                     "overdue": false
+                  }, 
+                  "company_name": "B.C.B. INTERNATIONAL LIMITED", 
+                  "company_status": "active", 
+                  "previous_company_names": [
+                     {
+                        "effective_from": "1979-08-08", 
+                        "ceased_on": "1980-12-31", 
+                        "name": "RABLADE LIMITED"
+                     }
+                  ], 
+                  "has_charges": true, 
+                  "type": "ltd", 
+                  "registered_office_is_in_dispute": false
+               }, 
+               "appointments": []
+            }
+         ], 
          "category_type": "gifts", 
          "category_income": 0, 
-         "raw_items": [], 
+         "raw_items": [
+            "Name of donor: BCB InternationalAddress of donor: Clydesmuir Rd Ind Est, Cardiff CF24 2QSAmount of donation, or nature and value if donation in kind: Ticket and hospitality to attend Wales v France rugby match, estimated value \u00a3400Date received: 17 March 2018Date accepted: 17 March 2018Donor status: company, registration 01442485(Registered 26 April 2018)"
+         ], 
          "category_description": "Gifts", 
          "category_id": 4, 
-         "category_amount": 0, 
+         "category_amount": 400, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
       {
-         "raw_data": [], 
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: (1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)Address of donor: (1) 15 Belgrave Square, London SW1X 8PS  (2) No.4 Fuxing Road, BeijingEstimate of the probable value (or amount of any donation): (1) Airfare \u00a31,489; hotel and breakfast in Beijing and Wuhan \u00a3402.21; total \u00a31,891.21  (2) train fare to Wuhan \u00a395.76; food and drink (estimated at \u00a360/day) \u00a3240; domestic travel (estimated at \u00a310/day) \u00a340; total \u00a3375.76Destination of visit: Beijing and Wuhan, ChinaDates of visit: 8-13 April 2018Purpose of visit: To attend the 2018 UK-China Leadership Forum, organised by the Great Britain China Centre and IDCPC; to engage with Chinese Officials on a broad range of topics and to strengthen UK-China bilateral relations.(Registered 30 April 2018)", 
+               "Estimate of the probable value (or amount of any donation)": "(1) Airfare \u00a31,489; hotel and breakfast in Beijing and Wuhan \u00a3402.21; total \u00a31,891.21  (2) train fare to Wuhan \u00a395.76; food and drink (estimated at \u00a360/day) \u00a3240; domestic travel (estimated at \u00a310/day) \u00a340; total \u00a3375.76", 
+               "(Registered 30 April 2018)": "(Registered 30 April 2018)", 
+               "Purpose of visit": "To attend the 2018 UK-China Leadership Forum, organised by the Great Britain China Centre and IDCPC; to engage with Chinese Officials on a broad range of topics and to strengthen UK-China bilateral relations.", 
+               "Destination of visit": "Beijing and Wuhan, China", 
+               "Dates of visit": "8-13 April 2018", 
+               "Name of donor": "(1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)", 
+               "Address of donor": "(1) 15 Belgrave Square, London SW1X 8PS  (2) No.4 Fuxing Road, Beijing"
+            }
+         ], 
          "isCurrency": true, 
-         "category_gifts": 0, 
-         "items": [], 
+         "category_gifts": 1489, 
+         "items": [
+            {
+               "status": "visit", 
+               "isDonation": false, 
+               "isGift": true, 
+               "destination": "Beijing and Wuhan, China", 
+               "officers": [], 
+               "isIncome": false, 
+               "pretty": "(1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)", 
+               "donor": "(1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)", 
+               "type": "visit", 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "(1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)", 
+                  "company_number": "N/A"
+               }, 
+               "raw_string": "Name of donor: (1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)Address of donor: (1) 15 Belgrave Square, London SW1X 8PS  (2) No.4 Fuxing Road, BeijingEstimate of the probable value (or amount of any donation): (1) Airfare \u00a31,489; hotel and breakfast in Beijing and Wuhan \u00a3402.21; total \u00a31,891.21  (2) train fare to Wuhan \u00a395.76; food and drink (estimated at \u00a360/day) \u00a3240; domestic travel (estimated at \u00a310/day) \u00a340; total \u00a3375.76Destination of visit: Beijing and Wuhan, ChinaDates of visit: 8-13 April 2018Purpose of visit: To attend the 2018 UK-China Leadership Forum, organised by the Great Britain China Centre and IDCPC; to engage with Chinese Officials on a broad range of topics and to strengthen UK-China bilateral relations.(Registered 30 April 2018)", 
+               "isWealth": false, 
+               "registered": "30/04/2018", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "To attend the 2018 UK-China Leadership Forum, organised by the Great Britain China Centre and IDCPC; to engage with Chinese Officials on a broad range of topics and to strengthen UK-China bilateral relations.", 
+               "nouns": [], 
+               "address": "(1) 15 Belgrave Square, London SW1X 8PS  (2) No.4 Fuxing Road, Beijing", 
+               "item_id": "0001", 
+               "amount": 1489, 
+               "category_id": 5
+            }
+         ], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
-         "raw_items": [], 
+         "raw_items": [
+            "Name of donor: (1) Great Britain China Centre (with sponsorship from BP and Prudential)  (2) International Department of the Chinese Communist Party (IDCPC)Address of donor: (1) 15 Belgrave Square, London SW1X 8PS  (2) No.4 Fuxing Road, BeijingEstimate of the probable value (or amount of any donation): (1) Airfare \u00a31,489; hotel and breakfast in Beijing and Wuhan \u00a3402.21; total \u00a31,891.21  (2) train fare to Wuhan \u00a395.76; food and drink (estimated at \u00a360/day) \u00a3240; domestic travel (estimated at \u00a310/day) \u00a340; total \u00a3375.76Destination of visit: Beijing and Wuhan, ChinaDates of visit: 8-13 April 2018Purpose of visit: To attend the 2018 UK-China Leadership Forum, organised by the Great Britain China Centre and IDCPC; to engage with Chinese Officials on a broad range of topics and to strengthen UK-China bilateral relations.(Registered 30 April 2018)"
+         ], 
          "category_description": "Visits Outside UK", 
          "category_id": 5, 
-         "category_amount": 0, 
+         "category_amount": 1489, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
@@ -913,8 +1364,8 @@
                         "postal_code": "CF23 9AR", 
                         "locality": "Cardiff"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "Welsh", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -924,11 +1375,11 @@
                            "appointments": "/officers/rIh4aUCxfD8Juq7VB5KuVhycZIs/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-03-30", 
                      "date_of_birth": {
-                        "year": 1956, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1956
                      }, 
                      "address": {
                         "locality": "Llanelli", 
@@ -949,6 +1400,12 @@
                            "appointments": "/officers/Z_U24BlGHOqQm95gt4cPlbywRKk/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-03-30", 
+                     "date_of_birth": {
+                        "year": 1948, 
+                        "month": 9
+                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "Parker Plant Hire Ltd", 
@@ -956,12 +1413,6 @@
                         "region": "Carms", 
                         "postal_code": "SA15 1HQ", 
                         "address_line_1": "Halfway"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-03-30", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1948
                      }, 
                      "officer_role": "director", 
                      "nationality": "Welsh", 
@@ -974,12 +1425,6 @@
                            "appointments": "/officers/74E3lHA5cnOmF1znd9HEmzlZ3vI/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2012-11-23", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1950
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "2", 
@@ -988,34 +1433,15 @@
                         "postal_code": "SA15 3LL", 
                         "address_line_1": "Gerddi Glasfryn Gardens"
                      }, 
-                     "nationality": "Uk", 
-                     "officer_role": "director", 
-                     "occupation": "Hospital Chaplain"
-                  }, 
-                  {
-                     "name": "PRICE, Roger Thomas", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/5QVEOs0Pn5sRAAngUC6PmXVXUQM/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "locality": "Llanelli", 
-                        "premises": "21", 
-                        "country": "Wales", 
-                        "region": "Carmarthenshire", 
-                        "postal_code": "SA15 2SY", 
-                        "address_line_1": "Albert Street"
-                     }, 
                      "country_of_residence": "Wales", 
-                     "appointed_on": "2011-03-30", 
+                     "appointed_on": "2012-11-23", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1949
+                        "year": 1950, 
+                        "month": 6
                      }, 
-                     "nationality": "Welsh", 
                      "officer_role": "director", 
-                     "occupation": "Teacher (Supply)/Tutor (W.E.A."
+                     "nationality": "Uk", 
+                     "occupation": "Hospital Chaplain"
                   }, 
                   {
                      "name": "RODGERS, Yvonne", 
@@ -1024,12 +1450,6 @@
                            "appointments": "/officers/TcO_mBCw0WotH5ZZYBvKsUiTlBQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2017-02-24", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1954
-                     }, 
                      "address": {
                         "premises": "24", 
                         "region": "Carmarthenshire", 
@@ -1037,8 +1457,14 @@
                         "postal_code": "SA15 3LF", 
                         "address_line_1": "Harries Avenue"
                      }, 
-                     "nationality": "Welsh", 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2017-02-24", 
+                     "date_of_birth": {
+                        "year": 1954, 
+                        "month": 9
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "Welsh", 
                      "occupation": "Self Employed - Training And Consultancy"
                   }, 
                   {
@@ -1073,12 +1499,6 @@
                            "appointments": "/officers/sfEckuF-FR_a6CDqR9RSTlhGivE/appointments"
                         }
                      }, 
-                     "country_of_residence": "Wales", 
-                     "appointed_on": "2013-01-11", 
-                     "date_of_birth": {
-                        "year": 1941, 
-                        "month": 2
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "45", 
@@ -1086,6 +1506,12 @@
                         "region": "Dyfed", 
                         "postal_code": "SA15 2AB", 
                         "address_line_1": "Trinity Road"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2013-01-11", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1941
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1098,13 +1524,6 @@
                            "appointments": "/officers/hu8vS_pFez-0UB2tg5CPC1jfYVo/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2011-03-30", 
-                     "resigned_on": "2018-01-06", 
-                     "date_of_birth": {
-                        "month": 9, 
-                        "year": 1942
-                     }, 
                      "address": {
                         "locality": "Llanelli", 
                         "premises": "60", 
@@ -1114,9 +1533,42 @@
                         "address_line_2": "Coedcae", 
                         "address_line_1": "Ridgewood Park"
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2011-03-30", 
+                     "resigned_on": "2018-01-06", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1942
+                     }, 
                      "nationality": "British", 
                      "officer_role": "director", 
                      "occupation": "Retired"
+                  }, 
+                  {
+                     "name": "PRICE, Roger Thomas", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/5QVEOs0Pn5sRAAngUC6PmXVXUQM/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "locality": "Llanelli", 
+                        "premises": "21", 
+                        "country": "Wales", 
+                        "region": "Carmarthenshire", 
+                        "postal_code": "SA15 2SY", 
+                        "address_line_1": "Albert Street"
+                     }, 
+                     "country_of_residence": "Wales", 
+                     "appointed_on": "2011-03-30", 
+                     "resigned_on": "2018-03-02", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1949
+                     }, 
+                     "nationality": "Welsh", 
+                     "officer_role": "director", 
+                     "occupation": "Teacher (Supply)/Tutor (W.E.A."
                   }
                ], 
                "isIncome": false, 
@@ -1139,20 +1591,20 @@
                   "sic_codes": [
                      "91030"
                   ], 
-                  "etag": "d524ad5f109c949a8ea3635284d70d9bcdd6cd74", 
+                  "etag": "56d45fd62798cbdc9436a9349f232636c4381a60", 
                   "registered_office_address": {
                      "region": "Carmarthenshire", 
-                     "address_line_1": "24 Harries Avenue", 
+                     "locality": "Llanelli", 
                      "postal_code": "SA15 3LF", 
-                     "locality": "Llanelli"
+                     "address_line_1": "24 Harries Avenue"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-04-13", 
-                     "last_made_up_to": "2017-03-30", 
-                     "next_made_up_to": "2018-03-30", 
+                     "next_due": "2019-04-13", 
+                     "last_made_up_to": "2018-03-30", 
+                     "next_made_up_to": "2019-03-30", 
                      "overdue": false
                   }, 
                   "company_number": "07583629", 
@@ -1209,10 +1661,10 @@
    "dob": "December 1956", 
    "gender": "F", 
    "country_of_birth": "Republic of Ireland", 
-   "wrans_subjects": "Departmental Telephone Services, Post Offices: Finance, Armed Forces: Body Armour, Transition Fund, Armed Forces: Housing", 
+   "wrans_subjects": "Armed Forces: Housing, Departmental Telephone Services, Defence: Modernisation, Military Aircraft, Post Offices: Finance", 
    "member_id": "41391", 
    "constituency": "Llanelli", 
-   "mp_gifts": 0, 
+   "mp_gifts": 1889, 
    "commitees": [
       "Welsh Affairs Committee", 
       "Welsh Affairs Committee", 

@@ -47,17 +47,33 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2014-07-07T00:00:00", 
-            "EndDate": "2015-03-30T00:00:00", 
-            "Name": "Health Committee", 
-            "IsCoOpted": "False", 
-            "EndNote": "Dissolution of Parliament", 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "81"
-         }
+         "Committee": [
+            {
+               "StartDate": "2018-02-05T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Public Accounts Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "127"
+            }, 
+            {
+               "StartDate": "2014-07-07T00:00:00", 
+               "EndDate": "2015-03-30T00:00:00", 
+               "Name": "Health and Social Care Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": "Dissolution of Parliament", 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "81"
+            }
+         ]
       }, 
       "GovernmentPosts": {
          "GovernmentPost": {
@@ -98,6 +114,7 @@
       "Gender": "M", 
       "DisplayAs": "Robert Jenrick", 
       "HouseStartDate": "2014-06-05T00:00:00", 
+      "@Clerks_Id": "1249", 
       "LayingMinisterName": "Robert Jenrick", 
       "Addresses": {
          "Address": [
@@ -223,7 +240,13 @@
       "Secretary", 
       "(HM", 
       "Treasury)", 
+      "Public", 
+      "Accounts", 
+      "Committee", 
       "Health", 
+      "and", 
+      "Social", 
+      "Care", 
       "Committee"
    ], 
    "mp_income": 98909, 
@@ -233,7 +256,7 @@
    "party": "Conservative", 
    "forname": "Robert", 
    "mp_annual": 99353, 
-   "mp_wealth": 100015, 
+   "mp_wealth": 100000, 
    "facebook": "https://facebook.com/RobertJenrickNewark", 
    "eu_ref_stance": "Remain", 
    "categories": [
@@ -402,211 +425,18 @@
          "isCurrency": false, 
          "category_id": 8, 
          "last": "jenrick", 
-         "raw_data": [
-            {
-               "raw_string": "Until 14 February 2017, director and sole shareholder in Vincent Square Properties; company formed for renovation of my London property, now dissolved. (Registered 12 June 2014; updated 27 October 2016 and 21 February 2017)", 
-               "Until 14 February 2017, director and sole shareholder in Vincent Square Properties; company formed for renovation of my London property, now dissolved. (Registered 12 June 2014; updated 27 October 2016 and 21 February 2017)": "Until 14 February 2017, director and sole shareholder in Vincent Square Properties; company formed for renovation of my London property, now dissolved. (Registered 12 June 2014; updated 27 October 2016 and 21 February 2017)"
-            }
-         ], 
+         "raw_data": [], 
          "category_description": "Shareholdings", 
          "category_gifts": 0, 
          "month": 1, 
          "middle": "edward", 
          "category_type": "shareholdings", 
-         "category_wealth": 15, 
+         "category_wealth": 0, 
          "category_income": 0, 
-         "raw_items": [
-            "Until 14 February 2017, director and sole shareholder in Vincent Square Properties; company formed for renovation of my London property, now dissolved. (Registered 12 June 2014; updated 27 October 2016 and 21 February 2017)"
-         ], 
+         "raw_items": [], 
          "year": 1982, 
-         "items": [
-            {
-               "raw_string": "Until 14 February 2017, director and sole shareholder in Vincent Square Properties; company formed for renovation of my London property, now dissolved. (Registered 12 June 2014; updated 27 October 2016 and 21 February 2017)", 
-               "isWealth": true, 
-               "nouns": [], 
-               "isDonation": false, 
-               "persons": [
-                  {
-                     "kind": "individual-person-with-significant-control", 
-                     "name": "Mr Robert Jenrick", 
-                     "links": {
-                        "self": "/company/08718759/persons-with-significant-control/individual/GT1VFPXfiI6soc01HyXNnU8RYp8"
-                     }, 
-                     "notified_on": "2016-06-30", 
-                     "country_of_residence": "England", 
-                     "natures_of_control": [
-                        "ownership-of-shares-75-to-100-percent"
-                     ], 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1982
-                     }, 
-                     "name_elements": {
-                        "title": "Mr", 
-                        "surname": "Jenrick", 
-                        "forename": "Robert"
-                     }, 
-                     "etag": "77b43a2e0522b0aa721376b542d522bbbe676a2d", 
-                     "address": {
-                        "premises": "Mccrone House", 
-                        "locality": "London", 
-                        "postal_code": "NW5 2RD", 
-                        "address_line_1": "155a Leighton Road"
-                     }, 
-                     "nationality": "British"
-                  }, 
-                  {
-                     "kind": "individual-person-with-significant-control", 
-                     "name": "Mr Lawrence John Webb", 
-                     "links": {
-                        "self": "/company/08718759/persons-with-significant-control/individual/rs1km65GkuJW2FOY0XcPySu_wsE"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "natures_of_control": [
-                        "significant-influence-or-control"
-                     ], 
-                     "date_of_birth": {
-                        "year": 1950, 
-                        "month": 12
-                     }, 
-                     "name_elements": {
-                        "middle_name": "John", 
-                        "forename": "Lawrence", 
-                        "surname": "Webb", 
-                        "title": "Mr"
-                     }, 
-                     "notified_on": "2016-06-30", 
-                     "etag": "89a7e67aa3c7c8943179702ac1603be62aab87c7", 
-                     "address": {
-                        "premises": "Mccrone House", 
-                        "address_line_1": "155a Leighton Road", 
-                        "postal_code": "NW5 2RD", 
-                        "locality": "London"
-                     }, 
-                     "nationality": "British"
-                  }
-               ], 
-               "registered": "12/06/2014", 
-               "officers": [
-                  {
-                     "appointed_on": "2013-10-04", 
-                     "officer_role": "secretary", 
-                     "name": "WEBB, Lawrence John", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/jS91AMHQF2ve5WdZwwhkHjV4YlQ/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "97a", 
-                        "country": "United Kingdom", 
-                        "locality": "London", 
-                        "postal_code": "N65LW", 
-                        "address_line_1": "Hornsey Lane"
-                     }
-                  }, 
-                  {
-                     "name": "JENRICK, Robert", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/4u-zXiy9bkqEgElkB2b3wS8Hbew/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "11", 
-                        "country": "United Kingdom", 
-                        "locality": "London", 
-                        "postal_code": "SW1 2LX", 
-                        "address_line_1": "Vincent Square"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-10-04", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1982
-                     }, 
-                     "officer_role": "director", 
-                     "nationality": "British", 
-                     "occupation": "Company Director"
-                  }, 
-                  {
-                     "name": "WEBB, Lawrence John", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/z9iI-4lzb5sDmU3hjVRAjXjukqw/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "97a", 
-                        "country": "United Kingdom", 
-                        "locality": "London", 
-                        "postal_code": "N65LW", 
-                        "address_line_1": "Hornsey Lane"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-10-04", 
-                     "date_of_birth": {
-                        "year": 1950, 
-                        "month": 12
-                     }, 
-                     "officer_role": "director", 
-                     "nationality": "British", 
-                     "occupation": "Contractor"
-                  }
-               ], 
-               "isIncome": false, 
-               "amount": 15, 
-               "link": "https://beta.companieshouse.gov.uk/company/08718759", 
-               "pretty": "Until 14 February 2017, director and sole shareholder in Vincent Square Properties; company formed for renovation of my London property, now dissolved.", 
-               "item_id": "0001", 
-               "category_id": 8, 
-               "isGift": false, 
-               "company": {
-                  "status": "active", 
-                  "has_insolvency_history": false, 
-                  "links": {
-                     "filing_history": "/company/08718759/filing-history", 
-                     "self": "/company/08718759", 
-                     "officers": "/company/08718759/officers", 
-                     "persons_with_significant_control": "/company/08718759/persons-with-significant-control"
-                  }, 
-                  "can_file": false, 
-                  "sic_codes": [
-                     "74990"
-                  ], 
-                  "etag": "de0c3aea4beb2cb7a5e1036ec56563fbb7031a8e", 
-                  "registered_office_address": {
-                     "postal_code": "NW5 2RD", 
-                     "address_line_1": "Mccrone House", 
-                     "address_line_2": "155a Leighton Road", 
-                     "locality": "London"
-                  }, 
-                  "undeliverable_registered_office_address": false, 
-                  "items": [], 
-                  "jurisdiction": "england-wales", 
-                  "company_number": "08718759", 
-                  "last_full_members_list_date": "2015-10-04", 
-                  "date_of_creation": "2013-10-04", 
-                  "has_been_liquidated": false, 
-                  "accounts": {
-                     "last_accounts": {
-                        "made_up_to": "2015-10-31"
-                     }, 
-                     "accounting_reference_date": {
-                        "day": "31", 
-                        "month": "10"
-                     }
-                  }, 
-                  "company_name": "VINCENT SQUARE PROPERTIES LTD", 
-                  "company_status": "dissolved", 
-                  "has_charges": false, 
-                  "type": "ltd", 
-                  "registered_office_is_in_dispute": false, 
-                  "date_of_cessation": "2017-02-14"
-               }
-            }
-         ], 
-         "category_amount": 15, 
+         "items": [], 
+         "category_amount": 0, 
          "display": "robert jenrick", 
          "category_donations": 0, 
          "first": "robert"
@@ -716,6 +546,12 @@
                "from_date": "2018-01-09", 
                "to_date": "9999-12-31", 
                "position": "The Exchequer Secretary"
+            }, 
+            {
+               "dept": "Public Accounts Committee", 
+               "from_date": "2018-02-05", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
             }
          ], 
          "chair_salary": 15025, 
@@ -750,8 +586,8 @@
                         "ownership-of-shares-75-to-100-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1982, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1982
                      }, 
                      "name_elements": {
                         "title": "Mr", 
@@ -824,6 +660,12 @@
                            "appointments": "/officers/4u-zXiy9bkqEgElkB2b3wS8Hbew/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-10-04", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1982
+                     }, 
                      "address": {
                         "premises": "11", 
                         "country": "United Kingdom", 
@@ -831,14 +673,8 @@
                         "postal_code": "SW1 2LX", 
                         "address_line_1": "Vincent Square"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-10-04", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1982
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -851,8 +687,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-10-04", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1950
+                        "year": 1950, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "97a", 
@@ -946,6 +782,7 @@
    "constituency": "Newark", 
    "mp_gifts": 444, 
    "commitees": [
-      "Health Committee"
+      "Public Accounts Committee", 
+      "Health and Social Care Committee"
    ]
 }

@@ -47,17 +47,33 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2015-07-08T00:00:00", 
-            "EndDate": "2017-05-03T00:00:00", 
-            "Name": "Environment, Food and Rural Affairs Committee", 
-            "IsCoOpted": "False", 
-            "EndNote": "Dissolution of Parliament", 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "52"
-         }
+         "Committee": [
+            {
+               "StartDate": "2018-02-08T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Speaker's Committee on the Electoral Commission", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "144"
+            }, 
+            {
+               "StartDate": "2015-07-08T00:00:00", 
+               "EndDate": "2017-05-03T00:00:00", 
+               "Name": "Environment, Food and Rural Affairs Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": "Dissolution of Parliament", 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "52"
+            }
+         ]
       }, 
       "GovernmentPosts": {
          "GovernmentPost": {
@@ -98,9 +114,27 @@
       "Gender": "M", 
       "DisplayAs": "Rishi Sunak", 
       "HouseStartDate": "2015-05-07T00:00:00", 
+      "@Clerks_Id": "1412", 
       "LayingMinisterName": "Rishi Sunak", 
       "Addresses": {
          "Address": [
+            {
+               "Fax": null, 
+               "@Type_Id": "1", 
+               "Address1": "House of Commons", 
+               "Address2": "London", 
+               "Address3": null, 
+               "Address4": null, 
+               "Address5": null, 
+               "Note": null, 
+               "Phone": "020 7219 5437", 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Parliamentary", 
+               "Email": "rishi.sunak.mp@parliament.uk", 
+               "Postcode": "SW1A 0AA"
+            }, 
             {
                "@Type_Id": "6", 
                "Address1": "http://www.rishisunak.com/", 
@@ -133,23 +167,6 @@
                "Type": "Constituency", 
                "Email": "rishi.sunak.mp@parliament.uk", 
                "Postcode": "DL6 2NJ"
-            }, 
-            {
-               "Fax": null, 
-               "@Type_Id": "1", 
-               "Address1": "House of Commons", 
-               "Address2": "London", 
-               "Address3": null, 
-               "Address4": null, 
-               "Address5": null, 
-               "Note": null, 
-               "Phone": "020 7219 5437", 
-               "OtherAddress": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "True", 
-               "Type": "Parliamentary", 
-               "Email": "rishi.sunak.mp@parliament.uk", 
-               "Postcode": "SW1A 0AA"
             }
          ]
       }, 
@@ -207,6 +224,12 @@
       "and", 
       "Local", 
       "Government)", 
+      "Speaker's", 
+      "Committee", 
+      "on", 
+      "the", 
+      "Electoral", 
+      "Commission", 
       "Environment,", 
       "Food", 
       "and", 
@@ -469,6 +492,12 @@
                "from_date": "2018-01-09", 
                "to_date": "9999-12-31", 
                "position": "Parliamentary Under-Secretary (Housing, Communities and Local Government)"
+            }, 
+            {
+               "dept": "Speaker's Committee on the Electoral Commission", 
+               "from_date": "2018-02-08", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
             }
          ], 
          "chair_salary": 15025, 
@@ -517,17 +546,17 @@
                            "appointments": "/officers/LVOou0dp7TNZ6nj7zMkg6Ueftv4/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-01-24", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1976
-                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "address_line_1": "Three Mill Lane", 
                         "postal_code": "E3 3DU", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-01-24", 
+                     "date_of_birth": {
+                        "year": 1976, 
+                        "month": 1
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -543,8 +572,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2017-09-12", 
                      "date_of_birth": {
-                        "year": 1984, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1984
                      }, 
                      "address": {
                         "premises": "The Clock Mill", 
@@ -552,8 +581,8 @@
                         "postal_code": "E3 3DU", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -572,12 +601,12 @@
                      "address": {
                         "premises": "The Clock Mill", 
                         "country": "England", 
-                        "locality": "London", 
+                        "address_line_1": "Three Mill Lane", 
                         "postal_code": "E3 3DU", 
-                        "address_line_1": "Three Mill Lane"
+                        "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Hr Proffessional"
                   }, 
                   {
@@ -587,20 +616,20 @@
                            "appointments": "/officers/tCOiWC3exmKTtATn0SNcdZQtki8/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2017-09-12", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1989
+                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "address_line_1": "Three Mill Lane", 
                         "postal_code": "E3 3DU", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2017-09-12", 
-                     "date_of_birth": {
-                        "year": 1989, 
-                        "month": 6
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Membership Coordinator"
                   }, 
                   {
@@ -610,12 +639,6 @@
                            "appointments": "/officers/lFhMKnUM6XZa13rWq1FAAlxmQ5E/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-12-15", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1950
-                     }, 
                      "address": {
                         "locality": "Bromley By Bow", 
                         "premises": "The Clock Mill", 
@@ -623,6 +646,12 @@
                         "region": "Newham", 
                         "postal_code": "E3 3DU", 
                         "address_line_1": "3 Mill Lane"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-12-15", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1950
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -635,17 +664,17 @@
                            "appointments": "/officers/0fuLfIMyaiFxkWXrJTEocY3ZGr8/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2016-07-05", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1972
-                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "address_line_1": "3 Mill Lane", 
                         "postal_code": "E3 3DU", 
                         "locality": "London"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2016-07-05", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1972
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -658,6 +687,12 @@
                            "appointments": "/officers/C8OS663EGxXUuw6wVcoD2fpShZg/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-01-21", 
+                     "date_of_birth": {
+                        "year": 1950, 
+                        "month": 3
+                     }, 
                      "address": {
                         "locality": "Bromley By Bow", 
                         "premises": "The Clock Mill", 
@@ -665,12 +700,6 @@
                         "region": "Newham", 
                         "postal_code": "E3 3DU", 
                         "address_line_1": "3 Mill Lane"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-01-21", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1950
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -683,18 +712,18 @@
                            "appointments": "/officers/yfnpGv9DUOxtl9_vmApG3UIA-Cg/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2012-02-23", 
+                     "date_of_birth": {
+                        "month": 9, 
+                        "year": 1962
+                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "country": "England", 
                         "address_line_1": "Three Mill Lane", 
                         "postal_code": "E3 3DU", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2012-02-23", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 9
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -707,12 +736,6 @@
                            "appointments": "/officers/NcFiyQ6MOGW18ulhuy85xwsFjcM/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2015-03-01", 
-                     "date_of_birth": {
-                        "year": 1962, 
-                        "month": 2
-                     }, 
                      "address": {
                         "locality": "Newham", 
                         "premises": "The Clock Mill", 
@@ -720,6 +743,12 @@
                         "postal_code": "E3 3DU", 
                         "address_line_2": "Bromley By Bow", 
                         "address_line_1": "3 Mill Lane"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2015-03-01", 
+                     "date_of_birth": {
+                        "month": 2, 
+                        "year": 1962
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -732,19 +761,19 @@
                            "appointments": "/officers/q-5ZHhGQ4Rj04-_j5FwY4-dqW-A/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2013-12-16", 
+                     "resigned_on": "2016-12-01", 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 10
+                     }, 
                      "address": {
                         "premises": "Clock Mill", 
                         "country": "United Kingdom", 
                         "address_line_1": "3 Mill Lane", 
                         "postal_code": "E3 3DU", 
                         "locality": "London"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2013-12-16", 
-                     "resigned_on": "2016-12-01", 
-                     "date_of_birth": {
-                        "month": 10, 
-                        "year": 1984
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -757,19 +786,19 @@
                            "appointments": "/officers/kIsFYNjvcmstPy0rEw697KPEG64/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "The Clock Mill", 
-                        "country": "England", 
-                        "locality": "London", 
-                        "postal_code": "E3 3AU", 
-                        "address_line_1": "3 Mill Lane"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2013-12-03", 
                      "resigned_on": "2015-11-15", 
                      "date_of_birth": {
                         "year": 1978, 
                         "month": 11
+                     }, 
+                     "address": {
+                        "premises": "The Clock Mill", 
+                        "country": "England", 
+                        "locality": "London", 
+                        "postal_code": "E3 3AU", 
+                        "address_line_1": "3 Mill Lane"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -796,8 +825,8 @@
                         "postal_code": "E3 3DU", 
                         "address_line_1": "Three Mill Lane"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -807,13 +836,6 @@
                            "appointments": "/officers/pH_FLYBEpyp3huMQDHR2GoMNeOw/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-01-17", 
-                     "resigned_on": "2016-01-11", 
-                     "date_of_birth": {
-                        "year": 1987, 
-                        "month": 10
-                     }, 
                      "address": {
                         "locality": "Bromley-By-Bow", 
                         "premises": "The Clock Mill", 
@@ -822,8 +844,15 @@
                         "postal_code": "E3 3DU", 
                         "address_line_1": "Three Mill Lane"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-01-17", 
+                     "resigned_on": "2016-01-11", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1987
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Barrister"
                   }, 
                   {
@@ -833,13 +862,6 @@
                            "appointments": "/officers/b3tMmP0sdf9EWVgoWzNUYyppiAY/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "The Clock Mill", 
-                        "country": "England", 
-                        "locality": "London", 
-                        "postal_code": "E3 3DU", 
-                        "address_line_1": "Three Mill Lane"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-03-01", 
                      "resigned_on": "2017-03-01", 
@@ -847,8 +869,15 @@
                         "year": 1964, 
                         "month": 10
                      }, 
-                     "nationality": "British", 
+                     "address": {
+                        "premises": "The Clock Mill", 
+                        "country": "England", 
+                        "locality": "London", 
+                        "postal_code": "E3 3DU", 
+                        "address_line_1": "Three Mill Lane"
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Creative Director"
                   }, 
                   {
@@ -858,19 +887,19 @@
                            "appointments": "/officers/kA5mu0dbJdUkdqOWZv3xLDxoVww/appointments"
                         }
                      }, 
-                     "address": {
-                        "premises": "The Clock Mill", 
-                        "country": "England", 
-                        "address_line_1": "Three Mill Lane", 
-                        "postal_code": "E3 3DU", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-06-20", 
                      "resigned_on": "2017-06-19", 
                      "date_of_birth": {
                         "month": 10, 
                         "year": 1953
+                     }, 
+                     "address": {
+                        "premises": "The Clock Mill", 
+                        "country": "England", 
+                        "address_line_1": "Three Mill Lane", 
+                        "postal_code": "E3 3DU", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -883,19 +912,19 @@
                            "appointments": "/officers/Z3FQC9pcl4LUemTw7v2jXdZrGX8/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2012-08-09", 
-                     "resigned_on": "2015-09-16", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1984
-                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "country": "England", 
                         "locality": "London", 
                         "postal_code": "E3 3DU", 
                         "address_line_1": "Three Mill Lane"
+                     }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2012-08-09", 
+                     "resigned_on": "2015-09-16", 
+                     "date_of_birth": {
+                        "year": 1984, 
+                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -957,13 +986,6 @@
                            "appointments": "/officers/lhrs9nzq_xzl9nqGKEpNeqejIgs/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2013-06-01", 
-                     "resigned_on": "2014-06-17", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1969
-                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "country": "England", 
@@ -971,8 +993,15 @@
                         "postal_code": "E3 3DU", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2013-06-01", 
+                     "resigned_on": "2014-06-17", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 12
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Project Manager"
                   }, 
                   {
@@ -996,8 +1025,8 @@
                         "postal_code": "E3 3DU", 
                         "address_line_1": "Three Mill Lane"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Development Manager"
                   }, 
                   {
@@ -1007,6 +1036,13 @@
                            "appointments": "/officers/0B13jPuAE2FH2Je4VlALAgUJzLI/appointments"
                         }
                      }, 
+                     "country_of_residence": "Uk", 
+                     "appointed_on": "2013-12-03", 
+                     "resigned_on": "2015-11-15", 
+                     "date_of_birth": {
+                        "year": 1980, 
+                        "month": 5
+                     }, 
                      "address": {
                         "premises": "The Clock Mill", 
                         "country": "Uk", 
@@ -1014,15 +1050,8 @@
                         "postal_code": "E3 3DU", 
                         "locality": "London"
                      }, 
-                     "country_of_residence": "Uk", 
-                     "appointed_on": "2013-12-03", 
-                     "resigned_on": "2015-11-15", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1980
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Director"
                   }, 
                   {
@@ -1065,12 +1094,12 @@
                         "address_line_2": "Bromley By Bow", 
                         "address_line_1": "3 Mill Lane"
                      }, 
-                     "country_of_residence": "Uk", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2015-03-01", 
                      "resigned_on": "2016-10-18", 
                      "date_of_birth": {
-                        "year": 1973, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1973
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1094,11 +1123,11 @@
                      "appointed_on": "2012-09-13", 
                      "resigned_on": "2013-12-03", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1952
+                        "year": 1952, 
+                        "month": 12
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Self Employed Consultant"
                   }, 
                   {
@@ -1112,8 +1141,8 @@
                      "appointed_on": "2016-07-05", 
                      "resigned_on": "2017-04-04", 
                      "date_of_birth": {
-                        "year": 1934, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1934
                      }, 
                      "address": {
                         "premises": "The Clock Mill", 
@@ -1121,8 +1150,8 @@
                         "postal_code": "E3 3DU", 
                         "locality": "London"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Professor Part Time"
                   }
                ], 
@@ -1146,20 +1175,20 @@
                   "sic_codes": [
                      "85310"
                   ], 
-                  "etag": "1bb211f34d4f2804fe306c8372f624fc6aae8a7b", 
+                  "etag": "c048337817a859dcf0474d36a8eaf97c1f8e27b3", 
                   "registered_office_address": {
-                     "address_line_2": "Three Mill Lane", 
-                     "address_line_1": "The Clock Mill", 
                      "postal_code": "E3 3DU", 
+                     "address_line_1": "The Clock Mill", 
+                     "address_line_2": "Three Mill Lane", 
                      "locality": "London"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-03-09", 
-                     "last_made_up_to": "2017-02-23", 
-                     "next_made_up_to": "2018-02-23", 
+                     "next_due": "2019-03-09", 
+                     "last_made_up_to": "2018-02-23", 
+                     "next_made_up_to": "2019-02-23", 
                      "overdue": false
                   }, 
                   "company_number": "07962059", 
@@ -1167,18 +1196,18 @@
                   "has_insolvency_history": false, 
                   "has_been_liquidated": false, 
                   "accounts": {
-                     "next_due": "2018-05-31", 
-                     "next_made_up_to": "2017-08-31", 
+                     "next_due": "2019-05-31", 
+                     "next_made_up_to": "2018-08-31", 
                      "last_accounts": {
-                        "period_start_on": "2015-09-01", 
+                        "period_start_on": "2016-09-01", 
                         "type": "full", 
-                        "made_up_to": "2016-08-31", 
-                        "period_end_on": "2016-08-31"
+                        "made_up_to": "2017-08-31", 
+                        "period_end_on": "2017-08-31"
                      }, 
                      "next_accounts": {
-                        "due_on": "2018-05-31", 
-                        "period_start_on": "2016-09-01", 
-                        "period_end_on": "2017-08-31", 
+                        "due_on": "2019-05-31", 
+                        "period_start_on": "2017-09-01", 
+                        "period_end_on": "2018-08-31", 
                         "overdue": false
                      }, 
                      "accounting_reference_date": {
@@ -1255,18 +1284,18 @@
                            "appointments": "/officers/V-HnkdwjAoNmK-soyeZVDG7sn5A/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2011-01-04", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1972
+                        "year": 1972, 
+                        "month": 5
                      }, 
                      "address": {
                         "premises": "7", 
-                        "country": "Uk", 
-                        "address_line_1": "Clifford Street", 
+                        "country": "United Kingdom", 
+                        "locality": "London", 
                         "postal_code": "W1S 2FT", 
-                        "locality": "London"
+                        "address_line_1": "Clifford Street"
                      }, 
                      "officer_role": "llp-designated-member"
                   }, 
@@ -1286,9 +1315,9 @@
                      "address": {
                         "premises": "7", 
                         "country": "United Kingdom", 
-                        "locality": "London", 
+                        "address_line_1": "Clifford Street", 
                         "postal_code": "W1S 2FT", 
-                        "address_line_1": "Clifford Street"
+                        "locality": "London"
                      }, 
                      "officer_role": "corporate-llp-designated-member"
                   }, 
@@ -1343,8 +1372,8 @@
                      }, 
                      "appointed_on": "2007-07-03", 
                      "date_of_birth": {
-                        "year": 1960, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1960
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1364,8 +1393,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-05-15", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1973
+                        "year": 1973, 
+                        "month": 1
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1382,7 +1411,7 @@
                            "appointments": "/officers/lXG0DUEZ6L8hlFwtvYKocY-4-1E/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2012-07-01", 
                      "date_of_birth": {
                         "year": 1981, 
@@ -1406,8 +1435,8 @@
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2013-01-01", 
                      "date_of_birth": {
-                        "year": 1981, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1981
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1416,43 +1445,6 @@
                         "locality": "London"
                      }, 
                      "officer_role": "llp-member"
-                  }, 
-                  {
-                     "name": "VELDHUIJZEN, Oscar Adrianus", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/ihnPnc5KdgsDB20d9DC2N1Xi2YA/appointments"
-                        }
-                     }, 
-                     "appointed_on": "2005-03-07", 
-                     "date_of_birth": {
-                        "year": 1968, 
-                        "month": 9
-                     }, 
-                     "address": {
-                        "premises": "7", 
-                        "locality": "London", 
-                        "postal_code": "W1S 2FT", 
-                        "address_line_1": "Clifford Street"
-                     }, 
-                     "officer_role": "llp-member"
-                  }, 
-                  {
-                     "appointed_on": "2004-07-08", 
-                     "officer_role": "corporate-llp-member", 
-                     "name": "CIFF (UK) TRADING LIMITED", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/tUuZnCWCs3lTSV7IFcpYj1m3PxU/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "7", 
-                        "country": "Uk", 
-                        "address_line_1": "Clifford Street", 
-                        "postal_code": "W1S 2FT", 
-                        "locality": "London"
-                     }
                   }, 
                   {
                      "name": "HOHN, Christopher Anthony", 
@@ -1557,8 +1549,8 @@
                      "appointed_on": "2005-01-04", 
                      "resigned_on": "2006-04-27", 
                      "date_of_birth": {
-                        "month": 10, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 10
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1595,18 +1587,18 @@
                            "appointments": "/officers/_CtcZn5DhvgB339lXsw_9_FeCBg/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2009-11-01", 
                      "resigned_on": "2015-10-09", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1975
+                        "year": 1975, 
+                        "month": 8
                      }, 
                      "address": {
                         "premises": "7", 
-                        "address_line_1": "Clifford Street", 
+                        "locality": "London", 
                         "postal_code": "W1S 2FT", 
-                        "locality": "London"
+                        "address_line_1": "Clifford Street"
                      }, 
                      "officer_role": "llp-member"
                   }, 
@@ -1620,8 +1612,8 @@
                      "appointed_on": "2004-02-16", 
                      "resigned_on": "2009-07-01", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1975
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1643,8 +1635,8 @@
                      "appointed_on": "2008-06-24", 
                      "resigned_on": "2012-05-29", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1980
+                        "year": 1980, 
+                        "month": 8
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1665,8 +1657,8 @@
                      "appointed_on": "2008-09-17", 
                      "resigned_on": "2012-09-02", 
                      "date_of_birth": {
-                        "year": 1973, 
-                        "month": 6
+                        "month": 6, 
+                        "year": 1973
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1731,8 +1723,8 @@
                      "appointed_on": "2007-10-11", 
                      "resigned_on": "2009-04-26", 
                      "date_of_birth": {
-                        "month": 6, 
-                        "year": 1971
+                        "year": 1971, 
+                        "month": 6
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1755,8 +1747,8 @@
                      "appointed_on": "2007-10-25", 
                      "resigned_on": "2014-04-30", 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1976
+                        "year": 1976, 
+                        "month": 5
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1798,8 +1790,8 @@
                      "appointed_on": "2004-03-01", 
                      "resigned_on": "2004-03-31", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 12
+                        "month": 12, 
+                        "year": 1975
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1821,8 +1813,8 @@
                      "appointed_on": "2004-01-02", 
                      "resigned_on": "2008-06-25", 
                      "date_of_birth": {
-                        "year": 1975, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1975
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1867,8 +1859,8 @@
                      "appointed_on": "2009-11-01", 
                      "resigned_on": "2011-04-08", 
                      "date_of_birth": {
-                        "year": 1978, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1978
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1889,8 +1881,8 @@
                      "appointed_on": "2006-04-18", 
                      "resigned_on": "2015-06-29", 
                      "date_of_birth": {
-                        "month": 12, 
-                        "year": 1973
+                        "year": 1973, 
+                        "month": 12
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1911,8 +1903,8 @@
                      "appointed_on": "2008-03-17", 
                      "resigned_on": "2015-06-29", 
                      "date_of_birth": {
-                        "year": 1970, 
-                        "month": 10
+                        "month": 10, 
+                        "year": 1970
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1932,8 +1924,8 @@
                      "appointed_on": "2006-02-28", 
                      "resigned_on": "2009-10-15", 
                      "date_of_birth": {
-                        "month": 4, 
-                        "year": 1979
+                        "year": 1979, 
+                        "month": 4
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1956,8 +1948,8 @@
                      "appointed_on": "2008-01-01", 
                      "resigned_on": "2015-06-29", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1976
+                        "year": 1976, 
+                        "month": 3
                      }, 
                      "address": {
                         "premises": "7", 
@@ -1987,6 +1979,51 @@
                         "address_line_1": "Godfrey Street"
                      }, 
                      "officer_role": "llp-member"
+                  }, 
+                  {
+                     "name": "MILNE, Angus Derrick Murray", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/5kTw7mmuNaiVkzrUFNTn121cY5g/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2008-08-01", 
+                     "resigned_on": "2015-06-29", 
+                     "date_of_birth": {
+                        "year": 1956, 
+                        "month": 7
+                     }, 
+                     "address": {
+                        "premises": "7", 
+                        "address_line_1": "Clifford Street", 
+                        "postal_code": "W1S 2FT", 
+                        "locality": "London"
+                     }, 
+                     "officer_role": "llp-member"
+                  }, 
+                  {
+                     "name": "MOODGAL, Rahul Nath", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/yQHBbRQje-6wcKF1WTFTD14cGyw/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2005-10-10", 
+                     "resigned_on": "2009-09-01", 
+                     "date_of_birth": {
+                        "year": 1971, 
+                        "month": 10
+                     }, 
+                     "address": {
+                        "locality": "Streatham", 
+                        "country": " ", 
+                        "region": " ", 
+                        "postal_code": "SW16 3HL", 
+                        "address_line_2": "Streatham Common North", 
+                        "address_line_1": "23 Javelin Court"
+                     }, 
+                     "officer_role": "llp-member"
                   }
                ], 
                "isIncome": false, 
@@ -2005,7 +2042,7 @@
                      "officers": "/company/OC304797/officers", 
                      "persons_with_significant_control": "/company/OC304797/persons-with-significant-control"
                   }, 
-                  "etag": "2f9921c7493fe930381235ba1021ef785423ad98", 
+                  "etag": "8822c261691315fd16f99ee59677fc50e9fa01a0", 
                   "registered_office_address": {
                      "address_line_1": "7 Clifford Street", 
                      "postal_code": "W1S 2FT", 
@@ -2015,9 +2052,9 @@
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-07-10", 
-                     "last_made_up_to": "2017-06-26", 
-                     "next_made_up_to": "2018-06-26", 
+                     "next_due": "2019-07-10", 
+                     "last_made_up_to": "2018-06-26", 
+                     "next_made_up_to": "2019-06-26", 
                      "overdue": false
                   }, 
                   "company_number": "OC304797", 
@@ -2086,6 +2123,7 @@
    "constituency": "Richmond (Yorks)", 
    "mp_gifts": 0, 
    "commitees": [
+      "Speaker's Committee on the Electoral Commission", 
       "Environment, Food and Rural Affairs Committee"
    ]
 }

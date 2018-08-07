@@ -114,9 +114,18 @@
       "Gender": "M", 
       "DisplayAs": "Richard Drax", 
       "HouseStartDate": "2010-05-06T00:00:00", 
+      "@Clerks_Id": "1219", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
+            {
+               "@Type_Id": "6", 
+               "Address1": "http://www.richarddrax.com/", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Website"
+            }, 
             {
                "Fax": null, 
                "@Type_Id": "1", 
@@ -150,14 +159,6 @@
                "Type": "Constituency", 
                "Email": null, 
                "Postcode": "DT2 8ZB"
-            }, 
-            {
-               "@Type_Id": "6", 
-               "Address1": "http://www.richarddrax.com/", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Website"
             }
          ]
       }, 
@@ -483,34 +484,57 @@
                      "links": {
                         "self": "/company/00186354/persons-with-significant-control/individual/F4F8bcq6aqnvZnuRXsl7dtB_CH0"
                      }, 
-                     "notified_on": "2016-06-30", 
-                     "country_of_residence": "Great Britain", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "ownership-of-shares-75-to-100-percent"
                      ], 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 1
+                     }, 
                      "name_elements": {
                         "middle_name": "Grosvenor", 
-                        "title": "Mr", 
+                        "forename": "Richard", 
                         "surname": "Plunkett-Ernle-Erle-Drax", 
-                        "forename": "Richard"
+                        "title": "Mr"
                      }, 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
-                     }, 
-                     "etag": "4e0c7754c639334b7d2fa2735f26962717f886f4", 
+                     "notified_on": "2016-06-30", 
+                     "etag": "09464ca280b32e7876d825c49f03eda27e6e0f67", 
                      "address": {
                         "premises": "Estate Office", 
                         "country": "England", 
-                        "address_line_1": "Charborough Park", 
+                        "locality": "Wareham", 
                         "postal_code": "BH20 7EN", 
-                        "locality": "Wareham"
+                        "address_line_1": "Charborough Park"
                      }, 
                      "nationality": "British"
                   }
                ], 
                "registered": null, 
                "officers": [
+                  {
+                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Charborough House", 
+                        "region": "Dorset", 
+                        "address_line_1": "Charborough Park", 
+                        "postal_code": "BH20 7EW", 
+                        "locality": "Wareham"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1958
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Company Director"
+                  }, 
                   {
                      "name": "BOWERMAN, Jason David", 
                      "links": {
@@ -521,37 +545,15 @@
                      "address": {
                         "premises": "West Morden House", 
                         "region": "Dorset", 
-                        "address_line_1": "Morden", 
+                        "locality": "Wareham", 
                         "postal_code": "BH20 7EA", 
-                        "locality": "Wareham"
+                        "address_line_1": "Morden"
                      }, 
                      "appointed_on": "2008-05-02", 
+                     "resigned_on": "2018-07-16", 
                      "nationality": "British", 
                      "officer_role": "secretary", 
                      "occupation": "Land Agent"
-                  }, 
-                  {
-                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
-                        }
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
-                     }, 
-                     "address": {
-                        "premises": "Charborough House", 
-                        "region": "Dorset", 
-                        "locality": "Wareham", 
-                        "postal_code": "BH20 7EW", 
-                        "address_line_1": "Charborough Park"
-                     }, 
-                     "officer_role": "director", 
-                     "nationality": "British", 
-                     "occupation": "Company Director"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -586,11 +588,11 @@
                      "country_of_residence": "England", 
                      "resigned_on": "2017-07-04", 
                      "date_of_birth": {
-                        "month": 3, 
-                        "year": 1928
+                        "year": 1928, 
+                        "month": 3
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -698,6 +700,12 @@
                            "appointments": "/officers/Fb1n9SweIa0rtGYVHo1-8CkaVbY/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-12-17", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1963
+                     }, 
                      "address": {
                         "locality": "Witney", 
                         "premises": "6", 
@@ -705,12 +713,6 @@
                         "region": "Oxfordshire", 
                         "postal_code": "OX28 4AW", 
                         "address_line_1": "Church Green"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-12-17", 
-                     "date_of_birth": {
-                        "month": 6, 
-                        "year": 1963
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -769,26 +771,26 @@
                "persons": [
                   {
                      "kind": "individual-person-with-significant-control", 
-                     "name": "Mr Henry Walter Plunkett-Ernle-Erle-Drax", 
+                     "name": "Mr Richard Grosvenor Plunkett-Ernle-Erle Drax", 
                      "links": {
-                        "self": "/company/06892084/persons-with-significant-control/individual/49gSs7AXJuuN044ZrybG6-uJiow"
+                        "self": "/company/06892084/persons-with-significant-control/individual/9JHg_FxCi_5i0x5_8SkoexesnkU"
                      }, 
+                     "notified_on": "2017-07-04", 
                      "country_of_residence": "England", 
                      "natures_of_control": [
-                        "ownership-of-shares-75-to-100-percent"
+                        "significant-influence-or-control"
                      ], 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 3
-                     }, 
                      "name_elements": {
-                        "surname": "Plunkett-Ernle-Erle-Drax", 
-                        "forename": "Henry", 
-                        "middle_name": "Walter", 
-                        "title": "Mr"
+                        "surname": "Drax", 
+                        "title": "Mr", 
+                        "middle_name": "Grosvenor Plunkett-Ernle-Erle", 
+                        "forename": "Richard"
                      }, 
-                     "notified_on": "2017-04-28", 
-                     "etag": "07b706f4d8b1a6be82c1e882b16016ed6dcd9a2e", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 1
+                     }, 
+                     "etag": "758754ed45570eb9f244fc17f372b2d48252431c", 
                      "address": {
                         "premises": "Estate Office", 
                         "region": "Dorset", 
@@ -797,59 +799,54 @@
                         "address_line_1": "Charborough Park"
                      }, 
                      "nationality": "British"
-                  }
-               ], 
-               "registered": "05/06/2015", 
-               "officers": [
-                  {
-                     "appointed_on": "2009-04-29", 
-                     "officer_role": "secretary", 
-                     "name": "BOWERMAN, Jason", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/qgHQzLjr2DYFymN7Fj_OpImygBE/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "locality": "Wareham", 
-                        "premises": "West Morden House", 
-                        "country": "England", 
-                        "region": "Dorset", 
-                        "postal_code": "BH20 7EA", 
-                        "address_line_1": "West Morden"
-                     }
                   }, 
                   {
-                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Henry Walter", 
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-07-04", 
+                     "name": "Mr Henry Walter Plunkett-Ernle-Erle-Drax", 
                      "links": {
-                        "officer": {
-                           "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
-                        }
+                        "self": "/company/06892084/persons-with-significant-control/individual/49gSs7AXJuuN044ZrybG6-uJiow"
                      }, 
+                     "notified_on": "2017-04-28", 
                      "country_of_residence": "England", 
-                     "appointed_on": "2009-04-29", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent"
+                     ], 
+                     "name_elements": {
+                        "surname": "Plunkett-Ernle-Erle-Drax", 
+                        "forename": "Henry", 
+                        "middle_name": "Walter", 
+                        "title": "Mr"
+                     }, 
                      "date_of_birth": {
                         "month": 3, 
                         "year": 1928
                      }, 
+                     "etag": "da6d48ebb5c9b608dff0a5d8908f5e1418ddc751", 
                      "address": {
-                        "locality": "Wareham", 
-                        "premises": "Garden House", 
-                        "country": "United Kingdom", 
+                        "premises": "Estate Office", 
                         "region": "Dorset", 
-                        "postal_code": "BH20 7EL", 
-                        "address_line_1": "Charborough Park"
+                        "address_line_1": "Charborough Park", 
+                        "postal_code": "BH20 7EW", 
+                        "locality": "Wareham"
                      }, 
-                     "nationality": "British", 
-                     "officer_role": "director", 
-                     "occupation": "Director"
-                  }, 
+                     "nationality": "British"
+                  }
+               ], 
+               "registered": "05/06/2015", 
+               "officers": [
                   {
                      "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
                         }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-04-29", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 1
                      }, 
                      "address": {
                         "locality": "Wareham", 
@@ -859,15 +856,28 @@
                         "postal_code": "BH20 7EW", 
                         "address_line_1": "Charborough Park"
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2009-04-29", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
+                  }, 
+                  {
+                     "name": "BOWERMAN, Jason", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/qgHQzLjr2DYFymN7Fj_OpImygBE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2009-04-29", 
+                     "resigned_on": "2018-07-16", 
+                     "address": {
+                        "locality": "Wareham", 
+                        "premises": "West Morden House", 
+                        "country": "England", 
+                        "region": "Dorset", 
+                        "postal_code": "BH20 7EA", 
+                        "address_line_1": "West Morden"
+                     }, 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "RWL REGISTRARS LIMITED", 
@@ -886,6 +896,32 @@
                         "address_line_1": "134 Percival Road"
                      }, 
                      "officer_role": "corporate-secretary"
+                  }, 
+                  {
+                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Henry Walter", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-04-29", 
+                     "resigned_on": "2017-07-04", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1928
+                     }, 
+                     "address": {
+                        "locality": "Wareham", 
+                        "premises": "Garden House", 
+                        "country": "United Kingdom", 
+                        "region": "Dorset", 
+                        "postal_code": "BH20 7EL", 
+                        "address_line_1": "Charborough Park"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
@@ -908,21 +944,21 @@
                   "sic_codes": [
                      "01110"
                   ], 
-                  "etag": "07d2a42fa83d3a8e626531a1712108babc5b8b70", 
+                  "etag": "82b728af57a8d5286001c5b89d5c2cdc5e108315", 
                   "registered_office_address": {
-                     "postal_code": "BH20 7EW", 
-                     "region": "Dorset", 
-                     "locality": "Wareham", 
                      "address_line_2": "Charborough Park", 
-                     "address_line_1": "Estate Office"
+                     "region": "Dorset", 
+                     "address_line_1": "Estate Office", 
+                     "postal_code": "BH20 7EW", 
+                     "locality": "Wareham"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-05-13", 
-                     "last_made_up_to": "2017-04-29", 
-                     "next_made_up_to": "2018-04-29", 
+                     "next_due": "2019-05-13", 
+                     "last_made_up_to": "2018-04-29", 
+                     "next_made_up_to": "2019-04-29", 
                      "overdue": false
                   }, 
                   "company_number": "06892084", 
@@ -931,18 +967,18 @@
                   "has_insolvency_history": false, 
                   "has_been_liquidated": false, 
                   "accounts": {
-                     "next_due": "2018-06-30", 
-                     "next_made_up_to": "2017-09-30", 
+                     "next_due": "2019-06-30", 
+                     "next_made_up_to": "2018-09-30", 
                      "last_accounts": {
-                        "period_start_on": "2015-10-01", 
+                        "period_start_on": "2016-10-01", 
                         "type": "dormant", 
-                        "made_up_to": "2016-09-30", 
-                        "period_end_on": "2016-09-30"
+                        "made_up_to": "2017-09-30", 
+                        "period_end_on": "2017-09-30"
                      }, 
                      "next_accounts": {
-                        "due_on": "2018-06-30", 
-                        "period_start_on": "2016-10-01", 
-                        "period_end_on": "2017-09-30", 
+                        "due_on": "2019-06-30", 
+                        "period_start_on": "2017-10-01", 
+                        "period_end_on": "2018-09-30", 
                         "overdue": false
                      }, 
                      "accounting_reference_date": {
@@ -1084,26 +1120,26 @@
                         "self": "/company/00802810/persons-with-significant-control/individual/cH1-HTnDkRzHSaTzyPPUKbiq2GA"
                      }, 
                      "notified_on": "2017-07-04", 
-                     "country_of_residence": "Great Britain", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "significant-influence-or-control"
                      ], 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1958
+                     }, 
                      "name_elements": {
                         "middle_name": "Grosvenor", 
                         "forename": "Richard", 
                         "surname": "Plunkett-Ernle-Erle-Drax", 
                         "title": "Mr"
                      }, 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 1
-                     }, 
-                     "etag": "7674548db4c164a6c31762125af0058d3c1e140f", 
+                     "etag": "8c0d710c7d7e1993ee5a0169df578c54e3202872", 
                      "address": {
-                        "address_line_2": "Charborough Park", 
+                        "postal_code": "BH20 7EN", 
                         "region": "Dorset", 
                         "address_line_1": "The Estate Office", 
-                        "postal_code": "BH20 7EN", 
+                        "address_line_2": "Charborough Park", 
                         "locality": "Wareham"
                      }, 
                      "nationality": "British"
@@ -1144,6 +1180,30 @@
                "registered": "", 
                "officers": [
                   {
+                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
+                        }
+                     }, 
+                     "address": {
+                        "premises": "Charborough House", 
+                        "region": "Dorset", 
+                        "locality": "Wareham", 
+                        "postal_code": "BH20 7EW", 
+                        "address_line_1": "Charborough Park"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-05-15", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1958
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Company Director"
+                  }, 
+                  {
                      "name": "BOWERMAN, Jason David", 
                      "links": {
                         "officer": {
@@ -1158,33 +1218,10 @@
                         "address_line_1": "Morden"
                      }, 
                      "appointed_on": "2009-05-15", 
-                     "nationality": "British", 
+                     "resigned_on": "2018-07-16", 
                      "officer_role": "secretary", 
-                     "occupation": "Land Agent"
-                  }, 
-                  {
-                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
-                        }
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2009-05-15", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
-                     }, 
-                     "address": {
-                        "premises": "Charborough House", 
-                        "region": "Dorset", 
-                        "address_line_1": "Charborough Park", 
-                        "postal_code": "BH20 7EW", 
-                        "locality": "Wareham"
-                     }, 
                      "nationality": "British", 
-                     "officer_role": "director", 
-                     "occupation": "Company Director"
+                     "occupation": "Land Agent"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -1236,8 +1273,8 @@
                      "appointed_on": "1995-04-28", 
                      "resigned_on": "2009-05-15", 
                      "date_of_birth": {
-                        "year": 1931, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1931
                      }, 
                      "address": {
                         "region": "Dorset", 
@@ -1325,21 +1362,21 @@
                         "self": "/company/06892065/persons-with-significant-control/individual/VzTCL9_lDY5nhhFteZEeaG8vKuk"
                      }, 
                      "notified_on": "2017-04-28", 
-                     "country_of_residence": "Great Britain", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "ownership-of-shares-75-to-100-percent"
                      ], 
                      "name_elements": {
                         "surname": "Plunkett-Ernle-Erle-Drax", 
-                        "title": "Mr", 
+                        "forename": "Richard", 
                         "middle_name": "Grosvenor", 
-                        "forename": "Richard"
+                        "title": "Mr"
                      }, 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
+                        "year": 1958, 
+                        "month": 1
                      }, 
-                     "etag": "33b85a3f062fa8364dbd556ab2a076212cf49cfb", 
+                     "etag": "b4c814fc212d7bf61099a88fd8730ebb3349013f", 
                      "address": {
                         "premises": "Estate Office", 
                         "region": "Dorset", 
@@ -1353,59 +1390,11 @@
                "registered": "", 
                "officers": [
                   {
-                     "appointed_on": "2009-04-29", 
-                     "officer_role": "secretary", 
-                     "name": "BOWERMAN, Jason", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/qgHQzLjr2DYFymN7Fj_OpImygBE/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "locality": "Wareham", 
-                        "premises": "West Morden House", 
-                        "country": "England", 
-                        "region": "Dorset", 
-                        "postal_code": "BH20 7EA", 
-                        "address_line_1": "West Morden"
-                     }
-                  }, 
-                  {
-                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Henry Walter", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "Garden House", 
-                        "region": "Dorset", 
-                        "address_line_1": "Charborough Park", 
-                        "postal_code": "BH20 7EL", 
-                        "locality": "Wareham"
-                     }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2009-04-29", 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 3
-                     }, 
-                     "nationality": "British", 
-                     "officer_role": "director", 
-                     "occupation": "Director"
-                  }, 
-                  {
                      "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
                         }
-                     }, 
-                     "country_of_residence": "Great Britain", 
-                     "appointed_on": "2009-04-29", 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
                      }, 
                      "address": {
                         "locality": "Wareham", 
@@ -1415,9 +1404,34 @@
                         "postal_code": "BH20 7EW", 
                         "address_line_1": "Charborough Park"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2009-04-29", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 1
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
+                  }, 
+                  {
+                     "name": "BOWERMAN, Jason", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/qgHQzLjr2DYFymN7Fj_OpImygBE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2009-04-29", 
+                     "resigned_on": "2018-07-16", 
+                     "address": {
+                        "locality": "Wareham", 
+                        "premises": "West Morden House", 
+                        "country": "England", 
+                        "region": "Dorset", 
+                        "postal_code": "BH20 7EA", 
+                        "address_line_1": "West Morden"
+                     }, 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "RWL REGISTRARS LIMITED", 
@@ -1436,6 +1450,31 @@
                         "address_line_1": "134 Percival Road"
                      }, 
                      "officer_role": "corporate-secretary"
+                  }, 
+                  {
+                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Henry Walter", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-04-29", 
+                     "resigned_on": "2017-07-04", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1928
+                     }, 
+                     "address": {
+                        "premises": "Garden House", 
+                        "region": "Dorset", 
+                        "locality": "Wareham", 
+                        "postal_code": "BH20 7EL", 
+                        "address_line_1": "Charborough Park"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
@@ -1458,21 +1497,21 @@
                   "sic_codes": [
                      "01110"
                   ], 
-                  "etag": "95891c104829a58e5f3e226e2cf4b8880fbd199f", 
+                  "etag": "35e257d4cf3221d3292c03cec269529489cb3151", 
                   "registered_office_address": {
-                     "address_line_2": "Charborough Park", 
+                     "postal_code": "BH20 7EN", 
                      "region": "Dorset", 
                      "address_line_1": "Estate Office", 
-                     "postal_code": "BH20 7EN", 
+                     "address_line_2": "Charborough Park", 
                      "locality": "Wareham"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-05-13", 
-                     "last_made_up_to": "2017-04-29", 
-                     "next_made_up_to": "2018-04-29", 
+                     "next_due": "2019-05-13", 
+                     "last_made_up_to": "2018-04-29", 
+                     "next_made_up_to": "2019-04-29", 
                      "overdue": false
                   }, 
                   "last_full_members_list_date": "2016-04-29", 
@@ -1481,18 +1520,18 @@
                   "has_insolvency_history": false, 
                   "has_been_liquidated": false, 
                   "accounts": {
-                     "next_due": "2018-06-30", 
-                     "next_made_up_to": "2017-09-30", 
+                     "next_due": "2019-06-30", 
+                     "next_made_up_to": "2018-09-30", 
                      "last_accounts": {
-                        "period_start_on": "2015-10-01", 
-                        "type": "dormant", 
-                        "made_up_to": "2016-09-30", 
-                        "period_end_on": "2016-09-30"
+                        "period_start_on": "2016-10-01", 
+                        "type": "micro-entity", 
+                        "made_up_to": "2017-09-30", 
+                        "period_end_on": "2017-09-30"
                      }, 
                      "next_accounts": {
-                        "due_on": "2018-06-30", 
-                        "period_start_on": "2016-10-01", 
-                        "period_end_on": "2017-09-30", 
+                        "due_on": "2019-06-30", 
+                        "period_start_on": "2017-10-01", 
+                        "period_end_on": "2018-09-30", 
                         "overdue": false
                      }, 
                      "accounting_reference_date": {
@@ -1515,26 +1554,26 @@
                "persons": [
                   {
                      "kind": "individual-person-with-significant-control", 
-                     "name": "Mr Henry Walter Plunkett-Ernle-Erle-Drax", 
+                     "name": "Mr Richard Grosvenor Plunkett-Ernle-Erle Drax", 
                      "links": {
-                        "self": "/company/06892084/persons-with-significant-control/individual/49gSs7AXJuuN044ZrybG6-uJiow"
+                        "self": "/company/06892084/persons-with-significant-control/individual/9JHg_FxCi_5i0x5_8SkoexesnkU"
                      }, 
+                     "notified_on": "2017-07-04", 
                      "country_of_residence": "England", 
                      "natures_of_control": [
-                        "ownership-of-shares-75-to-100-percent"
+                        "significant-influence-or-control"
                      ], 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 3
-                     }, 
                      "name_elements": {
-                        "surname": "Plunkett-Ernle-Erle-Drax", 
-                        "forename": "Henry", 
-                        "middle_name": "Walter", 
-                        "title": "Mr"
+                        "surname": "Drax", 
+                        "title": "Mr", 
+                        "middle_name": "Grosvenor Plunkett-Ernle-Erle", 
+                        "forename": "Richard"
                      }, 
-                     "notified_on": "2017-04-28", 
-                     "etag": "07b706f4d8b1a6be82c1e882b16016ed6dcd9a2e", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1958
+                     }, 
+                     "etag": "758754ed45570eb9f244fc17f372b2d48252431c", 
                      "address": {
                         "premises": "Estate Office", 
                         "region": "Dorset", 
@@ -1543,53 +1582,42 @@
                         "address_line_1": "Charborough Park"
                      }, 
                      "nationality": "British"
-                  }
-               ], 
-               "registered": "", 
-               "officers": [
-                  {
-                     "appointed_on": "2009-04-29", 
-                     "officer_role": "secretary", 
-                     "name": "BOWERMAN, Jason", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/qgHQzLjr2DYFymN7Fj_OpImygBE/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "locality": "Wareham", 
-                        "premises": "West Morden House", 
-                        "country": "England", 
-                        "region": "Dorset", 
-                        "postal_code": "BH20 7EA", 
-                        "address_line_1": "West Morden"
-                     }
                   }, 
                   {
-                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Henry Walter", 
+                     "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2017-07-04", 
+                     "name": "Mr Henry Walter Plunkett-Ernle-Erle-Drax", 
                      "links": {
-                        "officer": {
-                           "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
-                        }
+                        "self": "/company/06892084/persons-with-significant-control/individual/49gSs7AXJuuN044ZrybG6-uJiow"
                      }, 
-                     "address": {
-                        "locality": "Wareham", 
-                        "premises": "Garden House", 
-                        "country": "United Kingdom", 
-                        "region": "Dorset", 
-                        "postal_code": "BH20 7EL", 
-                        "address_line_1": "Charborough Park"
-                     }, 
+                     "notified_on": "2017-04-28", 
                      "country_of_residence": "England", 
-                     "appointed_on": "2009-04-29", 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent"
+                     ], 
+                     "name_elements": {
+                        "surname": "Plunkett-Ernle-Erle-Drax", 
+                        "forename": "Henry", 
+                        "middle_name": "Walter", 
+                        "title": "Mr"
+                     }, 
                      "date_of_birth": {
                         "year": 1928, 
                         "month": 3
                      }, 
-                     "nationality": "British", 
-                     "officer_role": "director", 
-                     "occupation": "Director"
-                  }, 
+                     "etag": "da6d48ebb5c9b608dff0a5d8908f5e1418ddc751", 
+                     "address": {
+                        "premises": "Estate Office", 
+                        "region": "Dorset", 
+                        "address_line_1": "Charborough Park", 
+                        "postal_code": "BH20 7EW", 
+                        "locality": "Wareham"
+                     }, 
+                     "nationality": "British"
+                  }
+               ], 
+               "registered": "", 
+               "officers": [
                   {
                      "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
                      "links": {
@@ -1597,7 +1625,7 @@
                            "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2009-04-29", 
                      "date_of_birth": {
                         "month": 1, 
@@ -1611,9 +1639,28 @@
                         "postal_code": "BH20 7EW", 
                         "address_line_1": "Charborough Park"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
+                  }, 
+                  {
+                     "name": "BOWERMAN, Jason", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/qgHQzLjr2DYFymN7Fj_OpImygBE/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2009-04-29", 
+                     "resigned_on": "2018-07-16", 
+                     "address": {
+                        "locality": "Wareham", 
+                        "premises": "West Morden House", 
+                        "country": "England", 
+                        "region": "Dorset", 
+                        "postal_code": "BH20 7EA", 
+                        "address_line_1": "West Morden"
+                     }, 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "RWL REGISTRARS LIMITED", 
@@ -1632,6 +1679,32 @@
                         "address_line_1": "134 Percival Road"
                      }, 
                      "officer_role": "corporate-secretary"
+                  }, 
+                  {
+                     "name": "PLUNKETT-ERNLE-ERLE-DRAX, Henry Walter", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
+                        }
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2009-04-29", 
+                     "resigned_on": "2017-07-04", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1928
+                     }, 
+                     "address": {
+                        "locality": "Wareham", 
+                        "premises": "Garden House", 
+                        "country": "United Kingdom", 
+                        "region": "Dorset", 
+                        "postal_code": "BH20 7EL", 
+                        "address_line_1": "Charborough Park"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "occupation": "Director"
                   }
                ], 
                "isIncome": false, 
@@ -1654,21 +1727,21 @@
                   "sic_codes": [
                      "01110"
                   ], 
-                  "etag": "07d2a42fa83d3a8e626531a1712108babc5b8b70", 
+                  "etag": "82b728af57a8d5286001c5b89d5c2cdc5e108315", 
                   "registered_office_address": {
-                     "postal_code": "BH20 7EW", 
-                     "region": "Dorset", 
-                     "locality": "Wareham", 
                      "address_line_2": "Charborough Park", 
-                     "address_line_1": "Estate Office"
+                     "region": "Dorset", 
+                     "address_line_1": "Estate Office", 
+                     "postal_code": "BH20 7EW", 
+                     "locality": "Wareham"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-05-13", 
-                     "last_made_up_to": "2017-04-29", 
-                     "next_made_up_to": "2018-04-29", 
+                     "next_due": "2019-05-13", 
+                     "last_made_up_to": "2018-04-29", 
+                     "next_made_up_to": "2019-04-29", 
                      "overdue": false
                   }, 
                   "company_number": "06892084", 
@@ -1677,18 +1750,18 @@
                   "has_insolvency_history": false, 
                   "has_been_liquidated": false, 
                   "accounts": {
-                     "next_due": "2018-06-30", 
-                     "next_made_up_to": "2017-09-30", 
+                     "next_due": "2019-06-30", 
+                     "next_made_up_to": "2018-09-30", 
                      "last_accounts": {
-                        "period_start_on": "2015-10-01", 
+                        "period_start_on": "2016-10-01", 
                         "type": "dormant", 
-                        "made_up_to": "2016-09-30", 
-                        "period_end_on": "2016-09-30"
+                        "made_up_to": "2017-09-30", 
+                        "period_end_on": "2017-09-30"
                      }, 
                      "next_accounts": {
-                        "due_on": "2018-06-30", 
-                        "period_start_on": "2016-10-01", 
-                        "period_end_on": "2017-09-30", 
+                        "due_on": "2019-06-30", 
+                        "period_start_on": "2017-10-01", 
+                        "period_end_on": "2018-09-30", 
                         "overdue": false
                      }, 
                      "accounting_reference_date": {
@@ -1715,28 +1788,28 @@
                      "links": {
                         "self": "/company/00923636/persons-with-significant-control/individual/ivia_6kMIqGiJeRymjbo7IptVq4"
                      }, 
-                     "country_of_residence": "Great Britain", 
+                     "notified_on": "2016-06-30", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "ownership-of-shares-75-to-100-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1958
                      }, 
                      "name_elements": {
-                        "middle_name": "Grosvenor", 
-                        "title": "Mr", 
                         "surname": "Plunkett-Ernle-Erle-Drax", 
+                        "title": "Mr", 
+                        "middle_name": "Grosvenor", 
                         "forename": "Richard"
                      }, 
-                     "notified_on": "2016-06-30", 
-                     "etag": "80aece949b1206593d7b0e48c869700d381a3092", 
+                     "etag": "84e3a055f7d498e7505f2ef9673264a73ea4cb63", 
                      "address": {
                         "premises": "Estate Office", 
                         "country": "England", 
-                        "locality": "Wareham", 
+                        "address_line_1": "Charborough Park", 
                         "postal_code": "BH20 7EN", 
-                        "address_line_1": "Charborough Park"
+                        "locality": "Wareham"
                      }, 
                      "nationality": "British"
                   }
@@ -1744,28 +1817,16 @@
                "registered": "", 
                "officers": [
                   {
-                     "appointed_on": "2009-05-15", 
-                     "officer_role": "secretary", 
-                     "name": "BOWERMAN, Jason David", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/NB7cLZl-ZYItlpisiWH910NvoN0/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "West Morden House", 
-                        "region": "Dorset", 
-                        "address_line_1": "Morden", 
-                        "postal_code": "BH20 7EA", 
-                        "locality": "Wareham"
-                     }
-                  }, 
-                  {
                      "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
                         }
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "month": 1, 
+                        "year": 1958
                      }, 
                      "address": {
                         "premises": "Charborough House", 
@@ -1774,14 +1835,28 @@
                         "postal_code": "BH20 7EW", 
                         "address_line_1": "Charborough Park"
                      }, 
-                     "country_of_residence": "Great Britain", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 1
-                     }, 
                      "officer_role": "director", 
                      "nationality": "British", 
                      "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BOWERMAN, Jason David", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/NB7cLZl-ZYItlpisiWH910NvoN0/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2009-05-15", 
+                     "resigned_on": "2018-07-16", 
+                     "address": {
+                        "premises": "West Morden House", 
+                        "region": "Dorset", 
+                        "locality": "Wareham", 
+                        "postal_code": "BH20 7EA", 
+                        "address_line_1": "Morden"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -1809,8 +1884,8 @@
                      "country_of_residence": "England", 
                      "resigned_on": "2017-07-04", 
                      "date_of_birth": {
-                        "year": 1928, 
-                        "month": 3
+                        "month": 3, 
+                        "year": 1928
                      }, 
                      "address": {
                         "premises": "Garden House", 
@@ -1832,8 +1907,8 @@
                      }, 
                      "resigned_on": "2009-05-15", 
                      "date_of_birth": {
-                        "year": 1931, 
-                        "month": 11
+                        "month": 11, 
+                        "year": 1931
                      }, 
                      "address": {
                         "region": "Dorset", 
@@ -1913,28 +1988,28 @@
                      "links": {
                         "self": "/company/00186354/persons-with-significant-control/individual/F4F8bcq6aqnvZnuRXsl7dtB_CH0"
                      }, 
-                     "notified_on": "2016-06-30", 
-                     "country_of_residence": "Great Britain", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "ownership-of-shares-75-to-100-percent"
                      ], 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 1
+                     }, 
                      "name_elements": {
                         "middle_name": "Grosvenor", 
-                        "title": "Mr", 
+                        "forename": "Richard", 
                         "surname": "Plunkett-Ernle-Erle-Drax", 
-                        "forename": "Richard"
+                        "title": "Mr"
                      }, 
-                     "date_of_birth": {
-                        "month": 1, 
-                        "year": 1958
-                     }, 
-                     "etag": "4e0c7754c639334b7d2fa2735f26962717f886f4", 
+                     "notified_on": "2016-06-30", 
+                     "etag": "09464ca280b32e7876d825c49f03eda27e6e0f67", 
                      "address": {
                         "premises": "Estate Office", 
                         "country": "England", 
-                        "address_line_1": "Charborough Park", 
+                        "locality": "Wareham", 
                         "postal_code": "BH20 7EN", 
-                        "locality": "Wareham"
+                        "address_line_1": "Charborough Park"
                      }, 
                      "nationality": "British"
                   }
@@ -1942,46 +2017,47 @@
                "registered": "", 
                "officers": [
                   {
-                     "name": "BOWERMAN, Jason David", 
-                     "links": {
-                        "officer": {
-                           "appointments": "/officers/d_gO595A5zI-hJ4NkyhsvZBH7ZM/appointments"
-                        }
-                     }, 
-                     "address": {
-                        "premises": "West Morden House", 
-                        "region": "Dorset", 
-                        "address_line_1": "Morden", 
-                        "postal_code": "BH20 7EA", 
-                        "locality": "Wareham"
-                     }, 
-                     "appointed_on": "2008-05-02", 
-                     "nationality": "British", 
-                     "officer_role": "secretary", 
-                     "occupation": "Land Agent"
-                  }, 
-                  {
                      "name": "PLUNKETT-ERNLE-ERLE-DRAX, Richard Grosvenor", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/0yW7euOJD-_KIseaUC9U34IVINc/appointments"
                         }
                      }, 
-                     "country_of_residence": "Great Britain", 
+                     "country_of_residence": "United Kingdom", 
                      "date_of_birth": {
-                        "year": 1958, 
-                        "month": 1
+                        "month": 1, 
+                        "year": 1958
                      }, 
                      "address": {
                         "premises": "Charborough House", 
                         "region": "Dorset", 
-                        "locality": "Wareham", 
+                        "address_line_1": "Charborough Park", 
                         "postal_code": "BH20 7EW", 
-                        "address_line_1": "Charborough Park"
+                        "locality": "Wareham"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "BOWERMAN, Jason David", 
+                     "links": {
+                        "officer": {
+                           "appointments": "/officers/d_gO595A5zI-hJ4NkyhsvZBH7ZM/appointments"
+                        }
+                     }, 
+                     "appointed_on": "2008-05-02", 
+                     "resigned_on": "2018-07-16", 
+                     "address": {
+                        "premises": "West Morden House", 
+                        "region": "Dorset", 
+                        "locality": "Wareham", 
+                        "postal_code": "BH20 7EA", 
+                        "address_line_1": "Morden"
+                     }, 
+                     "officer_role": "secretary", 
+                     "nationality": "British", 
+                     "occupation": "Land Agent"
                   }, 
                   {
                      "officer_role": "secretary", 
@@ -2006,12 +2082,6 @@
                            "appointments": "/officers/ZeV3sxxb0ywy_0G-xP0lmXgFrbQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "2017-07-04", 
-                     "date_of_birth": {
-                        "year": 1928, 
-                        "month": 3
-                     }, 
                      "address": {
                         "premises": "Garden House", 
                         "region": "Dorset", 
@@ -2019,8 +2089,14 @@
                         "postal_code": "BH20 7EL", 
                         "locality": "Wareham"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "resigned_on": "2017-07-04", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1928
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -2030,19 +2106,19 @@
                            "appointments": "/officers/8f3kwXdIM3FQUSZDnQ-KmbCQOho/appointments"
                         }
                      }, 
+                     "resigned_on": "2008-05-02", 
+                     "date_of_birth": {
+                        "year": 1931, 
+                        "month": 11
+                     }, 
                      "address": {
                         "region": "Dorset", 
                         "locality": "Wareham", 
                         "postal_code": "BH20 7EW", 
                         "address_line_1": "Charborough Park"
                      }, 
-                     "resigned_on": "2008-05-02", 
-                     "date_of_birth": {
-                        "year": 1931, 
-                        "month": 11
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Housewife"
                   }
                ], 

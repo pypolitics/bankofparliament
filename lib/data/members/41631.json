@@ -46,7 +46,38 @@
          "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
          "@xsi:nil": "true"
       }, 
-      "Committees": null, 
+      "Committees": {
+         "Committee": [
+            {
+               "StartDate": "2018-02-20T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Foreign Affairs Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "78"
+            }, 
+            {
+               "StartDate": "2018-07-03T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Committees on Arms Export Controls (formerly Quadripartite Committee)", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "True", 
+               "@Id": "15"
+            }
+         ]
+      }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
          "DateOfRetirement": {
@@ -72,9 +103,27 @@
       "Gender": "M", 
       "DisplayAs": "Mr Bob Seely", 
       "HouseStartDate": "2017-06-08T00:00:00", 
+      "@Clerks_Id": "1519", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
+            {
+               "Fax": null, 
+               "@Type_Id": "1", 
+               "Address1": "House of Commons", 
+               "Address2": "London", 
+               "Address3": null, 
+               "Address4": null, 
+               "Address5": null, 
+               "Note": null, 
+               "Phone": "0207 219 1840", 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Parliamentary", 
+               "Email": "bob.seely.mp@parliament.uk", 
+               "Postcode": "SW1A 0AA"
+            }, 
             {
                "Fax": null, 
                "@Type_Id": "4", 
@@ -99,23 +148,6 @@
                "IsPreferred": "False", 
                "IsPhysical": "False", 
                "Type": "Twitter"
-            }, 
-            {
-               "Fax": null, 
-               "@Type_Id": "1", 
-               "Address1": "House of Commons", 
-               "Address2": "London", 
-               "Address3": null, 
-               "Address4": null, 
-               "Address5": null, 
-               "Note": null, 
-               "Phone": "0207 219 1840", 
-               "OtherAddress": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "True", 
-               "Type": "Parliamentary", 
-               "Email": "bob.seely.mp@parliament.uk", 
-               "Postcode": "SW1A 0AA"
             }, 
             {
                "@Type_Id": "8", 
@@ -155,15 +187,24 @@
       "", 
       "Railways:", 
       "Ryde,", 
+      "Bovine", 
+      "Tuberculosis:", 
+      "Disease", 
+      "Control,", 
+      "Aviation,", 
       "BBC", 
       "World", 
-      "Service,", 
-      "Disaster", 
-      "Relief,", 
-      "Combined", 
-      "Authorities,", 
-      "Commonwealth:", 
-      "Equality", 
+      "Service:", 
+      "Departmental", 
+      "Responsibilities,", 
+      "South", 
+      "Western", 
+      "Rail", 
+      "Franchise:", 
+      "Standards", 
+      "Department", 
+      "for", 
+      "Transport,", 
       "Department", 
       "for", 
       "Communities", 
@@ -176,26 +217,34 @@
       "Office,", 
       "Department", 
       "for", 
-      "Transport,", 
+      "Environment,", 
+      "Food", 
+      "and", 
+      "Rural", 
+      "Affairs,", 
       "Department", 
       "for", 
       "International", 
-      "Development,", 
-      "Department", 
-      "for", 
-      "Digital,", 
-      "Culture,", 
-      "Media", 
-      "and", 
-      "Sport"
+      "Development", 
+      "Foreign", 
+      "Affairs", 
+      "Committee", 
+      "Committees", 
+      "on", 
+      "Arms", 
+      "Export", 
+      "Controls", 
+      "(formerly", 
+      "Quadripartite", 
+      "Committee)"
    ], 
    "mp_income": 89042, 
    "mp_donations": 4000, 
-   "wrans_departments": "Department for Communities and Local Government, Foreign and Commonwealth Office, Department for Transport, Department for International Development, Department for Digital, Culture, Media and Sport", 
+   "wrans_departments": "Department for Transport, Department for Communities and Local Government, Foreign and Commonwealth Office, Department for Environment, Food and Rural Affairs, Department for International Development", 
    "person_id": "25645", 
    "party": "Conservative", 
    "forname": "Bob", 
-   "mp_annual": 93042, 
+   "mp_annual": 96952, 
    "mp_wealth": 200000, 
    "facebook": "https://facebook.com/IoWBobSeely", 
    "eu_ref_stance": "", 
@@ -399,12 +448,6 @@
                                  "appointments": "/officers/roYh_lJL9Qodi7oaQ5emAzIs6cg/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2012-02-23", 
-                           "date_of_birth": {
-                              "month": 12, 
-                              "year": 1953
-                           }, 
                            "address": {
                               "locality": "Southampton", 
                               "premises": "Stag Gates House", 
@@ -413,8 +456,14 @@
                               "postal_code": "SO17 1XS", 
                               "address_line_1": "63/64 The Avenue"
                            }, 
-                           "nationality": "British", 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2012-02-23", 
+                           "date_of_birth": {
+                              "month": 12, 
+                              "year": 1953
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Director"
                         }, 
                         {
@@ -424,12 +473,6 @@
                                  "appointments": "/officers/cCb1rWYb2RBRXKsjTaxOAhockpM/appointments"
                               }
                            }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2012-02-23", 
-                           "date_of_birth": {
-                              "year": 1944, 
-                              "month": 1
-                           }, 
                            "address": {
                               "locality": "Southampton", 
                               "premises": "Stag Gate House", 
@@ -438,8 +481,14 @@
                               "postal_code": "SO17 1XS", 
                               "address_line_1": "63/64 The Avenue"
                            }, 
-                           "nationality": "British", 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2012-02-23", 
+                           "date_of_birth": {
+                              "month": 1, 
+                              "year": 1944
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Director"
                         }, 
                         {
@@ -568,13 +617,6 @@
                                  "appointments": "/officers/cvyv5BaXAFmgsJ6sYM9OMBZesmY/appointments"
                               }
                            }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2004-08-01", 
-                           "resigned_on": "2012-07-30", 
-                           "date_of_birth": {
-                              "month": 10, 
-                              "year": 1948
-                           }, 
                            "address": {
                               "address_line_2": "Wiggonholt", 
                               "region": "West Sussex", 
@@ -582,8 +624,15 @@
                               "postal_code": "RH20 2EP", 
                               "locality": "Pulborough"
                            }, 
-                           "officer_role": "director", 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2004-08-01", 
+                           "resigned_on": "2012-07-30", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1948
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -614,8 +663,8 @@
                            "appointed_on": "2004-08-01", 
                            "resigned_on": "2012-07-30", 
                            "date_of_birth": {
-                              "month": 1, 
-                              "year": 1939
+                              "year": 1939, 
+                              "month": 1
                            }, 
                            "address": {
                               "postal_code": "LA17 7XJ", 
@@ -624,8 +673,8 @@
                               "address_line_2": "Grizebeck", 
                               "address_line_1": "Rowan"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Secretary"
                         }
                      ], 
@@ -642,20 +691,20 @@
                         "sic_codes": [
                            "68209"
                         ], 
-                        "etag": "60be9e32ec7919d4fd1ad788e472f8363c04365a", 
+                        "etag": "19dfc2c8b7e549537359a95ed490434ed6edccfb", 
                         "registered_office_address": {
-                           "postal_code": "SO17 1XS", 
-                           "address_line_1": "Stag Gates House", 
                            "address_line_2": "63/64 The Avenue", 
-                           "locality": "Southampton"
+                           "locality": "Southampton", 
+                           "postal_code": "SO17 1XS", 
+                           "address_line_1": "Stag Gates House"
                         }, 
                         "undeliverable_registered_office_address": false, 
                         "items": [], 
                         "jurisdiction": "england-wales", 
                         "confirmation_statement": {
-                           "next_due": "2018-07-18", 
-                           "last_made_up_to": "2017-07-04", 
-                           "next_made_up_to": "2018-07-04", 
+                           "next_due": "2019-07-18", 
+                           "last_made_up_to": "2018-07-04", 
+                           "next_made_up_to": "2019-07-04", 
                            "overdue": false
                         }, 
                         "company_number": "02945304", 
@@ -664,18 +713,17 @@
                         "has_insolvency_history": false, 
                         "has_been_liquidated": false, 
                         "accounts": {
-                           "next_due": "2018-07-02", 
-                           "next_made_up_to": "2017-10-02", 
+                           "next_due": "2019-07-02", 
+                           "next_made_up_to": "2018-10-02", 
                            "last_accounts": {
-                              "period_start_on": "2015-10-01", 
-                              "type": "total-exemption-small", 
-                              "made_up_to": "2016-09-30", 
-                              "period_end_on": "2016-09-30"
+                              "period_start_on": "2016-10-01", 
+                              "made_up_to": "2017-09-30", 
+                              "period_end_on": "2017-09-30"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-07-02", 
-                              "period_start_on": "2016-10-01", 
-                              "period_end_on": "2017-10-02", 
+                              "due_on": "2019-07-02", 
+                              "period_start_on": "2017-10-01", 
+                              "period_end_on": "2018-10-02", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -690,24 +738,24 @@
                         "type": "ltd"
                      }, 
                      "address": {
-                        "address_line_2": "Wiggonholt", 
+                        "postal_code": "RH20 2EP", 
                         "region": "West Sussex", 
                         "address_line_1": "Redford Cottage", 
-                        "postal_code": "RH20 2EP", 
+                        "address_line_2": "Wiggonholt", 
                         "locality": "Pulborough"
                      }, 
-                     "resigned_on": "2012-07-30", 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "1994-09-13", 
                      "name_elements": {
                         "other_forenames": "John Anthony", 
                         "surname": "FIELD", 
                         "forename": "Barry"
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "1994-09-13", 
+                     "resigned_on": "2012-07-30", 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_number": "02945304", 
-                        "company_name": "THERMGROVE LIMITED"
+                        "company_name": "THERMGROVE LIMITED", 
+                        "company_number": "02945304"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -731,8 +779,8 @@
                               "forename": "Barry"
                            }, 
                            "date_of_birth": {
-                              "month": 7, 
-                              "year": 1946
+                              "year": 1946, 
+                              "month": 7
                            }, 
                            "etag": "98a77837ac243bfa60a1352856528c71ab2b96f7", 
                            "address": {
@@ -763,8 +811,8 @@
                               "forename": "Jacqueline"
                            }, 
                            "date_of_birth": {
-                              "month": 10, 
-                              "year": 1948
+                              "year": 1948, 
+                              "month": 10
                            }, 
                            "etag": "0b0a32c3f30fccbcd7cd05800b316bd1005f789c", 
                            "address": {
@@ -772,501 +820,6 @@
                               "locality": "Southampton", 
                               "postal_code": "SO17 1XS", 
                               "address_line_1": "Stag Gates House"
-                           }, 
-                           "nationality": "British"
-                        }
-                     ], 
-                     "occupation": "Company Director"
-                  }, 
-                  {
-                     "name": "Barry John Anthony FIELD", 
-                     "links": {
-                        "company": "/company/02998017"
-                     }, 
-                     "company": {
-                        "links": {
-                           "filing_history": "/company/02998017/filing-history", 
-                           "charges": "/company/02998017/charges", 
-                           "self": "/company/02998017", 
-                           "officers": "/company/02998017/officers", 
-                           "persons_with_significant_control": "/company/02998017/persons-with-significant-control", 
-                           "persons_with_significant_control_statements": "/company/02998017/persons-with-significant-control-statements"
-                        }, 
-                        "undeliverable_registered_office_address": false, 
-                        "can_file": true, 
-                        "last_full_members_list_date": "2015-12-05", 
-                        "date_of_creation": "1994-12-05", 
-                        "confirmation_statement": {
-                           "next_due": "2018-12-19", 
-                           "last_made_up_to": "2017-12-05", 
-                           "next_made_up_to": "2018-12-05", 
-                           "overdue": false
-                        }, 
-                        "accounts": {
-                           "next_due": "2018-12-31", 
-                           "next_made_up_to": "2018-03-31", 
-                           "last_accounts": {
-                              "period_start_on": "2016-04-01", 
-                              "type": "full", 
-                              "made_up_to": "2017-03-31", 
-                              "period_end_on": "2017-03-31"
-                           }, 
-                           "next_accounts": {
-                              "due_on": "2018-12-31", 
-                              "period_start_on": "2017-04-01", 
-                              "period_end_on": "2018-03-31", 
-                              "overdue": false
-                           }, 
-                           "accounting_reference_date": {
-                              "day": "31", 
-                              "month": "03"
-                           }, 
-                           "overdue": false
-                        }, 
-                        "company_status": "active", 
-                        "registered_office_address": {
-                           "locality": "Burgess Hill", 
-                           "country": "United Kingdom", 
-                           "region": "West Sussex", 
-                           "postal_code": "RH15 8QY", 
-                           "address_line_2": "Marchants Way", 
-                           "address_line_1": "Rampion House"
-                        }, 
-                        "etag": "e856c96b85b3388045b82d91d8433c7a95e0909c", 
-                        "company_name": "C.P.J. FIELD & CO. LIMITED", 
-                        "type": "ltd", 
-                        "status": "active", 
-                        "jurisdiction": "england-wales", 
-                        "sic_codes": [
-                           "96030"
-                        ], 
-                        "has_been_liquidated": false, 
-                        "previous_company_names": [
-                           {
-                              "effective_from": "1997-06-02", 
-                              "ceased_on": "2009-01-23", 
-                              "name": "THE TRADITIONAL FAMILY FUNERAL COMPANY LIMITED"
-                           }, 
-                           {
-                              "effective_from": "1994-12-05", 
-                              "ceased_on": "1997-06-02", 
-                              "name": "ALVERMAST LIMITED"
-                           }
-                        ], 
-                        "has_charges": true, 
-                        "items": [], 
-                        "company_number": "02998017", 
-                        "has_insolvency_history": false, 
-                        "registered_office_is_in_dispute": false
-                     }, 
-                     "name_elements": {
-                        "other_forenames": "John Anthony", 
-                        "surname": "FIELD", 
-                        "forename": "Barry"
-                     }, 
-                     "officers": [
-                        {
-                           "name": "FIELD, Charles Edward Dyer", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/cbqATdaHducYTz7Y0un_SCH8NHQ/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "appointed_on": "2012-07-11", 
-                           "nationality": "British", 
-                           "officer_role": "secretary"
-                        }, 
-                        {
-                           "name": "FIELD, Charles Edward Dyer", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/WfgDQuvrmfgbX3AikalwmrfNad4/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2010-04-05", 
-                           "date_of_birth": {
-                              "year": 1981, 
-                              "month": 11
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Business Development Manager"
-                        }, 
-                        {
-                           "name": "FIELD, Christine Mary", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/crFuwm9QANoYE_t8NOY__Rmlm9g/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "1994-12-14", 
-                           "date_of_birth": {
-                              "year": 1951, 
-                              "month": 5
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "FIELD, Colin Peter John", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "1994-12-14", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1949
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "FIELD, Jeremy Michael Dyer", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/mp_qGTISAgyUB61UnkxvtFXxQPY/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2008-06-01", 
-                           "date_of_birth": {
-                              "month": 7, 
-                              "year": 1975
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Funeral Director"
-                        }, 
-                        {
-                           "name": "HENDIN, Emily Jane", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/fTmP3aYuBQBwfspZ_-j3DzNuy6M/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2010-04-05", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1978
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Freelance Pr Executive"
-                        }, 
-                        {
-                           "name": "WARNE, Christopher John", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/f2mpyKtAmMmx7Y4Z978rI96upLo/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "Rampion House", 
-                              "region": "West Sussex", 
-                              "address_line_1": "Marchants Way", 
-                              "postal_code": "RH15 8QY", 
-                              "locality": "Burgess Hill"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2010-04-05", 
-                           "date_of_birth": {
-                              "month": 7, 
-                              "year": 1944
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Chartered Accountant"
-                        }, 
-                        {
-                           "name": "FIELD, Christine Mary", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/crFuwm9QANoYE_t8NOY__Rmlm9g/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1999-05-31", 
-                           "resigned_on": "2012-07-11", 
-                           "address": {
-                              "address_line_2": "West Hoathly", 
-                              "region": "West Sussex", 
-                              "address_line_1": "The Strakes Church Hill", 
-                              "postal_code": "RH19 4PW", 
-                              "locality": "East Grinstead"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "secretary"
-                        }, 
-                        {
-                           "name": "FIELD, Colin Peter John", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1994-12-14", 
-                           "resigned_on": "1998-07-29", 
-                           "address": {
-                              "postal_code": "RH19 4PW", 
-                              "region": "Sussex", 
-                              "address_line_1": "The Strakes", 
-                              "address_line_2": "Church Hill", 
-                              "locality": "West Hoathly"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "secretary", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "GREEN, Richard Kevin", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/eN6PAo0_eF-Z-cE4wJ47eu9hpTg/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1998-07-29", 
-                           "resigned_on": "1999-05-31", 
-                           "address": {
-                              "address_line_2": "Station Road Isfield", 
-                              "region": "East Sussex", 
-                              "locality": "Uckfield", 
-                              "postal_code": "TN22 5SX", 
-                              "address_line_1": "Waterside Isfield Mill"
-                           }, 
-                           "officer_role": "secretary"
-                        }, 
-                        {
-                           "name": "COMBINED SECRETARIAL SERVICES LIMITED", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/qg19gs4s0BbaBIZ4hL3Hzm2Gp98/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1994-12-05", 
-                           "resigned_on": "1994-12-14", 
-                           "address": {
-                              "address_line_2": "64 Paul Street", 
-                              "locality": "London", 
-                              "postal_code": "EC2A 4NG", 
-                              "address_line_1": "Victoria House"
-                           }, 
-                           "officer_role": "corporate-nominee-secretary"
-                        }, 
-                        {
-                           "name": "COMBINED NOMINEES LIMITED", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/9r6mZM8N1m5eb0QconrJgmO2SkA/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1994-12-05", 
-                           "resigned_on": "1994-12-14", 
-                           "date_of_birth": {
-                              "month": 8, 
-                              "year": 1990
-                           }, 
-                           "address": {
-                              "postal_code": "EC2A 4NA", 
-                              "locality": "London", 
-                              "address_line_2": "64 Paul Street", 
-                              "address_line_1": "Victoria House"
-                           }, 
-                           "officer_role": "nominee-director"
-                        }, 
-                        {
-                           "name": "FIELD, Barry John Anthony", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1994-12-14", 
-                           "resigned_on": "2004-12-24", 
-                           "date_of_birth": {
-                              "month": 7, 
-                              "year": 1946
-                           }, 
-                           "address": {
-                              "address_line_2": "25 Birmingham Road", 
-                              "region": "Isle Of Wight", 
-                              "locality": "Cowes", 
-                              "postal_code": "PO31 7BH", 
-                              "address_line_1": "Medina Lodge"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "FIELD, Jacqueline Anne", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/cvyv5BaXAFmgsJ6sYM9OMBZesmY/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "1994-12-14", 
-                           "resigned_on": "2004-12-24", 
-                           "date_of_birth": {
-                              "month": 10, 
-                              "year": 1948
-                           }, 
-                           "address": {
-                              "postal_code": "RH20 2EP", 
-                              "region": "West Sussex", 
-                              "locality": "Pulborough", 
-                              "address_line_2": "Wiggonholt", 
-                              "address_line_1": "Redford Cottage"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "MUFFITT, Martin Andrew", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/fkOrs9Ak8A8rjtLuD_pKNEn-p_A/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2015-10-01", 
-                           "resigned_on": "2016-03-22", 
-                           "date_of_birth": {
-                              "year": 1961, 
-                              "month": 8
-                           }, 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "English", 
-                           "occupation": "Finance Director"
-                        }, 
-                        {
-                           "name": "COMBINED SECRETARIAL SERVICES LIMITED", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/qg19gs4s0BbaBIZ4hL3Hzm2Gp98/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1994-12-05", 
-                           "resigned_on": "1994-12-14", 
-                           "address": {
-                              "postal_code": "EC2A 4NG", 
-                              "locality": "London", 
-                              "address_line_2": "64 Paul Street", 
-                              "address_line_1": "Victoria House"
-                           }, 
-                           "officer_role": "corporate-nominee-director"
-                        }
-                     ], 
-                     "appointed_on": "1994-12-14", 
-                     "resigned_on": "2004-12-24", 
-                     "appointed_to": {
-                        "company_status": "active", 
-                        "company_number": "02998017", 
-                        "company_name": "C.P.J. FIELD & CO. LIMITED"
-                     }, 
-                     "address": {
-                        "postal_code": "PO31 7BH", 
-                        "region": "Isle Of Wight", 
-                        "locality": "Cowes", 
-                        "address_line_2": "25 Birmingham Road", 
-                        "address_line_1": "Medina Lodge"
-                     }, 
-                     "nationality": "British", 
-                     "officer_role": "director", 
-                     "persons_with_significant_control": [
-                        {
-                           "kind": "individual-person-with-significant-control", 
-                           "name": "Colin Peter John Field", 
-                           "links": {
-                              "self": "/company/02998017/persons-with-significant-control/individual/C5uuMI8Vko3pIExmx3pT3a30GY0"
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "natures_of_control": [
-                              "ownership-of-shares-25-to-50-percent", 
-                              "voting-rights-25-to-50-percent"
-                           ], 
-                           "date_of_birth": {
-                              "year": 1949, 
-                              "month": 3
-                           }, 
-                           "name_elements": {
-                              "surname": "Field", 
-                              "middle_name": "Peter John", 
-                              "forename": "Colin"
-                           }, 
-                           "notified_on": "2017-07-20", 
-                           "etag": "cf462ca344d028d5cda9c1f862ce7995bdba8765", 
-                           "address": {
-                              "locality": "Burgess Hill", 
-                              "premises": "Rampion House", 
-                              "country": "United Kingdom", 
-                              "region": "West Sussex", 
-                              "postal_code": "RH15 8QY", 
-                              "address_line_1": "Marchants Way"
                            }, 
                            "nationality": "British"
                         }
@@ -1353,6 +906,13 @@
                         "type": "ltd", 
                         "registered_office_is_in_dispute": false
                      }, 
+                     "address": {
+                        "postal_code": "PO31 7BH", 
+                        "region": "Isle Of Wight", 
+                        "address_line_1": "Medina Lodge", 
+                        "address_line_2": "25 Birmingham Road", 
+                        "locality": "Cowes"
+                     }, 
                      "name_elements": {
                         "other_forenames": "John Anthony", 
                         "surname": "FIELD", 
@@ -1375,8 +935,8 @@
                               "address_line_1": "Marchants Way"
                            }, 
                            "appointed_on": "2012-07-11", 
-                           "nationality": "British", 
-                           "officer_role": "secretary"
+                           "officer_role": "secretary", 
+                           "nationality": "British"
                         }, 
                         {
                            "name": "FIELD, Charles Edward Dyer", 
@@ -1399,8 +959,8 @@
                               "month": 11, 
                               "year": 1981
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "None"
                         }, 
                         {
@@ -1410,12 +970,6 @@
                                  "appointments": "/officers/crFuwm9QANoYE_t8NOY__Rmlm9g/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "1995-02-17", 
-                           "date_of_birth": {
-                              "year": 1951, 
-                              "month": 5
-                           }, 
                            "address": {
                               "locality": "Burgess Hill", 
                               "premises": "Rampion House", 
@@ -1423,6 +977,12 @@
                               "region": "West Sussex", 
                               "postal_code": "RH15 8QY", 
                               "address_line_1": "Marchants Way"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1995-02-17", 
+                           "date_of_birth": {
+                              "year": 1951, 
+                              "month": 5
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -1435,12 +995,6 @@
                                  "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "1995-02-17", 
-                           "date_of_birth": {
-                              "year": 1949, 
-                              "month": 3
-                           }, 
                            "address": {
                               "locality": "Burgess Hill", 
                               "premises": "Rampion House", 
@@ -1449,8 +1003,14 @@
                               "postal_code": "RH15 8QY", 
                               "address_line_1": "Marchants Way"
                            }, 
-                           "nationality": "British", 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1995-02-17", 
+                           "date_of_birth": {
+                              "year": 1949, 
+                              "month": 3
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -1474,8 +1034,8 @@
                               "postal_code": "RH15 8QY", 
                               "address_line_1": "Marchants Way"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Funeral Director"
                         }, 
                         {
@@ -1485,12 +1045,6 @@
                                  "appointments": "/officers/jhrVRoIZJrFMV-5B-ucNtiUudFU/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2017-03-13", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1978
-                           }, 
                            "address": {
                               "locality": "Burgess Hill", 
                               "premises": "Rampion House", 
@@ -1499,8 +1053,14 @@
                               "postal_code": "RH15 8QY", 
                               "address_line_1": "Marchants Way"
                            }, 
-                           "nationality": "British", 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2017-03-13", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1978
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "None"
                         }, 
                         {
@@ -1546,8 +1106,6 @@
                                  "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
                               }
                            }, 
-                           "appointed_on": "1995-02-17", 
-                           "resigned_on": "1998-07-29", 
                            "address": {
                               "postal_code": "RH19 4PW", 
                               "region": "Sussex", 
@@ -1555,6 +1113,8 @@
                               "address_line_2": "Church Hill", 
                               "locality": "West Hoathly"
                            }, 
+                           "appointed_on": "1995-02-17", 
+                           "resigned_on": "1998-07-29", 
                            "officer_role": "secretary", 
                            "nationality": "British", 
                            "occupation": "Director"
@@ -1596,8 +1156,8 @@
                               "postal_code": "MK18 3DG", 
                               "address_line_1": "63 High Street"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Funeral Director"
                         }, 
                         {
@@ -1607,18 +1167,18 @@
                                  "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
                               }
                            }, 
-                           "appointed_on": "1998-04-27", 
-                           "resigned_on": "2004-12-24", 
-                           "date_of_birth": {
-                              "year": 1946, 
-                              "month": 7
-                           }, 
                            "address": {
                               "address_line_2": "25 Birmingham Road", 
                               "region": "Isle Of Wight", 
                               "address_line_1": "Medina Lodge", 
                               "postal_code": "PO31 7BH", 
                               "locality": "Cowes"
+                           }, 
+                           "appointed_on": "1998-04-27", 
+                           "resigned_on": "2004-12-24", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1946
                            }, 
                            "nationality": "British", 
                            "officer_role": "director", 
@@ -1631,12 +1191,6 @@
                                  "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
                               }
                            }, 
-                           "appointed_on": "1995-02-17", 
-                           "resigned_on": "1995-02-17", 
-                           "date_of_birth": {
-                              "year": 1946, 
-                              "month": 7
-                           }, 
                            "address": {
                               "address_line_2": "25 Birmingham Road", 
                               "region": "Isle Of Wight", 
@@ -1644,8 +1198,14 @@
                               "postal_code": "PO31 7BH", 
                               "locality": "Cowes"
                            }, 
-                           "nationality": "British", 
+                           "appointed_on": "1995-02-17", 
+                           "resigned_on": "1995-02-17", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1946
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Member Of Parliament"
                         }, 
                         {
@@ -1669,8 +1229,8 @@
                               "address_line_2": "Wiggonholt", 
                               "address_line_1": "Redford Cottage"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }
                      ], 
@@ -1678,18 +1238,11 @@
                      "resigned_on": "2004-12-24", 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_number": "01435022", 
-                        "company_name": "HERITAGE & SONS LIMITED"
+                        "company_name": "HERITAGE & SONS LIMITED", 
+                        "company_number": "01435022"
                      }, 
-                     "address": {
-                        "postal_code": "PO31 7BH", 
-                        "region": "Isle Of Wight", 
-                        "locality": "Cowes", 
-                        "address_line_2": "25 Birmingham Road", 
-                        "address_line_1": "Medina Lodge"
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "persons_with_significant_control": [
                         {
                            "kind": "corporate-entity-person-with-significant-control", 
@@ -1726,6 +1279,501 @@
                   {
                      "name": "Barry John Anthony FIELD", 
                      "links": {
+                        "company": "/company/02998017"
+                     }, 
+                     "company": {
+                        "links": {
+                           "filing_history": "/company/02998017/filing-history", 
+                           "charges": "/company/02998017/charges", 
+                           "self": "/company/02998017", 
+                           "officers": "/company/02998017/officers", 
+                           "persons_with_significant_control": "/company/02998017/persons-with-significant-control", 
+                           "persons_with_significant_control_statements": "/company/02998017/persons-with-significant-control-statements"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "can_file": true, 
+                        "last_full_members_list_date": "2015-12-05", 
+                        "date_of_creation": "1994-12-05", 
+                        "confirmation_statement": {
+                           "next_due": "2018-12-19", 
+                           "last_made_up_to": "2017-12-05", 
+                           "next_made_up_to": "2018-12-05", 
+                           "overdue": false
+                        }, 
+                        "accounts": {
+                           "next_due": "2018-12-31", 
+                           "next_made_up_to": "2018-03-31", 
+                           "last_accounts": {
+                              "period_start_on": "2016-04-01", 
+                              "type": "full", 
+                              "made_up_to": "2017-03-31", 
+                              "period_end_on": "2017-03-31"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-12-31", 
+                              "period_start_on": "2017-04-01", 
+                              "period_end_on": "2018-03-31", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "31", 
+                              "month": "03"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_status": "active", 
+                        "registered_office_address": {
+                           "locality": "Burgess Hill", 
+                           "country": "United Kingdom", 
+                           "region": "West Sussex", 
+                           "postal_code": "RH15 8QY", 
+                           "address_line_2": "Marchants Way", 
+                           "address_line_1": "Rampion House"
+                        }, 
+                        "etag": "e856c96b85b3388045b82d91d8433c7a95e0909c", 
+                        "company_name": "C.P.J. FIELD & CO. LIMITED", 
+                        "type": "ltd", 
+                        "status": "active", 
+                        "jurisdiction": "england-wales", 
+                        "sic_codes": [
+                           "96030"
+                        ], 
+                        "has_been_liquidated": false, 
+                        "previous_company_names": [
+                           {
+                              "effective_from": "1997-06-02", 
+                              "ceased_on": "2009-01-23", 
+                              "name": "THE TRADITIONAL FAMILY FUNERAL COMPANY LIMITED"
+                           }, 
+                           {
+                              "effective_from": "1994-12-05", 
+                              "ceased_on": "1997-06-02", 
+                              "name": "ALVERMAST LIMITED"
+                           }
+                        ], 
+                        "has_charges": true, 
+                        "items": [], 
+                        "company_number": "02998017", 
+                        "has_insolvency_history": false, 
+                        "registered_office_is_in_dispute": false
+                     }, 
+                     "address": {
+                        "postal_code": "PO31 7BH", 
+                        "region": "Isle Of Wight", 
+                        "address_line_1": "Medina Lodge", 
+                        "address_line_2": "25 Birmingham Road", 
+                        "locality": "Cowes"
+                     }, 
+                     "resigned_on": "2004-12-24", 
+                     "officers": [
+                        {
+                           "name": "FIELD, Charles Edward Dyer", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/cbqATdaHducYTz7Y0un_SCH8NHQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "appointed_on": "2012-07-11", 
+                           "nationality": "British", 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "FIELD, Charles Edward Dyer", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/WfgDQuvrmfgbX3AikalwmrfNad4/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-04-05", 
+                           "date_of_birth": {
+                              "year": 1981, 
+                              "month": 11
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Business Development Manager"
+                        }, 
+                        {
+                           "name": "FIELD, Christine Mary", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/crFuwm9QANoYE_t8NOY__Rmlm9g/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1994-12-14", 
+                           "date_of_birth": {
+                              "year": 1951, 
+                              "month": 5
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "FIELD, Colin Peter John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1994-12-14", 
+                           "date_of_birth": {
+                              "year": 1949, 
+                              "month": 3
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "FIELD, Jeremy Michael Dyer", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/mp_qGTISAgyUB61UnkxvtFXxQPY/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2008-06-01", 
+                           "date_of_birth": {
+                              "year": 1975, 
+                              "month": 7
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Funeral Director"
+                        }, 
+                        {
+                           "name": "HENDIN, Emily Jane", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/fTmP3aYuBQBwfspZ_-j3DzNuy6M/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-04-05", 
+                           "date_of_birth": {
+                              "year": 1978, 
+                              "month": 3
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Freelance Pr Executive"
+                        }, 
+                        {
+                           "name": "WARNE, Christopher John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/f2mpyKtAmMmx7Y4Z978rI96upLo/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "Rampion House", 
+                              "region": "West Sussex", 
+                              "address_line_1": "Marchants Way", 
+                              "postal_code": "RH15 8QY", 
+                              "locality": "Burgess Hill"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-04-05", 
+                           "date_of_birth": {
+                              "year": 1944, 
+                              "month": 7
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Chartered Accountant"
+                        }, 
+                        {
+                           "name": "FIELD, Christine Mary", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/crFuwm9QANoYE_t8NOY__Rmlm9g/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "West Hoathly", 
+                              "region": "West Sussex", 
+                              "address_line_1": "The Strakes Church Hill", 
+                              "postal_code": "RH19 4PW", 
+                              "locality": "East Grinstead"
+                           }, 
+                           "appointed_on": "1999-05-31", 
+                           "resigned_on": "2012-07-11", 
+                           "nationality": "British", 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "FIELD, Colin Peter John", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1994-12-14", 
+                           "resigned_on": "1998-07-29", 
+                           "address": {
+                              "postal_code": "RH19 4PW", 
+                              "region": "Sussex", 
+                              "address_line_1": "The Strakes", 
+                              "address_line_2": "Church Hill", 
+                              "locality": "West Hoathly"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "secretary", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "GREEN, Richard Kevin", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/eN6PAo0_eF-Z-cE4wJ47eu9hpTg/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1998-07-29", 
+                           "resigned_on": "1999-05-31", 
+                           "address": {
+                              "address_line_2": "Station Road Isfield", 
+                              "region": "East Sussex", 
+                              "locality": "Uckfield", 
+                              "postal_code": "TN22 5SX", 
+                              "address_line_1": "Waterside Isfield Mill"
+                           }, 
+                           "officer_role": "secretary"
+                        }, 
+                        {
+                           "name": "COMBINED SECRETARIAL SERVICES LIMITED", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qg19gs4s0BbaBIZ4hL3Hzm2Gp98/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1994-12-05", 
+                           "resigned_on": "1994-12-14", 
+                           "address": {
+                              "address_line_2": "64 Paul Street", 
+                              "locality": "London", 
+                              "postal_code": "EC2A 4NG", 
+                              "address_line_1": "Victoria House"
+                           }, 
+                           "officer_role": "corporate-nominee-secretary"
+                        }, 
+                        {
+                           "name": "COMBINED NOMINEES LIMITED", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/9r6mZM8N1m5eb0QconrJgmO2SkA/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1994-12-05", 
+                           "resigned_on": "1994-12-14", 
+                           "date_of_birth": {
+                              "year": 1990, 
+                              "month": 8
+                           }, 
+                           "address": {
+                              "postal_code": "EC2A 4NA", 
+                              "locality": "London", 
+                              "address_line_2": "64 Paul Street", 
+                              "address_line_1": "Victoria House"
+                           }, 
+                           "officer_role": "nominee-director"
+                        }, 
+                        {
+                           "name": "FIELD, Barry John Anthony", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1994-12-14", 
+                           "resigned_on": "2004-12-24", 
+                           "date_of_birth": {
+                              "year": 1946, 
+                              "month": 7
+                           }, 
+                           "address": {
+                              "address_line_2": "25 Birmingham Road", 
+                              "region": "Isle Of Wight", 
+                              "locality": "Cowes", 
+                              "postal_code": "PO31 7BH", 
+                              "address_line_1": "Medina Lodge"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "FIELD, Jacqueline Anne", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/cvyv5BaXAFmgsJ6sYM9OMBZesmY/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "1994-12-14", 
+                           "resigned_on": "2004-12-24", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1948
+                           }, 
+                           "address": {
+                              "postal_code": "RH20 2EP", 
+                              "region": "West Sussex", 
+                              "locality": "Pulborough", 
+                              "address_line_2": "Wiggonholt", 
+                              "address_line_1": "Redford Cottage"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "MUFFITT, Martin Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/fkOrs9Ak8A8rjtLuD_pKNEn-p_A/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2015-10-01", 
+                           "resigned_on": "2016-03-22", 
+                           "date_of_birth": {
+                              "month": 8, 
+                              "year": 1961
+                           }, 
+                           "nationality": "English", 
+                           "officer_role": "director", 
+                           "occupation": "Finance Director"
+                        }, 
+                        {
+                           "name": "COMBINED SECRETARIAL SERVICES LIMITED", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qg19gs4s0BbaBIZ4hL3Hzm2Gp98/appointments"
+                              }
+                           }, 
+                           "appointed_on": "1994-12-05", 
+                           "resigned_on": "1994-12-14", 
+                           "address": {
+                              "postal_code": "EC2A 4NG", 
+                              "locality": "London", 
+                              "address_line_2": "64 Paul Street", 
+                              "address_line_1": "Victoria House"
+                           }, 
+                           "officer_role": "corporate-nominee-director"
+                        }
+                     ], 
+                     "appointed_on": "1994-12-14", 
+                     "name_elements": {
+                        "other_forenames": "John Anthony", 
+                        "surname": "FIELD", 
+                        "forename": "Barry"
+                     }, 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_number": "02998017", 
+                        "company_name": "C.P.J. FIELD & CO. LIMITED"
+                     }, 
+                     "nationality": "British", 
+                     "officer_role": "director", 
+                     "persons_with_significant_control": [
+                        {
+                           "kind": "individual-person-with-significant-control", 
+                           "name": "Colin Peter John Field", 
+                           "links": {
+                              "self": "/company/02998017/persons-with-significant-control/individual/C5uuMI8Vko3pIExmx3pT3a30GY0"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "natures_of_control": [
+                              "ownership-of-shares-25-to-50-percent", 
+                              "voting-rights-25-to-50-percent"
+                           ], 
+                           "date_of_birth": {
+                              "year": 1949, 
+                              "month": 3
+                           }, 
+                           "name_elements": {
+                              "surname": "Field", 
+                              "middle_name": "Peter John", 
+                              "forename": "Colin"
+                           }, 
+                           "notified_on": "2017-07-20", 
+                           "etag": "cf462ca344d028d5cda9c1f862ce7995bdba8765", 
+                           "address": {
+                              "locality": "Burgess Hill", 
+                              "premises": "Rampion House", 
+                              "country": "United Kingdom", 
+                              "region": "West Sussex", 
+                              "postal_code": "RH15 8QY", 
+                              "address_line_1": "Marchants Way"
+                           }, 
+                           "nationality": "British"
+                        }
+                     ], 
+                     "occupation": "Company Director"
+                  }, 
+                  {
+                     "name": "Barry John Anthony FIELD", 
+                     "links": {
                         "company": "/company/02982700"
                      }, 
                      "company": {
@@ -1740,24 +1788,24 @@
                         "last_full_members_list_date": "2016-03-19", 
                         "date_of_creation": "1994-10-24", 
                         "confirmation_statement": {
-                           "next_due": "2018-04-02", 
-                           "last_made_up_to": "2017-03-19", 
-                           "next_made_up_to": "2018-03-19", 
+                           "next_due": "2019-04-02", 
+                           "last_made_up_to": "2018-03-19", 
+                           "next_made_up_to": "2019-03-19", 
                            "overdue": false
                         }, 
                         "accounts": {
-                           "next_due": "2018-09-30", 
-                           "next_made_up_to": "2017-12-31", 
+                           "next_due": "2019-09-30", 
+                           "next_made_up_to": "2018-12-31", 
                            "last_accounts": {
-                              "period_start_on": "2015-12-26", 
+                              "period_start_on": "2016-12-31", 
                               "type": "dormant", 
-                              "made_up_to": "2016-12-30", 
-                              "period_end_on": "2016-12-30"
+                              "made_up_to": "2017-12-29", 
+                              "period_end_on": "2017-12-29"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-09-30", 
-                              "period_start_on": "2016-12-31", 
-                              "period_end_on": "2017-12-31", 
+                              "due_on": "2019-09-30", 
+                              "period_start_on": "2017-12-30", 
+                              "period_end_on": "2018-12-31", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -1769,11 +1817,11 @@
                         "company_status": "active", 
                         "registered_office_address": {
                            "region": "West Midlands", 
-                           "address_line_1": "4 King Edwards Court", 
+                           "locality": "Sutton Coldfield", 
                            "postal_code": "B73 6AP", 
-                           "locality": "Sutton Coldfield"
+                           "address_line_1": "4 King Edwards Court"
                         }, 
-                        "etag": "76c3257012ff2f100b3b095e6e7550931dd0a501", 
+                        "etag": "b42460c14880347c60f3d627478f1254ec704332", 
                         "company_name": "NORWICH CREMATORIUM HOLDINGS LIMITED", 
                         "type": "ltd", 
                         "status": "active", 
@@ -1795,7 +1843,11 @@
                         "has_insolvency_history": false, 
                         "registered_office_is_in_dispute": false
                      }, 
-                     "resigned_on": "1998-10-21", 
+                     "name_elements": {
+                        "other_forenames": "John Anthony", 
+                        "surname": "FIELD", 
+                        "forename": "Barry"
+                     }, 
                      "officers": [
                         {
                            "name": "PORTMAN, Richard Harry", 
@@ -1804,6 +1856,7 @@
                                  "appointments": "/officers/1sJuJFV2ofYs9vwC0UorryjtmQk/appointments"
                               }
                            }, 
+                           "appointed_on": "2004-04-16", 
                            "address": {
                               "locality": "Sutton Coldfield", 
                               "premises": "4", 
@@ -1813,9 +1866,8 @@
                               "address_line_2": "King Edwards Square", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "appointed_on": "2004-04-16", 
-                           "officer_role": "secretary", 
-                           "nationality": "British"
+                           "nationality": "British", 
+                           "officer_role": "secretary"
                         }, 
                         {
                            "name": "MCCOLLUM, Michael Kinloch", 
@@ -1838,8 +1890,8 @@
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -1863,8 +1915,8 @@
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -2006,8 +2058,8 @@
                            "appointed_on": "1998-10-21", 
                            "resigned_on": "2000-03-23", 
                            "date_of_birth": {
-                              "year": 1945, 
-                              "month": 5
+                              "month": 5, 
+                              "year": 1945
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -2024,8 +2076,8 @@
                            "appointed_on": "1998-10-21", 
                            "resigned_on": "1999-02-22", 
                            "date_of_birth": {
-                              "year": 1944, 
-                              "month": 7
+                              "month": 7, 
+                              "year": 1944
                            }, 
                            "address": {
                               "country": "County Antrim", 
@@ -2108,8 +2160,8 @@
                               "month": 3, 
                               "year": 1949
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Director"
                         }, 
                         {
@@ -2119,19 +2171,19 @@
                                  "appointments": "/officers/cvyv5BaXAFmgsJ6sYM9OMBZesmY/appointments"
                               }
                            }, 
-                           "address": {
-                              "postal_code": "RH20 2EP", 
-                              "region": "West Sussex", 
-                              "locality": "Pulborough", 
-                              "address_line_2": "Wiggonholt", 
-                              "address_line_1": "Redford Cottage"
-                           }, 
                            "country_of_residence": "United Kingdom", 
                            "appointed_on": "1994-10-24", 
                            "resigned_on": "1998-10-21", 
                            "date_of_birth": {
                               "year": 1948, 
                               "month": 10
+                           }, 
+                           "address": {
+                              "postal_code": "RH20 2EP", 
+                              "region": "West Sussex", 
+                              "locality": "Pulborough", 
+                              "address_line_2": "Wiggonholt", 
+                              "address_line_1": "Redford Cottage"
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -2148,8 +2200,8 @@
                            "appointed_on": "1998-10-21", 
                            "resigned_on": "2008-12-29", 
                            "date_of_birth": {
-                              "year": 1943, 
-                              "month": 9
+                              "month": 9, 
+                              "year": 1943
                            }, 
                            "address": {
                               "address_line_2": "Uvedale Road Limpsfield", 
@@ -2172,8 +2224,8 @@
                            "appointed_on": "1998-10-21", 
                            "resigned_on": "2002-02-10", 
                            "date_of_birth": {
-                              "year": 1960, 
-                              "month": 5
+                              "month": 5, 
+                              "year": 1960
                            }, 
                            "address": {
                               "postal_code": "B15 3UR", 
@@ -2205,22 +2257,18 @@
                         }
                      ], 
                      "appointed_on": "1994-10-24", 
-                     "name_elements": {
-                        "other_forenames": "John Anthony", 
-                        "surname": "FIELD", 
-                        "forename": "Barry"
-                     }, 
+                     "resigned_on": "1998-10-21", 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_name": "NORWICH CREMATORIUM HOLDINGS LIMITED", 
-                        "company_number": "02982700"
+                        "company_number": "02982700", 
+                        "company_name": "NORWICH CREMATORIUM HOLDINGS LIMITED"
                      }, 
                      "address": {
                         "postal_code": "PO31 7BH", 
                         "region": "Isle Of Wight", 
-                        "locality": "Cowes", 
+                        "address_line_1": "Medina Lodge", 
                         "address_line_2": "25 Birmingham Road", 
-                        "address_line_1": "Medina Lodge"
+                        "locality": "Cowes"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -2276,24 +2324,24 @@
                         "company_number": "02674038", 
                         "date_of_creation": "1991-12-24", 
                         "confirmation_statement": {
-                           "next_due": "2018-04-02", 
-                           "last_made_up_to": "2017-03-19", 
-                           "next_made_up_to": "2018-03-19", 
+                           "next_due": "2019-04-02", 
+                           "last_made_up_to": "2018-03-19", 
+                           "next_made_up_to": "2019-03-19", 
                            "overdue": false
                         }, 
                         "accounts": {
-                           "next_due": "2018-09-30", 
-                           "next_made_up_to": "2017-12-31", 
+                           "next_due": "2019-09-30", 
+                           "next_made_up_to": "2018-12-31", 
                            "last_accounts": {
-                              "period_start_on": "2015-12-26", 
+                              "period_start_on": "2016-12-31", 
                               "type": "dormant", 
-                              "made_up_to": "2016-12-30", 
-                              "period_end_on": "2016-12-30"
+                              "made_up_to": "2017-12-29", 
+                              "period_end_on": "2017-12-29"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-09-30", 
-                              "period_start_on": "2016-12-31", 
-                              "period_end_on": "2017-12-31", 
+                              "due_on": "2019-09-30", 
+                              "period_start_on": "2017-12-30", 
+                              "period_end_on": "2018-12-31", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -2309,8 +2357,8 @@
                            "postal_code": "B73 6AP", 
                            "address_line_1": "4 King Edwards Court"
                         }, 
-                        "etag": "5a66627af06a9a4a2d62355a39c16646b3d52108", 
-                        "company_name": "GERALD MARTIN FUNERAL DIRECTORS LIMITED", 
+                        "etag": "1b5783c4e2349d8665a68c9db0c1a42445e39534", 
+                        "company_name": "MASON FUNERAL SERVICE LIMITED", 
                         "type": "ltd", 
                         "status": "active", 
                         "jurisdiction": "england-wales", 
@@ -2319,6 +2367,11 @@
                         ], 
                         "has_been_liquidated": false, 
                         "previous_company_names": [
+                           {
+                              "effective_from": "2003-03-24", 
+                              "ceased_on": "2018-05-02", 
+                              "name": "GERALD MARTIN FUNERAL DIRECTORS LIMITED"
+                           }, 
                            {
                               "effective_from": "1991-12-24", 
                               "ceased_on": "2003-03-24", 
@@ -2331,11 +2384,7 @@
                         "has_insolvency_history": false, 
                         "registered_office_is_in_dispute": false
                      }, 
-                     "name_elements": {
-                        "other_forenames": "John Anthony", 
-                        "surname": "FIELD", 
-                        "forename": "Barry"
-                     }, 
+                     "resigned_on": "1995-02-28", 
                      "officers": [
                         {
                            "name": "PORTMAN, Richard Harry", 
@@ -2354,8 +2403,8 @@
                               "address_line_1": "King Edwards Court"
                            }, 
                            "appointed_on": "2004-04-16", 
-                           "officer_role": "secretary", 
-                           "nationality": "British"
+                           "nationality": "British", 
+                           "officer_role": "secretary"
                         }, 
                         {
                            "name": "MCCOLLUM, Michael Kinloch", 
@@ -2367,8 +2416,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2002-02-10", 
                            "date_of_birth": {
-                              "year": 1967, 
-                              "month": 4
+                              "month": 4, 
+                              "year": 1967
                            }, 
                            "address": {
                               "locality": "Sutton Coldfield", 
@@ -2378,8 +2427,8 @@
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -2389,6 +2438,12 @@
                                  "appointments": "/officers/7G1aIjpGY0JaSLwZyAhtl-2GIvk/appointments"
                               }
                            }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2008-12-29", 
+                           "date_of_birth": {
+                              "month": 5, 
+                              "year": 1974
+                           }, 
                            "address": {
                               "locality": "Sutton Coldfield", 
                               "premises": "4", 
@@ -2396,12 +2451,6 @@
                               "region": "West Midlands", 
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2008-12-29", 
-                           "date_of_birth": {
-                              "month": 5, 
-                              "year": 1974
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -2512,8 +2561,8 @@
                               "address_line_2": "25 Birmingham Road", 
                               "address_line_1": "Medina Lodge"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -2523,18 +2572,18 @@
                                  "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "resigned_on": "1995-02-28", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1949
-                           }, 
                            "address": {
                               "postal_code": "RH19 4PW", 
                               "region": "Sussex", 
                               "address_line_1": "The Strakes", 
                               "address_line_2": "Church Hill", 
                               "locality": "West Hoathly"
+                           }, 
+                           "country_of_residence": "England", 
+                           "resigned_on": "1995-02-28", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1949
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -2561,8 +2610,8 @@
                               "postal_code": "RH8 0EN", 
                               "locality": "Oxted"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Chief Executive Officer"
                         }, 
                         {
@@ -2585,8 +2634,8 @@
                               "address_line_2": "Edgbaston", 
                               "address_line_1": "16 Hermitage Road"
                            }, 
-                           "nationality": "French", 
                            "officer_role": "director", 
+                           "nationality": "French", 
                            "occupation": "Director"
                         }, 
                         {
@@ -2596,17 +2645,17 @@
                                  "appointments": "/officers/UnpumLKh01LgBZiLafI5QzlTWYw/appointments"
                               }
                            }, 
+                           "appointed_on": "1995-02-28", 
+                           "resigned_on": "2000-03-29", 
+                           "date_of_birth": {
+                              "year": 1948, 
+                              "month": 9
+                           }, 
                            "address": {
                               "region": "West Sussex", 
                               "address_line_1": "44 Campbell Crescent", 
                               "postal_code": "RH19 1JR", 
                               "locality": "East Grinstead"
-                           }, 
-                           "appointed_on": "1995-02-28", 
-                           "resigned_on": "2000-03-29", 
-                           "date_of_birth": {
-                              "month": 9, 
-                              "year": 1948
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -2619,12 +2668,6 @@
                                  "appointments": "/officers/9gQXuvF7zMYGDvDl1aUX4Gm_aXU/appointments"
                               }
                            }, 
-                           "appointed_on": "1995-02-28", 
-                           "resigned_on": "2000-03-28", 
-                           "date_of_birth": {
-                              "year": 1942, 
-                              "month": 7
-                           }, 
                            "address": {
                               "postal_code": "RH5 4JN", 
                               "region": "Surrey", 
@@ -2632,23 +2675,33 @@
                               "address_line_2": "North Holmwood", 
                               "address_line_1": "Harelands Bentsbrook Park"
                            }, 
+                           "appointed_on": "1995-02-28", 
+                           "resigned_on": "2000-03-28", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1942
+                           }, 
                            "officer_role": "director", 
                            "nationality": "British", 
                            "occupation": "Solicitor"
                         }
                      ], 
-                     "resigned_on": "1995-02-28", 
+                     "name_elements": {
+                        "other_forenames": "John Anthony", 
+                        "surname": "FIELD", 
+                        "forename": "Barry"
+                     }, 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_name": "GERALD MARTIN FUNERAL DIRECTORS LIMITED", 
-                        "company_number": "02674038"
+                        "company_number": "02674038", 
+                        "company_name": "MASON FUNERAL SERVICE LIMITED"
                      }, 
                      "appointed_before": "1992-12-24", 
                      "address": {
-                        "postal_code": "PO31 7BH", 
+                        "address_line_2": "25 Birmingham Road", 
                         "region": "Isle Of Wight", 
                         "locality": "Cowes", 
-                        "address_line_2": "25 Birmingham Road", 
+                        "postal_code": "PO31 7BH", 
                         "address_line_1": "Medina Lodge"
                      }, 
                      "nationality": "British", 
@@ -2767,11 +2820,7 @@
                         "type": "ltd", 
                         "registered_office_is_in_dispute": false
                      }, 
-                     "name_elements": {
-                        "other_forenames": "John Anthony", 
-                        "surname": "FIELD", 
-                        "forename": "Barry"
-                     }, 
+                     "resigned_on": "1995-02-17", 
                      "officers": [
                         {
                            "name": "FIELD, Charles Edward Dyer", 
@@ -2789,8 +2838,8 @@
                               "address_line_1": "Marchants Way"
                            }, 
                            "appointed_on": "2012-07-11", 
-                           "officer_role": "secretary", 
-                           "nationality": "British"
+                           "nationality": "British", 
+                           "officer_role": "secretary"
                         }, 
                         {
                            "name": "FIELD, Charles Edward Dyer", 
@@ -2813,8 +2862,8 @@
                               "month": 11, 
                               "year": 1981
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "None"
                         }, 
                         {
@@ -2835,11 +2884,11 @@
                            "country_of_residence": "England", 
                            "appointed_on": "1995-02-17", 
                            "date_of_birth": {
-                              "year": 1951, 
-                              "month": 5
+                              "month": 5, 
+                              "year": 1951
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -2849,6 +2898,12 @@
                                  "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
                               }
                            }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1995-02-17", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1949
+                           }, 
                            "address": {
                               "locality": "Burgess Hill", 
                               "premises": "Rampion House", 
@@ -2857,14 +2912,8 @@
                               "postal_code": "RH15 8QY", 
                               "address_line_1": "Marchants Way"
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "1995-02-17", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1949
-                           }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -2885,11 +2934,11 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2008-06-01", 
                            "date_of_birth": {
-                              "year": 1975, 
-                              "month": 7
+                              "month": 7, 
+                              "year": 1975
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Funeral Director"
                         }, 
                         {
@@ -2902,8 +2951,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2017-03-13", 
                            "date_of_birth": {
-                              "year": 1978, 
-                              "month": 3
+                              "month": 3, 
+                              "year": 1978
                            }, 
                            "address": {
                               "locality": "Burgess Hill", 
@@ -2913,8 +2962,8 @@
                               "postal_code": "RH15 8QY", 
                               "address_line_1": "Marchants Way"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "None"
                         }, 
                         {
@@ -2960,6 +3009,8 @@
                                  "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
                               }
                            }, 
+                           "appointed_on": "1995-02-17", 
+                           "resigned_on": "1998-07-29", 
                            "address": {
                               "postal_code": "RH19 4PW", 
                               "region": "Sussex", 
@@ -2967,10 +3018,8 @@
                               "address_line_2": "Church Hill", 
                               "locality": "West Hoathly"
                            }, 
-                           "appointed_on": "1995-02-17", 
-                           "resigned_on": "1998-07-29", 
-                           "officer_role": "secretary", 
                            "nationality": "British", 
+                           "officer_role": "secretary", 
                            "occupation": "Director"
                         }, 
                         {
@@ -3010,8 +3059,8 @@
                               "postal_code": "MK18 3DG", 
                               "address_line_1": "63 High Street"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Funeral Director"
                         }, 
                         {
@@ -3023,30 +3072,6 @@
                            }, 
                            "appointed_on": "1998-04-27", 
                            "resigned_on": "2004-12-24", 
-                           "date_of_birth": {
-                              "year": 1946, 
-                              "month": 7
-                           }, 
-                           "address": {
-                              "address_line_2": "25 Birmingham Road", 
-                              "region": "Isle Of Wight", 
-                              "address_line_1": "Medina Lodge", 
-                              "postal_code": "PO31 7BH", 
-                              "locality": "Cowes"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "FIELD, Barry John Anthony", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
-                              }
-                           }, 
-                           "appointed_on": "1995-02-17", 
-                           "resigned_on": "1995-02-17", 
                            "date_of_birth": {
                               "month": 7, 
                               "year": 1946
@@ -3060,6 +3085,30 @@
                            }, 
                            "nationality": "British", 
                            "officer_role": "director", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "FIELD, Barry John Anthony", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "address_line_2": "25 Birmingham Road", 
+                              "region": "Isle Of Wight", 
+                              "address_line_1": "Medina Lodge", 
+                              "postal_code": "PO31 7BH", 
+                              "locality": "Cowes"
+                           }, 
+                           "appointed_on": "1995-02-17", 
+                           "resigned_on": "1995-02-17", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1946
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Member Of Parliament"
                         }, 
                         {
@@ -3069,6 +3118,13 @@
                                  "appointments": "/officers/cvyv5BaXAFmgsJ6sYM9OMBZesmY/appointments"
                               }
                            }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "1995-02-17", 
+                           "resigned_on": "2004-12-24", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1948
+                           }, 
                            "address": {
                               "postal_code": "RH20 2EP", 
                               "region": "West Sussex", 
@@ -3076,34 +3132,31 @@
                               "address_line_2": "Wiggonholt", 
                               "address_line_1": "Redford Cottage"
                            }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "1995-02-17", 
-                           "resigned_on": "2004-12-24", 
-                           "date_of_birth": {
-                              "year": 1948, 
-                              "month": 10
-                           }, 
                            "nationality": "British", 
                            "officer_role": "director", 
                            "occupation": "Company Director"
                         }
                      ], 
                      "appointed_on": "1995-02-17", 
-                     "resigned_on": "1995-02-17", 
+                     "name_elements": {
+                        "other_forenames": "John Anthony", 
+                        "surname": "FIELD", 
+                        "forename": "Barry"
+                     }, 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_name": "HERITAGE & SONS LIMITED", 
-                        "company_number": "01435022"
+                        "company_number": "01435022", 
+                        "company_name": "HERITAGE & SONS LIMITED"
                      }, 
                      "address": {
-                        "address_line_2": "25 Birmingham Road", 
+                        "postal_code": "PO31 7BH", 
                         "region": "Isle Of Wight", 
                         "address_line_1": "Medina Lodge", 
-                        "postal_code": "PO31 7BH", 
+                        "address_line_2": "25 Birmingham Road", 
                         "locality": "Cowes"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "persons_with_significant_control": [
                         {
                            "kind": "corporate-entity-person-with-significant-control", 
@@ -3155,20 +3208,20 @@
                         "sic_codes": [
                            "99999"
                         ], 
-                        "etag": "ec656579d8a0951acdc3d6b6d585a2d6a5869de1", 
+                        "etag": "4317eb377dd092b1f76d7dc5dc414d28897fdb32", 
                         "registered_office_address": {
                            "region": "West Midlands", 
-                           "locality": "Sutton Coldfield", 
+                           "address_line_1": "4 King Edwards Court", 
                            "postal_code": "B73 6AP", 
-                           "address_line_1": "4 King Edwards Court"
+                           "locality": "Sutton Coldfield"
                         }, 
                         "undeliverable_registered_office_address": false, 
                         "items": [], 
                         "jurisdiction": "england-wales", 
                         "confirmation_statement": {
-                           "next_due": "2018-04-02", 
-                           "last_made_up_to": "2017-03-19", 
-                           "next_made_up_to": "2018-03-19", 
+                           "next_due": "2019-04-02", 
+                           "last_made_up_to": "2018-03-19", 
+                           "next_made_up_to": "2019-03-19", 
                            "overdue": false
                         }, 
                         "last_full_members_list_date": "2016-03-19", 
@@ -3177,18 +3230,18 @@
                         "has_insolvency_history": false, 
                         "has_been_liquidated": false, 
                         "accounts": {
-                           "next_due": "2018-09-30", 
-                           "next_made_up_to": "2017-12-31", 
+                           "next_due": "2019-09-30", 
+                           "next_made_up_to": "2018-12-31", 
                            "last_accounts": {
-                              "period_start_on": "2015-12-26", 
+                              "period_start_on": "2016-12-31", 
                               "type": "dormant", 
-                              "made_up_to": "2016-12-30", 
-                              "period_end_on": "2016-12-30"
+                              "made_up_to": "2017-12-29", 
+                              "period_end_on": "2017-12-29"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-09-30", 
-                              "period_start_on": "2016-12-31", 
-                              "period_end_on": "2017-12-31", 
+                              "due_on": "2019-09-30", 
+                              "period_start_on": "2017-12-30", 
+                              "period_end_on": "2018-12-31", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -3215,10 +3268,10 @@
                         "type": "ltd"
                      }, 
                      "address": {
-                        "postal_code": "PO31 7BH", 
+                        "address_line_2": "25 Birmingham Road", 
                         "region": "Isle Of Wight", 
                         "locality": "Cowes", 
-                        "address_line_2": "25 Birmingham Road", 
+                        "postal_code": "PO31 7BH", 
                         "address_line_1": "Medina Lodge"
                      }, 
                      "resigned_on": "1995-01-19", 
@@ -3250,6 +3303,12 @@
                                  "appointments": "/officers/QkU109LXBwYUh4EU-wcBiLgoMIY/appointments"
                               }
                            }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2002-02-10", 
+                           "date_of_birth": {
+                              "month": 4, 
+                              "year": 1967
+                           }, 
                            "address": {
                               "locality": "Sutton Coldfield", 
                               "premises": "4", 
@@ -3257,12 +3316,6 @@
                               "region": "West Midlands", 
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2002-02-10", 
-                           "date_of_birth": {
-                              "month": 4, 
-                              "year": 1967
                            }, 
                            "nationality": "British", 
                            "officer_role": "director", 
@@ -3289,8 +3342,8 @@
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -3367,12 +3420,6 @@
                                  "appointments": "/officers/pMUQ29xj0d-cExK86RYDDzBh7r4/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "resigned_on": "1994-12-31", 
-                           "date_of_birth": {
-                              "month": 1, 
-                              "year": 1940
-                           }, 
                            "address": {
                               "address_line_2": "Cuckfield", 
                               "region": "West Sussex", 
@@ -3380,8 +3427,14 @@
                               "postal_code": "RH17 5EL", 
                               "address_line_1": "Marshalls Manor"
                            }, 
-                           "officer_role": "director", 
+                           "country_of_residence": "England", 
+                           "resigned_on": "1994-12-31", 
+                           "date_of_birth": {
+                              "year": 1940, 
+                              "month": 1
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Investment Management"
                         }, 
                         {
@@ -3394,8 +3447,8 @@
                            "appointed_on": "1993-09-30", 
                            "resigned_on": "1995-01-19", 
                            "date_of_birth": {
-                              "month": 7, 
-                              "year": 1946
+                              "year": 1946, 
+                              "month": 7
                            }, 
                            "address": {
                               "address_line_2": "25 Birmingham Road", 
@@ -3415,12 +3468,6 @@
                                  "appointments": "/officers/g97eeymSYpU15XvwktFoQYQmgLI/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "resigned_on": "1994-10-14", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1949
-                           }, 
                            "address": {
                               "address_line_2": "Church Hill", 
                               "region": "Sussex", 
@@ -3428,8 +3475,14 @@
                               "postal_code": "RH19 4PW", 
                               "address_line_1": "The Strakes"
                            }, 
-                           "officer_role": "director", 
+                           "country_of_residence": "England", 
+                           "resigned_on": "1994-10-14", 
+                           "date_of_birth": {
+                              "year": 1949, 
+                              "month": 3
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -3451,8 +3504,8 @@
                               "address_line_2": "Rowfant", 
                               "address_line_1": "Hill House Wallage Lane"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -3486,8 +3539,8 @@
                            "appointed_on": "1994-09-22", 
                            "resigned_on": "1998-05-06", 
                            "date_of_birth": {
-                              "year": 1964, 
-                              "month": 10
+                              "month": 10, 
+                              "year": 1964
                            }, 
                            "address": {
                               "country": "Australia", 
@@ -3506,13 +3559,6 @@
                                  "appointments": "/officers/2G6jHZEIiFCITkYy2XhSJ36R17U/appointments"
                               }
                            }, 
-                           "address": {
-                              "address_line_2": "Uvedale Road Limpsfield", 
-                              "region": "Surrey", 
-                              "locality": "Oxted", 
-                              "postal_code": "RH8 0EN", 
-                              "address_line_1": "Braye House"
-                           }, 
                            "country_of_residence": "England", 
                            "appointed_on": "1998-05-06", 
                            "resigned_on": "2008-12-29", 
@@ -3520,8 +3566,15 @@
                               "year": 1943, 
                               "month": 9
                            }, 
-                           "officer_role": "director", 
+                           "address": {
+                              "address_line_2": "Uvedale Road Limpsfield", 
+                              "region": "Surrey", 
+                              "locality": "Oxted", 
+                              "postal_code": "RH8 0EN", 
+                              "address_line_1": "Braye House"
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Chief Executive Officer"
                         }, 
                         {
@@ -3541,8 +3594,8 @@
                            "appointed_on": "1997-11-18", 
                            "resigned_on": "2002-02-10", 
                            "date_of_birth": {
-                              "month": 5, 
-                              "year": 1960
+                              "year": 1960, 
+                              "month": 5
                            }, 
                            "officer_role": "director", 
                            "nationality": "French", 
@@ -3558,8 +3611,8 @@
                            "appointed_on": "1994-08-22", 
                            "resigned_on": "2000-06-09", 
                            "date_of_birth": {
-                              "year": 1942, 
-                              "month": 3
+                              "month": 3, 
+                              "year": 1942
                            }, 
                            "address": {
                               "country": "Usa", 
@@ -3578,17 +3631,17 @@
                                  "appointments": "/officers/QT8ScRjgjSkas6gVMyYymD0MY8A/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "resigned_on": "1999-09-08", 
-                           "date_of_birth": {
-                              "month": 6, 
-                              "year": 1929
-                           }, 
                            "address": {
                               "region": "Buckinghamshire", 
                               "locality": "Old Amersham", 
                               "postal_code": "HP7 0DS", 
                               "address_line_1": "Whyte Posts 66 High Street"
+                           }, 
+                           "country_of_residence": "England", 
+                           "resigned_on": "1999-09-08", 
+                           "date_of_birth": {
+                              "month": 6, 
+                              "year": 1929
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -3601,17 +3654,17 @@
                                  "appointments": "/officers/Xm2_l4DUJi__zvFqvhVK-nEIBlw/appointments"
                               }
                            }, 
-                           "resigned_on": "1999-04-02", 
-                           "date_of_birth": {
-                              "year": 1938, 
-                              "month": 11
-                           }, 
                            "address": {
                               "postal_code": "BN6 8SR", 
                               "region": "Sussex", 
                               "locality": "Ditchling", 
                               "address_line_2": "Lodge Hill Lane", 
                               "address_line_1": "Lodge Hill House"
+                           }, 
+                           "resigned_on": "1999-04-02", 
+                           "date_of_birth": {
+                              "month": 11, 
+                              "year": 1938
                            }, 
                            "nationality": "British", 
                            "officer_role": "director", 
@@ -3626,8 +3679,8 @@
                            }, 
                            "resigned_on": "2000-03-28", 
                            "date_of_birth": {
-                              "month": 7, 
-                              "year": 1942
+                              "year": 1942, 
+                              "month": 7
                            }, 
                            "address": {
                               "postal_code": "RH5 4JN", 
@@ -3636,8 +3689,8 @@
                               "address_line_2": "North Holmwood", 
                               "locality": "Dorking"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Solicitor"
                         }, 
                         {
@@ -3647,16 +3700,16 @@
                                  "appointments": "/officers/qpePOdO_gAt85r8kVHurCUueeqM/appointments"
                               }
                            }, 
-                           "resigned_on": "1994-12-31", 
-                           "date_of_birth": {
-                              "month": 4, 
-                              "year": 1924
-                           }, 
                            "address": {
                               "postal_code": "YO6 1PY", 
                               "locality": "York", 
                               "address_line_2": "Sheriff Hutton", 
                               "address_line_1": "Heather Grange Church Gate"
+                           }, 
+                           "resigned_on": "1994-12-31", 
+                           "date_of_birth": {
+                              "year": 1924, 
+                              "month": 4
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -3671,11 +3724,11 @@
                      }, 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_name": "GREAT SOUTHERN GROUP LIMITED", 
-                        "company_number": "00095084"
+                        "company_number": "00095084", 
+                        "company_name": "GREAT SOUTHERN GROUP LIMITED"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "persons_with_significant_control": [
                         {
                            "kind": "corporate-entity-person-with-significant-control", 
@@ -3729,20 +3782,20 @@
                         "sic_codes": [
                            "99999"
                         ], 
-                        "etag": "039f732f48f4391e85ac4311916b40372f23d0e6", 
+                        "etag": "0719aeef1ae2ca0f074c9ee1ec2aa3df83ca9bfc", 
                         "registered_office_address": {
                            "region": "West Midlands", 
-                           "address_line_1": "4 King Edwards Court", 
+                           "locality": "Sutton Coldfield", 
                            "postal_code": "B73 6AP", 
-                           "locality": "Sutton Coldfield"
+                           "address_line_1": "4 King Edwards Court"
                         }, 
                         "undeliverable_registered_office_address": false, 
                         "items": [], 
                         "jurisdiction": "england-wales", 
                         "confirmation_statement": {
-                           "next_due": "2018-04-02", 
-                           "last_made_up_to": "2017-03-19", 
-                           "next_made_up_to": "2018-03-19", 
+                           "next_due": "2019-04-02", 
+                           "last_made_up_to": "2018-03-19", 
+                           "next_made_up_to": "2019-03-19", 
                            "overdue": false
                         }, 
                         "last_full_members_list_date": "2016-03-19", 
@@ -3751,18 +3804,18 @@
                         "has_insolvency_history": false, 
                         "has_been_liquidated": false, 
                         "accounts": {
-                           "next_due": "2018-09-30", 
-                           "next_made_up_to": "2017-12-31", 
+                           "next_due": "2019-09-30", 
+                           "next_made_up_to": "2018-12-31", 
                            "last_accounts": {
-                              "period_start_on": "2015-12-26", 
+                              "period_start_on": "2016-12-31", 
                               "type": "dormant", 
-                              "made_up_to": "2016-12-30", 
-                              "period_end_on": "2016-12-30"
+                              "made_up_to": "2017-12-29", 
+                              "period_end_on": "2017-12-29"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-09-30", 
-                              "period_start_on": "2016-12-31", 
-                              "period_end_on": "2017-12-31", 
+                              "due_on": "2019-09-30", 
+                              "period_start_on": "2017-12-30", 
+                              "period_end_on": "2018-12-31", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -3784,13 +3837,17 @@
                         "type": "ltd"
                      }, 
                      "address": {
-                        "address_line_2": "25 Birmingham Road", 
+                        "postal_code": "PO31 7BH", 
                         "region": "Isle Of Wight", 
                         "address_line_1": "Medina Lodge", 
-                        "postal_code": "PO31 7BH", 
+                        "address_line_2": "25 Birmingham Road", 
                         "locality": "Cowes"
                      }, 
-                     "resigned_on": "1994-11-29", 
+                     "name_elements": {
+                        "other_forenames": "John Anthony", 
+                        "surname": "FIELD", 
+                        "forename": "Barry"
+                     }, 
                      "officers": [
                         {
                            "name": "PORTMAN, Richard Harry", 
@@ -3809,8 +3866,8 @@
                               "address_line_1": "King Edwards Court"
                            }, 
                            "appointed_on": "2004-04-16", 
-                           "officer_role": "secretary", 
-                           "nationality": "British"
+                           "nationality": "British", 
+                           "officer_role": "secretary"
                         }, 
                         {
                            "name": "MCCOLLUM, Michael Kinloch", 
@@ -3833,8 +3890,8 @@
                               "month": 4, 
                               "year": 1967
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Director"
                         }, 
                         {
@@ -3844,12 +3901,6 @@
                                  "appointments": "/officers/7G1aIjpGY0JaSLwZyAhtl-2GIvk/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2008-12-29", 
-                           "date_of_birth": {
-                              "year": 1974, 
-                              "month": 5
-                           }, 
                            "address": {
                               "locality": "Sutton Coldfield", 
                               "premises": "4", 
@@ -3858,8 +3909,14 @@
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "officer_role": "director", 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2008-12-29", 
+                           "date_of_birth": {
+                              "year": 1974, 
+                              "month": 5
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -3947,8 +4004,8 @@
                            "country_of_residence": "England", 
                            "resigned_on": "1994-12-31", 
                            "date_of_birth": {
-                              "year": 1940, 
-                              "month": 1
+                              "month": 1, 
+                              "year": 1940
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -3961,17 +4018,17 @@
                                  "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
                               }
                            }, 
-                           "resigned_on": "1994-11-29", 
-                           "date_of_birth": {
-                              "month": 7, 
-                              "year": 1946
-                           }, 
                            "address": {
                               "postal_code": "PO31 7BH", 
                               "region": "Isle Of Wight", 
                               "address_line_1": "Medina Lodge", 
                               "address_line_2": "25 Birmingham Road", 
                               "locality": "Cowes"
+                           }, 
+                           "resigned_on": "1994-11-29", 
+                           "date_of_birth": {
+                              "year": 1946, 
+                              "month": 7
                            }, 
                            "nationality": "British", 
                            "officer_role": "director", 
@@ -3994,8 +4051,8 @@
                            "country_of_residence": "England", 
                            "resigned_on": "1994-10-15", 
                            "date_of_birth": {
-                              "year": 1949, 
-                              "month": 3
+                              "month": 3, 
+                              "year": 1949
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -4008,17 +4065,17 @@
                                  "appointments": "/officers/8fCi2C8zf8EaPI_RFwJl0JZzX8o/appointments"
                               }
                            }, 
-                           "resigned_on": "1994-11-29", 
-                           "date_of_birth": {
-                              "year": 1920, 
-                              "month": 1
-                           }, 
                            "address": {
                               "postal_code": "RH10 4NH", 
                               "region": "West Sussex", 
                               "locality": "Crawley", 
                               "address_line_2": "Rowfant", 
                               "address_line_1": "Hill House Wallage Lane"
+                           }, 
+                           "resigned_on": "1994-11-29", 
+                           "date_of_birth": {
+                              "year": 1920, 
+                              "month": 1
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -4031,16 +4088,16 @@
                                  "appointments": "/officers/VdQswK2v2O8GohTSbebgwZeb_98/appointments"
                               }
                            }, 
+                           "address": {
+                              "locality": "London", 
+                              "postal_code": "SW1", 
+                              "address_line_1": "20 Bourne Street"
+                           }, 
                            "appointed_on": "1994-11-29", 
                            "resigned_on": "1998-05-26", 
                            "date_of_birth": {
                               "year": 1964, 
                               "month": 10
-                           }, 
-                           "address": {
-                              "locality": "London", 
-                              "postal_code": "SW1", 
-                              "address_line_1": "20 Bourne Street"
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -4053,19 +4110,19 @@
                                  "appointments": "/officers/2G6jHZEIiFCITkYy2XhSJ36R17U/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "1998-05-26", 
-                           "resigned_on": "2008-12-29", 
-                           "date_of_birth": {
-                              "year": 1943, 
-                              "month": 9
-                           }, 
                            "address": {
                               "address_line_2": "Uvedale Road Limpsfield", 
                               "region": "Surrey", 
                               "locality": "Oxted", 
                               "postal_code": "RH8 0EN", 
                               "address_line_1": "Braye House"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "1998-05-26", 
+                           "resigned_on": "2008-12-29", 
+                           "date_of_birth": {
+                              "year": 1943, 
+                              "month": 9
                            }, 
                            "officer_role": "director", 
                            "nationality": "British", 
@@ -4078,18 +4135,18 @@
                                  "appointments": "/officers/nIiWlF7k6pARcDmwFPd9NYelPJk/appointments"
                               }
                            }, 
-                           "appointed_on": "1997-04-04", 
-                           "resigned_on": "2002-02-10", 
-                           "date_of_birth": {
-                              "month": 5, 
-                              "year": 1960
-                           }, 
                            "address": {
                               "postal_code": "B15 3UR", 
                               "region": "West Midlands", 
                               "address_line_1": "16 Hermitage Road", 
                               "address_line_2": "Edgbaston", 
                               "locality": "Birmingham"
+                           }, 
+                           "appointed_on": "1997-04-04", 
+                           "resigned_on": "2002-02-10", 
+                           "date_of_birth": {
+                              "year": 1960, 
+                              "month": 5
                            }, 
                            "officer_role": "director", 
                            "nationality": "French", 
@@ -4102,20 +4159,20 @@
                                  "appointments": "/officers/GXdJd1lFCkYdByayKVUdUuNvXZM/appointments"
                               }
                            }, 
-                           "appointed_on": "1994-11-29", 
-                           "resigned_on": "2000-06-09", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1942
-                           }, 
                            "address": {
                               "country": "Usa", 
                               "locality": "Connecticut 06840", 
                               "address_line_2": "New Canaan", 
                               "address_line_1": "99 Brookwood Lane"
                            }, 
-                           "nationality": "American", 
+                           "appointed_on": "1994-11-29", 
+                           "resigned_on": "2000-06-09", 
+                           "date_of_birth": {
+                              "year": 1942, 
+                              "month": 3
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "American", 
                            "occupation": "Business Executive"
                         }, 
                         {
@@ -4125,6 +4182,11 @@
                                  "appointments": "/officers/9gQXuvF7zMYGDvDl1aUX4Gm_aXU/appointments"
                               }
                            }, 
+                           "resigned_on": "1994-11-29", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1942
+                           }, 
                            "address": {
                               "postal_code": "RH5 4JN", 
                               "region": "Surrey", 
@@ -4132,29 +4194,20 @@
                               "address_line_2": "North Holmwood", 
                               "locality": "Dorking"
                            }, 
-                           "resigned_on": "1994-11-29", 
-                           "date_of_birth": {
-                              "month": 7, 
-                              "year": 1942
-                           }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Solicitor"
                         }
                      ], 
-                     "name_elements": {
-                        "other_forenames": "John Anthony", 
-                        "surname": "FIELD", 
-                        "forename": "Barry"
-                     }, 
+                     "resigned_on": "1994-11-29", 
                      "appointed_to": {
                         "company_status": "active", 
                         "company_number": "01545590", 
                         "company_name": "BROOMCO (2013) LIMITED"
                      }, 
                      "appointed_before": "1992-06-08", 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "persons_with_significant_control": [
                         {
                            "kind": "corporate-entity-person-with-significant-control", 
@@ -4203,6 +4256,7 @@
                                  "appointments": "/officers/1sJuJFV2ofYs9vwC0UorryjtmQk/appointments"
                               }
                            }, 
+                           "appointed_on": "2004-04-16", 
                            "address": {
                               "locality": "Sutton Coldfield", 
                               "premises": "4", 
@@ -4212,9 +4266,8 @@
                               "address_line_2": "King Edwards Square", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "appointed_on": "2004-04-16", 
-                           "nationality": "British", 
-                           "officer_role": "secretary"
+                           "officer_role": "secretary", 
+                           "nationality": "British"
                         }, 
                         {
                            "name": "MCCOLLUM, Michael Kinloch", 
@@ -4222,6 +4275,12 @@
                               "officer": {
                                  "appointments": "/officers/QkU109LXBwYUh4EU-wcBiLgoMIY/appointments"
                               }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2002-02-10", 
+                           "date_of_birth": {
+                              "year": 1967, 
+                              "month": 4
                            }, 
                            "address": {
                               "locality": "Sutton Coldfield", 
@@ -4231,14 +4290,8 @@
                               "postal_code": "B73 6AP", 
                               "address_line_1": "King Edwards Court"
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2002-02-10", 
-                           "date_of_birth": {
-                              "month": 4, 
-                              "year": 1967
-                           }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Director"
                         }, 
                         {
@@ -4327,8 +4380,8 @@
                            "country_of_residence": "England", 
                            "resigned_on": "1992-07-09", 
                            "date_of_birth": {
-                              "year": 1940, 
-                              "month": 1
+                              "month": 1, 
+                              "year": 1940
                            }, 
                            "address": {
                               "address_line_2": "Cuckfield", 
@@ -4337,8 +4390,8 @@
                               "postal_code": "RH17 5EL", 
                               "locality": "Haywards Heath"
                            }, 
-                           "officer_role": "director", 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -4348,6 +4401,12 @@
                                  "appointments": "/officers/9sfacZiSE0psS2O8CcdEU8MqNu0/appointments"
                               }
                            }, 
+                           "country_of_residence": "United Kingdom", 
+                           "resigned_on": "1992-03-19", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1946
+                           }, 
                            "address": {
                               "address_line_2": "Wiggonholt", 
                               "region": "West Sussex", 
@@ -4355,14 +4414,8 @@
                               "postal_code": "RH20 2EP", 
                               "locality": "Pulborough"
                            }, 
-                           "country_of_residence": "United Kingdom", 
-                           "resigned_on": "1992-03-19", 
-                           "date_of_birth": {
-                              "month": 7, 
-                              "year": 1946
-                           }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -4375,8 +4428,8 @@
                            "country_of_residence": "England", 
                            "resigned_on": "1992-07-09", 
                            "date_of_birth": {
-                              "year": 1949, 
-                              "month": 3
+                              "month": 3, 
+                              "year": 1949
                            }, 
                            "address": {
                               "postal_code": "RH19 4PW", 
@@ -4398,8 +4451,8 @@
                            }, 
                            "resigned_on": "1993-07-09", 
                            "date_of_birth": {
-                              "year": 1920, 
-                              "month": 1
+                              "month": 1, 
+                              "year": 1920
                            }, 
                            "address": {
                               "postal_code": "RH10 4NH", 
@@ -4408,8 +4461,8 @@
                               "address_line_2": "Rowfant", 
                               "locality": "Crawley"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -4440,13 +4493,6 @@
                                  "appointments": "/officers/2G6jHZEIiFCITkYy2XhSJ36R17U/appointments"
                               }
                            }, 
-                           "address": {
-                              "address_line_2": "Uvedale Road Limpsfield", 
-                              "region": "Surrey", 
-                              "address_line_1": "Braye House", 
-                              "postal_code": "RH8 0EN", 
-                              "locality": "Oxted"
-                           }, 
                            "country_of_residence": "England", 
                            "appointed_on": "1999-02-22", 
                            "resigned_on": "2008-12-29", 
@@ -4454,8 +4500,15 @@
                               "year": 1943, 
                               "month": 9
                            }, 
-                           "officer_role": "director", 
+                           "address": {
+                              "address_line_2": "Uvedale Road Limpsfield", 
+                              "region": "Surrey", 
+                              "address_line_1": "Braye House", 
+                              "postal_code": "RH8 0EN", 
+                              "locality": "Oxted"
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Company Director"
                         }, 
                         {
@@ -4465,6 +4518,12 @@
                                  "appointments": "/officers/nIiWlF7k6pARcDmwFPd9NYelPJk/appointments"
                               }
                            }, 
+                           "appointed_on": "1999-02-22", 
+                           "resigned_on": "2002-02-10", 
+                           "date_of_birth": {
+                              "year": 1960, 
+                              "month": 5
+                           }, 
                            "address": {
                               "address_line_2": "Edgbaston", 
                               "region": "West Midlands", 
@@ -4472,14 +4531,8 @@
                               "postal_code": "B15 3UR", 
                               "locality": "Birmingham"
                            }, 
-                           "appointed_on": "1999-02-22", 
-                           "resigned_on": "2002-02-10", 
-                           "date_of_birth": {
-                              "month": 5, 
-                              "year": 1960
-                           }, 
-                           "nationality": "French", 
                            "officer_role": "director", 
+                           "nationality": "French", 
                            "occupation": "Director"
                         }, 
                         {
@@ -4512,11 +4565,6 @@
                                  "appointments": "/officers/9gQXuvF7zMYGDvDl1aUX4Gm_aXU/appointments"
                               }
                            }, 
-                           "resigned_on": "2000-04-18", 
-                           "date_of_birth": {
-                              "year": 1942, 
-                              "month": 7
-                           }, 
                            "address": {
                               "postal_code": "RH5 4JN", 
                               "region": "Surrey", 
@@ -4524,8 +4572,13 @@
                               "address_line_2": "North Holmwood", 
                               "locality": "Dorking"
                            }, 
-                           "nationality": "British", 
+                           "resigned_on": "2000-04-18", 
+                           "date_of_birth": {
+                              "year": 1942, 
+                              "month": 7
+                           }, 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Company Director"
                         }
                      ], 
@@ -4541,38 +4594,38 @@
                         "sic_codes": [
                            "99999"
                         ], 
-                        "etag": "1ae4d13121f30ff2ed508dd2b5f5a014359256a9", 
+                        "etag": "7f0f7b3f3cee846fe2964b912ab714db307df605", 
                         "registered_office_address": {
                            "region": "West Midlands", 
-                           "locality": "Sutton Coldfield", 
+                           "address_line_1": "4 King Edwards Court", 
                            "postal_code": "B73 6AP", 
-                           "address_line_1": "4 King Edwards Court"
+                           "locality": "Sutton Coldfield"
                         }, 
                         "undeliverable_registered_office_address": false, 
                         "items": [], 
                         "jurisdiction": "england-wales", 
                         "confirmation_statement": {
-                           "next_due": "2018-03-26", 
-                           "last_made_up_to": "2017-03-12", 
-                           "next_made_up_to": "2018-03-12", 
+                           "next_due": "2019-03-26", 
+                           "last_made_up_to": "2018-03-12", 
+                           "next_made_up_to": "2019-03-12", 
                            "overdue": false
                         }, 
                         "company_number": "00341826", 
                         "date_of_creation": "1938-06-25", 
                         "has_been_liquidated": false, 
                         "accounts": {
-                           "next_due": "2018-09-30", 
-                           "next_made_up_to": "2017-12-31", 
+                           "next_due": "2019-09-30", 
+                           "next_made_up_to": "2018-12-31", 
                            "last_accounts": {
-                              "period_start_on": "2015-12-26", 
+                              "period_start_on": "2016-12-31", 
                               "type": "dormant", 
-                              "made_up_to": "2016-12-30", 
-                              "period_end_on": "2016-12-30"
+                              "made_up_to": "2017-12-29", 
+                              "period_end_on": "2017-12-29"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-09-30", 
-                              "period_start_on": "2016-12-31", 
-                              "period_end_on": "2017-12-31", 
+                              "due_on": "2019-09-30", 
+                              "period_start_on": "2017-12-30", 
+                              "period_end_on": "2018-12-31", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -4587,28 +4640,28 @@
                         "type": "private-limited-guarant-nsc", 
                         "registered_office_is_in_dispute": false
                      }, 
+                     "address": {
+                        "postal_code": "RH20 2EP", 
+                        "region": "West Sussex", 
+                        "address_line_1": "Redford Cottage", 
+                        "address_line_2": "Wiggonholt", 
+                        "locality": "Pulborough"
+                     }, 
+                     "resigned_on": "1992-03-19", 
+                     "country_of_residence": "United Kingdom", 
                      "name_elements": {
                         "other_forenames": "John Anthony", 
                         "surname": "FIELD", 
                         "forename": "Barry"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "resigned_on": "1992-03-19", 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_number": "00341826", 
-                        "company_name": "SOUTH LONDON AND SOUTHERN COUNTIES CREMATION SOCIETY LIMITED(THE)"
+                        "company_name": "SOUTH LONDON AND SOUTHERN COUNTIES CREMATION SOCIETY LIMITED(THE)", 
+                        "company_number": "00341826"
                      }, 
                      "appointed_before": "1992-03-12", 
-                     "address": {
-                        "postal_code": "RH20 2EP", 
-                        "region": "West Sussex", 
-                        "locality": "Pulborough", 
-                        "address_line_2": "Wiggonholt", 
-                        "address_line_1": "Redford Cottage"
-                     }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "persons_with_significant_control": [], 
                      "occupation": "Company Director"
                   }
@@ -4655,16 +4708,97 @@
          "category_wealth": 0
       }, 
       {
-         "raw_data": [], 
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: (1) Medical Aid for Palestinians (2) Conservative Friends of Israel LtdAddress of donor: (1) 33a Islington Park Street, London N1 1QB (2) PO Box 72288, London SW1P 9LBEstimate of the probable value (or amount of any donation): (1) Flights, accommodation, food and transport \u00a3960 (2) accommodation, airport transfer and hospitality \u00a3500Destination of visit: West Bank and IsraelDates of visit: 11 \u2013 18 February 2018Purpose of visit: Fact finding visit organised by the Council for Arab-British Understanding, Medical Aid for Palestinians and Conservative Friends of Israel.(Registered 01 March 2018)", 
+               "Estimate of the probable value (or amount of any donation)": "(1) Flights, accommodation, food and transport \u00a3960 (2) accommodation, airport transfer and hospitality \u00a3500", 
+               "Purpose of visit": "Fact finding visit organised by the Council for Arab-British Understanding, Medical Aid for Palestinians and Conservative Friends of Israel.", 
+               "Destination of visit": "West Bank and Israel", 
+               "(Registered 01 March 2018)": "(Registered 01 March 2018)", 
+               "Dates of visit": "11 \u2013 18 February 2018", 
+               "Name of donor": "(1) Medical Aid for Palestinians (2) Conservative Friends of Israel Ltd", 
+               "Address of donor": "(1) 33a Islington Park Street, London N1 1QB (2) PO Box 72288, London SW1P 9LB"
+            }, 
+            {
+               "raw_string": "Name of donor: Bahrain EmbassyAddress of donor: 2 Upper Brook St, London W1K 6PAEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a32,950Destination of visit: Kingdom of BahrainDates of visit: 5-8 April 2018Purpose of visit: To attend the opening of the UK/Bahrain Naval base, meet with Government Ministers, Members of the Federal National Council and senior business figures, in order to build on the bilateral relationship.(Registered 04 May 2018)", 
+               "Estimate of the probable value (or amount of any donation)": "Travel and accommodation with a value of \u00a32,950", 
+               "(Registered 04 May 2018)": "(Registered 04 May 2018)", 
+               "Purpose of visit": "To attend the opening of the UK/Bahrain Naval base, meet with Government Ministers, Members of the Federal National Council and senior business figures, in order to build on the bilateral relationship.", 
+               "Destination of visit": "Kingdom of Bahrain", 
+               "Dates of visit": "5-8 April 2018", 
+               "Name of donor": "Bahrain Embassy", 
+               "Address of donor": "2 Upper Brook St, London W1K 6PA"
+            }
+         ], 
          "isCurrency": true, 
-         "category_gifts": 0, 
-         "items": [], 
+         "category_gifts": 3910, 
+         "items": [
+            {
+               "status": "visit", 
+               "isDonation": false, 
+               "isGift": true, 
+               "destination": "West Bank and Israel", 
+               "officers": [], 
+               "isIncome": false, 
+               "pretty": "(1) Medical Aid for Palestinians (2) Conservative Friends of Israel Ltd", 
+               "donor": "(1) Medical Aid for Palestinians (2) Conservative Friends of Israel Ltd", 
+               "type": "visit", 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "(1) Medical Aid for Palestinians (2) Conservative Friends of Israel Ltd", 
+                  "company_number": "N/A"
+               }, 
+               "raw_string": "Name of donor: (1) Medical Aid for Palestinians (2) Conservative Friends of Israel LtdAddress of donor: (1) 33a Islington Park Street, London N1 1QB (2) PO Box 72288, London SW1P 9LBEstimate of the probable value (or amount of any donation): (1) Flights, accommodation, food and transport \u00a3960 (2) accommodation, airport transfer and hospitality \u00a3500Destination of visit: West Bank and IsraelDates of visit: 11 \u2013 18 February 2018Purpose of visit: Fact finding visit organised by the Council for Arab-British Understanding, Medical Aid for Palestinians and Conservative Friends of Israel.(Registered 01 March 2018)", 
+               "isWealth": false, 
+               "registered": "01/03/2018", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "Fact finding visit organised by the Council for Arab-British Understanding, Medical Aid for Palestinians and Conservative Friends of Israel.", 
+               "nouns": [], 
+               "address": "(1) 33a Islington Park Street, London N1 1QB (2) PO Box 72288, London SW1P 9LB", 
+               "item_id": "0001", 
+               "amount": 960, 
+               "category_id": 5
+            }, 
+            {
+               "status": "visit", 
+               "isDonation": false, 
+               "isGift": true, 
+               "destination": "Kingdom of Bahrain", 
+               "officers": [], 
+               "isIncome": false, 
+               "pretty": "Bahrain Embassy", 
+               "donor": "Bahrain Embassy", 
+               "type": "visit", 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Bahrain Embassy", 
+                  "company_number": "N/A"
+               }, 
+               "raw_string": "Name of donor: Bahrain EmbassyAddress of donor: 2 Upper Brook St, London W1K 6PAEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a32,950Destination of visit: Kingdom of BahrainDates of visit: 5-8 April 2018Purpose of visit: To attend the opening of the UK/Bahrain Naval base, meet with Government Ministers, Members of the Federal National Council and senior business figures, in order to build on the bilateral relationship.(Registered 04 May 2018)", 
+               "isWealth": false, 
+               "registered": "04/05/2018", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "To attend the opening of the UK/Bahrain Naval base, meet with Government Ministers, Members of the Federal National Council and senior business figures, in order to build on the bilateral relationship.", 
+               "nouns": [], 
+               "address": "2 Upper Brook St, London W1K 6PA", 
+               "item_id": "0002", 
+               "amount": 2950, 
+               "category_id": 5
+            }
+         ], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
-         "raw_items": [], 
+         "raw_items": [
+            "Name of donor: (1) Medical Aid for Palestinians (2) Conservative Friends of Israel LtdAddress of donor: (1) 33a Islington Park Street, London N1 1QB (2) PO Box 72288, London SW1P 9LBEstimate of the probable value (or amount of any donation): (1) Flights, accommodation, food and transport \u00a3960 (2) accommodation, airport transfer and hospitality \u00a3500Destination of visit: West Bank and IsraelDates of visit: 11 \u2013 18 February 2018Purpose of visit: Fact finding visit organised by the Council for Arab-British Understanding, Medical Aid for Palestinians and Conservative Friends of Israel.(Registered 01 March 2018)", 
+            "Name of donor: Bahrain EmbassyAddress of donor: 2 Upper Brook St, London W1K 6PAEstimate of the probable value (or amount of any donation): Travel and accommodation with a value of \u00a32,950Destination of visit: Kingdom of BahrainDates of visit: 5-8 April 2018Purpose of visit: To attend the opening of the UK/Bahrain Naval base, meet with Government Ministers, Members of the Federal National Council and senior business figures, in order to build on the bilateral relationship.(Registered 04 May 2018)"
+         ], 
          "category_description": "Visits Outside UK", 
          "category_id": 5, 
-         "category_amount": 0, 
+         "category_amount": 3910, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
@@ -4875,7 +5009,20 @@
          "category_gifts": 0, 
          "category_type": "salary", 
          "category_wealth": 0, 
-         "offices": null, 
+         "offices": [
+            {
+               "dept": "Foreign Affairs Committee", 
+               "from_date": "2018-02-20", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
+            }, 
+            {
+               "dept": "Committees on Arms Export Controls (formerly Quadripartite Committee)", 
+               "from_date": "2018-07-03", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
+            }
+         ], 
          "chair_salary": 15025, 
          "panel_of_chairs_salary": 15025, 
          "entries": [], 
@@ -4914,8 +5061,12 @@
    "dob": "Unknown Date of Birth", 
    "gender": "M", 
    "country_of_birth": null, 
-   "wrans_subjects": "Railways: Ryde, BBC World Service, Disaster Relief, Combined Authorities, Commonwealth: Equality", 
+   "wrans_subjects": "Railways: Ryde, Bovine Tuberculosis: Disease Control, Aviation, BBC World Service: Departmental Responsibilities, South Western Rail Franchise: Standards", 
    "member_id": "41631", 
    "constituency": "Isle of Wight", 
-   "mp_gifts": 0
+   "mp_gifts": 3910, 
+   "commitees": [
+      "Foreign Affairs Committee", 
+      "Committees on Arms Export Controls (formerly Quadripartite Committee)"
+   ]
 }

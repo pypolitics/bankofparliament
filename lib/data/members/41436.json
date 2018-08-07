@@ -61,7 +61,7 @@
             {
                "StartDate": "2015-10-26T00:00:00", 
                "EndDate": "2016-10-31T00:00:00", 
-               "Name": "Health Committee", 
+               "Name": "Health and Social Care Committee", 
                "IsCoOpted": "False", 
                "EndNote": null, 
                "ChairDates": null, 
@@ -132,6 +132,7 @@
       "Gender": "F", 
       "DisplayAs": "Emma Reynolds", 
       "HouseStartDate": "2010-05-06T00:00:00", 
+      "@Clerks_Id": "1164", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
@@ -178,20 +179,20 @@
                "Postcode": "SW1A 0AA"
             }, 
             {
-               "@Type_Id": "8", 
-               "Address1": "https://www.facebook.com/EmmaReynoldsMP", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Facebook"
-            }, 
-            {
                "@Type_Id": "7", 
                "Address1": "https://twitter.com/EmmaReynoldsMP", 
                "Note": null, 
                "IsPreferred": "False", 
                "IsPhysical": "False", 
                "Type": "Twitter"
+            }, 
+            {
+               "@Type_Id": "8", 
+               "Address1": "https://www.facebook.com/EmmaReynoldsMP", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Facebook"
             }
          ]
       }, 
@@ -241,16 +242,12 @@
       "and", 
       "Commonwealth", 
       "Affairs,", 
+      "Home", 
+      "Office,", 
       "Communities", 
       "and", 
       "Local", 
-      "Government,", 
-      "Department", 
-      "for", 
-      "Exiting", 
-      "the", 
-      "European", 
-      "Union", 
+      "Government", 
       "Foreign", 
       "affairs,", 
       "public", 
@@ -267,6 +264,9 @@
       "Pakistan,", 
       "USA", 
       "Health", 
+      "and", 
+      "Social", 
+      "Care", 
       "Committee", 
       "Foreign", 
       "Affairs", 
@@ -290,7 +290,7 @@
       "EU, India, Latin America, Pakistan, USA"
    ], 
    "mp_donations": 13333, 
-   "wrans_departments": "Department for Communities and Local Government, Department of Health, Foreign and Commonwealth Affairs, Communities and Local Government, Department for Exiting the European Union", 
+   "wrans_departments": "Department for Communities and Local Government, Department of Health, Foreign and Commonwealth Affairs, Home Office, Communities and Local Government", 
    "person_id": "24868", 
    "party": "Labour", 
    "forname": "Emma", 
@@ -370,8 +370,8 @@
                         "significant-influence-or-control"
                      ], 
                      "date_of_birth": {
-                        "month": 2, 
-                        "year": 1960
+                        "year": 1960, 
+                        "month": 2
                      }, 
                      "name_elements": {
                         "surname": "Hartland", 
@@ -431,8 +431,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2009-09-09", 
                      "date_of_birth": {
-                        "year": 1960, 
-                        "month": 2
+                        "month": 2, 
+                        "year": 1960
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -445,12 +445,6 @@
                            "appointments": "/officers/bSuKyYsmWyPmWcRofhDdOrKt5hw/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-04-03", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1970
-                     }, 
                      "address": {
                         "locality": "Stone", 
                         "premises": "17", 
@@ -459,6 +453,12 @@
                         "care_of": "PLANT & CO LTD", 
                         "postal_code": "ST15 8NA", 
                         "address_line_1": "Lichfield Street"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2014-04-03", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1970
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -471,18 +471,18 @@
                            "appointments": "/officers/HzEr5RkJ2mqxPIFAIf_s5GIaX14/appointments"
                         }
                      }, 
+                     "appointed_on": "2009-09-09", 
+                     "resigned_on": "2010-08-31", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1970
+                     }, 
                      "address": {
                         "address_line_2": "31 Bilbrook Road Bilbrook", 
                         "region": "West Midlands", 
                         "locality": "Wolverhampton", 
                         "postal_code": "WV8 1EU", 
                         "address_line_1": "Manor Cottages"
-                     }, 
-                     "appointed_on": "2009-09-09", 
-                     "resigned_on": "2010-08-31", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1970
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -583,28 +583,57 @@
                "isDonation": true, 
                "persons": [
                   {
+                     "kind": "corporate-entity-person-with-significant-control", 
+                     "name": "Silvergate Investments 2 Limited", 
+                     "links": {
+                        "self": "/company/05635995/persons-with-significant-control/corporate-entity/YaMdxWa1DDClByvb9nzWAofR8Vo"
+                     }, 
+                     "natures_of_control": [
+                        "ownership-of-shares-75-to-100-percent", 
+                        "voting-rights-75-to-100-percent"
+                     ], 
+                     "notified_on": "2018-02-01", 
+                     "identification": {
+                        "legal_authority": "United Kingdom (England And Wales)", 
+                        "country_registered": "England And Wales", 
+                        "place_registered": "Companies House", 
+                        "legal_form": "Limited By Shares", 
+                        "registration_number": "10681860"
+                     }, 
+                     "etag": "62f80b1100e8d4cfd7be82ecb90d1ae02622e5f2", 
+                     "address": {
+                        "locality": "London", 
+                        "premises": "Fourth Floor", 
+                        "country": "United Kingdom", 
+                        "postal_code": "WC2B 6UJ", 
+                        "address_line_2": "23 Kingsway", 
+                        "address_line_1": "York House"
+                     }
+                  }, 
+                  {
                      "kind": "individual-person-with-significant-control", 
+                     "ceased_on": "2018-02-01", 
                      "name": "Lord  Waheed Alli", 
                      "links": {
                         "self": "/company/05635995/persons-with-significant-control/individual/aF2_GruiWTkHcm5Ehc6JkitOg68"
                      }, 
-                     "country_of_residence": "United Kingdom", 
+                     "notified_on": "2017-08-25", 
+                     "country_of_residence": "England", 
                      "natures_of_control": [
                         "ownership-of-shares-75-to-100-percent", 
                         "voting-rights-75-to-100-percent", 
                         "right-to-appoint-and-remove-directors"
                      ], 
-                     "date_of_birth": {
-                        "year": 1964, 
-                        "month": 11
-                     }, 
                      "name_elements": {
                         "title": "Lord ", 
                         "surname": "Alli", 
                         "forename": "Waheed"
                      }, 
-                     "notified_on": "2017-08-25", 
-                     "etag": "128130c0d3573cad4749b94045acb2e2bea08501", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1964
+                     }, 
+                     "etag": "0a0c6df1cc89a5f5cfcde5abbec16475f371614b", 
                      "address": {
                         "locality": "London", 
                         "premises": "Fourth Floor", 
@@ -685,7 +714,7 @@
                         "address_line_2": "23 Kingsway", 
                         "address_line_1": "York House"
                      }, 
-                     "country_of_residence": "United Kingdom", 
+                     "country_of_residence": "England", 
                      "appointed_on": "2006-01-09", 
                      "date_of_birth": {
                         "month": 11, 
@@ -713,8 +742,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2006-01-26", 
                      "date_of_birth": {
-                        "year": 1953, 
-                        "month": 4
+                        "month": 4, 
+                        "year": 1953
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -727,6 +756,12 @@
                            "appointments": "/officers/TBjK6LQvDJz2B2WI6A-FNZ8fmYk/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2014-01-31", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1973
+                     }, 
                      "address": {
                         "locality": "London", 
                         "premises": "Fourth Floor", 
@@ -734,12 +769,6 @@
                         "postal_code": "WC2B 6UJ", 
                         "address_line_2": "23 Kingsway", 
                         "address_line_1": "York House"
-                     }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2014-01-31", 
-                     "date_of_birth": {
-                        "year": 1973, 
-                        "month": 12
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -1198,7 +1227,7 @@
    "constituency": "Wolverhampton North East", 
    "mp_gifts": 0, 
    "commitees": [
-      "Health Committee", 
+      "Health and Social Care Committee", 
       "Foreign Affairs Committee", 
       "Committee on Exiting the European Union", 
       "Committee on Exiting the European Union"

@@ -44,20 +44,50 @@
          "@xsi:nil": "true"
       }, 
       "Committees": {
-         "Committee": {
-            "StartDate": "2017-10-16T00:00:00", 
-            "EndDate": {
-               "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-               "@xsi:nil": "true"
+         "Committee": [
+            {
+               "StartDate": "2018-03-05T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Women and Equalities Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "328"
             }, 
-            "Name": "Science and Technology Committee (Commons)", 
-            "IsCoOpted": "False", 
-            "EndNote": null, 
-            "ChairDates": null, 
-            "IsAlternate": "False", 
-            "IsExOfficio": "False", 
-            "@Id": "135"
-         }
+            {
+               "StartDate": "2017-10-16T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Science and Technology Committee (Commons)", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "135"
+            }, 
+            {
+               "StartDate": "2018-07-18T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "European Statutory Instruments", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "393"
+            }
+         ]
       }, 
       "GovernmentPosts": null, 
       "BasicDetails": {
@@ -84,17 +114,10 @@
       "Gender": "F", 
       "DisplayAs": "Vicky Ford", 
       "HouseStartDate": "2017-06-08T00:00:00", 
+      "@Clerks_Id": "1466", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
-            {
-               "@Type_Id": "7", 
-               "Address1": "https://twitter.com/vickyford", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Twitter"
-            }, 
             {
                "Fax": null, 
                "@Type_Id": "1", 
@@ -111,6 +134,14 @@
                "Type": "Parliamentary", 
                "Email": "vicky.ford.mp@parliament.uk", 
                "Postcode": "SW1A 0AA"
+            }, 
+            {
+               "@Type_Id": "7", 
+               "Address1": "https://twitter.com/vickyford", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Twitter"
             }
          ]
       }, 
@@ -132,26 +163,31 @@
       "Chelmsford", 
       "Conservative", 
       "", 
-      "Personal", 
-      "Injury:", 
-      "Compensation,", 
       "Chelmsford", 
       "Prison:", 
       "Violence,", 
-      "Prisons:", 
-      "Smuggling,", 
-      "Cybercrime,", 
-      "Broadcasting:", 
-      "EU", 
-      "Countries", 
+      "Local", 
+      "Growth", 
+      "Deals:", 
+      "Northern", 
+      "Ireland,", 
+      "Motorcycles:", 
+      "Safety,", 
+      "East", 
+      "Anglia", 
+      "Railway", 
+      "Line:", 
+      "Repairs", 
+      "and", 
+      "Maintenance,", 
+      "Artificial", 
+      "Intelligence", 
       "Ministry", 
       "of", 
       "Justice,", 
       "Department", 
       "for", 
       "Transport,", 
-      "Cabinet", 
-      "Office,", 
       "Department", 
       "for", 
       "Digital,", 
@@ -159,19 +195,26 @@
       "Media", 
       "and", 
       "Sport,", 
-      "Department", 
-      "for", 
-      "International", 
-      "Development", 
+      "Ministry", 
+      "of", 
+      "Defence,", 
+      "Treasury", 
+      "Women", 
+      "and", 
+      "Equalities", 
+      "Committee", 
       "Science", 
       "and", 
       "Technology", 
       "Committee", 
-      "(Commons)"
+      "(Commons)", 
+      "European", 
+      "Statutory", 
+      "Instruments"
    ], 
    "mp_income": 99672, 
    "mp_donations": 0, 
-   "wrans_departments": "Ministry of Justice, Department for Transport, Cabinet Office, Department for Digital, Culture, Media and Sport, Department for International Development", 
+   "wrans_departments": "Ministry of Justice, Department for Transport, Department for Digital, Culture, Media and Sport, Ministry of Defence, Treasury", 
    "person_id": "25614", 
    "party": "Conservative", 
    "forname": "Vicky", 
@@ -603,6 +646,18 @@
                "from_date": "2017-10-16", 
                "to_date": "9999-12-31", 
                "position": "Member"
+            }, 
+            {
+               "dept": "Women and Equalities Committee", 
+               "from_date": "2018-03-05", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
+            }, 
+            {
+               "dept": "European Statutory Instruments Committee", 
+               "from_date": "2018-07-18", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
             }
          ], 
          "chair_salary": 15025, 
@@ -643,11 +698,13 @@
    "dob": "September 1967", 
    "gender": "F", 
    "country_of_birth": null, 
-   "wrans_subjects": "Personal Injury: Compensation, Chelmsford Prison: Violence, Prisons: Smuggling, Cybercrime, Broadcasting: EU Countries", 
+   "wrans_subjects": "Chelmsford Prison: Violence, Local Growth Deals: Northern Ireland, Motorcycles: Safety, East Anglia Railway Line: Repairs and Maintenance, Artificial Intelligence", 
    "member_id": "41402", 
    "constituency": "Chelmsford", 
    "mp_gifts": 1091, 
    "commitees": [
-      "Science and Technology Committee (Commons)"
+      "Women and Equalities Committee", 
+      "Science and Technology Committee (Commons)", 
+      "European Statutory Instruments"
    ]
 }

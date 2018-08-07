@@ -190,6 +190,17 @@
                "@Id": "102"
             }, 
             {
+               "StartDate": "2017-04-18T00:00:00", 
+               "EndDate": "2017-05-03T00:00:00", 
+               "Name": "Housing, Communities and Local Government Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": "Dissolution of Parliament", 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "17"
+            }, 
+            {
                "StartDate": "2017-09-11T00:00:00", 
                "EndDate": {
                   "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
@@ -213,17 +224,6 @@
                "IsAlternate": "False", 
                "IsExOfficio": "False", 
                "@Id": "30"
-            }, 
-            {
-               "StartDate": "2017-04-18T00:00:00", 
-               "EndDate": "2017-05-03T00:00:00", 
-               "Name": "Communities and Local Government Committee", 
-               "IsCoOpted": "False", 
-               "EndNote": "Dissolution of Parliament", 
-               "ChairDates": null, 
-               "IsAlternate": "False", 
-               "IsExOfficio": "False", 
-               "@Id": "17"
             }, 
             {
                "StartDate": "2013-01-07T00:00:00", 
@@ -349,6 +349,7 @@
       "Gender": "M", 
       "DisplayAs": "Sir Christopher Chope", 
       "HouseStartDate": "1997-05-01T00:00:00", 
+      "@Clerks_Id": "110", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
@@ -362,29 +363,12 @@
             }, 
             {
                "Fax": null, 
-               "@Type_Id": "4", 
-               "Address1": "18a Bargates", 
-               "Address2": null, 
-               "Address3": null, 
-               "Address4": null, 
-               "Address5": "Christchurch", 
-               "Note": null, 
-               "Phone": "01202 474949", 
-               "OtherAddress": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "True", 
-               "Type": "Constituency", 
-               "Email": "chopec@parliament.uk", 
-               "Postcode": "BH23 1QL"
-            }, 
-            {
-               "Fax": "020 7219 6938", 
                "@Type_Id": "1", 
                "Address1": "House of Commons", 
-               "Address2": null, 
+               "Address2": "London", 
                "Address3": null, 
                "Address4": null, 
-               "Address5": "London", 
+               "Address5": null, 
                "Note": null, 
                "Phone": "020 7219 5808", 
                "OtherAddress": null, 
@@ -393,6 +377,23 @@
                "Type": "Parliamentary", 
                "Email": "chopec@parliament.uk", 
                "Postcode": "SW1A 0AA"
+            }, 
+            {
+               "Fax": null, 
+               "@Type_Id": "4", 
+               "Address1": "37 Bargates", 
+               "Address2": "Christchurch", 
+               "Address3": "Dorset", 
+               "Address4": null, 
+               "Address5": null, 
+               "Note": null, 
+               "Phone": "01425 541087", 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Constituency", 
+               "Email": "chopec@parliament.uk", 
+               "Postcode": "BH23 1QD"
             }
          ]
       }, 
@@ -428,8 +429,8 @@
       "Transport,", 
       "Home", 
       "Department,", 
-      "Health,", 
       "Treasury,", 
+      "Health,", 
       "Department", 
       "for", 
       "Communities", 
@@ -467,6 +468,12 @@
       "Chairs", 
       "Justice", 
       "Committee", 
+      "Housing,", 
+      "Communities", 
+      "and", 
+      "Local", 
+      "Government", 
+      "Committee", 
       "Home", 
       "Affairs", 
       "Committee", 
@@ -476,11 +483,6 @@
       "Bill", 
       "(Joint", 
       "Committee)", 
-      "Communities", 
-      "and", 
-      "Local", 
-      "Government", 
-      "Committee", 
       "Committee", 
       "on", 
       "Standards", 
@@ -510,7 +512,7 @@
    ], 
    "mp_income": 89987, 
    "mp_donations": 0, 
-   "wrans_departments": "Transport, Home Department, Health, Treasury, Department for Communities and Local Government", 
+   "wrans_departments": "Transport, Home Department, Treasury, Health, Department for Communities and Local Government", 
    "person_id": "10103", 
    "party": "Conservative", 
    "forname": "Christopher", 
@@ -703,8 +705,8 @@
                         "forename": "Christopher"
                      }, 
                      "date_of_birth": {
-                        "month": 5, 
-                        "year": 1947
+                        "year": 1947, 
+                        "month": 5
                      }, 
                      "etag": "0251232b21653bc540d56e82d92452ea4e544c6e", 
                      "address": {
@@ -736,8 +738,8 @@
                         "locality": "Christchurch"
                      }, 
                      "appointed_on": "1996-02-05", 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "CHOPE, Christopher Robert", 
@@ -746,12 +748,6 @@
                            "appointments": "/officers/_L2CaeYxhqE8dHzfQNd4GUERkto/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1996-02-05", 
-                     "date_of_birth": {
-                        "month": 5, 
-                        "year": 1947
-                     }, 
                      "address": {
                         "address_line_2": "Neacroft", 
                         "region": "Dorset", 
@@ -759,8 +755,14 @@
                         "postal_code": "BH23 8JW", 
                         "address_line_1": "Mudewell Cottage Harrow Road"
                      }, 
-                     "officer_role": "director", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1996-02-05", 
+                     "date_of_birth": {
+                        "month": 5, 
+                        "year": 1947
+                     }, 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -770,8 +772,6 @@
                            "appointments": "/officers/_L2CaeYxhqE8dHzfQNd4GUERkto/appointments"
                         }
                      }, 
-                     "appointed_on": "1996-02-05", 
-                     "resigned_on": "1996-02-05", 
                      "address": {
                         "postal_code": "BH23 8JW", 
                         "region": "Dorset", 
@@ -779,8 +779,10 @@
                         "address_line_2": "Neacroft", 
                         "locality": "Christchurch"
                      }, 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "appointed_on": "1996-02-05", 
+                     "resigned_on": "1996-02-05", 
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "TEMPLE SECRETARIES LIMITED", 
@@ -835,20 +837,20 @@
                   "sic_codes": [
                      "82990"
                   ], 
-                  "etag": "6003b3e58ffd5b1711ed7df7ad671f75450f9991", 
+                  "etag": "3e69ffd85ae3a72c30f1e6677fe9a3d6faab3c43", 
                   "registered_office_address": {
-                     "address_line_2": "Christchurch Road", 
-                     "address_line_1": "The George Business Centre", 
                      "postal_code": "BH25 6QJ", 
+                     "address_line_1": "The George Business Centre", 
+                     "address_line_2": "Christchurch Road", 
                      "locality": "New Milton"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-02-19", 
-                     "last_made_up_to": "2017-02-05", 
-                     "next_made_up_to": "2018-02-05", 
+                     "next_due": "2019-02-19", 
+                     "last_made_up_to": "2018-02-05", 
+                     "next_made_up_to": "2019-02-05", 
                      "overdue": false
                   }, 
                   "company_number": "03155120", 
@@ -1101,8 +1103,8 @@
                         "voting-rights-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1961
+                        "year": 1961, 
+                        "month": 9
                      }, 
                      "name_elements": {
                         "surname": "Chope", 
@@ -1164,7 +1166,6 @@
                            "appointments": "/officers/EGhZ-ZOIDI7WYq0fH3pWR9iE19c/appointments"
                         }
                      }, 
-                     "appointed_on": "1996-02-05", 
                      "address": {
                         "address_line_2": "Bransgore", 
                         "region": "Dorset", 
@@ -1172,6 +1173,7 @@
                         "postal_code": "BH23 8JW", 
                         "locality": "Christchurch"
                      }, 
+                     "appointed_on": "1996-02-05", 
                      "nationality": "British", 
                      "officer_role": "secretary"
                   }, 
@@ -1185,8 +1187,8 @@
                      "country_of_residence": "England", 
                      "appointed_on": "1996-02-05", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1947
                      }, 
                      "address": {
                         "address_line_2": "Neacroft", 
@@ -1271,20 +1273,20 @@
                   "sic_codes": [
                      "82990"
                   ], 
-                  "etag": "6003b3e58ffd5b1711ed7df7ad671f75450f9991", 
+                  "etag": "3e69ffd85ae3a72c30f1e6677fe9a3d6faab3c43", 
                   "registered_office_address": {
-                     "address_line_2": "Christchurch Road", 
-                     "address_line_1": "The George Business Centre", 
                      "postal_code": "BH25 6QJ", 
+                     "address_line_1": "The George Business Centre", 
+                     "address_line_2": "Christchurch Road", 
                      "locality": "New Milton"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-02-19", 
-                     "last_made_up_to": "2017-02-05", 
-                     "next_made_up_to": "2018-02-05", 
+                     "next_due": "2019-02-19", 
+                     "last_made_up_to": "2018-02-05", 
+                     "next_made_up_to": "2019-02-05", 
                      "overdue": false
                   }, 
                   "company_number": "03155120", 
@@ -1338,8 +1340,8 @@
                         "voting-rights-25-to-50-percent"
                      ], 
                      "date_of_birth": {
-                        "year": 1961, 
-                        "month": 9
+                        "month": 9, 
+                        "year": 1961
                      }, 
                      "name_elements": {
                         "surname": "Chope", 
@@ -1443,8 +1445,6 @@
                            "appointments": "/officers/_L2CaeYxhqE8dHzfQNd4GUERkto/appointments"
                         }
                      }, 
-                     "appointed_on": "1996-02-05", 
-                     "resigned_on": "1996-02-05", 
                      "address": {
                         "postal_code": "BH23 8JW", 
                         "region": "Dorset", 
@@ -1452,8 +1452,10 @@
                         "address_line_2": "Neacroft", 
                         "locality": "Christchurch"
                      }, 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "appointed_on": "1996-02-05", 
+                     "resigned_on": "1996-02-05", 
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "TEMPLE SECRETARIES LIMITED", 
@@ -1508,20 +1510,20 @@
                   "sic_codes": [
                      "82990"
                   ], 
-                  "etag": "6003b3e58ffd5b1711ed7df7ad671f75450f9991", 
+                  "etag": "3e69ffd85ae3a72c30f1e6677fe9a3d6faab3c43", 
                   "registered_office_address": {
-                     "address_line_2": "Christchurch Road", 
-                     "address_line_1": "The George Business Centre", 
                      "postal_code": "BH25 6QJ", 
+                     "address_line_1": "The George Business Centre", 
+                     "address_line_2": "Christchurch Road", 
                      "locality": "New Milton"
                   }, 
                   "undeliverable_registered_office_address": false, 
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-02-19", 
-                     "last_made_up_to": "2017-02-05", 
-                     "next_made_up_to": "2018-02-05", 
+                     "next_due": "2019-02-19", 
+                     "last_made_up_to": "2018-02-05", 
+                     "next_made_up_to": "2019-02-05", 
                      "overdue": false
                   }, 
                   "company_number": "03155120", 
@@ -1597,9 +1599,9 @@
       "Panel of Chairs", 
       "Panel of Chairs", 
       "Justice Committee", 
+      "Housing, Communities and Local Government Committee", 
       "Home Affairs Committee", 
       "Draft Constitutional Renewal Bill (Joint Committee)", 
-      "Communities and Local Government Committee", 
       "Committee on Standards", 
       "Committee on Standards", 
       "Committee on Standards", 

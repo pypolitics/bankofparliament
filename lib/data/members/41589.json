@@ -176,9 +176,18 @@
       "Gender": "M", 
       "DisplayAs": "Sammy Wilson", 
       "HouseStartDate": "2005-05-05T00:00:00", 
+      "@Clerks_Id": "915", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
+            {
+               "@Type_Id": "6", 
+               "Address1": "http://www.sammywilson.org", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Website"
+            }, 
             {
                "Fax": "020 7219 3671", 
                "@Type_Id": "1", 
@@ -212,14 +221,6 @@
                "Type": "Constituency", 
                "Email": null, 
                "Postcode": "BT40 1RG"
-            }, 
-            {
-               "@Type_Id": "6", 
-               "Address1": "http://www.sammywilson.org", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Website"
             }, 
             {
                "@Type_Id": "7", 
@@ -286,8 +287,10 @@
       "and", 
       "Climate", 
       "Change,", 
-      "Home", 
-      "Department", 
+      "Foreign", 
+      "and", 
+      "Commonwealth", 
+      "Office", 
       "Social", 
       "issues,", 
       "policing,", 
@@ -311,30 +314,22 @@
       "European", 
       "Union"
    ], 
-   "mp_income": 75747, 
+   "mp_income": 75687, 
    "biography_entries": [
       "Social issues, policing, education"
    ], 
    "mp_donations": 0, 
-   "wrans_departments": "Northern Ireland, Treasury, Foreign and Commonwealth Affairs, Energy and Climate Change, Home Department", 
+   "wrans_departments": "Northern Ireland, Treasury, Foreign and Commonwealth Affairs, Energy and Climate Change, Foreign and Commonwealth Office", 
    "person_id": "11374", 
    "party": "DUP", 
    "forname": "Sammy", 
-   "mp_annual": 75747, 
+   "mp_annual": 75687, 
    "mp_wealth": 0, 
    "facebook": "https://facebook.com/SammyWilsonMP", 
    "eu_ref_stance": "Leave", 
    "categories": [
       {
          "raw_data": [
-            {
-               "raw_string": "Payments from YouGov, 50 Featherstone Street, London EC1Y 8RT, for completing surveys. All fees paid direct to charity.", 
-               "Payments from YouGov, 50 Featherstone Street, London EC1Y 8RT, for completing surveys. All fees paid direct to charity.": "Payments from YouGov, 50 Featherstone Street, London EC1Y 8RT, for completing surveys. All fees paid direct to charity."
-            }, 
-            {
-               "raw_string": "8 December 2016, payment of \u00a360. Hours: approx.15 mins. (Registered 28 June 2017)", 
-               "8 December 2016, payment of \u00a360. Hours": "approx.15 mins. (Registered 28 June 2017)"
-            }, 
             {
                "raw_string": "Payments from ComRes, Four Millbank, London SW1P 3JA, for completing surveys. All payments donated to charity:", 
                "Payments from ComRes, Four Millbank, London SW1P 3JA, for completing surveys. All payments donated to charity:": "Payments from ComRes, Four Millbank, London SW1P 3JA, for completing surveys. All payments donated to charity:"
@@ -372,19 +367,6 @@
          "category_gifts": 0, 
          "items": [
             {
-               "raw_string": "8 December 2016, payment of \u00a360. Hours: approx.15 mins. (Registered 28 June 2017)", 
-               "isWealth": false, 
-               "nouns": [], 
-               "isDonation": false, 
-               "registered": "28/06/2017", 
-               "isIncome": true, 
-               "amount": 60, 
-               "pretty": "8 December 2016, payment of \u00a360. Hours: approx.15 mins.", 
-               "item_id": "0001", 
-               "category_id": 1, 
-               "isGift": false
-            }, 
-            {
                "raw_string": "12 January 2017, payment of \u00a375. Hours: 15 mins. (Registered 15 January 2018)", 
                "isWealth": false, 
                "nouns": [], 
@@ -393,7 +375,7 @@
                "isIncome": true, 
                "amount": 75, 
                "pretty": "12 January 2017, payment of \u00a375. Hours: 15 mins.", 
-               "item_id": "0002", 
+               "item_id": "0001", 
                "category_id": 1, 
                "isGift": false
             }, 
@@ -406,7 +388,7 @@
                "isIncome": true, 
                "amount": 50, 
                "pretty": "13 January 2017, payment of \u00a350. Hours: 15 mins.", 
-               "item_id": "0003", 
+               "item_id": "0002", 
                "category_id": 1, 
                "isGift": false
             }, 
@@ -419,7 +401,7 @@
                "isIncome": true, 
                "amount": 50, 
                "pretty": "14 January 2017, payment of \u00a350. Hours: 15 mins.", 
-               "item_id": "0004", 
+               "item_id": "0003", 
                "category_id": 1, 
                "isGift": false
             }, 
@@ -432,7 +414,7 @@
                "isIncome": true, 
                "amount": 100, 
                "pretty": "6 March 2017, payment of \u00a3100. Hours: 15 mins.", 
-               "item_id": "0005", 
+               "item_id": "0004", 
                "category_id": 1, 
                "isGift": false
             }, 
@@ -445,7 +427,7 @@
                "isIncome": true, 
                "amount": 75, 
                "pretty": "15 August 2017, payment of \u00a375. Hours: 15 mins.", 
-               "item_id": "0006", 
+               "item_id": "0005", 
                "category_id": 1, 
                "isGift": false
             }, 
@@ -458,7 +440,7 @@
                "isIncome": true, 
                "amount": 300, 
                "pretty": "12 October 2017, payment of \u00a3300. Hours: 1 hr in total.", 
-               "item_id": "0007", 
+               "item_id": "0006", 
                "category_id": 1, 
                "isGift": false
             }, 
@@ -471,16 +453,14 @@
                "isIncome": true, 
                "amount": 75, 
                "pretty": "14 December 2017, payment of \u00a375. Hours: 15 mins.", 
-               "item_id": "0008", 
+               "item_id": "0007", 
                "category_id": 1, 
                "isGift": false
             }
          ], 
          "category_type": "employment", 
-         "category_income": 785, 
+         "category_income": 725, 
          "raw_items": [
-            "Payments from YouGov, 50 Featherstone Street, London EC1Y 8RT, for completing surveys. All fees paid direct to charity.", 
-            "8 December 2016, payment of \u00a360. Hours: approx.15 mins. (Registered 28 June 2017)", 
             "Payments from ComRes, Four Millbank, London SW1P 3JA, for completing surveys. All payments donated to charity:", 
             "12 January 2017, payment of \u00a375. Hours: 15 mins. (Registered 15 January 2018)", 
             "13 January 2017, payment of \u00a350. Hours: 15 mins. (Registered 15 January 2018)", 
@@ -492,7 +472,7 @@
          ], 
          "category_description": "Private Employment", 
          "category_id": 1, 
-         "category_amount": 785, 
+         "category_amount": 725, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 

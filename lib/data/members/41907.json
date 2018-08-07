@@ -17,7 +17,20 @@
          "@Id": "4"
       }, 
       "FullTitle": "Lee Rowley MP", 
-      "BiographyEntries": null, 
+      "BiographyEntries": {
+         "BiographyEntry": [
+            {
+               "Category": "Political Interests", 
+               "Entry": "Energy, Housing and Planning, Financial Services, Transport, Artificial Intelligence", 
+               "@Category_Id": "1"
+            }, 
+            {
+               "Category": "Countries of interest", 
+               "Entry": "United States, Australia, United Kingdom", 
+               "@Category_Id": "2"
+            }
+         ]
+      }, 
       "PreferredNames": {
          "PreferredName": {
             "StartDate": "2017-06-08T00:00:00", 
@@ -47,10 +60,7 @@
          "Committee": [
             {
                "StartDate": "2017-10-30T00:00:00", 
-               "EndDate": {
-                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-                  "@xsi:nil": "true"
-               }, 
+               "EndDate": "2018-04-23T00:00:00", 
                "Name": "Statutory Instruments (Select Committee)", 
                "IsCoOpted": "False", 
                "EndNote": null, 
@@ -61,10 +71,7 @@
             }, 
             {
                "StartDate": "2017-10-30T00:00:00", 
-               "EndDate": {
-                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
-                  "@xsi:nil": "true"
-               }, 
+               "EndDate": "2018-04-23T00:00:00", 
                "Name": "Statutory Instruments (Joint Committee)", 
                "IsCoOpted": "False", 
                "EndNote": null, 
@@ -72,6 +79,20 @@
                "IsAlternate": "False", 
                "IsExOfficio": "False", 
                "@Id": "148"
+            }, 
+            {
+               "StartDate": "2018-02-20T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "Public Accounts Committee", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "127"
             }
          ]
       }, 
@@ -100,17 +121,10 @@
       "Gender": "M", 
       "DisplayAs": "Lee Rowley", 
       "HouseStartDate": "2017-06-08T00:00:00", 
+      "@Clerks_Id": "1517", 
       "LayingMinisterName": null, 
       "Addresses": {
          "Address": [
-            {
-               "@Type_Id": "7", 
-               "Address1": "https://twitter.com/Lee4NED", 
-               "Note": null, 
-               "IsPreferred": "False", 
-               "IsPhysical": "False", 
-               "Type": "Twitter"
-            }, 
             {
                "Fax": null, 
                "@Type_Id": "1", 
@@ -127,6 +141,31 @@
                "Type": "Parliamentary", 
                "Email": "lee.rowley.mp@parliament.uk", 
                "Postcode": "SW1A 0AA"
+            }, 
+            {
+               "@Type_Id": "7", 
+               "Address1": "https://twitter.com/Lee4NED", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Twitter"
+            }, 
+            {
+               "Fax": null, 
+               "@Type_Id": "4", 
+               "Address1": "Office of Lee Rowley MP", 
+               "Address2": "Eckington Business Centre", 
+               "Address3": "Market Street", 
+               "Address4": "Eckington", 
+               "Address5": "Derbyshire", 
+               "Note": null, 
+               "Phone": "01246439222", 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Constituency", 
+               "Email": "lee.rowley.mp@parliament.uk", 
+               "Postcode": "S21 4JH"
             }
          ]
       }, 
@@ -148,24 +187,32 @@
       "North East Derbyshire", 
       "Conservative", 
       "", 
+      "Ovarian", 
       "Cancer,", 
+      "Energy:", 
+      "Meters,", 
       "Planning", 
       "Permission:", 
       "Appeals,", 
-      "Developing", 
-      "Countries:", 
-      "Technology,", 
-      "Sepsis,", 
-      "Anaemia:", 
-      "Children", 
+      "Road", 
+      "Traffic:", 
+      "East", 
+      "Midlands,", 
+      "Listed", 
+      "Buildings:", 
+      "VAT", 
+      "Department", 
+      "for", 
+      "Business,", 
+      "Energy", 
       "and", 
-      "Older", 
-      "People", 
+      "Industrial", 
+      "Strategy,", 
       "Department", 
       "of", 
       "Health,", 
       "Ministry", 
-      "for", 
+      "of", 
       "Housing,", 
       "Communities", 
       "and", 
@@ -173,8 +220,27 @@
       "Government,", 
       "Department", 
       "for", 
-      "International", 
-      "Development", 
+      "Transport,", 
+      "Department", 
+      "of", 
+      "Health", 
+      "and", 
+      "Social", 
+      "Care", 
+      "Energy,", 
+      "Housing", 
+      "and", 
+      "Planning,", 
+      "Financial", 
+      "Services,", 
+      "Transport,", 
+      "Artificial", 
+      "Intelligence", 
+      "United", 
+      "States,", 
+      "Australia,", 
+      "United", 
+      "Kingdom", 
       "Statutory", 
       "Instruments", 
       "(Select", 
@@ -182,15 +248,22 @@
       "Statutory", 
       "Instruments", 
       "(Joint", 
-      "Committee)"
+      "Committee)", 
+      "Public", 
+      "Accounts", 
+      "Committee"
    ], 
-   "mp_income": 75362, 
+   "mp_income": 75762, 
+   "biography_entries": [
+      "Energy, Housing and Planning, Financial Services, Transport, Artificial Intelligence", 
+      "United States, Australia, United Kingdom"
+   ], 
    "mp_donations": 14500, 
-   "wrans_departments": "Department of Health, Ministry for Housing, Communities and Local Government, Department for International Development", 
+   "wrans_departments": "Department for Business, Energy and Industrial Strategy, Department of Health, Ministry of Housing, Communities and Local Government, Department for Transport, Department of Health and Social Care", 
    "person_id": "25685", 
    "party": "Conservative", 
    "forname": "Lee", 
-   "mp_annual": 89862, 
+   "mp_annual": 90319, 
    "mp_wealth": 0, 
    "facebook": "", 
    "eu_ref_stance": "", 
@@ -208,6 +281,30 @@
             {
                "raw_string": "Payment of \u00a3200 expected for a survey completed on 28 November and 4 December 2017. Hours: 1.5 hrs. (Registered 18 December 2017)", 
                "Payment of \u00a3200 expected for a survey completed on 28 November and 4 December 2017. Hours": "1.5 hrs. (Registered 18 December 2017)"
+            }, 
+            {
+               "raw_string": "Payments from ComRes, 4 Millbank, London SW1P 3JA, all fees paid direct to charity:", 
+               "Payments from ComRes, 4 Millbank, London SW1P 3JA, all fees paid direct to charity:": "Payments from ComRes, 4 Millbank, London SW1P 3JA, all fees paid direct to charity:"
+            }, 
+            {
+               "raw_string": "9 February 2018, payment of \u00a3100 for a survey on 20 January 2018. Hours: 45 mins. (Registered 29 May 2018)", 
+               "9 February 2018, payment of \u00a3100 for a survey on 20 January 2018. Hours": "45 mins. (Registered 29 May 2018)"
+            }, 
+            {
+               "raw_string": "15 March 2018, payment of \u00a375 for a survey in February 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "15 March 2018, payment of \u00a375 for a survey in February 2018. Hours": "20 mins. (Registered 29 May 2018)"
+            }, 
+            {
+               "raw_string": "Payment of \u00a375 expected for a survey on 25 March 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "Payment of \u00a375 expected for a survey on 25 March 2018. Hours": "20 mins. (Registered 29 May 2018)"
+            }, 
+            {
+               "raw_string": "21 May 2018, payment of \u00a375 for a survey completed on 20 April 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "21 May 2018, payment of \u00a375 for a survey completed on 20 April 2018. Hours": "20 mins. (Registered 29 May 2018)"
+            }, 
+            {
+               "raw_string": "Payment of \u00a375 expected for a survey completed on 18 May 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "Payment of \u00a375 expected for a survey completed on 18 May 2018. Hours": "20 mins. (Registered 29 May 2018)"
             }
          ], 
          "isCurrency": true, 
@@ -238,18 +335,89 @@
                "item_id": "0002", 
                "category_id": 1, 
                "isGift": false
+            }, 
+            {
+               "raw_string": "9 February 2018, payment of \u00a3100 for a survey on 20 January 2018. Hours: 45 mins. (Registered 29 May 2018)", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "registered": "29/05/2018", 
+               "isIncome": true, 
+               "amount": 100, 
+               "pretty": "9 February 2018, payment of \u00a3100 for a survey on 20 January 2018. Hours: 45 mins.", 
+               "item_id": "0003", 
+               "category_id": 1, 
+               "isGift": false
+            }, 
+            {
+               "raw_string": "15 March 2018, payment of \u00a375 for a survey in February 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "registered": "29/05/2018", 
+               "isIncome": true, 
+               "amount": 75, 
+               "pretty": "15 March 2018, payment of \u00a375 for a survey in February 2018. Hours: 20 mins.", 
+               "item_id": "0004", 
+               "category_id": 1, 
+               "isGift": false
+            }, 
+            {
+               "raw_string": "Payment of \u00a375 expected for a survey on 25 March 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "registered": "29/05/2018", 
+               "isIncome": true, 
+               "amount": 75, 
+               "pretty": "Payment of \u00a375 expected for a survey on 25 March 2018. Hours: 20 mins.", 
+               "item_id": "0005", 
+               "category_id": 1, 
+               "isGift": false
+            }, 
+            {
+               "raw_string": "21 May 2018, payment of \u00a375 for a survey completed on 20 April 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "registered": "29/05/2018", 
+               "isIncome": true, 
+               "amount": 75, 
+               "pretty": "21 May 2018, payment of \u00a375 for a survey completed on 20 April 2018. Hours: 20 mins.", 
+               "item_id": "0006", 
+               "category_id": 1, 
+               "isGift": false
+            }, 
+            {
+               "raw_string": "Payment of \u00a375 expected for a survey completed on 18 May 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+               "isWealth": false, 
+               "nouns": [], 
+               "isDonation": false, 
+               "registered": "29/05/2018", 
+               "isIncome": true, 
+               "amount": 75, 
+               "pretty": "Payment of \u00a375 expected for a survey completed on 18 May 2018. Hours: 20 mins.", 
+               "item_id": "0007", 
+               "category_id": 1, 
+               "isGift": false
             }
          ], 
          "category_type": "employment", 
-         "category_income": 400, 
+         "category_income": 800, 
          "raw_items": [
             "Payments from \u00a3200 from Ipsos MORI, 3 Thomas More Square, London E1W 1YW, for opinion surveys. Fees are donated to charity.", 
             "3 August 2017, received \u00a3200. Hours: 1 hr. (Registered 07 August 2017)", 
-            "Payment of \u00a3200 expected for a survey completed on 28 November and 4 December 2017. Hours: 1.5 hrs. (Registered 18 December 2017)"
+            "Payment of \u00a3200 expected for a survey completed on 28 November and 4 December 2017. Hours: 1.5 hrs. (Registered 18 December 2017)", 
+            "Payments from ComRes, 4 Millbank, London SW1P 3JA, all fees paid direct to charity:", 
+            "9 February 2018, payment of \u00a3100 for a survey on 20 January 2018. Hours: 45 mins. (Registered 29 May 2018)", 
+            "15 March 2018, payment of \u00a375 for a survey in February 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+            "Payment of \u00a375 expected for a survey on 25 March 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+            "21 May 2018, payment of \u00a375 for a survey completed on 20 April 2018. Hours: 20 mins. (Registered 29 May 2018)", 
+            "Payment of \u00a375 expected for a survey completed on 18 May 2018. Hours: 20 mins. (Registered 29 May 2018)"
          ], 
          "category_description": "Private Employment", 
          "category_id": 1, 
-         "category_amount": 400, 
+         "category_amount": 800, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
@@ -304,7 +472,7 @@
                      "links": {
                         "self": "/company/04207587/persons-with-significant-control/individual/g2YM5nueGSYb70AtWPykcaojV3I"
                      }, 
-                     "country_of_residence": "England", 
+                     "country_of_residence": "United Kingdom", 
                      "natures_of_control": [
                         "ownership-of-shares-25-to-50-percent", 
                         "ownership-of-shares-25-to-50-percent-as-firm", 
@@ -315,19 +483,19 @@
                         "year": 1943
                      }, 
                      "name_elements": {
-                        "surname": "Wilson", 
-                        "forename": "John", 
                         "middle_name": "Lindley", 
-                        "title": "Mr"
+                        "title": "Mr", 
+                        "surname": "Wilson", 
+                        "forename": "John"
                      }, 
                      "notified_on": "2016-04-06", 
-                     "etag": "0028a95b29b26a2f8e11f7887295a2ccbf25a730", 
+                     "etag": "6a081cac2772480100644f3a9842d247d7e3e51e", 
                      "address": {
-                        "postal_code": "S41 9RD", 
-                        "region": "Derbyshire", 
-                        "locality": "Chesterfield", 
                         "address_line_2": "Dunston Way Dunston Road", 
-                        "address_line_1": "Capstone House Prospect Park"
+                        "region": "Derbyshire", 
+                        "address_line_1": "Capstone House Prospect Park", 
+                        "postal_code": "S41 9RD", 
+                        "locality": "Chesterfield"
                      }, 
                      "nationality": "British"
                   }, 
@@ -414,18 +582,18 @@
                            "appointments": "/officers/83X2V1XpDouQgwSLVrlHXYCt24s/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2001-04-27", 
                      "date_of_birth": {
-                        "month": 9, 
-                        "year": 1943
+                        "year": 1943, 
+                        "month": 9
                      }, 
                      "address": {
-                        "postal_code": "S41 9RD", 
-                        "region": "Derbyshire", 
-                        "locality": "Chesterfield", 
                         "address_line_2": "Dunston Way Dunston Road", 
-                        "address_line_1": "Capstone House Prospect Park"
+                        "region": "Derbyshire", 
+                        "address_line_1": "Capstone House Prospect Park", 
+                        "postal_code": "S41 9RD", 
+                        "locality": "Chesterfield"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -438,6 +606,8 @@
                            "appointments": "/officers/xNuaoM3AfSoz8j5nJTrcUzyXX6Y/appointments"
                         }
                      }, 
+                     "appointed_on": "2001-04-27", 
+                     "resigned_on": "2015-07-20", 
                      "address": {
                         "postal_code": "S41 9RD", 
                         "region": "Derbyshire", 
@@ -445,8 +615,6 @@
                         "address_line_2": "Dunston Way Dunston Road", 
                         "locality": "Chesterfield"
                      }, 
-                     "appointed_on": "2001-04-27", 
-                     "resigned_on": "2015-07-20", 
                      "officer_role": "secretary", 
                      "nationality": "British", 
                      "occupation": "Director"
@@ -475,18 +643,18 @@
                            "appointments": "/officers/0f-qjwLTMEQT9KWp5D8T5Ep1g-U/appointments"
                         }
                      }, 
+                     "address": {
+                        "region": "South Yorkshire", 
+                        "address_line_1": "78 Queen Victoria Road", 
+                        "postal_code": "S17 4HU", 
+                        "locality": "Sheffield"
+                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2001-04-27", 
                      "resigned_on": "2001-04-27", 
                      "date_of_birth": {
                         "month": 1, 
                         "year": 1961
-                     }, 
-                     "address": {
-                        "region": "South Yorkshire", 
-                        "address_line_1": "78 Queen Victoria Road", 
-                        "postal_code": "S17 4HU", 
-                        "locality": "Sheffield"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -515,7 +683,7 @@
                   "sic_codes": [
                      "08110"
                   ], 
-                  "etag": "073b50827261f47b89d4b62ce8f1c1dac0d8bce4", 
+                  "etag": "81cbcf878e3d472f4a3b479bb3cd3ea4b8e8dbee", 
                   "registered_office_address": {
                      "address_line_2": "Dunston Way Dunston Road", 
                      "region": "Derbyshire", 
@@ -527,9 +695,9 @@
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-05-11", 
-                     "last_made_up_to": "2017-04-27", 
-                     "next_made_up_to": "2018-04-27", 
+                     "next_due": "2019-05-11", 
+                     "last_made_up_to": "2018-04-27", 
+                     "next_made_up_to": "2019-04-27", 
                      "overdue": false
                   }, 
                   "last_full_members_list_date": "2016-04-27", 
@@ -650,12 +818,6 @@
                         "type": "ltd", 
                         "registered_office_is_in_dispute": false
                      }, 
-                     "address": {
-                        "premises": "28", 
-                        "address_line_1": "Ely Place (3rd Floor)", 
-                        "postal_code": "EC1N 6TD", 
-                        "locality": "London"
-                     }, 
                      "officers": [
                         {
                            "name": "MULS LIMITED", 
@@ -686,17 +848,17 @@
                                  "appointments": "/officers/W62k6WBWTUFYJ0MfOyxYStuW3nY/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2011-12-21", 
-                           "date_of_birth": {
-                              "month": 4, 
-                              "year": 1974
-                           }, 
                            "address": {
                               "premises": "28", 
                               "address_line_1": "Ely Place (3rd Floor)", 
                               "postal_code": "EC1N 6TD", 
                               "locality": "London"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-12-21", 
+                           "date_of_birth": {
+                              "month": 4, 
+                              "year": 1974
                            }, 
                            "nationality": "British", 
                            "officer_role": "director", 
@@ -709,13 +871,6 @@
                                  "appointments": "/officers/QQrgZWVC_dUEhp3Ktn9iO0M290o/appointments"
                               }
                            }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2011-12-21", 
-                           "resigned_on": "2011-12-21", 
-                           "date_of_birth": {
-                              "year": 1972, 
-                              "month": 1
-                           }, 
                            "address": {
                               "premises": "28", 
                               "country": "United Kingdom", 
@@ -723,8 +878,15 @@
                               "postal_code": "EC1N 6TD", 
                               "address_line_1": "Ely Place (3rd Floor)"
                            }, 
-                           "officer_role": "director", 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-12-21", 
+                           "resigned_on": "2011-12-21", 
+                           "date_of_birth": {
+                              "month": 1, 
+                              "year": 1972
+                           }, 
                            "nationality": "British", 
+                           "officer_role": "director", 
                            "occupation": "Fund Manager"
                         }
                      ], 
@@ -738,533 +900,19 @@
                      }, 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_number": "07889477", 
-                        "company_name": "AMP VENTURES LIMITED"
-                     }, 
-                     "nationality": "British", 
-                     "officer_role": "director", 
-                     "persons_with_significant_control": [], 
-                     "occupation": "Chief Executive Officer"
-                  }, 
-                  {
-                     "name": "Dominic Robert Andrew JOHNSON", 
-                     "links": {
-                        "company": "/company/07250381"
-                     }, 
-                     "company": {
-                        "status": "active", 
-                        "has_insolvency_history": false, 
-                        "links": {
-                           "filing_history": "/company/07250381/filing-history", 
-                           "self": "/company/07250381", 
-                           "officers": "/company/07250381/officers", 
-                           "persons_with_significant_control_statements": "/company/07250381/persons-with-significant-control-statements"
-                        }, 
-                        "can_file": true, 
-                        "sic_codes": [
-                           "94990"
-                        ], 
-                        "etag": "2f516f8dfc9d93c354bce759311a9380419dde7f", 
-                        "registered_office_address": {
-                           "country": "England", 
-                           "address_line_1": "3rd Floor, Princes Court", 
-                           "postal_code": "EC2R 8AQ", 
-                           "locality": "London", 
-                           "address_line_2": "7 Princes Street"
-                        }, 
-                        "undeliverable_registered_office_address": false, 
-                        "items": [], 
-                        "jurisdiction": "england-wales", 
-                        "confirmation_statement": {
-                           "next_due": "2018-06-18", 
-                           "last_made_up_to": "2017-06-04", 
-                           "next_made_up_to": "2018-06-04", 
-                           "overdue": false
-                        }, 
-                        "company_number": "07250381", 
-                        "date_of_creation": "2010-05-11", 
-                        "has_been_liquidated": false, 
-                        "accounts": {
-                           "next_due": "2018-08-31", 
-                           "next_made_up_to": "2017-11-30", 
-                           "last_accounts": {
-                              "period_start_on": "2015-12-01", 
-                              "type": "small", 
-                              "made_up_to": "2016-11-30", 
-                              "period_end_on": "2016-11-30"
-                           }, 
-                           "next_accounts": {
-                              "due_on": "2018-08-31", 
-                              "period_start_on": "2016-12-01", 
-                              "period_end_on": "2017-11-30", 
-                              "overdue": false
-                           }, 
-                           "accounting_reference_date": {
-                              "day": "30", 
-                              "month": "11"
-                           }, 
-                           "overdue": false
-                        }, 
-                        "company_name": "NEW CITY INITIATIVE EUROPE", 
-                        "company_status": "active", 
-                        "previous_company_names": [
-                           {
-                              "effective_from": "2010-05-11", 
-                              "ceased_on": "2012-06-21", 
-                              "name": "NEW CITY INITIATIVE"
-                           }
-                        ], 
-                        "has_charges": false, 
-                        "type": "private-limited-guarant-nsc-limited-exemption", 
-                        "registered_office_is_in_dispute": false
-                     }, 
-                     "officers": [
-                        {
-                           "name": "CARTER, James Alexander", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/moh4TaStiKrJGIfNn0WsZ-gyNLA/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "3rd Floor, Princes Court", 
-                              "country": "England", 
-                              "address_line_1": "7 Princes Street", 
-                              "postal_code": "EC2R 8AQ", 
-                              "locality": "London"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2016-02-22", 
-                           "date_of_birth": {
-                              "year": 1976, 
-                              "month": 6
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Chief Executive"
-                        }, 
-                        {
-                           "name": "DE JAGER, Susannah Mary Matilda", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/90OgRtqGe7oZTztBfryZMNNRCa4/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2017-04-20", 
-                           "date_of_birth": {
-                              "month": 2, 
-                              "year": 1986
-                           }, 
-                           "address": {
-                              "locality": "London", 
-                              "premises": "Sw Mitchell Capital", 
-                              "country": "England", 
-                              "postal_code": "SW1Y 6DN", 
-                              "address_line_2": "38 Jermyn Street", 
-                              "address_line_1": "Princes House"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Investment Management"
-                        }, 
-                        {
-                           "name": "JOHNSON, Dominic Robert Andrew", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/W62k6WBWTUFYJ0MfOyxYStuW3nY/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "3rd Floor, Princes Court", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_1": "7 Princes Street"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2010-06-21", 
-                           "date_of_birth": {
-                              "month": 4, 
-                              "year": 1974
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Partner"
-                        }, 
-                        {
-                           "name": "PINTO, Daniel Emile", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/WNXJPzFcZ8KRylx8pkN2Qm-g39g/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2010-05-11", 
-                           "date_of_birth": {
-                              "year": 1966, 
-                              "month": 9
-                           }, 
-                           "address": {
-                              "premises": "3rd Floor, Princes Court", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_1": "7 Princes Street"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Director"
-                        }, 
-                        {
-                           "name": "PROSPERI, Stefano", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/kFf6zAG6CA4WBywohNg9Of53kY8/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2014-01-22", 
-                           "date_of_birth": {
-                              "year": 1973, 
-                              "month": 7
-                           }, 
-                           "address": {
-                              "premises": "77", 
-                              "country": "England", 
-                              "address_line_1": "Cornhill", 
-                              "postal_code": "EC3V 3QQ", 
-                              "locality": "London"
-                           }, 
-                           "nationality": "Italian", 
-                           "officer_role": "director", 
-                           "occupation": "Chief Investment Officer Kairos Partners"
-                        }, 
-                        {
-                           "name": "SCOTT, David", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/d7HkIiOQUmPF_VRnDuWh3UPhqBI/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2010-06-21", 
-                           "date_of_birth": {
-                              "month": 4, 
-                              "year": 1963
-                           }, 
-                           "address": {
-                              "premises": "3rd Floor, Princes Court", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_1": "7 Princes Street"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Managing Partner"
-                        }, 
-                        {
-                           "name": "SCOTT PLUMMER, Charles Humphrey", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/pqhOXnWxFpIKcuLdr-zhrDDFpJA/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2017-01-15", 
-                           "date_of_birth": {
-                              "month": 8, 
-                              "year": 1972
-                           }, 
-                           "address": {
-                              "premises": "16", 
-                              "country": "England", 
-                              "address_line_1": "Babmaes Street", 
-                              "postal_code": "SW1Y 6AH", 
-                              "locality": "London"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "STEWART, Sebastian Duncan", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/45lt8DoB6h6xO44ZyeYJ6B4ZTqA/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "Somerset Capital Management", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "SW1W 9SA", 
-                              "address_line_1": "110 Buckingham Palace Road"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2017-04-20", 
-                           "date_of_birth": {
-                              "month": 3, 
-                              "year": 1989
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Investment Management"
-                        }, 
-                        {
-                           "name": "CIUCCI, Giuseppe Guido", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/D4LzZv9wSzhDOvzGr0wAmz9FOkc/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2010-06-21", 
-                           "resigned_on": "2012-03-13", 
-                           "date_of_birth": {
-                              "year": 1963, 
-                              "month": 7
-                           }, 
-                           "address": {
-                              "premises": "35", 
-                              "country": "United Kingdom", 
-                              "address_line_1": "Portman Square", 
-                              "postal_code": "W1H 6LR", 
-                              "locality": "London"
-                           }, 
-                           "nationality": "South African", 
-                           "officer_role": "director", 
-                           "occupation": "United Kingdom"
-                        }, 
-                        {
-                           "name": "GUINNESS, Arthur Edward Rory, The Earl Of Iveagh", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/b__YrCqQgdDkxzbehw5f4qpOqk4/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "35", 
-                              "country": "United Kingdom", 
-                              "address_line_1": "Portman Square", 
-                              "postal_code": "W1H 6LR", 
-                              "locality": "London"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2010-06-21", 
-                           "resigned_on": "2011-12-09", 
-                           "date_of_birth": {
-                              "month": 8, 
-                              "year": 1969
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "Irish", 
-                           "occupation": "Company Director"
-                        }, 
-                        {
-                           "name": "HUTCHINSON, Robert Desmond", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/qIsLIVDKHjLmuq-78NAtxnIgRE0/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2013-03-05", 
-                           "resigned_on": "2016-10-21", 
-                           "date_of_birth": {
-                              "year": 1959, 
-                              "month": 3
-                           }, 
-                           "address": {
-                              "premises": "3rd Floor, Princes Court", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_1": "7 Princes Street"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Fund Manager"
-                        }, 
-                        {
-                           "name": "LAUD, Derek George", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/w_5hFmH1sx4SGiXVvZ3xfcMuW4o/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2012-01-31", 
-                           "resigned_on": "2014-01-22", 
-                           "date_of_birth": {
-                              "year": 1964, 
-                              "month": 8
-                           }, 
-                           "address": {
-                              "locality": "London", 
-                              "premises": "3rd", 
-                              "country": "England", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_2": "Princes Street", 
-                              "address_line_1": "Floor Princes Court"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Various"
-                        }, 
-                        {
-                           "name": "MEAD, Gary Edward", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/bM_yjtpb3j2CfLM0CYchLVEV6y0/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2014-01-22", 
-                           "resigned_on": "2015-01-19", 
-                           "date_of_birth": {
-                              "year": 1953, 
-                              "month": 12
-                           }, 
-                           "address": {
-                              "locality": "London", 
-                              "premises": "3rd", 
-                              "country": "England", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_2": "Princes Street", 
-                              "address_line_1": "Floor Princes Court"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Executive Director"
-                        }, 
-                        {
-                           "name": "ODEY, Crispin", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/hiUcIFCXtfRkSqDPD_FBexEVMvE/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2010-06-21", 
-                           "resigned_on": "2012-12-10", 
-                           "date_of_birth": {
-                              "month": 1, 
-                              "year": 1959
-                           }, 
-                           "address": {
-                              "premises": "35", 
-                              "country": "United Kingdom", 
-                              "locality": "London", 
-                              "postal_code": "W1H 6LR", 
-                              "address_line_1": "Portman Square"
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Partner Investment Manager"
-                        }, 
-                        {
-                           "name": "SCOTT PLUMMER, Charles Humphrey", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/pqhOXnWxFpIKcuLdr-zhrDDFpJA/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "35", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "W1H 6LR", 
-                              "address_line_1": "Portman Square"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2012-09-19", 
-                           "resigned_on": "2016-02-22", 
-                           "date_of_birth": {
-                              "month": 8, 
-                              "year": 1972
-                           }, 
-                           "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "None"
-                        }, 
-                        {
-                           "name": "SPENCE, Magnus Andrew Eric", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/G-JaShLG1vDNX9CcXekpNxvPjps/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2010-06-21", 
-                           "resigned_on": "2016-02-22", 
-                           "date_of_birth": {
-                              "month": 2, 
-                              "year": 1964
-                           }, 
-                           "address": {
-                              "locality": "London", 
-                              "premises": "3rd", 
-                              "country": "England", 
-                              "postal_code": "EC2R 8AQ", 
-                              "address_line_2": "Princes Street", 
-                              "address_line_1": "Floor Princes Court"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Director"
-                        }, 
-                        {
-                           "name": "STERNBERG, Anton Hans", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/LmtxW8cC2sUXv7AnL1cRsiZ5KYY/appointments"
-                              }
-                           }, 
-                           "address": {
-                              "premises": "3rd Floor, Princes Court", 
-                              "country": "England", 
-                              "address_line_1": "7 Princes Street", 
-                              "postal_code": "EC2R 8AQ", 
-                              "locality": "London"
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2012-07-17", 
-                           "resigned_on": "2016-06-16", 
-                           "date_of_birth": {
-                              "month": 1, 
-                              "year": 1966
-                           }, 
-                           "nationality": "German", 
-                           "officer_role": "director", 
-                           "occupation": "Executive Director"
-                        }
-                     ], 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2010-06-21", 
-                     "name_elements": {
-                        "other_forenames": "Robert Andrew", 
-                        "title": "Mr", 
-                        "surname": "JOHNSON", 
-                        "forename": "Dominic"
-                     }, 
-                     "appointed_to": {
-                        "company_status": "active", 
-                        "company_number": "07250381", 
-                        "company_name": "NEW CITY INITIATIVE EUROPE"
+                        "company_name": "AMP VENTURES LIMITED", 
+                        "company_number": "07889477"
                      }, 
                      "address": {
-                        "premises": "3rd Floor, Princes Court", 
-                        "country": "England", 
-                        "address_line_1": "7 Princes Street", 
-                        "postal_code": "EC2R 8AQ", 
-                        "locality": "London"
+                        "premises": "28", 
+                        "locality": "London", 
+                        "postal_code": "EC1N 6TD", 
+                        "address_line_1": "Ely Place (3rd Floor)"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "persons_with_significant_control": [], 
-                     "occupation": "Partner"
+                     "occupation": "Chief Executive Officer"
                   }, 
                   {
                      "name": "Dominic Robert Andrew JOHNSON", 
@@ -1374,8 +1022,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2010-01-04", 
                            "date_of_birth": {
-                              "month": 4, 
-                              "year": 1974
+                              "year": 1974, 
+                              "month": 4
                            }, 
                            "address": {
                               "locality": "London", 
@@ -1441,8 +1089,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2007-09-07", 
                            "date_of_birth": {
-                              "month": 2, 
-                              "year": 1952
+                              "year": 1952, 
+                              "month": 2
                            }, 
                            "address": {
                               "premises": "8", 
@@ -1557,8 +1205,8 @@
                            "appointed_on": "2007-08-02", 
                            "resigned_on": "2012-12-27", 
                            "date_of_birth": {
-                              "year": 1972, 
-                              "month": 11
+                              "month": 11, 
+                              "year": 1972
                            }, 
                            "address": {
                               "premises": "37b", 
@@ -1580,8 +1228,8 @@
                            "appointed_on": "2007-09-07", 
                            "resigned_on": "2011-08-01", 
                            "date_of_birth": {
-                              "month": 5, 
-                              "year": 1942
+                              "year": 1942, 
+                              "month": 5
                            }, 
                            "address": {
                               "premises": "7", 
@@ -1596,14 +1244,14 @@
                      "appointed_on": "2010-01-04", 
                      "name_elements": {
                         "other_forenames": "Robert Andrew", 
-                        "forename": "Dominic", 
+                        "title": "Mr", 
                         "surname": "JOHNSON", 
-                        "title": "Mr"
+                        "forename": "Dominic"
                      }, 
                      "appointed_to": {
                         "company_status": "dissolved", 
-                        "company_name": "SENHOUSE CAPITAL LLP", 
-                        "company_number": "OC330300"
+                        "company_number": "OC330300", 
+                        "company_name": "SENHOUSE CAPITAL LLP"
                      }, 
                      "address": {
                         "locality": "London", 
@@ -1632,7 +1280,7 @@
                            "officers": "/company/OC327862/officers", 
                            "persons_with_significant_control_statements": "/company/OC327862/persons-with-significant-control-statements"
                         }, 
-                        "etag": "540eda02351e605de7abbba5b64ad2cf5f848527", 
+                        "etag": "4f4e5b12736a3dc175be0a1ce1b6ca9449b0c5a7", 
                         "registered_office_address": {
                            "address_line_2": "London", 
                            "postal_code": "EC1N 6TD", 
@@ -1642,27 +1290,27 @@
                         "items": [], 
                         "jurisdiction": "england-wales", 
                         "confirmation_statement": {
-                           "next_due": "2018-05-26", 
-                           "last_made_up_to": "2017-05-12", 
-                           "next_made_up_to": "2018-05-12", 
+                           "next_due": "2019-05-26", 
+                           "last_made_up_to": "2018-05-12", 
+                           "next_made_up_to": "2019-05-12", 
                            "overdue": false
                         }, 
                         "company_number": "OC327862", 
                         "date_of_creation": "2007-04-26", 
                         "has_been_liquidated": false, 
                         "accounts": {
-                           "next_due": "2018-12-31", 
-                           "next_made_up_to": "2018-03-31", 
+                           "next_due": "2019-12-31", 
+                           "next_made_up_to": "2019-03-31", 
                            "last_accounts": {
-                              "period_start_on": "2016-04-01", 
+                              "period_start_on": "2017-04-01", 
                               "type": "full", 
-                              "made_up_to": "2017-03-31", 
-                              "period_end_on": "2017-03-31"
+                              "made_up_to": "2018-03-31", 
+                              "period_end_on": "2018-03-31"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-12-31", 
-                              "period_start_on": "2017-04-01", 
-                              "period_end_on": "2018-03-31", 
+                              "due_on": "2019-12-31", 
+                              "period_start_on": "2018-04-01", 
+                              "period_end_on": "2019-03-31", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -1688,8 +1336,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2007-04-26", 
                            "date_of_birth": {
-                              "month": 4, 
-                              "year": 1974
+                              "year": 1974, 
+                              "month": 4
                            }, 
                            "address": {
                               "address_line_2": "London", 
@@ -1748,8 +1396,8 @@
                            "country_of_residence": "United Kingdom", 
                            "appointed_on": "2007-11-23", 
                            "date_of_birth": {
-                              "month": 5, 
-                              "year": 1979
+                              "year": 1979, 
+                              "month": 5
                            }, 
                            "address": {
                               "address_line_2": "London", 
@@ -1768,8 +1416,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2014-04-01", 
                            "date_of_birth": {
-                              "year": 1985, 
-                              "month": 2
+                              "month": 2, 
+                              "year": 1985
                            }, 
                            "address": {
                               "postal_code": "EC1N 6TD", 
@@ -1808,8 +1456,28 @@
                            "country_of_residence": "United Kingdom", 
                            "appointed_on": "2007-09-30", 
                            "date_of_birth": {
-                              "year": 1969, 
-                              "month": 2
+                              "month": 2, 
+                              "year": 1969
+                           }, 
+                           "address": {
+                              "postal_code": "EC1N 6TD", 
+                              "address_line_2": "London", 
+                              "address_line_1": "28 Ely Place (3rd Floor)"
+                           }, 
+                           "officer_role": "llp-member"
+                        }, 
+                        {
+                           "name": "FIVEASH, Peter Robert", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/GWMTDgcsy0dlgBbLpnk5vl6UHBA/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2018-04-01", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1979
                            }, 
                            "address": {
                               "postal_code": "EC1N 6TD", 
@@ -1848,8 +1516,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2007-11-19", 
                            "date_of_birth": {
-                              "year": 1982, 
-                              "month": 10
+                              "month": 10, 
+                              "year": 1982
                            }, 
                            "address": {
                               "address_line_2": "London", 
@@ -1885,7 +1553,7 @@
                                  "appointments": "/officers/n7AYC17N1NAyDQlmrSHSp2YcbyQ/appointments"
                               }
                            }, 
-                           "country_of_residence": "Republic Of Singapore", 
+                           "country_of_residence": "Singapore", 
                            "appointed_on": "2016-07-01", 
                            "date_of_birth": {
                               "year": 1969, 
@@ -1908,8 +1576,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2017-04-28", 
                            "date_of_birth": {
-                              "month": 9, 
-                              "year": 1977
+                              "year": 1977, 
+                              "month": 9
                            }, 
                            "address": {
                               "postal_code": "EC1N 6TD", 
@@ -1928,8 +1596,8 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2016-07-01", 
                            "date_of_birth": {
-                              "year": 1982, 
-                              "month": 6
+                              "month": 6, 
+                              "year": 1982
                            }, 
                            "address": {
                               "address_line_2": "London", 
@@ -1945,7 +1613,7 @@
                                  "appointments": "/officers/c2ewq6f6LgKDg_ES2jazpbjtvVM/appointments"
                               }
                            }, 
-                           "country_of_residence": "Uk", 
+                           "country_of_residence": "United Kingdom", 
                            "appointed_on": "2016-07-01", 
                            "date_of_birth": {
                               "month": 12, 
@@ -1965,15 +1633,15 @@
                                  "appointments": "/officers/nBK8AL8nEq5kEJ2h8d3Nw9MfgKU/appointments"
                               }
                            }, 
-                           "country_of_residence": "Republic Of Singapore", 
+                           "country_of_residence": "Singapore", 
                            "appointed_on": "2014-04-07", 
                            "date_of_birth": {
-                              "month": 5, 
-                              "year": 1970
+                              "year": 1970, 
+                              "month": 5
                            }, 
                            "address": {
-                              "address_line_2": "London", 
                               "postal_code": "EC1N 6TD", 
+                              "address_line_2": "London", 
                               "address_line_1": "28 Ely Place (3rd Floor)"
                            }, 
                            "officer_role": "llp-member"
@@ -2149,8 +1817,8 @@
                            "appointed_on": "2008-05-01", 
                            "resigned_on": "2012-02-20", 
                            "date_of_birth": {
-                              "year": 1967, 
-                              "month": 5
+                              "month": 5, 
+                              "year": 1967
                            }, 
                            "address": {
                               "postal_code": "EC1N 6TD", 
@@ -2191,8 +1859,8 @@
                            "appointed_on": "2007-09-30", 
                            "resigned_on": "2012-10-16", 
                            "date_of_birth": {
-                              "year": 1982, 
-                              "month": 6
+                              "month": 6, 
+                              "year": 1982
                            }, 
                            "address": {
                               "address_line_2": "London", 
@@ -2253,8 +1921,8 @@
                            "appointed_on": "2007-09-30", 
                            "resigned_on": "2012-12-14", 
                            "date_of_birth": {
-                              "month": 9, 
-                              "year": 1977
+                              "year": 1977, 
+                              "month": 9
                            }, 
                            "address": {
                               "postal_code": "EC1N 6TD", 
@@ -2315,14 +1983,14 @@
                      "appointed_on": "2007-04-26", 
                      "name_elements": {
                         "other_forenames": "Robert Andrew", 
-                        "forename": "Dominic", 
+                        "title": "Mr", 
                         "surname": "JOHNSON", 
-                        "title": "Mr"
+                        "forename": "Dominic"
                      }, 
                      "appointed_to": {
                         "company_status": "active", 
-                        "company_number": "OC327862", 
-                        "company_name": "SOMERSET CAPITAL MANAGEMENT LLP"
+                        "company_name": "SOMERSET CAPITAL MANAGEMENT LLP", 
+                        "company_number": "OC327862"
                      }, 
                      "address": {
                         "postal_code": "EC1N 6TD", 
@@ -2331,6 +1999,579 @@
                      }, 
                      "officer_role": "llp-designated-member", 
                      "persons_with_significant_control": []
+                  }, 
+                  {
+                     "name": "Dominic Robert Andrew JOHNSON", 
+                     "links": {
+                        "company": "/company/07250381"
+                     }, 
+                     "officers": [
+                        {
+                           "name": "CARTER, James Alexander", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/moh4TaStiKrJGIfNn0WsZ-gyNLA/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "address_line_1": "7 Princes Street", 
+                              "postal_code": "EC2R 8AQ", 
+                              "locality": "London"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2016-02-22", 
+                           "date_of_birth": {
+                              "month": 6, 
+                              "year": 1976
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Chief Executive"
+                        }, 
+                        {
+                           "name": "DE JAGER, Susannah Mary Matilda", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/90OgRtqGe7oZTztBfryZMNNRCa4/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2017-04-20", 
+                           "date_of_birth": {
+                              "year": 1986, 
+                              "month": 2
+                           }, 
+                           "address": {
+                              "locality": "London", 
+                              "premises": "Sw Mitchell Capital", 
+                              "country": "England", 
+                              "postal_code": "SW1Y 6DN", 
+                              "address_line_2": "38 Jermyn Street", 
+                              "address_line_1": "Princes House"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Investment Management"
+                        }, 
+                        {
+                           "name": "ILLINGWORTH, Toby Holden", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/LMzFcje6lnoeDEDEkSQukLCy4aQ/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2018-03-07", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1993
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "address_line_1": "7 Princes Street", 
+                              "postal_code": "EC2R 8AQ", 
+                              "locality": "London"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Executive Director"
+                        }, 
+                        {
+                           "name": "PERCY, Algernon Alan", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/hGf4EGTpLlQxxGG_vRYClSr9Y68/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2018-03-08", 
+                           "date_of_birth": {
+                              "year": 1969, 
+                              "month": 3
+                           }, 
+                           "address": {
+                              "locality": "London", 
+                              "premises": "16", 
+                              "country": "England", 
+                              "care_of": "WAVERTON INVESTMENT MANAGEMENT", 
+                              "postal_code": "SW1Y 6AH", 
+                              "address_line_1": "Babmaes Street"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Fund Manager"
+                        }, 
+                        {
+                           "name": "PINTO, Daniel Emile", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/WNXJPzFcZ8KRylx8pkN2Qm-g39g/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-05-11", 
+                           "date_of_birth": {
+                              "month": 9, 
+                              "year": 1966
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "EC2R 8AQ", 
+                              "address_line_1": "7 Princes Street"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "SCOTT PLUMMER, Charles Humphrey", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/pqhOXnWxFpIKcuLdr-zhrDDFpJA/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2017-01-15", 
+                           "date_of_birth": {
+                              "month": 8, 
+                              "year": 1972
+                           }, 
+                           "address": {
+                              "premises": "16", 
+                              "country": "England", 
+                              "address_line_1": "Babmaes Street", 
+                              "postal_code": "SW1Y 6AH", 
+                              "locality": "London"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "STEWART, Sebastian Duncan", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/45lt8DoB6h6xO44ZyeYJ6B4ZTqA/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "Somerset Capital Management", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "SW1W 9SA", 
+                              "address_line_1": "110 Buckingham Palace Road"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2017-04-20", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1989
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Investment Management"
+                        }, 
+                        {
+                           "name": "CIUCCI, Giuseppe Guido", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/D4LzZv9wSzhDOvzGr0wAmz9FOkc/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "35", 
+                              "country": "United Kingdom", 
+                              "address_line_1": "Portman Square", 
+                              "postal_code": "W1H 6LR", 
+                              "locality": "London"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-06-21", 
+                           "resigned_on": "2012-03-13", 
+                           "date_of_birth": {
+                              "month": 7, 
+                              "year": 1963
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "South African", 
+                           "occupation": "United Kingdom"
+                        }, 
+                        {
+                           "name": "GUINNESS, Arthur Edward Rory, The Earl Of Iveagh", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/b__YrCqQgdDkxzbehw5f4qpOqk4/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-06-21", 
+                           "resigned_on": "2011-12-09", 
+                           "date_of_birth": {
+                              "year": 1969, 
+                              "month": 8
+                           }, 
+                           "address": {
+                              "premises": "35", 
+                              "country": "United Kingdom", 
+                              "address_line_1": "Portman Square", 
+                              "postal_code": "W1H 6LR", 
+                              "locality": "London"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "Irish", 
+                           "occupation": "Company Director"
+                        }, 
+                        {
+                           "name": "HUTCHINSON, Robert Desmond", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/qIsLIVDKHjLmuq-78NAtxnIgRE0/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2013-03-05", 
+                           "resigned_on": "2016-10-21", 
+                           "date_of_birth": {
+                              "month": 3, 
+                              "year": 1959
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "EC2R 8AQ", 
+                              "address_line_1": "7 Princes Street"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Fund Manager"
+                        }, 
+                        {
+                           "name": "JOHNSON, Dominic Robert Andrew", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/W62k6WBWTUFYJ0MfOyxYStuW3nY/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-06-21", 
+                           "resigned_on": "2018-01-26", 
+                           "date_of_birth": {
+                              "month": 4, 
+                              "year": 1974
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "address_line_1": "7 Princes Street", 
+                              "postal_code": "EC2R 8AQ", 
+                              "locality": "London"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Partner"
+                        }, 
+                        {
+                           "name": "LAUD, Derek George", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/w_5hFmH1sx4SGiXVvZ3xfcMuW4o/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2012-01-31", 
+                           "resigned_on": "2014-01-22", 
+                           "date_of_birth": {
+                              "month": 8, 
+                              "year": 1964
+                           }, 
+                           "address": {
+                              "locality": "London", 
+                              "premises": "3rd", 
+                              "country": "England", 
+                              "postal_code": "EC2R 8AQ", 
+                              "address_line_2": "Princes Street", 
+                              "address_line_1": "Floor Princes Court"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Various"
+                        }, 
+                        {
+                           "name": "MEAD, Gary Edward", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/bM_yjtpb3j2CfLM0CYchLVEV6y0/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "London", 
+                              "premises": "3rd", 
+                              "country": "England", 
+                              "postal_code": "EC2R 8AQ", 
+                              "address_line_2": "Princes Street", 
+                              "address_line_1": "Floor Princes Court"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2014-01-22", 
+                           "resigned_on": "2015-01-19", 
+                           "date_of_birth": {
+                              "month": 12, 
+                              "year": 1953
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Executive Director"
+                        }, 
+                        {
+                           "name": "ODEY, Crispin", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/hiUcIFCXtfRkSqDPD_FBexEVMvE/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-06-21", 
+                           "resigned_on": "2012-12-10", 
+                           "date_of_birth": {
+                              "month": 1, 
+                              "year": 1959
+                           }, 
+                           "address": {
+                              "premises": "35", 
+                              "country": "United Kingdom", 
+                              "locality": "London", 
+                              "postal_code": "W1H 6LR", 
+                              "address_line_1": "Portman Square"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Partner Investment Manager"
+                        }, 
+                        {
+                           "name": "PROSPERI, Stefano", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/kFf6zAG6CA4WBywohNg9Of53kY8/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2014-01-22", 
+                           "resigned_on": "2018-01-02", 
+                           "date_of_birth": {
+                              "year": 1973, 
+                              "month": 7
+                           }, 
+                           "address": {
+                              "premises": "77", 
+                              "country": "England", 
+                              "address_line_1": "Cornhill", 
+                              "postal_code": "EC3V 3QQ", 
+                              "locality": "London"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "Italian", 
+                           "occupation": "Chief Investment Officer Kairos Partners"
+                        }, 
+                        {
+                           "name": "SCOTT, David", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/d7HkIiOQUmPF_VRnDuWh3UPhqBI/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "address_line_1": "7 Princes Street", 
+                              "postal_code": "EC2R 8AQ", 
+                              "locality": "London"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-06-21", 
+                           "resigned_on": "2018-02-01", 
+                           "date_of_birth": {
+                              "year": 1963, 
+                              "month": 4
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Managing Partner"
+                        }, 
+                        {
+                           "name": "SCOTT PLUMMER, Charles Humphrey", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/pqhOXnWxFpIKcuLdr-zhrDDFpJA/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "35", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "W1H 6LR", 
+                              "address_line_1": "Portman Square"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2012-09-19", 
+                           "resigned_on": "2016-02-22", 
+                           "date_of_birth": {
+                              "year": 1972, 
+                              "month": 8
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "None"
+                        }, 
+                        {
+                           "name": "SPENCE, Magnus Andrew Eric", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/G-JaShLG1vDNX9CcXekpNxvPjps/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "locality": "London", 
+                              "premises": "3rd", 
+                              "country": "England", 
+                              "postal_code": "EC2R 8AQ", 
+                              "address_line_2": "Princes Street", 
+                              "address_line_1": "Floor Princes Court"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2010-06-21", 
+                           "resigned_on": "2016-02-22", 
+                           "date_of_birth": {
+                              "year": 1964, 
+                              "month": 2
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Director"
+                        }, 
+                        {
+                           "name": "STERNBERG, Anton Hans", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/LmtxW8cC2sUXv7AnL1cRsiZ5KYY/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2012-07-17", 
+                           "resigned_on": "2016-06-16", 
+                           "date_of_birth": {
+                              "year": 1966, 
+                              "month": 1
+                           }, 
+                           "address": {
+                              "premises": "3rd Floor, Princes Court", 
+                              "country": "England", 
+                              "address_line_1": "7 Princes Street", 
+                              "postal_code": "EC2R 8AQ", 
+                              "locality": "London"
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "German", 
+                           "occupation": "Executive Director"
+                        }
+                     ], 
+                     "company": {
+                        "status": "active", 
+                        "has_insolvency_history": false, 
+                        "links": {
+                           "filing_history": "/company/07250381/filing-history", 
+                           "self": "/company/07250381", 
+                           "officers": "/company/07250381/officers", 
+                           "persons_with_significant_control_statements": "/company/07250381/persons-with-significant-control-statements"
+                        }, 
+                        "can_file": true, 
+                        "sic_codes": [
+                           "94990"
+                        ], 
+                        "etag": "6d80310537a8ce73f35a875a4a171e48953313ab", 
+                        "registered_office_address": {
+                           "country": "England", 
+                           "postal_code": "EC2R 8AQ", 
+                           "locality": "London", 
+                           "address_line_2": "7 Princes Street", 
+                           "address_line_1": "3rd Floor, Princes Court"
+                        }, 
+                        "undeliverable_registered_office_address": false, 
+                        "items": [], 
+                        "jurisdiction": "england-wales", 
+                        "confirmation_statement": {
+                           "next_due": "2019-06-18", 
+                           "last_made_up_to": "2018-06-04", 
+                           "next_made_up_to": "2019-06-04", 
+                           "overdue": false
+                        }, 
+                        "company_number": "07250381", 
+                        "date_of_creation": "2010-05-11", 
+                        "has_been_liquidated": false, 
+                        "accounts": {
+                           "next_due": "2018-08-31", 
+                           "next_made_up_to": "2017-11-30", 
+                           "last_accounts": {
+                              "period_start_on": "2015-12-01", 
+                              "type": "small", 
+                              "made_up_to": "2016-11-30", 
+                              "period_end_on": "2016-11-30"
+                           }, 
+                           "next_accounts": {
+                              "due_on": "2018-08-31", 
+                              "period_start_on": "2016-12-01", 
+                              "period_end_on": "2017-11-30", 
+                              "overdue": false
+                           }, 
+                           "accounting_reference_date": {
+                              "day": "30", 
+                              "month": "11"
+                           }, 
+                           "overdue": false
+                        }, 
+                        "company_name": "NEW CITY INITIATIVE EUROPE", 
+                        "company_status": "active", 
+                        "previous_company_names": [
+                           {
+                              "effective_from": "2010-05-11", 
+                              "ceased_on": "2012-06-21", 
+                              "name": "NEW CITY INITIATIVE"
+                           }
+                        ], 
+                        "has_charges": false, 
+                        "type": "private-limited-guarant-nsc-limited-exemption", 
+                        "registered_office_is_in_dispute": false
+                     }, 
+                     "name_elements": {
+                        "other_forenames": "Robert Andrew", 
+                        "forename": "Dominic", 
+                        "surname": "JOHNSON", 
+                        "title": "Mr"
+                     }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2010-06-21", 
+                     "resigned_on": "2018-01-26", 
+                     "appointed_to": {
+                        "company_status": "active", 
+                        "company_number": "07250381", 
+                        "company_name": "NEW CITY INITIATIVE EUROPE"
+                     }, 
+                     "address": {
+                        "premises": "3rd Floor, Princes Court", 
+                        "country": "England", 
+                        "locality": "London", 
+                        "postal_code": "EC2R 8AQ", 
+                        "address_line_1": "7 Princes Street"
+                     }, 
+                     "officer_role": "director", 
+                     "nationality": "British", 
+                     "persons_with_significant_control": [], 
+                     "occupation": "Partner"
                   }, 
                   {
                      "name": "Dominic Robert Andrew JOHNSON", 
@@ -2437,9 +2678,9 @@
                      "address": {
                         "premises": "28", 
                         "country": "Uk", 
-                        "locality": "London", 
+                        "address_line_1": "Ely Place (3rd Floor)", 
                         "postal_code": "EC1N 6TD", 
-                        "address_line_1": "Ely Place (3rd Floor)"
+                        "locality": "London"
                      }, 
                      "officer_role": "llp-designated-member", 
                      "persons_with_significant_control": []
@@ -2480,17 +2721,17 @@
                                  "appointments": "/officers/Z5xHFHiszrFMzUyiiS0x-YuIjQI/appointments"
                               }
                            }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2015-05-28", 
-                           "date_of_birth": {
-                              "month": 10, 
-                              "year": 1969
-                           }, 
                            "address": {
                               "premises": "7 Brandon House", 
                               "locality": "London", 
                               "postal_code": "SW6 6SE", 
                               "address_line_1": "13 Wyfold Road"
+                           }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2015-05-28", 
+                           "date_of_birth": {
+                              "month": 10, 
+                              "year": 1969
                            }, 
                            "nationality": "German", 
                            "officer_role": "director", 
@@ -2512,12 +2753,35 @@
                            "country_of_residence": "England", 
                            "appointed_on": "2014-01-15", 
                            "date_of_birth": {
-                              "year": 1971, 
+                              "month": 12, 
+                              "year": 1971
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Stockbroker"
+                        }, 
+                        {
+                           "name": "KARLSEN, Caroline Cartellieri", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/ceg1U8UgymliJYmMxhNWq51-ZjQ/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "7 Brandon House", 
+                              "address_line_1": "13 Wyfold Road", 
+                              "postal_code": "SW6 6SE", 
+                              "locality": "London"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2018-06-18", 
+                           "date_of_birth": {
+                              "year": 1970, 
                               "month": 12
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
-                           "occupation": "Stockbroker"
+                           "nationality": "German", 
+                           "occupation": "Private Equity"
                         }, 
                         {
                            "name": "KEIR-TOWNSEND, Keira Irina", 
@@ -2565,40 +2829,11 @@
                            "occupation": "Banker"
                         }, 
                         {
-                           "name": "LOGOTHETIS, Christina", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/UDCiP4PUOqOMM1GQMJZTFyVbX_U/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2011-04-01", 
-                           "date_of_birth": {
-                              "year": 1977, 
-                              "month": 12
-                           }, 
-                           "address": {
-                              "premises": "7 Brandon House", 
-                              "locality": "London", 
-                              "postal_code": "SW6 6SE", 
-                              "address_line_1": "13 Wyfold Road"
-                           }, 
-                           "nationality": "British", 
-                           "officer_role": "director", 
-                           "occupation": "Nil"
-                        }, 
-                        {
                            "name": "PAN, Valentina", 
                            "links": {
                               "officer": {
                                  "appointments": "/officers/g3j_EjrmT1LUZVlkVVNlaYYvky0/appointments"
                               }
-                           }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2013-05-13", 
-                           "date_of_birth": {
-                              "year": 1970, 
-                              "month": 1
                            }, 
                            "address": {
                               "premises": "2", 
@@ -2607,33 +2842,15 @@
                               "postal_code": "W8 7AJ", 
                               "address_line_1": "Airlie Gardens"
                            }, 
-                           "officer_role": "director", 
-                           "nationality": "Italian", 
-                           "occupation": "Housewife"
-                        }, 
-                        {
-                           "name": "REOCH, Robert David", 
-                           "links": {
-                              "officer": {
-                                 "appointments": "/officers/GfKDCOrgUHFbg_5FS1zMo0DuiKc/appointments"
-                              }
-                           }, 
-                           "country_of_residence": "England", 
-                           "appointed_on": "2010-12-04", 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2013-05-13", 
                            "date_of_birth": {
-                              "month": 5, 
-                              "year": 1963
+                              "year": 1970, 
+                              "month": 1
                            }, 
-                           "address": {
-                              "premises": "39", 
-                              "country": "England", 
-                              "locality": "London", 
-                              "postal_code": "SW1A 1NS", 
-                              "address_line_1": "St James's Place"
-                           }, 
+                           "nationality": "Italian", 
                            "officer_role": "director", 
-                           "nationality": "British", 
-                           "occupation": "Investments"
+                           "occupation": "Housewife"
                         }, 
                         {
                            "name": "DA COSTA, Jean Paul", 
@@ -2717,6 +2934,12 @@
                                  "appointments": "/officers/YZ1t92et4sDzNdlEWUAtwnMPw-4/appointments"
                               }
                            }, 
+                           "address": {
+                              "premises": "7 Brandon House", 
+                              "address_line_1": "13 Wyfold Road", 
+                              "postal_code": "SW6 6SE", 
+                              "locality": "London"
+                           }, 
                            "country_of_residence": "United Kingdom", 
                            "appointed_on": "2012-10-30", 
                            "resigned_on": "2015-07-16", 
@@ -2724,14 +2947,8 @@
                               "year": 1974, 
                               "month": 7
                            }, 
-                           "address": {
-                              "premises": "7 Brandon House", 
-                              "address_line_1": "13 Wyfold Road", 
-                              "postal_code": "SW6 6SE", 
-                              "locality": "London"
-                           }, 
-                           "nationality": "Australian", 
                            "officer_role": "director", 
+                           "nationality": "Australian", 
                            "occupation": "Full Time Mother"
                         }, 
                         {
@@ -2740,6 +2957,12 @@
                               "officer": {
                                  "appointments": "/officers/JuRghjpCAtigbeHOPaMZbGB8ays/appointments"
                               }
+                           }, 
+                           "address": {
+                              "premises": "121", 
+                              "address_line_1": "Blenheim Crescent", 
+                              "postal_code": "W11 2EQ", 
+                              "locality": "London"
                            }, 
                            "former_names": [
                               {
@@ -2750,17 +2973,11 @@
                            "appointed_on": "2008-03-18", 
                            "resigned_on": "2010-05-01", 
                            "date_of_birth": {
-                              "month": 12, 
-                              "year": 1964
+                              "year": 1964, 
+                              "month": 12
                            }, 
-                           "address": {
-                              "premises": "121", 
-                              "address_line_1": "Blenheim Crescent", 
-                              "postal_code": "W11 2EQ", 
-                              "locality": "London"
-                           }, 
-                           "nationality": "American", 
                            "officer_role": "director", 
+                           "nationality": "American", 
                            "occupation": "Personal Investor"
                         }, 
                         {
@@ -2770,6 +2987,13 @@
                                  "appointments": "/officers/PNISSKwBOi2sZQGhcGh45yDfoG0/appointments"
                               }
                            }, 
+                           "country_of_residence": "United Kingdom", 
+                           "appointed_on": "2007-06-05", 
+                           "resigned_on": "2012-09-22", 
+                           "date_of_birth": {
+                              "month": 8, 
+                              "year": 1965
+                           }, 
                            "address": {
                               "postal_code": "CM7 4TW", 
                               "region": "Essex", 
@@ -2777,15 +3001,8 @@
                               "address_line_2": "Little Bardfield", 
                               "address_line_1": "The Old Rectory"
                            }, 
-                           "country_of_residence": "United Kingdom", 
-                           "appointed_on": "2007-06-05", 
-                           "resigned_on": "2012-09-22", 
-                           "date_of_birth": {
-                              "year": 1965, 
-                              "month": 8
-                           }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Teacher"
                         }, 
                         {
@@ -2807,9 +3024,33 @@
                               "year": 1974, 
                               "month": 4
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Banker"
+                        }, 
+                        {
+                           "name": "LOGOTHETIS, Christina", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/UDCiP4PUOqOMM1GQMJZTFyVbX_U/appointments"
+                              }
+                           }, 
+                           "address": {
+                              "premises": "7 Brandon House", 
+                              "address_line_1": "13 Wyfold Road", 
+                              "postal_code": "SW6 6SE", 
+                              "locality": "London"
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2011-04-01", 
+                           "resigned_on": "2018-05-01", 
+                           "date_of_birth": {
+                              "month": 12, 
+                              "year": 1977
+                           }, 
+                           "officer_role": "director", 
+                           "nationality": "British", 
+                           "occupation": "Nil"
                         }, 
                         {
                            "name": "MULDOON - DE GROOT, Eva Maartje", 
@@ -2818,12 +3059,6 @@
                                  "appointments": "/officers/51YYxvr1ZUAsv02Cx0rgCU1g8wM/appointments"
                               }
                            }, 
-                           "address": {
-                              "premises": "7 Brandon House", 
-                              "locality": "London", 
-                              "postal_code": "SW6 6SE", 
-                              "address_line_1": "13 Wyfold Road"
-                           }, 
                            "country_of_residence": "England", 
                            "appointed_on": "2010-12-04", 
                            "resigned_on": "2013-09-02", 
@@ -2831,9 +3066,40 @@
                               "month": 2, 
                               "year": 1971
                            }, 
-                           "officer_role": "director", 
+                           "address": {
+                              "premises": "7 Brandon House", 
+                              "locality": "London", 
+                              "postal_code": "SW6 6SE", 
+                              "address_line_1": "13 Wyfold Road"
+                           }, 
                            "nationality": "Dutch/Australian", 
+                           "officer_role": "director", 
                            "occupation": "Nil"
+                        }, 
+                        {
+                           "name": "REOCH, Robert David", 
+                           "links": {
+                              "officer": {
+                                 "appointments": "/officers/GfKDCOrgUHFbg_5FS1zMo0DuiKc/appointments"
+                              }
+                           }, 
+                           "country_of_residence": "England", 
+                           "appointed_on": "2010-12-04", 
+                           "resigned_on": "2018-05-01", 
+                           "date_of_birth": {
+                              "month": 5, 
+                              "year": 1963
+                           }, 
+                           "address": {
+                              "premises": "39", 
+                              "country": "England", 
+                              "locality": "London", 
+                              "postal_code": "SW1A 1NS", 
+                              "address_line_1": "St James's Place"
+                           }, 
+                           "nationality": "British", 
+                           "officer_role": "director", 
+                           "occupation": "Investments"
                         }, 
                         {
                            "name": "SHAH, Louise", 
@@ -2841,6 +3107,12 @@
                               "officer": {
                                  "appointments": "/officers/_LnG2a61pLQqrvmm9jJ12joq7eQ/appointments"
                               }
+                           }, 
+                           "address": {
+                              "premises": "7 Brandon House", 
+                              "address_line_1": "13 Wyfold Road", 
+                              "postal_code": "SW6 6SE", 
+                              "locality": "London"
                            }, 
                            "former_names": [
                               {
@@ -2853,12 +3125,6 @@
                            "date_of_birth": {
                               "month": 4, 
                               "year": 1968
-                           }, 
-                           "address": {
-                              "premises": "7 Brandon House", 
-                              "address_line_1": "13 Wyfold Road", 
-                              "postal_code": "SW6 6SE", 
-                              "locality": "London"
                            }, 
                            "officer_role": "director", 
                            "nationality": "Irish", 
@@ -2875,8 +3141,8 @@
                            "appointed_on": "2014-01-15", 
                            "resigned_on": "2017-02-01", 
                            "date_of_birth": {
-                              "year": 1971, 
-                              "month": 1
+                              "month": 1, 
+                              "year": 1971
                            }, 
                            "address": {
                               "premises": "7 Brandon House", 
@@ -2884,8 +3150,8 @@
                               "postal_code": "SW6 6SE", 
                               "address_line_1": "13 Wyfold Road"
                            }, 
-                           "nationality": "British", 
                            "officer_role": "director", 
+                           "nationality": "British", 
                            "occupation": "Banker"
                         }
                      ], 
@@ -2902,38 +3168,38 @@
                         "sic_codes": [
                            "85200"
                         ], 
-                        "etag": "19a09e16945ec8dab1d8bffd827c9684e0a4fefc", 
+                        "etag": "9e5953ed97ab0d93c399725563021f7c3e8c7c4f", 
                         "registered_office_address": {
-                           "address_line_2": "13 Wyfold Road", 
-                           "address_line_1": "7 Brandon House", 
                            "postal_code": "SW6 6SE", 
-                           "locality": "London"
+                           "locality": "London", 
+                           "address_line_2": "13 Wyfold Road", 
+                           "address_line_1": "7 Brandon House"
                         }, 
                         "undeliverable_registered_office_address": false, 
                         "items": [], 
                         "jurisdiction": "england-wales", 
                         "confirmation_statement": {
-                           "next_due": "2018-06-19", 
-                           "last_made_up_to": "2017-06-05", 
-                           "next_made_up_to": "2018-06-05", 
+                           "next_due": "2019-06-19", 
+                           "last_made_up_to": "2018-06-05", 
+                           "next_made_up_to": "2019-06-05", 
                            "overdue": false
                         }, 
                         "company_number": "06269081", 
                         "date_of_creation": "2007-06-05", 
                         "has_been_liquidated": false, 
                         "accounts": {
-                           "next_due": "2018-03-31", 
-                           "next_made_up_to": "2017-06-30", 
+                           "next_due": "2019-03-31", 
+                           "next_made_up_to": "2018-06-30", 
                            "last_accounts": {
-                              "period_start_on": "2015-07-01", 
-                              "type": "total-exemption-small", 
-                              "made_up_to": "2016-06-30", 
-                              "period_end_on": "2016-06-30"
+                              "period_start_on": "2016-07-01", 
+                              "type": "micro-entity", 
+                              "made_up_to": "2017-06-30", 
+                              "period_end_on": "2017-06-30"
                            }, 
                            "next_accounts": {
-                              "due_on": "2018-03-31", 
-                              "period_start_on": "2016-07-01", 
-                              "period_end_on": "2017-06-30", 
+                              "due_on": "2019-03-31", 
+                              "period_start_on": "2017-07-01", 
+                              "period_end_on": "2018-06-30", 
                               "overdue": false
                            }, 
                            "accounting_reference_date": {
@@ -2949,9 +3215,9 @@
                         "registered_office_is_in_dispute": false
                      }, 
                      "address": {
-                        "address_line_1": "25 Fawcett Street", 
+                        "locality": "London", 
                         "postal_code": "SW10 9EY", 
-                        "locality": "London"
+                        "address_line_1": "25 Fawcett Street"
                      }, 
                      "name_elements": {
                         "other_forenames": "Robert Andrew", 
@@ -2982,8 +3248,8 @@
                               "right-to-appoint-and-remove-directors"
                            ], 
                            "date_of_birth": {
-                              "year": 1963, 
-                              "month": 10
+                              "month": 10, 
+                              "year": 1963
                            }, 
                            "name_elements": {
                               "middle_name": "Raleigh", 
@@ -3051,8 +3317,8 @@
                         "right-to-appoint-and-remove-directors-as-trust"
                      ], 
                      "date_of_birth": {
-                        "year": 1954, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1954
                      }, 
                      "name_elements": {
                         "surname": "Fischer", 
@@ -3104,19 +3370,19 @@
                "officers": [
                   {
                      "nationality": "British", 
-                     "address": {
-                        "address_line_2": "Rocester", 
-                        "locality": "Uttoxeter", 
-                        "postal_code": "ST14 5JP", 
-                        "address_line_1": "Lakeside Works"
-                     }, 
+                     "officer_role": "secretary", 
                      "name": "OVENS, Steven Ernest Robert", 
                      "links": {
                         "officer": {
                            "appointments": "/officers/ngaypPMSS3BqM652_iviamNx5uY/appointments"
                         }
                      }, 
-                     "officer_role": "secretary"
+                     "address": {
+                        "address_line_2": "Rocester", 
+                        "locality": "Uttoxeter", 
+                        "postal_code": "ST14 5JP", 
+                        "address_line_1": "Lakeside Works"
+                     }
                   }, 
                   {
                      "name": "BAMFORD, Carole Gray, Lady", 
@@ -3125,19 +3391,19 @@
                            "appointments": "/officers/F-PxZ4PhVgFoy94JYV9zyK9yqiw/appointments"
                         }
                      }, 
+                     "country_of_residence": "United Kingdom", 
+                     "date_of_birth": {
+                        "year": 1946, 
+                        "month": 4
+                     }, 
                      "address": {
                         "postal_code": "ST14 5JP", 
                         "locality": "Uttoxeter", 
                         "address_line_2": "Rocester", 
                         "address_line_1": "Lakeside Works"
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "date_of_birth": {
-                        "month": 4, 
-                        "year": 1946
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -3147,16 +3413,16 @@
                            "appointments": "/officers/KnNrLId-yMJFygKbB3em-iE5FRc/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "date_of_birth": {
+                        "month": 6, 
+                        "year": 1951
+                     }, 
                      "address": {
                         "address_line_2": "Rocester", 
                         "locality": "Uttoxeter", 
                         "postal_code": "ST14 5JP", 
                         "address_line_1": "Lakeside Works"
-                     }, 
-                     "country_of_residence": "England", 
-                     "date_of_birth": {
-                        "year": 1951, 
-                        "month": 6
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3191,17 +3457,17 @@
                            "appointments": "/officers/7itBZp3LxIYvM5q13ByZBYWLZy0/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "ST14 5JP", 
-                        "locality": "Uttoxeter", 
-                        "address_line_2": "Rocester", 
-                        "address_line_1": "Lakeside Works"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2010-01-02", 
                      "date_of_birth": {
                         "year": 1967, 
                         "month": 11
+                     }, 
+                     "address": {
+                        "postal_code": "ST14 5JP", 
+                        "locality": "Uttoxeter", 
+                        "address_line_2": "Rocester", 
+                        "address_line_1": "Lakeside Works"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3223,11 +3489,11 @@
                      "country_of_residence": "England", 
                      "appointed_on": "2012-01-01", 
                      "date_of_birth": {
-                        "year": 1963, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1963
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -3237,21 +3503,21 @@
                            "appointments": "/officers/uYCCnisxth6q3EHzy_KNigDkyI8/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2006-05-15", 
+                     "resigned_on": "2016-11-11", 
+                     "date_of_birth": {
+                        "month": 12, 
+                        "year": 1977
+                     }, 
                      "address": {
                         "address_line_2": "Rocester", 
                         "locality": "Uttoxeter", 
                         "postal_code": "ST14 5JP", 
                         "address_line_1": "Lakeside Works"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2006-05-15", 
-                     "resigned_on": "2016-11-11", 
-                     "date_of_birth": {
-                        "year": 1977, 
-                        "month": 12
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -3263,8 +3529,8 @@
                      }, 
                      "resigned_on": "2003-12-25", 
                      "date_of_birth": {
-                        "year": 1918, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1918
                      }, 
                      "address": {
                         "region": "Derbyshire", 
@@ -3296,8 +3562,8 @@
                         "postal_code": "ST14 5JP", 
                         "address_line_1": "Lakeside Works"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -3310,8 +3576,8 @@
                      "appointed_on": "1994-02-22", 
                      "resigned_on": "1998-02-09", 
                      "date_of_birth": {
-                        "year": 1940, 
-                        "month": 5
+                        "month": 5, 
+                        "year": 1940
                      }, 
                      "address": {
                         "postal_code": "ST14 8BE", 
@@ -3320,8 +3586,8 @@
                         "address_line_2": "Wood Lane", 
                         "address_line_1": "Woodside"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -3331,18 +3597,18 @@
                            "appointments": "/officers/AZ_YjrevuwVdw7_qdrnGQ5vcIcg/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "resigned_on": "1993-10-31", 
+                     "date_of_birth": {
+                        "month": 3, 
+                        "year": 1932
+                     }, 
                      "address": {
                         "address_line_2": "Rolleston On Dove", 
                         "region": "Staffordshire", 
                         "address_line_1": "26 Church Road", 
                         "postal_code": "DE13 9BE", 
                         "locality": "Burton On Trent"
-                     }, 
-                     "country_of_residence": "England", 
-                     "resigned_on": "1993-10-31", 
-                     "date_of_birth": {
-                        "month": 3, 
-                        "year": 1932
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3358,8 +3624,8 @@
                      "country_of_residence": "England", 
                      "resigned_on": "2006-03-31", 
                      "date_of_birth": {
-                        "month": 1, 
-                        "year": 1944
+                        "year": 1944, 
+                        "month": 1
                      }, 
                      "address": {
                         "postal_code": "DE13 8NT", 
@@ -3368,8 +3634,8 @@
                         "address_line_2": "Longcroft Lane", 
                         "address_line_1": "Sales Farm"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Solicitor"
                   }, 
                   {
@@ -3379,19 +3645,19 @@
                            "appointments": "/officers/XfUdY68tQlClb9pawjYZIE-b2ow/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "ST10 3BQ", 
-                        "region": "Staffordshire", 
-                        "locality": "Oakamoor", 
-                        "address_line_2": "Farley", 
-                        "address_line_1": "Farley Lodge"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "1998-03-13", 
                      "resigned_on": "2010-03-01", 
                      "date_of_birth": {
                         "year": 1949, 
                         "month": 10
+                     }, 
+                     "address": {
+                        "postal_code": "ST10 3BQ", 
+                        "region": "Staffordshire", 
+                        "locality": "Oakamoor", 
+                        "address_line_2": "Farley", 
+                        "address_line_1": "Farley Lodge"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3404,19 +3670,19 @@
                            "appointments": "/officers/pEv5tBwl90jy1u_91wD6C4geFog/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "CB23 1JW", 
-                        "region": "Cambridgeshire", 
-                        "locality": "Cambridge", 
-                        "address_line_2": "Haslingfield", 
-                        "address_line_1": "20 High Street"
-                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2007-01-02", 
                      "resigned_on": "2009-11-04", 
                      "date_of_birth": {
                         "year": 1960, 
                         "month": 4
+                     }, 
+                     "address": {
+                        "postal_code": "CB23 1JW", 
+                        "region": "Cambridgeshire", 
+                        "locality": "Cambridge", 
+                        "address_line_2": "Haslingfield", 
+                        "address_line_1": "20 High Street"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -3538,16 +3804,58 @@
          "category_wealth": 0
       }, 
       {
-         "raw_data": [], 
+         "raw_data": [
+            {
+               "raw_string": "Name of donor: Chesterfield Borough CouncilAddress of donor: Town Hall, Rose Hill, Chesterfield S40 1LPEstimate of the probable value (or amount of any donation): Hotel \u00a357.40; flights \u00a3493.99; total value \u00a3551.39Destination of visit: Madrid, SpainDates of visit: 24-25 April 2018Purpose of visit: Meetings regarding potential investment in North East Derbyshire constituency.(Registered 08 May 2018)", 
+               "Estimate of the probable value (or amount of any donation)": "Hotel \u00a357.40; flights \u00a3493.99; total value \u00a3551.39", 
+               "(Registered 08 May 2018)": "(Registered 08 May 2018)", 
+               "Purpose of visit": "Meetings regarding potential investment in North East Derbyshire constituency.", 
+               "Destination of visit": "Madrid, Spain", 
+               "Dates of visit": "24-25 April 2018", 
+               "Name of donor": "Chesterfield Borough Council", 
+               "Address of donor": "Town Hall, Rose Hill, Chesterfield S40 1LP"
+            }
+         ], 
          "isCurrency": true, 
-         "category_gifts": 0, 
-         "items": [], 
+         "category_gifts": 57, 
+         "items": [
+            {
+               "status": "visit", 
+               "isDonation": false, 
+               "isGift": true, 
+               "destination": "Madrid, Spain", 
+               "officers": [], 
+               "isIncome": false, 
+               "pretty": "Chesterfield Borough Council", 
+               "donor": "Chesterfield Borough Council", 
+               "type": "visit", 
+               "company": {
+                  "company_status": "Active", 
+                  "company_name": "Chesterfield Borough Council", 
+                  "company_number": "N/A"
+               }, 
+               "raw_string": "Name of donor: Chesterfield Borough CouncilAddress of donor: Town Hall, Rose Hill, Chesterfield S40 1LPEstimate of the probable value (or amount of any donation): Hotel \u00a357.40; flights \u00a3493.99; total value \u00a3551.39Destination of visit: Madrid, SpainDates of visit: 24-25 April 2018Purpose of visit: Meetings regarding potential investment in North East Derbyshire constituency.(Registered 08 May 2018)", 
+               "isWealth": false, 
+               "registered": "08/05/2018", 
+               "persons": [], 
+               "appointments": [], 
+               "link": null, 
+               "purpose": "Meetings regarding potential investment in North East Derbyshire constituency.", 
+               "nouns": [], 
+               "address": "Town Hall, Rose Hill, Chesterfield S40 1LP", 
+               "item_id": "0001", 
+               "amount": 57, 
+               "category_id": 5
+            }
+         ], 
          "category_type": "visits_outside_uk", 
          "category_income": 0, 
-         "raw_items": [], 
+         "raw_items": [
+            "Name of donor: Chesterfield Borough CouncilAddress of donor: Town Hall, Rose Hill, Chesterfield S40 1LPEstimate of the probable value (or amount of any donation): Hotel \u00a357.40; flights \u00a3493.99; total value \u00a3551.39Destination of visit: Madrid, SpainDates of visit: 24-25 April 2018Purpose of visit: Meetings regarding potential investment in North East Derbyshire constituency.(Registered 08 May 2018)"
+         ], 
          "category_description": "Visits Outside UK", 
          "category_id": 5, 
-         "category_amount": 0, 
+         "category_amount": 57, 
          "category_donations": 0, 
          "category_wealth": 0
       }, 
@@ -3687,14 +3995,8 @@
          "category_wealth": 0, 
          "offices": [
             {
-               "dept": "Statutory Instruments (Joint Committee)", 
-               "from_date": "2017-10-30", 
-               "to_date": "9999-12-31", 
-               "position": "Member"
-            }, 
-            {
-               "dept": "Statutory Instruments (Select Committee)", 
-               "from_date": "2017-10-30", 
+               "dept": "Public Accounts Committee", 
+               "from_date": "2018-02-20", 
                "to_date": "9999-12-31", 
                "position": "Member"
             }
@@ -3774,7 +4076,7 @@
                            "appointments": "/officers/3BIPp4hlkNYTrAbk2aMwnfqj89o/appointments"
                         }
                      }, 
-                     "country_of_residence": "Uk", 
+                     "country_of_residence": "United Kingdom", 
                      "appointed_on": "2006-07-25", 
                      "date_of_birth": {
                         "year": 1945, 
@@ -3786,8 +4088,8 @@
                         "postal_code": "CB2 2TT", 
                         "locality": "Cambridge"
                      }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Consultant"
                   }, 
                   {
@@ -3797,15 +4099,15 @@
                            "appointments": "/officers/EDexeTvyucwkG6kEbP4ysmpHZjE/appointments"
                         }
                      }, 
-                     "appointed_on": "1996-11-19", 
-                     "resigned_on": "2005-10-18", 
                      "address": {
                         "locality": "London", 
                         "postal_code": "NW2 6QN", 
                         "address_line_1": "2 Campion Terrace"
                      }, 
-                     "officer_role": "secretary", 
-                     "nationality": "British"
+                     "appointed_on": "1996-11-19", 
+                     "resigned_on": "2005-10-18", 
+                     "nationality": "British", 
+                     "officer_role": "secretary"
                   }, 
                   {
                      "name": "FOX, Clive", 
@@ -3852,8 +4154,8 @@
                      "appointed_on": "2007-04-17", 
                      "resigned_on": "2009-04-28", 
                      "date_of_birth": {
-                        "month": 11, 
-                        "year": 1965
+                        "year": 1965, 
+                        "month": 11
                      }, 
                      "address": {
                         "postal_code": "N46 2EG", 
@@ -3899,8 +4201,8 @@
                      "appointed_on": "2002-07-16", 
                      "resigned_on": "2003-07-15", 
                      "date_of_birth": {
-                        "year": 1947, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1947
                      }, 
                      "address": {
                         "postal_code": "NW1 0HA", 
@@ -3908,8 +4210,8 @@
                         "address_line_2": "Plender Street", 
                         "address_line_1": "27 Trimdon"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Local Government"
                   }, 
                   {
@@ -3919,20 +4221,20 @@
                            "appointments": "/officers/NZAJ2VDZo-H_GN0XVdBlQtJBlZc/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-07-17", 
-                     "resigned_on": "2006-07-25", 
-                     "date_of_birth": {
-                        "year": 1969, 
-                        "month": 8
-                     }, 
                      "address": {
                         "postal_code": "NW5 2RG", 
                         "address_line_1": "The Garden Flat", 
                         "address_line_2": "112 Leighton Road Kentish Town", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2001-07-17", 
+                     "resigned_on": "2006-07-25", 
+                     "date_of_birth": {
+                        "year": 1969, 
+                        "month": 8
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Advertising Executive"
                   }, 
                   {
@@ -3942,17 +4244,17 @@
                            "appointments": "/officers/ysJbarNvnIO5CWnaK0nirLB0LFQ/appointments"
                         }
                      }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "N19 4QA", 
+                        "address_line_1": "40 Tytherton Road"
+                     }, 
                      "country_of_residence": "United Kingdom", 
                      "appointed_on": "2008-05-19", 
                      "resigned_on": "2009-05-14", 
                      "date_of_birth": {
                         "month": 11, 
                         "year": 1940
-                     }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "N19 4QA", 
-                        "address_line_1": "40 Tytherton Road"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3965,17 +4267,17 @@
                            "appointments": "/officers/ysJbarNvnIO5CWnaK0nirLB0LFQ/appointments"
                         }
                      }, 
-                     "country_of_residence": "United Kingdom", 
-                     "appointed_on": "2001-07-17", 
-                     "resigned_on": "2002-07-16", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1940
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "N19 4QA", 
                         "address_line_1": "40 Tytherton Road"
+                     }, 
+                     "country_of_residence": "United Kingdom", 
+                     "appointed_on": "2001-07-17", 
+                     "resigned_on": "2002-07-16", 
+                     "date_of_birth": {
+                        "year": 1940, 
+                        "month": 11
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -3988,20 +4290,20 @@
                            "appointments": "/officers/f_v4Tc_ibwKzGxakQdeAgMgM3M0/appointments"
                         }
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "2003-04-15", 
-                     "resigned_on": "2006-07-25", 
-                     "date_of_birth": {
-                        "month": 11, 
-                        "year": 1972
-                     }, 
                      "address": {
                         "locality": "London", 
                         "postal_code": "NW1 0SU", 
                         "address_line_1": "12 Rousden Street"
                      }, 
-                     "nationality": "British", 
+                     "country_of_residence": "England", 
+                     "appointed_on": "2003-04-15", 
+                     "resigned_on": "2006-07-25", 
+                     "date_of_birth": {
+                        "year": 1972, 
+                        "month": 11
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director"
                   }, 
                   {
@@ -4011,12 +4313,6 @@
                            "appointments": "/officers/v-V3GeXkAwqD1NgYM4fdUEizwzw/appointments"
                         }
                      }, 
-                     "appointed_on": "2001-07-17", 
-                     "resigned_on": "2002-07-16", 
-                     "date_of_birth": {
-                        "year": 1972, 
-                        "month": 11
-                     }, 
                      "address": {
                         "address_line_2": "8 Great North Road", 
                         "region": "London", 
@@ -4024,8 +4320,14 @@
                         "postal_code": "N6 4LX", 
                         "address_line_1": "Flat C"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "2001-07-17", 
+                     "resigned_on": "2002-07-16", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1972
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Director Of B Development"
                   }, 
                   {
@@ -4035,6 +4337,12 @@
                            "appointments": "/officers/EZlpx7mpsbxgGDxYj8Jp5Te7zEk/appointments"
                         }
                      }, 
+                     "appointed_on": "1996-05-09", 
+                     "resigned_on": "1997-11-18", 
+                     "date_of_birth": {
+                        "year": 1952, 
+                        "month": 12
+                     }, 
                      "address": {
                         "address_line_2": "Shotgate", 
                         "region": "Essex", 
@@ -4042,14 +4350,8 @@
                         "postal_code": "SS11 8XB", 
                         "address_line_1": "7 Honington Close"
                      }, 
-                     "appointed_on": "1996-05-09", 
-                     "resigned_on": "1997-11-18", 
-                     "date_of_birth": {
-                        "month": 12, 
-                        "year": 1952
-                     }, 
-                     "officer_role": "director", 
                      "nationality": "British", 
+                     "officer_role": "director", 
                      "occupation": "Bank Official"
                   }, 
                   {
@@ -4082,16 +4384,16 @@
                            "appointments": "/officers/UDjlpLv_rInJTvGsUrlPdopbbkQ/appointments"
                         }
                      }, 
-                     "appointed_on": "1995-05-24", 
-                     "resigned_on": "2003-07-15", 
-                     "date_of_birth": {
-                        "year": 1943, 
-                        "month": 10
-                     }, 
                      "address": {
                         "address_line_1": "36 Bisham Gardens", 
                         "postal_code": "N6 6DD", 
                         "locality": "London"
+                     }, 
+                     "appointed_on": "1995-05-24", 
+                     "resigned_on": "2003-07-15", 
+                     "date_of_birth": {
+                        "month": 10, 
+                        "year": 1943
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4116,8 +4418,8 @@
                         "postal_code": "N19 5EZ", 
                         "address_line_1": "11 Corinne Road"
                      }, 
-                     "nationality": "Irish", 
                      "officer_role": "director", 
+                     "nationality": "Irish", 
                      "occupation": "Academic And Project Coordinat"
                   }, 
                   {
@@ -4127,16 +4429,16 @@
                            "appointments": "/officers/mVsbnh5wA54PEfXDARFXA6kxdCQ/appointments"
                         }
                      }, 
-                     "address": {
-                        "locality": "London", 
-                        "postal_code": "N1 1DB", 
-                        "address_line_1": "56 Hemingford Road"
-                     }, 
                      "appointed_on": "2001-07-17", 
                      "resigned_on": "2006-07-25", 
                      "date_of_birth": {
                         "month": 7, 
                         "year": 1964
+                     }, 
+                     "address": {
+                        "locality": "London", 
+                        "postal_code": "N1 1DB", 
+                        "address_line_1": "56 Hemingford Road"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4149,18 +4451,18 @@
                            "appointments": "/officers/RX4cbm36gHQiU31rB_RSHArQ7T8/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Grafton Road", 
-                        "address_line_1": "53 Durston", 
-                        "postal_code": "NW5 4RH", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2008-08-19", 
                      "resigned_on": "2009-06-11", 
                      "date_of_birth": {
                         "month": 6, 
                         "year": 1949
+                     }, 
+                     "address": {
+                        "address_line_2": "Grafton Road", 
+                        "address_line_1": "53 Durston", 
+                        "postal_code": "NW5 4RH", 
+                        "locality": "London"
                      }, 
                      "nationality": "British", 
                      "officer_role": "director", 
@@ -4185,8 +4487,8 @@
                         "year": 1971, 
                         "month": 2
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Consultant Planner"
                   }, 
                   {
@@ -4204,11 +4506,11 @@
                      "appointed_on": "2002-07-16", 
                      "resigned_on": "2006-07-25", 
                      "date_of_birth": {
-                        "month": 8, 
-                        "year": 1948
+                        "year": 1948, 
+                        "month": 8
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Public Affairs Consultant"
                   }, 
                   {
@@ -4218,17 +4520,17 @@
                            "appointments": "/officers/KzU0D1GlcHUpJXwpnD8I8oien2I/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "N4 1SG", 
-                        "locality": "London", 
-                        "address_line_2": "Harringay", 
-                        "address_line_1": "8 Atterbury Road"
-                     }, 
                      "appointed_on": "2008-10-21", 
                      "resigned_on": "2009-04-28", 
                      "date_of_birth": {
                         "month": 2, 
                         "year": 1961
+                     }, 
+                     "address": {
+                        "postal_code": "N4 1SG", 
+                        "locality": "London", 
+                        "address_line_2": "Harringay", 
+                        "address_line_1": "8 Atterbury Road"
                      }, 
                      "officer_role": "director", 
                      "nationality": "Goynan", 
@@ -4272,11 +4574,11 @@
                      "appointed_on": "1995-05-26", 
                      "resigned_on": "1997-07-28", 
                      "date_of_birth": {
-                        "year": 1950, 
-                        "month": 8
+                        "month": 8, 
+                        "year": 1950
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Company Director"
                   }, 
                   {
@@ -4286,6 +4588,13 @@
                            "appointments": "/officers/AyxUVMI06SftVbQZwOEO7iHdwbg/appointments"
                         }
                      }, 
+                     "country_of_residence": "England", 
+                     "appointed_on": "1999-11-30", 
+                     "resigned_on": "2007-07-24", 
+                     "date_of_birth": {
+                        "month": 11, 
+                        "year": 1947
+                     }, 
                      "address": {
                         "address_line_2": "Loxwood", 
                         "region": "West Sussex", 
@@ -4293,15 +4602,8 @@
                         "postal_code": "RH14 0RB", 
                         "locality": "Billingshurst"
                      }, 
-                     "country_of_residence": "England", 
-                     "appointed_on": "1999-11-30", 
-                     "resigned_on": "2007-07-24", 
-                     "date_of_birth": {
-                        "year": 1947, 
-                        "month": 11
-                     }, 
-                     "nationality": "British & Irish", 
                      "officer_role": "director", 
+                     "nationality": "British & Irish", 
                      "occupation": "Management Consultant"
                   }, 
                   {
@@ -4311,19 +4613,19 @@
                            "appointments": "/officers/D36AQCX99Vjves49fzd-jRDeQHg/appointments"
                         }
                      }, 
-                     "appointed_on": "1998-01-20", 
-                     "resigned_on": "2002-12-10", 
-                     "date_of_birth": {
-                        "month": 2, 
-                        "year": 1935
-                     }, 
                      "address": {
                         "address_line_1": "7 Chamberlain Street", 
                         "postal_code": "NW1 8XB", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "1998-01-20", 
+                     "resigned_on": "2002-12-10", 
+                     "date_of_birth": {
+                        "year": 1935, 
+                        "month": 2
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Retired"
                   }, 
                   {
@@ -4333,17 +4635,17 @@
                            "appointments": "/officers/7JG9gz3YrlTzd0lZ26lYv99OZQI/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_1": "29 Allingham Street", 
-                        "postal_code": "N1 8NX", 
-                        "locality": "London"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2006-07-25", 
                      "resigned_on": "2008-05-19", 
                      "date_of_birth": {
                         "month": 9, 
                         "year": 1957
+                     }, 
+                     "address": {
+                        "address_line_1": "29 Allingham Street", 
+                        "postal_code": "N1 8NX", 
+                        "locality": "London"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4356,17 +4658,17 @@
                            "appointments": "/officers/CLnXAIAJOE80rklN_gEe9fevYB4/appointments"
                         }
                      }, 
-                     "address": {
-                        "region": "East Sussex", 
-                        "address_line_1": "18 Tennis Road", 
-                        "postal_code": "BN3 4LR", 
-                        "locality": "Hove"
-                     }, 
                      "appointed_on": "2008-04-08", 
                      "resigned_on": "2009-04-28", 
                      "date_of_birth": {
                         "month": 11, 
                         "year": 1967
+                     }, 
+                     "address": {
+                        "region": "East Sussex", 
+                        "address_line_1": "18 Tennis Road", 
+                        "postal_code": "BN3 4LR", 
+                        "locality": "Hove"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4379,17 +4681,17 @@
                            "appointments": "/officers/uwwkfyQ5H8i9q6hfRvcglbhgeHU/appointments"
                         }
                      }, 
-                     "address": {
-                        "address_line_2": "Upper Montagu Street", 
-                        "locality": "London", 
-                        "postal_code": "W1H 1FR", 
-                        "address_line_1": "7 York House"
-                     }, 
                      "appointed_on": "2008-10-21", 
                      "resigned_on": "2009-05-12", 
                      "date_of_birth": {
                         "year": 1935, 
                         "month": 9
+                     }, 
+                     "address": {
+                        "address_line_2": "Upper Montagu Street", 
+                        "locality": "London", 
+                        "postal_code": "W1H 1FR", 
+                        "address_line_1": "7 York House"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4415,8 +4717,8 @@
                         "year": 1957, 
                         "month": 12
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Project Manager"
                   }, 
                   {
@@ -4426,19 +4728,19 @@
                            "appointments": "/officers/z0TbtcuVIH_Yt8cF-cIKyxn72Cg/appointments"
                         }
                      }, 
-                     "address": {
-                        "postal_code": "DL17 0JY", 
-                        "region": "County Durham", 
-                        "address_line_1": "Westmill Barn", 
-                        "address_line_2": "Chilton", 
-                        "locality": "Ferryhill"
-                     }, 
                      "country_of_residence": "England", 
                      "appointed_on": "2006-07-25", 
                      "resigned_on": "2007-07-24", 
                      "date_of_birth": {
                         "month": 5, 
                         "year": 1947
+                     }, 
+                     "address": {
+                        "postal_code": "DL17 0JY", 
+                        "region": "County Durham", 
+                        "address_line_1": "Westmill Barn", 
+                        "address_line_2": "Chilton", 
+                        "locality": "Ferryhill"
                      }, 
                      "officer_role": "director", 
                      "nationality": "British", 
@@ -4473,20 +4775,20 @@
                            "appointments": "/officers/nI0XvURHhpi7tnt2_Ph4EpHWG0s/appointments"
                         }
                      }, 
-                     "appointed_on": "1995-02-22", 
-                     "resigned_on": "1996-03-01", 
-                     "date_of_birth": {
-                        "year": 1958, 
-                        "month": 11
-                     }, 
                      "address": {
                         "region": "Surrey", 
                         "locality": "New Malden", 
                         "postal_code": "KT3 5BX", 
                         "address_line_1": "59 Green Lane"
                      }, 
-                     "nationality": "British", 
+                     "appointed_on": "1995-02-22", 
+                     "resigned_on": "1996-03-01", 
+                     "date_of_birth": {
+                        "year": 1958, 
+                        "month": 11
+                     }, 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Bank Official"
                   }, 
                   {
@@ -4530,8 +4832,8 @@
                         "postal_code": "NW6 1LU", 
                         "locality": "London"
                      }, 
-                     "nationality": "British", 
                      "officer_role": "director", 
+                     "nationality": "British", 
                      "occupation": "Translator"
                   }
                ], 
@@ -4556,7 +4858,7 @@
                   "sic_codes": [
                      "96090"
                   ], 
-                  "etag": "280b1b2b3ae65268bf311018996004dffa2e8e1c", 
+                  "etag": "a1b496a4b1ce9beecae4a8ee29b89f171d367cca", 
                   "registered_office_address": {
                      "address_line_1": "18-21 Morley Street", 
                      "postal_code": "SE1 7QZ", 
@@ -4566,9 +4868,9 @@
                   "items": [], 
                   "jurisdiction": "england-wales", 
                   "confirmation_statement": {
-                     "next_due": "2018-02-21", 
-                     "last_made_up_to": "2017-02-07", 
-                     "next_made_up_to": "2018-02-07", 
+                     "next_due": "2019-02-21", 
+                     "last_made_up_to": "2018-02-07", 
+                     "next_made_up_to": "2019-02-07", 
                      "overdue": false
                   }, 
                   "company_number": "02897074", 
@@ -4638,12 +4940,13 @@
    "dob": "September 1980", 
    "gender": "M", 
    "country_of_birth": "England", 
-   "wrans_subjects": "Cancer, Planning Permission: Appeals, Developing Countries: Technology, Sepsis, Anaemia: Children and Older People", 
+   "wrans_subjects": "Ovarian Cancer, Energy: Meters, Planning Permission: Appeals, Road Traffic: East Midlands, Listed Buildings: VAT", 
    "member_id": "41907", 
    "constituency": "North East Derbyshire", 
-   "mp_gifts": 0, 
+   "mp_gifts": 57, 
    "commitees": [
       "Statutory Instruments (Select Committee)", 
-      "Statutory Instruments (Joint Committee)"
+      "Statutory Instruments (Joint Committee)", 
+      "Public Accounts Committee"
    ]
 }

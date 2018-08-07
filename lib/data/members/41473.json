@@ -68,13 +68,27 @@
                   "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
                   "@xsi:nil": "true"
                }, 
-               "Name": "Communities and Local Government Committee", 
+               "Name": "Housing, Communities and Local Government Committee", 
                "IsCoOpted": "False", 
                "EndNote": null, 
                "ChairDates": null, 
                "IsAlternate": "False", 
                "IsExOfficio": "False", 
                "@Id": "17"
+            }, 
+            {
+               "StartDate": "2018-07-18T00:00:00", 
+               "EndDate": {
+                  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", 
+                  "@xsi:nil": "true"
+               }, 
+               "Name": "European Statutory Instruments", 
+               "IsCoOpted": "False", 
+               "EndNote": null, 
+               "ChairDates": null, 
+               "IsAlternate": "False", 
+               "IsExOfficio": "False", 
+               "@Id": "393"
             }
          ]
       }, 
@@ -103,25 +117,53 @@
       "Gender": "F", 
       "DisplayAs": "Liz Twist", 
       "HouseStartDate": "2017-06-08T00:00:00", 
+      "@Clerks_Id": "1526", 
       "LayingMinisterName": null, 
       "Addresses": {
-         "Address": {
-            "Fax": null, 
-            "@Type_Id": "1", 
-            "Address1": "House of Commons", 
-            "Address2": "London", 
-            "Address3": null, 
-            "Address4": null, 
-            "Address5": null, 
-            "Note": null, 
-            "Phone": "0207 219 2221", 
-            "OtherAddress": null, 
-            "IsPreferred": "False", 
-            "IsPhysical": "True", 
-            "Type": "Parliamentary", 
-            "Email": "liz.twist.mp@parliament.uk", 
-            "Postcode": "SW1A 0AA"
-         }
+         "Address": [
+            {
+               "Fax": null, 
+               "@Type_Id": "1", 
+               "Address1": "House of Commons", 
+               "Address2": "London", 
+               "Address3": null, 
+               "Address4": null, 
+               "Address5": null, 
+               "Note": null, 
+               "Phone": "0207 219 2221", 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Parliamentary", 
+               "Email": "liz.twist.mp@parliament.uk", 
+               "Postcode": "SW1A 0AA"
+            }, 
+            {
+               "Fax": null, 
+               "@Type_Id": "4", 
+               "Address1": "Constituency Office", 
+               "Address2": null, 
+               "Address3": null, 
+               "Address4": null, 
+               "Address5": null, 
+               "Note": null, 
+               "Phone": "0191 414 2488", 
+               "OtherAddress": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "True", 
+               "Type": "Constituency", 
+               "Email": null, 
+               "Postcode": null
+            }, 
+            {
+               "@Type_Id": "6", 
+               "Address1": " www.liztwist.co.uk", 
+               "Note": null, 
+               "IsPreferred": "False", 
+               "IsPhysical": "False", 
+               "Type": "Website"
+            }
+         ]
       }, 
       "House": "Commons", 
       "CurrentStatus": {
@@ -156,8 +198,8 @@
       "Food", 
       "Banks:", 
       "Maidenhead,", 
-      "Psychiatry:", 
-      "Education", 
+      "Teachers:", 
+      "Training", 
       "Department", 
       "for", 
       "Business,", 
@@ -171,25 +213,29 @@
       "the", 
       "European", 
       "Union,", 
+      "Department", 
+      "for", 
+      "Education,", 
       "Ministry", 
       "of", 
       "Defence,", 
       "Prime", 
-      "Minister,", 
-      "Department", 
-      "of", 
-      "Health", 
+      "Minister", 
       "Petitions", 
       "Committee", 
+      "Housing,", 
       "Communities", 
       "and", 
       "Local", 
       "Government", 
-      "Committee"
+      "Committee", 
+      "European", 
+      "Statutory", 
+      "Instruments"
    ], 
    "mp_income": 76368, 
    "mp_donations": 5000, 
-   "wrans_departments": "Department for Business, Energy and Industrial Strategy, Department for Exiting the European Union, Ministry of Defence, Prime Minister, Department of Health", 
+   "wrans_departments": "Department for Business, Energy and Industrial Strategy, Department for Exiting the European Union, Department for Education, Ministry of Defence, Prime Minister", 
    "person_id": "25623", 
    "party": "Labour", 
    "forname": "Liz", 
@@ -523,7 +569,7 @@
          "category_wealth": 0, 
          "offices": [
             {
-               "dept": "Communities and Local Government Committee", 
+               "dept": "Housing, Communities and Local Government Committee", 
                "from_date": "2017-09-11", 
                "to_date": "9999-12-31", 
                "position": "Member"
@@ -531,6 +577,12 @@
             {
                "dept": "Petitions Committee", 
                "from_date": "2017-09-11", 
+               "to_date": "9999-12-31", 
+               "position": "Member"
+            }, 
+            {
+               "dept": "European Statutory Instruments Committee", 
+               "from_date": "2018-07-18", 
                "to_date": "9999-12-31", 
                "position": "Member"
             }
@@ -573,12 +625,13 @@
    "dob": "Unknown Date of Birth", 
    "gender": "F", 
    "country_of_birth": null, 
-   "wrans_subjects": "Industrial Health and Safety, Personal, Social, Health and Economic Education, Energy: Prices, Food Banks: Maidenhead, Psychiatry: Education", 
+   "wrans_subjects": "Industrial Health and Safety, Personal, Social, Health and Economic Education, Energy: Prices, Food Banks: Maidenhead, Teachers: Training", 
    "member_id": "41473", 
    "constituency": "Blaydon", 
    "mp_gifts": 0, 
    "commitees": [
       "Petitions Committee", 
-      "Communities and Local Government Committee"
+      "Housing, Communities and Local Government Committee", 
+      "European Statutory Instruments"
    ]
 }
