@@ -1,0 +1,18 @@
+type Person {
+  id: ID!
+  name: String
+  title: String
+  occupation: String
+}
+
+type Organisation {
+  id: ID!
+  name: String
+}
+
+type Query {
+  usersBySubstring(substring: String): [Person]
+    @cypher(
+      statement: "MATCH (p:Person) WHERE p.name CONTAINS $substring RETURN p"
+    )
+}

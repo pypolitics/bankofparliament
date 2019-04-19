@@ -1,0 +1,43 @@
+{
+  "name": "grand-stack-starter-api",
+  "version": "0.0.1",
+  "description": "API app for GRANDstack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon --exec babel-node index.js",
+    "build": "babel src -d build; cp .env build; cp schema.graphql build"
+  },
+  "author": "William Lyon",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-boost": "^0.1.27",
+    "apollo-cache-inmemory": "^1.4.2",
+    "apollo-client": "^2.4.12",
+    "apollo-link-http": "^1.5.10",
+    "apollo-server": "^2.3.3",
+    "dotenv": "^6.2.0",
+    "graphql-tag": "^2.10.1",
+    "neo4j-driver": "^1.7.2",
+    "neo4j-graphql-js": "^2.2.0",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,graphql": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
