@@ -57,6 +57,8 @@ class UserList extends React.Component {
           {
             Person(first: 10) {
               name
+              title
+              occupation
             }
           }
         `}
@@ -95,7 +97,7 @@ class UserList extends React.Component {
                     return (
                       <TableRow key={n.id}>
                         <TableCell component="th" scope="row">
-                          {n.name}
+                          {n.title} {n.name}, {n.occupation}
                         </TableCell>
                       </TableRow>
                     );
