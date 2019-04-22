@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "my-react-app",
+  "name": "bankofparliament",
   "builds": [
     {"src": "package.json", "use": "@now/static-build", "config": {"distDir": "build"}}
   ],
@@ -14,7 +14,7 @@
     {"src": "/(.*)", "headers": {"cache-control": "s-maxage=0"}, "dest": "/index.html"}
   ],
   "env": {
-    "REACT_APP_GRAPHQL_URI": "https://api.elliottsmith.now.sh/"
+    "REACT_APP_GRAPHQL_URI": "https://bankofparliamentapi.elliottsmith.now.sh/"
   }
 }
 

@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 import './App.css';
-import UserList from "./UserList";
-import Search from "./SearchBox";
+import People from "./components/People"
 
+const client = new ApolloClient({
+  uri: "https://bankofparliamentapi.elliottsmith.now.sh/"
+});
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <Search />
-        <UserList />
-      </div>
+      <ApolloProvider client={client}>
+        <div className="container">
+          <h1 style={{margin: 'auto', display: 'block'}}>Bank of Parliament</h1>
+          <People />
+        </div>
+      </ApolloProvider>
     );
   }
 }
