@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import Person from "./Person";
+import PersonSummary from "./PersonSummary";
 
-const QUERY = gql`{ Person(first: 10) { name title occupation } }`;
+// const SEARCH = "Jeremy";
+const QUERY = gql`{ Person { name title occupation } }`;
+// const QUERY = gql`{ usersBySubstring(Jerem) { name title occupation } }`;
 
 export class People extends Component {
   render() {
@@ -18,7 +20,7 @@ export class People extends Component {
             return <Fragment>
                 {
                   data.Person.map(p => (
-                    <Person key={p.name} data={p}/>
+                    <PersonSummary key={p.name} data={p}/>
                   ))
                 }
               </Fragment>;
